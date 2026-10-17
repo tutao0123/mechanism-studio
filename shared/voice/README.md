@@ -1,4 +1,86 @@
-# 共用豆包配音 / Shared Doubao narration
+# Shared optional narration
+
+New examples can use the provider-neutral **Node-only speech adapter** below.
+The existing Doubao lesson/player pipeline remains available for old recordings;
+it is optional and is not required to view or export a music-led example.
+
+## Provider-neutral speech API
+
+`speech.mjs` exports `normalizeSpeechConfig()`, `requestSpeech()` and
+`synthesizeSpeech()`. Input is text plus explicit endpoint/model/voice/format.
+Output is verified-type audio bytes and a secret-free identity record; local
+synthesis writes immutable, content-addressed audio and a `.speech.json` sidecar
+inside the selected example. It does not migrate an existing Doubao manifest,
+start browser playback, align words or change a camera timeline.
+
+As checked **2026-10-18**, OpenRouter documents a dedicated
+[`POST /api/v1/audio/speech`](https://openrouter.ai/docs/guides/overview/multimodal/tts)
+endpoint with OpenAI-compatible request fields and raw audio responses. The
+adapter's `openrouter` preset uses that endpoint and supports documented `mp3`
+or raw `pcm`. Discover currently available **speech** models using the public
+[`models?output_modalities=speech`](https://openrouter.ai/api/v1/models?output_modalities=speech)
+catalog; select that model's supported voice and format. A general chat model,
+an audio-input model or a voice from another provider is not automatically TTS.
+Catalog IDs, account access and service terms can change.
+
+The `openai` preset uses its speech endpoint; a `custom` OpenAI-compatible
+endpoint requires an explicit HTTPS URL and an independently supplied allowed
+origin. Custom format/model/voice support is the provider's responsibility.
+`instructions` and `speed` are optional and should be omitted unless the model
+supports them. No voice-cloning, model auto-selection or paid fallback is added.
+
+Copy [speech-config.example.json](speech-config.example.json) to an ignored
+`speech.local.json`, set a current model/voice, and put your narration in a text
+file inside the example. Only the **name** of the environment variable appears
+in JSON; its value stays in the CLI/server environment. Do not place keys in a
+browser, query string, source control or a public example configuration.
+
+```powershell
+# First validate only: no key is read and no request/output is created.
+node shared/voice/speech-cli.mjs --config examples/my-example/speech.local.json --input examples/my-example/narration.txt --root examples/my-example
+# Explicit generation uses the named API key from this shell/server environment.
+node shared/voice/speech-cli.mjs --config examples/my-example/speech.local.json --input examples/my-example/narration.txt --root examples/my-example --generate
+```
+
+Default output is `examples/my-example/output/narration/`. `--output` may choose
+another location within that example. There is no config/secret discovery and
+no paid call in preview, tests or a dry run. Custom endpoints additionally need
+`--allow-origin https://your-speech-host.example`; presets reject endpoint
+overrides. Redirects are rejected so credentials cannot follow a changed host.
+
+```js
+// Server/CLI code only. apiKey is supplied by the authorized caller.
+import { synthesizeSpeech } from './shared/voice/speech.mjs';
+const result = await synthesizeSpeech(text, {
+  provider: 'openrouter', model, voice, format: 'mp3',
+}, { rootDir: exampleRoot, apiKey });
+// result: { path, recordPath, metadata }; no key appears in metadata.
+```
+
+HTTP chunks are collected up to a finite byte limit; an interrupted response
+fails. The adapter checks status, MIME type and MP3/WAV signature or complete
+PCM16 frames. These are transport/container checks, not an actual decoder or a
+listening review. JSON, SSE and HTML are never silently saved as MP3. A custom
+service can explicitly choose `responseMode: 'json-base64'` and `base64Field:
+'audio.data'`; canonical base64 and the same audio limits are checked. This is
+not a streaming-chat/SSE parser. `pcm` requires documented `sampleRate` and
+`channels` and explicit `encoding: 's16le'`, remains `.pcm` and needs conversion
+before ordinary browser playback. Other raw PCM encodings require another adapter.
+
+Failed requests publish no audio. Output paths are checked before and after
+the network request, rejecting escaping paths, symlinks and junctions. Existing
+content-addressed files are never overwritten. HTTP bodies, key values and
+underlying network errors are omitted from CLI errors. Generated files remain
+private/ignored until their provider's redistribution terms are reviewed.
+
+Bind any chosen, playable narration file to the same media clock as the scene,
+measure its actual duration and retain text/silent fallback. The older
+`createLessonPlayer()` below still validates **Doubao manifest v1**; a generic
+speech sidecar must not be relabeled as a valid old lesson manifest.
+
+Checks: `node --test shared/voice/speech.test.mjs` uses fake responses only.
+
+## Existing Doubao lesson integration
 
 **Public source release:** original lesson text, adapters, manifests and synthesis
 code are included under MIT. Provider-generated MP3s are excluded until their
@@ -7,7 +89,7 @@ untouched. Geometry/text/music examples need no speech account. Generating new
 Doubao narration is optional and uses the recipient's own credentials and service
 rights; see [licensing](../../docs/licensing.md#optional-doubao-narration).
 
-所有实例使用同一套豆包适配器。浏览器只播放本地 MP3，不获得凭据、不调用 TTS，也不维护机械判断。
+既有课程实例使用同一套豆包适配器。浏览器只播放本地 MP3，不获得凭据、不调用 TTS，也不维护机械判断。新示例不强制采用此提供方。
 
 | 模块 | 职责 |
 | --- | --- |

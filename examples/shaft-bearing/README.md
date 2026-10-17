@@ -1,5 +1,13 @@
 # Galileo 2: source-aware STEP assembly inspection
 
+![Galileo 2 STEP-derived extruder with linked assembly-tree selection and exploded display](../../docs/media/shaft-bearing-preview.jpg)
+
+*Existing inspection preview: Galileo 2 by JaredC01 and contributors; source and
+derived design geometry retain [GPL-3.0-only](source/LICENSE.md). Mechanism Studio
+authored tessellation, white line rendering, selection UI and display separation.
+The [original STEP and editable source](source/provenance.json) remain available;
+this image is excluded from the repository-level MIT grant.*
+
 This example imports the real [Galileo 2 Extruder](https://github.com/JaredC01/Galileo2), designed by JaredC01 and the Galileo 2 contributors. It is a compact planetary geared filament extruder with a carrier shaft, bearing supports and repeated M3 screws. The retained STEP also contains an X carriage and a dummy toolhead PCB. It is the complete upstream assembly, rather than a newly constructed shaft fixture.
 
 Open the local inspection page at [localhost:4179/examples/shaft-bearing/](http://127.0.0.1:4179/examples/shaft-bearing/).

@@ -1,5 +1,21 @@
 # WOLF, layer by layer
 
+For a deeper source-component example, open the separate
+[**Inside a WOLF actuator** motor study](detail/README.md):
+`http://127.0.0.1:4181/detail/?clean=1` on the same preview server. It follows the
+real `motor-8318 <1>` subassembly into **86 independent source pieces**—40 named
+`magnet`, 40 generic `cc` pieces and six named hardware components—then restores
+the complete actuator. The source name `cc` is not assigned an invented function,
+and this WOLF component is not represented as internal hardware of the G1 humanoid.
+
+![WOLF actuator STEP-derived parts separated into a line-art assembly study](../../docs/media/wolf-preview.jpg)
+
+*Existing English study frame: WOLF by Anthrobotics, adapted by Mechanism Studio
+with tessellation, authored separation, neutral materials, camera and labels.
+Model and adapted image retain [CC BY-SA 4.0](source/LICENSE), with
+[source and change notice](source/NOTICE.md). This image is excluded from the
+repository-level MIT grant.*
+
 A 34.285714-second English loop built from Anthrobotics' real WOLF V1.2 STEP
 assembly. The study retains every imported leaf occurrence and its source parent
 and placement. The source has 245 leaf usages, including twelve separately named

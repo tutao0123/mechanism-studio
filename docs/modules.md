@@ -62,11 +62,15 @@ Output illustrates flow, fuel, spark or heat; it does not solve CFD, pressure, t
 
 Focused checks: `node --test shared/animation/animation.test.mjs`; also run the changed example's process tests.
 
-### 5. Voice — optional Doubao lessons
+### 5. Voice — optional speech API and existing lessons
 
 **Location:** [shared/voice](../shared/voice/README.md).
 
-Inputs are a valid ordered `zh-CN` or `en-US` lesson, matching provider/manifest and, only for explicit synthesis, a user-designated local credential file. The `narration-v1` digest covers schemaVersion/language/steps{id,title,narration}; mechanical/camera metadata does not force new speech.
+New `speech.mjs` inputs are text and explicit provider/HTTPS endpoint/model/voice/format, with credentials supplied only by the server/CLI caller. OpenRouter uses its dedicated OpenAI-compatible `/api/v1/audio/speech`; supported speech models and voices must be checked rather than treating every chat model as TTS. Custom origins require a separate caller allowlist and redirects are rejected. `speech-cli.mjs` defaults to a local dry run; `--generate` is required to read the named key environment variable and send a request.
+
+Outputs are bounded, type/header-checked audio bytes or immutable example-local audio plus a secret-free identity sidecar. Binary chunks and explicit custom JSON-base64 responses are supported; chat SSE, word alignment and automatic provider fallback are not. This API does not silently replace old lesson manifests or start browser playback. Bind a playable result to the same media clock and measure/decode/listen separately.
+
+Existing Doubao inputs remain a valid ordered `zh-CN` or `en-US` lesson, matching provider/manifest and, only for explicit synthesis, a user-designated local credential file. The `narration-v1` digest covers schemaVersion/language/steps{id,title,narration}; mechanical/camera metadata does not force new speech.
 
 Protocol/config/generator/CLI produce verified immutable MP3s and publish the complete manifest last. A failed segment or local publish retains the prior valid lesson. The browser player verifies hashes/size and provides text/status, verified Blob URLs, native playback/pause/seek and cleanup. It never receives credentials or calls the speech API.
 
@@ -74,7 +78,7 @@ Dry-run existing wrapper:
 `node examples/inline-four/voice/synthesize-doubao.mjs`.
 Generation is opt-in with `--generate --config <authorized-local-file>` and an English-compatible speaker for English. Configuration paths and credentials are private; do not put them into examples or commits. Browser sound requires a user gesture; missing/corrupt/stale speech preserves text and an honest unavailable state.
 
-Focused checks: `node --test shared/voice/voice.test.mjs shared/voice/english.test.mjs`. See [narration](../.agents/skills/mechanism-studio/references/narration.md) for protocol, cancellation and version rules.
+Focused checks: `node --test shared/voice/*.test.mjs`. The new speech API uses fake responses in tests and performs no paid generation. See [narration](../.agents/skills/mechanism-studio/references/narration.md) for provider selection, protocol, cancellation and version rules.
 
 ### 6. Appearance — reversible timeline accents
 
@@ -121,7 +125,7 @@ The [runtime map](../.agents/skills/mechanism-studio/references/runtime-modules.
 | [Visual style](../.agents/skills/mechanism-studio/references/presentation-style.md) | White line art, atlas type, short near-part leaders, honest projection and safety areas |
 | [Pacing](../.agents/skills/mechanism-studio/references/presentation-pacing.md) | 30–40s default, action/hold separation, sequential names, same-scene retention/group fade |
 | [Tour transport](../.agents/skills/mechanism-studio/references/presentation-tour.md) | One clock, pause/seek/loop/exploration/reduced-motion and fallback |
-| [Audio delivery](../.agents/skills/mechanism-studio/references/audio-delivery.md) | Silence/music/Doubao selection, synchronized editorial effects and actual media review |
+| [Audio delivery](../.agents/skills/mechanism-studio/references/audio-delivery.md) | Silence/music/optional provider-neutral speech selection, synchronized editorial effects and actual media review |
 | [Process animation](../.agents/skills/mechanism-studio/references/process-animation.md) | Phase-driven qualitative flow/spark/combustion, regions and unsupported physics |
 | [Teaching and validation](../.agents/skills/mechanism-studio/references/teaching-and-validation.md) | Observable question, model invariants, evidence layers and browser checks |
 

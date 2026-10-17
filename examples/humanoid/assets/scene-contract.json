@@ -1,0 +1,2571 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "unitree-g1-humanoid",
+  "assetRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1",
+  "units": {
+    "source": "MJCF metres; mesh numeric coordinates metres; angles radian",
+    "asset": "m",
+    "angle": "rad"
+  },
+  "sourceSHA256": "3c2616550a31f33e84d3c80b8e913ac5618c8888019b0c9490dae93493e647f3",
+  "coordinateMap": "B:[x,z,-y]; source body node B*M*B^-1; geometry B*geomTransform*meshScale; source quaternions normalized per MJCF convention",
+  "identity": "part_id is mjcf:<original body name>; direct original source hierarchy. Visual occurrence IDs derive from body-local original geom index, separate from mesh definitions.",
+  "limitations": [
+    "MJCF body identities and hierarchy are source-backed, but visual meshes merge physical hardware; there is no per-screw identity, native STEP assembly, B-rep or manufacturing topology.",
+    "Head and rubber hand visuals belong to existing torso/wrist bodies in this source. They are not additional articulated joints.",
+    "Exploded separation is an editorial display operation, not collision-checked service disassembly.",
+    "Source joint axes, limits, inertials and actuator declarations are retained as source evidence; no dynamics, balance, contact or control validation is claimed."
+  ],
+  "parts": [
+    {
+      "part_id": "mjcf:pelvis",
+      "parent_id": null,
+      "label": "pelvis",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.793,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "pelvis",
+        "parentBody": null,
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:pelvis/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:pelvis",
+            "meshName": "pelvis",
+            "file": "source/unitree_g1/assets/pelvis.STL",
+            "sha256": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 63648,
+            "triangleCount": 21216
+          },
+          {
+            "visualOccurrenceId": "mjcf:pelvis/geom:1",
+            "sourceGeomIndex": 1,
+            "definitionId": "mjcf-mesh:pelvis_contour_link",
+            "meshName": "pelvis_contour_link",
+            "file": "source/unitree_g1/assets/pelvis_contour_link.STL",
+            "sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 63648,
+            "indexCount": 108306,
+            "triangleCount": 36102
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.058128051459789276,
+          -0.15200547873973846,
+          -0.0677763894200325
+        ],
+        "max": [
+          0.061431244015693665,
+          0.0025000046007335186,
+          0.06776073575019836
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_hip_pitch_link",
+      "parent_id": "mjcf:pelvis",
+      "label": "left_hip_pitch_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.1027,
+          -0.064452,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_hip_pitch_link",
+        "parentBody": "pelvis",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_hip_pitch_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_hip_pitch_link",
+            "meshName": "left_hip_pitch_link",
+            "file": "source/unitree_g1/assets/left_hip_pitch_link.STL",
+            "sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 10896,
+            "triangleCount": 3632
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.04231603071093559,
+          -0.08004375547170639,
+          -0.09881081432104111
+        ],
+        "max": [
+          0.04024069383740425,
+          0.03712092339992523,
+          -1.752833850288127e-10
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_hip_roll_link",
+      "parent_id": "mjcf:left_hip_pitch_link",
+      "label": "left_hip_roll_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          0.9847439475280368,
+          0.17400964860288382,
+          0,
+          0,
+          -0.17400964860288382,
+          0.9847439475280368,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.030465,
+          -0.052,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_hip_roll_link",
+        "parentBody": "left_hip_pitch_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_hip_roll_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_hip_roll_link",
+            "meshName": "left_hip_roll_link",
+            "file": "source/unitree_g1/assets/left_hip_roll_link.STL",
+            "sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 11526,
+            "triangleCount": 3842
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.026318851858377457,
+          -0.12412407994270325,
+          -0.048774201422929764
+        ],
+        "max": [
+          0.08016039431095123,
+          0.046484772115945816,
+          0.04911654815077782
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_hip_yaw_link",
+      "parent_id": "mjcf:left_hip_roll_link",
+      "label": "left_hip_yaw_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.025001,
+          -0.12412,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_hip_yaw_link",
+        "parentBody": "left_hip_roll_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_hip_yaw_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_hip_yaw_link",
+            "meshName": "left_hip_yaw_link",
+            "file": "source/unitree_g1/assets/left_hip_yaw_link.STL",
+            "sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 17772,
+            "triangleCount": 5924
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.1272493153810501,
+          -0.22623078525066376,
+          -0.0432993583381176
+        ],
+        "max": [
+          0.05238468199968338,
+          7.070005914044941e-9,
+          0.045383282005786896
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_knee_link",
+      "parent_id": "mjcf:left_hip_yaw_link",
+      "label": "left_knee_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          0.9847439475280368,
+          -0.17400964860288382,
+          0,
+          0,
+          0.17400964860288382,
+          0.9847439475280368,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.078273,
+          -0.17734,
+          -0.0021489,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_knee_link",
+        "parentBody": "left_hip_yaw_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_knee_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_knee_link",
+            "meshName": "left_knee_link",
+            "file": "source/unitree_g1/assets/left_knee_link.STL",
+            "sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 51288,
+            "triangleCount": 17096
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.03989659249782562,
+          -0.3150727450847626,
+          -0.03581269457936287
+        ],
+        "max": [
+          0.06391961872577667,
+          0.04004927724599838,
+          0.03588641807436943
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_ankle_pitch_link",
+      "parent_id": "mjcf:left_knee_link",
+      "label": "left_ankle_pitch_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.30001,
+          0.000094445,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_ankle_pitch_link",
+        "parentBody": "left_knee_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_ankle_pitch_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_ankle_pitch_link",
+            "meshName": "left_ankle_pitch_link",
+            "file": "source/unitree_g1/assets/left_ankle_pitch_link.STL",
+            "sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 4266,
+            "triangleCount": 1422
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02449999935925007,
+          -0.02455790899693966,
+          -0.006557829678058624
+        ],
+        "max": [
+          0.01150001771748066,
+          0.012889973819255829,
+          0.006442185025662184
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_ankle_roll_link",
+      "parent_id": "mjcf:left_ankle_pitch_link",
+      "label": "left_ankle_roll_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.017558,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_ankle_roll_link",
+        "parentBody": "left_ankle_pitch_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_ankle_roll_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_ankle_roll_link",
+            "meshName": "left_ankle_roll_link",
+            "file": "source/unitree_g1/assets/left_ankle_roll_link.STL",
+            "sha256": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 39198,
+            "triangleCount": 13066
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.06584136933088303,
+          -0.035409145057201385,
+          -0.03784090280532837
+        ],
+        "max": [
+          0.14236535131931305,
+          0.023583902046084404,
+          0.03774179145693779
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_hip_pitch_link",
+      "parent_id": "mjcf:pelvis",
+      "label": "right_hip_pitch_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.1027,
+          0.064452,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_hip_pitch_link",
+        "parentBody": "pelvis",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_hip_pitch_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_hip_pitch_link",
+            "meshName": "right_hip_pitch_link",
+            "file": "source/unitree_g1/assets/right_hip_pitch_link.STL",
+            "sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 10872,
+            "triangleCount": 3624
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.04231603071093559,
+          -0.08004375547170639,
+          1.752833850288127e-10
+        ],
+        "max": [
+          0.04024069383740425,
+          0.03712008520960808,
+          0.09881081432104111
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_hip_roll_link",
+      "parent_id": "mjcf:right_hip_pitch_link",
+      "label": "right_hip_roll_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          0.9847439475280368,
+          0.17400964860288382,
+          0,
+          0,
+          -0.17400964860288382,
+          0.9847439475280368,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.030465,
+          0.052,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_hip_roll_link",
+        "parentBody": "right_hip_pitch_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_hip_roll_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_hip_roll_link",
+            "meshName": "right_hip_roll_link",
+            "file": "source/unitree_g1/assets/right_hip_roll_link.STL",
+            "sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 11556,
+            "triangleCount": 3852
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.026318851858377457,
+          -0.12412407994270325,
+          -0.04911654815077782
+        ],
+        "max": [
+          0.08016039431095123,
+          0.046484772115945816,
+          0.048774201422929764
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_hip_yaw_link",
+      "parent_id": "mjcf:right_hip_roll_link",
+      "label": "right_hip_yaw_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.025001,
+          -0.12412,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_hip_yaw_link",
+        "parentBody": "right_hip_roll_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_hip_yaw_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_hip_yaw_link",
+            "meshName": "right_hip_yaw_link",
+            "file": "source/unitree_g1/assets/right_hip_yaw_link.STL",
+            "sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 17772,
+            "triangleCount": 5924
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.1272493153810501,
+          -0.22623078525066376,
+          -0.045383282005786896
+        ],
+        "max": [
+          0.05238468199968338,
+          7.070005914044941e-9,
+          0.0432993583381176
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_knee_link",
+      "parent_id": "mjcf:right_hip_yaw_link",
+      "label": "right_knee_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          0.9847439475280368,
+          -0.17400964860288382,
+          0,
+          0,
+          0.17400964860288382,
+          0.9847439475280368,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.078273,
+          -0.17734,
+          0.0021489,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_knee_link",
+        "parentBody": "right_hip_yaw_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_knee_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_knee_link",
+            "meshName": "right_knee_link",
+            "file": "source/unitree_g1/assets/right_knee_link.STL",
+            "sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 51132,
+            "triangleCount": 17044
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.03989659249782562,
+          -0.3150727450847626,
+          -0.03588281199336052
+        ],
+        "max": [
+          0.06391961872577667,
+          0.04004927724599838,
+          0.035813167691230774
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_ankle_pitch_link",
+      "parent_id": "mjcf:right_knee_link",
+      "label": "right_ankle_pitch_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.30001,
+          -0.000094445,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_ankle_pitch_link",
+        "parentBody": "right_knee_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_ankle_pitch_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_ankle_pitch_link",
+            "meshName": "right_ankle_pitch_link",
+            "file": "source/unitree_g1/assets/right_ankle_pitch_link.STL",
+            "sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 4266,
+            "triangleCount": 1422
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02449999935925007,
+          -0.02455790899693966,
+          -0.006442185025662184
+        ],
+        "max": [
+          0.01150001771748066,
+          0.012889973819255829,
+          0.006557829678058624
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_ankle_roll_link",
+      "parent_id": "mjcf:right_ankle_pitch_link",
+      "label": "right_ankle_roll_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.017558,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_ankle_roll_link",
+        "parentBody": "right_ankle_pitch_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_ankle_roll_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_ankle_roll_link",
+            "meshName": "right_ankle_roll_link",
+            "file": "source/unitree_g1/assets/right_ankle_roll_link.STL",
+            "sha256": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 39222,
+            "triangleCount": 13074
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.06584136933088303,
+          -0.035409145057201385,
+          -0.03774179145693779
+        ],
+        "max": [
+          0.14236535131931305,
+          0.023583902046084404,
+          0.03784090280532837
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:waist_yaw_link",
+      "parent_id": "mjcf:pelvis",
+      "label": "waist_yaw_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "waist_yaw_link",
+        "parentBody": "pelvis",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:waist_yaw_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:waist_yaw_link",
+            "meshName": "waist_yaw_link",
+            "file": "source/unitree_g1/assets/waist_yaw_link_rev_1_0.STL",
+            "sha256": "ec6db442b11f25eed898b5add07940c85d804f300de24dcbd264ccd8be7d554c",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 37194,
+            "triangleCount": 12398
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.042499881237745285,
+          -0.00020057815709151328,
+          -0.04246227815747261
+        ],
+        "max": [
+          0.0423685759305954,
+          0.053999822586774826,
+          0.04246886819601059
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:waist_roll_link",
+      "parent_id": "mjcf:waist_yaw_link",
+      "label": "waist_roll_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0039635,
+          0.044,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "waist_roll_link",
+        "parentBody": "waist_yaw_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:waist_roll_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:waist_roll_link",
+            "meshName": "waist_roll_link",
+            "file": "source/unitree_g1/assets/waist_roll_link_rev_1_0.STL",
+            "sha256": "b67c347a05abc3e8ddae600d98a082bee273bb39f8e651647708b0a7140a8a97",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 5148,
+            "triangleCount": 1716
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.01700076274573803,
+          -0.011993408203125,
+          -0.010001895017921925
+        ],
+        "max": [
+          0.01700076274573803,
+          0.011993393301963806,
+          0.01000189408659935
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:torso_link",
+      "parent_id": "mjcf:waist_roll_link",
+      "label": "torso_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "torso_link",
+        "parentBody": "waist_roll_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:torso_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:torso_link",
+            "meshName": "torso_link",
+            "file": "source/unitree_g1/assets/torso_link_rev_1_0.STL",
+            "sha256": "11ddb46f2098efbbd8816b1d65893632d8e78be936376c7cdcd6771899ccc723",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 154230,
+            "triangleCount": 51410
+          },
+          {
+            "visualOccurrenceId": "mjcf:torso_link/geom:2",
+            "sourceGeomIndex": 2,
+            "definitionId": "mjcf-mesh:logo_link",
+            "meshName": "logo_link",
+            "file": "source/unitree_g1/assets/logo_link.STL",
+            "sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b",
+            "sourceGeomTransform": {
+              "pos": [
+                0.0039635,
+                0,
+                -0.044
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 154230,
+            "indexCount": 14598,
+            "triangleCount": 4866
+          },
+          {
+            "visualOccurrenceId": "mjcf:torso_link/geom:4",
+            "sourceGeomIndex": 4,
+            "definitionId": "mjcf-mesh:head_link",
+            "meshName": "head_link",
+            "file": "source/unitree_g1/assets/head_link.STL",
+            "sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411",
+            "sourceGeomTransform": {
+              "pos": [
+                0.0039635,
+                0,
+                -0.044
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 168828,
+            "indexCount": 55962,
+            "triangleCount": 18654
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.06861061602830887,
+          -0.008908695541322231,
+          -0.10771439224481583
+        ],
+        "max": [
+          0.08362708240747452,
+          0.48657259345054626,
+          0.10771311819553375
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_shoulder_pitch_link",
+      "parent_id": "mjcf:torso_link",
+      "label": "left_shoulder_pitch_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          0.9999999801369496,
+          -0.000054948898509222106,
+          0.00019158997642890877,
+          0,
+          -3.219720907836137e-10,
+          0.9612461518856443,
+          0.2756915586031622,
+          0,
+          -0.00019931407505568427,
+          -0.27569155312714855,
+          0.9612461327923458,
+          0,
+          0.0039563,
+          0.24778,
+          -0.10022,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_shoulder_pitch_link",
+        "parentBody": "torso_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_shoulder_pitch_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_shoulder_pitch_link",
+            "meshName": "left_shoulder_pitch_link",
+            "file": "source/unitree_g1/assets/left_shoulder_pitch_link.STL",
+            "sha256": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 10602,
+            "triangleCount": 3534
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.031012414023280144,
+          -0.050329867750406265,
+          -0.0744975134730339
+        ],
+        "max": [
+          0.031035970896482468,
+          0.040049511939287186,
+          7.454270978257682e-9
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_shoulder_roll_link",
+      "parent_id": "mjcf:left_shoulder_pitch_link",
+      "label": "left_shoulder_roll_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0.9612622916870002,
+          -0.27563527818596906,
+          0,
+          0,
+          0.27563527818596906,
+          0.9612622916870002,
+          0,
+          0,
+          -0.013831,
+          -0.038,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_shoulder_roll_link",
+        "parentBody": "left_shoulder_pitch_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_shoulder_roll_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_shoulder_roll_link",
+            "meshName": "left_shoulder_roll_link",
+            "file": "source/unitree_g1/assets/left_shoulder_roll_link.STL",
+            "sha256": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 24012,
+            "triangleCount": 8004
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.040152646601200104,
+          -0.10319999605417252,
+          -0.03994247317314148
+        ],
+        "max": [
+          0.04103577136993408,
+          0.03342677280306816,
+          0.03291530907154083
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_shoulder_yaw_link",
+      "parent_id": "mjcf:left_shoulder_roll_link",
+      "label": "left_shoulder_yaw_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.1032,
+          -0.00624,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_shoulder_yaw_link",
+        "parentBody": "left_shoulder_roll_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_shoulder_yaw_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_shoulder_yaw_link",
+            "meshName": "left_shoulder_yaw_link",
+            "file": "source/unitree_g1/assets/left_shoulder_yaw_link.STL",
+            "sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 14946,
+            "triangleCount": 4982
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.032810695469379425,
+          -0.11369692534208298,
+          -0.03310637176036835
+        ],
+        "max": [
+          0.048374809324741364,
+          0.031574152410030365,
+          0.04141250625252724
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_elbow_link",
+      "parent_id": "mjcf:left_shoulder_yaw_link",
+      "label": "left_elbow_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.015783,
+          -0.080518,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_elbow_link",
+        "parentBody": "left_shoulder_yaw_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_elbow_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_elbow_link",
+            "meshName": "left_elbow_link",
+            "file": "source/unitree_g1/assets/left_elbow_link.STL",
+            "sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 5322,
+            "triangleCount": 1774
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.029775112867355347,
+          -0.04543027654290199,
+          -0.03477716073393822
+        ],
+        "max": [
+          0.10000001639127731,
+          0.029775114730000496,
+          0.03125531226396561
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_wrist_roll_link",
+      "parent_id": "mjcf:left_elbow_link",
+      "label": "left_wrist_roll_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.1,
+          -0.01,
+          -0.00188791,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_wrist_roll_link",
+        "parentBody": "left_elbow_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_wrist_roll_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_wrist_roll_link",
+            "meshName": "left_wrist_roll_link",
+            "file": "source/unitree_g1/assets/left_wrist_roll_link.STL",
+            "sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 21366,
+            "triangleCount": 7122
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -4.373005372393509e-15,
+          -0.02999999187886715,
+          -0.029999999329447746
+        ],
+        "max": [
+          0.05599305406212807,
+          0.02999999187886715,
+          0.030494267120957375
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_wrist_pitch_link",
+      "parent_id": "mjcf:left_wrist_roll_link",
+      "label": "left_wrist_pitch_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.038,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_wrist_pitch_link",
+        "parentBody": "left_wrist_roll_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_wrist_pitch_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_wrist_pitch_link",
+            "meshName": "left_wrist_pitch_link",
+            "file": "source/unitree_g1/assets/left_wrist_pitch_link.STL",
+            "sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 5154,
+            "triangleCount": 1718
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02850000001490116,
+          -0.028490660712122917,
+          -0.028490660712122917
+        ],
+        "max": [
+          0.07450000196695328,
+          0.028490660712122917,
+          0.028490660712122917
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_wrist_yaw_link",
+      "parent_id": "mjcf:left_wrist_pitch_link",
+      "label": "left_wrist_yaw_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.046,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_wrist_yaw_link",
+        "parentBody": "left_wrist_pitch_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_wrist_yaw_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:left_wrist_yaw_link",
+            "meshName": "left_wrist_yaw_link",
+            "file": "source/unitree_g1/assets/left_wrist_yaw_link.STL",
+            "sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 19116,
+            "triangleCount": 6372
+          },
+          {
+            "visualOccurrenceId": "mjcf:left_wrist_yaw_link/geom:2",
+            "sourceGeomIndex": 2,
+            "definitionId": "mjcf-mesh:left_rubber_hand",
+            "meshName": "left_rubber_hand",
+            "file": "source/unitree_g1/assets/left_rubber_hand.STL",
+            "sha256": "cff2221a690fa69303f61fce68f2d155c1517b52efb6ca9262dd56e0bc6e70fe",
+            "sourceGeomTransform": {
+              "pos": [
+                0.0415,
+                0.003,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 19116,
+            "indexCount": 137244,
+            "triangleCount": 45748
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0179926548153162,
+          -0.043028898537158966,
+          -0.030000001192092896
+        ],
+        "max": [
+          0.17332935333251953,
+          0.06344989687204361,
+          0.04490606486797333
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_shoulder_pitch_link",
+      "parent_id": "mjcf:torso_link",
+      "label": "right_shoulder_pitch_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          0.9999999801369496,
+          -0.000054948898509222106,
+          -0.00019158997642890877,
+          0,
+          -3.219720907836137e-10,
+          0.9612461518856443,
+          -0.2756915586031622,
+          0,
+          0.00019931407505568427,
+          0.27569155312714855,
+          0.9612461327923458,
+          0,
+          0.0039563,
+          0.24778,
+          0.10021,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_shoulder_pitch_link",
+        "parentBody": "torso_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_shoulder_pitch_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_shoulder_pitch_link",
+            "meshName": "right_shoulder_pitch_link",
+            "file": "source/unitree_g1/assets/right_shoulder_pitch_link.STL",
+            "sha256": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 10602,
+            "triangleCount": 3534
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.031012414023280144,
+          -0.050329867750406265,
+          -7.454257655581387e-9
+        ],
+        "max": [
+          0.031035970896482468,
+          0.040049511939287186,
+          0.0744975134730339
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_shoulder_roll_link",
+      "parent_id": "mjcf:right_shoulder_pitch_link",
+      "label": "right_shoulder_roll_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0.9612622916870002,
+          0.27563527818596906,
+          0,
+          0,
+          -0.27563527818596906,
+          0.9612622916870002,
+          0,
+          0,
+          -0.013831,
+          0.038,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_shoulder_roll_link",
+        "parentBody": "right_shoulder_pitch_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_shoulder_roll_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_shoulder_roll_link",
+            "meshName": "right_shoulder_roll_link",
+            "file": "source/unitree_g1/assets/right_shoulder_roll_link.STL",
+            "sha256": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 24108,
+            "triangleCount": 8036
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.04015251621603966,
+          -0.10319999605417252,
+          -0.03291530907154083
+        ],
+        "max": [
+          0.04103577136993408,
+          0.03342677280306816,
+          0.03994247317314148
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_shoulder_yaw_link",
+      "parent_id": "mjcf:right_shoulder_roll_link",
+      "label": "right_shoulder_yaw_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.1032,
+          0.00624,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_shoulder_yaw_link",
+        "parentBody": "right_shoulder_roll_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_shoulder_yaw_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_shoulder_yaw_link",
+            "meshName": "right_shoulder_yaw_link",
+            "file": "source/unitree_g1/assets/right_shoulder_yaw_link.STL",
+            "sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 14994,
+            "triangleCount": 4998
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.032810695469379425,
+          -0.11369692534208298,
+          -0.04141250625252724
+        ],
+        "max": [
+          0.048374809324741364,
+          0.031574152410030365,
+          0.03310637176036835
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_elbow_link",
+      "parent_id": "mjcf:right_shoulder_yaw_link",
+      "label": "right_elbow_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.015783,
+          -0.080518,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_elbow_link",
+        "parentBody": "right_shoulder_yaw_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_elbow_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_elbow_link",
+            "meshName": "right_elbow_link",
+            "file": "source/unitree_g1/assets/right_elbow_link.STL",
+            "sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 5322,
+            "triangleCount": 1774
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.029775112867355347,
+          -0.04543027654290199,
+          -0.03125531226396561
+        ],
+        "max": [
+          0.10000001639127731,
+          0.029775114730000496,
+          0.03477716073393822
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_wrist_roll_link",
+      "parent_id": "mjcf:right_elbow_link",
+      "label": "right_wrist_roll_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.1,
+          -0.01,
+          0.00188791,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_wrist_roll_link",
+        "parentBody": "right_elbow_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_wrist_roll_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_wrist_roll_link",
+            "meshName": "right_wrist_roll_link",
+            "file": "source/unitree_g1/assets/right_wrist_roll_link.STL",
+            "sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 21360,
+            "triangleCount": 7120
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -4.373005372393509e-15,
+          -0.02999999187886715,
+          -0.030494267120957375
+        ],
+        "max": [
+          0.05599305406212807,
+          0.02999999187886715,
+          0.029999999329447746
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_wrist_pitch_link",
+      "parent_id": "mjcf:right_wrist_roll_link",
+      "label": "right_wrist_pitch_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.038,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_wrist_pitch_link",
+        "parentBody": "right_wrist_roll_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_wrist_pitch_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_wrist_pitch_link",
+            "meshName": "right_wrist_pitch_link",
+            "file": "source/unitree_g1/assets/right_wrist_pitch_link.STL",
+            "sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 4770,
+            "triangleCount": 1590
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02850000187754631,
+          -0.028490660712122917,
+          -0.028490660712122917
+        ],
+        "max": [
+          0.07450000196695328,
+          0.028490660712122917,
+          0.028490660712122917
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_wrist_yaw_link",
+      "parent_id": "mjcf:right_wrist_pitch_link",
+      "label": "right_wrist_yaw_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.046,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_wrist_yaw_link",
+        "parentBody": "right_wrist_pitch_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_wrist_yaw_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:right_wrist_yaw_link",
+            "meshName": "right_wrist_yaw_link",
+            "file": "source/unitree_g1/assets/right_wrist_yaw_link.STL",
+            "sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 20484,
+            "triangleCount": 6828
+          },
+          {
+            "visualOccurrenceId": "mjcf:right_wrist_yaw_link/geom:2",
+            "sourceGeomIndex": 2,
+            "definitionId": "mjcf-mesh:right_rubber_hand",
+            "meshName": "right_rubber_hand",
+            "file": "source/unitree_g1/assets/right_rubber_hand.STL",
+            "sha256": "99533b778bca6246144fa511bb9d4e555e075c641f2a0251e04372869cd99d67",
+            "sourceGeomTransform": {
+              "pos": [
+                0.0415,
+                -0.003,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 20484,
+            "indexCount": 131556,
+            "triangleCount": 43852
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0179926548153162,
+          -0.043028924614191055,
+          -0.04490606486797333
+        ],
+        "max": [
+          0.17332810163497925,
+          0.06344989687204361,
+          0.029999999329447746
+        ]
+      }
+    }
+  ]
+}

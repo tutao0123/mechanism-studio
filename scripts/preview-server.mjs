@@ -12,8 +12,11 @@ function documentPage(name, content) {
 export function isPublicPath(path) {
   if (path.split('/').some(part => part.startsWith('.')) || /\\|\0|(?:^|\/)\.\.(?:\/|$)/.test(path)) return false;
   if (/(?:\.private|\.local)\.json$|\.env(?:\.|$)/i.test(path)) return false;
+  if (/^shared\/voice\/speech(?:-cli)?\.mjs$/.test(path)) return false; // Node-only API; no synthesis/credentials in a page.
   if (['index.html', 'index-dark.html', 'README.md', 'THIRD_PARTY_NOTICES.md', 'model.mjs', 'live.mjs', 'styles.css'].includes(path)) return true;
   if (/^docs\/[\w/-]+\.md$/.test(path)) return true;
+  if (/^docs\/media\/[\w-]+\.(?:png|jpe?g|webp)$/.test(path)) return true;
+  if (['examples/README.md', 'examples/lock-comparison/README.md', 'examples/lock-comparison/index.html'].includes(path)) return true;
   if (/^shots\/[\w/-]+\.(?:png|jpe?g)$/.test(path)) return true;
   if (/^output\/overview\.(?:json|md)$/.test(path)) return true;
   if (/^output\/engine-comparison\/[\w-]+\.md$/.test(path)) return true;

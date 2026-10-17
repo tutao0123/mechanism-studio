@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "stage": "bound",
+  "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1",
+  "planRevision": "g1-assembly-story-1",
+  "route": "Showcase",
+  "language": "en",
+  "source": "https://github.com/google-deepmind/mujoco_menagerie/tree/71f066ad0be9cd271f7ed58c030243ef157af9f4/unitree_g1",
+  "sourceLicense": "BSD-3-Clause",
+  "inputKind": "MJCF with retained visual STL assets",
+  "goal": "Show one humanoid structure, readable upper/lower chains, and exact visual restoration.",
+  "requestedDepth": "Whole robot to source bodies",
+  "availableDepth": "30 source bodies, 35 visual mesh occurrences",
+  "engineeringEvidence": "Source hierarchy, rest transforms and 29 hinge definitions; the free base is retained as source evidence.",
+  "presentation": "Zero joint pose with authored observation translations. No gait, balance, actuator internals, hidden screws or service sequence.",
+  "distinction": "A separate WOLF component study uses its own real CAD internals; it must not be described as G1 hardware."
+}

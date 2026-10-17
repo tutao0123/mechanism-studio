@@ -19,7 +19,7 @@ Continuous camera transitions also capture the actual starting camera/time once.
 | Transport state | Time source | Behavior |
 | --- | --- | --- |
 | Silent | One display clock | Finite actual chapter durations, common pause/seek/resume |
-| Successful Doubao playback | Native current chapter Audio.currentTime | Drives visual chapter time; no guessed wall clock |
+| Successful narration playback | Native current chapter Audio.currentTime | Drives visual chapter time; no guessed wall clock; existing Doubao lesson checks remain in its adapter |
 | Sound loading/retry | Retained chapter position | Freeze or explicitly switch to silent, without secretly advancing audible mode |
 | Play rejection/failure | Explicit silent fallback | Useful captions/controls, accurate English status and retry |
 | Music study | One native track currentTime | Global time maps chapters; no per-chapter music restart |

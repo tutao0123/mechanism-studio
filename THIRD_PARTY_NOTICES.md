@@ -11,6 +11,8 @@ was checked on 2026-10-18.
 
 | Source | Included material | License |
 | --- | --- | --- |
+| Unitree Robotics / MuJoCo Menagerie Unitree G1 | Unmodified `examples/humanoid/source/unitree_g1/` XML/STL/license/notes; derived `assets/` geometry/identity data and G1 visual renders, including `docs/media/humanoid-g1-preview.jpg` | BSD-3-Clause, **model-directory** license, copyright 2016–2023 Unitree Robotics; not the Menagerie repository's general Apache license |
+| Kenney Interface Sounds / Calinou WAV packaging | Five unchanged WAVs in `examples/humanoid/audio/sfx/`; quiet authored uses in `humanoid-loop.wav` | CC0-1.0; source/license/hash records accompany the files |
 | Robonine SO-ARM 102 | Selected upstream documentation, simulation URDF/Xacro/STL/metadata under `EXAMPLE_ROBOT/source/`; derived `EXAMPLE_ROBOT/assets/` geometry/identity data and robot renders, including the README image | CC BY 4.0 |
 | hasecilu KFL08 | `examples/step-assembly/source/kfl08.step` and derived `assets/` | CC BY 3.0 |
 | JaredC01 / Galileo 2 contributors | `examples/shaft-bearing/source/assembly.step`, original editable `Galileo 2 Extruder.f3d` and derived `assets/` | GPL-3.0-only |
@@ -21,6 +23,42 @@ music remain MIT. License notices for source geometry continue to apply when
 that geometry appears in a screenshot, animation or exported video. The WOLF
 visual derivative uses CC BY-SA 4.0, even when its independent music and runtime
 are also available under MIT. Source authors do not endorse this project.
+
+## Unitree G1 visual source and derivatives
+
+Source: [MuJoCo Menagerie, Unitree G1 at revision 71f066a](https://github.com/google-deepmind/mujoco_menagerie/tree/71f066ad0be9cd271f7ed58c030243ef157af9f4/unitree_g1).
+Copyright (c) 2016–2023 HangZhou YuShu TECHNOLOGY CO.,LTD. (Unitree Robotics).
+The pinned [model README](https://github.com/google-deepmind/mujoco_menagerie/blob/71f066ad0be9cd271f7ed58c030243ef157af9f4/unitree_g1/README.md)
+and [model-specific license](https://github.com/google-deepmind/mujoco_menagerie/blob/71f066ad0be9cd271f7ed58c030243ef157af9f4/unitree_g1/LICENSE)
+identify BSD-3-Clause. All original terms and the disclaimer are retained in
+[`examples/humanoid/source/unitree_g1/LICENSE`](examples/humanoid/source/unitree_g1/LICENSE);
+the same notice accompanies documentation renders in [media notices](docs/media/LICENSE.md).
+
+Mechanism Studio preserves the 39 retained upstream files byte-for-byte and adds
+a display exporter, Y-up conversion, source-body identities, merged body visuals,
+editorial explosion/reassembly, neutral materials, camera/annotations and sound.
+The 35 source visuals become 30 display body meshes without triangle decimation.
+These are visual link/body representations, not a newly authored G1 design,
+per-screw CAD assembly, actuator-internal model or verified dynamics/control.
+Keep the full BSD copyright, conditions and disclaimer with source/binary asset
+redistribution and accompanying rendered-media materials. Unitree and Menagerie
+contributors do not endorse Mechanism Studio.
+
+## Kenney sound effects
+
+The humanoid uses `maximize_003.wav`, `minimize_003.wav`, `click_003.wav`,
+`tick_002.wav` and `confirmation_001.wav` from
+[Kenney Interface Sounds](https://kenney.nl/assets/interface-sounds), via
+[Calinou's WAV packaging at revision 4596a49](https://github.com/Calinou/kenney-interface-sounds/tree/4596a49eaf5a533948d49a47467f606bcdea70ff).
+These are **CC0-1.0**. The unchanged upstream
+[license](examples/humanoid/audio/sfx/LICENSE.Kenney.txt) and
+[per-file provenance](examples/humanoid/audio/sfx/provenance.json) are retained.
+Credit is optional under the pack's notice; it is preserved here for traceability.
+The downloaded sample bytes are unchanged. Quiet gain/envelope treatment occurs
+in the derived score; these are editorial cues, not recordings of G1 hardware.
+Original composition and synthesis code remain MIT; this does not relabel the
+Kenney samples as original Mechanism Studio recordings. Other researched sound
+libraries in [the survey](docs/sound-libraries.md) are not bundled.
 
 ## Anatomy
 

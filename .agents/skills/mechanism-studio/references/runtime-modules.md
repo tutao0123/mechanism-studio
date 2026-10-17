@@ -13,7 +13,7 @@ The [input brief](input-brief.md) and [module handoffs](module-orchestration.md)
 | Reversible chapter color accents | [shared/appearance](../../../../shared/appearance/README.md) | Same-clock actual part cues |
 | Music-led assembly study, near labels, capture transport | [shared/study](../../../../shared/study/README.md) | Thin timeline/index/framing/annotation/offset/score adapter |
 | Captured frames + verified track → MP4 | [tools/video](../../../../tools/video/README.md) | Actual input paths/counts and reviewed output; the tool does not capture or publish |
-| Lesson digest, Doubao protocol/generation and browser playback | [shared/voice](../../../../shared/voice/README.md) | Text, mechanical/camera targets and thin CLI |
+| Optional provider-neutral speech API; existing Doubao lesson/digest/browser playback | [shared/voice](../../../../shared/voice/README.md) | Text, explicit speech model/voice/endpoint, media-clock binding; old lesson integration stays separate |
 | GLB/accessor/units/identity/hierarchy/rest/ownership checks | [shared/assets](../../../../shared/assets/README.md) | Mechanism length/phase/contact/mapping invariants |
 | Definition/occurrence identity, tree selection, hide/isolate | [shared/cad](../../../../shared/cad/README.md) | Actual XCAF graph/provenance/matrices and page layout |
 | New STEP import and retained-evidence audit | [CAD workflow](cad-workflow.md), [tools/cad](../../../../tools/cad/README.md) | Per-source provenance and thin page; never copied specimen constants |

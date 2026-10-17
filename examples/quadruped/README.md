@@ -1,5 +1,12 @@
 # 四足机器人：从足端到八个关节
 
+![Eight-joint quadruped in the English Showcase viewer](../../docs/media/quadruped-preview.jpg)
+
+*Existing English Showcase preview: original Mechanism Studio teaching model and
+rendering (MIT). The body is fixed and the foot paths are prescribed; this is
+not a balance simulation. Optional narration audio is not bundled in the public
+checkout.*
+
 **Public checkout:** model, GLB, Blender builder, captions and voice-generation
 code are included. Local `.blend` exports and provider-generated MP3s are
 excluded from Git; the development notes below also describe those optional

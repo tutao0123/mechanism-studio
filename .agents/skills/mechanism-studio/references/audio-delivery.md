@@ -1,6 +1,6 @@
 # Audio choice and delivery
 
-Use this reference to select sound and evidence. Doubao credentials/protocol/versioning belong in [narration](narration.md); visual duration and transport belong in [pacing](presentation-pacing.md) and [tour transport](presentation-tour.md).
+Use this reference to select sound and evidence. Optional speech providers, credentials and protocol/versioning belong in [narration](narration.md); visual duration and transport belong in [pacing](presentation-pacing.md) and [tour transport](presentation-tour.md).
 
 ## Defaults and actual implementation
 
@@ -8,8 +8,8 @@ Use this reference to select sound and evidence. Doubao credentials/protocol/ver
 | --- | --- | --- |
 | Free CAD inspection | Silent | No automatic score, speech or camera tour |
 | Short social clip | No narration; optional gentle original code music and sparse action effects | shared/study and example score/timeline |
-| Explanatory lesson or requested speech | Doubao, English publicly unless overridden | shared/voice and existing showcase |
-| Looping page | Silence, music or Doubao according to request | Music study and narrated showcase are distinct integrations |
+| Explanatory lesson or requested speech | Optional provider-neutral speech API, English publicly unless overridden | shared/voice/speech.mjs; existing Doubao lesson integration retained |
+| Looping page | Silence, music or explicitly selected narration according to request | Music study and old narrated showcase are distinct integrations |
 
 [Robot score/synthesizer](../../../../EXAMPLE_ROBOT/audio/README.md), [kinetic score](../../../../EXAMPLE_ROBOT/kinetic/audio/README.md) and [shared/study](../../../../shared/study/README.md) are maintained music references. Old ignored output scripts are not the only source for a new example. The study owns music transport; the example owns BPM, event mapping, framing and score identity. It is not a universal music-composition service.
 
@@ -18,6 +18,8 @@ The old showcase uses lesson/manifests and may prepare voice even for silent pre
 ## Compose with the display
 
 Use traceable authored melody/rhythm/synthesis parameters. Record sample rate, duration, algorithm/seed and file digest. Third-party samples/tracks need separate provenance and terms.
+
+For reusable effects, consult the [reviewed sound libraries](../../../../docs/sound-libraries.md) and the [humanoid's retained CC0 subset](../../../../examples/humanoid/audio/sfx/README.md). Prefer original synthesis or explicitly licensed CC0 samples. Preserve source bytes, creator, pinned URL, license and hash; record processing in the derived mix. Do not treat an entire recording website as one license, or bundle NC/redistribution-restricted files into the default library. Reusing a WAV in a new story also needs new event-to-part bindings; the previous story's component IDs do not describe the new actions.
 
 Default music supports white-line observation: sparse soft keys/pads, restrained bass/percussion and space. A half-time feel or lower percussion density may soften music without slowing the entire animation. BPM is per-example, not a global skill constant.
 
@@ -30,7 +32,7 @@ Review transient peaks, clipping, balance and the loop seam. Silent viewing must
 ## Timing and review
 
 - **Silent:** one pauseable/seekable display clock and actual authored chapter durations.
-- **Doubao:** once native playback succeeds, Audio.currentTime drives that chapter; use measured audio durations and matching lesson digest.
+- **Narration:** once native playback succeeds, Audio.currentTime drives that chapter; use measured audio durations and matching text/audio identity. Existing Doubao lessons retain their manifest-v1 checks; generic speech output does not silently replace them.
 - **Music:** one media clock maps to global chapter offsets, never one restart per chapter or old narration duration. Offline capture uses deterministic frame time and final media duration checks.
 
 First audible playback requires a user gesture. Failed playback leaves readable controls/captions and an honest silent fallback. Validate the selected sound path only: silent Inspect does not need a music loop or TTS.

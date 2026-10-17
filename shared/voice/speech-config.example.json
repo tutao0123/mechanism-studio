@@ -1,0 +1,10 @@
+{
+  "provider": "openrouter",
+  "endpoint": "https://openrouter.ai/api/v1/audio/speech",
+  "model": "replace-with-current-speech-model-id",
+  "voice": "replace-with-that-model-supported-voice",
+  "format": "mp3",
+  "apiKeyEnv": "OPENROUTER_API_KEY",
+  "timeoutMs": 120000,
+  "maxBytes": 33554432
+}

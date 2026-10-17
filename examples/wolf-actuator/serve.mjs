@@ -13,11 +13,15 @@ function within(root, target) {
 export function publicFile(path) {
   if (path.includes('\\') || path.includes('\0') || path.split('/').some(part => part === '..' || part.startsWith('.'))) return null;
   if (path === '/' || path === '/index.html') return resolve(exampleRoot, 'index.html');
+  if (path === '/detail/' || path === '/detail/index.html') return resolve(exampleRoot, 'detail/index.html');
+  if (/^\/detail\/(?:app\.mjs|story\.mjs|framing\.mjs|annotations\.mjs|README\.md)$/.test(path)) return resolve(exampleRoot, path.slice(1));
+  if (/^\/detail\/(?:music-score|plan)\.json$/.test(path)) return resolve(exampleRoot, path.slice(1));
   if (/^\/(?:app\.mjs|story\.mjs|framing\.mjs|annotations\.mjs|README\.md)$/.test(path)) return resolve(exampleRoot, path.slice(1));
   if (/^\/assets\/(?:assembly\.glb|scene-contract\.json|assembly-manifest\.json|scene-index\.json|import-report\.json)$/.test(path)) return resolve(exampleRoot, path.slice(1));
   if (/^\/audio\/(?:wolf-loop\.wav|music-score\.json)$/.test(path)) return resolve(exampleRoot, path.slice(1));
   if (/^\/planning\/[a-z-]+\.json$/.test(path)) return resolve(exampleRoot, path.slice(1));
   if (path === '/output/wolf-34s-v2.mp4' || path === '/output/wolf-34s-v2-contact-sheet.jpg') return resolve(exampleRoot, path.slice(1));
+  if (path === '/detail/review.html' || path === '/detail/output/wolf-motor-34s-v1.mp4' || path === '/detail/output/wolf-motor-34s-v1-contact-sheet.jpg') return resolve(exampleRoot, path.slice(1));
   if (/^\/source\/(?:provenance\.json|LICENSE|NOTICE\.md|UPSTREAM-README\.md)$/.test(path)) return resolve(exampleRoot, path.slice(1));
   if (/^\/shared\/viewer\/(?:viewer|scene|line-art|annotation-layout)\.mjs$/.test(path) || path === '/showcase/camera-director.mjs') return resolve(projectRoot, path.slice(1));
   if (path === '/shared/appearance/color-accents.mjs' || path === '/shared/appearance/mesh-color-layer.mjs') return resolve(projectRoot, path.slice(1));

@@ -1,0 +1,2235 @@
+{
+  "schemaVersion": "1.2.0",
+  "title": "Anatomy of a Humanoid",
+  "edition": "humanoid-gentle-v1",
+  "authorship": "Original Mechanism Studio composition and code synthesis, with separately licensed CC0 effects by Kenney. No narration or recorded robot acoustics.",
+  "originalScoreLicense": "MIT",
+  "narration": false,
+  "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1",
+  "storyRevision": "g1-assembly-story-1",
+  "bpm": 108,
+  "feltBpm": 54,
+  "totalBeats": 64,
+  "bars": 16,
+  "meter": [
+    4,
+    4
+  ],
+  "sampleRate": 44100,
+  "channels": 2,
+  "bitsPerSample": 16,
+  "frames": 1568000,
+  "durationSeconds": 35.55555555555556,
+  "deterministicSeed": 1213549873,
+  "musicalFeel": "Mellow sustained chords, warm half-time bass and sparse felt keys. Quiet reading views and a soft return. No drums or constant dings.",
+  "timing": "One seekable PCM transport; seconds = beat * 60 / 108. Every group cue binds source IDs and the same authored movement window.",
+  "mix": {
+    "musicTargetSamplePeakDbfs": -10,
+    "finalCeilingDbfs": -8,
+    "percussion": false,
+    "sampleGainReference": "The music peak before sample mixing. CC0 source amplitudes are attenuated by gainDb against that reference; no per-sample normalization.",
+    "effects": "Sparse editorial cues, not simulated contact, actuator sounds or hardware recordings."
+  },
+  "sourceInputs": {
+    "license": "CC0-1.0",
+    "revision": "4596a49eaf5a533948d49a47467f606bcdea70ff",
+    "files": [
+      {
+        "file": "maximize_003.wav",
+        "creator": "Kenney",
+        "license": "CC0-1.0",
+        "sha256": "3233c5bad496e64a707177583e34f2ed786212e3da87c123e11ad4ae1e77dfee",
+        "sourceUrl": "https://github.com/Calinou/kenney-interface-sounds/blob/4596a49eaf5a533948d49a47467f606bcdea70ff/addons/kenney_interface_sounds/maximize_003.wav",
+        "durationSeconds": 0.211882,
+        "sampleRate": 44100,
+        "channels": 1
+      },
+      {
+        "file": "minimize_003.wav",
+        "creator": "Kenney",
+        "license": "CC0-1.0",
+        "sha256": "1496cfd47fc89e499d94cea45747d10924c165774ea5f74b9e0787de56e87fbc",
+        "sourceUrl": "https://github.com/Calinou/kenney-interface-sounds/blob/4596a49eaf5a533948d49a47467f606bcdea70ff/addons/kenney_interface_sounds/minimize_003.wav",
+        "durationSeconds": 0.222041,
+        "sampleRate": 44100,
+        "channels": 1
+      },
+      {
+        "file": "click_003.wav",
+        "creator": "Kenney",
+        "license": "CC0-1.0",
+        "sha256": "b035afe3fe08b0fd3517c612bdfd362799bffe762d2cbf8f09e6a50322067358",
+        "sourceUrl": "https://github.com/Calinou/kenney-interface-sounds/blob/4596a49eaf5a533948d49a47467f606bcdea70ff/addons/kenney_interface_sounds/click_003.wav",
+        "durationSeconds": 0.018866,
+        "sampleRate": 44100,
+        "channels": 1
+      },
+      {
+        "file": "tick_002.wav",
+        "creator": "Kenney",
+        "license": "CC0-1.0",
+        "sha256": "f94af5d5117af7bc71325c1acb874e7ca485bfd9d37f1b52e68009e54badc67f",
+        "sourceUrl": "https://github.com/Calinou/kenney-interface-sounds/blob/4596a49eaf5a533948d49a47467f606bcdea70ff/addons/kenney_interface_sounds/tick_002.wav",
+        "durationSeconds": 0.02322,
+        "sampleRate": 44100,
+        "channels": 1
+      },
+      {
+        "file": "confirmation_001.wav",
+        "creator": "Kenney",
+        "license": "CC0-1.0",
+        "sha256": "f9d0ef5a5c740c2ac250ac3876db9e4340669044a5bf78ae09192918db3e2ebc",
+        "sourceUrl": "https://github.com/Calinou/kenney-interface-sounds/blob/4596a49eaf5a533948d49a47467f606bcdea70ff/addons/kenney_interface_sounds/confirmation_001.wav",
+        "durationSeconds": 0.294603,
+        "sampleRate": 44100,
+        "channels": 1
+      }
+    ]
+  },
+  "effects": {
+    "kind": "editorial",
+    "clock": "Baked into the same PCM buffer. No wall-clock timers or chapter restarts.",
+    "actionCues": [
+      {
+        "id": "torso-explode",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 8,
+        "seconds": 4.444444444444445,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "torso",
+          "partIds": [
+            "mjcf:waist_yaw_link",
+            "mjcf:waist_roll_link",
+            "mjcf:torso_link"
+          ],
+          "phase": "explode",
+          "firstBeat": 8,
+          "lastBeat": 9.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": true
+      },
+      {
+        "id": "shoulders-explode",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 10,
+        "seconds": 5.555555555555555,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "shoulders",
+          "partIds": [
+            "mjcf:left_shoulder_pitch_link",
+            "mjcf:left_shoulder_roll_link",
+            "mjcf:left_shoulder_yaw_link",
+            "mjcf:right_shoulder_pitch_link",
+            "mjcf:right_shoulder_roll_link",
+            "mjcf:right_shoulder_yaw_link"
+          ],
+          "phase": "explode",
+          "firstBeat": 10,
+          "lastBeat": 11.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "elbows-explode",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 12,
+        "seconds": 6.666666666666667,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "elbows",
+          "partIds": [
+            "mjcf:left_elbow_link",
+            "mjcf:right_elbow_link"
+          ],
+          "phase": "explode",
+          "firstBeat": 12,
+          "lastBeat": 13.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": true
+      },
+      {
+        "id": "wrists-explode",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 14,
+        "seconds": 7.777777777777778,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "wrists",
+          "partIds": [
+            "mjcf:left_wrist_roll_link",
+            "mjcf:left_wrist_pitch_link",
+            "mjcf:left_wrist_yaw_link",
+            "mjcf:right_wrist_roll_link",
+            "mjcf:right_wrist_pitch_link",
+            "mjcf:right_wrist_yaw_link"
+          ],
+          "phase": "explode",
+          "firstBeat": 14,
+          "lastBeat": 15.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "hips-explode",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 16,
+        "seconds": 8.88888888888889,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "hips",
+          "partIds": [
+            "mjcf:left_hip_pitch_link",
+            "mjcf:left_hip_roll_link",
+            "mjcf:left_hip_yaw_link",
+            "mjcf:right_hip_pitch_link",
+            "mjcf:right_hip_roll_link",
+            "mjcf:right_hip_yaw_link"
+          ],
+          "phase": "explode",
+          "firstBeat": 16,
+          "lastBeat": 17.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": true
+      },
+      {
+        "id": "shanks-explode",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 18,
+        "seconds": 10,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "shanks",
+          "partIds": [
+            "mjcf:left_knee_link",
+            "mjcf:right_knee_link"
+          ],
+          "phase": "explode",
+          "firstBeat": 18,
+          "lastBeat": 19.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "ankles-explode",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 20,
+        "seconds": 11.11111111111111,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "ankles",
+          "partIds": [
+            "mjcf:left_ankle_pitch_link",
+            "mjcf:right_ankle_pitch_link"
+          ],
+          "phase": "explode",
+          "firstBeat": 20,
+          "lastBeat": 21.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": true
+      },
+      {
+        "id": "feet-explode",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 22,
+        "seconds": 12.222222222222221,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "feet",
+          "partIds": [
+            "mjcf:left_ankle_roll_link",
+            "mjcf:right_ankle_roll_link"
+          ],
+          "phase": "explode",
+          "firstBeat": 22,
+          "lastBeat": 23.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "feet-reassemble",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 42,
+        "seconds": 23.333333333333332,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "feet",
+          "partIds": [
+            "mjcf:left_ankle_roll_link",
+            "mjcf:right_ankle_roll_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 42,
+          "lastBeat": 43.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "feet-seated",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "beat": 43.4,
+        "seconds": 24.11111111111111,
+        "animation": {
+          "groupId": "feet",
+          "partIds": [
+            "mjcf:left_ankle_roll_link",
+            "mjcf:right_ankle_roll_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 42,
+          "lastBeat": 43.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": true
+      },
+      {
+        "id": "ankles-reassemble",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 44,
+        "seconds": 24.444444444444443,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "ankles",
+          "partIds": [
+            "mjcf:left_ankle_pitch_link",
+            "mjcf:right_ankle_pitch_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 44,
+          "lastBeat": 45.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": true
+      },
+      {
+        "id": "ankles-seated",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "beat": 45.4,
+        "seconds": 25.22222222222222,
+        "animation": {
+          "groupId": "ankles",
+          "partIds": [
+            "mjcf:left_ankle_pitch_link",
+            "mjcf:right_ankle_pitch_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 44,
+          "lastBeat": 45.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "shanks-reassemble",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 46,
+        "seconds": 25.555555555555557,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "shanks",
+          "partIds": [
+            "mjcf:left_knee_link",
+            "mjcf:right_knee_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 46,
+          "lastBeat": 47.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "shanks-seated",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "beat": 47.4,
+        "seconds": 26.333333333333332,
+        "animation": {
+          "groupId": "shanks",
+          "partIds": [
+            "mjcf:left_knee_link",
+            "mjcf:right_knee_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 46,
+          "lastBeat": 47.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "hips-reassemble",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 48,
+        "seconds": 26.666666666666668,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "hips",
+          "partIds": [
+            "mjcf:left_hip_pitch_link",
+            "mjcf:left_hip_roll_link",
+            "mjcf:left_hip_yaw_link",
+            "mjcf:right_hip_pitch_link",
+            "mjcf:right_hip_roll_link",
+            "mjcf:right_hip_yaw_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 48,
+          "lastBeat": 49.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": true
+      },
+      {
+        "id": "hips-seated",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "beat": 49.4,
+        "seconds": 27.444444444444443,
+        "animation": {
+          "groupId": "hips",
+          "partIds": [
+            "mjcf:left_hip_pitch_link",
+            "mjcf:left_hip_roll_link",
+            "mjcf:left_hip_yaw_link",
+            "mjcf:right_hip_pitch_link",
+            "mjcf:right_hip_roll_link",
+            "mjcf:right_hip_yaw_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 48,
+          "lastBeat": 49.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "wrists-reassemble",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 50,
+        "seconds": 27.77777777777778,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "wrists",
+          "partIds": [
+            "mjcf:left_wrist_roll_link",
+            "mjcf:left_wrist_pitch_link",
+            "mjcf:left_wrist_yaw_link",
+            "mjcf:right_wrist_roll_link",
+            "mjcf:right_wrist_pitch_link",
+            "mjcf:right_wrist_yaw_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 50,
+          "lastBeat": 51.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "wrists-seated",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "beat": 51.4,
+        "seconds": 28.555555555555557,
+        "animation": {
+          "groupId": "wrists",
+          "partIds": [
+            "mjcf:left_wrist_roll_link",
+            "mjcf:left_wrist_pitch_link",
+            "mjcf:left_wrist_yaw_link",
+            "mjcf:right_wrist_roll_link",
+            "mjcf:right_wrist_pitch_link",
+            "mjcf:right_wrist_yaw_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 50,
+          "lastBeat": 51.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": true
+      },
+      {
+        "id": "elbows-reassemble",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 52,
+        "seconds": 28.88888888888889,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "elbows",
+          "partIds": [
+            "mjcf:left_elbow_link",
+            "mjcf:right_elbow_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 52,
+          "lastBeat": 53.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": true
+      },
+      {
+        "id": "elbows-seated",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "beat": 53.4,
+        "seconds": 29.666666666666668,
+        "animation": {
+          "groupId": "elbows",
+          "partIds": [
+            "mjcf:left_elbow_link",
+            "mjcf:right_elbow_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 52,
+          "lastBeat": 53.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "shoulders-reassemble",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 54,
+        "seconds": 30,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "shoulders",
+          "partIds": [
+            "mjcf:left_shoulder_pitch_link",
+            "mjcf:left_shoulder_roll_link",
+            "mjcf:left_shoulder_yaw_link",
+            "mjcf:right_shoulder_pitch_link",
+            "mjcf:right_shoulder_roll_link",
+            "mjcf:right_shoulder_yaw_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 54,
+          "lastBeat": 55.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "shoulders-seated",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "beat": 55.4,
+        "seconds": 30.77777777777778,
+        "animation": {
+          "groupId": "shoulders",
+          "partIds": [
+            "mjcf:left_shoulder_pitch_link",
+            "mjcf:left_shoulder_roll_link",
+            "mjcf:left_shoulder_yaw_link",
+            "mjcf:right_shoulder_pitch_link",
+            "mjcf:right_shoulder_roll_link",
+            "mjcf:right_shoulder_yaw_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 54,
+          "lastBeat": 55.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": false
+      },
+      {
+        "id": "torso-reassemble",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 56,
+        "seconds": 31.11111111111111,
+        "durationBeats": 1.4,
+        "animation": {
+          "groupId": "torso",
+          "partIds": [
+            "mjcf:waist_yaw_link",
+            "mjcf:waist_roll_link",
+            "mjcf:torso_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 56,
+          "lastBeat": 57.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": true
+      },
+      {
+        "id": "torso-seated",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "beat": 57.4,
+        "seconds": 31.88888888888889,
+        "animation": {
+          "groupId": "torso",
+          "partIds": [
+            "mjcf:waist_yaw_link",
+            "mjcf:waist_roll_link",
+            "mjcf:torso_link"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 56,
+          "lastBeat": 57.4,
+          "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+        },
+        "audible": true
+      }
+    ],
+    "readingCuePolicy": "One quiet first-name cue per detail scene; later retained names remain silent."
+  },
+  "cues": [
+    {
+      "id": "opening",
+      "firstBeat": 0,
+      "lastBeat": 8,
+      "startSeconds": 0,
+      "endSeconds": 4.444444444444445
+    },
+    {
+      "id": "separation",
+      "firstBeat": 8,
+      "lastBeat": 26,
+      "startSeconds": 4.444444444444445,
+      "endSeconds": 14.444444444444445
+    },
+    {
+      "id": "upper-detail",
+      "firstBeat": 26,
+      "lastBeat": 34,
+      "startSeconds": 14.444444444444445,
+      "endSeconds": 18.88888888888889
+    },
+    {
+      "id": "lower-detail",
+      "firstBeat": 34,
+      "lastBeat": 42,
+      "startSeconds": 18.88888888888889,
+      "endSeconds": 23.333333333333332
+    },
+    {
+      "id": "reassembly",
+      "firstBeat": 42,
+      "lastBeat": 58,
+      "startSeconds": 23.333333333333332,
+      "endSeconds": 32.22222222222222
+    },
+    {
+      "id": "resolve",
+      "firstBeat": 58,
+      "lastBeat": 64,
+      "startSeconds": 32.22222222222222,
+      "endSeconds": 35.55555555555556
+    }
+  ],
+  "harmony": [
+    {
+      "firstBeat": 0,
+      "lastBeat": 8,
+      "symbol": "Dmaj9",
+      "notes": [
+        50,
+        57,
+        61,
+        64
+      ],
+      "bass": 38
+    },
+    {
+      "firstBeat": 8,
+      "lastBeat": 16,
+      "symbol": "Bm11",
+      "notes": [
+        47,
+        54,
+        57,
+        64
+      ],
+      "bass": 35
+    },
+    {
+      "firstBeat": 16,
+      "lastBeat": 24,
+      "symbol": "Gmaj9",
+      "notes": [
+        43,
+        54,
+        57,
+        62
+      ],
+      "bass": 31
+    },
+    {
+      "firstBeat": 24,
+      "lastBeat": 32,
+      "symbol": "Aadd9",
+      "notes": [
+        45,
+        52,
+        59,
+        64
+      ],
+      "bass": 33
+    },
+    {
+      "firstBeat": 32,
+      "lastBeat": 40,
+      "symbol": "Gmaj9",
+      "notes": [
+        43,
+        54,
+        57,
+        62
+      ],
+      "bass": 31
+    },
+    {
+      "firstBeat": 40,
+      "lastBeat": 48,
+      "symbol": "Em9",
+      "notes": [
+        40,
+        55,
+        59,
+        66
+      ],
+      "bass": 28
+    },
+    {
+      "firstBeat": 48,
+      "lastBeat": 56,
+      "symbol": "A13",
+      "notes": [
+        45,
+        55,
+        59,
+        66
+      ],
+      "bass": 33
+    },
+    {
+      "firstBeat": 56,
+      "lastBeat": 64,
+      "symbol": "Dmaj9",
+      "notes": [
+        50,
+        57,
+        61,
+        64
+      ],
+      "bass": 38
+    }
+  ],
+  "beatGrid": [
+    {
+      "beat": 0,
+      "seconds": 0,
+      "frame": 0,
+      "downbeat": true
+    },
+    {
+      "beat": 1,
+      "seconds": 0.5555555555555556,
+      "frame": 24500,
+      "downbeat": false
+    },
+    {
+      "beat": 2,
+      "seconds": 1.1111111111111112,
+      "frame": 49000,
+      "downbeat": false
+    },
+    {
+      "beat": 3,
+      "seconds": 1.6666666666666667,
+      "frame": 73500,
+      "downbeat": false
+    },
+    {
+      "beat": 4,
+      "seconds": 2.2222222222222223,
+      "frame": 98000,
+      "downbeat": true
+    },
+    {
+      "beat": 5,
+      "seconds": 2.7777777777777777,
+      "frame": 122500,
+      "downbeat": false
+    },
+    {
+      "beat": 6,
+      "seconds": 3.3333333333333335,
+      "frame": 147000,
+      "downbeat": false
+    },
+    {
+      "beat": 7,
+      "seconds": 3.888888888888889,
+      "frame": 171500,
+      "downbeat": false
+    },
+    {
+      "beat": 8,
+      "seconds": 4.444444444444445,
+      "frame": 196000,
+      "downbeat": true
+    },
+    {
+      "beat": 9,
+      "seconds": 5,
+      "frame": 220500,
+      "downbeat": false
+    },
+    {
+      "beat": 10,
+      "seconds": 5.555555555555555,
+      "frame": 245000,
+      "downbeat": false
+    },
+    {
+      "beat": 11,
+      "seconds": 6.111111111111111,
+      "frame": 269500,
+      "downbeat": false
+    },
+    {
+      "beat": 12,
+      "seconds": 6.666666666666667,
+      "frame": 294000,
+      "downbeat": true
+    },
+    {
+      "beat": 13,
+      "seconds": 7.222222222222222,
+      "frame": 318500,
+      "downbeat": false
+    },
+    {
+      "beat": 14,
+      "seconds": 7.777777777777778,
+      "frame": 343000,
+      "downbeat": false
+    },
+    {
+      "beat": 15,
+      "seconds": 8.333333333333334,
+      "frame": 367500,
+      "downbeat": false
+    },
+    {
+      "beat": 16,
+      "seconds": 8.88888888888889,
+      "frame": 392000,
+      "downbeat": true
+    },
+    {
+      "beat": 17,
+      "seconds": 9.444444444444445,
+      "frame": 416500,
+      "downbeat": false
+    },
+    {
+      "beat": 18,
+      "seconds": 10,
+      "frame": 441000,
+      "downbeat": false
+    },
+    {
+      "beat": 19,
+      "seconds": 10.555555555555555,
+      "frame": 465500,
+      "downbeat": false
+    },
+    {
+      "beat": 20,
+      "seconds": 11.11111111111111,
+      "frame": 490000,
+      "downbeat": true
+    },
+    {
+      "beat": 21,
+      "seconds": 11.666666666666666,
+      "frame": 514500,
+      "downbeat": false
+    },
+    {
+      "beat": 22,
+      "seconds": 12.222222222222221,
+      "frame": 539000,
+      "downbeat": false
+    },
+    {
+      "beat": 23,
+      "seconds": 12.777777777777779,
+      "frame": 563500,
+      "downbeat": false
+    },
+    {
+      "beat": 24,
+      "seconds": 13.333333333333334,
+      "frame": 588000,
+      "downbeat": true
+    },
+    {
+      "beat": 25,
+      "seconds": 13.88888888888889,
+      "frame": 612500,
+      "downbeat": false
+    },
+    {
+      "beat": 26,
+      "seconds": 14.444444444444445,
+      "frame": 637000,
+      "downbeat": false
+    },
+    {
+      "beat": 27,
+      "seconds": 15,
+      "frame": 661500,
+      "downbeat": false
+    },
+    {
+      "beat": 28,
+      "seconds": 15.555555555555555,
+      "frame": 686000,
+      "downbeat": true
+    },
+    {
+      "beat": 29,
+      "seconds": 16.11111111111111,
+      "frame": 710500,
+      "downbeat": false
+    },
+    {
+      "beat": 30,
+      "seconds": 16.666666666666668,
+      "frame": 735000,
+      "downbeat": false
+    },
+    {
+      "beat": 31,
+      "seconds": 17.22222222222222,
+      "frame": 759500,
+      "downbeat": false
+    },
+    {
+      "beat": 32,
+      "seconds": 17.77777777777778,
+      "frame": 784000,
+      "downbeat": true
+    },
+    {
+      "beat": 33,
+      "seconds": 18.333333333333332,
+      "frame": 808500,
+      "downbeat": false
+    },
+    {
+      "beat": 34,
+      "seconds": 18.88888888888889,
+      "frame": 833000,
+      "downbeat": false
+    },
+    {
+      "beat": 35,
+      "seconds": 19.444444444444443,
+      "frame": 857500,
+      "downbeat": false
+    },
+    {
+      "beat": 36,
+      "seconds": 20,
+      "frame": 882000,
+      "downbeat": true
+    },
+    {
+      "beat": 37,
+      "seconds": 20.555555555555557,
+      "frame": 906500,
+      "downbeat": false
+    },
+    {
+      "beat": 38,
+      "seconds": 21.11111111111111,
+      "frame": 931000,
+      "downbeat": false
+    },
+    {
+      "beat": 39,
+      "seconds": 21.666666666666668,
+      "frame": 955500,
+      "downbeat": false
+    },
+    {
+      "beat": 40,
+      "seconds": 22.22222222222222,
+      "frame": 980000,
+      "downbeat": true
+    },
+    {
+      "beat": 41,
+      "seconds": 22.77777777777778,
+      "frame": 1004500,
+      "downbeat": false
+    },
+    {
+      "beat": 42,
+      "seconds": 23.333333333333332,
+      "frame": 1029000,
+      "downbeat": false
+    },
+    {
+      "beat": 43,
+      "seconds": 23.88888888888889,
+      "frame": 1053500,
+      "downbeat": false
+    },
+    {
+      "beat": 44,
+      "seconds": 24.444444444444443,
+      "frame": 1078000,
+      "downbeat": true
+    },
+    {
+      "beat": 45,
+      "seconds": 25,
+      "frame": 1102500,
+      "downbeat": false
+    },
+    {
+      "beat": 46,
+      "seconds": 25.555555555555557,
+      "frame": 1127000,
+      "downbeat": false
+    },
+    {
+      "beat": 47,
+      "seconds": 26.11111111111111,
+      "frame": 1151500,
+      "downbeat": false
+    },
+    {
+      "beat": 48,
+      "seconds": 26.666666666666668,
+      "frame": 1176000,
+      "downbeat": true
+    },
+    {
+      "beat": 49,
+      "seconds": 27.22222222222222,
+      "frame": 1200500,
+      "downbeat": false
+    },
+    {
+      "beat": 50,
+      "seconds": 27.77777777777778,
+      "frame": 1225000,
+      "downbeat": false
+    },
+    {
+      "beat": 51,
+      "seconds": 28.333333333333332,
+      "frame": 1249500,
+      "downbeat": false
+    },
+    {
+      "beat": 52,
+      "seconds": 28.88888888888889,
+      "frame": 1274000,
+      "downbeat": true
+    },
+    {
+      "beat": 53,
+      "seconds": 29.444444444444443,
+      "frame": 1298500,
+      "downbeat": false
+    },
+    {
+      "beat": 54,
+      "seconds": 30,
+      "frame": 1323000,
+      "downbeat": false
+    },
+    {
+      "beat": 55,
+      "seconds": 30.555555555555557,
+      "frame": 1347500,
+      "downbeat": false
+    },
+    {
+      "beat": 56,
+      "seconds": 31.11111111111111,
+      "frame": 1372000,
+      "downbeat": true
+    },
+    {
+      "beat": 57,
+      "seconds": 31.666666666666668,
+      "frame": 1396500,
+      "downbeat": false
+    },
+    {
+      "beat": 58,
+      "seconds": 32.22222222222222,
+      "frame": 1421000,
+      "downbeat": false
+    },
+    {
+      "beat": 59,
+      "seconds": 32.77777777777778,
+      "frame": 1445500,
+      "downbeat": false
+    },
+    {
+      "beat": 60,
+      "seconds": 33.333333333333336,
+      "frame": 1470000,
+      "downbeat": true
+    },
+    {
+      "beat": 61,
+      "seconds": 33.888888888888886,
+      "frame": 1494500,
+      "downbeat": false
+    },
+    {
+      "beat": 62,
+      "seconds": 34.44444444444444,
+      "frame": 1519000,
+      "downbeat": false
+    },
+    {
+      "beat": 63,
+      "seconds": 35,
+      "frame": 1543500,
+      "downbeat": false
+    },
+    {
+      "beat": 64,
+      "seconds": 35.55555555555556,
+      "frame": 1568000,
+      "downbeat": true
+    }
+  ],
+  "events": [
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": -0.65,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 50,
+      "pan": -0.5700000000000001,
+      "seed": 3750798535
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": -0.65,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 57,
+      "pan": -0.19,
+      "seed": 2855397579
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": -0.65,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 61,
+      "pan": 0.19,
+      "seed": 1915504727
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": -0.65,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 64,
+      "pan": 0.5700000000000001,
+      "seed": 2680261802
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 0,
+      "durationBeats": 3.5,
+      "gain": 0.055,
+      "midi": 38,
+      "pan": 0,
+      "seed": 1690553248
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 0,
+      "durationBeats": 3.1,
+      "gain": 0.064,
+      "midi": 69,
+      "pan": -0.18,
+      "seed": 670448029
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 2.5,
+      "durationBeats": 3.1,
+      "gain": 0.049,
+      "midi": 73,
+      "pan": 0.18,
+      "seed": 4168398459
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 4,
+      "durationBeats": 2.7,
+      "gain": 0.029,
+      "midi": 50,
+      "pan": 0.03,
+      "seed": 2873838137
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 5,
+      "durationBeats": 3.1,
+      "gain": 0.047,
+      "midi": 76,
+      "pan": -0.18,
+      "seed": 3118146816
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 7,
+      "durationBeats": 3.1,
+      "gain": 0.035,
+      "midi": 73,
+      "pan": 0.18,
+      "seed": 1914051643
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 7.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 47,
+      "pan": -0.5700000000000001,
+      "seed": 2206272699
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 7.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 54,
+      "pan": -0.19,
+      "seed": 3771558742
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 7.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 57,
+      "pan": 0.19,
+      "seed": 4182908163
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 7.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 64,
+      "pan": 0.5700000000000001,
+      "seed": 3836399580
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 8,
+      "durationBeats": 3.5,
+      "gain": 0.055,
+      "midi": 35,
+      "pan": 0,
+      "seed": 393682900
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "torso-explode",
+      "cueRole": "motion",
+      "sampleFile": "maximize_003.wav",
+      "sourceSha256": "3233c5bad496e64a707177583e34f2ed786212e3da87c123e11ad4ae1e77dfee",
+      "beat": 8,
+      "seconds": 4.444444444444445,
+      "durationSeconds": 0.211882,
+      "gainDb": -26,
+      "pan": -0.25,
+      "attackSeconds": 0.003,
+      "releaseSeconds": 0.015,
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "torso",
+        "partIds": [
+          "mjcf:waist_yaw_link",
+          "mjcf:waist_roll_link",
+          "mjcf:torso_link"
+        ],
+        "phase": "explode",
+        "firstBeat": 8,
+        "lastBeat": 9.4,
+        "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 8.5,
+      "durationBeats": 3.1,
+      "gain": 0.049,
+      "midi": 69,
+      "pan": -0.18,
+      "seed": 2208914035
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 12,
+      "durationBeats": 2.7,
+      "gain": 0.029,
+      "midi": 47,
+      "pan": 0.03,
+      "seed": 1698002930
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 12,
+      "durationBeats": 3.1,
+      "gain": 0.045,
+      "midi": 66,
+      "pan": -0.18,
+      "seed": 3021360870
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "elbows-explode",
+      "cueRole": "motion",
+      "sampleFile": "maximize_003.wav",
+      "sourceSha256": "3233c5bad496e64a707177583e34f2ed786212e3da87c123e11ad4ae1e77dfee",
+      "beat": 12,
+      "seconds": 6.666666666666667,
+      "durationSeconds": 0.211882,
+      "gainDb": -26,
+      "pan": -0.10714285714285715,
+      "attackSeconds": 0.003,
+      "releaseSeconds": 0.015,
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "elbows",
+        "partIds": [
+          "mjcf:left_elbow_link",
+          "mjcf:right_elbow_link"
+        ],
+        "phase": "explode",
+        "firstBeat": 12,
+        "lastBeat": 13.4,
+        "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+      }
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 15.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 43,
+      "pan": -0.5700000000000001,
+      "seed": 2997170389
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 15.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 54,
+      "pan": -0.19,
+      "seed": 2202053544
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 15.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 57,
+      "pan": 0.19,
+      "seed": 1351472850
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 15.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 62,
+      "pan": 0.5700000000000001,
+      "seed": 2695871735
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 16,
+      "durationBeats": 3.5,
+      "gain": 0.055,
+      "midi": 31,
+      "pan": 0,
+      "seed": 2971827039
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 16,
+      "durationBeats": 3.1,
+      "gain": 0.048,
+      "midi": 69,
+      "pan": -0.18,
+      "seed": 3298332737
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "hips-explode",
+      "cueRole": "motion",
+      "sampleFile": "maximize_003.wav",
+      "sourceSha256": "3233c5bad496e64a707177583e34f2ed786212e3da87c123e11ad4ae1e77dfee",
+      "beat": 16,
+      "seconds": 8.88888888888889,
+      "durationSeconds": 0.211882,
+      "gainDb": -26,
+      "pan": 0.0357142857142857,
+      "attackSeconds": 0.003,
+      "releaseSeconds": 0.015,
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "hips",
+        "partIds": [
+          "mjcf:left_hip_pitch_link",
+          "mjcf:left_hip_roll_link",
+          "mjcf:left_hip_yaw_link",
+          "mjcf:right_hip_pitch_link",
+          "mjcf:right_hip_roll_link",
+          "mjcf:right_hip_yaw_link"
+        ],
+        "phase": "explode",
+        "firstBeat": 16,
+        "lastBeat": 17.4,
+        "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+      }
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 20,
+      "durationBeats": 2.7,
+      "gain": 0.029,
+      "midi": 43,
+      "pan": 0.03,
+      "seed": 932088998
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "ankles-explode",
+      "cueRole": "motion",
+      "sampleFile": "maximize_003.wav",
+      "sourceSha256": "3233c5bad496e64a707177583e34f2ed786212e3da87c123e11ad4ae1e77dfee",
+      "beat": 20,
+      "seconds": 11.11111111111111,
+      "durationSeconds": 0.211882,
+      "gainDb": -26,
+      "pan": 0.17857142857142855,
+      "attackSeconds": 0.003,
+      "releaseSeconds": 0.015,
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "ankles",
+        "partIds": [
+          "mjcf:left_ankle_pitch_link",
+          "mjcf:right_ankle_pitch_link"
+        ],
+        "phase": "explode",
+        "firstBeat": 20,
+        "lastBeat": 21.4,
+        "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 20.5,
+      "durationBeats": 3.1,
+      "gain": 0.042,
+      "midi": 74,
+      "pan": -0.18,
+      "seed": 76012105
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 23,
+      "durationBeats": 3.1,
+      "gain": 0.03,
+      "midi": 69,
+      "pan": 0.18,
+      "seed": 101863436
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 23.35,
+      "durationBeats": 10.2,
+      "gain": 0.0125,
+      "midi": 45,
+      "pan": -0.5700000000000001,
+      "seed": 626649833
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 23.35,
+      "durationBeats": 10.2,
+      "gain": 0.0125,
+      "midi": 52,
+      "pan": -0.19,
+      "seed": 412122087
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 23.35,
+      "durationBeats": 10.2,
+      "gain": 0.0125,
+      "midi": 59,
+      "pan": 0.19,
+      "seed": 3930289117
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 23.35,
+      "durationBeats": 10.2,
+      "gain": 0.0125,
+      "midi": 64,
+      "pan": 0.5700000000000001,
+      "seed": 52873601
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 24,
+      "durationBeats": 3.5,
+      "gain": 0.041,
+      "midi": 33,
+      "pan": 0,
+      "seed": 2563405224
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "detail-26-first-label",
+      "cueRole": "detail",
+      "sampleFile": "tick_002.wav",
+      "sourceSha256": "f94af5d5117af7bc71325c1acb874e7ca485bfd9d37f1b52e68009e54badc67f",
+      "beat": 27.89,
+      "seconds": 15.494444444444445,
+      "durationSeconds": 0.02322,
+      "gainDb": -30,
+      "pan": 0,
+      "attackSeconds": 0.0018576,
+      "releaseSeconds": 0.0046440000000000006,
+      "anchor": "first-name-reveal",
+      "chapterFirstBeat": 26,
+      "offsetSeconds": 1.05
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 28,
+      "durationBeats": 4,
+      "gain": 0.028,
+      "midi": 71,
+      "pan": -0.18,
+      "seed": 3462993539
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 31,
+      "durationBeats": 4,
+      "gain": 0.024,
+      "midi": 76,
+      "pan": 0.18,
+      "seed": 2072378327
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 31.35,
+      "durationBeats": 10.2,
+      "gain": 0.0125,
+      "midi": 43,
+      "pan": -0.5700000000000001,
+      "seed": 429452373
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 31.35,
+      "durationBeats": 10.2,
+      "gain": 0.0125,
+      "midi": 54,
+      "pan": -0.19,
+      "seed": 2253907390
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 31.35,
+      "durationBeats": 10.2,
+      "gain": 0.0125,
+      "midi": 57,
+      "pan": 0.19,
+      "seed": 652681518
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 31.35,
+      "durationBeats": 10.2,
+      "gain": 0.0125,
+      "midi": 62,
+      "pan": 0.5700000000000001,
+      "seed": 2593565069
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 32,
+      "durationBeats": 3.5,
+      "gain": 0.041,
+      "midi": 31,
+      "pan": 0,
+      "seed": 3142485500
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "detail-34-first-label",
+      "cueRole": "detail",
+      "sampleFile": "tick_002.wav",
+      "sourceSha256": "f94af5d5117af7bc71325c1acb874e7ca485bfd9d37f1b52e68009e54badc67f",
+      "beat": 35.89,
+      "seconds": 19.93888888888889,
+      "durationSeconds": 0.02322,
+      "gainDb": -30,
+      "pan": 0,
+      "attackSeconds": 0.0018576,
+      "releaseSeconds": 0.0046440000000000006,
+      "anchor": "first-name-reveal",
+      "chapterFirstBeat": 34,
+      "offsetSeconds": 1.05
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 36,
+      "durationBeats": 4,
+      "gain": 0.026,
+      "midi": 69,
+      "pan": -0.18,
+      "seed": 1529720134
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 39.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 40,
+      "pan": -0.5700000000000001,
+      "seed": 366153892
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 39.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 55,
+      "pan": -0.19,
+      "seed": 2402739077
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 39.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 59,
+      "pan": 0.19,
+      "seed": 998723204
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 39.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 66,
+      "pan": 0.5700000000000001,
+      "seed": 2561110637
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 39.5,
+      "durationBeats": 4,
+      "gain": 0.022,
+      "midi": 66,
+      "pan": 0.18,
+      "seed": 1042447012
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 40,
+      "durationBeats": 3.5,
+      "gain": 0.055,
+      "midi": 28,
+      "pan": 0,
+      "seed": 2881202810
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 42,
+      "durationBeats": 3.1,
+      "gain": 0.042,
+      "midi": 67,
+      "pan": 0.18,
+      "seed": 1605018077
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "feet-seated",
+      "cueRole": "seating",
+      "sampleFile": "click_003.wav",
+      "sourceSha256": "b035afe3fe08b0fd3517c612bdfd362799bffe762d2cbf8f09e6a50322067358",
+      "beat": 43.4,
+      "seconds": 24.11111111111111,
+      "durationSeconds": 0.018866,
+      "gainDb": -26,
+      "pan": 0.15,
+      "attackSeconds": 0.00150928,
+      "releaseSeconds": 0.0037732000000000004,
+      "anchor": "movement-complete",
+      "animation": {
+        "groupId": "feet",
+        "partIds": [
+          "mjcf:left_ankle_roll_link",
+          "mjcf:right_ankle_roll_link"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 42,
+        "lastBeat": 43.4,
+        "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+      }
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 44,
+      "durationBeats": 2.7,
+      "gain": 0.029,
+      "midi": 40,
+      "pan": 0.03,
+      "seed": 6292768
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "ankles-reassemble",
+      "cueRole": "motion",
+      "sampleFile": "minimize_003.wav",
+      "sourceSha256": "1496cfd47fc89e499d94cea45747d10924c165774ea5f74b9e0787de56e87fbc",
+      "beat": 44,
+      "seconds": 24.444444444444443,
+      "durationSeconds": 0.222041,
+      "gainDb": -26,
+      "pan": 0.17857142857142855,
+      "attackSeconds": 0.003,
+      "releaseSeconds": 0.015,
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "ankles",
+        "partIds": [
+          "mjcf:left_ankle_pitch_link",
+          "mjcf:right_ankle_pitch_link"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 44,
+        "lastBeat": 45.4,
+        "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 45,
+      "durationBeats": 3.1,
+      "gain": 0.037,
+      "midi": 71,
+      "pan": -0.18,
+      "seed": 2042488533
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 47.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 45,
+      "pan": -0.5700000000000001,
+      "seed": 406883618
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 47.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 55,
+      "pan": -0.19,
+      "seed": 897176560
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 47.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 59,
+      "pan": 0.19,
+      "seed": 4026104369
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 47.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 66,
+      "pan": 0.5700000000000001,
+      "seed": 3612612556
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 48,
+      "durationBeats": 3.5,
+      "gain": 0.055,
+      "midi": 33,
+      "pan": 0,
+      "seed": 3760078458
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 48,
+      "durationBeats": 3.1,
+      "gain": 0.046,
+      "midi": 73,
+      "pan": -0.18,
+      "seed": 1771030724
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "hips-reassemble",
+      "cueRole": "motion",
+      "sampleFile": "minimize_003.wav",
+      "sourceSha256": "1496cfd47fc89e499d94cea45747d10924c165774ea5f74b9e0787de56e87fbc",
+      "beat": 48,
+      "seconds": 26.666666666666668,
+      "durationSeconds": 0.222041,
+      "gainDb": -26,
+      "pan": 0.0357142857142857,
+      "attackSeconds": 0.003,
+      "releaseSeconds": 0.015,
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "hips",
+        "partIds": [
+          "mjcf:left_hip_pitch_link",
+          "mjcf:left_hip_roll_link",
+          "mjcf:left_hip_yaw_link",
+          "mjcf:right_hip_pitch_link",
+          "mjcf:right_hip_roll_link",
+          "mjcf:right_hip_yaw_link"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 48,
+        "lastBeat": 49.4,
+        "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+      }
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "wrists-seated",
+      "cueRole": "seating",
+      "sampleFile": "click_003.wav",
+      "sourceSha256": "b035afe3fe08b0fd3517c612bdfd362799bffe762d2cbf8f09e6a50322067358",
+      "beat": 51.4,
+      "seconds": 28.555555555555557,
+      "durationSeconds": 0.018866,
+      "gainDb": -26,
+      "pan": -0.021428571428571436,
+      "attackSeconds": 0.00150928,
+      "releaseSeconds": 0.0037732000000000004,
+      "anchor": "movement-complete",
+      "animation": {
+        "groupId": "wrists",
+        "partIds": [
+          "mjcf:left_wrist_roll_link",
+          "mjcf:left_wrist_pitch_link",
+          "mjcf:left_wrist_yaw_link",
+          "mjcf:right_wrist_roll_link",
+          "mjcf:right_wrist_pitch_link",
+          "mjcf:right_wrist_yaw_link"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 50,
+        "lastBeat": 51.4,
+        "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 51.5,
+      "durationBeats": 3.1,
+      "gain": 0.041,
+      "midi": 76,
+      "pan": 0.18,
+      "seed": 2188587341
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 52,
+      "durationBeats": 2.7,
+      "gain": 0.029,
+      "midi": 45,
+      "pan": 0.03,
+      "seed": 3724083186
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "elbows-reassemble",
+      "cueRole": "motion",
+      "sampleFile": "minimize_003.wav",
+      "sourceSha256": "1496cfd47fc89e499d94cea45747d10924c165774ea5f74b9e0787de56e87fbc",
+      "beat": 52,
+      "seconds": 28.88888888888889,
+      "durationSeconds": 0.222041,
+      "gainDb": -26,
+      "pan": -0.10714285714285715,
+      "attackSeconds": 0.003,
+      "releaseSeconds": 0.015,
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "elbows",
+        "partIds": [
+          "mjcf:left_elbow_link",
+          "mjcf:right_elbow_link"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 52,
+        "lastBeat": 53.4,
+        "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 54,
+      "durationBeats": 3.1,
+      "gain": 0.029,
+      "midi": 71,
+      "pan": 0.18,
+      "seed": 1862987522
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 55.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 50,
+      "pan": -0.5700000000000001,
+      "seed": 2195267823
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 55.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 57,
+      "pan": -0.19,
+      "seed": 2116616690
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 55.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 61,
+      "pan": 0.19,
+      "seed": 2633929207
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 55.35,
+      "durationBeats": 10.2,
+      "gain": 0.015,
+      "midi": 64,
+      "pan": 0.5700000000000001,
+      "seed": 2532795799
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 56,
+      "durationBeats": 3.5,
+      "gain": 0.055,
+      "midi": 38,
+      "pan": 0,
+      "seed": 852447225
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "torso-reassemble",
+      "cueRole": "motion",
+      "sampleFile": "minimize_003.wav",
+      "sourceSha256": "1496cfd47fc89e499d94cea45747d10924c165774ea5f74b9e0787de56e87fbc",
+      "beat": 56,
+      "seconds": 31.11111111111111,
+      "durationSeconds": 0.222041,
+      "gainDb": -26,
+      "pan": -0.25,
+      "attackSeconds": 0.003,
+      "releaseSeconds": 0.015,
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "torso",
+        "partIds": [
+          "mjcf:waist_yaw_link",
+          "mjcf:waist_roll_link",
+          "mjcf:torso_link"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 56,
+        "lastBeat": 57.4,
+        "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 56.5,
+      "durationBeats": 3.1,
+      "gain": 0.046,
+      "midi": 69,
+      "pan": -0.18,
+      "seed": 1874352309
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "torso-seated",
+      "cueRole": "seating",
+      "sampleFile": "click_003.wav",
+      "sourceSha256": "b035afe3fe08b0fd3517c612bdfd362799bffe762d2cbf8f09e6a50322067358",
+      "beat": 57.4,
+      "seconds": 31.88888888888889,
+      "durationSeconds": 0.018866,
+      "gainDb": -26,
+      "pan": -0.15,
+      "attackSeconds": 0.00150928,
+      "releaseSeconds": 0.0037732000000000004,
+      "anchor": "movement-complete",
+      "animation": {
+        "groupId": "torso",
+        "partIds": [
+          "mjcf:waist_yaw_link",
+          "mjcf:waist_roll_link",
+          "mjcf:torso_link"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 56,
+        "lastBeat": 57.4,
+        "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1"
+      }
+    },
+    {
+      "instrument": "cc0-sample",
+      "role": "editorial-sfx",
+      "id": "assembled-confirmation",
+      "cueRole": "completion",
+      "sampleFile": "confirmation_001.wav",
+      "sourceSha256": "f9d0ef5a5c740c2ac250ac3876db9e4340669044a5bf78ae09192918db3e2ebc",
+      "beat": 58,
+      "seconds": 32.22222222222222,
+      "durationSeconds": 0.294603,
+      "gainDb": -28,
+      "pan": 0,
+      "attackSeconds": 0.003,
+      "releaseSeconds": 0.015,
+      "anchor": "all-groups-restored"
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 59,
+      "durationBeats": 3.1,
+      "gain": 0.034,
+      "midi": 73,
+      "pan": 0.18,
+      "seed": 4051433152
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 60,
+      "durationBeats": 2.7,
+      "gain": 0.029,
+      "midi": 50,
+      "pan": 0.03,
+      "seed": 3174837793
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 61.5,
+      "durationBeats": 3.1,
+      "gain": 0.027,
+      "midi": 76,
+      "pan": -0.18,
+      "seed": 2077340431
+    }
+  ],
+  "file": "humanoid-loop.wav",
+  "byteLength": 6272044,
+  "sha256": "e70941c311e5c21e879edf7e1e36cb3e4b9191ccd3124d075c6f4606a108351d",
+  "analysis": {
+    "sampleRate": 44100,
+    "frames": 1568000,
+    "durationSeconds": 35.55555555555556,
+    "peak": 0.31622776601683794,
+    "peakDbfs": -10,
+    "rmsDbfs": -24.737023241944446,
+    "clippedSamples": 0,
+    "masterScale": 1,
+    "loopBoundary": {
+      "maximumStep": 0.0008798331399091867,
+      "maximumInteriorStep": 0.017190906259406287,
+      "ratioToMaximumInteriorStep": 0.05118014877358612
+    },
+    "sections": [
+      {
+        "id": "opening",
+        "firstBeat": 0,
+        "lastBeat": 8,
+        "rmsDbfs": -23.655310466275097
+      },
+      {
+        "id": "separation",
+        "firstBeat": 8,
+        "lastBeat": 26,
+        "rmsDbfs": -24.335581503111797
+      },
+      {
+        "id": "upper-detail",
+        "firstBeat": 26,
+        "lastBeat": 34,
+        "rmsDbfs": -27.405372124631164
+      },
+      {
+        "id": "lower-detail",
+        "firstBeat": 34,
+        "lastBeat": 42,
+        "rmsDbfs": -26.277410367528798
+      },
+      {
+        "id": "reassembly",
+        "firstBeat": 42,
+        "lastBeat": 58,
+        "rmsDbfs": -23.941516447400126
+      },
+      {
+        "id": "resolve",
+        "firstBeat": 58,
+        "lastBeat": 64,
+        "rmsDbfs": -25.67099132648309
+      }
+    ],
+    "listeningReviewed": false,
+    "listeningReview": "Objective waveform checks only; subjective listening and the encoded video mix require a separate review."
+  }
+}

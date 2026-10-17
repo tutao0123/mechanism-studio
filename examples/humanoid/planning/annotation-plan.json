@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "stage": "bound",
+  "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1",
+  "planRevision": "g1-assembly-story-1",
+  "labels": {
+    "whole": [],
+    "separate": [],
+    "upper": [
+      [
+        "mjcf:right_shoulder_yaw_link",
+        "Shoulder yaw link"
+      ],
+      [
+        "mjcf:right_wrist_yaw_link",
+        "Wrist yaw / hand"
+      ]
+    ],
+    "lower": [
+      [
+        "mjcf:left_knee_link",
+        "Knee / shank"
+      ],
+      [
+        "mjcf:left_ankle_roll_link",
+        "Ankle roll / foot"
+      ]
+    ],
+    "return": [],
+    "resolve": []
+  },
+  "cueWindowsSeconds": {
+    "whole": [],
+    "separate": [],
+    "upper": [
+      [
+        1.05,
+        4.444444444444445
+      ],
+      [
+        2.15,
+        4.444444444444445
+      ]
+    ],
+    "lower": [
+      [
+        1.05,
+        4.444444444444445
+      ],
+      [
+        2.15,
+        4.444444444444445
+      ]
+    ],
+    "return": [],
+    "resolve": []
+  },
+  "nameFadeSeconds": 0.18,
+  "sceneFadeSeconds": 0.32,
+  "policy": "Close to real visible part bounds, short leaders, one name at a time; retain names in the scene and fade the group at exit. Omit a cue when a narrow viewport cannot fit it.",
+  "adapter": "../annotations.mjs"
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "unitree-g1-humanoid",
+  "exporter": "mechanism-studio-mjcf-display-1",
+  "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1",
+  "sourceSHA256": "3c2616550a31f33e84d3c80b8e913ac5618c8888019b0c9490dae93493e647f3",
+  "glbSHA256": "fa340fc4a2328338425fceb3f091d066c7ec5d0acb4405e7e47719b5610c2f14",
+  "glbBytes": 32173424,
+  "originalFilesVerified": 39,
+  "partCount": 30,
+  "meshCount": 30,
+  "sourceVisualCount": 35,
+  "sourceJointCount": 29,
+  "sourceFreeJointCount": 1,
+  "displayOnlyBodyNodeCount": 30,
+  "gltfNodeCount": 60,
+  "triangleCount": 393270,
+  "assetBoundsMeters": {
+    "min": [
+      -0.07257411602830886,
+      0.0007271025206238707,
+      -0.18157998440743847
+    ],
+    "max": [
+      0.37309860085738433,
+      1.3235725934505465,
+      0.18156998440743846
+    ]
+  },
+  "geometrySimplified": false,
+  "exactAttributeDeduplication": true,
+  "sourcePoseModified": false,
+  "mcpUsed": false,
+  "motionOwner": "static; authored display offsets belong to the Showcase wrapper",
+  "limitations": [
+    "MJCF body identities and hierarchy are source-backed, but visual meshes merge physical hardware; there is no per-screw identity, native STEP assembly, B-rep or manufacturing topology.",
+    "Head and rubber hand visuals belong to existing torso/wrist bodies in this source. They are not additional articulated joints.",
+    "Exploded separation is an editorial display operation, not collision-checked service disassembly.",
+    "Source joint axes, limits, inertials and actuator declarations are retained as source evidence; no dynamics, balance, contact or control validation is claimed."
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "stage": "bound",
+  "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1",
+  "planRevision": "g1-assembly-story-1",
+  "cameraRevision": "g1-framing-1",
+  "boundsMethod": "Actual source-body world AABB unions at all linear display-offset endpoints. Detail arcs settle before labels; this is presentation evidence, not a collision certificate.",
+  "envelopes": {
+    "whole": {
+      "min": [
+        -0.07257411602830886,
+        0.0007271025206238707,
+        -0.18157998440743847
+      ],
+      "max": [
+        0.37309860085738433,
+        1.3235725934505465,
+        0.18156998440743846
+      ]
+    },
+    "separate": {
+      "min": [
+        -0.07257411602830886,
+        -0.42927289747937614,
+        -0.9686772351614685
+      ],
+      "max": [
+        0.44309860085738434,
+        1.5635725934505464,
+        0.9686672351614685
+      ]
+    },
+    "upper": {
+      "min": [
+        -0.04015392016433367,
+        0.8201934864829542,
+        0.3523531082956879
+      ],
+      "max": [
+        0.44309733543711277,
+        1.2447838637341873,
+        0.9686672351614685
+      ]
+    },
+    "lower": {
+      "min": [
+        -0.058128051459789276,
+        -0.42927289747937614,
+        -0.8063473578053284
+      ],
+      "max": [
+        0.22736302041442485,
+        0.7955000046007336,
+        0.06776073575019836
+      ]
+    },
+    "return": {
+      "min": [
+        -0.07257411602830886,
+        -0.42927289747937614,
+        -0.9686772351614685
+      ],
+      "max": [
+        0.44309860085738434,
+        1.5635725934505464,
+        0.9686672351614685
+      ]
+    },
+    "resolve": {
+      "min": [
+        -0.07257411602830886,
+        0.0007271025206238707,
+        -0.18157998440743847
+      ],
+      "max": [
+        0.37309860085738433,
+        1.3235725934505465,
+        0.18156998440743846
+      ]
+    }
+  },
+  "visibleDetailIds": {
+    "upper": [
+      "mjcf:right_shoulder_pitch_link",
+      "mjcf:right_shoulder_roll_link",
+      "mjcf:right_shoulder_yaw_link",
+      "mjcf:right_elbow_link",
+      "mjcf:right_wrist_roll_link",
+      "mjcf:right_wrist_pitch_link",
+      "mjcf:right_wrist_yaw_link"
+    ],
+    "lower": [
+      "mjcf:pelvis",
+      "mjcf:left_hip_pitch_link",
+      "mjcf:left_hip_roll_link",
+      "mjcf:left_hip_yaw_link",
+      "mjcf:left_knee_link",
+      "mjcf:left_ankle_pitch_link",
+      "mjcf:left_ankle_roll_link"
+    ]
+  },
+  "cutsOnEntry": [
+    "upper",
+    "lower",
+    "return"
+  ],
+  "transitionSeconds": 0.65,
+  "detailArcSettledSeconds": 0.85,
+  "loop": "Whole and resolve share the exact camera.",
+  "adapter": "../framing.mjs"
+}

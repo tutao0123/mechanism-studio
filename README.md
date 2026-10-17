@@ -4,7 +4,11 @@
 
 Mechanism Studio is a project-local AI authoring skill and a working browser toolkit for mechanical explanation. It connects source-aware part identities, independent motion and display layers, exploded views, guided cameras, close annotations and synchronized sound. The default presentation is white surfaces with fine dark edges and restrained colour cues.
 
-**Status: working research prototype, version 0.4.0.** Included examples range from simplified teaching mechanisms to real STEP assemblies and a source-backed robot description. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
+**Status: working research prototype, version 0.4.0.** Ten implemented experiences range from simplified teaching mechanisms to real STEP assemblies and source-backed robot descriptions. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
+
+![Unitree G1 source bodies separated in the English humanoid showcase](docs/media/humanoid-g1-preview.jpg)
+
+*New: [A humanoid, revealed](examples/humanoid/README.md), a 35.56-second expansion/reassembly loop. Unitree G1 model © Unitree Robotics, via MuJoCo Menagerie, [BSD-3-Clause](examples/humanoid/source/unitree_g1/LICENSE). Thirty source bodies and 35 visual occurrences retain their identities; this is link-level presentation, not a detailed actuator teardown. Original score plus five separately credited Kenney CC0 effects.*
 
 ![SO-ARM 102 separated into source links in the kinetic presentation](docs/media/so-arm102-kinetic.jpg)
 
@@ -31,13 +35,19 @@ node EXAMPLE_ROBOT/serve.mjs
 
 Open **http://127.0.0.1:4180/kinetic/?clean=1** for the 25.7-second kinetic cut, or **http://127.0.0.1:4180/?clean=1** for the retained 34.3-second assembly study. Click **Play with music** to enable sound. Reduced-motion preferences start the presentation paused.
 
+For the new humanoid, run `node examples/humanoid/serve.mjs` and open
+**http://127.0.0.1:4182/?clean=1**. It includes expansion, two close reading views,
+reverse-order reassembly, gentle original music and sparse CC0 effects. The
+source rest pose is preserved; no gait or dynamic balancing is simulated.
+
 ## Examples
 
 | Example | What to explore | Scope |
 | --- | --- | --- |
+| [Unitree G1 humanoid](examples/humanoid/README.md) | Full-body expansion, close shoulder/wrist and knee/ankle views, restoration, music and action cues; 35.56 seconds | 30 MJCF body identities, 35 source visual occurrences, 29 retained joint declarations; static source pose, no per-screw internals |
 | [SO-ARM 102 kinetic cut](EXAMPLE_ROBOT/kinetic/README.md) | Source-backed jaw and arm movement, cascading explosion, two readable details, musical reassembly; 25.7 seconds | Five revolute and two prismatic URDF joints; eight merged link meshes |
 | [SO-ARM 102 assembly study](EXAMPLE_ROBOT/README.md) | Near-part names, restrained colour changes, original music; 34.3 seconds | Link-level visual separation; no per-fastener identity |
-| [WOLF actuator](examples/wolf-actuator/README.md) | Real STEP hierarchy, 245 leaf occurrences, rings and planets, assembly music loop; 34.3 seconds | Mixed analytic and source-triangulated geometry; observation motion |
+| [WOLF actuator](examples/wolf-actuator/README.md) and [motor detail edition](examples/wolf-actuator/detail/README.md) | Whole 245-leaf actuator or an isolated 86-leaf motor: 40 `magnet`, 40 generically named `cc` and six named hardware occurrences; 34.3-second cuts | Real STEP-derived component identities and editorial separation; `cc` function is unspecified, and this is separate from G1 hardware |
 | [Galileo 2 source inspector](examples/shaft-bearing/README.md) | Shaft, bearing holder, repeated screws; source tree and mesh selection, hide/isolate/restore | 69 definitions, 146 source usage relations, 147 occurrences including the root |
 | [KFL08 bearing assembly](examples/step-assembly/README.md) | Retained STEP, import reports, display fragments and restoration | Historical importer trial: 22 source leaf instances versus 35 display fragments; incomplete identity mapping |
 | [Five-pin lock](prototype-3d/README.md) | Key comparison, shear line, insertion, turning and explosion | Authored teaching geometry; ideal pin-stack alignment |
@@ -45,7 +55,7 @@ Open **http://127.0.0.1:4180/kinetic/?clean=1** for the 25.7-second kinetic cut,
 | [Two-spool turbofan](examples/turbofan/README.md) | Independent shafts, rotor/stator groups, core/bypass flow and combustion cues | Prescribed spool speeds; no thrust or thermodynamic solution |
 | [Small quadruped](examples/quadruped/README.md) | Leg FK/IK, diagonal gait, limits, foot paths and explosion | Kinematics with a fixed body; no balance or contact-force solution |
 
-[Example guide](examples/README.md) includes routes, server commands, assets, source licenses and rebuilding requirements. The retained [English story pages](showcase/README.md) are at **http://127.0.0.1:4179/showcase/**: quadruped Showcase is 33.984 seconds; its 91.944-second Explain edition remains. Engine and turbofan lessons remain full-length. These pages run as silent visual/text previews in a fresh clone; provider-generated narration MP3s are excluded from this public release.
+[Example guide](examples/README.md) includes routes, previews, server commands, assets, source licenses and rebuilding requirements. The [status audit](docs/examples-status.md) explains which directories are historical and which delivery files are intentionally excluded. The retained [English story pages](showcase/README.md) are at **http://127.0.0.1:4179/showcase/**: quadruped Showcase is 33.984 seconds; its 91.944-second Explain edition remains. Engine and turbofan lessons remain full-length. These pages run as silent visual/text previews in a fresh clone; provider-generated narration MP3s are excluded from this public release.
 
 ## Use the skill
 
@@ -77,6 +87,19 @@ See the **[skill user guide](docs/skill-guide.md)** for invocation, the full wor
 
 These are workflow choices, not universal URL parameters. Text can define a teaching design; an image can supply visible observations and design cues. Neither establishes hidden CAD structure. Native CAD identities and joints require actual source evidence.
 
+For detailed teardown requests, the [assembly-depth contract](.agents/skills/mechanism-studio/references/assembly-depth.md)
+checks requested component depth against the actual source. The G1 source can
+show body/link structure; it cannot reveal unmodeled screws or actuator internals.
+Deeper component examples need their own sufficiently detailed source and clear
+provenance rather than invented internals attributed to an existing robot.
+
+The [WOLF motor detail edition](examples/wolf-actuator/detail/README.md) demonstrates
+that deeper source evidence: complete actuator → actual motor subassembly →
+separate source components → restoration. Run the same WOLF server and open
+**http://127.0.0.1:4181/detail/?clean=1**. It is another edition of the existing
+WOLF example, using its original soundtrack, not an eleventh independent model
+or a representation of Unitree G1's actuator design.
+
 ## How it is built
 
 ```text
@@ -85,7 +108,7 @@ shared/viewer/                   GLB binding, part selection, cameras, line art 
 shared/assets/                   Geometry, identity, units, hierarchy and rest-pose checks
 shared/cad/                      Source definitions/occurrences, placements and audit evidence
 shared/animation/                Clock-free process display primitives
-shared/voice/                    Lesson identity, Doubao generation and verified playback
+shared/voice/                    Optional speech API; existing lesson identity and verified playback
 shared/appearance/               Deterministic colour cues and independent material ownership
 shared/study/                    Music transport, annotations, camera direction and capture
 EXAMPLE_ROBOT/                   Source-based robot studies and kinetic adapter
@@ -122,7 +145,9 @@ npm run audit:cad -- --example examples/shaft-bearing
 npm run import:cad -- --example examples/shaft-bearing
 ```
 
-See [XCAF setup](tools/cad/README-xcaf.md), [video encoding](tools/video/README.md) and [voice generation](shared/voice/README.md). Viewing existing examples never requires speech keys. Generating new narration uses Doubao with an explicitly supplied local configuration and the user's own service rights; no credentials or provider-generated MP3s are bundled. The included code-generated music uses original synthesis code and no third-party samples. The npm package remains marked private to prevent accidental npm publication; this does not restrict cloning or using the GitHub repository.
+See [XCAF setup](tools/cad/README-xcaf.md), [video encoding](tools/video/README.md) and [voice generation](shared/voice/README.md). Viewing examples never requires speech keys. New optional narration uses a provider-neutral Node/CLI interface with an explicit speech-capable model, matching voice and trusted endpoint; OpenRouter uses its dedicated speech API. Existing Doubao lessons are retained without compulsory migration. No credentials or generated narration are bundled, and preview/tests do not make paid calls.
+
+The scores use original synthesis code. The humanoid adds five unchanged **Kenney CC0** effects, mixed quietly against specific separation, focus and seating events; previous robot/WOLF scores retain their original synthesis. [Sound-library research](docs/sound-libraries.md) records included and unbundled options and their different licenses. Music and effects follow the same seekable animation clock. The npm package remains marked private to prevent accidental npm publication; this does not restrict cloning or using the GitHub repository.
 
 ## Current limits and next work
 
@@ -132,7 +157,7 @@ Next milestones are source-bound B-rep measurement with known-answer fixtures; e
 
 ## License, sources and contributions
 
-**Original Mechanism Studio code, skill instructions and documentation are MIT-licensed**; see [LICENSE](LICENSE). Third-party code and model assets retain their own licenses. In particular SO-ARM 102 is CC BY 4.0, KFL08 is CC BY 3.0, WOLF is CC BY-SA 4.0, and Galileo 2 source and geometry derivatives are GPL v3. The repository's MIT license does not replace those terms.
+**Original Mechanism Studio code, skill instructions and documentation are MIT-licensed**; see [LICENSE](LICENSE). Third-party code and model assets retain their own licenses. Unitree G1 model data and derived visuals retain BSD-3-Clause; Kenney effects retain CC0. SO-ARM 102 is CC BY 4.0, KFL08 is CC BY 3.0, WOLF is CC BY-SA 4.0, and Galileo 2 source and geometry derivatives are GPL v3. The repository's MIT license does not replace those terms.
 
 Read [licensing and the file-scope map](docs/licensing.md) and [third-party notices](THIRD_PARTY_NOTICES.md) before redistributing example assets or recordings. The project began with workflow ideas adapted from Anatomy; that history and the retained MIT notice are recorded in [origins](docs/origins.md). Upstream model authors are credited separately from Mechanism Studio's implementation.
 

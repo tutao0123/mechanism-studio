@@ -1,5 +1,11 @@
 # 双转子涡扇：观察同心双轴
 
+![Two-spool turbofan teaching model in the interactive line-art viewer](../../docs/media/turbofan-preview.jpg)
+
+*Existing interactive preview: original Mechanism Studio teaching geometry and
+rendering (MIT), with separate spool controls. This is illustrative geometry,
+not a manufacturer's engine CAD or a CFD result.*
+
 **Public checkout:** model, GLB, Blender builder, captions and voice-generation
 code are included. Local `.blend` exports and provider-generated MP3s are
 excluded from Git; the development notes below also describe those optional

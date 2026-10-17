@@ -1,5 +1,11 @@
 # 四缸发动机：Mechanism Studio 的第二个完整实例
 
+![Four-cylinder teaching engine with ignition and linked piston and crankshaft geometry](../../docs/media/inline-four-preview.jpg)
+
+*Existing English Showcase frame: original Mechanism Studio geometry and
+rendering (MIT). Ignition and gas colours are teaching cues, not combustion
+simulation. Optional narration audio is not bundled in the public checkout.*
+
 **Public checkout:** model, GLB, Blender builder, captions and voice-generation
 code are included. Local `.blend` exports and provider-generated MP3s are
 excluded from Git; the development notes below also describe those optional

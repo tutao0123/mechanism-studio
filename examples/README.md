@@ -2,10 +2,39 @@
 
 Choose an example by the evidence it can demonstrate: a teaching model, a source assembly inspector, or a short presentation. All commands below run from the Mechanism Studio repository root after `npm ci`.
 
+**These are implemented examples, not empty plans.** The maintained lock lives
+in `prototype-3d/`, and both SO-ARM robot cuts live in `EXAMPLE_ROBOT/`; neither
+is a missing child of this directory. The ten implemented experiences and exact
+public/local distinctions are listed in the [status audit](../docs/examples-status.md).
+`lock-comparison/` is an explicitly [historical artifact](lock-comparison/README.md).
+
+## Visual entry points
+
+<a href="humanoid/README.md"><img src="../docs/media/humanoid-g1-preview.jpg" alt="Unitree G1 source-body exploded presentation" width="480"></a>
+<a href="../EXAMPLE_ROBOT/kinetic/README.md"><img src="../docs/media/so-arm102-kinetic.jpg" alt="SO-ARM 102 kinetic cut with source robot credit" width="480"></a>
+<a href="inline-four/README.md"><img src="../docs/media/inline-four-preview.jpg" alt="Inline-four engine with ignition cues" width="480"></a>
+<a href="turbofan/README.md"><img src="../docs/media/turbofan-preview.jpg" alt="Two-spool turbofan teaching model" width="480"></a>
+<a href="quadruped/README.md"><img src="../docs/media/quadruped-preview.jpg" alt="Original small quadruped teaching model" width="480"></a>
+<a href="shaft-bearing/README.md"><img src="../docs/media/shaft-bearing-preview.jpg" alt="Galileo 2 source assembly inspector" width="480"></a>
+<a href="wolf-actuator/README.md"><img src="../docs/media/wolf-preview.jpg" alt="WOLF STEP-derived assembly study" width="480"></a>
+<a href="step-assembly/README.md"><img src="../docs/media/kfl08-preview.jpg" alt="KFL08 historical STEP import in the actual viewer" width="480"></a>
+
+[G1 humanoid](humanoid/README.md) ·
+[SO-ARM kinetic cut](../EXAMPLE_ROBOT/kinetic/README.md) ·
+[Quadruped](quadruped/README.md) ·
+[Original lock preview](../prototype-3d/assets/lock-preview.png).
+Preview licenses are listed in [media notices](../docs/media/LICENSE.md): G1
+retains BSD-3-Clause, SO-ARM CC BY 4.0, Galileo GPL v3 and WOLF CC BY-SA 4.0;
+original teaching-model previews use the project's MIT terms.
+Videos are generated local deliveries, not missing source assets: captured
+frames and MP4 exports are intentionally excluded from Git. GitHub does not run
+these pages; use a local server below to load models and play music.
+
 ## Viewing routes
 
 | Example | Server command | Local route | Included experience |
 | --- | --- | --- | --- |
+| Unitree G1 humanoid | `node examples/humanoid/serve.mjs` | `http://127.0.0.1:4182/?clean=1` | 35.555556-second body-level explosion/reassembly, close reading views, original score and sparse CC0 effects |
 | Five-pin lock | `npm run preview` | `http://127.0.0.1:4179/prototype-3d/?palette=line-light` | Key profiles, insertion and turning, shear-line view, camera presets and display explosion |
 | Inline-four | `npm run preview` | `http://127.0.0.1:4179/examples/inline-four/` | Crank-slider motion, valve timing, port spray, ignition and exhaust cues |
 | Two-spool turbofan | `npm run preview` | `http://127.0.0.1:4179/examples/turbofan/` | Independent shaft controls, rotor/stator groups and core/bypass flow |
@@ -15,14 +44,23 @@ Choose an example by the evidence it can demonstrate: a teaching model, a source
 | Galileo 2 inspector | `npm run preview` | `http://127.0.0.1:4179/examples/shaft-bearing/` | Source tree, repeated occurrences, mesh selection, hide/isolate and restoration |
 | SO-ARM 102 assembly study | `node EXAMPLE_ROBOT/serve.mjs` | `http://127.0.0.1:4180/?clean=1` | 34.285714-second music-driven exploded view and restoration |
 | SO-ARM 102 kinetic cut | `node EXAMPLE_ROBOT/serve.mjs` | `http://127.0.0.1:4180/kinetic/?clean=1` | 25.714286-second source-backed joint motion and assembly edit |
-| WOLF actuator | `node examples/wolf-actuator/serve.mjs` | `http://127.0.0.1:4181/?clean=1` | 34.285714-second real STEP-derived music study |
+| WOLF actuator | `node examples/wolf-actuator/serve.mjs` | `http://127.0.0.1:4181/?clean=1` | 34.285714-second real STEP-derived whole-assembly music study |
+| WOLF motor detail edition | Same WOLF server | `http://127.0.0.1:4181/detail/?clean=1` | Another 34.285714-second edition: 245-leaf actuator → actual 86-leaf motor → source components → restoration |
 
-The root server handles the studio and original mechanisms; robot and WOLF studies use their own explicit read-only route allowlists. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
+The root server handles the studio and original mechanisms; SO-ARM, humanoid and WOLF studies use their own explicit read-only route allowlists. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
+
+The WOLF [motor detail cut](wolf-actuator/detail/README.md) is an edition of the
+same sourced actuator, so the inventory remains **ten experiences**. Its motor
+contains 40 source-named `magnet`, 40 unspecified `cc` and six explicitly named
+hardware leaves. The generic `cc` label is not asserted to mean copper winding
+or another inferred function. All geometry comes from WOLF's retained source;
+it is not claimed to be inside the G1 humanoid. It reuses the original WOLF WAV
+with independently bound cue metadata, at 112 BPM and 64 beats.
 
 ## What a fresh clone includes
 
 - GLB display geometry, scene contracts, models, lessons, source/provenance records and implementation adapters.
-- Original code-synthesized WAV music and its deterministic synthesis source for the robot and WOLF studies. Click **Play with music** to enable audio; the media clock controls motion, camera, labels and effects together.
+- Original code-synthesized WAV music and its deterministic synthesis source for the robot, humanoid and WOLF studies. The humanoid additionally retains five separately licensed Kenney CC0 effects and their provenance. Click **Play with music** to enable audio; the media clock controls motion, camera, labels and effects together.
 - Blender Python builders for the original teaching models. Local `.blend` exports remain on the author's machine because their binary metadata embeds machine-specific paths; rebuild them if needed.
 - Original third-party CAD/URDF files with licenses. Galileo also retains its upstream native Fusion source. These assets are separately licensed from the MIT runtime.
 
@@ -38,6 +76,7 @@ Read the mechanism's model and README before using its diagrams as engineering e
 
 | Specimen | Source and identity | Asset license and limits |
 | --- | --- | --- |
+| [Unitree G1](humanoid/README.md) | Unitree Robotics / Menagerie MJCF; 30 source bodies, 35 visual occurrences, 29 hinge declarations, 393,270 triangles | BSD-3-Clause at model-directory scope. Static zero-joint source pose; merged link visuals, no individual screws or actuator internals. |
 | [KFL08](step-assembly/README.md) | FreeCAD-library model by hasecilu; 22 leaf instances and 7 subassembly instances | CC BY 3.0. Historical display has 35 fragments; only partial source mapping. |
 | [Galileo 2](shaft-bearing/README.md) | JaredC01 and contributors; OCCT XCAF retains 69 definitions, 146 usages and 147 root-inclusive occurrences | GPL v3 for CAD source and derivatives. Includes original STEP, preferred native Fusion source and license. Six faces required recorded meshing retries. |
 | [WOLF](wolf-actuator/README.md) | Anthrobotics V1.2 STEP; 184 definitions, 252 usages, 245 leaf occurrences | CC BY-SA 4.0 for the model and adapted visual presentation. Includes source-triangulated bearing geometry; not all geometry is analytic. |
@@ -59,6 +98,11 @@ npm run audit:cad -- --example examples/wolf-actuator
 Use [CAD import setup](../tools/cad/README.md) and [XCAF setup](../tools/cad/README-xcaf.md) before rebuilding engineering derivatives. The root `npm run import:cad -- --example examples/<name>` command requires a supported source package and project-local OCCT backend; it does not generate a new viewer page or recover joints.
 
 Music rebuild commands are `node EXAMPLE_ROBOT/audio/build.mjs`, `node EXAMPLE_ROBOT/kinetic/audio/build.mjs`, and `node examples/wolf-actuator/audio/build.mjs`. Rebuilding visual assets may require the example's documented Python/Blender environment. Recording is separate from viewing: deterministic capture plus [video encoding](../tools/video/README.md) can produce an MP4, while captured frames, exports and browser review screenshots remain local ignored outputs.
+
+The humanoid rebuilds with `node examples/humanoid/build-humanoid.mjs` (Node and
+Python 3 standard library) and `node examples/humanoid/audio/build.mjs` (Node,
+retained CC0 samples). Read its [detail limits](humanoid/README.md#source-identity-and-detail-limits)
+before treating a source-body explosion as a deeper engineering teardown.
 
 ## Adding another example
 

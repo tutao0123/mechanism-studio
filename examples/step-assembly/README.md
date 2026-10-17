@@ -1,5 +1,9 @@
 # KFL08：首个已有 STEP 装配试验
 
+![KFL08 source-derived flange bearing in the actual interactive viewer](../../docs/media/kfl08-preview.jpg)
+
+*KFL08 by hasecilu / FreeCAD community library, CC BY 3.0. Mechanism Studio adds tessellation, display separation and line rendering; historical identity-mapping limits remain. [Media attribution](../../docs/media/LICENSE.md#kfl08).*
+
 这次输入是 FreeCAD 社区零件库已有的 KFL08 法兰轴承 STEP，而非项目现场生成的 STEP。原作者 hasecilu，固定仓库提交、作者提交、下载地址、许可依据和 SHA-256 见 [provenance.json](source/provenance.json)。原文件保留、未修改；公开模型使用 CC BY 3.0，并明确说明本项目网格派生的变化。
 
 在项目根运行 `node tools/cad/import-kfl08.mjs` 可从原 STEP 重新导入。需要项目锁定的 `occt-import-js@0.0.23`；其 Node 入口加载同包 dist 中的 WASM。网页只加载生成的 GLB，不分发 WASM；生成脚本没有联网或全局安装步骤。

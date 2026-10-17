@@ -1,5 +1,11 @@
 # 锁芯的秘密 · 3D 原型
 
+![Pin-tumbler lock teaching model in the actual interactive viewer](../docs/media/lock-preview.jpg)
+
+*Existing interactive preview: original Mechanism Studio teaching geometry and
+line rendering (MIT). The screenshot depicts the teaching model, not measured
+manufacturer CAD.*
+
 **Public checkout:** the GLB, model, lessons and editable Blender Python builder
 are included. Local `.blend` exports and provider-generated Doubao MP3s remain
 ignored and are not deleted. Rebuild scenes/audio when needed; see the

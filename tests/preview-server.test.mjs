@@ -30,12 +30,21 @@ test('standalone preview serves the model and GLB without a parent workspace', a
   assert.match(example.headers.get('content-type'), /text\/html/);
 });
 test('preview rejects tools, sibling projects, configuration and arbitrary voice JSON', async () => {
-  for (const path of ['/.codex/config.toml', '/.tools/blender-mcp/server.py', '/anatomy-reference/index.html', '/prototype-3d/voice/config.json', '/prototype-3d/voice/example.private.json', '/%2e%2e%5canatomy-reference/index.html']) {
+  for (const path of ['/.codex/config.toml', '/.tools/blender-mcp/server.py', '/anatomy-reference/index.html', '/prototype-3d/voice/config.json', '/prototype-3d/voice/example.private.json', '/shared/voice/speech.mjs', '/shared/voice/speech-cli.mjs', '/shared/voice/speech-config.example.json', '/%2e%2e%5canatomy-reference/index.html']) {
     assert.equal((await fetch(base + path)).status, 403, path);
   }
   for (const path of ['.agents/skills/mechanism-studio/SKILL.md', '../anatomy-reference/README.md', 'prototype-3d/app.mjs']) {
     assert.equal((await fetch(base + '/document?path=' + encodeURIComponent(path))).status, 403, path);
   }
+});
+test('gallery exposes implemented studies, credit-safe previews and the honest historical lock entry', async () => {
+  const gallery = await (await fetch(base + '/')).text();
+  for (const route of ['http://127.0.0.1:4180/?clean=1', 'http://127.0.0.1:4180/kinetic/?clean=1', 'http://127.0.0.1:4181/?clean=1', 'docs/examples-status.md']) assert.ok(gallery.includes(route), route);
+  assert.equal((await fetch(base + '/docs/media/so-arm102-kinetic.jpg')).status, 200);
+  assert.equal((await fetch(base + '/document?path=examples/README.md')).status, 200);
+  const legacy = await fetch(base + '/examples/lock-comparison/');
+  assert.equal(legacy.status, 200); assert.match(await legacy.text(), /prototype-3d\/\?palette=line-light/);
+  assert.equal((await fetch(base + '/examples/lock-comparison/anatomy.html')).status, 403);
 });
 test('process-layer source is served without exposing tests or provider configuration', async () => {
   for (const path of ['/shared/animation/effects.mjs','/examples/inline-four/process.mjs','/examples/inline-four/effects.mjs','/examples/turbofan/process.mjs','/examples/turbofan/effects.mjs']) assert.equal((await fetch(base + path)).status,200,path);

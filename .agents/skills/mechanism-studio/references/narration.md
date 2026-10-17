@@ -1,6 +1,35 @@
-# Lessons and optional Doubao narration
+# Lessons and optional narration APIs
 
 Read only when speech is requested or existing narration is maintained. [Audio delivery](audio-delivery.md) selects sound; social music clips and silent Inspect do not require lessons or TTS. Reuse [shared/voice](../../../../shared/voice/README.md), not copied lock-specific protocol code.
+
+## New optional speech interface
+
+Use Node-only `shared/voice/speech.mjs` for new provider-neutral narration. The
+caller explicitly selects a supported model, matching voice, output format and
+endpoint. The current OpenRouter route is its documented dedicated
+`https://openrouter.ai/api/v1/audio/speech`, not an arbitrary chat completion.
+Read the [module's current primary-source references and API contract](../../../../shared/voice/README.md#provider-neutral-speech-api)
+before choosing model/voice IDs. Not every model supports speech, every voice,
+speed control or delivery instructions.
+
+The thin `speech-cli.mjs` validates by default without reading a key. Explicit
+`--generate` reads only the configured API-key environment variable and sends
+one request; the config contains the variable name, never its value. The fixed
+OpenRouter/OpenAI presets reject endpoint overrides. A custom HTTPS endpoint
+needs the caller's separate origin allowlist, supplied with `--allow-origin` in
+the CLI. Redirects are rejected; no key or paid fallback is exposed to a page.
+
+The adapter collects bounded binary HTTP chunks, checks status/MIME/container
+signature and writes content-addressed files plus an identity sidecar only
+after a complete response. Explicit custom JSON-base64 services have a separate
+mode. It does not parse chat SSE, perform word alignment, verify subjective
+sound quality or convert raw PCM into MP3. Measure/decode/listen to final audio
+and bind playable audio to the existing single media clock. Files and outputs
+stay within the example; service-output redistribution terms require review.
+
+The generic sidecar is **not** an old Doubao lesson manifest. Existing
+`createLessonPlayer()` remains a Doubao-v1 integration; preserve valid old audio
+and avoid compulsory regeneration or relabeling provider identities.
 
 ## Lesson and identity
 
@@ -14,7 +43,7 @@ The example applies model targets; the player does not own mechanics. Changing s
 
 Preserve valid local audio when moving files or changing cameras. Changed titles/narration/step identity invalidate the digest; do not force-play stale audio. Showcase and Explain retain separate text/audio/manifest identities, including the quadruped short and full directories. Shorten content before synthesis rather than globally speeding old speech.
 
-## Explicit synthesis
+## Existing Doubao lesson synthesis (optional)
 
 The default thin CLI validates only:
 

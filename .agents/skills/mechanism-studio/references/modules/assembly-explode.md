@@ -6,6 +6,8 @@ An internal [authoring contract](../module-orchestration.md), not a separate ski
 
 Choose fixed components, local/group separation, ordering, result holds and reassembly to expose the requested relationship. Return offsets and a complete display envelope while preserving source identity, real assembly parents, mechanics and selection. Camera and appearance consume the result; this module does not own either.
 
+For finer breakdown, read [assembly depth](../assembly-depth.md): locate the target in the whole machine, enter a sourced subassembly, separate its available physical components, then restore both levels. Establish requested, available and delivered depth before promising internal parts. A source body or tree leaf can contain a closed assembly; its joint or mesh does not supply actuator internals.
+
 It does not recover mates, solve joints, remove threads, alter source placement, or prove collision-free assembly. Radial separation is an observation aid. A paused mechanism is an editorial choice, not a newly solved constraint.
 
 ## Inputs and preconditions
@@ -17,6 +19,7 @@ It does not recover mates, solve joints, remove threads, alter source placement,
 | Mechanical pose contract | static/model/clip ownership, absolute/incremental pose semantics and intended motion range | Keep source pose if no adapter is declared |
 | `timeline` | Caller-owned time domain, intervals, pause/seek/loop behavior | Free Inspect can use a user-controlled progress function |
 | Display restrictions | Fixed parts, hidden/isolation state, grouping intent and target surfaces | Inspect this model; do not copy another example's constants |
+| Component depth, when requested | Target source path, requested/available depth, actual child IDs, geometry/BOM evidence and missing internals | Use supported geometry; record unmodeled items or return a concept handoff for missing internals |
 
 Text/image reconstruction uses explicitly authored IDs after geometry exists; it does not provide native CAD occurrence identity. CAD placement does not imply mates.
 
@@ -25,9 +28,11 @@ Text/image reconstruction uses explicitly authored IDs after geometry exists; it
 Record `stage` (concept/bound/validated), `geometryRevision`, `planRevision`, mechanical pose/range reference, and:
 
 - Authored display group → actual occurrence/display-ID list, preserving repeated instances and source parents.
+- For a component study, target scope and achieved depth; per-stage visible target/context sets; source-backed child bindings and explicit unmodeled/unknown items. A source BOM entry alone is not a geometry binding.
 - Per-target offset vector, unit, space, applicable parent, zero reference and parent/child inheritance policy.
 - Stage intervals and offset/progress functions on the supplied timeline, holds and reassembly; a simple Inspect may need only progress.
 - Bounds covering intended poses, all stages and necessary intermediate offsets; calculation method and sampling limitations.
+- For nested studies, separate macro/local offset ownership, inheritance compensation, local-restored and whole-restored states, and envelopes for focus/visibility transitions on the same timeline.
 - Actual identity, transform, restoration and frame checks, plus unverified collision/engineering meaning.
 
 A definition shared by repeated screws does not make them one part. Visual groups do not rewrite the assembly tree. Geometry changes require rebinding. Offset/group/range changes update planRevision and invalidate affected camera envelopes and anchors. These dependencies are author-managed; there is no automatic dependency executor.
@@ -61,10 +66,14 @@ The adapter-created map must cover every binding, including fixed parts with `[0
 
 A staged example computes complete offsets from the caller's timeline, without competing timers. `resetObservation()` additionally resets display rotation, scale and visibility; use it for a full observation reset, not merely reassembly. `fitVisibleAssembly()` supports explicit interactive fitting; never fit the automatic camera each animation frame. Pass the finalized envelope to [camera direction](camera-direction.md).
 
+Local subassembly choreography needs an explicit example adapter: the shared `setExplode` call does not create a second explosion layer. Resolve macro and local world intentions into one complete map of parent-space residual offsets. Restoring local children preserves the current macro context; the final return resets every authored observation offset. Pass stage-specific visible IDs and envelopes to camera/labels/appearance without rewriting the source tree.
+
 ## Validation and failure handoff
 
 Check actual unique bindings/repeated occurrences, rotated parents, nested groups, mixed-owned solids, zero/intermediate/full separation and return to zero. No cumulative drift; mechanical inputs/readouts/source matrices stay unchanged, while displayed world matrices change by the intended offset. Verify hidden/isolation/select/full-reset semantics independently.
 
 For timed work, test pause, backward/forward seek, motion overlap, all stages and the loop. Inspect real full/close/most-expanded frames and narrow viewports for clipping, target readability and labels. Existing [scene tests](../../../../../shared/viewer/tests/scene.test.mjs) validate shared invariants, not a new plan's bindings or engineering feasibility.
+
+For layered studies, verify actual source children, parent-motion compensation, local-only restoration, whole restoration and visibility recovery. Every advertised screw, bearing or gear must have a bound occurrence or an explicit unmodeled status. Preserve generic source names; finer rendered detail alone does not justify a finer engineering claim.
 
 Missing geometry, ambiguous units or unmapped IDs returns a specific unresolved handoff or concept plan. Do not publish a partially applied offset set as validated; retain the previous working asset/plan.

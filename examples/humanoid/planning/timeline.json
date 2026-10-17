@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "stage": "bound",
+  "geometryRevision": "unitree-g1-3c2616550a31-e77fcc6e8b42-mjcf-display-1",
+  "planRevision": "g1-assembly-story-1",
+  "bpm": 108,
+  "beats": 64,
+  "seconds": 35.55555555555556,
+  "clock": "One seekable PCM transport, or the same explicit visual time while paused/silent.",
+  "chapters": [
+    {
+      "id": "whole",
+      "firstBeat": 0,
+      "lastBeat": 6,
+      "title": "A humanoid, connected.",
+      "copy": "Thirty source bodies. One continuous structure.",
+      "labels": []
+    },
+    {
+      "id": "separate",
+      "firstBeat": 6,
+      "lastBeat": 26,
+      "title": "See the structure unfold.",
+      "copy": "Torso. Arms. Hip chains. Ankles. Every source link keeps its identity.",
+      "labels": []
+    },
+    {
+      "id": "upper",
+      "firstBeat": 26,
+      "lastBeat": 34,
+      "title": "From shoulder to hand.",
+      "copy": "Three shoulder axes lead through the elbow to a three-axis wrist.",
+      "labels": [
+        [
+          "mjcf:right_shoulder_yaw_link",
+          "Shoulder yaw link"
+        ],
+        [
+          "mjcf:right_wrist_yaw_link",
+          "Wrist yaw / hand"
+        ]
+      ]
+    },
+    {
+      "id": "lower",
+      "firstBeat": 34,
+      "lastBeat": 42,
+      "title": "A chain to the ground.",
+      "copy": "Hip links, knee and ankle connect the pelvis to the foot.",
+      "labels": [
+        [
+          "mjcf:left_knee_link",
+          "Knee / shank"
+        ],
+        [
+          "mjcf:left_ankle_roll_link",
+          "Ankle roll / foot"
+        ]
+      ]
+    },
+    {
+      "id": "return",
+      "firstBeat": 42,
+      "lastBeat": 58,
+      "title": "Every link returns.",
+      "copy": "Reverse the display offsets. Restore the original source assembly.",
+      "labels": []
+    },
+    {
+      "id": "resolve",
+      "firstBeat": 58,
+      "lastBeat": 64,
+      "title": "Whole. And connected.",
+      "copy": "Unitree G1, made inspectable with Mechanism Studio.",
+      "labels": []
+    }
+  ]
+}
