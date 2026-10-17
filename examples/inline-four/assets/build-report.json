@@ -1,0 +1,23 @@
+{
+  "build": "executed",
+  "builder": "authorized-local-Blender-script",
+  "mcpUsed": false,
+  "blender": "4.5.14 LTS",
+  "partCount": 46,
+  "meshCount": 423,
+  "triangles": 97224,
+  "glbBytes": 3273860,
+  "glbSHA256": "06c6553bc1ebfe0ba51c78907a7881601ba62cdd6989531df4184da74430637a",
+  "blendSHA256": "b1cea92cfa157bf93053bb42dbd345563161c48759096ed1cb05b36ebbe4d7f6",
+  "sourceSpecSHA256": "646d46ba1995af4e1f8f50aaff9f9e04c0aae4188b345112a8ef77d61a100f03",
+  "verified": [
+    "GLB JSON readable",
+    "part IDs unique and complete"
+  ],
+  "limitations": [
+    "教学示意尺寸",
+    "不是工程 CAD",
+    "不求解气体、燃烧或动力学",
+    "理想气门时序，无重叠或提前角"
+  ]
+}

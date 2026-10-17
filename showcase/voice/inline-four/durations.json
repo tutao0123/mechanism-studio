@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "lessonSha256": "6036eaf0286e0267249c86ce25754e7d1f94dc7e5d5204864e10437945d16cb9",
+  "steps": {
+    "overview": 13.944,
+    "intake": 13.104,
+    "compression": 13.752,
+    "ignition": 16.056,
+    "exhaust": 14.64,
+    "assembly": 15.216
+  }
+}

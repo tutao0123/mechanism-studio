@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "provider": "doubao",
+  "complete": true,
+  "generatedAt": "2026-10-11T10:28:11.412Z",
+  "resourceId": "seed-tts-2.0",
+  "speaker": "ICL_uranus_zh_female_yuanqitianmei_tob",
+  "apiMode": "speech",
+  "format": "mp3",
+  "sampleRate": 24000,
+  "lessonSha256": "0a836dc38c6496be1351e5ad55511d462dcb4688a4cd9ede290245d47548825f",
+  "steps": {
+    "part": {
+      "src": "assets/audio/part.mp3",
+      "bytes": 153837,
+      "sha256": "78c7fedffa768e6419c4f9f2a66b90958b9fb35ec718e7a319a897a85300245f",
+      "usage": {
+        "text_words": 80
+      }
+    },
+    "wrong": {
+      "src": "assets/audio/wrong.mp3",
+      "bytes": 111789,
+      "sha256": "92fc24750577dddc65ad370b45262b6b30acf557d09da5bb12d1080957221270",
+      "usage": {
+        "text_words": 55
+      }
+    },
+    "align": {
+      "src": "assets/audio/align.mp3",
+      "bytes": 126765,
+      "sha256": "9bab511045ef1c0717732556eda6c8d361f0ede9fa5d8aadc9a41003dcaba478",
+      "usage": {
+        "text_words": 63
+      }
+    },
+    "turn": {
+      "src": "assets/audio/turn.mp3",
+      "bytes": 143853,
+      "sha256": "ed8ea8e557c1fb487384acc16b6a2d293af81c57c1fc2347eab4c5b706b4ea27",
+      "usage": {
+        "text_words": 64
+      }
+    },
+    "reset": {
+      "src": "assets/audio/reset.mp3",
+      "bytes": 131757,
+      "sha256": "aae16e9518e9b876ee0567a9c9074bab8321f7b95ce0f29f0d73cd3de83bf1b6",
+      "usage": {
+        "text_words": 68
+      }
+    }
+  }
+}

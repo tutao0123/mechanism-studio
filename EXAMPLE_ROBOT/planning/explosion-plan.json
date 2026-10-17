@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "authoring-handoff-1",
+  "stage": "bound",
+  "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2",
+  "note": "Authoring records implemented by the cited code adapters; not a generic plan loader. Current colour/shared-study evidence is recorded in verification-color-study.json; verification.json preserves the earlier presentation review.",
+  "planRevision": "robot-explosion-1",
+  "implementation": "story.mjs: stateAt + localDisplayOffsets; shared/study/study.mjs: viewer.setExplode",
+  "space": "world",
+  "unit": "m",
+  "maximumOffsets": {
+    "urdf:base_link": [
+      0,
+      0,
+      0
+    ],
+    "urdf:link1_1": [
+      -0.1,
+      0.01,
+      0
+    ],
+    "urdf:link2_1": [
+      -0.075,
+      0.09,
+      0.055
+    ],
+    "urdf:link3_1": [
+      0.02,
+      0.16,
+      -0.06
+    ],
+    "urdf:link4_1": [
+      0.14,
+      0.1,
+      0.065
+    ],
+    "urdf:link5_1": [
+      0.22,
+      0.035,
+      0
+    ],
+    "urdf:clamp1_1": [
+      0.26,
+      0.055,
+      -0.09
+    ],
+    "urdf:clamp2_1": [
+      0.26,
+      0.055,
+      0.09
+    ]
+  },
+  "groups": [
+    {
+      "id": "shoulder",
+      "ids": [
+        "urdf:link1_1",
+        "urdf:link2_1"
+      ],
+      "outBeat": 8,
+      "inBeat": 52
+    },
+    {
+      "id": "forearm",
+      "ids": [
+        "urdf:link3_1",
+        "urdf:link4_1"
+      ],
+      "outBeat": 12,
+      "inBeat": 48
+    },
+    {
+      "id": "wrist",
+      "ids": [
+        "urdf:link5_1"
+      ],
+      "outBeat": 16,
+      "inBeat": 44
+    },
+    {
+      "id": "jaws",
+      "ids": [
+        "urdf:clamp1_1",
+        "urdf:clamp2_1"
+      ],
+      "outBeat": 20,
+      "inBeat": 40
+    }
+  ],
+  "actionDurationBeats": 2,
+  "hierarchyRule": "Each local display delta equals desired world delta minus inherited parent world delta, converted through the source parent inverse.",
+  "loop": {
+    "firstBeat": 0,
+    "lastBeat": 64,
+    "restoredByBeat": 54
+  },
+  "sourceTransforms": "Preserved; source q=0 and mesh geometry remain unchanged."
+}

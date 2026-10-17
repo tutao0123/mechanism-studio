@@ -1,0 +1,537 @@
+{
+  "schemaVersion": "1.0.0",
+  "stage": "bound",
+  "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1",
+  "sourceSHA256": "b352183e1bd0d55c403a6f406c3b2886a3b1b374b47cf32bcb69d4277d252e35",
+  "sourceRevision": "776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea",
+  "sourceBindings": {
+    "front": {
+      "id": "occ-b352183e1bd0-root-953098-763",
+      "name": "front-plate",
+      "definitionId": "def-b352183e1bd0-953103",
+      "parentId": "occ-b352183e1bd0-root-953098",
+      "source": {
+        "xcafLabel": "0:1:1:1:5",
+        "nauoEntity": "#763",
+        "occurrenceId": "NAUO5",
+        "parentDefinitionEntity": "#953098",
+        "childDefinitionEntity": "#953103",
+        "definition": {
+          "productDefinitionEntity": "#953103",
+          "productEntity": "#953839",
+          "productId": "front-plate",
+          "productName": "front-plate"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    "back": {
+      "id": "occ-b352183e1bd0-root-953098-773",
+      "name": "back-plate",
+      "definitionId": "def-b352183e1bd0-953113",
+      "parentId": "occ-b352183e1bd0-root-953098",
+      "source": {
+        "xcafLabel": "0:1:1:1:15",
+        "nauoEntity": "#773",
+        "occurrenceId": "NAUO15",
+        "parentDefinitionEntity": "#953098",
+        "childDefinitionEntity": "#953113",
+        "definition": {
+          "productDefinitionEntity": "#953113",
+          "productEntity": "#953849",
+          "productId": "back-plate",
+          "productName": "back-plate"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    "encoder": {
+      "id": "occ-b352183e1bd0-root-953098-776",
+      "name": "encoder-housing",
+      "definitionId": "def-b352183e1bd0-953116",
+      "parentId": "occ-b352183e1bd0-root-953098",
+      "source": {
+        "xcafLabel": "0:1:1:1:18",
+        "nauoEntity": "#776",
+        "occurrenceId": "NAUO18",
+        "parentDefinitionEntity": "#953098",
+        "childDefinitionEntity": "#953116",
+        "definition": {
+          "productDefinitionEntity": "#953116",
+          "productEntity": "#953852",
+          "productId": "encoder-housing",
+          "productName": "encoder-housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    "holder": {
+      "id": "occ-b352183e1bd0-root-953098-761",
+      "name": "encoder-magnet-holder",
+      "definitionId": "def-b352183e1bd0-953101",
+      "parentId": "occ-b352183e1bd0-root-953098",
+      "source": {
+        "xcafLabel": "0:1:1:1:3",
+        "nauoEntity": "#761",
+        "occurrenceId": "NAUO3",
+        "parentDefinitionEntity": "#953098",
+        "childDefinitionEntity": "#953101",
+        "definition": {
+          "productDefinitionEntity": "#953101",
+          "productEntity": "#953837",
+          "productId": "encoder-magnet-holder",
+          "productName": "encoder-magnet-holder"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    "outerA": {
+      "id": "occ-b352183e1bd0-root-953098-923-852-851",
+      "name": "outer-ring-A",
+      "definitionId": "def-b352183e1bd0-953193",
+      "parentId": "occ-b352183e1bd0-root-953098-923-852",
+      "source": {
+        "xcafLabel": "0:1:1:95:1",
+        "nauoEntity": "#851",
+        "occurrenceId": "NAUO93",
+        "parentDefinitionEntity": "#953192",
+        "childDefinitionEntity": "#953193",
+        "definition": {
+          "productDefinitionEntity": "#953193",
+          "productEntity": "#953929",
+          "productId": "outer-ring-A",
+          "productName": "outer-ring-A"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    "outerB": {
+      "id": "occ-b352183e1bd0-root-953098-850-779-778",
+      "name": "outer-ring-B",
+      "definitionId": "def-b352183e1bd0-953120",
+      "parentId": "occ-b352183e1bd0-root-953098-850-779",
+      "source": {
+        "xcafLabel": "0:1:1:22:1",
+        "nauoEntity": "#778",
+        "occurrenceId": "NAUO20",
+        "parentDefinitionEntity": "#953119",
+        "childDefinitionEntity": "#953120",
+        "definition": {
+          "productDefinitionEntity": "#953120",
+          "productEntity": "#953856",
+          "productId": "outer-ring-B",
+          "productName": "outer-ring-B"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    "ringA": {
+      "id": "occ-b352183e1bd0-root-953098-764",
+      "name": "internal-ring-gear-A",
+      "definitionId": "def-b352183e1bd0-953104",
+      "parentId": "occ-b352183e1bd0-root-953098",
+      "source": {
+        "xcafLabel": "0:1:1:1:6",
+        "nauoEntity": "#764",
+        "occurrenceId": "NAUO6",
+        "parentDefinitionEntity": "#953098",
+        "childDefinitionEntity": "#953104",
+        "definition": {
+          "productDefinitionEntity": "#953104",
+          "productEntity": "#953840",
+          "productId": "internal-ring-gear-A",
+          "productName": "internal-ring-gear-A"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    "ringB": {
+      "id": "occ-b352183e1bd0-root-953098-765",
+      "name": "internal-ring-gear-B",
+      "definitionId": "def-b352183e1bd0-953105",
+      "parentId": "occ-b352183e1bd0-root-953098",
+      "source": {
+        "xcafLabel": "0:1:1:1:7",
+        "nauoEntity": "#765",
+        "occurrenceId": "NAUO7",
+        "parentDefinitionEntity": "#953098",
+        "childDefinitionEntity": "#953105",
+        "definition": {
+          "productDefinitionEntity": "#953105",
+          "productEntity": "#953841",
+          "productId": "internal-ring-gear-B",
+          "productName": "internal-ring-gear-B"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    "sun": {
+      "id": "occ-b352183e1bd0-root-953098-767",
+      "name": "sun-gear",
+      "definitionId": "def-b352183e1bd0-953107",
+      "parentId": "occ-b352183e1bd0-root-953098",
+      "source": {
+        "xcafLabel": "0:1:1:1:9",
+        "nauoEntity": "#767",
+        "occurrenceId": "NAUO9",
+        "parentDefinitionEntity": "#953098",
+        "childDefinitionEntity": "#953107",
+        "definition": {
+          "productDefinitionEntity": "#953107",
+          "productEntity": "#953843",
+          "productId": "sun-gear",
+          "productName": "sun-gear"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    "planets": [
+      {
+        "id": "occ-b352183e1bd0-root-953098-772",
+        "name": "planet-1",
+        "definitionId": "def-b352183e1bd0-953112",
+        "parentId": "occ-b352183e1bd0-root-953098",
+        "source": {
+          "xcafLabel": "0:1:1:1:14",
+          "nauoEntity": "#772",
+          "occurrenceId": "NAUO14",
+          "parentDefinitionEntity": "#953098",
+          "childDefinitionEntity": "#953112",
+          "definition": {
+            "productDefinitionEntity": "#953112",
+            "productEntity": "#953848",
+            "productId": "planet-1",
+            "productName": "planet-1"
+          },
+          "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+        }
+      },
+      {
+        "id": "occ-b352183e1bd0-root-953098-759",
+        "name": "planet-2",
+        "definitionId": "def-b352183e1bd0-953099",
+        "parentId": "occ-b352183e1bd0-root-953098",
+        "source": {
+          "xcafLabel": "0:1:1:1:1",
+          "nauoEntity": "#759",
+          "occurrenceId": "NAUO1",
+          "parentDefinitionEntity": "#953098",
+          "childDefinitionEntity": "#953099",
+          "definition": {
+            "productDefinitionEntity": "#953099",
+            "productEntity": "#953835",
+            "productId": "planet-2",
+            "productName": "planet-2"
+          },
+          "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+        }
+      },
+      {
+        "id": "occ-b352183e1bd0-root-953098-775",
+        "name": "planet-3",
+        "definitionId": "def-b352183e1bd0-953115",
+        "parentId": "occ-b352183e1bd0-root-953098",
+        "source": {
+          "xcafLabel": "0:1:1:1:17",
+          "nauoEntity": "#775",
+          "occurrenceId": "NAUO17",
+          "parentDefinitionEntity": "#953098",
+          "childDefinitionEntity": "#953115",
+          "definition": {
+            "productDefinitionEntity": "#953115",
+            "productEntity": "#953851",
+            "productId": "planet-3",
+            "productName": "planet-3"
+          },
+          "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+        }
+      },
+      {
+        "id": "occ-b352183e1bd0-root-953098-774",
+        "name": "planet-4",
+        "definitionId": "def-b352183e1bd0-953114",
+        "parentId": "occ-b352183e1bd0-root-953098",
+        "source": {
+          "xcafLabel": "0:1:1:1:16",
+          "nauoEntity": "#774",
+          "occurrenceId": "NAUO16",
+          "parentDefinitionEntity": "#953098",
+          "childDefinitionEntity": "#953114",
+          "definition": {
+            "productDefinitionEntity": "#953114",
+            "productEntity": "#953850",
+            "productId": "planet-4",
+            "productName": "planet-4"
+          },
+          "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+        }
+      },
+      {
+        "id": "occ-b352183e1bd0-root-953098-760",
+        "name": "planet-5",
+        "definitionId": "def-b352183e1bd0-953100",
+        "parentId": "occ-b352183e1bd0-root-953098",
+        "source": {
+          "xcafLabel": "0:1:1:1:2",
+          "nauoEntity": "#760",
+          "occurrenceId": "NAUO2",
+          "parentDefinitionEntity": "#953098",
+          "childDefinitionEntity": "#953100",
+          "definition": {
+            "productDefinitionEntity": "#953100",
+            "productEntity": "#953836",
+            "productId": "planet-5",
+            "productName": "planet-5"
+          },
+          "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+        }
+      },
+      {
+        "id": "occ-b352183e1bd0-root-953098-766",
+        "name": "planet-6",
+        "definitionId": "def-b352183e1bd0-953106",
+        "parentId": "occ-b352183e1bd0-root-953098",
+        "source": {
+          "xcafLabel": "0:1:1:1:8",
+          "nauoEntity": "#766",
+          "occurrenceId": "NAUO8",
+          "parentDefinitionEntity": "#953098",
+          "childDefinitionEntity": "#953106",
+          "definition": {
+            "productDefinitionEntity": "#953106",
+            "productEntity": "#953842",
+            "productId": "planet-6",
+            "productName": "planet-6"
+          },
+          "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+        }
+      },
+      {
+        "id": "occ-b352183e1bd0-root-953098-768",
+        "name": "planet-7",
+        "definitionId": "def-b352183e1bd0-953108",
+        "parentId": "occ-b352183e1bd0-root-953098",
+        "source": {
+          "xcafLabel": "0:1:1:1:10",
+          "nauoEntity": "#768",
+          "occurrenceId": "NAUO10",
+          "parentDefinitionEntity": "#953098",
+          "childDefinitionEntity": "#953108",
+          "definition": {
+            "productDefinitionEntity": "#953108",
+            "productEntity": "#953844",
+            "productId": "planet-7",
+            "productName": "planet-7"
+          },
+          "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+        }
+      },
+      {
+        "id": "occ-b352183e1bd0-root-953098-771",
+        "name": "planet-8",
+        "definitionId": "def-b352183e1bd0-953111",
+        "parentId": "occ-b352183e1bd0-root-953098",
+        "source": {
+          "xcafLabel": "0:1:1:1:13",
+          "nauoEntity": "#771",
+          "occurrenceId": "NAUO13",
+          "parentDefinitionEntity": "#953098",
+          "childDefinitionEntity": "#953111",
+          "definition": {
+            "productDefinitionEntity": "#953111",
+            "productEntity": "#953847",
+            "productId": "planet-8",
+            "productName": "planet-8"
+          },
+          "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+        }
+      },
+      {
+        "id": "occ-b352183e1bd0-root-953098-762",
+        "name": "planet-9",
+        "definitionId": "def-b352183e1bd0-953102",
+        "parentId": "occ-b352183e1bd0-root-953098",
+        "source": {
+          "xcafLabel": "0:1:1:1:4",
+          "nauoEntity": "#762",
+          "occurrenceId": "NAUO4",
+          "parentDefinitionEntity": "#953098",
+          "childDefinitionEntity": "#953102",
+          "definition": {
+            "productDefinitionEntity": "#953102",
+            "productEntity": "#953838",
+            "productId": "planet-9",
+            "productName": "planet-9"
+          },
+          "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+        }
+      },
+      {
+        "id": "occ-b352183e1bd0-root-953098-769",
+        "name": "planet-10",
+        "definitionId": "def-b352183e1bd0-953109",
+        "parentId": "occ-b352183e1bd0-root-953098",
+        "source": {
+          "xcafLabel": "0:1:1:1:11",
+          "nauoEntity": "#769",
+          "occurrenceId": "NAUO11",
+          "parentDefinitionEntity": "#953098",
+          "childDefinitionEntity": "#953109",
+          "definition": {
+            "productDefinitionEntity": "#953109",
+            "productEntity": "#953845",
+            "productId": "planet-10",
+            "productName": "planet-10"
+          },
+          "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+        }
+      },
+      {
+        "id": "occ-b352183e1bd0-root-953098-770",
+        "name": "planet-11",
+        "definitionId": "def-b352183e1bd0-953110",
+        "parentId": "occ-b352183e1bd0-root-953098",
+        "source": {
+          "xcafLabel": "0:1:1:1:12",
+          "nauoEntity": "#770",
+          "occurrenceId": "NAUO12",
+          "parentDefinitionEntity": "#953098",
+          "childDefinitionEntity": "#953110",
+          "definition": {
+            "productDefinitionEntity": "#953110",
+            "productEntity": "#953846",
+            "productId": "planet-11",
+            "productName": "planet-11"
+          },
+          "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+        }
+      },
+      {
+        "id": "occ-b352183e1bd0-root-953098-777",
+        "name": "planet-12",
+        "definitionId": "def-b352183e1bd0-953117",
+        "parentId": "occ-b352183e1bd0-root-953098",
+        "source": {
+          "xcafLabel": "0:1:1:1:19",
+          "nauoEntity": "#777",
+          "occurrenceId": "NAUO19",
+          "parentDefinitionEntity": "#953098",
+          "childDefinitionEntity": "#953117",
+          "definition": {
+            "productDefinitionEntity": "#953117",
+            "productEntity": "#953853",
+            "productId": "planet-12",
+            "productName": "planet-12"
+          },
+          "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+        }
+      }
+    ],
+    "shaft": {
+      "id": "occ-b352183e1bd0-root-953098-1010-934",
+      "name": "motor-shaft",
+      "definitionId": "def-b352183e1bd0-953206",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "source": {
+        "xcafLabel": "0:1:1:98:11",
+        "nauoEntity": "#934",
+        "occurrenceId": "NAUO176",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953206",
+        "definition": {
+          "productDefinitionEntity": "#953206",
+          "productEntity": "#953942",
+          "productId": "motor-shaft",
+          "productName": "motor-shaft"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    "mount": {
+      "id": "occ-b352183e1bd0-root-953098-1010-946",
+      "name": "motor-mount-plate-8318",
+      "definitionId": "def-b352183e1bd0-953218",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "source": {
+        "xcafLabel": "0:1:1:98:23",
+        "nauoEntity": "#946",
+        "occurrenceId": "NAUO188",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953218",
+        "definition": {
+          "productDefinitionEntity": "#953218",
+          "productEntity": "#953954",
+          "productId": "motor-mount-plate-8318",
+          "productName": "motor-mount-plate-8318"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    "bearingA": {
+      "id": "occ-b352183e1bd0-root-953098-923",
+      "name": "bearing-assembly-A <1>",
+      "definitionId": "def-b352183e1bd0-953191",
+      "parentId": "occ-b352183e1bd0-root-953098",
+      "source": {
+        "xcafLabel": "0:1:1:1:21",
+        "nauoEntity": "#923",
+        "occurrenceId": "NAUO165",
+        "parentDefinitionEntity": "#953098",
+        "childDefinitionEntity": "#953191"
+      }
+    },
+    "bearingB": {
+      "id": "occ-b352183e1bd0-root-953098-850",
+      "name": "bearing-assembly-B <1>",
+      "definitionId": "def-b352183e1bd0-953118",
+      "parentId": "occ-b352183e1bd0-root-953098",
+      "source": {
+        "xcafLabel": "0:1:1:1:20",
+        "nauoEntity": "#850",
+        "occurrenceId": "NAUO92",
+        "parentDefinitionEntity": "#953098",
+        "childDefinitionEntity": "#953118"
+      }
+    }
+  },
+  "planRevision": "wolf-camera-2",
+  "explosionPlanRevision": "wolf-explosion-1",
+  "annotationPlanRevision": "wolf-annotations-1",
+  "transitionSeconds": 0.8,
+  "cameraUp": [
+    0,
+    0,
+    1
+  ],
+  "pullback": {
+    "chapters": [
+      "rings",
+      "gears"
+    ],
+    "startSeconds": 3.2,
+    "endSeconds": 3.95,
+    "scale": 1.06
+  },
+  "detailVisibility": {
+    "rings": [
+      "occ-b352183e1bd0-root-953098-764",
+      "occ-b352183e1bd0-root-953098-765"
+    ],
+    "gears": [
+      "occ-b352183e1bd0-root-953098-767",
+      "occ-b352183e1bd0-root-953098-772",
+      "occ-b352183e1bd0-root-953098-759",
+      "occ-b352183e1bd0-root-953098-775",
+      "occ-b352183e1bd0-root-953098-774",
+      "occ-b352183e1bd0-root-953098-760",
+      "occ-b352183e1bd0-root-953098-766",
+      "occ-b352183e1bd0-root-953098-768",
+      "occ-b352183e1bd0-root-953098-771",
+      "occ-b352183e1bd0-root-953098-762",
+      "occ-b352183e1bd0-root-953098-769",
+      "occ-b352183e1bd0-root-953098-770",
+      "occ-b352183e1bd0-root-953098-777"
+    ]
+  },
+  "policy": "Fixed source-bound rest/swept envelopes; fully expanded rings/gears detail envelopes. Stable Z-up camera orientation opens the source Y-axis stack across the landscape frame; source matrices stay unchanged. No live bounds camera feedback."
+}

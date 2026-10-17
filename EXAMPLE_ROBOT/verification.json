@@ -1,0 +1,877 @@
+{
+  "date": "2026-10-17",
+  "scope": "Mechanism Studio only: EXAMPLE_ROBOT and project-local skill defaults; shared viewer, other examples and global settings unchanged.",
+  "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2",
+  "source": {
+    "author": "Robonine",
+    "repository": "https://github.com/roboninecom/SO-ARM-102",
+    "revision": "e871f738c97f43de230cb04d340797da6a68c4b9",
+    "license": "CC-BY-4.0",
+    "originalFilesVerified": 21,
+    "links": 8,
+    "triangles": 62064
+  },
+  "automated": {
+    "exampleTests": {
+      "passed": 40,
+      "failed": 0,
+      "command": "node --test EXAMPLE_ROBOT/tests/*.test.mjs",
+      "actualOutput": "output/retained-scene-tests.txt"
+    },
+    "existingProjectRegression": {
+      "passed": 281,
+      "failed": 0,
+      "note": "Historical 281-test pass; shared runtime and other examples were not modified or retested for this scoped presentation/skill update."
+    },
+    "assetHashes": {
+      "app.mjs": "fe1906ba7ebcd5ea86d9628cf9d17f4627a4720975a0046993c7d7d989e63b89",
+      "story.mjs": "2c3dca51841f66a313b77f4ad10f077ae6533e1460f190b5d263e38e293e2de7",
+      "framing.mjs": "da811cd06662b194036d2952ff8076bef3104a04ff396d6db9def2b39f84a303",
+      "assets/robot.glb": "eef701b8ee65acd95b17069a3420a6d5a2be023da8d51018155804a732f0c91a",
+      "audio/robot-loop.wav": "7a463b9c86f7f7e4bcfacdbfdebb3522981182b23056cd980d377e6533f838e5",
+      "planning/explosion-plan.json": "3a8e84375f7bbf07ce5dd693eacae48c6f6e41441764b4c01b82e73ad315e544",
+      "planning/camera-plan.json": "27f1f85f04b09251b09679e2f540ef4eecbec536f21bbfbaf382b81074c3e3de",
+      "planning/appearance-plan.json": "fd7db0c2008936685d6d0e7a5271fc0ebeae6651b6b35a1459c60727259a4eb5",
+      "planning/timeline.json": "ce4e96c505263ec0daf8151f4059befbb2fd7b5ee2d40b9016c5e8acb339db1b",
+      "annotations.mjs": "f8dacb0e0439bfe95dd08507eb01083ba80331bd23bd2051bd182941dfd5ccc3",
+      "serve.mjs": "7b52e7d6b10adcc7ce3e43e70a345aadc565517d17c8a661239fd889afac56a2",
+      "planning/annotation-plan.json": "18175445bf9076cf27532bdaa006f3c8b53d16dc0fbf45cbbbce3f94eaad7c5d"
+    }
+  },
+  "moduleResults": {
+    "explosion": {
+      "stage": "validated",
+      "checks": [
+        "Actual source vertex mapping and unchanged local/world pose.",
+        "33 non-monotonic seeks and exact world offsets without parent double displacement.",
+        "Original source pose restored at the loop."
+      ]
+    },
+    "camera": {
+      "stage": "validated",
+      "checks": [
+        "Precomputed source/expanded envelopes retained; no live geometry fitting.",
+        "A bounded C2 6% scale pullback occurs only in wrist/grip after reading; all other planned views remain fixed.",
+        "Opening/final camera match; responsive and reduced-motion behavior checked in the current UI."
+      ]
+    },
+    "appearance": {
+      "stage": "validated",
+      "checks": [
+        "White fill and fine depth-tested dark feature lines inspected.",
+        "Own-body focus visibility preserves descendant links and restores all eight bodies.",
+        "Source credit remains visible in clean presentation."
+      ]
+    },
+    "annotations": {
+      "stage": "validated",
+      "checks": [
+        "Sequential entrances retain up to two names until the shared scene exit.",
+        "Cached silhouette anchors retain constant type size, side and 10–15px leaders during the planned pullback.",
+        "Actual source vertices, chapter sweep exclusions, non-monotonic seeks and responsive detail layouts checked.",
+        "Current native-audio loop observed shared fades, clear incoming scenes and no text overlap."
+      ]
+    }
+  },
+  "audio": {
+    "durationSeconds": 34.285714285714285,
+    "bpm": 112,
+    "feltBpm": 56,
+    "edition": "quiet-assembly-v2",
+    "beats": 64,
+    "frames": 1512000,
+    "sampleRate": 44100,
+    "samplePeakDbfs": -8,
+    "rmsDbfs": -22.426875130356976,
+    "clippedSamples": 0,
+    "loopBoundaryMaximumSampleStep": 0.0004153209304166442,
+    "originalSynthesis": true,
+    "narration": false,
+    "editorialEffects": {
+      "motion": 8,
+      "seating": 4,
+      "clock": "Same delivered PCM/native audio transport as music and animation."
+    },
+    "preservedEdition": "audio/editions/assembly-return-v1/",
+    "subjectiveListeningReview": "Not claimed; sample analysis, reproducible PCM, browser decoding and continuous playback were checked."
+  },
+  "browser": {
+    "complete": true,
+    "samples": 530,
+    "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2",
+    "audioEdition": "quiet-assembly-v2",
+    "audioSha256": "7a463b9c86f7f7e4bcfacdbfdebb3522981182b23056cd980d377e6533f838e5",
+    "feltBpm": 56,
+    "chapterSequence": [
+      "whole",
+      "structure",
+      "wrist",
+      "grip",
+      "return",
+      "resolve",
+      "whole"
+    ],
+    "seenNames": [
+      "Fixed base",
+      "Parallel gripper",
+      "Shoulder link",
+      "Elbow / forearm",
+      "Wrist link",
+      "Gripper carriage",
+      "Sliding jaw",
+      "Opposed jaw",
+      "Fixed reference",
+      "Original assembly",
+      "Ready to repeat"
+    ],
+    "maximumVisibleNames": 2,
+    "maximumLeaderLength": 15,
+    "allLabelsInsideViewport": true,
+    "allPairsNonOverlapping": true,
+    "chapterStartsClear": true,
+    "sharedExitFades": [
+      {
+        "time": 3.971752,
+        "chapter": "whole",
+        "opacities": [
+          0.9811321428571426,
+          0.9811321428571426
+        ]
+      },
+      {
+        "time": 4.039625,
+        "chapter": "whole",
+        "opacities": [
+          0.7690290178571424,
+          0.7690290178571424
+        ]
+      },
+      {
+        "time": 4.104263,
+        "chapter": "whole",
+        "opacities": [
+          0.5670352678571411,
+          0.5670352678571411
+        ]
+      },
+      {
+        "time": 4.169157,
+        "chapter": "whole",
+        "opacities": [
+          0.36424151785714176,
+          0.36424151785714176
+        ]
+      },
+      {
+        "time": 4.236902,
+        "chapter": "whole",
+        "opacities": [
+          0.15253839285714332,
+          0.15253839285714332
+        ]
+      },
+      {
+        "time": 12.574545,
+        "chapter": "structure",
+        "opacities": [
+          0.883118303571423,
+          0.883118303571423
+        ]
+      },
+      {
+        "time": 12.642538,
+        "chapter": "structure",
+        "opacities": [
+          0.67064017857143,
+          0.67064017857143
+        ]
+      },
+      {
+        "time": 12.707287,
+        "chapter": "structure",
+        "opacities": [
+          0.46829955357142183,
+          0.46829955357142183
+        ]
+      },
+      {
+        "time": 12.771868,
+        "chapter": "structure",
+        "opacities": [
+          0.26648392857143155,
+          0.26648392857143155
+        ]
+      },
+      {
+        "time": 12.840043,
+        "chapter": "structure",
+        "opacities": [
+          0.05343705357143125,
+          0.05343705357143125
+        ]
+      },
+      {
+        "time": 16.834241,
+        "chapter": "wrist",
+        "opacities": [
+          0.9644254464285767,
+          0.9644254464285767
+        ]
+      },
+      {
+        "time": 16.910411,
+        "chapter": "wrist",
+        "opacities": [
+          0.7263941964285731,
+          0.7263941964285731
+        ]
+      },
+      {
+        "time": 16.975161,
+        "chapter": "wrist",
+        "opacities": [
+          0.5240504464285728,
+          0.5240504464285728
+        ]
+      },
+      {
+        "time": 17.04305,
+        "chapter": "wrist",
+        "opacities": [
+          0.31189732142856974,
+          0.31189732142856974
+        ]
+      },
+      {
+        "time": 17.107868,
+        "chapter": "wrist",
+        "opacities": [
+          0.10934107142857308,
+          0.10934107142857308
+        ]
+      },
+      {
+        "time": 21.177948,
+        "chapter": "grip",
+        "opacities": [
+          0.7831982142857102,
+          0.7831982142857102
+        ]
+      },
+      {
+        "time": 21.234435,
+        "chapter": "grip",
+        "opacities": [
+          0.6066763392857083,
+          0.6066763392857083
+        ]
+      },
+      {
+        "time": 21.310751,
+        "chapter": "grip",
+        "opacities": [
+          0.368188839285713,
+          0.368188839285713
+        ]
+      },
+      {
+        "time": 21.375416,
+        "chapter": "grip",
+        "opacities": [
+          0.16611071428570823,
+          0.16611071428570823
+        ]
+      },
+      {
+        "time": 33.993235,
+        "chapter": "resolve",
+        "opacities": [
+          0.913997767857147,
+          0.913997767857147
+        ]
+      },
+      {
+        "time": 34.061319,
+        "chapter": "resolve",
+        "opacities": [
+          0.7012352678571504,
+          0.7012352678571504
+        ]
+      },
+      {
+        "time": 34.134385,
+        "chapter": "resolve",
+        "opacities": [
+          0.472904017857137,
+          0.472904017857137
+        ]
+      },
+      {
+        "time": 34.193632,
+        "chapter": "resolve",
+        "opacities": [
+          0.2877571428571396,
+          0.2877571428571396
+        ]
+      },
+      {
+        "time": 34.266947,
+        "chapter": "resolve",
+        "opacities": [
+          0.05864776785713677,
+          0.05864776785713677
+        ]
+      }
+    ],
+    "pullbackRanges": [
+      {
+        "chapter": "wrist",
+        "minimum": 0.15510413914371815,
+        "maximum": 0.16441038749234124
+      },
+      {
+        "chapter": "grip",
+        "minimum": 0.10750055316164878,
+        "maximum": 0.11395058635134771
+      }
+    ],
+    "sourceRestUnchanged": true,
+    "maximumAudioVisualDeltaSeconds": 0.038716999999998336,
+    "controls": {
+      "nativeClock": true,
+      "muted": true,
+      "paused": true,
+      "timeFrozen": true,
+      "cameraFrozen": true,
+      "captionsFrozen": true
+    },
+    "narrow": {
+      "width": 390,
+      "scrollWidth": 390,
+      "viewportWidth": 364,
+      "viewportHeight": 410,
+      "scenes": [
+        {
+          "time": 2.8,
+          "chapter": "whole",
+          "annotations": [
+            {
+              "id": "urdf:base_link",
+              "name": "Fixed base",
+              "opacity": 1,
+              "side": "right",
+              "rect": {
+                "x": 166.12099261768438,
+                "y": 268.6354684212051,
+                "width": 61.30208206176758,
+                "height": 16.900000000000002
+              },
+              "anchor": {
+                "x": 151.12099261768438,
+                "y": 277.08546842120506
+              },
+              "end": {
+                "x": 161.12099261768438,
+                "y": 277.08546842120506
+              },
+              "text": {
+                "x": 166.12099261768438,
+                "y": 277.08546842120506,
+                "anchor": "start"
+              },
+              "leaderLength": 10,
+              "anchorWorld": [
+                0.04309539124369621,
+                3.835567678981425e-17,
+                -0.05513030290603638
+              ]
+            },
+            {
+              "id": "urdf:link5_1",
+              "name": "Parallel gripper",
+              "opacity": 1,
+              "side": "top",
+              "rect": {
+                "x": 203.36340029710735,
+                "y": 88.68277612185015,
+                "width": 93.6875,
+                "height": 16.900000000000002
+              },
+              "anchor": {
+                "x": 250.20715029710735,
+                "y": 120.58277612185016
+              },
+              "end": {
+                "x": 250.20715029710735,
+                "y": 110.58277612185016
+              },
+              "text": {
+                "x": 250.20715029710735,
+                "y": 97.13277612185016,
+                "anchor": "middle"
+              },
+              "leaderLength": 10,
+              "anchorWorld": [
+                0.26395282077325255,
+                0.3307079463926939,
+                -0.022499350326866903
+              ]
+            }
+          ]
+        },
+        {
+          "time": 8.4,
+          "chapter": "structure",
+          "annotations": [
+            {
+              "id": "urdf:link3_1",
+              "name": "Elbow / forearm",
+              "opacity": 1,
+              "side": "right",
+              "rect": {
+                "x": 202.79320900359616,
+                "y": 115.36136842644773,
+                "width": 97.69791412353516,
+                "height": 16.900000000000002
+              },
+              "anchor": {
+                "x": 187.79320900359616,
+                "y": 123.81136842644773
+              },
+              "end": {
+                "x": 197.79320900359616,
+                "y": 123.81136842644773
+              },
+              "text": {
+                "x": 202.79320900359616,
+                "y": 123.81136842644773,
+                "anchor": "start"
+              },
+              "leaderLength": 10,
+              "anchorWorld": [
+                0.1983661145311679,
+                0.4153176436164849,
+                -0.07449977391068488
+              ]
+            }
+          ]
+        },
+        {
+          "time": 16.8,
+          "chapter": "wrist",
+          "annotations": [
+            {
+              "id": "urdf:link4_1",
+              "name": "Wrist link",
+              "opacity": 1,
+              "side": "top",
+              "rect": {
+                "x": 62.12683526018175,
+                "y": 122.24408345919315,
+                "width": 57.90625,
+                "height": 16.900000000000002
+              },
+              "anchor": {
+                "x": 91.07996026018175,
+                "y": 154.14408345919315
+              },
+              "end": {
+                "x": 91.07996026018175,
+                "y": 144.14408345919315
+              },
+              "text": {
+                "x": 91.07996026018175,
+                "y": 130.69408345919317,
+                "anchor": "middle"
+              },
+              "leaderLength": 10,
+              "anchorWorld": [
+                0.30318933111445723,
+                0.3565771786967334,
+                0.03800036070976861
+              ]
+            },
+            {
+              "id": "urdf:link5_1",
+              "name": "Gripper carriage",
+              "opacity": 1,
+              "side": "left",
+              "rect": {
+                "x": 51.587485334443954,
+                "y": 206.84307442655793,
+                "width": 99.82291412353516,
+                "height": 16.900000000000002
+              },
+              "anchor": {
+                "x": 166.4103994579791,
+                "y": 215.29307442655792
+              },
+              "end": {
+                "x": 156.4103994579791,
+                "y": 215.29307442655792
+              },
+              "text": {
+                "x": 151.4103994579791,
+                "y": 215.29307442655792,
+                "anchor": "end"
+              },
+              "leaderLength": 10,
+              "anchorWorld": [
+                0.4502877807310011,
+                0.2982547612963108,
+                0.022000648585348344
+              ]
+            }
+          ]
+        },
+        {
+          "time": 20.95,
+          "chapter": "grip",
+          "annotations": [
+            {
+              "id": "urdf:clamp1_1",
+              "name": "Sliding jaw",
+              "opacity": 1,
+              "side": "top",
+              "rect": {
+                "x": 232.27946146709633,
+                "y": 136.38438445289006,
+                "width": 66.38541412353516,
+                "height": 16.900000000000002
+              },
+              "anchor": {
+                "x": 265.4721685288639,
+                "y": 168.28438445289007
+              },
+              "end": {
+                "x": 265.4721685288639,
+                "y": 158.28438445289007
+              },
+              "text": {
+                "x": 265.4721685288639,
+                "y": 144.83438445289005,
+                "anchor": "middle"
+              },
+              "leaderLength": 10,
+              "anchorWorld": [
+                0.5738639826818713,
+                0.3191218566978953,
+                -0.1052832497977591
+              ]
+            },
+            {
+              "id": "urdf:clamp2_1",
+              "name": "Opposed jaw",
+              "opacity": 1,
+              "side": "right",
+              "rect": {
+                "x": 247.20818463360195,
+                "y": 240.58807037486739,
+                "width": 75.78125,
+                "height": 16.900000000000002
+              },
+              "anchor": {
+                "x": 232.20818463360195,
+                "y": 249.03807037486737
+              },
+              "end": {
+                "x": 242.20818463360195,
+                "y": 249.03807037486737
+              },
+              "text": {
+                "x": 247.20818463360195,
+                "y": 249.03807037486737,
+                "anchor": "start"
+              },
+              "leaderLength": 10,
+              "anchorWorld": [
+                0.6197877777944878,
+                0.3066750026769963,
+                0.09095944826352084
+              ]
+            }
+          ]
+        },
+        {
+          "time": 26.4,
+          "chapter": "return",
+          "annotations": [
+            {
+              "id": "urdf:base_link",
+              "name": "Fixed reference",
+              "opacity": 1,
+              "side": "right",
+              "rect": {
+                "x": 152.27321879029157,
+                "y": 248.04796163809317,
+                "width": 89.28125,
+                "height": 16.900000000000002
+              },
+              "anchor": {
+                "x": 137.27321879029157,
+                "y": 256.49796163809316
+              },
+              "end": {
+                "x": 147.27321879029157,
+                "y": 256.49796163809316
+              },
+              "text": {
+                "x": 152.27321879029157,
+                "y": 256.49796163809316,
+                "anchor": "start"
+              },
+              "leaderLength": 10,
+              "anchorWorld": [
+                0.04309539124369621,
+                3.835567678981425e-17,
+                -0.05513030290603638
+              ]
+            }
+          ]
+        },
+        {
+          "time": 33.1,
+          "chapter": "resolve",
+          "annotations": [
+            {
+              "id": "urdf:base_link",
+              "name": "Original assembly",
+              "opacity": 1,
+              "side": "right",
+              "rect": {
+                "x": 166.12099261768438,
+                "y": 268.6354684212051,
+                "width": 107.03125,
+                "height": 16.900000000000002
+              },
+              "anchor": {
+                "x": 151.12099261768438,
+                "y": 277.08546842120506
+              },
+              "end": {
+                "x": 161.12099261768438,
+                "y": 277.08546842120506
+              },
+              "text": {
+                "x": 166.12099261768438,
+                "y": 277.08546842120506,
+                "anchor": "start"
+              },
+              "leaderLength": 10,
+              "anchorWorld": [
+                0.04309539124369621,
+                3.835567678981425e-17,
+                -0.05513030290603638
+              ]
+            },
+            {
+              "id": "urdf:link5_1",
+              "name": "Ready to repeat",
+              "opacity": 1,
+              "side": "top",
+              "rect": {
+                "x": 203.72798235887493,
+                "y": 88.68277612185015,
+                "width": 92.95833587646484,
+                "height": 16.900000000000002
+              },
+              "anchor": {
+                "x": 250.20715029710735,
+                "y": 120.58277612185016
+              },
+              "end": {
+                "x": 250.20715029710735,
+                "y": 110.58277612185016
+              },
+              "text": {
+                "x": 250.20715029710735,
+                "y": 97.13277612185016,
+                "anchor": "middle"
+              },
+              "leaderLength": 10,
+              "anchorWorld": [
+                0.26395282077325255,
+                0.3307079463926939,
+                -0.022499350326866903
+              ]
+            }
+          ]
+        }
+      ],
+      "overrideReset": true,
+      "bothDetailNamesVisible": true
+    },
+    "reducedMotion": {
+      "requested": true,
+      "startsPaused": true,
+      "initialTime": 0,
+      "noPullback": true,
+      "names": [
+        "Wrist link",
+        "Gripper carriage"
+      ],
+      "overrideCleared": true
+    },
+    "consoleErrorsOrWarnings": [],
+    "screenshots": [
+      "output/retained-scenes-desktop.png",
+      "output/retained-scenes-narrow.png"
+    ],
+    "rawLoopEvidence": "output/retained-scenes-music-loop.json",
+    "rawSeekEvidence": "output/retained-scenes-seeks.json",
+    "timingScope": "Observed local render/media samples; not a device-independent latency guarantee."
+  },
+  "limitations": [
+    "Eight merged URDF visual links, not native per-screw CAD identity.",
+    "Display-only exploded arrangement; no collision-checked teardown, physics or new dimensional certification.",
+    "Public plans are bound authoring records; validated outcomes and current artifact hashes are recorded here.",
+    "No video export or external social publishing performed."
+  ],
+  "previousBrowserVerification": {
+    "note": "Historical evidence from the earlier margin-label edition; current annotation UI evidence is in browser.",
+    "completeNativeMusicLoop": true,
+    "samples": 846,
+    "maximumObservedAudioVisualDeltaSeconds": 0.033200000000000784,
+    "timingScope": "Local observed render/media samples, not a device-independent latency guarantee.",
+    "chapterSequence": [
+      "whole",
+      "structure",
+      "wrist",
+      "grip",
+      "return",
+      "resolve",
+      "whole"
+    ],
+    "visibleBodyCounts": [
+      8,
+      8,
+      4,
+      3,
+      8,
+      8,
+      8
+    ],
+    "sourceRestUnchanged": true,
+    "restoredAtLoopTime": 0,
+    "controls": [
+      "Music activation by a real user gesture.",
+      "Mute retains native media clock.",
+      "First pointer drag pauses transport and changes camera.",
+      "Backward seeks, restart, restore, paused view and resumed playback."
+    ],
+    "reducedMotion": {
+      "requested": "reduce",
+      "startsPaused": true,
+      "initialTime": 0,
+      "overrideCleared": true
+    },
+    "narrow": {
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "viewportWidth": 364,
+      "viewportHeight": 410,
+      "overrideReset": true
+    },
+    "consoleErrorsOrWarnings": [],
+    "screenshots": [
+      "output/robot-exploded.png",
+      "output/robot-assembled.png",
+      "output/wrist.png",
+      "output/narrow.png"
+    ],
+    "rawLoopEvidence": "output/browser-music-loop.json"
+  },
+  "priorAnnotationEdition": {
+    "note": "Historical single-name edition before retained-scene labels and quiet score.",
+    "tests": {
+      "passed": 34,
+      "failed": 0,
+      "command": "node --test EXAMPLE_ROBOT/tests/*.test.mjs",
+      "observed": "Actual Node command completed successfully during this update."
+    },
+    "audio": {
+      "durationSeconds": 34.285714285714285,
+      "bpm": 112,
+      "beats": 64,
+      "frames": 1512000,
+      "sampleRate": 44100,
+      "peakDbfs": -3.0000000000000018,
+      "clippedSamples": 0,
+      "originalSynthesis": true,
+      "narration": false,
+      "subjectiveListeningReview": "Not claimed; browser playback and PCM/loop continuity were checked."
+    },
+    "browser": {
+      "completeNativeMusicLoop": true,
+      "samples": 530,
+      "chapterSequence": [
+        "whole",
+        "structure",
+        "wrist",
+        "grip",
+        "return",
+        "resolve",
+        "whole"
+      ],
+      "sourceRestUnchanged": true,
+      "maximumObservedAudioVisualDeltaSeconds": 0.011381000000000085,
+      "timingScope": "Local observed render/media samples, not a device-independent latency guarantee.",
+      "annotations": {
+        "seenNames": [
+          "Fixed base",
+          "Parallel gripper",
+          "Shoulder link",
+          "Elbow / forearm",
+          "Wrist link",
+          "Gripper carriage",
+          "Sliding jaw",
+          "Opposed jaw",
+          "Return to the chain",
+          "Source placement",
+          "Original assembly",
+          "Ready to repeat"
+        ],
+        "maximumVisibleNames": 1,
+        "maximumLeaderLengthCssPixels": 15,
+        "maximumTextMotionWithinCueCssPixels": 0,
+        "allLabelsInsideViewport": true
+      },
+      "narrow": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "viewportWidth": 364,
+        "viewportHeight": 410,
+        "overrideReset": true,
+        "note": "11 of 12 sampled cues fit; the crowded source-placement cue is intentionally omitted."
+      },
+      "controls": [
+        "Real click enables the native music clock.",
+        "Pause and non-monotonic seeks preserve the same deterministic current cue; expired cues remain hidden."
+      ],
+      "consoleErrorsOrWarnings": [],
+      "screenshots": [
+        "output/annotations-desktop.png",
+        "output/annotations-narrow.png"
+      ],
+      "rawLoopEvidence": "output/annotations-music-loop.json"
+    }
+  },
+  "skill": {
+    "root": ".agents/skills/mechanism-studio/",
+    "defaults": [
+      "Names beside the actual projected silhouette with short leaders.",
+      "Reveal one new name at a time; retain names within the scene, fade the group at the boundary.",
+      "A small authored pullback may follow reading; no per-frame geometry fitting.",
+      "Calm original music and sparse editorial action effects on the same timeline."
+    ],
+    "validation": {
+      "localLinksChecked": 179,
+      "brokenLocalLinks": 0,
+      "frontmatter": "Standard-library/manual checks passed; original name and description retained.",
+      "officialQuickValidate": "Not completed: existing Python runtimes lack PyYAML. No dependencies or global settings changed."
+    },
+    "migratedRuntime": "Robot example only. Existing showcase pages are explicitly documented as not migrated."
+  }
+}

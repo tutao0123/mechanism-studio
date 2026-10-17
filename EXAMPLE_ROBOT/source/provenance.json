@@ -1,0 +1,215 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "SO-ARM 102 follower: source-authored robot description and visual meshes",
+  "author": "Robonine",
+  "copyright": "Copyright (c) 2026 Robonine",
+  "sourceType": "upstream-open-robot-description",
+  "repository": "https://github.com/roboninecom/SO-ARM-102",
+  "revision": "e871f738c97f43de230cb04d340797da6a68c4b9",
+  "retrievedDate": "2026-10-17",
+  "license": "CC-BY-4.0",
+  "licenseFile": "DOCS-LICENSE.txt",
+  "licensingEvidence": [
+    "LICENSING.md",
+    "REUSE.toml",
+    "NOTICE"
+  ],
+  "sourceUrl": "https://github.com/roboninecom/SO-ARM-102/tree/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf",
+  "localFile": "simulation/urdf/so_arm_102.urdf",
+  "sha256": "d52437d3f901077d084492d81b4037952273a76d0a229bf7cf7de7ac5836da4f",
+  "attribution": "Robonine, SO-ARM 102, https://github.com/roboninecom/SO-ARM-102, CC BY 4.0",
+  "changes": "Upstream source files retained byte-for-byte. Mechanism Studio derives a white-background line rendering, authored exploded-link offsets, camera choreography, English annotations and a separately code-synthesized music score. No upstream video or soundtrack is reused.",
+  "obligations": [
+    "Retain credit, source URL, CC BY 4.0 link and change notice alongside redistributed visual derivatives.",
+    "Do not imply Robonine endorsement."
+  ],
+  "geometrySubset": {
+    "kind": "URDF visual STL meshes",
+    "links": 8,
+    "joints": 7,
+    "meshUnitBeforeUrdfScale": "millimetres",
+    "urdfLengthUnit": "metres",
+    "meshScale": [
+      0.001,
+      0.001,
+      0.001
+    ],
+    "sourceFrame": "right-handed, Z up",
+    "sourcePose": "URDF q=0 is the current source CAD pose, as declared in export_metadata.json.",
+    "limitations": [
+      "Per-link visual STL meshes merge multiple physical bodies; this source package does not retain per-screw identity or a native STEP assembly tree.",
+      "The exploded layout is editorial link separation, not collision-checked service disassembly.",
+      "Source collision and inertial estimates are preserved as provenance, not independently validated dynamics."
+    ]
+  },
+  "files": [
+    {
+      "localFile": "DOCS-LICENSE.txt",
+      "upstreamPath": "DOCS-LICENSE.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "gitBlobSha1": "da6ab6cc8f333d7e89a99812866df8f24374d47c",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/DOCS-LICENSE.txt"
+    },
+    {
+      "localFile": "HARDWARE-LICENSE.txt",
+      "upstreamPath": "HARDWARE-LICENSE.txt",
+      "bytes": 8852,
+      "sha256": "6e471d647db50527d0c75ee5f1a55a74012ab177c73282bef0bdc7f6562b7ded",
+      "gitBlobSha1": "4fe041e077a8179e50d8d068fb5803cf1f80abba",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/HARDWARE-LICENSE.txt"
+    },
+    {
+      "localFile": "LICENSING.md",
+      "upstreamPath": "LICENSING.md",
+      "bytes": 3002,
+      "sha256": "444e297fd3a4a378bca784dce94bdce9a778d2eed4b4a9643817f193b3ce4a1b",
+      "gitBlobSha1": "1e4ee8fa83b3529433ba402049896ffebec5b146",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/LICENSING.md"
+    },
+    {
+      "localFile": "NOTICE",
+      "upstreamPath": "NOTICE",
+      "bytes": 1472,
+      "sha256": "4a561f6a36c0207141f6ddb34523f20419063746c295a288d8e830c9113b70b5",
+      "gitBlobSha1": "093d80d0a319e15f10fbbece7e906ae51eb75a2c",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/NOTICE"
+    },
+    {
+      "localFile": "README.md",
+      "upstreamPath": "README.md",
+      "bytes": 12348,
+      "sha256": "d0d3dbe40d9af6ebfec2f2f57631fddc06611ca7e4151f0786e650f86cf72d1e",
+      "gitBlobSha1": "4e56a4e17175fd2716d730cf91c63ec25445b077",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/README.md"
+    },
+    {
+      "localFile": "REUSE.toml",
+      "upstreamPath": "REUSE.toml",
+      "bytes": 1149,
+      "sha256": "19655e0e3a9c9a251abfe240b043ffa89dfe7cc3dbceefac370227cde8fcb736",
+      "gitBlobSha1": "bf79dffcce41ec0c79f277beffd92ab0579b1b22",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/REUSE.toml"
+    },
+    {
+      "localFile": "simulation/urdf/export_metadata.json",
+      "upstreamPath": "simulation/urdf/export_metadata.json",
+      "bytes": 58971,
+      "sha256": "23fa85e38094b55b471a61a2adc4512330c9ac7f980296638712b1fdf309af79",
+      "gitBlobSha1": "b7a088d9fe287ff3a76f989797d3375898bb8a27",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/export_metadata.json"
+    },
+    {
+      "localFile": "simulation/urdf/export_settings.json",
+      "upstreamPath": "simulation/urdf/export_settings.json",
+      "bytes": 4702,
+      "sha256": "c9262d052e22b373e9c4a4915f20cb0f55587f04eef13ae76820165b969251e3",
+      "gitBlobSha1": "5b9de5f5feb7f49fa35c44147abf873c7ebbe8ea",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/export_settings.json"
+    },
+    {
+      "localFile": "simulation/urdf/export_verification.json",
+      "upstreamPath": "simulation/urdf/export_verification.json",
+      "bytes": 6815,
+      "sha256": "f98b1a54e65303ba3368365a279076accf8a5573576f109d7b53ffc9df5459e1",
+      "gitBlobSha1": "48e1e970bd9f5ed02c29e9a29358b5f091a6281a",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/export_verification.json"
+    },
+    {
+      "localFile": "simulation/urdf/mass_properties.json",
+      "upstreamPath": "simulation/urdf/mass_properties.json",
+      "bytes": 89788,
+      "sha256": "de281666a5327b5988c793dbdcb8a5c99cbfb152c4c9391d1615a856edb3fbb5",
+      "gitBlobSha1": "09c563e84adcd61b993e0ad7a2d4790b43bd809b",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/mass_properties.json"
+    },
+    {
+      "localFile": "simulation/urdf/materials.xacro",
+      "upstreamPath": "simulation/urdf/materials.xacro",
+      "bytes": 176,
+      "sha256": "72d6f8100fcf13ee7f32f59cb87452948c51e20d49023c426da92df000184a1e",
+      "gitBlobSha1": "5c0e13a93dd9ac19b0ece5f0172edd7de4f95901",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/materials.xacro"
+    },
+    {
+      "localFile": "simulation/urdf/meshes/base_link.stl",
+      "upstreamPath": "simulation/urdf/meshes/base_link.stl",
+      "bytes": 447884,
+      "sha256": "14283b862bae5b71b39092e08422c49a44afa7d8bbf3b4f19988e9377de5788d",
+      "gitBlobSha1": "25377ae1618be60126c48c3bda1294c5601dcf38",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/meshes/base_link.stl"
+    },
+    {
+      "localFile": "simulation/urdf/meshes/clamp1_1.stl",
+      "upstreamPath": "simulation/urdf/meshes/clamp1_1.stl",
+      "bytes": 67684,
+      "sha256": "a0276124d4a92276256883e4b4e09e820107ea2ad1ec86369ef979194073ada5",
+      "gitBlobSha1": "192cfd5b92638fbb1bf2b1f5c2bf88fdd1b62c9a",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/meshes/clamp1_1.stl"
+    },
+    {
+      "localFile": "simulation/urdf/meshes/clamp2_1.stl",
+      "upstreamPath": "simulation/urdf/meshes/clamp2_1.stl",
+      "bytes": 67684,
+      "sha256": "fb0b0db6def0e54da5a4a7dd06d089050db311c130f24013a9a98839497e3dc6",
+      "gitBlobSha1": "fbb2b5bb2932502f955432a6cd0c7f81232a0042",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/meshes/clamp2_1.stl"
+    },
+    {
+      "localFile": "simulation/urdf/meshes/link1_1.stl",
+      "upstreamPath": "simulation/urdf/meshes/link1_1.stl",
+      "bytes": 528984,
+      "sha256": "774d342ab81dff54bd81592152ca9fc17fff0a5204e75e8f209c06ece706b6e1",
+      "gitBlobSha1": "be2e1bea4dfa848a7bb386b220bd2d962e41da29",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/meshes/link1_1.stl"
+    },
+    {
+      "localFile": "simulation/urdf/meshes/link2_1.stl",
+      "upstreamPath": "simulation/urdf/meshes/link2_1.stl",
+      "bytes": 880684,
+      "sha256": "b1452f14fd3858cf967d214e95dab1d2f0635fea5594d5872541e7cc0d40b2c0",
+      "gitBlobSha1": "27012f3167c33230b9f1559962ab8c94a6c13d08",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/meshes/link2_1.stl"
+    },
+    {
+      "localFile": "simulation/urdf/meshes/link3_1.stl",
+      "upstreamPath": "simulation/urdf/meshes/link3_1.stl",
+      "bytes": 529684,
+      "sha256": "dcda5964332b6418704bb26883d9539bc08ea7942fd82e5ab9e0af53e78f8880",
+      "gitBlobSha1": "db51f3d5b775b707fc3138b0c73356ae5e72cbed",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/meshes/link3_1.stl"
+    },
+    {
+      "localFile": "simulation/urdf/meshes/link4_1.stl",
+      "upstreamPath": "simulation/urdf/meshes/link4_1.stl",
+      "bytes": 265284,
+      "sha256": "727bf2eb7859c80e0cf8f2ef9e2ed6dfec35e1fc6f1e4b1dd4ae0aad70d202ce",
+      "gitBlobSha1": "e83b82a56e367a538da157a2150c40ee55815079",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/meshes/link4_1.stl"
+    },
+    {
+      "localFile": "simulation/urdf/meshes/link5_1.stl",
+      "upstreamPath": "simulation/urdf/meshes/link5_1.stl",
+      "bytes": 315984,
+      "sha256": "3041844df75a779802f55d50bcbfcb42edaa4fdf7702ee612c06ecb958eebb9d",
+      "gitBlobSha1": "e53dd1856bea2c4f2ce73098457c378bacb5dd11",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/meshes/link5_1.stl"
+    },
+    {
+      "localFile": "simulation/urdf/so_arm_102.urdf",
+      "upstreamPath": "simulation/urdf/so_arm_102.urdf",
+      "bytes": 217162,
+      "sha256": "d52437d3f901077d084492d81b4037952273a76d0a229bf7cf7de7ac5836da4f",
+      "gitBlobSha1": "90fe4cb032718a38daaef4f583f72673e914b731",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/so_arm_102.urdf"
+    },
+    {
+      "localFile": "simulation/urdf/so_arm_102.xacro",
+      "upstreamPath": "simulation/urdf/so_arm_102.xacro",
+      "bytes": 217167,
+      "sha256": "b505f2f13b8d56b8c16d35226bc27df495599843b989827e7f3ceae365faece4",
+      "gitBlobSha1": "1fa15a4bcad328cb2387c5267c8e8250320da4ff",
+      "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/so_arm_102.xacro"
+    }
+  ]
+}

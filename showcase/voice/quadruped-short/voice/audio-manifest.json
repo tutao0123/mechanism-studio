@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "provider": "doubao",
+  "complete": true,
+  "generatedAt": "2026-10-15T14:43:51.718Z",
+  "resourceId": "seed-tts-2.0",
+  "speaker": "en_female_jane_uranus_bigtts",
+  "apiMode": "speech",
+  "format": "mp3",
+  "sampleRate": 24000,
+  "lessonHashPolicy": "narration-v1",
+  "lessonSha256": "c7a4638c1799ee8f616b144efba4c10d02ae9a0da7ad7bf5ed793c72cae1e058",
+  "steps": {
+    "overview": {
+      "src": "assets/audio/overview-4832df1dccc2e2901b8165e0cdde57fce38cc253e2f0cd15aaebf8e45b85a30f.mp3",
+      "bytes": 56109,
+      "sha256": "4832df1dccc2e2901b8165e0cdde57fce38cc253e2f0cd15aaebf8e45b85a30f",
+      "usage": {
+        "text_words": 93
+      }
+    },
+    "joints": {
+      "src": "assets/audio/joints-9abbff20965832c990854f7efcb0a4027666ea0b97569f877759ae422273d4d4.mp3",
+      "bytes": 47469,
+      "sha256": "9abbff20965832c990854f7efcb0a4027666ea0b97569f877759ae422273d4d4",
+      "usage": {
+        "text_words": 75
+      }
+    },
+    "trajectory": {
+      "src": "assets/audio/trajectory-5d004e75a8cb916a5c6754bfc690c81fc509b5777803d25b64b14bd0b8f38cda.mp3",
+      "bytes": 52653,
+      "sha256": "5d004e75a8cb916a5c6754bfc690c81fc509b5777803d25b64b14bd0b8f38cda",
+      "usage": {
+        "text_words": 84
+      }
+    },
+    "gait": {
+      "src": "assets/audio/gait-ae61ab613023eefc8b5e2c52163c3f35d0d0b499f0ebb33cef5afbb28d367953.mp3",
+      "bytes": 37485,
+      "sha256": "ae61ab613023eefc8b5e2c52163c3f35d0d0b499f0ebb33cef5afbb28d367953",
+      "usage": {
+        "text_words": 71
+      }
+    },
+    "stance": {
+      "src": "assets/audio/stance-f33bef069275e0daa93c38950440d8036a5a118bee7d1aa8aeeaaef7b25298c2.mp3",
+      "bytes": 37485,
+      "sha256": "f33bef069275e0daa93c38950440d8036a5a118bee7d1aa8aeeaaef7b25298c2",
+      "usage": {
+        "text_words": 70
+      }
+    },
+    "assembly": {
+      "src": "assets/audio/assembly-855a9150527f89360f025d8560665ce602a7e57752cc08647d5f844190019492.mp3",
+      "bytes": 40941,
+      "sha256": "855a9150527f89360f025d8560665ce602a7e57752cc08647d5f844190019492",
+      "usage": {
+        "text_words": 82
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "mechanism-studio",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Project-local mechanical authoring skill with source-aware CAD inspection, exploded views and synchronized visual stories",
+  "license": "MIT",
+  "author": "TuTao",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tutao0123/mechanism-studio.git"
+  },
+  "homepage": "https://github.com/tutao0123/mechanism-studio#readme",
+  "bugs": {
+    "url": "https://github.com/tutao0123/mechanism-studio/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "preview": "node serve.mjs",
+    "test": "node scripts/check.mjs",
+    "check": "node scripts/check.mjs",
+    "export:spec": "node prototype-3d/export-spec.mjs",
+    "release:check": "node scripts/release-check.mjs",
+    "import:step": "node tools/cad/import-kfl08.mjs",
+    "import:shaft-bearing": "node tools/cad/import-shaft-bearing.mjs",
+    "import:cad": "node tools/cad/import-assembly.mjs",
+    "audit:cad": "node tools/cad/check-assembly.mjs",
+    "verify:audio": "node scripts/verify-audio.mjs"
+  },
+  "engines": {
+    "node": ">=20.10"
+  },
+  "dependencies": {
+    "occt-import-js": "0.0.23",
+    "three": "0.186.1"
+  }
+}

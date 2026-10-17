@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "open-robot-so-arm102",
+  "exporter": "mechanism-studio-urdf-display-2",
+  "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2",
+  "sourceSHA256": "d52437d3f901077d084492d81b4037952273a76d0a229bf7cf7de7ac5836da4f",
+  "glbSHA256": "eef701b8ee65acd95b17069a3420a6d5a2be023da8d51018155804a732f0c91a",
+  "glbBytes": 5226296,
+  "originalFilesVerified": 21,
+  "partCount": 8,
+  "meshCount": 8,
+  "sourceJointCount": 7,
+  "displayOnlyBodyNodeCount": 8,
+  "gltfNodeCount": 16,
+  "displayBodyOwnership": "Eight original source-link Groups retain their direct source parents and rest matrices; each owns one display-only, identity-transform solid child. Body visibility is independent of downstream source links. These children are not new URDF links.",
+  "triangleCount": 62064,
+  "assetBoundsMeters": {
+    "min": [
+      -0.06849999725818634,
+      -4.163336342344337e-17,
+      -0.07999999821186066
+    ],
+    "max": [
+      0.3597877838208685,
+      0.3307079463926939,
+      0.07999999821186066
+    ]
+  },
+  "geometrySimplified": false,
+  "sourcePoseModified": false,
+  "mcpUsed": false,
+  "motionOwner": "static; authored display offsets belong to Showcase wrapper",
+  "limitations": [
+    "Per-link visual STL meshes merge multiple physical bodies; this source package does not retain per-screw identity or a native STEP assembly tree.",
+    "The exploded layout is editorial link separation, not collision-checked service disassembly.",
+    "Source collision and inertial estimates are preserved as provenance, not independently validated dynamics."
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "taskId": "so-arm102-robot-showcase",
+  "route": "Showcase",
+  "goal": "Reveal a real open-source robot link assembly and restore it, synchronized to original music.",
+  "deliverable": "English looping interactive webpage, 30–40 seconds, white fill and fine dark feature lines.",
+  "requestedModules": [
+    "assembly-explode",
+    "camera-direction",
+    "materials-lighting"
+  ],
+  "inputs": [
+    {
+      "inputId": "request",
+      "kind": "text",
+      "role": "request",
+      "locator": "Current user brief"
+    },
+    {
+      "inputId": "robot-source",
+      "kind": "cad-description",
+      "role": "engineering-source",
+      "file": "source/simulation/urdf/so_arm_102.urdf",
+      "sha256": "d52437d3f901077d084492d81b4037952273a76d0a229bf7cf7de7ac5836da4f",
+      "revision": "e871f738c97f43de230cb04d340797da6a68c4b9",
+      "license": "CC-BY-4.0",
+      "url": "https://github.com/roboninecom/SO-ARM-102/tree/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf"
+    }
+  ],
+  "modelBasis": "mixed",
+  "basisDetails": "Source-authored URDF visuals and joint-zero placement; editorial link offsets, cameras, captions, appearance and music authored for this example.",
+  "presentation": {
+    "language": "en",
+    "durationSeconds": 34.285714285714285,
+    "soundtrack": "original-code-music",
+    "narration": false,
+    "style": "white-background-fine-dark-feature-lines",
+    "tempo": 112
+  },
+  "facts": [
+    {
+      "key": "linkCount",
+      "value": 8,
+      "status": "observed",
+      "evidence": "source URDF + scene-index"
+    },
+    {
+      "key": "sourcePose",
+      "value": "joint zero matches upstream CAD pose",
+      "status": "provided",
+      "evidence": "source/simulation/urdf/export_metadata.json"
+    },
+    {
+      "key": "displayOffsets",
+      "value": "editorial world-metre link separation",
+      "status": "assumed",
+      "evidence": "story.mjs MAXIMUM_OFFSETS"
+    }
+  ],
+  "unresolved": [
+    "No individual screws or bodies within each merged link mesh.",
+    "No collision-checked disassembly, physical dynamics, or new engineering accuracy claim."
+  ]
+}

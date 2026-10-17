@@ -1,0 +1,3 @@
+# Source/import manifests verify exact file bytes. Preserve line endings across
+# clones on Windows, macOS and Linux instead of rewriting retained source bytes.
+* -text

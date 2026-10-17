@@ -1,0 +1,52 @@
+node_modules/
+.tools/
+.cache/
+.codex/
+.test-output/
+output/
+dist/
+*.log
+*.blend[0-9]*
+# Blender scene files embed local absolute paths. The editable Python builders,
+# input specs and runtime GLB assets remain public; local scenes stay on disk.
+*.blend
+# Provider-generated narration is optional and excluded from the MIT release.
+# Keep lesson text, manifests, measured timings and generation scripts.
+*.mp3
+*.tmp
+.env
+.env.*
+!.env.example
+*.private.json
+*.local.json
+prototype-3d/validation/references/
+prototype-3d/validation/reference-creo/
+prototype-3d/validation/*-check.json
+prototype-3d/blender/build-log.txt
+prototype-3d/mcp-preview/
+# Local browser captures can contain account/profile information. Curated public
+# illustrations belong in docs/media after manual review, never in this folder.
+shots/
+**/capture-v*/
+**/*.har
+**/playwright-report/
+**/test-results/
+# Do not upload rendered/social delivery videos; keep deterministic sources.
+*.mp4
+*.webm
+*.mov
+# Per-machine editor state, credential material and Python environments.
+.vscode/
+.idea/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
+Thumbs.db
+.DS_Store

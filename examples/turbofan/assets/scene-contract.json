@@ -1,0 +1,1019 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "teaching-two-spool-turbofan",
+  "assetRevision": "1",
+  "units": {
+    "body": "mm",
+    "asset": "m"
+  },
+  "coordinateMap": "0.001*[x,z,-y]",
+  "source": "Original parameterized teaching geometry",
+  "limitations": [
+    "Illustrative dimensions; no actual engine model",
+    "Prescribed independent angular motion, no forces or thermodynamics",
+    "Source-defined longitudinal cutaway; not engineering sectioning",
+    "Explosion vectors are display offsets, not maintenance or collision-free paths"
+  ],
+  "parts": [
+    {
+      "part_id": "fan",
+      "parent_id": "turbofan",
+      "label_zh": "风扇",
+      "role_zh": "风扇；与低压轴保持同一规定角度。",
+      "motionOwner": "model",
+      "spool": "low",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        -145,
+        0,
+        0
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "low-shaft",
+      "parent_id": "turbofan",
+      "label_zh": "低压实心轴",
+      "role_zh": "低压实心轴",
+      "motionOwner": "model",
+      "spool": "low",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        -40,
+        -95,
+        -30
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "high-shaft",
+      "parent_id": "turbofan",
+      "label_zh": "高压空心轴（预制剖面）",
+      "role_zh": "高压空心轴（预制剖面）",
+      "motionOwner": "model",
+      "spool": "high",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        25,
+        100,
+        20
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "lp-compressor-1",
+      "parent_id": "turbofan",
+      "label_zh": "低压压气机第1级",
+      "role_zh": "低压压气机第1级；与低压轴保持同一规定角度。",
+      "motionOwner": "model",
+      "spool": "low",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        -88,
+        0,
+        90
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "lp-stator-1",
+      "parent_id": "turbofan",
+      "label_zh": "低压压气机静子第1列",
+      "role_zh": "低压压气机静子第1列",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        0,
+        163
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "lp-compressor-2",
+      "parent_id": "turbofan",
+      "label_zh": "低压压气机第2级",
+      "role_zh": "低压压气机第2级；与低压轴保持同一规定角度。",
+      "motionOwner": "model",
+      "spool": "low",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        -96,
+        0,
+        90
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "lp-stator-2",
+      "parent_id": "turbofan",
+      "label_zh": "低压压气机静子第2列",
+      "role_zh": "低压压气机静子第2列",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        0,
+        171
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "hp-compressor-1",
+      "parent_id": "turbofan",
+      "label_zh": "高压压气机第1级",
+      "role_zh": "高压压气机第1级；与高压轴保持同一规定角度。",
+      "motionOwner": "model",
+      "spool": "high",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        10,
+        0,
+        100
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "hp-stator-1",
+      "parent_id": "turbofan",
+      "label_zh": "高压压气机静子第1列",
+      "role_zh": "高压压气机静子第1列",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        15,
+        0,
+        183
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "hp-compressor-2",
+      "parent_id": "turbofan",
+      "label_zh": "高压压气机第2级",
+      "role_zh": "高压压气机第2级；与高压轴保持同一规定角度。",
+      "motionOwner": "model",
+      "spool": "high",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        10,
+        0,
+        110
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "hp-stator-2",
+      "parent_id": "turbofan",
+      "label_zh": "高压压气机静子第2列",
+      "role_zh": "高压压气机静子第2列",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        15,
+        0,
+        191
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "hp-compressor-3",
+      "parent_id": "turbofan",
+      "label_zh": "高压压气机第3级",
+      "role_zh": "高压压气机第3级；与高压轴保持同一规定角度。",
+      "motionOwner": "model",
+      "spool": "high",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        10,
+        0,
+        120
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "hp-stator-3",
+      "parent_id": "turbofan",
+      "label_zh": "高压压气机静子第3列",
+      "role_zh": "高压压气机静子第3列",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        15,
+        0,
+        199
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "hp-compressor-4",
+      "parent_id": "turbofan",
+      "label_zh": "高压压气机第4级",
+      "role_zh": "高压压气机第4级；与高压轴保持同一规定角度。",
+      "motionOwner": "model",
+      "spool": "high",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        10,
+        0,
+        130
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "hp-stator-4",
+      "parent_id": "turbofan",
+      "label_zh": "高压压气机静子第4列",
+      "role_zh": "高压压气机静子第4列",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        15,
+        0,
+        207
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "combustor",
+      "parent_id": "turbofan",
+      "label_zh": "环形燃烧室（预制剖面）",
+      "role_zh": "环形燃烧室（预制剖面）",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        25,
+        0,
+        195
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "combustor-front",
+      "parent_id": "turbofan",
+      "label_zh": "燃烧室前半观察盖",
+      "role_zh": "燃烧室前半观察盖",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        25,
+        -190,
+        110
+      ],
+      "cutawayHidden": true
+    },
+    {
+      "part_id": "turbine-stator-1",
+      "parent_id": "turbofan",
+      "label_zh": "高压涡轮导向静子",
+      "role_zh": "高压涡轮导向静子",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        60,
+        0,
+        200
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "hp-turbine",
+      "parent_id": "turbofan",
+      "label_zh": "高压涡轮",
+      "role_zh": "高压涡轮；与高压轴保持同一规定角度。",
+      "motionOwner": "model",
+      "spool": "high",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        95,
+        0,
+        110
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "turbine-stator-2",
+      "parent_id": "turbofan",
+      "label_zh": "低压涡轮导向静子第1列",
+      "role_zh": "低压涡轮导向静子第1列",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        95,
+        0,
+        195
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "lp-turbine-1",
+      "parent_id": "turbofan",
+      "label_zh": "低压涡轮第1级",
+      "role_zh": "低压涡轮第1级；与低压轴保持同一规定角度。",
+      "motionOwner": "model",
+      "spool": "low",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        149,
+        0,
+        85
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "turbine-stator-3",
+      "parent_id": "turbofan",
+      "label_zh": "低压涡轮导向静子第2列",
+      "role_zh": "低压涡轮导向静子第2列",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        110,
+        0,
+        195
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "lp-turbine-2",
+      "parent_id": "turbofan",
+      "label_zh": "低压涡轮第2级",
+      "role_zh": "低压涡轮第2级；与低压轴保持同一规定角度。",
+      "motionOwner": "model",
+      "spool": "low",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        163,
+        0,
+        85
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "casing-back",
+      "parent_id": "turbofan",
+      "label_zh": "外机匣后半",
+      "role_zh": "外机匣后半",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        125,
+        0
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "core-case",
+      "parent_id": "turbofan",
+      "label_zh": "核心机匣",
+      "role_zh": "核心机匣",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        125,
+        65
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "bypass-duct",
+      "parent_id": "turbofan",
+      "label_zh": "旁通通道",
+      "role_zh": "旁通通道",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        125,
+        -75
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "nozzle",
+      "parent_id": "turbofan",
+      "label_zh": "核心尾喷管",
+      "role_zh": "核心尾喷管",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        155,
+        80,
+        -20
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "casing-front",
+      "parent_id": "turbofan",
+      "label_zh": "外机匣前半观察盖",
+      "role_zh": "外机匣前半观察盖",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        -210,
+        0
+      ],
+      "cutawayHidden": true
+    },
+    {
+      "part_id": "core-case-front",
+      "parent_id": "turbofan",
+      "label_zh": "核心机匣前半观察盖",
+      "role_zh": "核心机匣前半观察盖",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        -155,
+        65
+      ],
+      "cutawayHidden": true
+    },
+    {
+      "part_id": "bypass-front",
+      "parent_id": "turbofan",
+      "label_zh": "旁通通道前半观察盖",
+      "role_zh": "旁通通道前半观察盖",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        -185,
+        -75
+      ],
+      "cutawayHidden": true
+    },
+    {
+      "part_id": "nozzle-front",
+      "parent_id": "turbofan",
+      "label_zh": "核心尾喷管前半观察盖",
+      "role_zh": "核心尾喷管前半观察盖",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        155,
+        -150,
+        -20
+      ],
+      "cutawayHidden": true
+    },
+    {
+      "part_id": "bearing-support-1",
+      "parent_id": "turbofan",
+      "label_zh": "轴承与固定支架第1组",
+      "role_zh": "轴承与固定支架第1组",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        100,
+        -80
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "bearing-support-2",
+      "parent_id": "turbofan",
+      "label_zh": "轴承与固定支架第2组",
+      "role_zh": "轴承与固定支架第2组",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        -100,
+        -80
+      ],
+      "cutawayHidden": false
+    },
+    {
+      "part_id": "display-base",
+      "parent_id": "turbofan",
+      "label_zh": "展示底座",
+      "role_zh": "展示底座",
+      "motionOwner": "static",
+      "spool": "none",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "axis": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        0,
+        -170
+      ],
+      "cutawayHidden": false
+    }
+  ]
+}

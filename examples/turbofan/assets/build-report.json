@@ -1,0 +1,14 @@
+{
+  "mechanismId": "teaching-two-spool-turbofan",
+  "partCount": 34,
+  "meshCount": 34,
+  "triangles": 65780,
+  "glbBytes": 3018992,
+  "glbSha256": "c2228daac2398aab68c93bc5dead786ac5d83fe55b801ac02690b115a2d67610",
+  "builderSha256": "a0aedba6f98b8047c030817f8b8e20c736f8e911bcaa2e4ae25f6969efb589e2",
+  "blenderVersion": "4.5.14 LTS",
+  "mcpUsed": false,
+  "sourceGeometry": "original parameterized teaching mesh",
+  "bodyUnits": "mm",
+  "assetUnits": "m"
+}

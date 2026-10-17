@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SO-ARM 102 — recorded cut · Mechanism Studio</title>
+<style>
+  body{margin:24px auto;max-width:1280px;padding:0 20px;background:#fff;color:#252525;font:16px/1.6 Georgia,"Times New Roman",serif}
+  h1{font-size:28px;font-weight:400;margin:0 0 12px}video{display:block;width:100%;background:#fff}button{margin:12px 0;padding:8px 14px;background:#fff;color:#252525;border:1px solid #aaa;font:14px "Segoe UI",sans-serif;cursor:pointer}p{margin:8px 0}a{color:inherit}#status{font:13px "Segoe UI",sans-serif;color:#74746f}
+</style>
+<h1>SO-ARM 102, in motion.</h1>
+<video id="film" controls playsinline preload="auto" aria-label="Recorded 25.7-second robot study" src="./output/so-arm102-kinetic-25s-v1.mp4"></video>
+<button id="play" type="button">Play recorded clip with sound</button>
+<p id="status" role="status">Loading the recorded file…</p>
+<p>Robot: <a href="https://github.com/roboninecom/SO-ARM-102/tree/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf">SO-ARM 102 by Robonine</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><br>Presentation and original synthesized music: Mechanism Studio.</p>
+<p><a href="./?clean=1">Return to the interactive study ↗</a></p>
+<script>
+  const film=document.getElementById('film'),status=document.getElementById('status');
+  document.getElementById('play').addEventListener('click',async()=>{film.currentTime=0;film.muted=false;try{await film.play();status.textContent='Playing the recorded H.264/AAC file.'}catch{status.textContent='Playback did not start. Use the video controls to retry.'}});
+  film.addEventListener('loadedmetadata',()=>status.textContent=`${film.videoWidth} × ${film.videoHeight} · ${film.duration.toFixed(3)} seconds · Recorded file`);
+  film.addEventListener('ended',()=>status.textContent='The recorded clip played to the end.');
+  film.addEventListener('error',()=>status.textContent='The recorded file is not available.');
+</script>
+</html>

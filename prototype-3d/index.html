@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inside a lock · Mechanism Studio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23196958'/%3E%3Ctext%20x='16'%20y='24'%20font-size='25'%20text-anchor='middle'%20fill='white'%20font-family='serif'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"../node_modules/three/build/three.module.js","three/addons/":"../node_modules/three/examples/jsm/"}}</script>
+</head>
+<body>
+<header class="header"><a class="brand" href="../index.html"><span class="brand-mark">M</span> MECHANISM STUDIO</a><span class="edition">01 / PIN TUMBLER LOCK</span></header>
+<main>
+  <section class="intro"><div><p class="eyebrow">SEE THE PARTS. TRACE THE CAUSE.</p><h1>Inside a lock<span>What lets the key turn?</span></h1></div><p class="intro-note">Five pin pairs. One shear line.<br>Orbit, open it up, then try the key.</p></section>
+  <section class="palette-panel" aria-label="Display palettes">
+    <div class="palette-heading"><span class="small-label">Choose a display style</span><span class="palette-note">Current: <b id="palette-current">Black lines on white</b> · Select to switch</span></div>
+    <div id="palette-families" class="palette-families" role="group" aria-label="Palette families"></div>
+    <div id="palette-options" class="palette-options" role="group" aria-label="Select a palette"></div>
+  </section>
+  <div class="workspace">
+    <section class="stage-panel" aria-label="Lock 3D viewer">
+      <div class="stage-head"><div class="live-badge"><i></i><span id="view-label">Overview</span></div><button id="reset" class="text-button">↺ Reset</button></div>
+      <div id="viewport" tabindex="0" role="img" aria-label="Interactive lock model. Drag to orbit, scroll to zoom, or use the camera presets."><div id="loading">Loading the 3D assembly…</div><div id="pin-tags" aria-hidden="true"><span class="shear-tag" id="shear-tag" hidden>Shear line</span></div></div>
+      <div class="stage-foot"><span>Drag to orbit · Scroll to zoom · Click a part</span><span class="unit-note">Teaching geometry · Illustrative dimensions</span></div>
+      <div class="view-bar" role="group" aria-label="Camera views">
+        <button data-camera="overview" class="active">Overview</button><button data-camera="section">Longitudinal</button><button data-camera="end">Axial</button><button data-camera="detail">Pin detail</button><button data-camera="rear">Rear</button>
+      </div>
+      <div class="display-controls"><label class="toggle"><input id="cutaway" type="checkbox" checked><span>Open cutaway</span></label><label class="explode-label" for="explode">Explode</label><input id="explode" type="range" min="0" max="100" value="0"><output id="explode-value" for="explode">0%</output></div>
+    </section>
+    <aside class="sidebar">
+      <section class="control-card"><div class="card-title"><span class="small-label">TRY THE MECHANISM</span><span id="status" class="status">Key out</span></div>
+        <div class="key-options" role="group" aria-label="Select a key"><button data-key="correct" class="active">Correct key</button><button data-key="wrong">Wrong key</button><button data-key="blank">Blank key</button></div>
+        <label class="range-title" for="insertion">Insert key<output id="insertion-value">0%</output></label><input id="insertion" type="range" min="0" max="100" step="1" value="0">
+        <label class="range-title" for="angle">Turn plug<output id="angle-value">0°</output></label><input id="angle" type="range" min="0" max="90" step="1" value="0" disabled>
+        <button id="insert-key" class="primary-button">Insert fully</button>
+        <div class="readout"><span>Shear-line alignment</span><strong id="alignment">0 <small>/ 5 pairs</small></strong><div id="pin-indicators" aria-label="Alignment of the five pin pairs"></div></div>
+        <p id="reason" class="reason" aria-live="polite">The key is out. Pins cross the shear line and block the plug.</p>
+      </section>
+      <section class="part-card"><span class="small-label">PART INSPECTION</span><h2 id="part-name">Select a part to inspect its role</h2><p id="part-description">Key pins follow the key profile; driver pins and springs remain in the shell. The legend follows the current palette. Open the cutaway to inspect contact and alignment.</p><div class="legend"><span><i class="silver"></i>Key pin</span><span><i class="blue"></i>Driver pin</span><span><i class="orange"></i>Spring</span><span><i class="gold"></i>Key</span></div></section>
+    </aside>
+  </div>
+  <section class="lesson-panel"><div class="lesson-top"><div><p class="eyebrow">EXPLORE IN FIVE STEPS</p><h2>Pause at every step.</h2></div><div class="voice-controls"><span id="voice-status">Original Chinese audio · checking lesson</span><button id="narrate" disabled>▶ Play Chinese audio</button></div></div>
+    <nav class="steps" aria-label="Guided steps"><button data-lesson="part" class="active"><b>01</b>Meet the parts</button><button data-lesson="wrong"><b>02</b>Why it blocks</button><button data-lesson="align"><b>03</b>Find the shear line</button><button data-lesson="turn"><b>04</b>Turn together</button><button data-lesson="reset"><b>05</b>Withdraw and reset</button></nav>
+    <div class="lesson-text"><span id="lesson-number">01</span><div><h3 id="lesson-title">Fixed parts and moving parts</h3><p id="lesson-caption">The shell stays fixed. The plug, key and key pins rotate together; driver pins and springs remain in the shell. Open the cutaway and locate them. Optional audio is the original Chinese recording.</p></div></div>
+  </section>
+  <footer><span>Blender assets × One mechanical model × Free observation</span><p>Friction, forces and dynamic collisions are omitted. Explosion changes observation positions only. Withdrawing the key first returns the plug to zero.</p><a href="../document?path=prototype-3d/README.md">Prototype notes (Chinese) ↗</a></footer>
+</main>
+<audio id="voice" preload="none"></audio>
+<script type="module" src="./app.mjs"></script>
+</body>
+</html>

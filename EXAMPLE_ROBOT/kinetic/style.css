@@ -1,0 +1,4 @@
+/* The shared mechanical atlas supplies the typography and line-art palette. */
+.original-study { font: 12px "Segoe UI", Arial, sans-serif; color: #74746f; white-space: nowrap; text-underline-offset: 3px; }
+.chapter-index { white-space: nowrap; }
+body.capture .original-study { display: none; }

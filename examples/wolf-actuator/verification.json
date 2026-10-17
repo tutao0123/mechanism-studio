@@ -1,0 +1,192 @@
+{
+  "date": "2026-10-17",
+  "scope": "Mechanism Studio only; no global configuration, credentials, sibling project edits or permission expansion.",
+  "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1",
+  "source": {
+    "repository": "https://github.com/Anthrobotics/wolf-actuator",
+    "commit": "776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea",
+    "sha256": "b352183e1bd0d55c403a6f406c3b2886a3b1b374b47cf32bcb69d4277d252e35",
+    "license": "CC-BY-SA-4.0",
+    "units": "m",
+    "originalBytesUnchanged": true
+  },
+  "cad": {
+    "statistics": {
+      "definitionCount": 184,
+      "occurrenceCount": 253,
+      "leafOccurrences": 245,
+      "assemblyOccurrences": 8,
+      "sourceNauoCount": 252,
+      "unmappedSourceOccurrences": 0,
+      "reusedLeafDefinitions": 69,
+      "geometryBearingAssemblies": 0,
+      "unmeshedFaces": 0,
+      "recoveredMeshFaces": 0,
+      "sourceTriangulatedDefinitions": 69,
+      "sourceTriangulatedOccurrences": 138,
+      "sourceTriangulatedFaces": 69,
+      "uniqueTriangleCount": 386514
+    },
+    "display": {
+      "meshDefinitions": 176,
+      "semanticPartNodes": 245,
+      "triangles": 521306,
+      "uniqueTriangles": 386514,
+      "assetBoundsMeters": {
+        "min": [
+          -0.10108713139746775,
+          -0.020000000000000004,
+          -0.10108713141271708
+        ],
+        "max": [
+          0.10108713140927766,
+          0.047000000000000736,
+          0.10108713139402843
+        ]
+      }
+    },
+    "sourceIdentityAndPlacement": "passed",
+    "analyticCoverage": "limited",
+    "reason": "69 original source-triangulated bearing definitions reused in 138 instances; no analytic reconstruction.",
+    "report": "output/cad-audit.json"
+  },
+  "automated": {
+    "tests": {
+      "project": {
+        "passed": 376,
+        "failed": 0,
+        "skipped": 0,
+        "output": "output/wolf-project-regression.txt"
+      },
+      "presentationAfterCameraAndRouteChanges": {
+        "passed": 9,
+        "failed": 0,
+        "skipped": 0,
+        "output": "output/wolf-presentation-final-tests.txt"
+      },
+      "robotAfterPlanUpdate": {
+        "passed": 43,
+        "failed": 0,
+        "skipped": 0,
+        "output": "output/robot-color-final-tests.txt"
+      }
+    },
+    "skillFrontmatter": {
+      "passed": true,
+      "method": "Existing project-local PyYAML; skill-creator quick_validate.py with Python -B -X utf8."
+    },
+    "skillLinks": {
+      "checkedLocalLinks": 180,
+      "broken": [],
+      "passed": true
+    }
+  },
+  "browser": {
+    "foregroundMusicLoop": {
+      "samples": 313,
+      "chapters": [
+        "whole",
+        "structure",
+        "rings",
+        "gears",
+        "return",
+        "resolve"
+      ],
+      "allVisible": true,
+      "allFocused": true,
+      "nativeClockActive": true,
+      "maximumCircularAudioVisualDeltaSeconds": 0.053076999999999985,
+      "evidence": "output/native-music-loop-foreground.json"
+    },
+    "earlierTrial": {
+      "evidence": "output/native-music-loop.json",
+      "note": "An earlier loop before explicit browser visibility showed up to 1.0142 seconds between the last drawn state and audio. Timing was repeated in the focused visible preview; no background refresh-rate guarantee is claimed."
+    },
+    "reducedMotion": {
+      "startsPaused": true,
+      "observedTime": 0
+    },
+    "narrow": {
+      "browserCssPixels": [
+        390,
+        844
+      ],
+      "viewportCssPixels": [
+        364,
+        410
+      ],
+      "visibleGearName": "Sun gear",
+      "leaderPixels": 10,
+      "evidence": "output/wolf-narrow.jpg"
+    },
+    "colourToggle": {
+      "neutralOffVerified": true,
+      "sourceMatricesMatchCaptureBaseline": true,
+      "enabledRestored": true,
+      "note": "The normal page reload resets capture-only window variables; compare against the retained baseline file."
+    }
+  },
+  "capture": {
+    "accepted": "v2",
+    "frames": 1029,
+    "fps": 30,
+    "method": "CUA full-page getScreenshot after continuous shared capture.frame(i/30); one initial cut.",
+    "sourcePoseAssertions": 1029,
+    "cameraUp": [
+      0,
+      0,
+      1
+    ],
+    "frameAudit": "output/capture-audit-v2.json",
+    "actualGeometryFallback": "output/actual-vertex-projection-v2.json",
+    "visibleNames": {
+      "whole": 0,
+      "structure": 1,
+      "rings": 2,
+      "gears": 2,
+      "return": 0,
+      "resolve": 0
+    },
+    "note": "Crowded scenes omit names rather than covering geometry or extending leaders. Five conservative bounding-box outliers were checked against every actual source vertex and are inside the frame."
+  },
+  "video": {
+    "file": "output/wolf-34s-v2.mp4",
+    "sha256": "b1288ea4a8ac5fbe243813cfa649b060dc5080790f3bcef01935aa2f10f66e03",
+    "bytes": 5475402,
+    "seconds": 34.3,
+    "pixels": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "frames": 1029,
+    "codecs": [
+      "H.264 High",
+      "AAC-LC stereo"
+    ],
+    "fullDecodePassed": true,
+    "blackFrames": 0,
+    "integratedLUFS": -20,
+    "truePeakDBTP": -6.92,
+    "sourceAudioSHA256": "7a463b9c86f7f7e4bcfacdbfdebb3522981182b23056cd980d377e6533f838e5",
+    "audioRespeed": false,
+    "contactSheetReviewed": true,
+    "wholeClipSubjectiveMotionReview": false,
+    "subjectiveListeningReviewed": false,
+    "review": "output/delivery-review-v2.json"
+  },
+  "rejectedCapture": {
+    "version": "v1",
+    "reason": "Raw default Page.captureScreenshot used a mismatched browser crop despite 1920x1080 file dimensions. Visual review rejected it. Retained only as diagnostic output; not a deliverable."
+  },
+  "publication": {
+    "performed": false,
+    "state": "Awaiting the user choice on the concrete new clip and two English posts.",
+    "draft": "output/x-posts.txt"
+  },
+  "limits": [
+    "Editorial display translations, not recovered mates, collision-checked teardown or solved gear motion.",
+    "Original STEP is 88,565,658 bytes and exceeds the current 50 MiB release-file budget; lossless archive feasibility is recorded separately, with no budget increase or public packaging selected.",
+    "Project-wide own-code license remains undecided; WOLF source/derived clip retain CC BY-SA 4.0 attribution."
+  ]
+}

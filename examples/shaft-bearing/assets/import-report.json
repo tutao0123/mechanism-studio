@@ -1,0 +1,271 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "source-occurrence-identity-verified",
+  "sourceSHA256": "d3a699b72a8cbdf7fc3acc70078870df141efb0a62991f8fa0bebd3ee56405bf",
+  "glbSHA256": "91b7130e725c16765d58109acf30b6ad12bf659e0f41683b60f7c2a9ecef9e21",
+  "importer": {
+    "package": "cadquery-ocp",
+    "version": "7.8.1.1.post1",
+    "occtVersion": "7.8.1.1",
+    "assemblyReader": "STEPCAFControl_Reader",
+    "identityMapping": "STEPCAFControl_Reader.FindInstance -> XCAF component -> referred definition",
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRadians": 0.4,
+    "relativeDeflection": false,
+    "parallelMeshing": false
+  },
+  "sourceStatistics": {
+    "definitionCount": 69,
+    "occurrenceCount": 147,
+    "leafOccurrences": 126,
+    "assemblyOccurrences": 21,
+    "sourceNauoCount": 146,
+    "unmappedSourceOccurrences": 0,
+    "reusedLeafDefinitions": 19,
+    "geometryBearingAssemblies": 1,
+    "unmeshedFaces": 0,
+    "recoveredMeshFaces": 6,
+    "uniqueTriangleCount": 138086
+  },
+  "sourceUnits": {
+    "sourceLengthNames": [
+      "millimetre"
+    ],
+    "sourceAngleNames": [
+      "radian"
+    ],
+    "importedLength": "mm",
+    "matrices": "column-major, translation in mm",
+    "coordinateBasis": "native STEP axes"
+  },
+  "display": {
+    "meshDefinitions": 49,
+    "semanticPartNodes": 127,
+    "triangles": 235938,
+    "uniqueTriangles": 138086,
+    "assetBoundsMeters": {
+      "min": [
+        -0.04394205291696776,
+        0.009900998033753966,
+        -0.06064999171866855
+      ],
+      "max": [
+        0.03554324933830032,
+        0.13201690117807818,
+        0.02470000206386875
+      ]
+    }
+  },
+  "identityMapping": {
+    "method": "STEPCAFControl_Reader.FindInstance -> XCAF component -> referred definition",
+    "unmappedSourceOccurrences": 0,
+    "partId": "source occurrence path, never mesh order or display name",
+    "definitionsReusedAsGlbMeshes": true,
+    "sourceGraphSHA256": "2903aa5b5dbeb1d4e7854385ace134e5d7dc5be9f396f27db05631db55ef381b"
+  },
+  "meshWarnings": [
+    {
+      "definition_id": "def-d3a699b72a8c-230417",
+      "name": "front_body",
+      "faceIndex": 56,
+      "firstTriangle": 2104,
+      "triangleCount": 36,
+      "surfaceAreaMm2": 15.194659631117501,
+      "attempts": [
+        {
+          "linearDeflectionMm": 0.04,
+          "angularDeflectionRadians": 0.2,
+          "mesherDone": true,
+          "triangleCount": 0
+        },
+        {
+          "linearDeflectionMm": 0.3,
+          "angularDeflectionRadians": 0.7,
+          "mesherDone": true,
+          "triangleCount": 36
+        }
+      ],
+      "recovered": true,
+      "nominalLinearDeflectionMm": 0.08,
+      "nominalAngularDeflectionRadians": 0.4,
+      "status": "recovered-per-face",
+      "linearDeflectionMm": 0.3,
+      "angularDeflectionRadians": 0.7
+    },
+    {
+      "definition_id": "def-d3a699b72a8c-230418",
+      "name": "front_body_ECAS_coupler",
+      "faceIndex": 142,
+      "firstTriangle": 4616,
+      "triangleCount": 36,
+      "surfaceAreaMm2": 15.194659631117501,
+      "attempts": [
+        {
+          "linearDeflectionMm": 0.04,
+          "angularDeflectionRadians": 0.2,
+          "mesherDone": true,
+          "triangleCount": 0
+        },
+        {
+          "linearDeflectionMm": 0.3,
+          "angularDeflectionRadians": 0.7,
+          "mesherDone": true,
+          "triangleCount": 36
+        }
+      ],
+      "recovered": true,
+      "nominalLinearDeflectionMm": 0.08,
+      "nominalAngularDeflectionRadians": 0.4,
+      "status": "recovered-per-face",
+      "linearDeflectionMm": 0.3,
+      "angularDeflectionRadians": 0.7
+    },
+    {
+      "definition_id": "def-d3a699b72a8c-230433",
+      "name": "M3 Thumb Screw",
+      "faceIndex": 7,
+      "firstTriangle": 401,
+      "triangleCount": 16,
+      "surfaceAreaMm2": 0.9773921950434764,
+      "attempts": [
+        {
+          "linearDeflectionMm": 0.04,
+          "angularDeflectionRadians": 0.2,
+          "mesherDone": true,
+          "triangleCount": 16
+        }
+      ],
+      "recovered": true,
+      "nominalLinearDeflectionMm": 0.08,
+      "nominalAngularDeflectionRadians": 0.4,
+      "status": "recovered-per-face",
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRadians": 0.2
+    },
+    {
+      "definition_id": "def-d3a699b72a8c-230444",
+      "name": "36mm Nema14",
+      "faceIndex": 84,
+      "firstTriangle": 5507,
+      "triangleCount": 1,
+      "surfaceAreaMm2": 1.0211584379456253,
+      "attempts": [
+        {
+          "linearDeflectionMm": 0.04,
+          "angularDeflectionRadians": 0.2,
+          "mesherDone": true,
+          "triangleCount": 0
+        },
+        {
+          "linearDeflectionMm": 0.3,
+          "angularDeflectionRadians": 0.7,
+          "mesherDone": true,
+          "triangleCount": 1
+        }
+      ],
+      "recovered": true,
+      "nominalLinearDeflectionMm": 0.08,
+      "nominalAngularDeflectionRadians": 0.4,
+      "status": "recovered-per-face",
+      "linearDeflectionMm": 0.3,
+      "angularDeflectionRadians": 0.7
+    },
+    {
+      "definition_id": "def-d3a699b72a8c-230471",
+      "name": "x_carriage_frame_right",
+      "faceIndex": 82,
+      "firstTriangle": 2455,
+      "triangleCount": 36,
+      "surfaceAreaMm2": 4.087452303105676,
+      "attempts": [
+        {
+          "linearDeflectionMm": 0.04,
+          "angularDeflectionRadians": 0.2,
+          "mesherDone": true,
+          "triangleCount": 0
+        },
+        {
+          "linearDeflectionMm": 0.3,
+          "angularDeflectionRadians": 0.7,
+          "mesherDone": true,
+          "triangleCount": 36
+        }
+      ],
+      "recovered": true,
+      "nominalLinearDeflectionMm": 0.08,
+      "nominalAngularDeflectionRadians": 0.4,
+      "status": "recovered-per-face",
+      "linearDeflectionMm": 0.3,
+      "angularDeflectionRadians": 0.7
+    },
+    {
+      "definition_id": "def-d3a699b72a8c-230471",
+      "name": "x_carriage_frame_right",
+      "faceIndex": 84,
+      "firstTriangle": 2555,
+      "triangleCount": 36,
+      "surfaceAreaMm2": 4.087452303105726,
+      "attempts": [
+        {
+          "linearDeflectionMm": 0.04,
+          "angularDeflectionRadians": 0.2,
+          "mesherDone": true,
+          "triangleCount": 0
+        },
+        {
+          "linearDeflectionMm": 0.3,
+          "angularDeflectionRadians": 0.7,
+          "mesherDone": true,
+          "triangleCount": 36
+        }
+      ],
+      "recovered": true,
+      "nominalLinearDeflectionMm": 0.08,
+      "nominalAngularDeflectionRadians": 0.4,
+      "status": "recovered-per-face",
+      "linearDeflectionMm": 0.3,
+      "angularDeflectionRadians": 0.7
+    }
+  ],
+  "generatedGeometryComponents": [
+    {
+      "ownerDefinitionId": "def-d3a699b72a8c-230418",
+      "xcafLabel": "0:1:1:5:2",
+      "meaning": "OCCT-generated geometry component; not a source PRODUCT_DEFINITION or NAUO"
+    }
+  ],
+  "tessellationComparison": {
+    "fine": {
+      "linearDeflectionMm": 0.08,
+      "angularDeflectionRadians": 0.4,
+      "triangles": 235938
+    },
+    "coarse": {
+      "linearDeflectionMm": 0.3,
+      "angularDeflectionRadians": 0.7,
+      "triangles": 135375
+    },
+    "definitionAndOccurrenceIdentityUnchanged": true,
+    "localAndWorldMatricesUnchanged": true
+  },
+  "coordinateConversion": {
+    "source": "native STEP axes, mm",
+    "display": "m, +Y up",
+    "points": "0.001*[x,z,-y]",
+    "placements": "C*M_source*inverse(C), including rotations"
+  },
+  "mixedProducts": [
+    {
+      "definition_id": "def-d3a699b72a8c-230418",
+      "name": "front_body_ECAS_coupler",
+      "note": "Own shape kept on the real source occurrence; synthetic XCAF solid labels are not engineering occurrences."
+    }
+  ],
+  "observation": "Hidden, isolated and exploded states belong to display wrappers; source matrices remain immutable. Radial explosion is not a collision-verified disassembly sequence.",
+  "limitations": [
+    "IDs are stable for this exact source hash and importer version; re-exported source may renumber entities.",
+    "Face indices identify imported definition topology only, not persistent native feature IDs.",
+    "No source mate recovery, constraints, physical simulation, exact section, or interference API is implemented.",
+    "Self-contained STEP files with exact NAUO mapping are accepted; external references are disabled."
+  ]
+}

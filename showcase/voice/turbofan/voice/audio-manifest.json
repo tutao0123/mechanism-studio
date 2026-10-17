@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "provider": "doubao",
+  "complete": true,
+  "generatedAt": "2026-10-14T15:29:46.058Z",
+  "resourceId": "seed-tts-2.0",
+  "speaker": "en_female_jane_uranus_bigtts",
+  "apiMode": "speech",
+  "format": "mp3",
+  "sampleRate": 24000,
+  "lessonHashPolicy": "narration-v1",
+  "lessonSha256": "b5e5eb800e8d8e729471488c09485c7043859b021fdec9f408703ef63f84bb72",
+  "steps": {
+    "overview": {
+      "src": "assets/audio/overview-eac4cf8477cd7be0aff737338b7fb3db1c5386c7fbdc29a071f44ef0c335803b.mp3",
+      "bytes": 118317,
+      "sha256": "eac4cf8477cd7be0aff737338b7fb3db1c5386c7fbdc29a071f44ef0c335803b",
+      "usage": {
+        "text_words": 203
+      }
+    },
+    "fan": {
+      "src": "assets/audio/fan-da24ab7de0eaa5c6ae04b6cdef646c63a1a84b255d72c443376bd9fd39c78f75.mp3",
+      "bytes": 113517,
+      "sha256": "da24ab7de0eaa5c6ae04b6cdef646c63a1a84b255d72c443376bd9fd39c78f75",
+      "usage": {
+        "text_words": 200
+      }
+    },
+    "compression": {
+      "src": "assets/audio/compression-23f69f7dc5977699533045e1b03eb4ee2110070bf2c7cef6d8aa441207deebe9.mp3",
+      "bytes": 118509,
+      "sha256": "23f69f7dc5977699533045e1b03eb4ee2110070bf2c7cef6d8aa441207deebe9",
+      "usage": {
+        "text_words": 214
+      }
+    },
+    "combustion": {
+      "src": "assets/audio/combustion-d64cf1c9a3df9649b4c0a7b072d55f9c6e9663a9e9bc04c5b0253a69d76a2d82.mp3",
+      "bytes": 137517,
+      "sha256": "d64cf1c9a3df9649b4c0a7b072d55f9c6e9663a9e9bc04c5b0253a69d76a2d82",
+      "usage": {
+        "text_words": 231
+      }
+    },
+    "exhaust": {
+      "src": "assets/audio/exhaust-d3ac39d10a50263028d71749a825ea24fbec1dd0c3f120b201d2a5538c1bd345.mp3",
+      "bytes": 126765,
+      "sha256": "d3ac39d10a50263028d71749a825ea24fbec1dd0c3f120b201d2a5538c1bd345",
+      "usage": {
+        "text_words": 234
+      }
+    },
+    "assembly": {
+      "src": "assets/audio/assembly-7d62ae6e28c149b281ae0ea97800bfcf749c83e80fd3c2aee4845d3d4f5c99d1.mp3",
+      "bytes": 135213,
+      "sha256": "7d62ae6e28c149b281ae0ea97800bfcf749c83e80fd3c2aee4845d3d4f5c99d1",
+      "usage": {
+        "text_words": 236
+      }
+    }
+  }
+}

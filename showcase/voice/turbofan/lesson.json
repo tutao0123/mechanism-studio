@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "language": "en-US",
+  "steps": [
+    {"id":"overview","title":"Two shafts. Two air paths.","eyebrow":"THE ASSEMBLY","durationHint":13,"narration":"A two-spool turbofan contains two concentric shafts. They can turn at different speeds. The fan divides incoming air between the inner core and the outer bypass path. Follow each path through the engine."},
+    {"id":"fan","title":"The fan feeds the bypass.","eyebrow":"01 / FAN & BYPASS","durationHint":13,"narration":"The fan belongs to the low-pressure shaft. Part of the air enters the core, while bypass air travels around it. The outer path stays outside the combustion chamber and contributes to the exhaust flow."},
+    {"id":"compression","title":"Compress the core air.","eyebrow":"02 / CORE COMPRESSION","durationHint":13,"narration":"Core air passes through compressor stages before reaching the combustor. Rotating blades alternate with fixed stators. The high-pressure compressor and turbine share one shaft, separate from the low-pressure spool."},
+    {"id":"combustion","title":"Keep the fire inside the combustor.","eyebrow":"03 / CONTINUOUS COMBUSTION","durationHint":14,"narration":"Fuel burns continuously inside the annular combustor during normal operation. The warm region surrounds the central shaft; it does not ignite again on every revolution. These colours identify a process, not calculated temperatures."},
+    {"id":"exhaust","title":"Drive the turbines. Leave through the nozzle.","eyebrow":"04 / TURBINES & EXHAUST","durationHint":14,"narration":"Hot core gas passes through the turbines, which drive the two compressor systems and the fan. It then leaves through the core nozzle. This model has no afterburner, so the outlet shows a faint flow trail rather than an external flame."},
+    {"id":"assembly","title":"See what each shaft connects.","eyebrow":"THE BIG PICTURE","durationHint":13,"narration":"Separating the display parts reveals the concentric shafts, rotating stages and fixed structure. Reassembly brings the engine back together. The geometry and speeds are illustrative; no thrust, thermal cycle or fluid flow is calculated."}
+  ]
+}

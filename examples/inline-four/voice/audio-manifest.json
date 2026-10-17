@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "provider": "doubao",
+  "complete": true,
+  "generatedAt": "2026-10-14T13:35:09.889Z",
+  "resourceId": "seed-tts-2.0",
+  "speaker": "zh_female_vv_uranus_bigtts",
+  "apiMode": "speech",
+  "format": "mp3",
+  "sampleRate": 24000,
+  "lessonSha256": "244134d9c9af6bbfea5f1759b65f0d4fc6e6021ca23a9e71383336b796ac6658",
+  "steps": {
+    "overview": {
+      "src": "assets/audio/overview.mp3",
+      "bytes": 258669,
+      "sha256": "b3efe2dd5778672d03154116e202af642d786cd18abfd0abd91f91d420867957",
+      "usage": {
+        "text_words": 142
+      }
+    },
+    "intake": {
+      "src": "assets/audio/intake.mp3",
+      "bytes": 191085,
+      "sha256": "27b4fe56eedeadddee9a5db1caef7127807a6a460f9441609d46bfa29c22086d",
+      "usage": {
+        "text_words": 109
+      }
+    },
+    "compression": {
+      "src": "assets/audio/compression.mp3",
+      "bytes": 160749,
+      "sha256": "2524a88b84450c72778eb934155d02e520848e78b2d84ee86828ede1d403f4e5",
+      "usage": {
+        "text_words": 87
+      }
+    },
+    "power": {
+      "src": "assets/audio/power.mp3",
+      "bytes": 185709,
+      "sha256": "4ec3e7b71bad83a5124b4a061d0e66c9b62de0c86347a02630fcda32ec8e72b1",
+      "usage": {
+        "text_words": 110
+      }
+    },
+    "exhaust": {
+      "src": "assets/audio/exhaust.mp3",
+      "bytes": 178989,
+      "sha256": "9c61c2b883def99c6c7d5f1ac4bf9111b6e81d4c7c5e9b4b688da5e739d55b69",
+      "usage": {
+        "text_words": 107
+      }
+    }
+  }
+}

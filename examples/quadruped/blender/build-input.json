@@ -1,0 +1,173 @@
+{
+  "spec": {
+    "mechanismId": "studio-quadruped-8dof",
+    "units": "mm",
+    "thigh": 100,
+    "shin": 115,
+    "hipHeight": 200,
+    "footRadius": 10,
+    "hipX": 110,
+    "hipY": 92,
+    "hipLimits": [
+      -90,
+      65
+    ],
+    "kneeLimits": [
+      15,
+      135
+    ],
+    "stride": 70
+  },
+  "rest": {
+    "mode": "stand",
+    "phase": 0,
+    "stepHeight": 40,
+    "singleLift": 40,
+    "legs": [
+      {
+        "id": "fl",
+        "label": "左前",
+        "x": 110,
+        "y": 92,
+        "offset": 0,
+        "hip": -30.102266755907703,
+        "knee": 55.95923498061898,
+        "hipPosition": [
+          110,
+          92,
+          200
+        ],
+        "kneePosition": [
+          59.84550358063265,
+          92,
+          113.48684210526316
+        ],
+        "footPosition": [
+          110,
+          92,
+          10
+        ],
+        "target": [
+          110,
+          92,
+          10
+        ],
+        "residual": 0,
+        "swing": false,
+        "contact": true,
+        "localPhase": 0,
+        "withinLimits": true
+      },
+      {
+        "id": "fr",
+        "label": "右前",
+        "x": 110,
+        "y": -92,
+        "offset": 0.5,
+        "hip": -30.102266755907703,
+        "knee": 55.95923498061898,
+        "hipPosition": [
+          110,
+          -92,
+          200
+        ],
+        "kneePosition": [
+          59.84550358063265,
+          -92,
+          113.48684210526316
+        ],
+        "footPosition": [
+          110,
+          -92,
+          10
+        ],
+        "target": [
+          110,
+          -92,
+          10
+        ],
+        "residual": 0,
+        "swing": false,
+        "contact": true,
+        "localPhase": 0,
+        "withinLimits": true
+      },
+      {
+        "id": "rl",
+        "label": "左后",
+        "x": -110,
+        "y": 92,
+        "offset": 0.5,
+        "hip": -30.102266755907703,
+        "knee": 55.95923498061898,
+        "hipPosition": [
+          -110,
+          92,
+          200
+        ],
+        "kneePosition": [
+          -160.15449641936735,
+          92,
+          113.48684210526316
+        ],
+        "footPosition": [
+          -110,
+          92,
+          10
+        ],
+        "target": [
+          -110,
+          92,
+          10
+        ],
+        "residual": 0,
+        "swing": false,
+        "contact": true,
+        "localPhase": 0,
+        "withinLimits": true
+      },
+      {
+        "id": "rr",
+        "label": "右后",
+        "x": -110,
+        "y": -92,
+        "offset": 0,
+        "hip": -30.102266755907703,
+        "knee": 55.95923498061898,
+        "hipPosition": [
+          -110,
+          -92,
+          200
+        ],
+        "kneePosition": [
+          -160.15449641936735,
+          -92,
+          113.48684210526316
+        ],
+        "footPosition": [
+          -110,
+          -92,
+          10
+        ],
+        "target": [
+          -110,
+          -92,
+          10
+        ],
+        "residual": 0,
+        "swing": false,
+        "contact": true,
+        "localPhase": 0,
+        "withinLimits": true
+      }
+    ],
+    "jointCount": 8,
+    "contactLegs": [
+      "fl",
+      "fr",
+      "rl",
+      "rr"
+    ],
+    "maxResidual": 0
+  }
+}

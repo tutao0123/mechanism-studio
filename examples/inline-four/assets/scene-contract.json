@@ -1,0 +1,1375 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "teaching-inline-four",
+  "assetRevision": "1",
+  "units": {
+    "body": "mm",
+    "asset": "m"
+  },
+  "coordinateMap": "0.001*[x,z,-y]",
+  "limitations": [
+    "教学示意尺寸",
+    "不是工程 CAD",
+    "不求解气体、燃烧或动力学",
+    "理想气门时序，无重叠或提前角"
+  ],
+  "parts": [
+    {
+      "part_id": "block",
+      "parent_id": "engine",
+      "label_zh": "缸体与主轴承座",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        70,
+        0
+      ],
+      "cutawayHidden": false,
+      "role_zh": "固定四个缸位并支撑曲轴；预制前剖面只改变观察。"
+    },
+    {
+      "part_id": "block-front",
+      "parent_id": "engine",
+      "label_zh": "缸体前侧外壁",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        -110,
+        0
+      ],
+      "cutawayHidden": true,
+      "role_zh": "切换剖视时隐藏的教学外壳。"
+    },
+    {
+      "part_id": "crankshaft",
+      "parent_id": "engine",
+      "label_zh": "曲轴",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        0,
+        -120
+      ],
+      "cutawayHidden": false,
+      "role_zh": "四个曲拐把连杆往复转换成同一输出轴的转动。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "oil-pan",
+      "parent_id": "engine",
+      "label_zh": "油底壳",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        0,
+        -210
+      ],
+      "cutawayHidden": false,
+      "role_zh": "仅展示储油与外壳位置；本例不模拟润滑循环。"
+    },
+    {
+      "part_id": "oil-pan-front",
+      "parent_id": "engine",
+      "label_zh": "油底壳前侧",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        -100,
+        -160
+      ],
+      "cutawayHidden": true,
+      "role_zh": "剖面显示中的可隐藏外壳。"
+    },
+    {
+      "part_id": "cylinder-head",
+      "parent_id": "engine",
+      "label_zh": "缸盖与气门座",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        0,
+        110
+      ],
+      "cutawayHidden": false,
+      "role_zh": "固定气门和火花塞；教学剖面让气缸顶部保持可见。"
+    },
+    {
+      "part_id": "liner-1",
+      "parent_id": "engine",
+      "label_zh": "1 缸缸套",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        40,
+        55
+      ],
+      "cutawayHidden": false,
+      "role_zh": "半圆缸套是预制剖视网格；内径示意为 82 mm。"
+    },
+    {
+      "part_id": "piston-1",
+      "parent_id": "engine",
+      "label_zh": "1 缸活塞",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          -156,
+          0,
+          195
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "explode": [
+        0,
+        -85,
+        90
+      ],
+      "cutawayHidden": false,
+      "role_zh": "活塞销中心由曲柄连杆模型给出；活塞环和裙部用于辨识装配。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "rod-1",
+      "parent_id": "engine",
+      "label_zh": "1 缸连杆",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          -156,
+          0,
+          45
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        -110,
+        -30
+      ],
+      "cutawayHidden": false,
+      "role_zh": "曲轴销到活塞销的示意杆长恒为 150 mm。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "intake-valve-1",
+      "parent_id": "engine",
+      "label_zh": "1 缸进气门",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          -156,
+          -17,
+          232
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "explode": [
+        0,
+        -100,
+        170
+      ],
+      "cutawayHidden": false,
+      "role_zh": "理想行程时序驱动下移开启；最大示意升程 9 mm，无气门重叠。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "intake-spring-1",
+      "parent_id": "engine",
+      "label_zh": "1 缸进气气门弹簧",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          -156,
+          -17,
+          265
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        -100,
+        205
+      ],
+      "cutawayHidden": false,
+      "role_zh": "示意弹簧显示位置，不模拟弹性或动态压缩。"
+    },
+    {
+      "part_id": "exhaust-valve-1",
+      "parent_id": "engine",
+      "label_zh": "1 缸排气门",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          -156,
+          17,
+          232
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "explode": [
+        0,
+        100,
+        170
+      ],
+      "cutawayHidden": false,
+      "role_zh": "理想行程时序驱动下移开启；最大示意升程 9 mm，无气门重叠。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "exhaust-spring-1",
+      "parent_id": "engine",
+      "label_zh": "1 缸排气气门弹簧",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          -156,
+          17,
+          265
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        100,
+        205
+      ],
+      "cutawayHidden": false,
+      "role_zh": "示意弹簧显示位置，不模拟弹性或动态压缩。"
+    },
+    {
+      "part_id": "spark-plug-1",
+      "parent_id": "engine",
+      "label_zh": "1 缸火花塞",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          -156,
+          0,
+          242
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        0,
+        200
+      ],
+      "cutawayHidden": false,
+      "role_zh": "只在理想做功起点标记点火；不使用实际点火提前角。"
+    },
+    {
+      "part_id": "liner-2",
+      "parent_id": "engine",
+      "label_zh": "2 缸缸套",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        40,
+        55
+      ],
+      "cutawayHidden": false,
+      "role_zh": "半圆缸套是预制剖视网格；内径示意为 82 mm。"
+    },
+    {
+      "part_id": "piston-2",
+      "parent_id": "engine",
+      "label_zh": "2 缸活塞",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          -52,
+          0,
+          105
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "explode": [
+        0,
+        -85,
+        90
+      ],
+      "cutawayHidden": false,
+      "role_zh": "活塞销中心由曲柄连杆模型给出；活塞环和裙部用于辨识装配。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "rod-2",
+      "parent_id": "engine",
+      "label_zh": "2 缸连杆",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          -52,
+          0,
+          -45
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        -110,
+        -30
+      ],
+      "cutawayHidden": false,
+      "role_zh": "曲轴销到活塞销的示意杆长恒为 150 mm。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "intake-valve-2",
+      "parent_id": "engine",
+      "label_zh": "2 缸进气门",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          -52,
+          -17,
+          232
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "explode": [
+        0,
+        -100,
+        170
+      ],
+      "cutawayHidden": false,
+      "role_zh": "理想行程时序驱动下移开启；最大示意升程 9 mm，无气门重叠。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "intake-spring-2",
+      "parent_id": "engine",
+      "label_zh": "2 缸进气气门弹簧",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          -52,
+          -17,
+          265
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        -100,
+        205
+      ],
+      "cutawayHidden": false,
+      "role_zh": "示意弹簧显示位置，不模拟弹性或动态压缩。"
+    },
+    {
+      "part_id": "exhaust-valve-2",
+      "parent_id": "engine",
+      "label_zh": "2 缸排气门",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          -52,
+          17,
+          232
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "explode": [
+        0,
+        100,
+        170
+      ],
+      "cutawayHidden": false,
+      "role_zh": "理想行程时序驱动下移开启；最大示意升程 9 mm，无气门重叠。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "exhaust-spring-2",
+      "parent_id": "engine",
+      "label_zh": "2 缸排气气门弹簧",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          -52,
+          17,
+          265
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        100,
+        205
+      ],
+      "cutawayHidden": false,
+      "role_zh": "示意弹簧显示位置，不模拟弹性或动态压缩。"
+    },
+    {
+      "part_id": "spark-plug-2",
+      "parent_id": "engine",
+      "label_zh": "2 缸火花塞",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          -52,
+          0,
+          242
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        0,
+        200
+      ],
+      "cutawayHidden": false,
+      "role_zh": "只在理想做功起点标记点火；不使用实际点火提前角。"
+    },
+    {
+      "part_id": "liner-3",
+      "parent_id": "engine",
+      "label_zh": "3 缸缸套",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        40,
+        55
+      ],
+      "cutawayHidden": false,
+      "role_zh": "半圆缸套是预制剖视网格；内径示意为 82 mm。"
+    },
+    {
+      "part_id": "piston-3",
+      "parent_id": "engine",
+      "label_zh": "3 缸活塞",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          52,
+          0,
+          105
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "explode": [
+        0,
+        -85,
+        90
+      ],
+      "cutawayHidden": false,
+      "role_zh": "活塞销中心由曲柄连杆模型给出；活塞环和裙部用于辨识装配。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "rod-3",
+      "parent_id": "engine",
+      "label_zh": "3 缸连杆",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          52,
+          0,
+          -45
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        -110,
+        -30
+      ],
+      "cutawayHidden": false,
+      "role_zh": "曲轴销到活塞销的示意杆长恒为 150 mm。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "intake-valve-3",
+      "parent_id": "engine",
+      "label_zh": "3 缸进气门",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          52,
+          -17,
+          232
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "explode": [
+        0,
+        -100,
+        170
+      ],
+      "cutawayHidden": false,
+      "role_zh": "理想行程时序驱动下移开启；最大示意升程 9 mm，无气门重叠。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "intake-spring-3",
+      "parent_id": "engine",
+      "label_zh": "3 缸进气气门弹簧",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          52,
+          -17,
+          265
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        -100,
+        205
+      ],
+      "cutawayHidden": false,
+      "role_zh": "示意弹簧显示位置，不模拟弹性或动态压缩。"
+    },
+    {
+      "part_id": "exhaust-valve-3",
+      "parent_id": "engine",
+      "label_zh": "3 缸排气门",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          52,
+          17,
+          232
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "explode": [
+        0,
+        100,
+        170
+      ],
+      "cutawayHidden": false,
+      "role_zh": "理想行程时序驱动下移开启；最大示意升程 9 mm，无气门重叠。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "exhaust-spring-3",
+      "parent_id": "engine",
+      "label_zh": "3 缸排气气门弹簧",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          52,
+          17,
+          265
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        100,
+        205
+      ],
+      "cutawayHidden": false,
+      "role_zh": "示意弹簧显示位置，不模拟弹性或动态压缩。"
+    },
+    {
+      "part_id": "spark-plug-3",
+      "parent_id": "engine",
+      "label_zh": "3 缸火花塞",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          52,
+          0,
+          242
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        0,
+        200
+      ],
+      "cutawayHidden": false,
+      "role_zh": "只在理想做功起点标记点火；不使用实际点火提前角。"
+    },
+    {
+      "part_id": "liner-4",
+      "parent_id": "engine",
+      "label_zh": "4 缸缸套",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        40,
+        55
+      ],
+      "cutawayHidden": false,
+      "role_zh": "半圆缸套是预制剖视网格；内径示意为 82 mm。"
+    },
+    {
+      "part_id": "piston-4",
+      "parent_id": "engine",
+      "label_zh": "4 缸活塞",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          156,
+          0,
+          195
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "explode": [
+        0,
+        -85,
+        90
+      ],
+      "cutawayHidden": false,
+      "role_zh": "活塞销中心由曲柄连杆模型给出；活塞环和裙部用于辨识装配。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "rod-4",
+      "parent_id": "engine",
+      "label_zh": "4 缸连杆",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          156,
+          0,
+          45
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        -110,
+        -30
+      ],
+      "cutawayHidden": false,
+      "role_zh": "曲轴销到活塞销的示意杆长恒为 150 mm。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "intake-valve-4",
+      "parent_id": "engine",
+      "label_zh": "4 缸进气门",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          156,
+          -17,
+          232
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "explode": [
+        0,
+        -100,
+        170
+      ],
+      "cutawayHidden": false,
+      "role_zh": "理想行程时序驱动下移开启；最大示意升程 9 mm，无气门重叠。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "intake-spring-4",
+      "parent_id": "engine",
+      "label_zh": "4 缸进气气门弹簧",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          156,
+          -17,
+          265
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        -100,
+        205
+      ],
+      "cutawayHidden": false,
+      "role_zh": "示意弹簧显示位置，不模拟弹性或动态压缩。"
+    },
+    {
+      "part_id": "exhaust-valve-4",
+      "parent_id": "engine",
+      "label_zh": "4 缸排气门",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          156,
+          17,
+          232
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "explode": [
+        0,
+        100,
+        170
+      ],
+      "cutawayHidden": false,
+      "role_zh": "理想行程时序驱动下移开启；最大示意升程 9 mm，无气门重叠。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "exhaust-spring-4",
+      "parent_id": "engine",
+      "label_zh": "4 缸排气气门弹簧",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          156,
+          17,
+          265
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        100,
+        205
+      ],
+      "cutawayHidden": false,
+      "role_zh": "示意弹簧显示位置，不模拟弹性或动态压缩。"
+    },
+    {
+      "part_id": "spark-plug-4",
+      "parent_id": "engine",
+      "label_zh": "4 缸火花塞",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          156,
+          0,
+          242
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        0,
+        200
+      ],
+      "cutawayHidden": false,
+      "role_zh": "只在理想做功起点标记点火；不使用实际点火提前角。"
+    },
+    {
+      "part_id": "intake-camshaft",
+      "parent_id": "engine",
+      "label_zh": "进气凸轮轴",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          0,
+          -17,
+          315
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        -60,
+        250
+      ],
+      "cutawayHidden": false,
+      "role_zh": "角速度为曲轴的一半；凸轮轮廓从同一气门升程模型采样。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "exhaust-camshaft",
+      "parent_id": "engine",
+      "label_zh": "排气凸轮轴",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          0,
+          17,
+          315
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        60,
+        250
+      ],
+      "cutawayHidden": false,
+      "role_zh": "角速度为曲轴的一半；凸轮轮廓从同一气门升程模型采样。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "flywheel",
+      "parent_id": "engine",
+      "label_zh": "飞轮与输出端",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          251,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "explode": [
+        130,
+        0,
+        0
+      ],
+      "cutawayHidden": false,
+      "role_zh": "飞轮与曲轴同转；这里不求解转动惯量。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "timing-drive",
+      "parent_id": "engine",
+      "label_zh": "曲轴正时带轮",
+      "motionOwner": "model",
+      "rest": {
+        "translation": [
+          -248,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "explode": [
+        -100,
+        0,
+        0
+      ],
+      "cutawayHidden": false,
+      "role_zh": "曲轴带轮与上方凸轮带轮表达 2:1 转速关系。",
+      "poseSpace": "absolute-local-to-engine"
+    },
+    {
+      "part_id": "timing-belt",
+      "parent_id": "engine",
+      "label_zh": "正时带与张紧器",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        -90,
+        0,
+        0
+      ],
+      "cutawayHidden": false,
+      "role_zh": "带路径只显示传动连接；网页不模拟皮带材料或啮合。"
+    },
+    {
+      "part_id": "cam-cover",
+      "parent_id": "engine",
+      "label_zh": "气门室盖",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        0,
+        330
+      ],
+      "cutawayHidden": true,
+      "role_zh": "剖视时隐藏以观察凸轮和气门。"
+    },
+    {
+      "part_id": "intake-manifold",
+      "parent_id": "engine",
+      "label_zh": "进气歧管",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        -170,
+        55
+      ],
+      "cutawayHidden": true,
+      "role_zh": "四个进气支路只标示通道位置，不求解流量。"
+    },
+    {
+      "part_id": "exhaust-manifold",
+      "parent_id": "engine",
+      "label_zh": "排气歧管",
+      "motionOwner": "static",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationX": 0
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "axis": null,
+      "explode": [
+        0,
+        150,
+        25
+      ],
+      "cutawayHidden": false,
+      "role_zh": "四个排气支路与缸盖背面连接；不求解气流。"
+    }
+  ],
+  "assemblyRoot": "engine",
+  "asset": "inline-four.glb",
+  "source": "inline-four.blend",
+  "export": {
+    "blender": "4.5.14 LTS",
+    "gltf_yup": true,
+    "gltf_extras": true,
+    "animations": false
+  },
+  "motionConvention": "GLB rest is retained on load; model-owned nodes receive absolute engine-local pose once; independent display wrapper contributes only explode."
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "language": "en-US",
+  "steps": [
+    {"id":"overview","title":"Four cylinders. One crankshaft.","eyebrow":"THE ASSEMBLY","durationHint":14,"narration":"Four cylinders share one crankshaft. Each piston is at a different stage, so their power strokes take turns driving the same output. Watch one complete cycle unfold over two crankshaft revolutions."},
+    {"id":"intake","title":"Bring the mixture in.","eyebrow":"01 / INTAKE","durationHint":14,"narration":"Fuel joins incoming air upstream of the valve. As the piston moves down, the open intake valve admits the mixture. Blue shows incoming air and mixture; gold marks the schematic port-fuel spray."},
+    {"id":"compression","title":"Close the valves. Reduce the space.","eyebrow":"02 / COMPRESSION","durationHint":13,"narration":"Both valves close as the piston rises. The space above the piston becomes smaller, compressing the trapped mixture. The shaded region follows the piston geometry; it is not a pressure measurement."},
+    {"id":"ignition","title":"A spark starts the power stroke.","eyebrow":"03 / IGNITION & POWER","durationHint":14,"narration":"Near top dead centre, a spark starts combustion. The warm front illustrates burning mixture, followed by expansion as the piston descends. The connecting rod turns this motion into crankshaft rotation. Timing is slowed for clarity."},
+    {"id":"exhaust","title":"Clear the cylinder. Repeat.","eyebrow":"04 / EXHAUST","durationHint":13,"narration":"The exhaust valve opens and the rising piston pushes spent gas out. The cylinder is ready for another intake stroke. Across the four cylinders, the ideal firing order is one, three, four, two."},
+    {"id":"assembly","title":"Separate the parts. Keep the relationships.","eyebrow":"THE BIG PICTURE","durationHint":13,"narration":"The exploded view separates display parts to reveal how they fit together. Reassembly restores the same mechanism. This is a teaching model with ideal motion, not a combustion simulation or a verified service procedure."}
+  ]
+}

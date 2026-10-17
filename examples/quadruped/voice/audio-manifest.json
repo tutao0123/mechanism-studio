@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "provider": "doubao",
+  "complete": true,
+  "generatedAt": "2026-10-14T14:25:33.019Z",
+  "resourceId": "seed-tts-2.0",
+  "speaker": "zh_female_vv_uranus_bigtts",
+  "apiMode": "speech",
+  "format": "mp3",
+  "sampleRate": 24000,
+  "lessonHashPolicy": "narration-v1",
+  "lessonSha256": "b6d8cf960b19b017ea2135278cedeb64fe57c877e877a0863b1e23dcc4f8e2d1",
+  "steps": {
+    "overview": {
+      "src": "assets/audio/overview-934ea8ca584f2c148e9e7836d50ab21f78fa6922114dbf5e599994e072e814f3.mp3",
+      "bytes": 197613,
+      "sha256": "934ea8ca584f2c148e9e7836d50ab21f78fa6922114dbf5e599994e072e814f3",
+      "usage": {
+        "text_words": 111
+      }
+    },
+    "single-leg": {
+      "src": "assets/audio/single-leg-283e4499102b00c1eed089b9095722f7866847ecd38fef4041ba8eed10011b01.mp3",
+      "bytes": 185901,
+      "sha256": "283e4499102b00c1eed089b9095722f7866847ecd38fef4041ba8eed10011b01",
+      "usage": {
+        "text_words": 108
+      }
+    },
+    "inverse": {
+      "src": "assets/audio/inverse-10c479dc027d174b7495d993c5a9556285bbbdfbf1e4dbb7ff72fdcd962577dd.mp3",
+      "bytes": 197805,
+      "sha256": "10c479dc027d174b7495d993c5a9556285bbbdfbf1e4dbb7ff72fdcd962577dd",
+      "usage": {
+        "text_words": 110
+      }
+    },
+    "diagonal": {
+      "src": "assets/audio/diagonal-9ea4adba5f51a3392dee714ec44625d24445ecbb1fee18073330a18034a0f6a0.mp3",
+      "bytes": 196077,
+      "sha256": "9ea4adba5f51a3392dee714ec44625d24445ecbb1fee18073330a18034a0f6a0",
+      "usage": {
+        "text_words": 116
+      }
+    },
+    "limits": {
+      "src": "assets/audio/limits-a87b9203aa48058eb6096e32284fe756d546a4c259aac70da59c31b6cb0b2532.mp3",
+      "bytes": 202221,
+      "sha256": "a87b9203aa48058eb6096e32284fe756d546a4c259aac70da59c31b6cb0b2532",
+      "usage": {
+        "text_words": 118
+      }
+    },
+    "disassembly": {
+      "src": "assets/audio/disassembly-46a93d7f336743944bdae93429ea2cd5071563aa4b3b325330d1fa1e797ba6e3.mp3",
+      "bytes": 219501,
+      "sha256": "46a93d7f336743944bdae93429ea2cd5071563aa4b3b325330d1fa1e797ba6e3",
+      "usage": {
+        "text_words": 123
+      }
+    }
+  }
+}

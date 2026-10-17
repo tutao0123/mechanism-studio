@@ -1,0 +1,1672 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "generated-and-checked",
+  "blenderVersion": "4.5.14 LTS",
+  "sourceSpecSha256": "c1ba08c7ede7d866a84f6d9dba3c2919a4fef0f70380a8b684f81d411ef38231",
+  "assetUnits": "meters",
+  "sourceUnits": "illustrative-mm",
+  "metersPerSourceUnit": 0.001,
+  "axisMapping": "Blender [x,y,z] -> glTF [x,z,-y]",
+  "lockAxisBlender": [
+    1,
+    0,
+    0
+  ],
+  "plugPivotBlenderMeters": [
+    0,
+    0,
+    0.036000000000000004
+  ],
+  "plugPivotGltfMeters": [
+    0,
+    0.036000000000000004,
+    0
+  ],
+  "parts": [
+    {
+      "part_id": "shell-back",
+      "nodeName": "shell-back",
+      "category": "shell",
+      "restBlenderMeters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          0.006000000052154064,
+          -2.5865239153120578e-30,
+          0.0018500000005587935
+        ],
+        "max": [
+          0.15200001001358032,
+          0.03415000066161156,
+          0.12229999899864197
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.14600000996142626,
+        0.03415000066161156,
+        0.12044999899808317
+      ],
+      "motionOwner": "static",
+      "meshVertices": 9874,
+      "meshPolygons": 8654,
+      "actualGltfTranslationMeters": [
+        0,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          0.006000000052154064,
+          0.0018500000005587935,
+          -0.03415000066161156
+        ],
+        "max": [
+          0.15200001001358032,
+          0.12229999899864197,
+          2.5865239153120578e-30
+        ]
+      }
+    },
+    {
+      "part_id": "shell-front",
+      "nodeName": "shell-front",
+      "category": "shell",
+      "restBlenderMeters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          0.005999999586492777,
+          -0.03415000066161156,
+          0.0018500000005587935
+        ],
+        "max": [
+          0.15200001001358032,
+          0.0,
+          0.12229999899864197
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.14600001042708755,
+        0.03415000066161156,
+        0.12044999899808317
+      ],
+      "motionOwner": "static",
+      "meshVertices": 10099,
+      "meshPolygons": 8933,
+      "actualGltfTranslationMeters": [
+        0,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          0.005999999586492777,
+          0.0018500000005587935,
+          0
+        ],
+        "max": [
+          0.15200001001358032,
+          0.12229999899864197,
+          0.03415000066161156
+        ]
+      }
+    },
+    {
+      "part_id": "plug-back",
+      "nodeName": "plug-back",
+      "category": "plug",
+      "restBlenderMeters": [
+        0.0,
+        0.0,
+        0.035999998450279236
+      ],
+      "restGltfMeters": [
+        0.0,
+        0.035999998450279236,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          0.005999999586492777,
+          0.0,
+          -0.027796654030680656
+        ],
+        "max": [
+          0.15199999511241913,
+          0.02800000086426735,
+          0.028000004589557648
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.14599999552592635,
+        0.02800000086426735,
+        0.055796658620238304
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 4674,
+      "meshPolygons": 4191,
+      "actualGltfTranslationMeters": [
+        0,
+        0.035999998450279236,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          0.005999999586492777,
+          -0.027796654030680656,
+          -0.02800000086426735
+        ],
+        "max": [
+          0.15199999511241913,
+          0.028000004589557648,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "plug-front",
+      "nodeName": "plug-front",
+      "category": "plug",
+      "restBlenderMeters": [
+        0.0,
+        0.0,
+        0.035999998450279236
+      ],
+      "restGltfMeters": [
+        0.0,
+        0.035999998450279236,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          0.005999999586492777,
+          -0.02800000086426735,
+          -0.027796654030680656
+        ],
+        "max": [
+          0.15199999511241913,
+          0.0,
+          0.028000004589557648
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.14599999552592635,
+        0.02800000086426735,
+        0.055796658620238304
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 4702,
+      "meshPolygons": 4234,
+      "actualGltfTranslationMeters": [
+        0,
+        0.035999998450279236,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          0.005999999586492777,
+          -0.027796654030680656,
+          0
+        ],
+        "max": [
+          0.15199999511241913,
+          0.028000004589557648,
+          0.02800000086426735
+        ]
+      }
+    },
+    {
+      "part_id": "lower-1",
+      "nodeName": "lower-1",
+      "category": "lower",
+      "restBlenderMeters": [
+        0.02800000086426735,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.02800000086426735,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.00419999985024333,
+          -0.00419999985024333,
+          0.0
+        ],
+        "max": [
+          0.00419999985024333,
+          0.00419999985024333,
+          0.03200000151991844
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.00839999970048666,
+        0.00839999970048666,
+        0.03200000151991844
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 576,
+      "meshPolygons": 506,
+      "actualGltfTranslationMeters": [
+        0.02800000086426735,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.00419999985024333,
+          0,
+          -0.00419999985024333
+        ],
+        "max": [
+          0.00419999985024333,
+          0.03200000151991844,
+          0.00419999985024333
+        ]
+      }
+    },
+    {
+      "part_id": "driver-1",
+      "nodeName": "driver-1",
+      "category": "driver",
+      "restBlenderMeters": [
+        0.02800000086426735,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.02800000086426735,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.00419999985024333,
+          -0.00419999985024333,
+          0.0
+        ],
+        "max": [
+          0.00419999985024333,
+          0.00419999985024333,
+          0.035999998450279236
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.00839999970048666,
+        0.00839999970048666,
+        0.035999998450279236
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 648,
+      "meshPolygons": 578,
+      "actualGltfTranslationMeters": [
+        0.02800000086426735,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.00419999985024333,
+          0,
+          -0.00419999985024333
+        ],
+        "max": [
+          0.00419999985024333,
+          0.035999998450279236,
+          0.00419999985024333
+        ]
+      }
+    },
+    {
+      "part_id": "spring-1",
+      "nodeName": "spring-1",
+      "category": "spring",
+      "restBlenderMeters": [
+        0.02800000086426735,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.02800000086426735,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.004059999715536833,
+          -0.004059999715536833,
+          0.0
+        ],
+        "max": [
+          0.004059999715536833,
+          0.004059999715536833,
+          1.0
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.008119999431073666,
+        0.008119999431073666,
+        1.0
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 4236,
+      "meshPolygons": 4226,
+      "actualGltfTranslationMeters": [
+        0.02800000086426735,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.004059999715536833,
+          0,
+          -0.004059999715536833
+        ],
+        "max": [
+          0.004059999715536833,
+          1,
+          0.004059999715536833
+        ]
+      }
+    },
+    {
+      "part_id": "lower-2",
+      "nodeName": "lower-2",
+      "category": "lower",
+      "restBlenderMeters": [
+        0.052000001072883606,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.052000001072883606,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.00419999985024333,
+          -0.00419999985024333,
+          0.0
+        ],
+        "max": [
+          0.00419999985024333,
+          0.00419999985024333,
+          0.019999999552965164
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.00839999970048666,
+        0.00839999970048666,
+        0.019999999552965164
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 576,
+      "meshPolygons": 506,
+      "actualGltfTranslationMeters": [
+        0.052000001072883606,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.00419999985024333,
+          0,
+          -0.00419999985024333
+        ],
+        "max": [
+          0.00419999985024333,
+          0.019999999552965164,
+          0.00419999985024333
+        ]
+      }
+    },
+    {
+      "part_id": "driver-2",
+      "nodeName": "driver-2",
+      "category": "driver",
+      "restBlenderMeters": [
+        0.052000001072883606,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.052000001072883606,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.00419999985024333,
+          -0.00419999985024333,
+          0.0
+        ],
+        "max": [
+          0.00419999985024333,
+          0.00419999985024333,
+          0.035999998450279236
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.00839999970048666,
+        0.00839999970048666,
+        0.035999998450279236
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 648,
+      "meshPolygons": 578,
+      "actualGltfTranslationMeters": [
+        0.052000001072883606,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.00419999985024333,
+          0,
+          -0.00419999985024333
+        ],
+        "max": [
+          0.00419999985024333,
+          0.035999998450279236,
+          0.00419999985024333
+        ]
+      }
+    },
+    {
+      "part_id": "spring-2",
+      "nodeName": "spring-2",
+      "category": "spring",
+      "restBlenderMeters": [
+        0.052000001072883606,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.052000001072883606,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.004059999715536833,
+          -0.004059999715536833,
+          0.0
+        ],
+        "max": [
+          0.004059999715536833,
+          0.004059999715536833,
+          1.0
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.008119999431073666,
+        0.008119999431073666,
+        1.0
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 4236,
+      "meshPolygons": 4226,
+      "actualGltfTranslationMeters": [
+        0.052000001072883606,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.004059999715536833,
+          0,
+          -0.004059999715536833
+        ],
+        "max": [
+          0.004059999715536833,
+          1,
+          0.004059999715536833
+        ]
+      }
+    },
+    {
+      "part_id": "lower-3",
+      "nodeName": "lower-3",
+      "category": "lower",
+      "restBlenderMeters": [
+        0.07599999755620956,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.07599999755620956,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.00419999985024333,
+          -0.00419999985024333,
+          0.0
+        ],
+        "max": [
+          0.00419999985024333,
+          0.00419999985024333,
+          0.02800000086426735
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.00839999970048666,
+        0.00839999970048666,
+        0.02800000086426735
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 576,
+      "meshPolygons": 506,
+      "actualGltfTranslationMeters": [
+        0.07599999755620956,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.00419999985024333,
+          0,
+          -0.00419999985024333
+        ],
+        "max": [
+          0.00419999985024333,
+          0.02800000086426735,
+          0.00419999985024333
+        ]
+      }
+    },
+    {
+      "part_id": "driver-3",
+      "nodeName": "driver-3",
+      "category": "driver",
+      "restBlenderMeters": [
+        0.07599999755620956,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.07599999755620956,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.00419999985024333,
+          -0.00419999985024333,
+          0.0
+        ],
+        "max": [
+          0.00419999985024333,
+          0.00419999985024333,
+          0.035999998450279236
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.00839999970048666,
+        0.00839999970048666,
+        0.035999998450279236
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 648,
+      "meshPolygons": 578,
+      "actualGltfTranslationMeters": [
+        0.07599999755620956,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.00419999985024333,
+          0,
+          -0.00419999985024333
+        ],
+        "max": [
+          0.00419999985024333,
+          0.035999998450279236,
+          0.00419999985024333
+        ]
+      }
+    },
+    {
+      "part_id": "spring-3",
+      "nodeName": "spring-3",
+      "category": "spring",
+      "restBlenderMeters": [
+        0.07599999755620956,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.07599999755620956,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.004059999715536833,
+          -0.004059999715536833,
+          0.0
+        ],
+        "max": [
+          0.004059999715536833,
+          0.004059999715536833,
+          1.0
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.008119999431073666,
+        0.008119999431073666,
+        1.0
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 4236,
+      "meshPolygons": 4226,
+      "actualGltfTranslationMeters": [
+        0.07599999755620956,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.004059999715536833,
+          0,
+          -0.004059999715536833
+        ],
+        "max": [
+          0.004059999715536833,
+          1,
+          0.004059999715536833
+        ]
+      }
+    },
+    {
+      "part_id": "lower-4",
+      "nodeName": "lower-4",
+      "category": "lower",
+      "restBlenderMeters": [
+        0.10000000149011612,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.10000000149011612,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.00419999985024333,
+          -0.00419999985024333,
+          0.0
+        ],
+        "max": [
+          0.00419999985024333,
+          0.00419999985024333,
+          0.01600000075995922
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.00839999970048666,
+        0.00839999970048666,
+        0.01600000075995922
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 576,
+      "meshPolygons": 506,
+      "actualGltfTranslationMeters": [
+        0.10000000149011612,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.00419999985024333,
+          0,
+          -0.00419999985024333
+        ],
+        "max": [
+          0.00419999985024333,
+          0.01600000075995922,
+          0.00419999985024333
+        ]
+      }
+    },
+    {
+      "part_id": "driver-4",
+      "nodeName": "driver-4",
+      "category": "driver",
+      "restBlenderMeters": [
+        0.10000000149011612,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.10000000149011612,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.00419999985024333,
+          -0.00419999985024333,
+          0.0
+        ],
+        "max": [
+          0.00419999985024333,
+          0.00419999985024333,
+          0.035999998450279236
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.00839999970048666,
+        0.00839999970048666,
+        0.035999998450279236
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 648,
+      "meshPolygons": 578,
+      "actualGltfTranslationMeters": [
+        0.10000000149011612,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.00419999985024333,
+          0,
+          -0.00419999985024333
+        ],
+        "max": [
+          0.00419999985024333,
+          0.035999998450279236,
+          0.00419999985024333
+        ]
+      }
+    },
+    {
+      "part_id": "spring-4",
+      "nodeName": "spring-4",
+      "category": "spring",
+      "restBlenderMeters": [
+        0.10000000149011612,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.10000000149011612,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.004059999715536833,
+          -0.004059999715536833,
+          0.0
+        ],
+        "max": [
+          0.004059999715536833,
+          0.004059999715536833,
+          1.0
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.008119999431073666,
+        0.008119999431073666,
+        1.0
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 4236,
+      "meshPolygons": 4226,
+      "actualGltfTranslationMeters": [
+        0.10000000149011612,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.004059999715536833,
+          0,
+          -0.004059999715536833
+        ],
+        "max": [
+          0.004059999715536833,
+          1,
+          0.004059999715536833
+        ]
+      }
+    },
+    {
+      "part_id": "lower-5",
+      "nodeName": "lower-5",
+      "category": "lower",
+      "restBlenderMeters": [
+        0.12399999797344208,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.12399999797344208,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.00419999985024333,
+          -0.00419999985024333,
+          0.0
+        ],
+        "max": [
+          0.00419999985024333,
+          0.00419999985024333,
+          0.024000000208616257
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.00839999970048666,
+        0.00839999970048666,
+        0.024000000208616257
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 576,
+      "meshPolygons": 506,
+      "actualGltfTranslationMeters": [
+        0.12399999797344208,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.00419999985024333,
+          0,
+          -0.00419999985024333
+        ],
+        "max": [
+          0.00419999985024333,
+          0.024000000208616257,
+          0.00419999985024333
+        ]
+      }
+    },
+    {
+      "part_id": "driver-5",
+      "nodeName": "driver-5",
+      "category": "driver",
+      "restBlenderMeters": [
+        0.12399999797344208,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.12399999797344208,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.00419999985024333,
+          -0.00419999985024333,
+          0.0
+        ],
+        "max": [
+          0.00419999985024333,
+          0.00419999985024333,
+          0.035999998450279236
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.00839999970048666,
+        0.00839999970048666,
+        0.035999998450279236
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 648,
+      "meshPolygons": 578,
+      "actualGltfTranslationMeters": [
+        0.12399999797344208,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.00419999985024333,
+          0,
+          -0.00419999985024333
+        ],
+        "max": [
+          0.00419999985024333,
+          0.035999998450279236,
+          0.00419999985024333
+        ]
+      }
+    },
+    {
+      "part_id": "spring-5",
+      "nodeName": "spring-5",
+      "category": "spring",
+      "restBlenderMeters": [
+        0.12399999797344208,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.12399999797344208,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.004059999715536833,
+          -0.004059999715536833,
+          0.0
+        ],
+        "max": [
+          0.004059999715536833,
+          0.004059999715536833,
+          1.0
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.008119999431073666,
+        0.008119999431073666,
+        1.0
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 4236,
+      "meshPolygons": 4226,
+      "actualGltfTranslationMeters": [
+        0.12399999797344208,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.004059999715536833,
+          0,
+          -0.004059999715536833
+        ],
+        "max": [
+          0.004059999715536833,
+          1,
+          0.004059999715536833
+        ]
+      }
+    },
+    {
+      "part_id": "key-correct",
+      "nodeName": "key-correct",
+      "category": "key",
+      "restBlenderMeters": [
+        0.0,
+        0.0,
+        0.035999998450279236
+      ],
+      "restGltfMeters": [
+        0.0,
+        0.035999998450279236,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          0.004000000189989805,
+          -0.002400000113993883,
+          -0.030499998480081558
+        ],
+        "max": [
+          0.1875,
+          0.002400000113993883,
+          0.012000001966953278
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.1834999998100102,
+        0.004800000227987766,
+        0.042500000447034836
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 4646,
+      "meshPolygons": 4053,
+      "actualGltfTranslationMeters": [
+        0,
+        0.035999998450279236,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          0.004000000189989805,
+          -0.030499998480081558,
+          -0.002400000113993883
+        ],
+        "max": [
+          0.1875,
+          0.012000001966953278,
+          0.002400000113993883
+        ]
+      }
+    },
+    {
+      "part_id": "key-wrong",
+      "nodeName": "key-wrong",
+      "category": "key",
+      "restBlenderMeters": [
+        0.0,
+        0.0,
+        0.035999998450279236
+      ],
+      "restGltfMeters": [
+        0.0,
+        0.035999998450279236,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          0.004000000189989805,
+          -0.002400000113993883,
+          -0.030499998480081558
+        ],
+        "max": [
+          0.1875,
+          0.002400000113993883,
+          0.007000003010034561
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.1834999998100102,
+        0.004800000227987766,
+        0.03750000149011612
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 4646,
+      "meshPolygons": 4053,
+      "actualGltfTranslationMeters": [
+        0,
+        0.035999998450279236,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          0.004000000189989805,
+          -0.030499998480081558,
+          -0.002400000113993883
+        ],
+        "max": [
+          0.1875,
+          0.007000003010034561,
+          0.002400000113993883
+        ]
+      }
+    },
+    {
+      "part_id": "key-blank",
+      "nodeName": "key-blank",
+      "category": "key",
+      "restBlenderMeters": [
+        0.0,
+        0.0,
+        0.035999998450279236
+      ],
+      "restGltfMeters": [
+        0.0,
+        0.035999998450279236,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          0.004000000189989805,
+          -0.002400000113993883,
+          -0.030499998480081558
+        ],
+        "max": [
+          0.1875,
+          0.002400000113993883,
+          0.0005000010132789612
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.1834999998100102,
+        0.004800000227987766,
+        0.03099999949336052
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 4646,
+      "meshPolygons": 4053,
+      "actualGltfTranslationMeters": [
+        0,
+        0.035999998450279236,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          0.004000000189989805,
+          -0.030499998480081558,
+          -0.002400000113993883
+        ],
+        "max": [
+          0.1875,
+          0.0005000010132789612,
+          0.002400000113993883
+        ]
+      }
+    },
+    {
+      "part_id": "cam",
+      "nodeName": "cam",
+      "category": "cam",
+      "restBlenderMeters": [
+        0.0,
+        0.0,
+        0.035999998450279236
+      ],
+      "restGltfMeters": [
+        0.0,
+        0.035999998450279236,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.004000000189989805,
+          -0.009999999776482582,
+          -0.009999999776482582
+        ],
+        "max": [
+          0.007000000681728125,
+          0.009999999776482582,
+          0.03099999949336052
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.01100000087171793,
+        0.019999999552965164,
+        0.0409999992698431
+      ],
+      "motionOwner": "web-model",
+      "meshVertices": 1168,
+      "meshPolygons": 1042,
+      "actualGltfTranslationMeters": [
+        0,
+        0.035999998450279236,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.004000000189989805,
+          -0.009999999776482582,
+          -0.009999999776482582
+        ],
+        "max": [
+          0.007000000681728125,
+          0.03099999949336052,
+          0.009999999776482582
+        ]
+      }
+    },
+    {
+      "part_id": "base",
+      "nodeName": "base",
+      "category": "fixed",
+      "restBlenderMeters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "restGltfMeters": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "localBoundsBlenderMeters": {
+        "min": [
+          -0.023000001907348633,
+          -0.05299999937415123,
+          -0.006000000052154064
+        ],
+        "max": [
+          0.20100000500679016,
+          0.05299999937415123,
+          0.014750000089406967
+        ]
+      },
+      "localDimensionsBlenderMeters": [
+        0.2240000069141388,
+        0.10599999874830246,
+        0.02075000014156103
+      ],
+      "motionOwner": "static",
+      "meshVertices": 13761,
+      "meshPolygons": 11472,
+      "actualGltfTranslationMeters": [
+        0,
+        0,
+        0
+      ],
+      "actualGltfRotationQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "actualGltfScale": [
+        1,
+        1,
+        1
+      ],
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.023000001907348633,
+          -0.006000000052154064,
+          -0.05299999937415123
+        ],
+        "max": [
+          0.20100000500679016,
+          0.014750000089406967,
+          0.05299999937415123
+        ]
+      }
+    }
+  ],
+  "defaultHiddenPartIds": [
+    "shell-front",
+    "plug-front",
+    "key-wrong",
+    "key-blank"
+  ],
+  "geometricFinesse": {
+    "circleSamples": 128,
+    "pinCircleSamples": 72,
+    "springPathSegments": 352,
+    "springTubeSides": 12,
+    "semanticDetails": [
+      {
+        "owner": "shell-back/front",
+        "kind": "axial bearing shoulders",
+        "count": 2
+      },
+      {
+        "owner": "shell-back/front",
+        "kind": "circumferential recessed seams",
+        "count": 2
+      },
+      {
+        "owner": "shell-back/front",
+        "kind": "spring chamber seat collars",
+        "count": 5
+      },
+      {
+        "owner": "shell-back/front",
+        "kind": "seated slotted retainer heads",
+        "count": 8
+      },
+      {
+        "owner": "plug-back/front",
+        "kind": "chamfered end shoulders",
+        "count": 2
+      },
+      {
+        "owner": "plug-back/front",
+        "kind": "shallow ring grooves within original bore",
+        "count": 2
+      },
+      {
+        "owner": "lower-1..5",
+        "kind": "fine upper pin relief rings",
+        "count": 5
+      },
+      {
+        "owner": "driver-1..5",
+        "kind": "fine lower pin relief rings and upper seats",
+        "count": 5
+      },
+      {
+        "owner": "key-correct/wrong/blank",
+        "kind": "rounded bow with bevelled physical hole",
+        "count": 3
+      },
+      {
+        "owner": "key-correct/wrong/blank",
+        "kind": "bow face inset frames",
+        "count": 6
+      },
+      {
+        "owner": "key-correct/wrong/blank",
+        "kind": "shallow grip flutes",
+        "count": 18
+      },
+      {
+        "owner": "key-correct/wrong/blank",
+        "kind": "closed rounded lower blade guide flutes",
+        "count": 6
+      },
+      {
+        "owner": "base",
+        "kind": "closed inset perimeter groove",
+        "count": 1
+      },
+      {
+        "owner": "base",
+        "kind": "seated cradle washers and slotted heads",
+        "count": 4
+      },
+      {
+        "owner": "base",
+        "kind": "flush foot-axis fastener pockets and slotted heads",
+        "count": 4
+      },
+      {
+        "owner": "base",
+        "kind": "shallow engraved 5 PIN identity plate",
+        "count": 1
+      }
+    ],
+    "detailCount": 74,
+    "keyContactProfilePreserved": true,
+    "rigidDetailsJoinedToOriginalOwners": true
+  },
+  "glbState": "neutral asset rest; all nodes top-level; webpage owns all mechanism motion",
+  "blendPreviewState": "matching key fully seated, angle zero; springs scaled for preview",
+  "springGeometry": {
+    "localZMinMeters": 0,
+    "localZMaxMeters": 1,
+    "referenceRoundWireHeightMm": 18,
+    "localGltfYMinMeters": 0,
+    "localGltfYMaxMeters": 1,
+    "runtimeScaleGltfY": "requested spring height in metres",
+    "deformation": "teaching scale, not spring physics"
+  },
+  "limitations": [
+    "illustrative dimensions, not a real lock model",
+    "planar shear rule from shared model",
+    "no rigid-body physics or contact solver",
+    "conical lower tips are teaching geometry"
+  ],
+  "verification": {
+    "glbBinaryValid": true,
+    "partIdsUnique": true,
+    "topLevelParts": true,
+    "nodeRestMatchesManifest": true,
+    "sectionHalvesActuallyCut": true,
+    "animationCount": 0,
+    "partCount": 24,
+    "meshCount": 24,
+    "triangleCount": 170357,
+    "primitiveCount": 26,
+    "glbBytes": 3813252
+  },
+  "download": {
+    "version": "4.5.14 LTS",
+    "officialRouter": "https://mirror.blender.org/release/Blender4.5/blender-4.5.14-windows-x64.zip",
+    "officialChecksum": "https://mirror.blender.org/release/Blender4.5/blender-4.5.14.sha256",
+    "zipSha256": "b9533d2397ac1984db4466fb23a7a4649391cca93f6e84209f9bcc60d071c8b9"
+  }
+}

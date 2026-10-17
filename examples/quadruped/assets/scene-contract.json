@@ -1,0 +1,448 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "studio-quadruped-8dof",
+  "assetRevision": "1",
+  "assemblyRoot": "quadruped",
+  "asset": "quadruped.glb",
+  "source": "quadruped.blend",
+  "units": {
+    "body": "mm",
+    "asset": "m"
+  },
+  "coordinateMap": "0.001*[x,z,-y]",
+  "motionConvention": "Flat semantic nodes receive absolute GLTF poses; independent display wrappers own explosion.",
+  "limitations": [
+    "原创示意尺寸，不对应量产机器人",
+    "8DOF：每腿髋俯仰与膝俯仰，外展固定",
+    "固定机身的正逆运动学与原地步态，不求解平衡、接触力或碰撞",
+    "网格教学资产，不是工程CAD"
+  ],
+  "parts": [
+    {
+      "part_id": "body",
+      "parent_id": "quadruped",
+      "label_zh": "机架与固定横梁",
+      "role_zh": "固定机身及四个髋支架；本例不模拟浮动基座。",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationY": -0.0
+      },
+      "explode": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "static"
+    },
+    {
+      "part_id": "cover",
+      "parent_id": "quadruped",
+      "label_zh": "通风上盖",
+      "role_zh": "可隐藏上盖，观察电池和控制板。",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationY": -0.0
+      },
+      "explode": [
+        0.0,
+        0.0,
+        0.115
+      ],
+      "cutawayHidden": true,
+      "motionOwner": "static"
+    },
+    {
+      "part_id": "battery",
+      "parent_id": "quadruped",
+      "label_zh": "电池示意模块",
+      "role_zh": "仅标示能源模块位置，不求解电路、电量或质量。",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationY": -0.0
+      },
+      "explode": [
+        -0.045,
+        0.0,
+        0.065
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "static"
+    },
+    {
+      "part_id": "controller",
+      "parent_id": "quadruped",
+      "label_zh": "控制板与连接器",
+      "role_zh": "仅展示控制器布局；网页不发送硬件指令。",
+      "rest": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotationY": -0.0
+      },
+      "explode": [
+        0.04,
+        0.0,
+        0.08
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "static"
+    },
+    {
+      "part_id": "hip-fl",
+      "parent_id": "quadruped",
+      "label_zh": "左前固定髋支架",
+      "role_zh": "固定外展方向；髋俯仰由上腿驱动。",
+      "rest": {
+        "translation": [
+          110,
+          92,
+          200
+        ],
+        "rotationY": -0.0
+      },
+      "explode": [
+        0.0,
+        0.07,
+        0.03
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "static"
+    },
+    {
+      "part_id": "thigh-fl",
+      "parent_id": "quadruped",
+      "label_zh": "左前上腿与膝电机",
+      "role_zh": "100 mm 两轴中心距；髋转角来自逆运动学。",
+      "rest": {
+        "translation": [
+          110,
+          92,
+          200
+        ],
+        "rotationY": 0.5253836672042217
+      },
+      "explode": [
+        0.0,
+        0.11,
+        0.0
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "model"
+    },
+    {
+      "part_id": "shin-fl",
+      "parent_id": "quadruped",
+      "label_zh": "左前小腿",
+      "role_zh": "115 mm 膝轴到足心；运动角为髋角加膝角。",
+      "rest": {
+        "translation": [
+          59.84550358063265,
+          92,
+          113.48684210526316
+        ],
+        "rotationY": -0.4512892301047648
+      },
+      "explode": [
+        0.02,
+        0.15,
+        -0.02
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "model"
+    },
+    {
+      "part_id": "foot-fl",
+      "parent_id": "quadruped",
+      "label_zh": "左前球形足垫",
+      "role_zh": "足心来自正运动学，半径 10 mm；不模拟压缩或接触力。",
+      "rest": {
+        "translation": [
+          110,
+          92,
+          10
+        ],
+        "rotationY": -0.0
+      },
+      "explode": [
+        0.02,
+        0.18,
+        -0.06
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "model"
+    },
+    {
+      "part_id": "hip-fr",
+      "parent_id": "quadruped",
+      "label_zh": "右前固定髋支架",
+      "role_zh": "固定外展方向；髋俯仰由上腿驱动。",
+      "rest": {
+        "translation": [
+          110,
+          -92,
+          200
+        ],
+        "rotationY": -0.0
+      },
+      "explode": [
+        0.0,
+        -0.07,
+        0.03
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "static"
+    },
+    {
+      "part_id": "thigh-fr",
+      "parent_id": "quadruped",
+      "label_zh": "右前上腿与膝电机",
+      "role_zh": "100 mm 两轴中心距；髋转角来自逆运动学。",
+      "rest": {
+        "translation": [
+          110,
+          -92,
+          200
+        ],
+        "rotationY": 0.5253836672042217
+      },
+      "explode": [
+        0.0,
+        -0.11,
+        0.0
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "model"
+    },
+    {
+      "part_id": "shin-fr",
+      "parent_id": "quadruped",
+      "label_zh": "右前小腿",
+      "role_zh": "115 mm 膝轴到足心；运动角为髋角加膝角。",
+      "rest": {
+        "translation": [
+          59.84550358063265,
+          -92,
+          113.48684210526316
+        ],
+        "rotationY": -0.4512892301047648
+      },
+      "explode": [
+        0.02,
+        -0.15,
+        -0.02
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "model"
+    },
+    {
+      "part_id": "foot-fr",
+      "parent_id": "quadruped",
+      "label_zh": "右前球形足垫",
+      "role_zh": "足心来自正运动学，半径 10 mm；不模拟压缩或接触力。",
+      "rest": {
+        "translation": [
+          110,
+          -92,
+          10
+        ],
+        "rotationY": -0.0
+      },
+      "explode": [
+        0.02,
+        -0.18,
+        -0.06
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "model"
+    },
+    {
+      "part_id": "hip-rl",
+      "parent_id": "quadruped",
+      "label_zh": "左后固定髋支架",
+      "role_zh": "固定外展方向；髋俯仰由上腿驱动。",
+      "rest": {
+        "translation": [
+          -110,
+          92,
+          200
+        ],
+        "rotationY": -0.0
+      },
+      "explode": [
+        0.0,
+        0.07,
+        0.03
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "static"
+    },
+    {
+      "part_id": "thigh-rl",
+      "parent_id": "quadruped",
+      "label_zh": "左后上腿与膝电机",
+      "role_zh": "100 mm 两轴中心距；髋转角来自逆运动学。",
+      "rest": {
+        "translation": [
+          -110,
+          92,
+          200
+        ],
+        "rotationY": 0.5253836672042217
+      },
+      "explode": [
+        0.0,
+        0.11,
+        0.0
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "model"
+    },
+    {
+      "part_id": "shin-rl",
+      "parent_id": "quadruped",
+      "label_zh": "左后小腿",
+      "role_zh": "115 mm 膝轴到足心；运动角为髋角加膝角。",
+      "rest": {
+        "translation": [
+          -160.15449641936735,
+          92,
+          113.48684210526316
+        ],
+        "rotationY": -0.4512892301047648
+      },
+      "explode": [
+        0.02,
+        0.15,
+        -0.02
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "model"
+    },
+    {
+      "part_id": "foot-rl",
+      "parent_id": "quadruped",
+      "label_zh": "左后球形足垫",
+      "role_zh": "足心来自正运动学，半径 10 mm；不模拟压缩或接触力。",
+      "rest": {
+        "translation": [
+          -110,
+          92,
+          10
+        ],
+        "rotationY": -0.0
+      },
+      "explode": [
+        0.02,
+        0.18,
+        -0.06
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "model"
+    },
+    {
+      "part_id": "hip-rr",
+      "parent_id": "quadruped",
+      "label_zh": "右后固定髋支架",
+      "role_zh": "固定外展方向；髋俯仰由上腿驱动。",
+      "rest": {
+        "translation": [
+          -110,
+          -92,
+          200
+        ],
+        "rotationY": -0.0
+      },
+      "explode": [
+        0.0,
+        -0.07,
+        0.03
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "static"
+    },
+    {
+      "part_id": "thigh-rr",
+      "parent_id": "quadruped",
+      "label_zh": "右后上腿与膝电机",
+      "role_zh": "100 mm 两轴中心距；髋转角来自逆运动学。",
+      "rest": {
+        "translation": [
+          -110,
+          -92,
+          200
+        ],
+        "rotationY": 0.5253836672042217
+      },
+      "explode": [
+        0.0,
+        -0.11,
+        0.0
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "model"
+    },
+    {
+      "part_id": "shin-rr",
+      "parent_id": "quadruped",
+      "label_zh": "右后小腿",
+      "role_zh": "115 mm 膝轴到足心；运动角为髋角加膝角。",
+      "rest": {
+        "translation": [
+          -160.15449641936735,
+          -92,
+          113.48684210526316
+        ],
+        "rotationY": -0.4512892301047648
+      },
+      "explode": [
+        0.02,
+        -0.15,
+        -0.02
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "model"
+    },
+    {
+      "part_id": "foot-rr",
+      "parent_id": "quadruped",
+      "label_zh": "右后球形足垫",
+      "role_zh": "足心来自正运动学，半径 10 mm；不模拟压缩或接触力。",
+      "rest": {
+        "translation": [
+          -110,
+          -92,
+          10
+        ],
+        "rotationY": -0.0
+      },
+      "explode": [
+        0.02,
+        -0.18,
+        -0.06
+      ],
+      "cutawayHidden": false,
+      "motionOwner": "model"
+    }
+  ],
+  "export": {
+    "blender": "4.5.14 LTS",
+    "gltf_yup": true,
+    "gltf_extras": true,
+    "animations": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "title": "WOLF V1.2 actuator — real STEP assembly",
+  "repository": "https://github.com/Anthrobotics/wolf-actuator",
+  "commit": "776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea",
+  "file": "CAD/wolf-actuator-assembly.step",
+  "originalFilename": "wolf-actuator-assembly.step",
+  "url": "https://github.com/Anthrobotics/wolf-actuator/blob/776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea/CAD/wolf-actuator-assembly.step",
+  "rawUrl": "https://raw.githubusercontent.com/Anthrobotics/wolf-actuator/776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea/CAD/wolf-actuator-assembly.step",
+  "author": "Anthrobotics and WOLF actuator contributors",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://github.com/Anthrobotics/wolf-actuator/blob/776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea/LICENSE",
+  "licenseEvidenceUrl": "https://github.com/Anthrobotics/wolf-actuator/blob/776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea/README.md#license",
+  "licenseLocal": "LICENSE",
+  "sourceSHA256": "b352183e1bd0d55c403a6f406c3b2886a3b1b374b47cf32bcb69d4277d252e35",
+  "sourceByteLength": 88565658,
+  "gitBlobSHA1": "1919efd133341adfe588ea555362467ab053b4c0",
+  "sourceLengthUnit": "m",
+  "sourceFormat": "STEP AP242_MANAGED_MODEL_BASED_3D_ENGINEERING_MIM_LF",
+  "downloadedOn": "2026-10-17",
+  "modified": false,
+  "derivatives": "Original STEP, upstream README, license and assembly guide are byte-identical. Display derivatives must preserve source graph/placement and identify all presentation changes; source and derived model assets remain CC-BY-SA-4.0.",
+  "assemblyManualUrl": "https://github.com/Anthrobotics/wolf-actuator/blob/776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea/WOLF%20Actuator%20Assembly%20and%20Usage%20Guide%20%5BV1.1%5D.pdf",
+  "sourceContents": {
+    "productDefinitions": 184,
+    "usageRelations": 252,
+    "assemblyUsageRelations": 7,
+    "leafUsageRelations": 245
+  },
+  "sourceNotes": [
+    "Source has 184 explicit metre geometry contexts and AP242 schema. OCCT normalizes geometry and placement to millimetres, and the display applies its metre/Y-up mapping exactly once; original source units and bytes remain unchanged.",
+    "The V1.2 upstream README directs readers to the included V1.1 assembly guide.",
+    "Twelve individually named planet definitions are retained. Generic Part N, cc and magnet names remain as provided; names are not upgraded into inferred component semantics.",
+    "STEP placements are source data, not recovered mates or validated kinematic constraints.",
+    "69 bearing definitions contain embedded source triangulated faces without analytic surfaces and occur twice each. Their original face geometry is preserved, analytic bounds remain null, and analytic-geometry coverage is explicitly limited."
+  ],
+  "upstreamAttribution": "Upstream credits the RFX gearbox by Robin Fröjd as design inspiration."
+}

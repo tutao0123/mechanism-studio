@@ -1,0 +1,79 @@
+{
+  "title": "Galileo 2 Extruder — real STEP assembly",
+  "repository": "https://github.com/JaredC01/Galileo2",
+  "commit": "98f8a37944d7277cd37231776400553cc402219f",
+  "file": "galileo2_extruder/cad/Galileo 2 Extruder.step",
+  "originalFilename": "Galileo 2 Extruder.step",
+  "url": "https://github.com/JaredC01/Galileo2/blob/98f8a37944d7277cd37231776400553cc402219f/galileo2_extruder/cad/Galileo%202%20Extruder.step",
+  "rawUrl": "https://raw.githubusercontent.com/JaredC01/Galileo2/98f8a37944d7277cd37231776400553cc402219f/galileo2_extruder/cad/Galileo%202%20Extruder.step",
+  "author": "JaredC01 and Galileo 2 contributors",
+  "license": "GPL-3.0",
+  "licenseUrl": "https://github.com/JaredC01/Galileo2/blob/98f8a37944d7277cd37231776400553cc402219f/LICENSE",
+  "licenseEvidenceUrl": "https://github.com/JaredC01/Galileo2/blob/98f8a37944d7277cd37231776400553cc402219f/LICENSE",
+  "licenseLocal": "LICENSE.md",
+  "licenseVersionNote": "Upstream repository supplies the GNU GPL version 3 text; no additional or-later grant has been inferred.",
+  "sourceSHA256": "d3a699b72a8cbdf7fc3acc70078870df141efb0a62991f8fa0bebd3ee56405bf",
+  "sourceByteLength": 17919625,
+  "gitBlobSHA1": "36373d370a336c0faca07a827a9b076e49852029",
+  "sourceLengthUnit": "mm",
+  "sourceFormat": "STEP AP214",
+  "downloadedOn": "2026-10-16",
+  "modified": false,
+  "derivatives": "Original STEP is byte-identical. Any display mesh is a separately identified triangulated derivative; source products, usages and transforms are retained separately.",
+  "upstreamNativeSourceUrl": "https://github.com/JaredC01/Galileo2/blob/98f8a37944d7277cd37231776400553cc402219f/galileo2_extruder/cad/Galileo%202%20Extruder.f3d",
+  "assemblyManualUrl": "https://github.com/JaredC01/Galileo2/blob/98f8a37944d7277cd37231776400553cc402219f/manuals/Galileo_2_Extruder_Assembly_Manual.pdf",
+  "sourceContents": {
+    "productDefinitions": 69,
+    "usageRelations": 146,
+    "assemblyUsageRelations": 20,
+    "leafUsageRelations": 126
+  },
+  "sourceNotes": [
+    "The compact physical mechanism is a real Galileo 2 geared filament extruder, not a manufactured reference shaft bearing fixture.",
+    "The STEP source also contains its X carriage and a dummy PCB; the original full assembly is retained.",
+    "Carrier is the planetary carrier shaft. main_gear_g2 is the separate drive gear mounted on that shaft; no part identities have been inferred from appearance.",
+    "Fasteners contains 5 occurrences sharing the M3x20 SHCS definition and further repeated M3 screw definitions.",
+    "STEP placements are source data, not mates or validated joint constraints."
+  ],
+  "functionalIdentityEvidence": {
+    "source": "Official Galileo 2 Extruder assembly manual",
+    "url": "https://github.com/JaredC01/Galileo2/blob/98f8a37944d7277cd37231776400553cc402219f/manuals/Galileo_2_Extruder_Assembly_Manual.pdf",
+    "shaft": {
+      "sourceProduct": "#230647",
+      "sourceProductDefinition": "#230437",
+      "sourceUsage": "#567",
+      "sourceName": "Carrier",
+      "role": "Planetary carrier shaft"
+    },
+    "bearingHolder": {
+      "sourceProduct": "#230637",
+      "sourceProductDefinition": "#230427",
+      "sourceUsage": "#571",
+      "sourceName": "front_bearing_holder",
+      "role": "Front support for MR148 shaft bearing"
+    },
+    "fasteners": {
+      "sourceProduct": "#230662",
+      "sourceProductDefinition": "#230452",
+      "sourceName": "M3x8 SHCS",
+      "sharedDefinitionUsageEntities": [
+        "#588",
+        "#589",
+        "#590"
+      ],
+      "note": "The manual specifies two M3x8 SHCS for the front bearing holder and another M3x8 for the idler cover. Exact usage-to-hole association is left to source transforms, not names."
+    }
+  },
+  "nativeSource": {
+    "localFile": "Galileo 2 Extruder.f3d",
+    "upstreamPath": "galileo2_extruder/cad/Galileo 2 Extruder.f3d",
+    "url": "https://raw.githubusercontent.com/JaredC01/Galileo2/98f8a37944d7277cd37231776400553cc402219f/galileo2_extruder/cad/Galileo%202%20Extruder.f3d",
+    "revision": "98f8a37944d7277cd37231776400553cc402219f",
+    "byteLength": 21384519,
+    "sha256": "ef025f1a9fbdd07e1e94c694ca10db54951fe96173266244baabcd595b9d9377",
+    "license": "GPL-3.0-only",
+    "retrievedDate": "2026-10-18",
+    "modified": false,
+    "purpose": "Upstream editable Fusion source accompanies the original STEP and derived display mesh; it is not claimed to be editable by the browser viewer."
+  }
+}

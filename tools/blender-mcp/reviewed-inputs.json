@@ -1,0 +1,15 @@
+{
+  "reviewedAt": "2026-10-11",
+  "policy": "Only these reviewed local inputs; source changes need review before running.",
+  "sha256": {
+    "build": "eda434b7c011462666a123217f67341a9d062cb60844e149bbbd928256894c9b",
+    "spec": "c1ba08c7ede7d866a84f6d9dba3c2919a4fef0f70380a8b684f81d411ef38231",
+    "blend": "312a453211d0b337640805c74891178d46b5ae6f09eca120f71f7d6f98b098ef",
+    "action": "1d5f851a775e6f608131efce5e54ad57effd44601734cf016cc2e45a005a92cf"
+  },
+  "migrationReview": {
+    "date": "2026-10-11",
+    "change": "Action derives independent project root from its relocated source path; fixed operations and camera enums preserved.",
+    "buildSpecAndSceneUnchanged": true
+  }
+}

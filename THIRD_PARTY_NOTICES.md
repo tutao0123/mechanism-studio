@@ -1,0 +1,243 @@
+# Third-party notices
+
+Mechanism Studio's original code, skill instructions, documentation and original
+teaching assets are MIT-licensed, copyright 2026 TuTao; see [LICENSE](LICENSE).
+This does **not** relicense third-party designs, derived visual assets, service
+outputs or dependencies. The path-level policy and redistribution instructions
+are in [docs/licensing.md](docs/licensing.md). Primary upstream license evidence
+was checked on 2026-10-18.
+
+## Asset license map
+
+| Source | Included material | License |
+| --- | --- | --- |
+| Robonine SO-ARM 102 | Selected upstream documentation, simulation URDF/Xacro/STL/metadata under `EXAMPLE_ROBOT/source/`; derived `EXAMPLE_ROBOT/assets/` geometry/identity data and robot renders, including the README image | CC BY 4.0 |
+| hasecilu KFL08 | `examples/step-assembly/source/kfl08.step` and derived `assets/` | CC BY 3.0 |
+| JaredC01 / Galileo 2 contributors | `examples/shaft-bearing/source/assembly.step`, original editable `Galileo 2 Extruder.f3d` and derived `assets/` | GPL-3.0-only |
+| Anthrobotics / WOLF contributors | Upstream files in `examples/wolf-actuator/source/`, derived `assets/` and adapted WOLF visual presentations/renders | CC BY-SA 4.0 |
+
+Original reusable software, original lesson text and separately code-synthesized
+music remain MIT. License notices for source geometry continue to apply when
+that geometry appears in a screenshot, animation or exported video. The WOLF
+visual derivative uses CC BY-SA 4.0, even when its independent music and runtime
+are also available under MIT. Source authors do not endorse this project.
+
+## Anatomy
+
+Source: [wheresryan22/anatomy](https://github.com/wheresryan22/anatomy).
+Early skill text adapted its mechanism-first approach, shared motion/readout
+model, staged verification and rendered-view review. That lineage and its MIT
+notice remain visible. The current project uses its own 3D/runtime interfaces;
+no sibling Anatomy checkout or drawing toolkit is packaged or required.
+The [upstream license](https://github.com/wheresryan22/anatomy/blob/main/LICENSE)
+is preserved below; this notice does not imply author participation.
+
+```text
+MIT License
+
+Copyright (c) 2026 Ryan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## Three.js
+
+Source: [mrdoob/three.js](https://github.com/mrdoob/three.js), locked npm
+`three@0.186.1`. GLTFLoader, STLLoader and OrbitControls are part of this
+dependency. It is installed with `npm ci`, not vendored in Git. Retain the
+installed package's copyright/license if distributing a bundled application.
+The installed version's notice is reproduced here:
+
+```text
+The MIT License
+
+Copyright © 2010-2026 three.js authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
+## MCP Python SDK
+
+The project-written bridge in `tools/blender-mcp/` uses
+[modelcontextprotocol/python-sdk v1.26.0](https://github.com/modelcontextprotocol/python-sdk/tree/v1.26.0).
+It is a four-operation, project-scoped lock-model bridge, not the community
+Blender MCP add-on by ahujasid. No upstream community add-on code is packaged.
+The optional SDK and transitive dependencies install in ignored `.tools/`;
+keep their own licenses if distributing those runtimes. SDK notice:
+
+```text
+MIT License
+
+Copyright (c) 2024 Anthropic, PBC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## occt-import-js and Open CASCADE
+
+[occt-import-js 0.0.23](https://github.com/kovacsv/occt-import-js/tree/0.0.23)
+is locked by npm and licensed
+[LGPL-2.1](https://github.com/kovacsv/occt-import-js/blob/0.0.23/LICENSE.md).
+The unmodified library/WASM is used by local STEP display-import tools.
+It is installed by npm, not vendored in this Git source release. Viewer pages
+load prebuilt GLB rather than embedding the OCCT WASM. Preserve upstream license
+and corresponding-source/relinking rights if distributing a modified or bundled
+library; a source repository license does not replace those obligations.
+Underlying [Open CASCADE Technology](https://dev.opencascade.org/resources/licensing)
+has its own LGPL/exception licensing; the package's pinned sources and build
+instructions remain the authority for its dependencies.
+
+The optional native XCAF workflow installs `cadquery-ocp==7.8.1.1.post1`
+([OCP](https://github.com/CadQuery/OCP), Apache-2.0), its Open CASCADE dependencies,
+and `vtk==9.3.1` ([VTK BSD license](https://vtk.org/about/#license)) under ignored
+`.tools/cad-python`. No wheel, DLL, installed runtime or modified upstream code
+is packaged. See `tools/cad/requirements-xcaf.txt` and
+`tools/cad/README-xcaf.md`. Installing a runtime is distinct from licensing
+the project-written import adapter.
+
+## Blender
+
+[Blender](https://www.blender.org/about/license/) is an optional external GPL
+modeling environment. Portable executables, archives, caches and installed
+libraries under `.tools/` are excluded. Original modeling Python scripts and
+prebuilt GLB teaching assets are included. Local generated `.blend` files are
+excluded from this source release; use the scripts to rebuild them. Using
+Blender does not automatically assign Blender's GPL to independently authored
+model output.
+
+## SO-ARM 102
+
+**Robonine, SO-ARM 102**, revision
+`e871f738c97f43de230cb04d340797da6a68c4b9`.
+The [pinned licensing map](https://github.com/roboninecom/SO-ARM-102/blob/e871f738c97f43de230cb04d340797da6a68c4b9/LICENSING.md)
+explicitly assigns **all simulation files** to CC BY 4.0, including descriptions,
+meshes and export metadata. This is distinct from the fabrication CAD license.
+Original files, the full
+[CC BY 4.0 text](EXAMPLE_ROBOT/source/DOCS-LICENSE.txt),
+[upstream NOTICE](EXAMPLE_ROBOT/source/NOTICE), file-level map and hashes are
+retained in [EXAMPLE_ROBOT/source/](EXAMPLE_ROBOT/source/SOURCES.md).
+
+Mechanism Studio converts selected link meshes to GLB, preserves source identity,
+and authors white line rendering, source-bound joint poses, editorial exploded
+separation, camera choreography and English annotations. Robot renders and the
+README image retain **CC BY 4.0** attribution/source/license/change notices.
+Code music is original oscillator/noise synthesis. No Robonine video,
+Musopen recording or other upstream soundtrack is redistributed. Upstream NOTICE
+contains broader design/music lineage for the original repository; retaining it
+does not mean that its preview soundtrack is used here.
+
+## KFL08
+
+**KFL08 by hasecilu**, from
+[FreeCAD-library revision f5ca01c](https://github.com/FreeCAD/FreeCAD-library/tree/f5ca01cdcaa2f69b9295a6382719c2d90628780c/Mechanical%20Parts/Mountings/KFL08).
+The [pinned README](https://github.com/FreeCAD/FreeCAD-library/blob/f5ca01cdcaa2f69b9295a6382719c2d90628780c/README.md#license)
+assigns all part assets CC BY 3.0 with attribution to their respective authors.
+See [retained notice](examples/step-assembly/source/LICENSE.md) and
+[provenance](examples/step-assembly/source/provenance.json).
+The source STEP is byte-identical. Changes are tessellation, fragment recentering
+and millimetre/Z-up to metre/Y-up display conversion. The source and derived
+model retain the creator/source/license attribution; they are not MIT assets.
+
+## Galileo 2 Extruder
+
+**JaredC01 and Galileo 2 contributors**, revision
+`98f8a37944d7277cd37231776400553cc402219f`.
+The original STEP and editable Fusion source accompany the display derivative
+in [examples/shaft-bearing/source/](examples/shaft-bearing/source/NOTICE.md),
+with the complete unchanged [GPL version 3 text](examples/shaft-bearing/source/LICENSE.md)
+and [pinned hashes](examples/shaft-bearing/source/provenance.json).
+No additional or-later permission is inferred: these source/derived model assets
+are **GPL-3.0-only**, separate from the MIT viewer/importer code. Conversion
+scripts preserve source identities/placements while changing display format and
+coordinates. Preserve accompanying editable source, conversion source, notices
+and license when redistributing derivatives. The browser does not edit native
+Fusion files or recover assembly mates.
+
+## WOLF V1.2 actuator
+
+**Anthrobotics and WOLF actuator contributors**, revision
+`776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea`.
+Original STEP, upstream README, assembly guide and the complete
+[CC BY-SA 4.0 license](examples/wolf-actuator/source/LICENSE) are retained with
+[provenance](examples/wolf-actuator/source/provenance.json) and
+[change/attribution notice](examples/wolf-actuator/source/NOTICE.md).
+Retain upstream acknowledgement of **Robin Fröjd's RFX gearbox**.
+
+Mechanism Studio creates the triangulated display derivative with original
+assembly identity/placements, plus authored explosion, camera, annotation and
+colour presentation. The original source, adapted model assets and WOLF visual
+presentation/renders retain **CC BY-SA 4.0**. Independently reusable runtime and
+original synthesized music remain MIT. No source-author endorsement or verified
+physical dismantling sequence is implied.
+
+## Optional Doubao / Volcengine narration
+
+Generated narration is service output, distinct from original MIT lesson text
+and client scripts. Preset voices and provider models are not MIT software or
+project-owned voice assets. An unrestricted downstream MIT-sublicensing grant
+for the recordings was not established in this audit; no claim is made that
+ordinary narration use is prohibited. The first public source release excludes
+provider-generated MP3 recordings while keeping lesson text, technical
+manifests and opt-in generation scripts. Existing local recordings are retained
+locally. [docs/licensing.md](docs/licensing.md#optional-doubao-narration) records
+the scope/evidence; recipients must confirm their own account/voice/service
+rights before generating or redistributing narration. No credentials or account
+configuration is published. Code-synthesized WAV music remains included.
+
+## Fonts, references and trademarks
+
+System-font CSS stacks are used; no font binaries or stock textures are bundled.
+SOLIDWORKS, Creo, Fusion, VS Code and GitHub names identify appearance references.
+They do not imply affiliation, bundled commercial software or native file
+compatibility. Official screenshots, CAD manuals/reference render captures used
+only for private appearance research are excluded; original reference URLs and
+written observations may remain. Separately licensed open source assembly
+manuals explicitly listed above are retained with their source licenses.

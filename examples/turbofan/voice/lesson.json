@@ -1,0 +1,7 @@
+{"schemaVersion":1,"language":"zh-CN","steps":[
+{"id":"overview","title":"一台发动机，两根转轴","lowAngle":35,"highAngle":75,"camera":"overview","partId":"fan","narration":"这是一台双转子涡扇发动机的教学剖面。前方风扇连接低压轴，核心压气机连接高压轴。两根轴同心安装，可以以不同速度转动。先分别拖动低压轴和高压轴角度，观察哪些零件一起转，哪些静子保持固定。本例演示空间关系和规定的几何运动，不计算发动机推力或热力性能。"},
+{"id":"low-spool","title":"低压轴贯穿核心","lowAngle":90,"highAngle":0,"camera":"side","partId":"low-shaft","narration":"现在单独转动低压轴。风扇、低压压气机和后部低压涡轮跟着它运动。高压空心轴套在外侧，当前角度保持不变。侧面视角帮助追踪这根贯穿发动机的长轴。展示中两根轴的演示速度分别设定，不代表某个型号的实际转速。"},
+{"id":"high-spool","title":"高压核心独立转动","lowAngle":90,"highAngle":180,"camera":"core","partId":"hp-compressor-2","narration":"高压轴连接前方高压压气机和后方高压涡轮。改变高压轴角度，不会让风扇的角度一起改变。压气机和涡轮之间是固定的燃烧室。这里用预制剖面露出核心，轴承和机匣保持固定；模型没有求解轴承摩擦、叶尖间隙或接触受力。"},
+{"id":"flow","title":"核心与旁通两条路径","lowAngle":120,"highAngle":210,"camera":"overview","partId":"bypass-duct","narration":"风扇后的气流分成两条路径。一部分进入核心，依次经过压气机、燃烧室和涡轮；另一部分从核心外侧的旁通通道向后流动。请选择旁通通道，再从风扇正面观察它与核心的空间关系。这一课程解释通道位置，没有进行流体计算，也没有给出真实旁通比。"},
+{"id":"disassembly","title":"展开观察，再回到装配","lowAngle":120,"highAngle":210,"camera":"side","partId":"hp-turbine","narration":"暂停后，拖动展开滑杆，把转子、静子和机匣分开观察。低压轴和高压轴的机械角度不会因展开改变。复装后，各部件回到原有的显示位置。这是用于学习的展示分离路径，不等同于实际维修拆装顺序或已经验证的无碰撞装配路径。"}
+]}

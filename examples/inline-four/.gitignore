@@ -1,0 +1,4 @@
+.cache/
+output/
+*.blend[0-9]*
+*.log

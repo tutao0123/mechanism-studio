@@ -1,0 +1,193 @@
+:root {
+  color-scheme: light;
+  --ink: #252525;
+  --muted: #74746f;
+  --rule: #d8d8d2;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: #fff;
+  font-family: var(--sans);
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; }
+main {
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100svh;
+  margin: auto;
+  padding: 22px 40px 17px;
+  display: grid;
+  grid-template-rows: auto auto minmax(400px, 1fr) auto auto auto;
+}
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button {
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 7px 9px;
+  font: 12px/1.35 var(--sans);
+  cursor: pointer;
+  white-space: nowrap;
+}
+button:hover { color: #000; background: #f4f4f1; }
+button:disabled { opacity: .45; cursor: default; }
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 2px solid #55554e;
+  outline-offset: 4px;
+}
+.masthead {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+.brand { font: 500 13px/1.4 var(--sans); letter-spacing: .025em; }
+.edition, .figure-index { font: 11px/1.5 var(--sans); color: var(--muted); }
+.figure-index { margin-left: auto; font-variant-numeric: tabular-nums; }
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 23px 0 12px;
+}
+.eyebrow { margin: 0 0 7px; font: italic 14px/1.4 var(--serif); color: var(--muted); }
+h1 { margin: 0; font: 400 clamp(32px, 3.1vw, 47px)/1.13 var(--serif); letter-spacing: -.025em; }
+.intro-note { margin: 0; font: italic 14px/1.6 var(--serif); color: var(--muted); text-align: right; }
+#stage { margin: 0; min-width: 0; min-height: 0; display: flex; flex-direction: column; }
+#viewport {
+  position: relative;
+  min-width: 0;
+  min-height: 340px;
+  flex: 1;
+  overflow: hidden;
+  background: #fff;
+  isolation: isolate;
+  touch-action: none;
+}
+#viewport canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; z-index: 0; }
+#annotations { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: 2; }
+.asset-credit { position: absolute; bottom: 8px; right: 12px; z-index: 3; color: #85857e; text-align: right; font: 9px/1.5 var(--sans); }
+#annotations path { fill: none; stroke: #92928a; stroke-width: .65; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
+#annotations text {
+  font: italic 16px/1.3 var(--serif);
+  fill: #383833;
+  stroke: rgba(255, 255, 255, .96);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
+  dominant-baseline: middle;
+}
+.chapter {
+  display: grid;
+  grid-template-columns: 70px minmax(210px, .9fr) minmax(250px, 1.3fr);
+  align-items: baseline;
+  gap: 20px;
+  padding: 17px 0 16px;
+  border-top: 1px solid var(--rule);
+  min-height: 90px;
+}
+.chapter-index { font: italic 13px/1.5 var(--serif); color: var(--muted); font-variant-numeric: tabular-nums; }
+h2 { margin: 0; font: 400 clamp(24px, 2.05vw, 31px)/1.18 var(--serif); letter-spacing: -.018em; }
+#chapter-copy { margin: 0; max-width: 610px; font: 16px/1.55 var(--serif); color: #54544f; }
+.transport { display: flex; align-items: center; gap: 19px; padding: 8px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.transport-actions { display: flex; align-items: center; gap: 6px; }
+button.primary { border: 1px solid #aaaA9f; padding: 7px 12px; }
+.timeline { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 100px; }
+.timeline span { font: 11px/1.4 var(--sans); font-variant-numeric: tabular-nums; color: var(--muted); }
+#seek { flex: 1; width: 0; min-width: 40px; height: 18px; accent-color: #45453f; cursor: pointer; }
+#sound { padding-left: 0; padding-right: 0; }
+#color-cues { color: var(--muted); padding-left: 0; padding-right: 0; }
+#color-cues[aria-pressed="true"] { color: #365b67; text-decoration: underline; text-decoration-color: #b7d5df; text-underline-offset: 4px; }
+.loop-note { font: italic 13px/1.4 var(--serif); color: var(--muted); }
+.status { margin: 7px 0 0; min-height: 17px; color: var(--muted); font: 11px/1.5 var(--sans); }
+footer { display: flex; justify-content: space-between; gap: 24px; padding-top: 10px; color: var(--muted); font: 11px/1.6 var(--sans); }
+footer p { margin: 0; }
+footer > p:last-child { text-align: right; }
+#source-link { border-bottom: 1px solid #b3b3a9; }
+#source-link:not([href]) { border-bottom-color: transparent; }
+body.clean .masthead, body.clean footer { display: none; }
+body.clean main { max-width: none; padding: 17px 30px 12px; grid-template-rows: auto minmax(400px, 1fr) auto auto; }
+body.clean .intro { padding: 0 0 9px; }
+body.clean .eyebrow { margin-bottom: 5px; font-size: 13px; }
+body.clean h1 { font-size: clamp(29px, 2.7vw, 40px); }
+
+@media (min-width: 901px) {
+  main { height: 100svh; min-height: 740px; }
+  body.clean main { min-height: 650px; }
+}
+@media (min-width: 901px) and (max-height: 780px) {
+  main { padding-top: 16px; padding-bottom: 12px; }
+  .intro { padding-top: 15px; padding-bottom: 8px; }
+  h1 { font-size: 36px; }
+  .chapter { padding-top: 13px; padding-bottom: 12px; min-height: 82px; }
+  h2 { font-size: 26px; }
+}
+@media (max-width: 1050px) {
+  main { padding-left: 25px; padding-right: 25px; }
+  .chapter { grid-template-columns: 58px minmax(190px, 1fr) minmax(230px, 1.3fr); gap: 15px; }
+  #chapter-copy { font-size: 15px; }
+  .transport { gap: 13px; }
+  .transport-actions { gap: 1px; }
+}
+@media (max-width: 900px) {
+  main, body.clean main { min-height: 100svh; height: auto; padding: 17px 18px 15px; grid-template-rows: auto auto auto auto auto auto; }
+  body.clean main { grid-template-rows: auto auto auto auto; }
+  .masthead { gap: 15px; }
+  .edition { display: none; }
+  .intro, body.clean .intro { padding: 22px 0 13px; }
+  body.clean .intro { padding-top: 0; }
+  h1, body.clean h1 { font-size: 35px; }
+  .intro-note { font-size: 13px; }
+  #viewport { height: clamp(350px, 61vw, 560px); min-height: 0; flex: none; }
+  .chapter { grid-template-columns: 45px minmax(0, 1fr); gap: 9px 13px; padding: 16px 0 18px; }
+  h2 { font-size: 27px; }
+  #chapter-copy { grid-column: 2; max-width: none; font-size: 16px; }
+  .chapter-index { padding-top: 4px; }
+  .transport { flex-wrap: wrap; gap: 9px 17px; padding: 10px 0; }
+  .transport-actions { gap: 7px; }
+  .timeline { order: 4; flex-basis: 100%; }
+  #sound { margin-left: auto; }
+  .loop-note { margin-left: 0; }
+  footer { flex-direction: column; gap: 5px; padding-top: 13px; }
+  footer > p:last-child { text-align: left; }
+  #annotations text { font-size: 15px; }
+}
+@media (max-width: 520px) {
+  main, body.clean main { padding-left: 13px; padding-right: 13px; }
+  .brand { font-size: 12px; }
+  .figure-index { font-size: 10px; }
+  .intro { gap: 12px; }
+  h1, body.clean h1 { font-size: 31px; }
+  .intro-note { display: none; }
+  #viewport { height: 410px; }
+  .chapter { grid-template-columns: 36px minmax(0, 1fr); gap: 9px 10px; }
+  h2 { font-size: 25px; }
+  #chapter-copy { font-size: 15px; line-height: 1.6; }
+  .transport { gap: 8px; }
+  .transport-actions { gap: 0; }
+  button { padding-left: 7px; padding-right: 7px; font-size: 11px; }
+  button.primary { padding-left: 9px; padding-right: 9px; }
+  .loop-note { display: none; }
+  #annotations text { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0s !important; animation-duration: 0s !important; }
+}
+
+/* Explicit capture mode keeps the explanatory chapter and source credit while
+ * fitting the actual browser viewport. Use a 1920 x 1080 viewport for HD output. */
+body.capture .transport, body.capture .status, body.capture .masthead, body.capture footer { display: none; }
+body.capture main, body.capture.clean main { height: 100svh; min-height: 0; max-width: none; padding: 22px 38px 19px; display: flex; flex-direction: column; }
+body.capture .intro, body.capture.clean .intro { flex: none; padding: 0 0 10px; }
+body.capture #stage { flex: 1; }
+body.capture #viewport { height: auto; flex: 1; min-height: 0; }
+body.capture .chapter { flex: none; padding: 18px 0 0; min-height: 92px; }
+body.capture .asset-credit { white-space: pre-line; }
+.asset-credit { white-space: pre-line; }

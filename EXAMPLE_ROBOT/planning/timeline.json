@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "authoring-handoff-1",
+  "stage": "bound",
+  "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2",
+  "note": "Authoring records implemented by the cited code adapters; not a generic plan loader. Current colour/shared-study evidence is recorded in verification-color-study.json; verification.json preserves the earlier presentation review.",
+  "planRevision": "robot-score-timeline-2",
+  "implementation": "story.mjs + shared/study/study.mjs; app.mjs adapter",
+  "bpm": 112,
+  "totalBeats": 64,
+  "durationSeconds": 34.285714285714285,
+  "music": {
+    "file": "audio/robot-loop.wav",
+    "sha256": "7a463b9c86f7f7e4bcfacdbfdebb3522981182b23056cd980d377e6533f838e5",
+    "frames": 1512000,
+    "sampleRate": 44100,
+    "soundDesign": "Calm half-time arrangement; editorial motion/seating effects share the same PCM transport."
+  },
+  "clock": {
+    "audible": "native Audio.currentTime",
+    "mutedAfterActivation": "same native audio clock",
+    "silentPreview": "one pausable display clock",
+    "browserGesture": "Play with music"
+  },
+  "chapters": [
+    {
+      "id": "whole",
+      "firstBeat": 0,
+      "lastBeat": 8,
+      "title": "Eight links. One arm.",
+      "copy": "A real open-source robot, held in its original assembled pose.",
+      "labels": [
+        [
+          "urdf:base_link",
+          "Fixed base"
+        ],
+        [
+          "urdf:link5_1",
+          "Parallel gripper"
+        ]
+      ]
+    },
+    {
+      "id": "structure",
+      "firstBeat": 8,
+      "lastBeat": 24,
+      "title": "The chain opens.",
+      "copy": "Four link groups separate on the beat. Their source hierarchy stays intact.",
+      "labels": [
+        [
+          "urdf:link2_1",
+          "Shoulder link"
+        ],
+        [
+          "urdf:link3_1",
+          "Elbow / forearm"
+        ]
+      ]
+    },
+    {
+      "id": "wrist",
+      "firstBeat": 24,
+      "lastBeat": 32,
+      "title": "From reach to orientation.",
+      "copy": "The wrist connects the arm to the gripper carriage.",
+      "labels": [
+        [
+          "urdf:link4_1",
+          "Wrist link"
+        ],
+        [
+          "urdf:link5_1",
+          "Gripper carriage"
+        ]
+      ]
+    },
+    {
+      "id": "grip",
+      "firstBeat": 32,
+      "lastBeat": 40,
+      "title": "Two jaws, one grasp.",
+      "copy": "The source describes opposed sliding jaws. Here, they separate for inspection.",
+      "labels": [
+        [
+          "urdf:clamp1_1",
+          "Sliding jaw"
+        ],
+        [
+          "urdf:clamp2_1",
+          "Opposed jaw"
+        ]
+      ]
+    },
+    {
+      "id": "return",
+      "firstBeat": 40,
+      "lastBeat": 56,
+      "title": "Every link returns.",
+      "copy": "The sequence reverses: jaws, wrist, forearm, shoulder. No source pose is rewritten.",
+      "labels": [
+        [
+          "urdf:base_link",
+          "Fixed reference"
+        ],
+        [
+          "urdf:link5_1",
+          "Gripper carriage"
+        ]
+      ]
+    },
+    {
+      "id": "resolve",
+      "firstBeat": 56,
+      "lastBeat": 64,
+      "title": "Whole again.",
+      "copy": "The original assembly is restored. The score and the view return to the beginning.",
+      "labels": [
+        [
+          "urdf:base_link",
+          "Original assembly"
+        ],
+        [
+          "urdf:link5_1",
+          "Ready to repeat"
+        ]
+      ]
+    }
+  ],
+  "loop": "Native audio loop; restored source pose and identical opening/final camera plan."
+}

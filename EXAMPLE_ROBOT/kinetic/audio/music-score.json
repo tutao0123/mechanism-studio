@@ -1,0 +1,1748 @@
+{
+  "schemaVersion": "1.1.0",
+  "title": "A Connected Gesture",
+  "edition": "kinetic-gesture-v1",
+  "authorship": "Original Mechanism Studio composition, code synthesis and editorial effects. No external samples or recorded robot audio.",
+  "narration": false,
+  "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2",
+  "storyRevision": "robot-kinetic-story-1",
+  "bpm": 112,
+  "feltBpm": 56,
+  "totalBeats": 48,
+  "bars": 12,
+  "meter": [
+    4,
+    4
+  ],
+  "sampleRate": 44100,
+  "channels": 2,
+  "bitsPerSample": 16,
+  "frames": 1134000,
+  "durationSeconds": 25.714285714285715,
+  "deterministicSeed": 1263095365,
+  "musicalFeel": "Soft keys and warm pulse; an immediate motif, a short build, space for reading and a descending return. Phrase contrast rather than a louder master.",
+  "timing": "One PCM transport: seconds = beat * 60 / bpm. All movement cues bind the actual kinetic story and geometry revision.",
+  "mix": {
+    "targetSamplePeakDbfs": -8,
+    "percussion": false,
+    "effects": "Sparse editorial motion textures and soft return seats; no physical contact or servo simulation claim."
+  },
+  "effects": {
+    "kind": "editorial",
+    "clock": "Baked into the same PCM buffer; no scene timers, label dings or audio restarts.",
+    "actionCues": [
+      {
+        "id": "shoulder-explode-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "animation": {
+          "groupId": "shoulder",
+          "partIds": [
+            "urdf:link1_1",
+            "urdf:link2_1"
+          ],
+          "phase": "explode",
+          "firstBeat": 10,
+          "lastBeat": 11.25,
+          "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+        },
+        "beat": 10,
+        "durationBeats": 1.25,
+        "seconds": 5.357142857142857,
+        "durationSeconds": 0.6696428571428571
+      },
+      {
+        "id": "forearm-explode-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "animation": {
+          "groupId": "forearm",
+          "partIds": [
+            "urdf:link3_1",
+            "urdf:link4_1"
+          ],
+          "phase": "explode",
+          "firstBeat": 12,
+          "lastBeat": 13.25,
+          "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+        },
+        "beat": 12,
+        "durationBeats": 1.25,
+        "seconds": 6.428571428571429,
+        "durationSeconds": 0.6696428571428571
+      },
+      {
+        "id": "wrist-explode-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "animation": {
+          "groupId": "wrist",
+          "partIds": [
+            "urdf:link5_1"
+          ],
+          "phase": "explode",
+          "firstBeat": 14,
+          "lastBeat": 15.25,
+          "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+        },
+        "beat": 14,
+        "durationBeats": 1.25,
+        "seconds": 7.5,
+        "durationSeconds": 0.6696428571428571
+      },
+      {
+        "id": "jaws-explode-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "animation": {
+          "groupId": "jaws",
+          "partIds": [
+            "urdf:clamp1_1",
+            "urdf:clamp2_1"
+          ],
+          "phase": "explode",
+          "firstBeat": 16,
+          "lastBeat": 17.25,
+          "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+        },
+        "beat": 16,
+        "durationBeats": 1.25,
+        "seconds": 8.571428571428571,
+        "durationSeconds": 0.6696428571428571
+      },
+      {
+        "id": "jaws-reassemble-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "animation": {
+          "groupId": "jaws",
+          "partIds": [
+            "urdf:clamp1_1",
+            "urdf:clamp2_1"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 32,
+          "lastBeat": 33.25,
+          "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+        },
+        "beat": 32,
+        "durationBeats": 1.25,
+        "seconds": 17.142857142857142,
+        "durationSeconds": 0.6696428571428571
+      },
+      {
+        "id": "jaws-seated",
+        "role": "editorial-sfx",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "animation": {
+          "groupId": "jaws",
+          "partIds": [
+            "urdf:clamp1_1",
+            "urdf:clamp2_1"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 32,
+          "lastBeat": 33.25,
+          "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+        },
+        "beat": 33.25,
+        "durationBeats": 0.42,
+        "seconds": 17.8125,
+        "durationSeconds": 0.225
+      },
+      {
+        "id": "wrist-reassemble-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "animation": {
+          "groupId": "wrist",
+          "partIds": [
+            "urdf:link5_1"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 34,
+          "lastBeat": 35.25,
+          "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+        },
+        "beat": 34,
+        "durationBeats": 1.25,
+        "seconds": 18.214285714285715,
+        "durationSeconds": 0.6696428571428571
+      },
+      {
+        "id": "wrist-seated",
+        "role": "editorial-sfx",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "animation": {
+          "groupId": "wrist",
+          "partIds": [
+            "urdf:link5_1"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 34,
+          "lastBeat": 35.25,
+          "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+        },
+        "beat": 35.25,
+        "durationBeats": 0.42,
+        "seconds": 18.883928571428573,
+        "durationSeconds": 0.225
+      },
+      {
+        "id": "forearm-reassemble-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "animation": {
+          "groupId": "forearm",
+          "partIds": [
+            "urdf:link3_1",
+            "urdf:link4_1"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 36,
+          "lastBeat": 37.25,
+          "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+        },
+        "beat": 36,
+        "durationBeats": 1.25,
+        "seconds": 19.285714285714285,
+        "durationSeconds": 0.6696428571428571
+      },
+      {
+        "id": "forearm-seated",
+        "role": "editorial-sfx",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "animation": {
+          "groupId": "forearm",
+          "partIds": [
+            "urdf:link3_1",
+            "urdf:link4_1"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 36,
+          "lastBeat": 37.25,
+          "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+        },
+        "beat": 37.25,
+        "durationBeats": 0.42,
+        "seconds": 19.955357142857142,
+        "durationSeconds": 0.225
+      },
+      {
+        "id": "shoulder-reassemble-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "animation": {
+          "groupId": "shoulder",
+          "partIds": [
+            "urdf:link1_1",
+            "urdf:link2_1"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 38,
+          "lastBeat": 39.25,
+          "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+        },
+        "beat": 38,
+        "durationBeats": 1.25,
+        "seconds": 20.357142857142858,
+        "durationSeconds": 0.6696428571428571
+      },
+      {
+        "id": "shoulder-seated",
+        "role": "editorial-sfx",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "animation": {
+          "groupId": "shoulder",
+          "partIds": [
+            "urdf:link1_1",
+            "urdf:link2_1"
+          ],
+          "phase": "reassemble",
+          "firstBeat": 38,
+          "lastBeat": 39.25,
+          "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+        },
+        "beat": 39.25,
+        "durationBeats": 0.42,
+        "seconds": 21.026785714285715,
+        "durationSeconds": 0.225
+      }
+    ]
+  },
+  "cues": [
+    {
+      "id": "hook",
+      "firstBeat": 0,
+      "lastBeat": 4,
+      "startSeconds": 0,
+      "endSeconds": 2.142857142857143
+    },
+    {
+      "id": "reach",
+      "firstBeat": 4,
+      "lastBeat": 10,
+      "startSeconds": 2.142857142857143,
+      "endSeconds": 5.357142857142857
+    },
+    {
+      "id": "expand",
+      "firstBeat": 10,
+      "lastBeat": 18,
+      "startSeconds": 5.357142857142857,
+      "endSeconds": 9.642857142857142
+    },
+    {
+      "id": "read",
+      "firstBeat": 18,
+      "lastBeat": 32,
+      "startSeconds": 9.642857142857142,
+      "endSeconds": 17.142857142857142
+    },
+    {
+      "id": "return",
+      "firstBeat": 32,
+      "lastBeat": 40,
+      "startSeconds": 17.142857142857142,
+      "endSeconds": 21.428571428571427
+    },
+    {
+      "id": "resolve",
+      "firstBeat": 40,
+      "lastBeat": 48,
+      "startSeconds": 21.428571428571427,
+      "endSeconds": 25.714285714285715
+    }
+  ],
+  "harmony": [
+    {
+      "firstBeat": 0,
+      "lastBeat": 10,
+      "symbol": "Dmaj9",
+      "notes": [
+        50,
+        57,
+        61,
+        64
+      ],
+      "bass": 38
+    },
+    {
+      "firstBeat": 10,
+      "lastBeat": 18,
+      "symbol": "Aadd9 / C#",
+      "notes": [
+        49,
+        57,
+        59,
+        64
+      ],
+      "bass": 37
+    },
+    {
+      "firstBeat": 18,
+      "lastBeat": 25,
+      "symbol": "Bm11",
+      "notes": [
+        47,
+        54,
+        57,
+        64
+      ],
+      "bass": 35
+    },
+    {
+      "firstBeat": 25,
+      "lastBeat": 32,
+      "symbol": "Gmaj9",
+      "notes": [
+        43,
+        54,
+        57,
+        62
+      ],
+      "bass": 31
+    },
+    {
+      "firstBeat": 32,
+      "lastBeat": 40,
+      "symbol": "Aadd9",
+      "notes": [
+        45,
+        52,
+        59,
+        64
+      ],
+      "bass": 33
+    },
+    {
+      "firstBeat": 40,
+      "lastBeat": 48,
+      "symbol": "Dmaj9",
+      "notes": [
+        50,
+        57,
+        61,
+        64
+      ],
+      "bass": 38
+    }
+  ],
+  "beatGrid": [
+    {
+      "beat": 0,
+      "seconds": 0,
+      "frame": 0,
+      "downbeat": true
+    },
+    {
+      "beat": 1,
+      "seconds": 0.5357142857142857,
+      "frame": 23625,
+      "downbeat": false
+    },
+    {
+      "beat": 2,
+      "seconds": 1.0714285714285714,
+      "frame": 47250,
+      "downbeat": false
+    },
+    {
+      "beat": 3,
+      "seconds": 1.6071428571428572,
+      "frame": 70875,
+      "downbeat": false
+    },
+    {
+      "beat": 4,
+      "seconds": 2.142857142857143,
+      "frame": 94500,
+      "downbeat": true
+    },
+    {
+      "beat": 5,
+      "seconds": 2.6785714285714284,
+      "frame": 118125,
+      "downbeat": false
+    },
+    {
+      "beat": 6,
+      "seconds": 3.2142857142857144,
+      "frame": 141750,
+      "downbeat": false
+    },
+    {
+      "beat": 7,
+      "seconds": 3.75,
+      "frame": 165375,
+      "downbeat": false
+    },
+    {
+      "beat": 8,
+      "seconds": 4.285714285714286,
+      "frame": 189000,
+      "downbeat": true
+    },
+    {
+      "beat": 9,
+      "seconds": 4.821428571428571,
+      "frame": 212625,
+      "downbeat": false
+    },
+    {
+      "beat": 10,
+      "seconds": 5.357142857142857,
+      "frame": 236250,
+      "downbeat": false
+    },
+    {
+      "beat": 11,
+      "seconds": 5.892857142857143,
+      "frame": 259875,
+      "downbeat": false
+    },
+    {
+      "beat": 12,
+      "seconds": 6.428571428571429,
+      "frame": 283500,
+      "downbeat": true
+    },
+    {
+      "beat": 13,
+      "seconds": 6.964285714285714,
+      "frame": 307125,
+      "downbeat": false
+    },
+    {
+      "beat": 14,
+      "seconds": 7.5,
+      "frame": 330750,
+      "downbeat": false
+    },
+    {
+      "beat": 15,
+      "seconds": 8.035714285714286,
+      "frame": 354375,
+      "downbeat": false
+    },
+    {
+      "beat": 16,
+      "seconds": 8.571428571428571,
+      "frame": 378000,
+      "downbeat": true
+    },
+    {
+      "beat": 17,
+      "seconds": 9.107142857142858,
+      "frame": 401625,
+      "downbeat": false
+    },
+    {
+      "beat": 18,
+      "seconds": 9.642857142857142,
+      "frame": 425250,
+      "downbeat": false
+    },
+    {
+      "beat": 19,
+      "seconds": 10.178571428571429,
+      "frame": 448875,
+      "downbeat": false
+    },
+    {
+      "beat": 20,
+      "seconds": 10.714285714285714,
+      "frame": 472500,
+      "downbeat": true
+    },
+    {
+      "beat": 21,
+      "seconds": 11.25,
+      "frame": 496125,
+      "downbeat": false
+    },
+    {
+      "beat": 22,
+      "seconds": 11.785714285714286,
+      "frame": 519750,
+      "downbeat": false
+    },
+    {
+      "beat": 23,
+      "seconds": 12.321428571428571,
+      "frame": 543375,
+      "downbeat": false
+    },
+    {
+      "beat": 24,
+      "seconds": 12.857142857142858,
+      "frame": 567000,
+      "downbeat": true
+    },
+    {
+      "beat": 25,
+      "seconds": 13.392857142857142,
+      "frame": 590625,
+      "downbeat": false
+    },
+    {
+      "beat": 26,
+      "seconds": 13.928571428571429,
+      "frame": 614250,
+      "downbeat": false
+    },
+    {
+      "beat": 27,
+      "seconds": 14.464285714285714,
+      "frame": 637875,
+      "downbeat": false
+    },
+    {
+      "beat": 28,
+      "seconds": 15,
+      "frame": 661500,
+      "downbeat": true
+    },
+    {
+      "beat": 29,
+      "seconds": 15.535714285714286,
+      "frame": 685125,
+      "downbeat": false
+    },
+    {
+      "beat": 30,
+      "seconds": 16.071428571428573,
+      "frame": 708750,
+      "downbeat": false
+    },
+    {
+      "beat": 31,
+      "seconds": 16.607142857142858,
+      "frame": 732375,
+      "downbeat": false
+    },
+    {
+      "beat": 32,
+      "seconds": 17.142857142857142,
+      "frame": 756000,
+      "downbeat": true
+    },
+    {
+      "beat": 33,
+      "seconds": 17.678571428571427,
+      "frame": 779625,
+      "downbeat": false
+    },
+    {
+      "beat": 34,
+      "seconds": 18.214285714285715,
+      "frame": 803250,
+      "downbeat": false
+    },
+    {
+      "beat": 35,
+      "seconds": 18.75,
+      "frame": 826875,
+      "downbeat": false
+    },
+    {
+      "beat": 36,
+      "seconds": 19.285714285714285,
+      "frame": 850500,
+      "downbeat": true
+    },
+    {
+      "beat": 37,
+      "seconds": 19.821428571428573,
+      "frame": 874125,
+      "downbeat": false
+    },
+    {
+      "beat": 38,
+      "seconds": 20.357142857142858,
+      "frame": 897750,
+      "downbeat": false
+    },
+    {
+      "beat": 39,
+      "seconds": 20.892857142857142,
+      "frame": 921375,
+      "downbeat": false
+    },
+    {
+      "beat": 40,
+      "seconds": 21.428571428571427,
+      "frame": 945000,
+      "downbeat": true
+    },
+    {
+      "beat": 41,
+      "seconds": 21.964285714285715,
+      "frame": 968625,
+      "downbeat": false
+    },
+    {
+      "beat": 42,
+      "seconds": 22.5,
+      "frame": 992250,
+      "downbeat": false
+    },
+    {
+      "beat": 43,
+      "seconds": 23.035714285714285,
+      "frame": 1015875,
+      "downbeat": false
+    },
+    {
+      "beat": 44,
+      "seconds": 23.571428571428573,
+      "frame": 1039500,
+      "downbeat": true
+    },
+    {
+      "beat": 45,
+      "seconds": 24.107142857142858,
+      "frame": 1063125,
+      "downbeat": false
+    },
+    {
+      "beat": 46,
+      "seconds": 24.642857142857142,
+      "frame": 1086750,
+      "downbeat": false
+    },
+    {
+      "beat": 47,
+      "seconds": 25.178571428571427,
+      "frame": 1110375,
+      "downbeat": false
+    },
+    {
+      "beat": 48,
+      "seconds": 25.714285714285715,
+      "frame": 1134000,
+      "downbeat": true
+    }
+  ],
+  "events": [
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 0,
+      "durationBeats": 2.6,
+      "gain": 0.095,
+      "midi": 69,
+      "pan": -0.18,
+      "seed": 851066788
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 0,
+      "durationBeats": 13,
+      "gain": 0.012,
+      "midi": 50,
+      "pan": -0.5249999999999999,
+      "seed": 1874857435
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 0,
+      "durationBeats": 13,
+      "gain": 0.012,
+      "midi": 57,
+      "pan": -0.175,
+      "seed": 2701977280
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 0,
+      "durationBeats": 13,
+      "gain": 0.012,
+      "midi": 61,
+      "pan": 0.175,
+      "seed": 2270158154
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 0,
+      "durationBeats": 13,
+      "gain": 0.012,
+      "midi": 64,
+      "pan": 0.5249999999999999,
+      "seed": 3761693751
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 0,
+      "durationBeats": 3.4,
+      "gain": 0.075,
+      "midi": 38,
+      "pan": -0.04,
+      "seed": 2861479519
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 0.75,
+      "durationBeats": 2.6,
+      "gain": 0.075,
+      "midi": 73,
+      "pan": 0.18,
+      "seed": 3701081409
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 1.5,
+      "durationBeats": 2.6,
+      "gain": 0.079,
+      "midi": 76,
+      "pan": 0.18,
+      "seed": 443768890
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 2,
+      "durationBeats": 1.8,
+      "gain": 0.044,
+      "midi": 50,
+      "pan": 0.04,
+      "seed": 3691733524
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 2.75,
+      "durationBeats": 2.6,
+      "gain": 0.063,
+      "midi": 71,
+      "pan": 0.18,
+      "seed": 3102956320
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 4,
+      "durationBeats": 2.6,
+      "gain": 0.07,
+      "midi": 69,
+      "pan": -0.18,
+      "seed": 2708819881
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 4,
+      "durationBeats": 1.8,
+      "gain": 0.048,
+      "midi": 50,
+      "pan": 0.04,
+      "seed": 3111836688
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 5.5,
+      "durationBeats": 2.6,
+      "gain": 0.068,
+      "midi": 73,
+      "pan": 0.18,
+      "seed": 411137705
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 6,
+      "durationBeats": 1.8,
+      "gain": 0.052000000000000005,
+      "midi": 50,
+      "pan": 0.04,
+      "seed": 3186172108
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 7,
+      "durationBeats": 2.6,
+      "gain": 0.074,
+      "midi": 76,
+      "pan": 0.18,
+      "seed": 4241595775
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 8,
+      "durationBeats": 1.8,
+      "gain": 0.056,
+      "midi": 45,
+      "pan": 0.04,
+      "seed": 2817084052
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 8.5,
+      "durationBeats": 2.6,
+      "gain": 0.08,
+      "midi": 78,
+      "pan": 0.18,
+      "seed": 593411119
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 9.65,
+      "durationBeats": 11,
+      "gain": 0.012,
+      "midi": 49,
+      "pan": -0.5249999999999999,
+      "seed": 4094918752
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 9.65,
+      "durationBeats": 11,
+      "gain": 0.012,
+      "midi": 57,
+      "pan": -0.175,
+      "seed": 132362157
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 9.65,
+      "durationBeats": 11,
+      "gain": 0.012,
+      "midi": 59,
+      "pan": 0.175,
+      "seed": 819757572
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 9.65,
+      "durationBeats": 11,
+      "gain": 0.012,
+      "midi": 64,
+      "pan": 0.5249999999999999,
+      "seed": 3004316458
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 10,
+      "durationBeats": 3.4,
+      "gain": 0.075,
+      "midi": 37,
+      "pan": -0.04,
+      "seed": 2056454927
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 10,
+      "durationBeats": 1.7,
+      "gain": 0.071,
+      "midi": 64,
+      "pan": -0.25,
+      "seed": 1506677959
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 10,
+      "durationBeats": 1.65,
+      "gain": 0.067,
+      "midi": 37,
+      "pan": 0.02,
+      "seed": 4055659778
+    },
+    {
+      "instrument": "air-motion",
+      "role": "editorial-sfx",
+      "beat": 10,
+      "durationBeats": 1.25,
+      "gain": 0.052,
+      "pan": -0.24,
+      "seed": 3044552276,
+      "id": "shoulder-explode-motion",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "shoulder",
+        "partIds": [
+          "urdf:link1_1",
+          "urdf:link2_1"
+        ],
+        "phase": "explode",
+        "firstBeat": 10,
+        "lastBeat": 11.25,
+        "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 11,
+      "durationBeats": 1.7,
+      "gain": 0.046,
+      "midi": 69,
+      "pan": 0.25,
+      "seed": 2627304236
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 12,
+      "durationBeats": 1.7,
+      "gain": 0.065,
+      "midi": 73,
+      "pan": -0.25,
+      "seed": 3429685426
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 12,
+      "durationBeats": 1.65,
+      "gain": 0.067,
+      "midi": 49,
+      "pan": 0.02,
+      "seed": 3089691341
+    },
+    {
+      "instrument": "air-motion",
+      "role": "editorial-sfx",
+      "beat": 12,
+      "durationBeats": 1.25,
+      "gain": 0.052,
+      "pan": -0.08,
+      "seed": 1002395719,
+      "id": "forearm-explode-motion",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "forearm",
+        "partIds": [
+          "urdf:link3_1",
+          "urdf:link4_1"
+        ],
+        "phase": "explode",
+        "firstBeat": 12,
+        "lastBeat": 13.25,
+        "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 13,
+      "durationBeats": 1.7,
+      "gain": 0.045,
+      "midi": 76,
+      "pan": 0.25,
+      "seed": 1750949685
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 14,
+      "durationBeats": 1.7,
+      "gain": 0.071,
+      "midi": 71,
+      "pan": -0.25,
+      "seed": 3032753034
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 14,
+      "durationBeats": 1.65,
+      "gain": 0.067,
+      "midi": 37,
+      "pan": 0.02,
+      "seed": 639508976
+    },
+    {
+      "instrument": "air-motion",
+      "role": "editorial-sfx",
+      "beat": 14,
+      "durationBeats": 1.25,
+      "gain": 0.052,
+      "pan": 0.09,
+      "seed": 3367429677,
+      "id": "wrist-explode-motion",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "wrist",
+        "partIds": [
+          "urdf:link5_1"
+        ],
+        "phase": "explode",
+        "firstBeat": 14,
+        "lastBeat": 15.25,
+        "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 15,
+      "durationBeats": 1.7,
+      "gain": 0.046,
+      "midi": 73,
+      "pan": 0.25,
+      "seed": 2788060352
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 16,
+      "durationBeats": 1.7,
+      "gain": 0.065,
+      "midi": 76,
+      "pan": -0.25,
+      "seed": 494492249
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 16,
+      "durationBeats": 1.65,
+      "gain": 0.067,
+      "midi": 49,
+      "pan": 0.02,
+      "seed": 4034013474
+    },
+    {
+      "instrument": "air-motion",
+      "role": "editorial-sfx",
+      "beat": 16,
+      "durationBeats": 1.25,
+      "gain": 0.052,
+      "pan": 0.23,
+      "seed": 3939479653,
+      "id": "jaws-explode-motion",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "jaws",
+        "partIds": [
+          "urdf:clamp1_1",
+          "urdf:clamp2_1"
+        ],
+        "phase": "explode",
+        "firstBeat": 16,
+        "lastBeat": 17.25,
+        "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 17,
+      "durationBeats": 1.7,
+      "gain": 0.045,
+      "midi": 81,
+      "pan": 0.25,
+      "seed": 529818247
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 17.65,
+      "durationBeats": 10,
+      "gain": 0.009,
+      "midi": 47,
+      "pan": -0.5249999999999999,
+      "seed": 1154532199
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 17.65,
+      "durationBeats": 10,
+      "gain": 0.009,
+      "midi": 54,
+      "pan": -0.175,
+      "seed": 3405794293
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 17.65,
+      "durationBeats": 10,
+      "gain": 0.009,
+      "midi": 57,
+      "pan": 0.175,
+      "seed": 2376315880
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 17.65,
+      "durationBeats": 10,
+      "gain": 0.009,
+      "midi": 64,
+      "pan": 0.5249999999999999,
+      "seed": 2147692229
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 18,
+      "durationBeats": 4,
+      "gain": 0.038,
+      "midi": 35,
+      "pan": -0.04,
+      "seed": 1588074826
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 20,
+      "durationBeats": 3.2,
+      "gain": 0.042,
+      "midi": 74,
+      "pan": -0.16,
+      "seed": 3948955177
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 23,
+      "durationBeats": 3.2,
+      "gain": 0.042,
+      "midi": 69,
+      "pan": -0.16,
+      "seed": 2534115575
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 24.65,
+      "durationBeats": 10,
+      "gain": 0.009,
+      "midi": 43,
+      "pan": -0.5249999999999999,
+      "seed": 3987449578
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 24.65,
+      "durationBeats": 10,
+      "gain": 0.009,
+      "midi": 54,
+      "pan": -0.175,
+      "seed": 3081224271
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 24.65,
+      "durationBeats": 10,
+      "gain": 0.009,
+      "midi": 57,
+      "pan": 0.175,
+      "seed": 3121682245
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 24.65,
+      "durationBeats": 10,
+      "gain": 0.009,
+      "midi": 62,
+      "pan": 0.5249999999999999,
+      "seed": 2278227065
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 25,
+      "durationBeats": 4,
+      "gain": 0.038,
+      "midi": 31,
+      "pan": -0.04,
+      "seed": 3506428759
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 27.5,
+      "durationBeats": 3.2,
+      "gain": 0.042,
+      "midi": 71,
+      "pan": 0.16,
+      "seed": 613123505
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 30,
+      "durationBeats": 3.2,
+      "gain": 0.042,
+      "midi": 66,
+      "pan": 0.16,
+      "seed": 3548387883
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 31.65,
+      "durationBeats": 11,
+      "gain": 0.012,
+      "midi": 45,
+      "pan": -0.5249999999999999,
+      "seed": 1494031569
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 31.65,
+      "durationBeats": 11,
+      "gain": 0.012,
+      "midi": 52,
+      "pan": -0.175,
+      "seed": 2826113720
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 31.65,
+      "durationBeats": 11,
+      "gain": 0.012,
+      "midi": 59,
+      "pan": 0.175,
+      "seed": 2393809610
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 31.65,
+      "durationBeats": 11,
+      "gain": 0.012,
+      "midi": 64,
+      "pan": 0.5249999999999999,
+      "seed": 67770799
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 32,
+      "durationBeats": 3.4,
+      "gain": 0.075,
+      "midi": 33,
+      "pan": -0.04,
+      "seed": 2696642541
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 32,
+      "durationBeats": 2.4,
+      "gain": 0.074,
+      "midi": 76,
+      "pan": 0.22,
+      "seed": 3363552141
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 32,
+      "durationBeats": 1.8,
+      "gain": 0.06,
+      "midi": 33,
+      "pan": -0.02,
+      "seed": 1582212458
+    },
+    {
+      "instrument": "air-motion",
+      "role": "editorial-sfx",
+      "beat": 32,
+      "durationBeats": 1.25,
+      "gain": 0.044,
+      "pan": 0.23,
+      "seed": 2225913574,
+      "id": "jaws-reassemble-motion",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "jaws",
+        "partIds": [
+          "urdf:clamp1_1",
+          "urdf:clamp2_1"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 32,
+        "lastBeat": 33.25,
+        "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+      }
+    },
+    {
+      "instrument": "soft-seat",
+      "role": "editorial-sfx",
+      "beat": 33.25,
+      "durationBeats": 0.42,
+      "gain": 0.053,
+      "midi": 56,
+      "pan": 0.138,
+      "seed": 2105195710,
+      "id": "jaws-seated",
+      "cueRole": "seating",
+      "anchor": "movement-complete",
+      "animation": {
+        "groupId": "jaws",
+        "partIds": [
+          "urdf:clamp1_1",
+          "urdf:clamp2_1"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 32,
+        "lastBeat": 33.25,
+        "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 34,
+      "durationBeats": 2.4,
+      "gain": 0.06999999999999999,
+      "midi": 73,
+      "pan": 0.07999999999999999,
+      "seed": 3599991641
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 34,
+      "durationBeats": 1.8,
+      "gain": 0.06,
+      "midi": 45,
+      "pan": -0.02,
+      "seed": 2045416677
+    },
+    {
+      "instrument": "air-motion",
+      "role": "editorial-sfx",
+      "beat": 34,
+      "durationBeats": 1.25,
+      "gain": 0.044,
+      "pan": 0.09,
+      "seed": 2585177846,
+      "id": "wrist-reassemble-motion",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "wrist",
+        "partIds": [
+          "urdf:link5_1"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 34,
+        "lastBeat": 35.25,
+        "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+      }
+    },
+    {
+      "instrument": "soft-seat",
+      "role": "editorial-sfx",
+      "beat": 35.25,
+      "durationBeats": 0.42,
+      "gain": 0.053,
+      "midi": 54,
+      "pan": 0.054,
+      "seed": 3066383218,
+      "id": "wrist-seated",
+      "cueRole": "seating",
+      "anchor": "movement-complete",
+      "animation": {
+        "groupId": "wrist",
+        "partIds": [
+          "urdf:link5_1"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 34,
+        "lastBeat": 35.25,
+        "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 36,
+      "durationBeats": 2.4,
+      "gain": 0.066,
+      "midi": 71,
+      "pan": -0.060000000000000026,
+      "seed": 1170107132
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 36,
+      "durationBeats": 1.8,
+      "gain": 0.06,
+      "midi": 33,
+      "pan": -0.02,
+      "seed": 2496683820
+    },
+    {
+      "instrument": "air-motion",
+      "role": "editorial-sfx",
+      "beat": 36,
+      "durationBeats": 1.25,
+      "gain": 0.044,
+      "pan": -0.08,
+      "seed": 3329241714,
+      "id": "forearm-reassemble-motion",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "forearm",
+        "partIds": [
+          "urdf:link3_1",
+          "urdf:link4_1"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 36,
+        "lastBeat": 37.25,
+        "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+      }
+    },
+    {
+      "instrument": "soft-seat",
+      "role": "editorial-sfx",
+      "beat": 37.25,
+      "durationBeats": 0.42,
+      "gain": 0.053,
+      "midi": 52,
+      "pan": -0.048,
+      "seed": 3354951659,
+      "id": "forearm-seated",
+      "cueRole": "seating",
+      "anchor": "movement-complete",
+      "animation": {
+        "groupId": "forearm",
+        "partIds": [
+          "urdf:link3_1",
+          "urdf:link4_1"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 36,
+        "lastBeat": 37.25,
+        "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+      }
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 38,
+      "durationBeats": 2.4,
+      "gain": 0.062,
+      "midi": 69,
+      "pan": -0.20000000000000004,
+      "seed": 2038670934
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 38,
+      "durationBeats": 1.8,
+      "gain": 0.06,
+      "midi": 45,
+      "pan": -0.02,
+      "seed": 2757844626
+    },
+    {
+      "instrument": "air-motion",
+      "role": "editorial-sfx",
+      "beat": 38,
+      "durationBeats": 1.25,
+      "gain": 0.044,
+      "pan": -0.24,
+      "seed": 2800228235,
+      "id": "shoulder-reassemble-motion",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "animation": {
+        "groupId": "shoulder",
+        "partIds": [
+          "urdf:link1_1",
+          "urdf:link2_1"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 38,
+        "lastBeat": 39.25,
+        "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+      }
+    },
+    {
+      "instrument": "soft-seat",
+      "role": "editorial-sfx",
+      "beat": 39.25,
+      "durationBeats": 0.42,
+      "gain": 0.053,
+      "midi": 50,
+      "pan": -0.144,
+      "seed": 656504191,
+      "id": "shoulder-seated",
+      "cueRole": "seating",
+      "anchor": "movement-complete",
+      "animation": {
+        "groupId": "shoulder",
+        "partIds": [
+          "urdf:link1_1",
+          "urdf:link2_1"
+        ],
+        "phase": "reassemble",
+        "firstBeat": 38,
+        "lastBeat": 39.25,
+        "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2"
+      }
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 39.65,
+      "durationBeats": 11,
+      "gain": 0.012,
+      "midi": 50,
+      "pan": -0.5249999999999999,
+      "seed": 664654316
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 39.65,
+      "durationBeats": 11,
+      "gain": 0.012,
+      "midi": 57,
+      "pan": -0.175,
+      "seed": 698865820
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 39.65,
+      "durationBeats": 11,
+      "gain": 0.012,
+      "midi": 61,
+      "pan": 0.175,
+      "seed": 2218141990
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 39.65,
+      "durationBeats": 11,
+      "gain": 0.012,
+      "midi": 64,
+      "pan": 0.5249999999999999,
+      "seed": 1666178157
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 40,
+      "durationBeats": 3.4,
+      "gain": 0.075,
+      "midi": 38,
+      "pan": -0.04,
+      "seed": 2156417518
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 40,
+      "durationBeats": 3.1,
+      "gain": 0.076,
+      "midi": 69,
+      "pan": -0.13,
+      "seed": 2044481545
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 40.75,
+      "durationBeats": 3.1,
+      "gain": 0.067,
+      "midi": 73,
+      "pan": -0.13,
+      "seed": 2289063267
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 41.5,
+      "durationBeats": 3.1,
+      "gain": 0.069,
+      "midi": 76,
+      "pan": -0.13,
+      "seed": 3645773129
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 42.75,
+      "durationBeats": 3.1,
+      "gain": 0.053,
+      "midi": 81,
+      "pan": 0.13,
+      "seed": 1728860056
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 44,
+      "durationBeats": 3.5,
+      "gain": 0.042,
+      "midi": 50,
+      "pan": 0.04,
+      "seed": 2190148009
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 45,
+      "durationBeats": 3.1,
+      "gain": 0.032,
+      "midi": 76,
+      "pan": 0.13,
+      "seed": 823919653
+    }
+  ],
+  "file": "kinetic-loop.wav",
+  "byteLength": 4536044,
+  "sha256": "cd5d6922fa6fcf086a8a7632aa082572f10377183a88a6af0f26c738433ef7b9",
+  "analysis": {
+    "sampleRate": 44100,
+    "frames": 1134000,
+    "durationSeconds": 25.714285714285715,
+    "peak": 0.3981071705534972,
+    "peakDbfs": -8,
+    "rmsDbfs": -25.287724676096627,
+    "clippedSamples": 0,
+    "loopBoundary": {
+      "maximumStep": 0.00046638723722853756,
+      "maximumInteriorStep": 0.022367232980219212,
+      "ratioToMaximumInteriorStep": 0.020851360453972734
+    },
+    "sections": [
+      {
+        "id": "hook",
+        "firstBeat": 0,
+        "lastBeat": 10,
+        "rmsDbfs": -23.90178290441654
+      },
+      {
+        "id": "expand",
+        "firstBeat": 10,
+        "lastBeat": 18,
+        "rmsDbfs": -23.251039446102002
+      },
+      {
+        "id": "read",
+        "firstBeat": 18,
+        "lastBeat": 32,
+        "rmsDbfs": -31.324542053657023
+      },
+      {
+        "id": "return",
+        "firstBeat": 32,
+        "lastBeat": 40,
+        "rmsDbfs": -23.782070576031366
+      },
+      {
+        "id": "resolve",
+        "firstBeat": 40,
+        "lastBeat": 48,
+        "rmsDbfs": -26.0890427134213
+      }
+    ],
+    "listeningReview": "Automated analysis only. Subjective listening and the loop must be reviewed separately."
+  }
+}

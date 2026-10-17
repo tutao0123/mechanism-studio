@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "provider": "doubao",
+  "complete": true,
+  "generatedAt": "2026-10-14T14:25:28.645Z",
+  "resourceId": "seed-tts-2.0",
+  "speaker": "zh_female_vv_uranus_bigtts",
+  "apiMode": "speech",
+  "format": "mp3",
+  "sampleRate": 24000,
+  "lessonHashPolicy": "narration-v1",
+  "lessonSha256": "1eac0258da5f00a6c9d7bd5964a95894ab9616e1d0957f3660e960323fcbeb20",
+  "steps": {
+    "overview": {
+      "src": "assets/audio/overview-147aaedfa0965f98b6f4d352925a45668899de20c702f023ab6a0b905cd57194.mp3",
+      "bytes": 211245,
+      "sha256": "147aaedfa0965f98b6f4d352925a45668899de20c702f023ab6a0b905cd57194",
+      "usage": {
+        "text_words": 122
+      }
+    },
+    "low-spool": {
+      "src": "assets/audio/low-spool-aac3d212dc70bb319eaca106ee106dd55a5bf35fe240a21188a54ea5fb53c495.mp3",
+      "bytes": 172653,
+      "sha256": "aac3d212dc70bb319eaca106ee106dd55a5bf35fe240a21188a54ea5fb53c495",
+      "usage": {
+        "text_words": 98
+      }
+    },
+    "high-spool": {
+      "src": "assets/audio/high-spool-0f6cbf8048a7d6a9771066be269cfdf4d0f1461973f871550a9e89dc4594f9a3.mp3",
+      "bytes": 178989,
+      "sha256": "0f6cbf8048a7d6a9771066be269cfdf4d0f1461973f871550a9e89dc4594f9a3",
+      "usage": {
+        "text_words": 100
+      }
+    },
+    "flow": {
+      "src": "assets/audio/flow-7753cc80c73e71d3e0c4ef6b03bfa3e34d7dcc2dcad0b36dbd76657f596d060a.mp3",
+      "bytes": 197421,
+      "sha256": "7753cc80c73e71d3e0c4ef6b03bfa3e34d7dcc2dcad0b36dbd76657f596d060a",
+      "usage": {
+        "text_words": 112
+      }
+    },
+    "disassembly": {
+      "src": "assets/audio/disassembly-9feed7da923270071e05d65d8b4145ee568368b0f2b352ea2b68bb21db6f13ac.mp3",
+      "bytes": 175917,
+      "sha256": "9feed7da923270071e05d65d8b4145ee568368b0f2b352ea2b68bb21db6f13ac",
+      "usage": {
+        "text_words": 102
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "lessonSha256": "7b45c70e4f1f3d0315103a43b916cf4f6cac192d82fad1bf06f7de6654114389",
+  "steps": {
+    "overview": 14.184,
+    "joints": 16.032,
+    "trajectory": 14.376,
+    "gait": 16.92,
+    "stance": 13.944,
+    "assembly": 16.488
+  }
+}

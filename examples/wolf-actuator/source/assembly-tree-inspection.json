@@ -1,0 +1,1314 @@
+{
+  "sourceSHA256": "b352183e1bd0d55c403a6f406c3b2886a3b1b374b47cf32bcb69d4277d252e35",
+  "note": "Raw STEP definition graph only. XCAF will independently resolve retained usage identity and world transforms.",
+  "assemblies": [
+    {
+      "definition": "#953098",
+      "name": "wolf-actuator-assembly",
+      "children": [
+        {
+          "sourceUsage": "#759",
+          "childDefinition": "#953099",
+          "name": "planet-2"
+        },
+        {
+          "sourceUsage": "#760",
+          "childDefinition": "#953100",
+          "name": "planet-5"
+        },
+        {
+          "sourceUsage": "#761",
+          "childDefinition": "#953101",
+          "name": "encoder-magnet-holder"
+        },
+        {
+          "sourceUsage": "#762",
+          "childDefinition": "#953102",
+          "name": "planet-9"
+        },
+        {
+          "sourceUsage": "#763",
+          "childDefinition": "#953103",
+          "name": "front-plate"
+        },
+        {
+          "sourceUsage": "#764",
+          "childDefinition": "#953104",
+          "name": "internal-ring-gear-A"
+        },
+        {
+          "sourceUsage": "#765",
+          "childDefinition": "#953105",
+          "name": "internal-ring-gear-B"
+        },
+        {
+          "sourceUsage": "#766",
+          "childDefinition": "#953106",
+          "name": "planet-6"
+        },
+        {
+          "sourceUsage": "#767",
+          "childDefinition": "#953107",
+          "name": "sun-gear"
+        },
+        {
+          "sourceUsage": "#768",
+          "childDefinition": "#953108",
+          "name": "planet-7"
+        },
+        {
+          "sourceUsage": "#769",
+          "childDefinition": "#953109",
+          "name": "planet-10"
+        },
+        {
+          "sourceUsage": "#770",
+          "childDefinition": "#953110",
+          "name": "planet-11"
+        },
+        {
+          "sourceUsage": "#771",
+          "childDefinition": "#953111",
+          "name": "planet-8"
+        },
+        {
+          "sourceUsage": "#772",
+          "childDefinition": "#953112",
+          "name": "planet-1"
+        },
+        {
+          "sourceUsage": "#773",
+          "childDefinition": "#953113",
+          "name": "back-plate"
+        },
+        {
+          "sourceUsage": "#774",
+          "childDefinition": "#953114",
+          "name": "planet-4"
+        },
+        {
+          "sourceUsage": "#775",
+          "childDefinition": "#953115",
+          "name": "planet-3"
+        },
+        {
+          "sourceUsage": "#776",
+          "childDefinition": "#953116",
+          "name": "encoder-housing"
+        },
+        {
+          "sourceUsage": "#777",
+          "childDefinition": "#953117",
+          "name": "planet-12"
+        },
+        {
+          "sourceUsage": "#850",
+          "childDefinition": "#953118",
+          "name": "bearing-assembly-B <1>"
+        },
+        {
+          "sourceUsage": "#923",
+          "childDefinition": "#953191",
+          "name": "bearing-assembly-A <1>"
+        },
+        {
+          "sourceUsage": "#1010",
+          "childDefinition": "#953195",
+          "name": "motor-8318 <1>"
+        }
+      ]
+    },
+    {
+      "definition": "#953119",
+      "name": "ring-assembly-B <1>",
+      "children": [
+        {
+          "sourceUsage": "#778",
+          "childDefinition": "#953120",
+          "name": "outer-ring-B"
+        }
+      ]
+    },
+    {
+      "definition": "#953118",
+      "name": "bearing-assembly-B <1>",
+      "children": [
+        {
+          "sourceUsage": "#779",
+          "childDefinition": "#953119",
+          "name": "ring-assembly-B <1>"
+        },
+        {
+          "sourceUsage": "#849",
+          "childDefinition": "#953121",
+          "name": "bearing-complete <1>"
+        }
+      ]
+    },
+    {
+      "definition": "#953121",
+      "name": "bearing-complete <1>",
+      "children": [
+        {
+          "sourceUsage": "#780",
+          "childDefinition": "#953122",
+          "name": "Part 61"
+        },
+        {
+          "sourceUsage": "#781",
+          "childDefinition": "#953123",
+          "name": "Part 8"
+        },
+        {
+          "sourceUsage": "#782",
+          "childDefinition": "#953124",
+          "name": "Part 35"
+        },
+        {
+          "sourceUsage": "#783",
+          "childDefinition": "#953125",
+          "name": "Part 25"
+        },
+        {
+          "sourceUsage": "#784",
+          "childDefinition": "#953126",
+          "name": "Part 12"
+        },
+        {
+          "sourceUsage": "#785",
+          "childDefinition": "#953127",
+          "name": "Part 60"
+        },
+        {
+          "sourceUsage": "#786",
+          "childDefinition": "#953128",
+          "name": "Part 56"
+        },
+        {
+          "sourceUsage": "#787",
+          "childDefinition": "#953129",
+          "name": "Part 36"
+        },
+        {
+          "sourceUsage": "#788",
+          "childDefinition": "#953130",
+          "name": "Part 46"
+        },
+        {
+          "sourceUsage": "#789",
+          "childDefinition": "#953131",
+          "name": "Part 21"
+        },
+        {
+          "sourceUsage": "#790",
+          "childDefinition": "#953132",
+          "name": "Part 54"
+        },
+        {
+          "sourceUsage": "#791",
+          "childDefinition": "#953133",
+          "name": "Part 38"
+        },
+        {
+          "sourceUsage": "#792",
+          "childDefinition": "#953134",
+          "name": "Part 41"
+        },
+        {
+          "sourceUsage": "#793",
+          "childDefinition": "#953135",
+          "name": "Part 65"
+        },
+        {
+          "sourceUsage": "#794",
+          "childDefinition": "#953136",
+          "name": "Part 52"
+        },
+        {
+          "sourceUsage": "#795",
+          "childDefinition": "#953137",
+          "name": "Part 66"
+        },
+        {
+          "sourceUsage": "#796",
+          "childDefinition": "#953138",
+          "name": "Part 45"
+        },
+        {
+          "sourceUsage": "#797",
+          "childDefinition": "#953139",
+          "name": "Part 3"
+        },
+        {
+          "sourceUsage": "#798",
+          "childDefinition": "#953140",
+          "name": "Part 1"
+        },
+        {
+          "sourceUsage": "#799",
+          "childDefinition": "#953141",
+          "name": "Part 9"
+        },
+        {
+          "sourceUsage": "#800",
+          "childDefinition": "#953142",
+          "name": "Part 2"
+        },
+        {
+          "sourceUsage": "#801",
+          "childDefinition": "#953143",
+          "name": "Part 13"
+        },
+        {
+          "sourceUsage": "#802",
+          "childDefinition": "#953144",
+          "name": "Part 58"
+        },
+        {
+          "sourceUsage": "#803",
+          "childDefinition": "#953145",
+          "name": "Part 59"
+        },
+        {
+          "sourceUsage": "#804",
+          "childDefinition": "#953146",
+          "name": "Part 19"
+        },
+        {
+          "sourceUsage": "#805",
+          "childDefinition": "#953147",
+          "name": "Part 64"
+        },
+        {
+          "sourceUsage": "#806",
+          "childDefinition": "#953148",
+          "name": "Part 22"
+        },
+        {
+          "sourceUsage": "#807",
+          "childDefinition": "#953149",
+          "name": "Part 40"
+        },
+        {
+          "sourceUsage": "#808",
+          "childDefinition": "#953150",
+          "name": "Part 55"
+        },
+        {
+          "sourceUsage": "#809",
+          "childDefinition": "#953151",
+          "name": "Part 14"
+        },
+        {
+          "sourceUsage": "#810",
+          "childDefinition": "#953152",
+          "name": "Part 34"
+        },
+        {
+          "sourceUsage": "#811",
+          "childDefinition": "#953153",
+          "name": "Part 33"
+        },
+        {
+          "sourceUsage": "#812",
+          "childDefinition": "#953154",
+          "name": "Part 43"
+        },
+        {
+          "sourceUsage": "#813",
+          "childDefinition": "#953155",
+          "name": "Part 51"
+        },
+        {
+          "sourceUsage": "#814",
+          "childDefinition": "#953156",
+          "name": "Part 17"
+        },
+        {
+          "sourceUsage": "#815",
+          "childDefinition": "#953157",
+          "name": "Part 53"
+        },
+        {
+          "sourceUsage": "#816",
+          "childDefinition": "#953158",
+          "name": "Part 67"
+        },
+        {
+          "sourceUsage": "#817",
+          "childDefinition": "#953159",
+          "name": "Part 28"
+        },
+        {
+          "sourceUsage": "#818",
+          "childDefinition": "#953160",
+          "name": "Part 20"
+        },
+        {
+          "sourceUsage": "#819",
+          "childDefinition": "#953161",
+          "name": "Part 68"
+        },
+        {
+          "sourceUsage": "#820",
+          "childDefinition": "#953162",
+          "name": "Part 11"
+        },
+        {
+          "sourceUsage": "#821",
+          "childDefinition": "#953163",
+          "name": "Part 47"
+        },
+        {
+          "sourceUsage": "#822",
+          "childDefinition": "#953164",
+          "name": "Part 57"
+        },
+        {
+          "sourceUsage": "#823",
+          "childDefinition": "#953165",
+          "name": "Part 63"
+        },
+        {
+          "sourceUsage": "#824",
+          "childDefinition": "#953166",
+          "name": "Part 30"
+        },
+        {
+          "sourceUsage": "#825",
+          "childDefinition": "#953167",
+          "name": "Part 23"
+        },
+        {
+          "sourceUsage": "#826",
+          "childDefinition": "#953168",
+          "name": "Part 69"
+        },
+        {
+          "sourceUsage": "#827",
+          "childDefinition": "#953169",
+          "name": "Part 4"
+        },
+        {
+          "sourceUsage": "#828",
+          "childDefinition": "#953170",
+          "name": "Part 44"
+        },
+        {
+          "sourceUsage": "#829",
+          "childDefinition": "#953171",
+          "name": "Part 49"
+        },
+        {
+          "sourceUsage": "#830",
+          "childDefinition": "#953172",
+          "name": "Part 42"
+        },
+        {
+          "sourceUsage": "#831",
+          "childDefinition": "#953173",
+          "name": "Part 6"
+        },
+        {
+          "sourceUsage": "#832",
+          "childDefinition": "#953174",
+          "name": "Part 48"
+        },
+        {
+          "sourceUsage": "#833",
+          "childDefinition": "#953175",
+          "name": "Part 39"
+        },
+        {
+          "sourceUsage": "#834",
+          "childDefinition": "#953176",
+          "name": "Part 29"
+        },
+        {
+          "sourceUsage": "#835",
+          "childDefinition": "#953177",
+          "name": "Part 7"
+        },
+        {
+          "sourceUsage": "#836",
+          "childDefinition": "#953178",
+          "name": "Part 18"
+        },
+        {
+          "sourceUsage": "#837",
+          "childDefinition": "#953179",
+          "name": "Part 15"
+        },
+        {
+          "sourceUsage": "#838",
+          "childDefinition": "#953180",
+          "name": "Part 5"
+        },
+        {
+          "sourceUsage": "#839",
+          "childDefinition": "#953181",
+          "name": "Part 50"
+        },
+        {
+          "sourceUsage": "#840",
+          "childDefinition": "#953182",
+          "name": "Part 10"
+        },
+        {
+          "sourceUsage": "#841",
+          "childDefinition": "#953183",
+          "name": "Part 31"
+        },
+        {
+          "sourceUsage": "#842",
+          "childDefinition": "#953184",
+          "name": "Part 37"
+        },
+        {
+          "sourceUsage": "#843",
+          "childDefinition": "#953185",
+          "name": "Part 62"
+        },
+        {
+          "sourceUsage": "#844",
+          "childDefinition": "#953186",
+          "name": "Part 24"
+        },
+        {
+          "sourceUsage": "#845",
+          "childDefinition": "#953187",
+          "name": "Part 26"
+        },
+        {
+          "sourceUsage": "#846",
+          "childDefinition": "#953188",
+          "name": "Part 32"
+        },
+        {
+          "sourceUsage": "#847",
+          "childDefinition": "#953189",
+          "name": "Part 16"
+        },
+        {
+          "sourceUsage": "#848",
+          "childDefinition": "#953190",
+          "name": "Part 27"
+        }
+      ]
+    },
+    {
+      "definition": "#953192",
+      "name": "ring-assembly-A <1>",
+      "children": [
+        {
+          "sourceUsage": "#851",
+          "childDefinition": "#953193",
+          "name": "outer-ring-A"
+        }
+      ]
+    },
+    {
+      "definition": "#953191",
+      "name": "bearing-assembly-A <1>",
+      "children": [
+        {
+          "sourceUsage": "#852",
+          "childDefinition": "#953192",
+          "name": "ring-assembly-A <1>"
+        },
+        {
+          "sourceUsage": "#922",
+          "childDefinition": "#953194",
+          "name": "bearing-complete <1>"
+        }
+      ]
+    },
+    {
+      "definition": "#953194",
+      "name": "bearing-complete <1>",
+      "children": [
+        {
+          "sourceUsage": "#853",
+          "childDefinition": "#953124",
+          "name": "Part 35"
+        },
+        {
+          "sourceUsage": "#854",
+          "childDefinition": "#953122",
+          "name": "Part 61"
+        },
+        {
+          "sourceUsage": "#855",
+          "childDefinition": "#953163",
+          "name": "Part 47"
+        },
+        {
+          "sourceUsage": "#856",
+          "childDefinition": "#953125",
+          "name": "Part 25"
+        },
+        {
+          "sourceUsage": "#857",
+          "childDefinition": "#953123",
+          "name": "Part 8"
+        },
+        {
+          "sourceUsage": "#858",
+          "childDefinition": "#953136",
+          "name": "Part 52"
+        },
+        {
+          "sourceUsage": "#859",
+          "childDefinition": "#953133",
+          "name": "Part 38"
+        },
+        {
+          "sourceUsage": "#860",
+          "childDefinition": "#953132",
+          "name": "Part 54"
+        },
+        {
+          "sourceUsage": "#861",
+          "childDefinition": "#953145",
+          "name": "Part 59"
+        },
+        {
+          "sourceUsage": "#862",
+          "childDefinition": "#953126",
+          "name": "Part 12"
+        },
+        {
+          "sourceUsage": "#863",
+          "childDefinition": "#953127",
+          "name": "Part 60"
+        },
+        {
+          "sourceUsage": "#864",
+          "childDefinition": "#953140",
+          "name": "Part 1"
+        },
+        {
+          "sourceUsage": "#865",
+          "childDefinition": "#953189",
+          "name": "Part 16"
+        },
+        {
+          "sourceUsage": "#866",
+          "childDefinition": "#953188",
+          "name": "Part 32"
+        },
+        {
+          "sourceUsage": "#867",
+          "childDefinition": "#953141",
+          "name": "Part 9"
+        },
+        {
+          "sourceUsage": "#868",
+          "childDefinition": "#953144",
+          "name": "Part 58"
+        },
+        {
+          "sourceUsage": "#869",
+          "childDefinition": "#953143",
+          "name": "Part 13"
+        },
+        {
+          "sourceUsage": "#870",
+          "childDefinition": "#953135",
+          "name": "Part 65"
+        },
+        {
+          "sourceUsage": "#871",
+          "childDefinition": "#953129",
+          "name": "Part 36"
+        },
+        {
+          "sourceUsage": "#872",
+          "childDefinition": "#953182",
+          "name": "Part 10"
+        },
+        {
+          "sourceUsage": "#873",
+          "childDefinition": "#953147",
+          "name": "Part 64"
+        },
+        {
+          "sourceUsage": "#874",
+          "childDefinition": "#953139",
+          "name": "Part 3"
+        },
+        {
+          "sourceUsage": "#875",
+          "childDefinition": "#953134",
+          "name": "Part 41"
+        },
+        {
+          "sourceUsage": "#876",
+          "childDefinition": "#953146",
+          "name": "Part 19"
+        },
+        {
+          "sourceUsage": "#877",
+          "childDefinition": "#953148",
+          "name": "Part 22"
+        },
+        {
+          "sourceUsage": "#878",
+          "childDefinition": "#953149",
+          "name": "Part 40"
+        },
+        {
+          "sourceUsage": "#879",
+          "childDefinition": "#953161",
+          "name": "Part 68"
+        },
+        {
+          "sourceUsage": "#880",
+          "childDefinition": "#953150",
+          "name": "Part 55"
+        },
+        {
+          "sourceUsage": "#881",
+          "childDefinition": "#953157",
+          "name": "Part 53"
+        },
+        {
+          "sourceUsage": "#882",
+          "childDefinition": "#953162",
+          "name": "Part 11"
+        },
+        {
+          "sourceUsage": "#883",
+          "childDefinition": "#953156",
+          "name": "Part 17"
+        },
+        {
+          "sourceUsage": "#884",
+          "childDefinition": "#953177",
+          "name": "Part 7"
+        },
+        {
+          "sourceUsage": "#885",
+          "childDefinition": "#953154",
+          "name": "Part 43"
+        },
+        {
+          "sourceUsage": "#886",
+          "childDefinition": "#953164",
+          "name": "Part 57"
+        },
+        {
+          "sourceUsage": "#887",
+          "childDefinition": "#953153",
+          "name": "Part 33"
+        },
+        {
+          "sourceUsage": "#888",
+          "childDefinition": "#953137",
+          "name": "Part 66"
+        },
+        {
+          "sourceUsage": "#889",
+          "childDefinition": "#953152",
+          "name": "Part 34"
+        },
+        {
+          "sourceUsage": "#890",
+          "childDefinition": "#953159",
+          "name": "Part 28"
+        },
+        {
+          "sourceUsage": "#891",
+          "childDefinition": "#953166",
+          "name": "Part 30"
+        },
+        {
+          "sourceUsage": "#892",
+          "childDefinition": "#953165",
+          "name": "Part 63"
+        },
+        {
+          "sourceUsage": "#893",
+          "childDefinition": "#953174",
+          "name": "Part 48"
+        },
+        {
+          "sourceUsage": "#894",
+          "childDefinition": "#953169",
+          "name": "Part 4"
+        },
+        {
+          "sourceUsage": "#895",
+          "childDefinition": "#953168",
+          "name": "Part 69"
+        },
+        {
+          "sourceUsage": "#896",
+          "childDefinition": "#953176",
+          "name": "Part 29"
+        },
+        {
+          "sourceUsage": "#897",
+          "childDefinition": "#953167",
+          "name": "Part 23"
+        },
+        {
+          "sourceUsage": "#898",
+          "childDefinition": "#953170",
+          "name": "Part 44"
+        },
+        {
+          "sourceUsage": "#899",
+          "childDefinition": "#953160",
+          "name": "Part 20"
+        },
+        {
+          "sourceUsage": "#900",
+          "childDefinition": "#953179",
+          "name": "Part 15"
+        },
+        {
+          "sourceUsage": "#901",
+          "childDefinition": "#953158",
+          "name": "Part 67"
+        },
+        {
+          "sourceUsage": "#902",
+          "childDefinition": "#953155",
+          "name": "Part 51"
+        },
+        {
+          "sourceUsage": "#903",
+          "childDefinition": "#953175",
+          "name": "Part 39"
+        },
+        {
+          "sourceUsage": "#904",
+          "childDefinition": "#953178",
+          "name": "Part 18"
+        },
+        {
+          "sourceUsage": "#905",
+          "childDefinition": "#953173",
+          "name": "Part 6"
+        },
+        {
+          "sourceUsage": "#906",
+          "childDefinition": "#953172",
+          "name": "Part 42"
+        },
+        {
+          "sourceUsage": "#907",
+          "childDefinition": "#953180",
+          "name": "Part 5"
+        },
+        {
+          "sourceUsage": "#908",
+          "childDefinition": "#953183",
+          "name": "Part 31"
+        },
+        {
+          "sourceUsage": "#909",
+          "childDefinition": "#953151",
+          "name": "Part 14"
+        },
+        {
+          "sourceUsage": "#910",
+          "childDefinition": "#953186",
+          "name": "Part 24"
+        },
+        {
+          "sourceUsage": "#911",
+          "childDefinition": "#953185",
+          "name": "Part 62"
+        },
+        {
+          "sourceUsage": "#912",
+          "childDefinition": "#953181",
+          "name": "Part 50"
+        },
+        {
+          "sourceUsage": "#913",
+          "childDefinition": "#953142",
+          "name": "Part 2"
+        },
+        {
+          "sourceUsage": "#914",
+          "childDefinition": "#953138",
+          "name": "Part 45"
+        },
+        {
+          "sourceUsage": "#915",
+          "childDefinition": "#953184",
+          "name": "Part 37"
+        },
+        {
+          "sourceUsage": "#916",
+          "childDefinition": "#953131",
+          "name": "Part 21"
+        },
+        {
+          "sourceUsage": "#917",
+          "childDefinition": "#953190",
+          "name": "Part 27"
+        },
+        {
+          "sourceUsage": "#918",
+          "childDefinition": "#953128",
+          "name": "Part 56"
+        },
+        {
+          "sourceUsage": "#919",
+          "childDefinition": "#953130",
+          "name": "Part 46"
+        },
+        {
+          "sourceUsage": "#920",
+          "childDefinition": "#953187",
+          "name": "Part 26"
+        },
+        {
+          "sourceUsage": "#921",
+          "childDefinition": "#953171",
+          "name": "Part 49"
+        }
+      ]
+    },
+    {
+      "definition": "#953195",
+      "name": "motor-8318 <1>",
+      "children": [
+        {
+          "sourceUsage": "#924",
+          "childDefinition": "#953196",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#925",
+          "childDefinition": "#953197",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#926",
+          "childDefinition": "#953198",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#927",
+          "childDefinition": "#953199",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#928",
+          "childDefinition": "#953200",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#929",
+          "childDefinition": "#953201",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#930",
+          "childDefinition": "#953202",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#931",
+          "childDefinition": "#953203",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#932",
+          "childDefinition": "#953204",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#933",
+          "childDefinition": "#953205",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#934",
+          "childDefinition": "#953206",
+          "name": "motor-shaft"
+        },
+        {
+          "sourceUsage": "#935",
+          "childDefinition": "#953207",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#936",
+          "childDefinition": "#953208",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#937",
+          "childDefinition": "#953209",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#938",
+          "childDefinition": "#953210",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#939",
+          "childDefinition": "#953211",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#940",
+          "childDefinition": "#953212",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#941",
+          "childDefinition": "#953213",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#942",
+          "childDefinition": "#953214",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#943",
+          "childDefinition": "#953215",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#944",
+          "childDefinition": "#953216",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#945",
+          "childDefinition": "#953217",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#946",
+          "childDefinition": "#953218",
+          "name": "motor-mount-plate-8318"
+        },
+        {
+          "sourceUsage": "#947",
+          "childDefinition": "#953219",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#948",
+          "childDefinition": "#953220",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#949",
+          "childDefinition": "#953221",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#950",
+          "childDefinition": "#953222",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#951",
+          "childDefinition": "#953223",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#952",
+          "childDefinition": "#953224",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#953",
+          "childDefinition": "#953225",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#954",
+          "childDefinition": "#953226",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#955",
+          "childDefinition": "#953227",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#956",
+          "childDefinition": "#953228",
+          "name": "rotor"
+        },
+        {
+          "sourceUsage": "#957",
+          "childDefinition": "#953229",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#958",
+          "childDefinition": "#953230",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#959",
+          "childDefinition": "#953231",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#960",
+          "childDefinition": "#953232",
+          "name": "stator"
+        },
+        {
+          "sourceUsage": "#961",
+          "childDefinition": "#953233",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#962",
+          "childDefinition": "#953234",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#963",
+          "childDefinition": "#953235",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#964",
+          "childDefinition": "#953236",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#965",
+          "childDefinition": "#953237",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#966",
+          "childDefinition": "#953238",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#967",
+          "childDefinition": "#953239",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#968",
+          "childDefinition": "#953240",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#969",
+          "childDefinition": "#953241",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#970",
+          "childDefinition": "#953242",
+          "name": "rotor-body"
+        },
+        {
+          "sourceUsage": "#971",
+          "childDefinition": "#953243",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#972",
+          "childDefinition": "#953244",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#973",
+          "childDefinition": "#953245",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#974",
+          "childDefinition": "#953246",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#975",
+          "childDefinition": "#953247",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#976",
+          "childDefinition": "#953248",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#977",
+          "childDefinition": "#953249",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#978",
+          "childDefinition": "#953250",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#979",
+          "childDefinition": "#953251",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#980",
+          "childDefinition": "#953252",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#981",
+          "childDefinition": "#953253",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#982",
+          "childDefinition": "#953254",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#983",
+          "childDefinition": "#953255",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#984",
+          "childDefinition": "#953256",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#985",
+          "childDefinition": "#953257",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#986",
+          "childDefinition": "#953258",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#987",
+          "childDefinition": "#953259",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#988",
+          "childDefinition": "#953260",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#989",
+          "childDefinition": "#953261",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#990",
+          "childDefinition": "#953262",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#991",
+          "childDefinition": "#953263",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#992",
+          "childDefinition": "#953264",
+          "name": "motor-hex-nut"
+        },
+        {
+          "sourceUsage": "#993",
+          "childDefinition": "#953265",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#994",
+          "childDefinition": "#953266",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#995",
+          "childDefinition": "#953267",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#996",
+          "childDefinition": "#953268",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#997",
+          "childDefinition": "#953269",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#998",
+          "childDefinition": "#953270",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#999",
+          "childDefinition": "#953271",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#1000",
+          "childDefinition": "#953272",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#1001",
+          "childDefinition": "#953273",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#1002",
+          "childDefinition": "#953274",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#1003",
+          "childDefinition": "#953275",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#1004",
+          "childDefinition": "#953276",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#1005",
+          "childDefinition": "#953277",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#1006",
+          "childDefinition": "#953278",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#1007",
+          "childDefinition": "#953279",
+          "name": "cc"
+        },
+        {
+          "sourceUsage": "#1008",
+          "childDefinition": "#953280",
+          "name": "magnet"
+        },
+        {
+          "sourceUsage": "#1009",
+          "childDefinition": "#953281",
+          "name": "cc"
+        }
+      ]
+    }
+  ]
+}

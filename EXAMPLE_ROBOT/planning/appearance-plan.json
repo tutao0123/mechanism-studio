@@ -1,0 +1,165 @@
+{
+  "schemaVersion": "authoring-handoff-1",
+  "stage": "bound",
+  "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2",
+  "note": "Authoring records implemented by the cited code adapters; not a generic plan loader. Current colour/shared-study evidence is recorded in verification-color-study.json; verification.json preserves the earlier presentation review.",
+  "planRevision": "robot-appearance-2",
+  "implementation": "app.mjs thin adapter + shared/study/study.mjs + shared/appearance + shared line-art",
+  "assignments": [
+    {
+      "id": "urdf:base_link",
+      "appearance": "technical-paper"
+    },
+    {
+      "id": "urdf:link1_1",
+      "appearance": "technical-paper"
+    },
+    {
+      "id": "urdf:link2_1",
+      "appearance": "technical-paper"
+    },
+    {
+      "id": "urdf:link3_1",
+      "appearance": "technical-paper"
+    },
+    {
+      "id": "urdf:link4_1",
+      "appearance": "technical-paper"
+    },
+    {
+      "id": "urdf:link5_1",
+      "appearance": "technical-paper"
+    },
+    {
+      "id": "urdf:clamp1_1",
+      "appearance": "technical-paper"
+    },
+    {
+      "id": "urdf:clamp2_1",
+      "appearance": "technical-paper"
+    }
+  ],
+  "surfaces": {
+    "color": "#f1f1ed",
+    "metalness": 0,
+    "roughness": 0.88
+  },
+  "colorCues": {
+    "revision": "color-accents-1",
+    "enabledByDefault": true,
+    "accentColor": "#b7d5df",
+    "clock": "Same scene cue opacity, including shared exit fade; expired cues recompute neutral.",
+    "cueBindings": [
+      {
+        "chapter": "whole",
+        "targets": [
+          {
+            "id": "urdf:base_link",
+            "text": "Fixed base"
+          },
+          {
+            "id": "urdf:link5_1",
+            "text": "Parallel gripper"
+          }
+        ]
+      },
+      {
+        "chapter": "structure",
+        "targets": [
+          {
+            "id": "urdf:link2_1",
+            "text": "Shoulder link"
+          },
+          {
+            "id": "urdf:link3_1",
+            "text": "Elbow / forearm"
+          }
+        ]
+      },
+      {
+        "chapter": "wrist",
+        "targets": [
+          {
+            "id": "urdf:link4_1",
+            "text": "Wrist link"
+          },
+          {
+            "id": "urdf:link5_1",
+            "text": "Gripper carriage"
+          }
+        ]
+      },
+      {
+        "chapter": "grip",
+        "targets": [
+          {
+            "id": "urdf:clamp1_1",
+            "text": "Sliding jaw"
+          },
+          {
+            "id": "urdf:clamp2_1",
+            "text": "Opposed jaw"
+          }
+        ]
+      },
+      {
+        "chapter": "return",
+        "targets": [
+          {
+            "id": "urdf:base_link",
+            "text": "Fixed reference"
+          },
+          {
+            "id": "urdf:link5_1",
+            "text": "Gripper carriage"
+          }
+        ]
+      },
+      {
+        "chapter": "resolve",
+        "targets": [
+          {
+            "id": "urdf:base_link",
+            "text": "Original assembly"
+          },
+          {
+            "id": "urdf:link5_1",
+            "text": "Ready to repeat"
+          }
+        ]
+      }
+    ],
+    "toggle": "Color cues",
+    "ownership": "Per-mesh owned material copies; source geometry/transforms, line materials and selection overrides remain independent."
+  },
+  "lines": {
+    "silhouette": "#353532",
+    "detail": "#93938e",
+    "algorithm": "depth-tested feature and view contour edges, not triangle wireframe"
+  },
+  "lights": {
+    "hemisphere": {
+      "sky": "#ffffff",
+      "ground": "#d9d9d5",
+      "intensity": 2.4
+    },
+    "key": {
+      "position": [
+        -0.5,
+        1.5,
+        1.2
+      ],
+      "intensity": 2.2
+    },
+    "fill": {
+      "position": [
+        0.8,
+        0.35,
+        -0.7
+      ],
+      "intensity": 0.65
+    }
+  },
+  "textures": [],
+  "limits": "Neutral rendering and colour cues do not identify physical material or solved loads; visibility and source identity remain unchanged."
+}

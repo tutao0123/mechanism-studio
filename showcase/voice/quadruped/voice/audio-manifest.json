@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "provider": "doubao",
+  "complete": true,
+  "generatedAt": "2026-10-15T14:27:33.732Z",
+  "resourceId": "seed-tts-2.0",
+  "speaker": "en_female_jane_uranus_bigtts",
+  "apiMode": "speech",
+  "format": "mp3",
+  "sampleRate": 24000,
+  "lessonHashPolicy": "narration-v1",
+  "lessonSha256": "7b45c70e4f1f3d0315103a43b916cf4f6cac192d82fad1bf06f7de6654114389",
+  "steps": {
+    "overview": {
+      "src": "assets/audio/overview-bb23ebdda83c00447ed6d203dd29e8538fbd2e788e8b7c4d86b954eb4367ee8f.mp3",
+      "bytes": 113517,
+      "sha256": "bb23ebdda83c00447ed6d203dd29e8538fbd2e788e8b7c4d86b954eb4367ee8f",
+      "usage": {
+        "text_words": 192
+      }
+    },
+    "joints": {
+      "src": "assets/audio/joints-8fb9ee3148d35eff0d54e72fb4a20a9a5394abc2a73256b71b5667f55423f02f.mp3",
+      "bytes": 128301,
+      "sha256": "8fb9ee3148d35eff0d54e72fb4a20a9a5394abc2a73256b71b5667f55423f02f",
+      "usage": {
+        "text_words": 211
+      }
+    },
+    "trajectory": {
+      "src": "assets/audio/trajectory-1b6f7149c8a36aa84cae24fc81131ca741f6d7e5c2198616f8a309a46c031a4c.mp3",
+      "bytes": 115053,
+      "sha256": "1b6f7149c8a36aa84cae24fc81131ca741f6d7e5c2198616f8a309a46c031a4c",
+      "usage": {
+        "text_words": 216
+      }
+    },
+    "gait": {
+      "src": "assets/audio/gait-8aae3dc2282df50710cada9f58a08264fcebb67e0bfb2c3c6639a2a7f7541dac.mp3",
+      "bytes": 135405,
+      "sha256": "8aae3dc2282df50710cada9f58a08264fcebb67e0bfb2c3c6639a2a7f7541dac",
+      "usage": {
+        "text_words": 237
+      }
+    },
+    "stance": {
+      "src": "assets/audio/stance-fd29e070b0329055268c82af809e0c114cd4e8a33f7be80c99ec04e2c7589a5e.mp3",
+      "bytes": 111597,
+      "sha256": "fd29e070b0329055268c82af809e0c114cd4e8a33f7be80c99ec04e2c7589a5e",
+      "usage": {
+        "text_words": 211
+      }
+    },
+    "assembly": {
+      "src": "assets/audio/assembly-1b19fbdc87d1fdef339e21d6263dac4fd11aafb7dcf3472da3f79b021ae12eeb.mp3",
+      "bytes": 131949,
+      "sha256": "1b19fbdc87d1fdef339e21d6263dac4fd11aafb7dcf3472da3f79b021ae12eeb",
+      "usage": {
+        "text_words": 240
+      }
+    }
+  }
+}

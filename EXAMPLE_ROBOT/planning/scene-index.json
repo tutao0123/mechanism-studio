@@ -1,0 +1,740 @@
+{
+  "schemaVersion": "1.0.0",
+  "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2",
+  "units": "m",
+  "coordinateBasis": "glTF right-handed Y up; B=[x,z,-y]",
+  "source": {
+    "title": "SO-ARM 102 follower: source-authored robot description and visual meshes",
+    "author": "Robonine",
+    "repository": "https://github.com/roboninecom/SO-ARM-102",
+    "revision": "e871f738c97f43de230cb04d340797da6a68c4b9",
+    "license": "CC-BY-4.0",
+    "urdfFile": "source/simulation/urdf/so_arm_102.urdf",
+    "sha256": "d52437d3f901077d084492d81b4037952273a76d0a229bf7cf7de7ac5836da4f"
+  },
+  "asset": {
+    "file": "assets/robot.glb",
+    "sha256": "eef701b8ee65acd95b17069a3420a6d5a2be023da8d51018155804a732f0c91a",
+    "assembledWorldBounds": {
+      "min": [
+        -0.06849999725818634,
+        -4.163336342344337e-17,
+        -0.07999999821186066
+      ],
+      "max": [
+        0.3597877838208685,
+        0.3307079463926939,
+        0.07999999821186066
+      ]
+    },
+    "assembledWorldCenter": [
+      0.14564389328134109,
+      0.16535397319634693,
+      0
+    ]
+  },
+  "parts": [
+    {
+      "id": "urdf:base_link",
+      "name": "base_link",
+      "parentId": null,
+      "worldBounds": {
+        "min": [
+          -0.06849999725818634,
+          -4.163336342344337e-17,
+          -0.07999999821186066
+        ],
+        "max": [
+          0.04399999976158142,
+          0.027400000020861626,
+          0.07999999821186066
+        ]
+      },
+      "worldCenter": [
+        -0.01224999874830246,
+        0.013700000010430792,
+        0
+      ],
+      "localBounds": {
+        "min": [
+          -0.06849999725818634,
+          -4.163336342344337e-17,
+          -0.07999999821186066
+        ],
+        "max": [
+          0.04399999976158142,
+          0.027400000020861626,
+          0.07999999821186066
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "mesh": {
+        "file": "source/simulation/urdf/meshes/base_link.stl",
+        "sha256": "14283b862bae5b71b39092e08422c49a44afa7d8bbf3b4f19988e9377de5788d",
+        "triangleCount": 8956
+      },
+      "source": {
+        "link": "base_link",
+        "mesh": "source/simulation/urdf/meshes/base_link.stl",
+        "meshSHA256": "14283b862bae5b71b39092e08422c49a44afa7d8bbf3b4f19988e9377de5788d"
+      },
+      "zeroPose": true,
+      "displayBinding": {
+        "semanticNodeIndex": 0,
+        "ownedBodyNodeIndex": 8,
+        "ownedBodyRest": "identity; geometry is local to its source link"
+      }
+    },
+    {
+      "id": "urdf:link1_1",
+      "name": "link1_1",
+      "parentId": "urdf:base_link",
+      "worldBounds": {
+        "min": [
+          -0.051000020414590834,
+          0.009356559813022615,
+          -0.04500001296401013
+        ],
+        "max": [
+          0.048970405995845796,
+          0.11335670351982116,
+          0.04500000923872005
+        ]
+      },
+      "worldCenter": [
+        -0.0010148072093725188,
+        0.061356631666421885,
+        -1.8626450382086546e-9
+      ],
+      "localBounds": {
+        "min": [
+          -0.045000020414590836,
+          -0.015643440186977386,
+          -0.04500001296401024
+        ],
+        "max": [
+          0.054970405995845795,
+          0.08835670351982117,
+          0.04500000923871994
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.006,
+        0.025,
+        1.10978314851e-16,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.006,
+        0.025,
+        1.10978314851e-16,
+        1
+      ],
+      "mesh": {
+        "file": "source/simulation/urdf/meshes/link1_1.stl",
+        "sha256": "774d342ab81dff54bd81592152ca9fc17fff0a5204e75e8f209c06ece706b6e1",
+        "triangleCount": 10578
+      },
+      "source": {
+        "link": "link1_1",
+        "joint": "base_to_link1",
+        "parentLink": "base_link",
+        "mesh": "source/simulation/urdf/meshes/link1_1.stl",
+        "meshSHA256": "774d342ab81dff54bd81592152ca9fc17fff0a5204e75e8f209c06ece706b6e1"
+      },
+      "zeroPose": true,
+      "displayBinding": {
+        "semanticNodeIndex": 1,
+        "ownedBodyNodeIndex": 9,
+        "ownedBodyRest": "identity; geometry is local to its source link"
+      }
+    },
+    {
+      "id": "urdf:link2_1",
+      "name": "link2_1",
+      "parentId": "urdf:link1_1",
+      "worldBounds": {
+        "min": [
+          0.011999968454241755,
+          0.08838528487739691,
+          -0.020200277835130582
+        ],
+        "max": [
+          0.05099996180832386,
+          0.22133049275634417,
+          0.020200277289375772
+        ]
+      },
+      "worldCenter": [
+        0.03149996513128281,
+        0.15485788881687054,
+        -2.7287740470005595e-10
+      ],
+      "localBounds": {
+        "min": [
+          -0.022000031545758247,
+          -0.00997142307460308,
+          -0.03820027783513069
+        ],
+        "max": [
+          0.01699996180832386,
+          0.12297378480434418,
+          0.002200277289375663
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.04,
+        0.073356707952,
+        0.018,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.034,
+        0.098356707952,
+        0.01800000000000011,
+        1
+      ],
+      "mesh": {
+        "file": "source/simulation/urdf/meshes/link2_1.stl",
+        "sha256": "b1452f14fd3858cf967d214e95dab1d2f0635fea5594d5872541e7cc0d40b2c0",
+        "triangleCount": 17612
+      },
+      "source": {
+        "link": "link2_1",
+        "joint": "link1_to_link2",
+        "parentLink": "link1_1",
+        "mesh": "source/simulation/urdf/meshes/link2_1.stl",
+        "meshSHA256": "b1452f14fd3858cf967d214e95dab1d2f0635fea5594d5872541e7cc0d40b2c0"
+      },
+      "zeroPose": true,
+      "displayBinding": {
+        "semanticNodeIndex": 2,
+        "ownedBodyNodeIndex": 10,
+        "ownedBodyRest": "identity; geometry is local to its source link"
+      }
+    },
+    {
+      "id": "urdf:link3_1",
+      "name": "link3_1",
+      "parentId": "urdf:link2_1",
+      "worldBounds": {
+        "min": [
+          0.020033991110035336,
+          0.19735835246382882,
+          -0.037030776437787724
+        ],
+        "max": [
+          0.17915726188243286,
+          0.26505459505705764,
+          0.0370264840904191
+        ]
+      },
+      "worldCenter": [
+        0.0995956264962341,
+        0.23120647376044323,
+        -0.00000214617368431147
+      ],
+      "localBounds": {
+        "min": [
+          -0.013999967835843563,
+          -0.013999189250171185,
+          -0.019030896946787834
+        ],
+        "max": [
+          0.14512330293655396,
+          0.05369705334305763,
+          0.05502636358141899
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0000339589458789,
+        0.113000833762,
+        -0.035999879491,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0340339589458789,
+        0.211357541714,
+        -0.017999879490999893,
+        1
+      ],
+      "mesh": {
+        "file": "source/simulation/urdf/meshes/link3_1.stl",
+        "sha256": "dcda5964332b6418704bb26883d9539bc08ea7942fd82e5ab9e0af53e78f8880",
+        "triangleCount": 10592
+      },
+      "source": {
+        "link": "link3_1",
+        "joint": "link2_to_link3",
+        "parentLink": "link2_1",
+        "mesh": "source/simulation/urdf/meshes/link3_1.stl",
+        "meshSHA256": "dcda5964332b6418704bb26883d9539bc08ea7942fd82e5ab9e0af53e78f8880"
+      },
+      "zeroPose": true,
+      "displayBinding": {
+        "semanticNodeIndex": 3,
+        "ownedBodyNodeIndex": 11,
+        "ownedBodyRest": "identity; geometry is local to its source link"
+      }
+    },
+    {
+      "id": "urdf:link4_1",
+      "name": "link4_1",
+      "parentId": "urdf:link3_1",
+      "worldBounds": {
+        "min": [
+          0.15609320071356117,
+          0.2272543030330953,
+          -0.034999619181114376
+        ],
+        "max": [
+          0.23309112437830984,
+          0.26025430285428136,
+          0.027500384544175922
+        ]
+      },
+      "worldCenter": [
+        0.1945921625459355,
+        0.24375430294368833,
+        -0.003749617318469227
+      ],
+      "localBounds": {
+        "min": [
+          -0.01299999188631773,
+          -0.017740819603204727,
+          -0.017000000923871994
+        ],
+        "max": [
+          0.06399793177843094,
+          0.015259180217981339,
+          0.045500002801418304
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.135059233654,
+        0.0336375809223,
+        2.61233757511e-7,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.1690931925998789,
+        0.24499512263630002,
+        -0.017999618257242382,
+        1
+      ],
+      "mesh": {
+        "file": "source/simulation/urdf/meshes/link4_1.stl",
+        "sha256": "727bf2eb7859c80e0cf8f2ef9e2ed6dfec35e1fc6f1e4b1dd4ae0aad70d202ce",
+        "triangleCount": 5304
+      },
+      "source": {
+        "link": "link4_1",
+        "joint": "link3_to_link4",
+        "parentLink": "link3_1",
+        "mesh": "source/simulation/urdf/meshes/link4_1.stl",
+        "meshSHA256": "727bf2eb7859c80e0cf8f2ef9e2ed6dfec35e1fc6f1e4b1dd4ae0aad70d202ce"
+      },
+      "zeroPose": true,
+      "displayBinding": {
+        "semanticNodeIndex": 4,
+        "ownedBodyNodeIndex": 12,
+        "ownedBodyRest": "identity; geometry is local to its source link"
+      }
+    },
+    {
+      "id": "urdf:link5_1",
+      "name": "link5_1",
+      "parentId": "urdf:link4_1",
+      "worldBounds": {
+        "min": [
+          0.22828776550250826,
+          0.22095268179754296,
+          -0.0640014330472658
+        ],
+        "max": [
+          0.2972877800716248,
+          0.3307079463926939,
+          0.06399857303240797
+        ]
+      },
+      "worldCenter": [
+        0.26278777278706655,
+        0.27583031409511843,
+        -0.000001430007428915303
+      ],
+      "localBounds": {
+        "min": [
+          -8.847070631645693e-9,
+          -0.02400207705795765,
+          -0.06400208175182343
+        ],
+        "max": [
+          0.0690000057220459,
+          0.0857531875371933,
+          0.06399792432785034
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0591945817497,
+        -0.0000403637807994,
+        0.0180002669618,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.2282877743495789,
+        0.2449547588555006,
+        6.487045576195061e-7,
+        1
+      ],
+      "mesh": {
+        "file": "source/simulation/urdf/meshes/link5_1.stl",
+        "sha256": "3041844df75a779802f55d50bcbfcb42edaa4fdf7702ee612c06ecb958eebb9d",
+        "triangleCount": 6318
+      },
+      "source": {
+        "link": "link5_1",
+        "joint": "link4_to_link5",
+        "parentLink": "link4_1",
+        "mesh": "source/simulation/urdf/meshes/link5_1.stl",
+        "meshSHA256": "3041844df75a779802f55d50bcbfcb42edaa4fdf7702ee612c06ecb958eebb9d"
+      },
+      "zeroPose": true,
+      "displayBinding": {
+        "semanticNodeIndex": 5,
+        "ownedBodyNodeIndex": 13,
+        "ownedBodyRest": "identity; geometry is local to its source link"
+      }
+    },
+    {
+      "id": "urdf:clamp1_1",
+      "name": "clamp1_1",
+      "parentId": "urdf:link5_1",
+      "worldBounds": {
+        "min": [
+          0.279787780952395,
+          0.22195268158713788,
+          -0.016501428604268436
+        ],
+        "max": [
+          0.3597877838208685,
+          0.26795266724104494,
+          -0.0004014267022660993
+        ]
+      },
+      "worldCenter": [
+        0.31978778238663175,
+        0.2449526744140914,
+        -0.008451427653267268
+      ],
+      "localBounds": {
+        "min": [
+          -0.012499992735683918,
+          -0.039000000804662704,
+          2.413373945131525e-9
+        ],
+        "max": [
+          0.06750001013278961,
+          0.006999984849244356,
+          0.016100004315376282
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0639999993385,
+        0.0159979235363,
+        -0.0165020797222,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.2922877736880789,
+        0.2609526823918006,
+        -0.01650143101764238,
+        1
+      ],
+      "mesh": {
+        "file": "source/simulation/urdf/meshes/clamp1_1.stl",
+        "sha256": "a0276124d4a92276256883e4b4e09e820107ea2ad1ec86369ef979194073ada5",
+        "triangleCount": 1352
+      },
+      "source": {
+        "link": "clamp1_1",
+        "joint": "clamp1",
+        "parentLink": "link5_1",
+        "mesh": "source/simulation/urdf/meshes/clamp1_1.stl",
+        "meshSHA256": "a0276124d4a92276256883e4b4e09e820107ea2ad1ec86369ef979194073ada5"
+      },
+      "zeroPose": true,
+      "displayBinding": {
+        "semanticNodeIndex": 6,
+        "ownedBodyNodeIndex": 14,
+        "ownedBodyRest": "identity; geometry is local to its source link"
+      }
+    },
+    {
+      "id": "urdf:clamp2_1",
+      "name": "clamp2_1",
+      "parentId": "urdf:link5_1",
+      "worldBounds": {
+        "min": [
+          0.2797877805139498,
+          0.2219526836924282,
+          -0.0006014353330186621
+        ],
+        "max": [
+          0.3597877777944879,
+          0.26795266701802883,
+          0.015498570442057314
+        ]
+      },
+      "worldCenter": [
+        0.31978777915421885,
+        0.24495267535522852,
+        0.007448567554519326
+      ],
+      "localBounds": {
+        "min": [
+          -0.012499994598329067,
+          -0.038999997079372406,
+          -0.016100004315376282
+        ],
+        "max": [
+          0.06750000268220901,
+          0.006999986246228218,
+          1.459699694450478e-9
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0640000007627,
+        0.0159979219163,
+        0.0154979202778,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.2922877751122789,
+        0.2609526807718006,
+        0.01549856898235762,
+        1
+      ],
+      "mesh": {
+        "file": "source/simulation/urdf/meshes/clamp2_1.stl",
+        "sha256": "fb0b0db6def0e54da5a4a7dd06d089050db311c130f24013a9a98839497e3dc6",
+        "triangleCount": 1352
+      },
+      "source": {
+        "link": "clamp2_1",
+        "joint": "clamp2",
+        "parentLink": "link5_1",
+        "mesh": "source/simulation/urdf/meshes/clamp2_1.stl",
+        "meshSHA256": "fb0b0db6def0e54da5a4a7dd06d089050db311c130f24013a9a98839497e3dc6"
+      },
+      "zeroPose": true,
+      "displayBinding": {
+        "semanticNodeIndex": 7,
+        "ownedBodyNodeIndex": 15,
+        "ownedBodyRest": "identity; geometry is local to its source link"
+      }
+    }
+  ]
+}

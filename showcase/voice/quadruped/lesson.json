@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "language": "en-US",
+  "steps": [
+    {
+      "id": "overview",
+      "title": "Four legs. Eight joints.",
+      "eyebrow": "The assembly",
+      "durationHint": 14,
+      "narration": "This small quadruped has four legs and eight moving joints. Each leg bends at the hip and knee. The body stays fixed, so we can study how the legs move without confusing movement with balance."
+    },
+    {
+      "id": "joints",
+      "title": "Two joints place one foot.",
+      "eyebrow": "01 / Joint geometry",
+      "durationHint": 15,
+      "narration": "Two linked segments place each foot in a vertical plane. Inverse kinematics turns a foot target into hip and knee angles. Forward kinematics then checks the resulting position. These legs have no sideways joint."
+    },
+    {
+      "id": "trajectory",
+      "title": "Lift. Sweep. Return.",
+      "eyebrow": "02 / Foot path",
+      "durationHint": 14,
+      "narration": "Follow the front left foot. It lifts and moves forward, then returns at its baseline height. The same path drives both joint angles. This is a repeating motion relative to the fixed body, not travel across the floor."
+    },
+    {
+      "id": "gait",
+      "title": "Diagonal legs move together.",
+      "eyebrow": "03 / Diagonal timing",
+      "durationHint": 14,
+      "narration": "The front left and rear right legs share one phase. The other diagonal pair follows half a cycle later. Watch their alternating swing and return phases. This prescribed timing illustrates a trot pattern; it does not solve robot dynamics."
+    },
+    {
+      "id": "stance",
+      "title": "A planned stance.",
+      "eyebrow": "04 / What the model solves",
+      "durationHint": 14,
+      "narration": "During the low return phase, the model labels a foot as in stance. That label comes from the planned trajectory, not a contact sensor. There is no ground force or balance calculation, and the body remains fixed."
+    },
+    {
+      "id": "assembly",
+      "title": "Reveal the structure. Reassemble.",
+      "eyebrow": "The big picture",
+      "durationHint": 14,
+      "narration": "Separating the display parts reveals the body and leg modules. Bringing them back restores the same mechanism. This custom teaching assembly is a mesh model, not native solid CAD, and its motion is not a guarantee of real robot performance."
+    }
+  ]
+}

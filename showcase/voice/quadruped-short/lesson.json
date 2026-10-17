@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "language": "en-US",
+  "presentationMode": "showcase",
+  "steps": [
+    {
+      "id": "overview",
+      "title": "Four legs. Eight joints.",
+      "eyebrow": "The assembly",
+      "durationHint": 7.008,
+      "narration": "Four legs, eight joints. This fixed-body kinematic model reveals how a small quadruped moves."
+    },
+    {
+      "id": "joints",
+      "title": "Two joints place one foot.",
+      "eyebrow": "01 / Joint geometry",
+      "durationHint": 5.928,
+      "narration": "Two joints place each foot. The hip swings the leg; the knee adjusts reach."
+    },
+    {
+      "id": "trajectory",
+      "title": "Lift. Sweep. Return.",
+      "eyebrow": "02 / Foot path",
+      "durationHint": 6.576,
+      "narration": "One foot lifts, sweeps forward, then returns low. Joint angles follow the same path."
+    },
+    {
+      "id": "gait",
+      "title": "Diagonal legs move together.",
+      "eyebrow": "03 / Diagonal timing",
+      "durationHint": 4.68,
+      "narration": "Diagonal legs move together. The other pair follows half a cycle later."
+    },
+    {
+      "id": "stance",
+      "title": "Alternate the low phase.",
+      "eyebrow": "04 / Planned stance",
+      "durationHint": 4.68,
+      "narration": "During the low phase, one pair returns while the other swings forward."
+    },
+    {
+      "id": "assembly",
+      "title": "Reveal the structure. Reassemble.",
+      "eyebrow": "The big picture",
+      "durationHint": 5.112,
+      "narration": "Separate the modules. See the joints and links, then bring the mechanism together."
+    }
+  ]
+}

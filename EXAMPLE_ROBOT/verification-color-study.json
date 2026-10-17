@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-17",
+  "geometryRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2",
+  "changes": [
+    "Shared study factory and annotation layout; thin per-example adapter.",
+    "Deterministic colour cue sampler plus per-occurrence owned material layer.",
+    "Neutral colour toggle; initial cue and shared scene fade remain time-addressable."
+  ],
+  "tests": {
+    "project": {
+      "passed": 376,
+      "failed": 0,
+      "skipped": 0,
+      "output": "output/wolf-project-regression.txt"
+    },
+    "presentationAfterCameraAndRouteChanges": {
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "output": "output/wolf-presentation-final-tests.txt"
+    },
+    "robotAfterPlanUpdate": {
+      "passed": 43,
+      "failed": 0,
+      "skipped": 0,
+      "output": "output/robot-color-final-tests.txt"
+    }
+  },
+  "actualBrowser": {
+    "nativeMusicSamples": 421,
+    "chapters": [
+      "wrist",
+      "grip",
+      "return",
+      "resolve",
+      "whole",
+      "structure"
+    ],
+    "colourOffRestoresNeutral": true,
+    "narrowLeaderPixels": 10,
+    "desktopLeaderPixels": 15,
+    "proof": [
+      "../output/dynamic-color-robot.jpg",
+      "../output/dynamic-color-narrow.jpg"
+    ],
+    "note": "The original verification.json is the historical retained-scene review; this file records the new colour/study integration. WOLF has its own independent geometry/source report."
+  },
+  "currentSharedStudySHA256": "76fe5b2cf9ff3086b43f01bea078043838c9ced764207de724d9decbfd0cdfb7",
+  "oldSourceAndMusicRetained": true
+}

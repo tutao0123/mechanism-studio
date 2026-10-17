@@ -1,0 +1,426 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "open-robot-so-arm102",
+  "assetRevision": "so-arm102-d52437d3f901-bb3371f7efaf-urdf-display-2",
+  "units": {
+    "source": "URDF m; visual STL mm scaled 0.001",
+    "asset": "m",
+    "angle": "rad"
+  },
+  "sourceSHA256": "d52437d3f901077d084492d81b4037952273a76d0a229bf7cf7de7ac5836da4f",
+  "coordinateMap": "B:[x,z,-y]; node B*M*B^-1; geometry B*visualOrigin*meshScale; URDF translation remains metres",
+  "identity": "part_id is urdf:<original link name>; original zero-pose joint hierarchy",
+  "limitations": [
+    "Per-link visual STL meshes merge multiple physical bodies; this source package does not retain per-screw identity or a native STEP assembly tree.",
+    "The exploded layout is editorial link separation, not collision-checked service disassembly.",
+    "Source collision and inertial estimates are preserved as provenance, not independently validated dynamics."
+  ],
+  "parts": [
+    {
+      "part_id": "urdf:base_link",
+      "parent_id": null,
+      "label": "base_link",
+      "sourceKind": "urdf-link",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "link": "base_link",
+        "mesh": "source/simulation/urdf/meshes/base_link.stl",
+        "meshSHA256": "14283b862bae5b71b39092e08422c49a44afa7d8bbf3b4f19988e9377de5788d"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.06849999725818634,
+          -4.163336342344337e-17,
+          -0.07999999821186066
+        ],
+        "max": [
+          0.04399999976158142,
+          0.027400000020861626,
+          0.07999999821186066
+        ]
+      }
+    },
+    {
+      "part_id": "urdf:link1_1",
+      "parent_id": "urdf:base_link",
+      "label": "link1_1",
+      "sourceKind": "urdf-link",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.006,
+          0.025,
+          1.10978314851e-16,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "link": "link1_1",
+        "joint": "base_to_link1",
+        "parentLink": "base_link",
+        "mesh": "source/simulation/urdf/meshes/link1_1.stl",
+        "meshSHA256": "774d342ab81dff54bd81592152ca9fc17fff0a5204e75e8f209c06ece706b6e1"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.045000020414590836,
+          -0.015643440186977386,
+          -0.04500001296401024
+        ],
+        "max": [
+          0.054970405995845795,
+          0.08835670351982117,
+          0.04500000923871994
+        ]
+      }
+    },
+    {
+      "part_id": "urdf:link2_1",
+      "parent_id": "urdf:link1_1",
+      "label": "link2_1",
+      "sourceKind": "urdf-link",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.04,
+          0.073356707952,
+          0.018,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "link": "link2_1",
+        "joint": "link1_to_link2",
+        "parentLink": "link1_1",
+        "mesh": "source/simulation/urdf/meshes/link2_1.stl",
+        "meshSHA256": "b1452f14fd3858cf967d214e95dab1d2f0635fea5594d5872541e7cc0d40b2c0"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.022000031545758247,
+          -0.00997142307460308,
+          -0.03820027783513069
+        ],
+        "max": [
+          0.01699996180832386,
+          0.12297378480434418,
+          0.002200277289375663
+        ]
+      }
+    },
+    {
+      "part_id": "urdf:link3_1",
+      "parent_id": "urdf:link2_1",
+      "label": "link3_1",
+      "sourceKind": "urdf-link",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0000339589458789,
+          0.113000833762,
+          -0.035999879491,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "link": "link3_1",
+        "joint": "link2_to_link3",
+        "parentLink": "link2_1",
+        "mesh": "source/simulation/urdf/meshes/link3_1.stl",
+        "meshSHA256": "dcda5964332b6418704bb26883d9539bc08ea7942fd82e5ab9e0af53e78f8880"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.013999967835843563,
+          -0.013999189250171185,
+          -0.019030896946787834
+        ],
+        "max": [
+          0.14512330293655396,
+          0.05369705334305763,
+          0.05502636358141899
+        ]
+      }
+    },
+    {
+      "part_id": "urdf:link4_1",
+      "parent_id": "urdf:link3_1",
+      "label": "link4_1",
+      "sourceKind": "urdf-link",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.135059233654,
+          0.0336375809223,
+          2.61233757511e-7,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "link": "link4_1",
+        "joint": "link3_to_link4",
+        "parentLink": "link3_1",
+        "mesh": "source/simulation/urdf/meshes/link4_1.stl",
+        "meshSHA256": "727bf2eb7859c80e0cf8f2ef9e2ed6dfec35e1fc6f1e4b1dd4ae0aad70d202ce"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.01299999188631773,
+          -0.017740819603204727,
+          -0.017000000923871994
+        ],
+        "max": [
+          0.06399793177843094,
+          0.015259180217981339,
+          0.045500002801418304
+        ]
+      }
+    },
+    {
+      "part_id": "urdf:link5_1",
+      "parent_id": "urdf:link4_1",
+      "label": "link5_1",
+      "sourceKind": "urdf-link",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0591945817497,
+          -0.0000403637807994,
+          0.0180002669618,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "link": "link5_1",
+        "joint": "link4_to_link5",
+        "parentLink": "link4_1",
+        "mesh": "source/simulation/urdf/meshes/link5_1.stl",
+        "meshSHA256": "3041844df75a779802f55d50bcbfcb42edaa4fdf7702ee612c06ecb958eebb9d"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -8.847070631645693e-9,
+          -0.02400207705795765,
+          -0.06400208175182343
+        ],
+        "max": [
+          0.0690000057220459,
+          0.0857531875371933,
+          0.06399792432785034
+        ]
+      }
+    },
+    {
+      "part_id": "urdf:clamp1_1",
+      "parent_id": "urdf:link5_1",
+      "label": "clamp1_1",
+      "sourceKind": "urdf-link",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0639999993385,
+          0.0159979235363,
+          -0.0165020797222,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "link": "clamp1_1",
+        "joint": "clamp1",
+        "parentLink": "link5_1",
+        "mesh": "source/simulation/urdf/meshes/clamp1_1.stl",
+        "meshSHA256": "a0276124d4a92276256883e4b4e09e820107ea2ad1ec86369ef979194073ada5"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.012499992735683918,
+          -0.039000000804662704,
+          2.413373945131525e-9
+        ],
+        "max": [
+          0.06750001013278961,
+          0.006999984849244356,
+          0.016100004315376282
+        ]
+      }
+    },
+    {
+      "part_id": "urdf:clamp2_1",
+      "parent_id": "urdf:link5_1",
+      "label": "clamp2_1",
+      "sourceKind": "urdf-link",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0640000007627,
+          0.0159979219163,
+          0.0154979202778,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "link": "clamp2_1",
+        "joint": "clamp2",
+        "parentLink": "link5_1",
+        "mesh": "source/simulation/urdf/meshes/clamp2_1.stl",
+        "meshSHA256": "fb0b0db6def0e54da5a4a7dd06d089050db311c130f24013a9a98839497e3dc6"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.012499994598329067,
+          -0.038999997079372406,
+          -0.016100004315376282
+        ],
+        "max": [
+          0.06750000268220901,
+          0.006999986246228218,
+          1.459699694450478e-9
+        ]
+      }
+    }
+  ]
+}
