@@ -24,4 +24,17 @@ restart. Expired cues return to baseline without accumulating tint. If a scene
 fade also removes text, its part accent should use that same fade. Keep a
 keyboard-accessible `Color cues` switch for neutral line-art viewing.
 
+## Shared line-art style
+
+`line-art-style.mjs` is the single source for the default white line-art look:
+`LINE_ART_LINE_STYLE` (outline `#252525`, detail creases `#93938e`) for the
+viewer `lineStyle`, `createLineArtFill()` for a fresh per-occurrence pale fill
+(`#f1f1ed`, roughness .88, no metalness, polygon offset so coplanar creases stay
+continuous), and `addLineArtLighting(scene)` for the white background, soft
+hemisphere, upper world-fixed key and weaker fill. New examples import it
+instead of tuning lights per page. Existing pages, including `shared/study`,
+keep their own settings: changing them alters published delivery fingerprints,
+so migrate one deliberately and re-record its evidence. These are visual parameters, not a
+physical material or finish.
+
 Tests: `node --test shared/appearance/tests/*.test.mjs`.

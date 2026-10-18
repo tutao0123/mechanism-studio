@@ -93,7 +93,9 @@ Focused checks: `node --test shared/voice/*.test.mjs`. The new speech API uses f
 
 Recompute from the same timeline on pause/seek/restart; never accumulate tint. Accent is an explanation aid, not physical material or simulation data.
 
-Focused checks: `node --test shared/appearance/tests/color-accents.test.mjs`.
+`line-art-style.mjs` holds the shared white line-art preset: `LINE_ART_LINE_STYLE`, `createLineArtFill()` (fresh per-occurrence fill with polygon offset) and `addLineArtLighting(scene)`. New examples use it rather than per-page light tuning; existing pages, including the study shell, are migrated deliberately.
+
+Focused checks: `node --test shared/appearance/tests/*.test.mjs`.
 
 ### 7. Study — music-driven assembly presentation
 
