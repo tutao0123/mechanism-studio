@@ -23,7 +23,10 @@ export function inspectReleaseFile(name, bytes, { mode = '100644' } = {}) {
   if (mode === '120000' || mode === '160000') fail('symbolic link or submodule is not allowed in the release list');
   if (bytes.length > releaseLimits.fileBytes) fail('file exceeds the 95 MiB release budget');
   const extension = extname(name).toLowerCase();
-  const isText = textExtensions.has(extension) || /(?:^|\/)(?:LICENSE(?:\.[^/]*)?|NOTICE|\.gitignore|\.gitattributes|\.npmrc|\.env\.example)$/.test(name);
+  // Reviewed, pinned Anthrobotics research source; retain its CC BY-SA header
+  // and inspect it as text. This does not allow arbitrary new binary formats.
+  const reviewedBearingSource = name === 'examples/wolf-actuator/tour/research-v2/bearing-generator.scad';
+  const isText = reviewedBearingSource || textExtensions.has(extension) || /(?:^|\/)(?:LICENSE(?:\.[^/]*)?|NOTICE|\.gitignore|\.gitattributes|\.npmrc|\.env\.example)$/.test(name);
   if (!isText && !binaryExtensions.has(extension)) fail('unreviewed file type; review its purpose before adding it to the release policy');
   // Scan all bytes, including GLB metadata and uncompressed binary strings, for
   // high-confidence key formats and paths. This is not a binary-format parser.

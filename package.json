@@ -20,6 +20,7 @@
     "check": "node scripts/check.mjs",
     "export:spec": "node prototype-3d/export-spec.mjs",
     "release:check": "node scripts/release-check.mjs",
+    "check:delivery": "node scripts/check-delivery.mjs",
     "import:step": "node tools/cad/import-kfl08.mjs",
     "import:shaft-bearing": "node tools/cad/import-shaft-bearing.mjs",
     "import:cad": "node tools/cad/import-assembly.mjs",

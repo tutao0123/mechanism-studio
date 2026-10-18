@@ -1,0 +1,2609 @@
+{
+  "schemaVersion": "1.3.0",
+  "title": "WOLF / Bearing Component Study",
+  "edition": "wolf-bearing-continuous-v1",
+  "authorship": "Original Mechanism Studio music composition and pure code synthesis, reused as a music bed and freshly rendered with source-bound bearing editorial effects. No third-party samples, voice services or recordings.",
+  "originalScoreLicense": "MIT",
+  "narration": false,
+  "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1",
+  "sourceSHA256": "b352183e1bd0d55c403a6f406c3b2886a3b1b374b47cf32bcb69d4277d252e35",
+  "storyRevision": "wolf-bearing-study-1",
+  "bpm": 112,
+  "feltBpm": 56,
+  "totalBeats": 64,
+  "bars": 16,
+  "meter": [
+    4,
+    4
+  ],
+  "sampleRate": 44100,
+  "channels": 2,
+  "bitsPerSample": 16,
+  "frames": 1512000,
+  "durationSeconds": 34.285714285714285,
+  "deterministicSeed": 1463965233,
+  "musicalFeel": "The established gentle pads, warm bass and felt keys, with a quieter component close-up and continuous reassembly. No drum bed, narration or label dings.",
+  "timing": "One seekable PCM clock: seconds = beat * 60 / 112. Bearing cues derive from the actual motion-event windows and retained source occurrence IDs.",
+  "compositionReuse": {
+    "pathsRelativeTo": "this score file",
+    "sourceScore": "../detail/music-score.json",
+    "sourceEdition": "wolf-motor-continuous-v2",
+    "sourceMusicEventsSha256": "74dbd2d762d0440a36ef783cdd829f8c0e0b0359e660dd6e5d279fef0aadc00b",
+    "synthesisEngine": "../detail/audio/synth.mjs",
+    "method": "Only explicitly shaped music-role events are reused. Original motor effects and PCM are excluded; this complete bearing WAV is rendered anew.",
+    "pcmChanged": true
+  },
+  "mix": {
+    "musicTargetSamplePeakDbfs": -10,
+    "finalCeilingDbfs": -8,
+    "percussion": false,
+    "effects": "Smooth filtered-air movement textures and two gentle editorial return seats. No recorded or simulated bearing acoustics."
+  },
+  "automation": {
+    "readingDip": {
+      "firstBeat": 27,
+      "fullBeat": 29.5,
+      "releaseBeat": 36.5,
+      "lastBeat": 39,
+      "gain": 0.53
+    },
+    "openingGain": 0.76,
+    "resolveGain": 0.76,
+    "method": "Continuous smoothstep gain, with matching beginning and ending gain."
+  },
+  "effects": {
+    "kind": "editorial",
+    "clock": "Baked into the same PCM buffer. No wall-clock timers or scene restarts.",
+    "repetitionPolicy": "One continuous sweep per separation/return of the four small-part batches. No sixty-six separate clicks or inferred small-part functions.",
+    "actionCues": [
+      {
+        "id": "outer-ring-explode-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 6,
+        "seconds": 3.2142857142857144,
+        "durationBeats": 2.4000000000000004,
+        "durationSeconds": 1.285714285714286,
+        "animation": {
+          "motionEventIds": [
+            "outer-ring-explode"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-852-851"
+          ],
+          "phase": "explode",
+          "kind": "hardware",
+          "firstBeat": 6,
+          "lastBeat": 8.4,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "part-69-explode-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 9,
+        "seconds": 4.821428571428571,
+        "durationBeats": 2.4000000000000004,
+        "durationSeconds": 1.285714285714286,
+        "animation": {
+          "motionEventIds": [
+            "part-69-explode"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-922-895"
+          ],
+          "phase": "explode",
+          "kind": "hardware",
+          "firstBeat": 9,
+          "lastBeat": 11.4,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "part-59-explode-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 11,
+        "seconds": 5.892857142857143,
+        "durationBeats": 2,
+        "durationSeconds": 1.0714285714285714,
+        "animation": {
+          "motionEventIds": [
+            "part-59-explode"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-922-861"
+          ],
+          "phase": "explode",
+          "kind": "hardware",
+          "firstBeat": 11,
+          "lastBeat": 13,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "part-62-explode-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 13,
+        "seconds": 6.964285714285714,
+        "durationBeats": 2.5,
+        "durationSeconds": 1.3392857142857142,
+        "animation": {
+          "motionEventIds": [
+            "part-62-explode"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-922-911"
+          ],
+          "phase": "explode",
+          "kind": "hardware",
+          "firstBeat": 13,
+          "lastBeat": 15.5,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "bearing-small-parts-explode-wave",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 16,
+        "seconds": 8.571428571428571,
+        "durationBeats": 6.200000000000003,
+        "durationSeconds": 3.321428571428573,
+        "animation": {
+          "motionEventIds": [
+            "small-sector-1-explode",
+            "small-sector-2-explode",
+            "small-sector-3-explode",
+            "small-sector-4-explode"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-922-873",
+            "occ-b352183e1bd0-root-953098-923-922-888",
+            "occ-b352183e1bd0-root-953098-923-922-879",
+            "occ-b352183e1bd0-root-953098-923-922-901",
+            "occ-b352183e1bd0-root-953098-923-922-870",
+            "occ-b352183e1bd0-root-953098-923-922-892",
+            "occ-b352183e1bd0-root-953098-923-922-863",
+            "occ-b352183e1bd0-root-953098-923-922-886",
+            "occ-b352183e1bd0-root-953098-923-922-880",
+            "occ-b352183e1bd0-root-953098-923-922-881",
+            "occ-b352183e1bd0-root-953098-923-922-902",
+            "occ-b352183e1bd0-root-953098-923-922-921",
+            "occ-b352183e1bd0-root-953098-923-922-855",
+            "occ-b352183e1bd0-root-953098-923-922-914",
+            "occ-b352183e1bd0-root-953098-923-922-885",
+            "occ-b352183e1bd0-root-953098-923-922-875",
+            "occ-b352183e1bd0-root-953098-923-922-903",
+            "occ-b352183e1bd0-root-953098-923-922-915",
+            "occ-b352183e1bd0-root-953098-923-922-853",
+            "occ-b352183e1bd0-root-953098-923-922-887",
+            "occ-b352183e1bd0-root-953098-923-922-908",
+            "occ-b352183e1bd0-root-953098-923-922-896",
+            "occ-b352183e1bd0-root-953098-923-922-917",
+            "occ-b352183e1bd0-root-953098-923-922-856",
+            "occ-b352183e1bd0-root-953098-923-922-897",
+            "occ-b352183e1bd0-root-953098-923-922-916",
+            "occ-b352183e1bd0-root-953098-923-922-876",
+            "occ-b352183e1bd0-root-953098-923-922-883",
+            "occ-b352183e1bd0-root-953098-923-922-900",
+            "occ-b352183e1bd0-root-953098-923-922-869",
+            "occ-b352183e1bd0-root-953098-923-922-882",
+            "occ-b352183e1bd0-root-953098-923-922-867",
+            "occ-b352183e1bd0-root-953098-923-922-884",
+            "occ-b352183e1bd0-root-953098-923-922-907",
+            "occ-b352183e1bd0-root-953098-923-922-874",
+            "occ-b352183e1bd0-root-953098-923-922-864",
+            "occ-b352183e1bd0-root-953098-923-922-913",
+            "occ-b352183e1bd0-root-953098-923-922-894",
+            "occ-b352183e1bd0-root-953098-923-922-905",
+            "occ-b352183e1bd0-root-953098-923-922-857",
+            "occ-b352183e1bd0-root-953098-923-922-872",
+            "occ-b352183e1bd0-root-953098-923-922-862",
+            "occ-b352183e1bd0-root-953098-923-922-909",
+            "occ-b352183e1bd0-root-953098-923-922-865",
+            "occ-b352183e1bd0-root-953098-923-922-904",
+            "occ-b352183e1bd0-root-953098-923-922-899",
+            "occ-b352183e1bd0-root-953098-923-922-877",
+            "occ-b352183e1bd0-root-953098-923-922-910",
+            "occ-b352183e1bd0-root-953098-923-922-920",
+            "occ-b352183e1bd0-root-953098-923-922-890",
+            "occ-b352183e1bd0-root-953098-923-922-891",
+            "occ-b352183e1bd0-root-953098-923-922-866",
+            "occ-b352183e1bd0-root-953098-923-922-889",
+            "occ-b352183e1bd0-root-953098-923-922-871",
+            "occ-b352183e1bd0-root-953098-923-922-859",
+            "occ-b352183e1bd0-root-953098-923-922-878",
+            "occ-b352183e1bd0-root-953098-923-922-906",
+            "occ-b352183e1bd0-root-953098-923-922-898",
+            "occ-b352183e1bd0-root-953098-923-922-919",
+            "occ-b352183e1bd0-root-953098-923-922-893",
+            "occ-b352183e1bd0-root-953098-923-922-912",
+            "occ-b352183e1bd0-root-953098-923-922-858",
+            "occ-b352183e1bd0-root-953098-923-922-860",
+            "occ-b352183e1bd0-root-953098-923-922-918",
+            "occ-b352183e1bd0-root-953098-923-922-868",
+            "occ-b352183e1bd0-root-953098-923-922-854"
+          ],
+          "phase": "explode",
+          "kind": "repeat",
+          "firstBeat": 16,
+          "lastBeat": 22.200000000000003,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "part-1-inspect-out-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 28,
+        "seconds": 15,
+        "durationBeats": 2.5,
+        "durationSeconds": 1.3392857142857142,
+        "animation": {
+          "motionEventIds": [
+            "part-1-inspect-out"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-922-864"
+          ],
+          "phase": "inspect-out",
+          "kind": "inspection",
+          "firstBeat": 28,
+          "lastBeat": 30.5,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "part-1-inspect-in-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 35.3,
+        "seconds": 18.910714285714285,
+        "durationBeats": 2.700000000000003,
+        "durationSeconds": 1.446428571428573,
+        "animation": {
+          "motionEventIds": [
+            "part-1-inspect-in"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-922-864"
+          ],
+          "phase": "inspect-in",
+          "kind": "inspection",
+          "firstBeat": 35.3,
+          "lastBeat": 38,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "bearing-small-parts-reassemble-wave",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 38,
+        "seconds": 20.357142857142858,
+        "durationBeats": 4.700000000000003,
+        "durationSeconds": 2.5178571428571446,
+        "animation": {
+          "motionEventIds": [
+            "small-sector-1-reassemble",
+            "small-sector-2-reassemble",
+            "small-sector-3-reassemble",
+            "small-sector-4-reassemble"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-922-873",
+            "occ-b352183e1bd0-root-953098-923-922-888",
+            "occ-b352183e1bd0-root-953098-923-922-879",
+            "occ-b352183e1bd0-root-953098-923-922-901",
+            "occ-b352183e1bd0-root-953098-923-922-870",
+            "occ-b352183e1bd0-root-953098-923-922-892",
+            "occ-b352183e1bd0-root-953098-923-922-863",
+            "occ-b352183e1bd0-root-953098-923-922-886",
+            "occ-b352183e1bd0-root-953098-923-922-880",
+            "occ-b352183e1bd0-root-953098-923-922-881",
+            "occ-b352183e1bd0-root-953098-923-922-902",
+            "occ-b352183e1bd0-root-953098-923-922-921",
+            "occ-b352183e1bd0-root-953098-923-922-855",
+            "occ-b352183e1bd0-root-953098-923-922-914",
+            "occ-b352183e1bd0-root-953098-923-922-885",
+            "occ-b352183e1bd0-root-953098-923-922-875",
+            "occ-b352183e1bd0-root-953098-923-922-903",
+            "occ-b352183e1bd0-root-953098-923-922-915",
+            "occ-b352183e1bd0-root-953098-923-922-853",
+            "occ-b352183e1bd0-root-953098-923-922-887",
+            "occ-b352183e1bd0-root-953098-923-922-908",
+            "occ-b352183e1bd0-root-953098-923-922-896",
+            "occ-b352183e1bd0-root-953098-923-922-917",
+            "occ-b352183e1bd0-root-953098-923-922-856",
+            "occ-b352183e1bd0-root-953098-923-922-897",
+            "occ-b352183e1bd0-root-953098-923-922-916",
+            "occ-b352183e1bd0-root-953098-923-922-876",
+            "occ-b352183e1bd0-root-953098-923-922-883",
+            "occ-b352183e1bd0-root-953098-923-922-900",
+            "occ-b352183e1bd0-root-953098-923-922-869",
+            "occ-b352183e1bd0-root-953098-923-922-882",
+            "occ-b352183e1bd0-root-953098-923-922-867",
+            "occ-b352183e1bd0-root-953098-923-922-884",
+            "occ-b352183e1bd0-root-953098-923-922-907",
+            "occ-b352183e1bd0-root-953098-923-922-874",
+            "occ-b352183e1bd0-root-953098-923-922-864",
+            "occ-b352183e1bd0-root-953098-923-922-913",
+            "occ-b352183e1bd0-root-953098-923-922-894",
+            "occ-b352183e1bd0-root-953098-923-922-905",
+            "occ-b352183e1bd0-root-953098-923-922-857",
+            "occ-b352183e1bd0-root-953098-923-922-872",
+            "occ-b352183e1bd0-root-953098-923-922-862",
+            "occ-b352183e1bd0-root-953098-923-922-909",
+            "occ-b352183e1bd0-root-953098-923-922-865",
+            "occ-b352183e1bd0-root-953098-923-922-904",
+            "occ-b352183e1bd0-root-953098-923-922-899",
+            "occ-b352183e1bd0-root-953098-923-922-877",
+            "occ-b352183e1bd0-root-953098-923-922-910",
+            "occ-b352183e1bd0-root-953098-923-922-920",
+            "occ-b352183e1bd0-root-953098-923-922-890",
+            "occ-b352183e1bd0-root-953098-923-922-891",
+            "occ-b352183e1bd0-root-953098-923-922-866",
+            "occ-b352183e1bd0-root-953098-923-922-889",
+            "occ-b352183e1bd0-root-953098-923-922-871",
+            "occ-b352183e1bd0-root-953098-923-922-859",
+            "occ-b352183e1bd0-root-953098-923-922-878",
+            "occ-b352183e1bd0-root-953098-923-922-906",
+            "occ-b352183e1bd0-root-953098-923-922-898",
+            "occ-b352183e1bd0-root-953098-923-922-919",
+            "occ-b352183e1bd0-root-953098-923-922-893",
+            "occ-b352183e1bd0-root-953098-923-922-912",
+            "occ-b352183e1bd0-root-953098-923-922-858",
+            "occ-b352183e1bd0-root-953098-923-922-860",
+            "occ-b352183e1bd0-root-953098-923-922-918",
+            "occ-b352183e1bd0-root-953098-923-922-868",
+            "occ-b352183e1bd0-root-953098-923-922-854"
+          ],
+          "phase": "reassemble",
+          "kind": "repeat",
+          "firstBeat": 38,
+          "lastBeat": 42.7,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "part-62-reassemble-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 44.5,
+        "seconds": 23.839285714285715,
+        "durationBeats": 2.5,
+        "durationSeconds": 1.3392857142857142,
+        "animation": {
+          "motionEventIds": [
+            "part-62-reassemble"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-922-911"
+          ],
+          "phase": "reassemble",
+          "kind": "hardware",
+          "firstBeat": 44.5,
+          "lastBeat": 47,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "part-62-reassemble-seat",
+        "role": "editorial-sfx",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "beat": 47,
+        "seconds": 25.178571428571427,
+        "durationBeats": 0.48,
+        "durationSeconds": 0.2571428571428571,
+        "animation": {
+          "motionEventIds": [
+            "part-62-reassemble"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-922-911"
+          ],
+          "phase": "reassemble",
+          "kind": "hardware",
+          "firstBeat": 44.5,
+          "lastBeat": 47,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "part-59-reassemble-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 48,
+        "seconds": 25.714285714285715,
+        "durationBeats": 2,
+        "durationSeconds": 1.0714285714285714,
+        "animation": {
+          "motionEventIds": [
+            "part-59-reassemble"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-922-861"
+          ],
+          "phase": "reassemble",
+          "kind": "hardware",
+          "firstBeat": 48,
+          "lastBeat": 50,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "part-69-reassemble-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 52,
+        "seconds": 27.857142857142858,
+        "durationBeats": 2.3999999999999986,
+        "durationSeconds": 1.285714285714285,
+        "animation": {
+          "motionEventIds": [
+            "part-69-reassemble"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-922-895"
+          ],
+          "phase": "reassemble",
+          "kind": "hardware",
+          "firstBeat": 52,
+          "lastBeat": 54.4,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "outer-ring-reassemble-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 55,
+        "seconds": 29.464285714285715,
+        "durationBeats": 2.3999999999999986,
+        "durationSeconds": 1.285714285714285,
+        "animation": {
+          "motionEventIds": [
+            "outer-ring-reassemble"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-852-851"
+          ],
+          "phase": "reassemble",
+          "kind": "hardware",
+          "firstBeat": 55,
+          "lastBeat": 57.4,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "outer-ring-reassemble-seat",
+        "role": "editorial-sfx",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "beat": 57.4,
+        "seconds": 30.75,
+        "durationBeats": 0.48,
+        "durationSeconds": 0.2571428571428571,
+        "animation": {
+          "motionEventIds": [
+            "outer-ring-reassemble"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-923-852-851"
+          ],
+          "phase": "reassemble",
+          "kind": "hardware",
+          "firstBeat": 55,
+          "lastBeat": 57.4,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      }
+    ]
+  },
+  "motionBindings": [
+    {
+      "id": "outer-ring-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-852-851"
+      ],
+      "phase": "explode",
+      "kind": "hardware",
+      "firstBeat": 6,
+      "lastBeat": 8.4
+    },
+    {
+      "id": "part-69-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-895"
+      ],
+      "phase": "explode",
+      "kind": "hardware",
+      "firstBeat": 9,
+      "lastBeat": 11.4
+    },
+    {
+      "id": "part-59-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-861"
+      ],
+      "phase": "explode",
+      "kind": "hardware",
+      "firstBeat": 11,
+      "lastBeat": 13
+    },
+    {
+      "id": "part-62-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-911"
+      ],
+      "phase": "explode",
+      "kind": "hardware",
+      "firstBeat": 13,
+      "lastBeat": 15.5
+    },
+    {
+      "id": "small-sector-1-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-873",
+        "occ-b352183e1bd0-root-953098-923-922-888",
+        "occ-b352183e1bd0-root-953098-923-922-879",
+        "occ-b352183e1bd0-root-953098-923-922-901",
+        "occ-b352183e1bd0-root-953098-923-922-870",
+        "occ-b352183e1bd0-root-953098-923-922-892",
+        "occ-b352183e1bd0-root-953098-923-922-863",
+        "occ-b352183e1bd0-root-953098-923-922-886",
+        "occ-b352183e1bd0-root-953098-923-922-880",
+        "occ-b352183e1bd0-root-953098-923-922-881",
+        "occ-b352183e1bd0-root-953098-923-922-902",
+        "occ-b352183e1bd0-root-953098-923-922-921",
+        "occ-b352183e1bd0-root-953098-923-922-855",
+        "occ-b352183e1bd0-root-953098-923-922-914",
+        "occ-b352183e1bd0-root-953098-923-922-885",
+        "occ-b352183e1bd0-root-953098-923-922-875",
+        "occ-b352183e1bd0-root-953098-923-922-903"
+      ],
+      "phase": "explode",
+      "kind": "repeat",
+      "firstBeat": 16,
+      "lastBeat": 17.85
+    },
+    {
+      "id": "small-sector-2-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-915",
+        "occ-b352183e1bd0-root-953098-923-922-853",
+        "occ-b352183e1bd0-root-953098-923-922-887",
+        "occ-b352183e1bd0-root-953098-923-922-908",
+        "occ-b352183e1bd0-root-953098-923-922-896",
+        "occ-b352183e1bd0-root-953098-923-922-917",
+        "occ-b352183e1bd0-root-953098-923-922-856",
+        "occ-b352183e1bd0-root-953098-923-922-897",
+        "occ-b352183e1bd0-root-953098-923-922-916",
+        "occ-b352183e1bd0-root-953098-923-922-876",
+        "occ-b352183e1bd0-root-953098-923-922-883",
+        "occ-b352183e1bd0-root-953098-923-922-900",
+        "occ-b352183e1bd0-root-953098-923-922-869",
+        "occ-b352183e1bd0-root-953098-923-922-882",
+        "occ-b352183e1bd0-root-953098-923-922-867",
+        "occ-b352183e1bd0-root-953098-923-922-884",
+        "occ-b352183e1bd0-root-953098-923-922-907"
+      ],
+      "phase": "explode",
+      "kind": "repeat",
+      "firstBeat": 17.45,
+      "lastBeat": 19.3
+    },
+    {
+      "id": "small-sector-3-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-874",
+        "occ-b352183e1bd0-root-953098-923-922-864",
+        "occ-b352183e1bd0-root-953098-923-922-913",
+        "occ-b352183e1bd0-root-953098-923-922-894",
+        "occ-b352183e1bd0-root-953098-923-922-905",
+        "occ-b352183e1bd0-root-953098-923-922-857",
+        "occ-b352183e1bd0-root-953098-923-922-872",
+        "occ-b352183e1bd0-root-953098-923-922-862",
+        "occ-b352183e1bd0-root-953098-923-922-909",
+        "occ-b352183e1bd0-root-953098-923-922-865",
+        "occ-b352183e1bd0-root-953098-923-922-904",
+        "occ-b352183e1bd0-root-953098-923-922-899",
+        "occ-b352183e1bd0-root-953098-923-922-877",
+        "occ-b352183e1bd0-root-953098-923-922-910",
+        "occ-b352183e1bd0-root-953098-923-922-920",
+        "occ-b352183e1bd0-root-953098-923-922-890"
+      ],
+      "phase": "explode",
+      "kind": "repeat",
+      "firstBeat": 18.9,
+      "lastBeat": 20.75
+    },
+    {
+      "id": "small-sector-4-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-891",
+        "occ-b352183e1bd0-root-953098-923-922-866",
+        "occ-b352183e1bd0-root-953098-923-922-889",
+        "occ-b352183e1bd0-root-953098-923-922-871",
+        "occ-b352183e1bd0-root-953098-923-922-859",
+        "occ-b352183e1bd0-root-953098-923-922-878",
+        "occ-b352183e1bd0-root-953098-923-922-906",
+        "occ-b352183e1bd0-root-953098-923-922-898",
+        "occ-b352183e1bd0-root-953098-923-922-919",
+        "occ-b352183e1bd0-root-953098-923-922-893",
+        "occ-b352183e1bd0-root-953098-923-922-912",
+        "occ-b352183e1bd0-root-953098-923-922-858",
+        "occ-b352183e1bd0-root-953098-923-922-860",
+        "occ-b352183e1bd0-root-953098-923-922-918",
+        "occ-b352183e1bd0-root-953098-923-922-868",
+        "occ-b352183e1bd0-root-953098-923-922-854"
+      ],
+      "phase": "explode",
+      "kind": "repeat",
+      "firstBeat": 20.35,
+      "lastBeat": 22.200000000000003
+    },
+    {
+      "id": "part-1-inspect-out",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-864"
+      ],
+      "phase": "inspect-out",
+      "kind": "inspection",
+      "firstBeat": 28,
+      "lastBeat": 30.5
+    },
+    {
+      "id": "part-1-inspect-in",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-864"
+      ],
+      "phase": "inspect-in",
+      "kind": "inspection",
+      "firstBeat": 35.3,
+      "lastBeat": 38
+    },
+    {
+      "id": "small-sector-1-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-873",
+        "occ-b352183e1bd0-root-953098-923-922-888",
+        "occ-b352183e1bd0-root-953098-923-922-879",
+        "occ-b352183e1bd0-root-953098-923-922-901",
+        "occ-b352183e1bd0-root-953098-923-922-870",
+        "occ-b352183e1bd0-root-953098-923-922-892",
+        "occ-b352183e1bd0-root-953098-923-922-863",
+        "occ-b352183e1bd0-root-953098-923-922-886",
+        "occ-b352183e1bd0-root-953098-923-922-880",
+        "occ-b352183e1bd0-root-953098-923-922-881",
+        "occ-b352183e1bd0-root-953098-923-922-902",
+        "occ-b352183e1bd0-root-953098-923-922-921",
+        "occ-b352183e1bd0-root-953098-923-922-855",
+        "occ-b352183e1bd0-root-953098-923-922-914",
+        "occ-b352183e1bd0-root-953098-923-922-885",
+        "occ-b352183e1bd0-root-953098-923-922-875",
+        "occ-b352183e1bd0-root-953098-923-922-903"
+      ],
+      "phase": "reassemble",
+      "kind": "repeat",
+      "firstBeat": 38,
+      "lastBeat": 39.85
+    },
+    {
+      "id": "small-sector-2-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-915",
+        "occ-b352183e1bd0-root-953098-923-922-853",
+        "occ-b352183e1bd0-root-953098-923-922-887",
+        "occ-b352183e1bd0-root-953098-923-922-908",
+        "occ-b352183e1bd0-root-953098-923-922-896",
+        "occ-b352183e1bd0-root-953098-923-922-917",
+        "occ-b352183e1bd0-root-953098-923-922-856",
+        "occ-b352183e1bd0-root-953098-923-922-897",
+        "occ-b352183e1bd0-root-953098-923-922-916",
+        "occ-b352183e1bd0-root-953098-923-922-876",
+        "occ-b352183e1bd0-root-953098-923-922-883",
+        "occ-b352183e1bd0-root-953098-923-922-900",
+        "occ-b352183e1bd0-root-953098-923-922-869",
+        "occ-b352183e1bd0-root-953098-923-922-882",
+        "occ-b352183e1bd0-root-953098-923-922-867",
+        "occ-b352183e1bd0-root-953098-923-922-884",
+        "occ-b352183e1bd0-root-953098-923-922-907"
+      ],
+      "phase": "reassemble",
+      "kind": "repeat",
+      "firstBeat": 38.95,
+      "lastBeat": 40.800000000000004
+    },
+    {
+      "id": "small-sector-3-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-874",
+        "occ-b352183e1bd0-root-953098-923-922-864",
+        "occ-b352183e1bd0-root-953098-923-922-913",
+        "occ-b352183e1bd0-root-953098-923-922-894",
+        "occ-b352183e1bd0-root-953098-923-922-905",
+        "occ-b352183e1bd0-root-953098-923-922-857",
+        "occ-b352183e1bd0-root-953098-923-922-872",
+        "occ-b352183e1bd0-root-953098-923-922-862",
+        "occ-b352183e1bd0-root-953098-923-922-909",
+        "occ-b352183e1bd0-root-953098-923-922-865",
+        "occ-b352183e1bd0-root-953098-923-922-904",
+        "occ-b352183e1bd0-root-953098-923-922-899",
+        "occ-b352183e1bd0-root-953098-923-922-877",
+        "occ-b352183e1bd0-root-953098-923-922-910",
+        "occ-b352183e1bd0-root-953098-923-922-920",
+        "occ-b352183e1bd0-root-953098-923-922-890"
+      ],
+      "phase": "reassemble",
+      "kind": "repeat",
+      "firstBeat": 39.9,
+      "lastBeat": 41.75
+    },
+    {
+      "id": "small-sector-4-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-891",
+        "occ-b352183e1bd0-root-953098-923-922-866",
+        "occ-b352183e1bd0-root-953098-923-922-889",
+        "occ-b352183e1bd0-root-953098-923-922-871",
+        "occ-b352183e1bd0-root-953098-923-922-859",
+        "occ-b352183e1bd0-root-953098-923-922-878",
+        "occ-b352183e1bd0-root-953098-923-922-906",
+        "occ-b352183e1bd0-root-953098-923-922-898",
+        "occ-b352183e1bd0-root-953098-923-922-919",
+        "occ-b352183e1bd0-root-953098-923-922-893",
+        "occ-b352183e1bd0-root-953098-923-922-912",
+        "occ-b352183e1bd0-root-953098-923-922-858",
+        "occ-b352183e1bd0-root-953098-923-922-860",
+        "occ-b352183e1bd0-root-953098-923-922-918",
+        "occ-b352183e1bd0-root-953098-923-922-868",
+        "occ-b352183e1bd0-root-953098-923-922-854"
+      ],
+      "phase": "reassemble",
+      "kind": "repeat",
+      "firstBeat": 40.85,
+      "lastBeat": 42.7
+    },
+    {
+      "id": "part-62-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-911"
+      ],
+      "phase": "reassemble",
+      "kind": "hardware",
+      "firstBeat": 44.5,
+      "lastBeat": 47
+    },
+    {
+      "id": "part-59-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-861"
+      ],
+      "phase": "reassemble",
+      "kind": "hardware",
+      "firstBeat": 48,
+      "lastBeat": 50
+    },
+    {
+      "id": "part-69-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-895"
+      ],
+      "phase": "reassemble",
+      "kind": "hardware",
+      "firstBeat": 52,
+      "lastBeat": 54.4
+    },
+    {
+      "id": "outer-ring-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-852-851"
+      ],
+      "phase": "reassemble",
+      "kind": "hardware",
+      "firstBeat": 55,
+      "lastBeat": 57.4
+    }
+  ],
+  "cues": [
+    {
+      "id": "whole",
+      "firstBeat": 0,
+      "lastBeat": 6,
+      "startSeconds": 0,
+      "endSeconds": 3.2142857142857144
+    },
+    {
+      "id": "bearing",
+      "firstBeat": 6,
+      "lastBeat": 16,
+      "startSeconds": 3.2142857142857144,
+      "endSeconds": 8.571428571428571
+    },
+    {
+      "id": "repeats",
+      "firstBeat": 16,
+      "lastBeat": 28,
+      "startSeconds": 8.571428571428571,
+      "endSeconds": 15
+    },
+    {
+      "id": "component",
+      "firstBeat": 28,
+      "lastBeat": 38,
+      "startSeconds": 15,
+      "endSeconds": 20.357142857142858
+    },
+    {
+      "id": "return",
+      "firstBeat": 38,
+      "lastBeat": 60,
+      "startSeconds": 20.357142857142858,
+      "endSeconds": 32.142857142857146
+    },
+    {
+      "id": "resolve",
+      "firstBeat": 60,
+      "lastBeat": 64,
+      "startSeconds": 32.142857142857146,
+      "endSeconds": 34.285714285714285
+    }
+  ],
+  "harmony": [
+    {
+      "firstBeat": 0,
+      "notes": [
+        50,
+        57,
+        61,
+        64
+      ],
+      "bass": 38,
+      "symbol": "Dmaj9"
+    },
+    {
+      "firstBeat": 8,
+      "notes": [
+        43,
+        54,
+        57,
+        62
+      ],
+      "bass": 31,
+      "symbol": "Gmaj9"
+    },
+    {
+      "firstBeat": 16,
+      "notes": [
+        47,
+        54,
+        57,
+        64
+      ],
+      "bass": 35,
+      "symbol": "Bm11"
+    },
+    {
+      "firstBeat": 24,
+      "notes": [
+        45,
+        52,
+        59,
+        64
+      ],
+      "bass": 33,
+      "symbol": "Aadd9"
+    },
+    {
+      "firstBeat": 32,
+      "notes": [
+        43,
+        54,
+        57,
+        62
+      ],
+      "bass": 31,
+      "symbol": "Gmaj9"
+    },
+    {
+      "firstBeat": 40,
+      "notes": [
+        40,
+        55,
+        59,
+        66
+      ],
+      "bass": 28,
+      "symbol": "Em9"
+    },
+    {
+      "firstBeat": 48,
+      "notes": [
+        45,
+        55,
+        59,
+        66
+      ],
+      "bass": 33,
+      "symbol": "A13"
+    },
+    {
+      "firstBeat": 56,
+      "notes": [
+        50,
+        57,
+        61,
+        64
+      ],
+      "bass": 38,
+      "symbol": "Dmaj9"
+    }
+  ],
+  "beatGrid": [
+    {
+      "beat": 0,
+      "seconds": 0,
+      "frame": 0,
+      "downbeat": true
+    },
+    {
+      "beat": 1,
+      "seconds": 0.5357142857142857,
+      "frame": 23625,
+      "downbeat": false
+    },
+    {
+      "beat": 2,
+      "seconds": 1.0714285714285714,
+      "frame": 47250,
+      "downbeat": false
+    },
+    {
+      "beat": 3,
+      "seconds": 1.6071428571428572,
+      "frame": 70875,
+      "downbeat": false
+    },
+    {
+      "beat": 4,
+      "seconds": 2.142857142857143,
+      "frame": 94500,
+      "downbeat": true
+    },
+    {
+      "beat": 5,
+      "seconds": 2.6785714285714284,
+      "frame": 118125,
+      "downbeat": false
+    },
+    {
+      "beat": 6,
+      "seconds": 3.2142857142857144,
+      "frame": 141750,
+      "downbeat": false
+    },
+    {
+      "beat": 7,
+      "seconds": 3.75,
+      "frame": 165375,
+      "downbeat": false
+    },
+    {
+      "beat": 8,
+      "seconds": 4.285714285714286,
+      "frame": 189000,
+      "downbeat": true
+    },
+    {
+      "beat": 9,
+      "seconds": 4.821428571428571,
+      "frame": 212625,
+      "downbeat": false
+    },
+    {
+      "beat": 10,
+      "seconds": 5.357142857142857,
+      "frame": 236250,
+      "downbeat": false
+    },
+    {
+      "beat": 11,
+      "seconds": 5.892857142857143,
+      "frame": 259875,
+      "downbeat": false
+    },
+    {
+      "beat": 12,
+      "seconds": 6.428571428571429,
+      "frame": 283500,
+      "downbeat": true
+    },
+    {
+      "beat": 13,
+      "seconds": 6.964285714285714,
+      "frame": 307125,
+      "downbeat": false
+    },
+    {
+      "beat": 14,
+      "seconds": 7.5,
+      "frame": 330750,
+      "downbeat": false
+    },
+    {
+      "beat": 15,
+      "seconds": 8.035714285714286,
+      "frame": 354375,
+      "downbeat": false
+    },
+    {
+      "beat": 16,
+      "seconds": 8.571428571428571,
+      "frame": 378000,
+      "downbeat": true
+    },
+    {
+      "beat": 17,
+      "seconds": 9.107142857142858,
+      "frame": 401625,
+      "downbeat": false
+    },
+    {
+      "beat": 18,
+      "seconds": 9.642857142857142,
+      "frame": 425250,
+      "downbeat": false
+    },
+    {
+      "beat": 19,
+      "seconds": 10.178571428571429,
+      "frame": 448875,
+      "downbeat": false
+    },
+    {
+      "beat": 20,
+      "seconds": 10.714285714285714,
+      "frame": 472500,
+      "downbeat": true
+    },
+    {
+      "beat": 21,
+      "seconds": 11.25,
+      "frame": 496125,
+      "downbeat": false
+    },
+    {
+      "beat": 22,
+      "seconds": 11.785714285714286,
+      "frame": 519750,
+      "downbeat": false
+    },
+    {
+      "beat": 23,
+      "seconds": 12.321428571428571,
+      "frame": 543375,
+      "downbeat": false
+    },
+    {
+      "beat": 24,
+      "seconds": 12.857142857142858,
+      "frame": 567000,
+      "downbeat": true
+    },
+    {
+      "beat": 25,
+      "seconds": 13.392857142857142,
+      "frame": 590625,
+      "downbeat": false
+    },
+    {
+      "beat": 26,
+      "seconds": 13.928571428571429,
+      "frame": 614250,
+      "downbeat": false
+    },
+    {
+      "beat": 27,
+      "seconds": 14.464285714285714,
+      "frame": 637875,
+      "downbeat": false
+    },
+    {
+      "beat": 28,
+      "seconds": 15,
+      "frame": 661500,
+      "downbeat": true
+    },
+    {
+      "beat": 29,
+      "seconds": 15.535714285714286,
+      "frame": 685125,
+      "downbeat": false
+    },
+    {
+      "beat": 30,
+      "seconds": 16.071428571428573,
+      "frame": 708750,
+      "downbeat": false
+    },
+    {
+      "beat": 31,
+      "seconds": 16.607142857142858,
+      "frame": 732375,
+      "downbeat": false
+    },
+    {
+      "beat": 32,
+      "seconds": 17.142857142857142,
+      "frame": 756000,
+      "downbeat": true
+    },
+    {
+      "beat": 33,
+      "seconds": 17.678571428571427,
+      "frame": 779625,
+      "downbeat": false
+    },
+    {
+      "beat": 34,
+      "seconds": 18.214285714285715,
+      "frame": 803250,
+      "downbeat": false
+    },
+    {
+      "beat": 35,
+      "seconds": 18.75,
+      "frame": 826875,
+      "downbeat": false
+    },
+    {
+      "beat": 36,
+      "seconds": 19.285714285714285,
+      "frame": 850500,
+      "downbeat": true
+    },
+    {
+      "beat": 37,
+      "seconds": 19.821428571428573,
+      "frame": 874125,
+      "downbeat": false
+    },
+    {
+      "beat": 38,
+      "seconds": 20.357142857142858,
+      "frame": 897750,
+      "downbeat": false
+    },
+    {
+      "beat": 39,
+      "seconds": 20.892857142857142,
+      "frame": 921375,
+      "downbeat": false
+    },
+    {
+      "beat": 40,
+      "seconds": 21.428571428571427,
+      "frame": 945000,
+      "downbeat": true
+    },
+    {
+      "beat": 41,
+      "seconds": 21.964285714285715,
+      "frame": 968625,
+      "downbeat": false
+    },
+    {
+      "beat": 42,
+      "seconds": 22.5,
+      "frame": 992250,
+      "downbeat": false
+    },
+    {
+      "beat": 43,
+      "seconds": 23.035714285714285,
+      "frame": 1015875,
+      "downbeat": false
+    },
+    {
+      "beat": 44,
+      "seconds": 23.571428571428573,
+      "frame": 1039500,
+      "downbeat": true
+    },
+    {
+      "beat": 45,
+      "seconds": 24.107142857142858,
+      "frame": 1063125,
+      "downbeat": false
+    },
+    {
+      "beat": 46,
+      "seconds": 24.642857142857142,
+      "frame": 1086750,
+      "downbeat": false
+    },
+    {
+      "beat": 47,
+      "seconds": 25.178571428571427,
+      "frame": 1110375,
+      "downbeat": false
+    },
+    {
+      "beat": 48,
+      "seconds": 25.714285714285715,
+      "frame": 1134000,
+      "downbeat": true
+    },
+    {
+      "beat": 49,
+      "seconds": 26.25,
+      "frame": 1157625,
+      "downbeat": false
+    },
+    {
+      "beat": 50,
+      "seconds": 26.785714285714285,
+      "frame": 1181250,
+      "downbeat": false
+    },
+    {
+      "beat": 51,
+      "seconds": 27.321428571428573,
+      "frame": 1204875,
+      "downbeat": false
+    },
+    {
+      "beat": 52,
+      "seconds": 27.857142857142858,
+      "frame": 1228500,
+      "downbeat": true
+    },
+    {
+      "beat": 53,
+      "seconds": 28.392857142857142,
+      "frame": 1252125,
+      "downbeat": false
+    },
+    {
+      "beat": 54,
+      "seconds": 28.928571428571427,
+      "frame": 1275750,
+      "downbeat": false
+    },
+    {
+      "beat": 55,
+      "seconds": 29.464285714285715,
+      "frame": 1299375,
+      "downbeat": false
+    },
+    {
+      "beat": 56,
+      "seconds": 30,
+      "frame": 1323000,
+      "downbeat": true
+    },
+    {
+      "beat": 57,
+      "seconds": 30.535714285714285,
+      "frame": 1346625,
+      "downbeat": false
+    },
+    {
+      "beat": 58,
+      "seconds": 31.071428571428573,
+      "frame": 1370250,
+      "downbeat": false
+    },
+    {
+      "beat": 59,
+      "seconds": 31.607142857142858,
+      "frame": 1393875,
+      "downbeat": false
+    },
+    {
+      "beat": 60,
+      "seconds": 32.142857142857146,
+      "frame": 1417500,
+      "downbeat": true
+    },
+    {
+      "beat": 61,
+      "seconds": 32.67857142857143,
+      "frame": 1441125,
+      "downbeat": false
+    },
+    {
+      "beat": 62,
+      "seconds": 33.214285714285715,
+      "frame": 1464750,
+      "downbeat": false
+    },
+    {
+      "beat": 63,
+      "seconds": 33.75,
+      "frame": 1488375,
+      "downbeat": false
+    },
+    {
+      "beat": 64,
+      "seconds": 34.285714285714285,
+      "frame": 1512000,
+      "downbeat": true
+    }
+  ],
+  "events": [
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": -1.1,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 50,
+      "pan": -0.5249999999999999,
+      "seed": 1290171926
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": -1.1,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 57,
+      "pan": -0.175,
+      "seed": 3334354852
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": -1.1,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 61,
+      "pan": 0.175,
+      "seed": 152594303
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": -1.1,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 64,
+      "pan": 0.5249999999999999,
+      "seed": 3102002163
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 0,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 38,
+      "pan": -0.02,
+      "seed": 315702296
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 0,
+      "durationBeats": 3.8,
+      "gain": 0.058,
+      "midi": 69,
+      "pan": -0.15,
+      "seed": 2931836924
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 3.5,
+      "durationBeats": 3.6,
+      "gain": 0.038,
+      "midi": 73,
+      "pan": 0.15,
+      "seed": 1640573089
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 4,
+      "durationBeats": 2.9,
+      "gain": 0.039,
+      "midi": 50,
+      "pan": 0.03,
+      "seed": 2668810415
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 6,
+      "durationBeats": 2.8,
+      "gain": 0.058,
+      "midi": 76,
+      "pan": 0.15,
+      "seed": 3748926283
+    },
+    {
+      "id": "outer-ring-explode-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 6,
+      "seconds": 3.2142857142857144,
+      "durationBeats": 2.4000000000000004,
+      "durationSeconds": 1.285714285714286,
+      "animation": {
+        "motionEventIds": [
+          "outer-ring-explode"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-852-851"
+        ],
+        "phase": "explode",
+        "kind": "hardware",
+        "firstBeat": 6,
+        "lastBeat": 8.4,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 2903205522
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 6.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 43,
+      "pan": -0.5249999999999999,
+      "seed": 1704129649
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 6.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 54,
+      "pan": -0.175,
+      "seed": 1485411963
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 6.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 57,
+      "pan": 0.175,
+      "seed": 578963646
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 6.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 62,
+      "pan": 0.5249999999999999,
+      "seed": 421934036
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 8,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 31,
+      "pan": -0.02,
+      "seed": 885224218
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 8.5,
+      "durationBeats": 2.7,
+      "gain": 0.041,
+      "midi": 74,
+      "pan": -0.15,
+      "seed": 4272555393
+    },
+    {
+      "id": "part-69-explode-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 9,
+      "seconds": 4.821428571428571,
+      "durationBeats": 2.4000000000000004,
+      "durationSeconds": 1.285714285714286,
+      "animation": {
+        "motionEventIds": [
+          "part-69-explode"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-922-895"
+        ],
+        "phase": "explode",
+        "kind": "hardware",
+        "firstBeat": 9,
+        "lastBeat": 11.4,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 4210403742
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 11,
+      "durationBeats": 2.5,
+      "gain": 0.037,
+      "midi": 69,
+      "pan": 0.15,
+      "seed": 2103004014
+    },
+    {
+      "id": "part-59-explode-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 11,
+      "seconds": 5.892857142857143,
+      "durationBeats": 2,
+      "durationSeconds": 1.0714285714285714,
+      "animation": {
+        "motionEventIds": [
+          "part-59-explode"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-922-861"
+        ],
+        "phase": "explode",
+        "kind": "hardware",
+        "firstBeat": 11,
+        "lastBeat": 13,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 3070992891
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 12,
+      "durationBeats": 2.9,
+      "gain": 0.039,
+      "midi": 43,
+      "pan": 0.03,
+      "seed": 245888810
+    },
+    {
+      "id": "part-62-explode-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 13,
+      "seconds": 6.964285714285714,
+      "durationBeats": 2.5,
+      "durationSeconds": 1.3392857142857142,
+      "animation": {
+        "motionEventIds": [
+          "part-62-explode"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-922-911"
+        ],
+        "phase": "explode",
+        "kind": "hardware",
+        "firstBeat": 13,
+        "lastBeat": 15.5,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 2780581029
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 13.5,
+      "durationBeats": 2.5,
+      "gain": 0.039,
+      "midi": 66,
+      "pan": -0.15,
+      "seed": 3534008276
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 14.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 47,
+      "pan": -0.5249999999999999,
+      "seed": 4162784841
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 14.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 54,
+      "pan": -0.175,
+      "seed": 589174400
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 14.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 57,
+      "pan": 0.175,
+      "seed": 3624307365
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 14.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 64,
+      "pan": 0.5249999999999999,
+      "seed": 589008878
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 16,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 35,
+      "pan": -0.02,
+      "seed": 237933851
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 16,
+      "durationBeats": 2.5,
+      "gain": 0.054,
+      "midi": 69,
+      "pan": -0.15,
+      "seed": 2895881017
+    },
+    {
+      "id": "bearing-small-parts-explode-wave",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 16,
+      "seconds": 8.571428571428571,
+      "durationBeats": 6.200000000000003,
+      "durationSeconds": 3.321428571428573,
+      "animation": {
+        "motionEventIds": [
+          "small-sector-1-explode",
+          "small-sector-2-explode",
+          "small-sector-3-explode",
+          "small-sector-4-explode"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-922-873",
+          "occ-b352183e1bd0-root-953098-923-922-888",
+          "occ-b352183e1bd0-root-953098-923-922-879",
+          "occ-b352183e1bd0-root-953098-923-922-901",
+          "occ-b352183e1bd0-root-953098-923-922-870",
+          "occ-b352183e1bd0-root-953098-923-922-892",
+          "occ-b352183e1bd0-root-953098-923-922-863",
+          "occ-b352183e1bd0-root-953098-923-922-886",
+          "occ-b352183e1bd0-root-953098-923-922-880",
+          "occ-b352183e1bd0-root-953098-923-922-881",
+          "occ-b352183e1bd0-root-953098-923-922-902",
+          "occ-b352183e1bd0-root-953098-923-922-921",
+          "occ-b352183e1bd0-root-953098-923-922-855",
+          "occ-b352183e1bd0-root-953098-923-922-914",
+          "occ-b352183e1bd0-root-953098-923-922-885",
+          "occ-b352183e1bd0-root-953098-923-922-875",
+          "occ-b352183e1bd0-root-953098-923-922-903",
+          "occ-b352183e1bd0-root-953098-923-922-915",
+          "occ-b352183e1bd0-root-953098-923-922-853",
+          "occ-b352183e1bd0-root-953098-923-922-887",
+          "occ-b352183e1bd0-root-953098-923-922-908",
+          "occ-b352183e1bd0-root-953098-923-922-896",
+          "occ-b352183e1bd0-root-953098-923-922-917",
+          "occ-b352183e1bd0-root-953098-923-922-856",
+          "occ-b352183e1bd0-root-953098-923-922-897",
+          "occ-b352183e1bd0-root-953098-923-922-916",
+          "occ-b352183e1bd0-root-953098-923-922-876",
+          "occ-b352183e1bd0-root-953098-923-922-883",
+          "occ-b352183e1bd0-root-953098-923-922-900",
+          "occ-b352183e1bd0-root-953098-923-922-869",
+          "occ-b352183e1bd0-root-953098-923-922-882",
+          "occ-b352183e1bd0-root-953098-923-922-867",
+          "occ-b352183e1bd0-root-953098-923-922-884",
+          "occ-b352183e1bd0-root-953098-923-922-907",
+          "occ-b352183e1bd0-root-953098-923-922-874",
+          "occ-b352183e1bd0-root-953098-923-922-864",
+          "occ-b352183e1bd0-root-953098-923-922-913",
+          "occ-b352183e1bd0-root-953098-923-922-894",
+          "occ-b352183e1bd0-root-953098-923-922-905",
+          "occ-b352183e1bd0-root-953098-923-922-857",
+          "occ-b352183e1bd0-root-953098-923-922-872",
+          "occ-b352183e1bd0-root-953098-923-922-862",
+          "occ-b352183e1bd0-root-953098-923-922-909",
+          "occ-b352183e1bd0-root-953098-923-922-865",
+          "occ-b352183e1bd0-root-953098-923-922-904",
+          "occ-b352183e1bd0-root-953098-923-922-899",
+          "occ-b352183e1bd0-root-953098-923-922-877",
+          "occ-b352183e1bd0-root-953098-923-922-910",
+          "occ-b352183e1bd0-root-953098-923-922-920",
+          "occ-b352183e1bd0-root-953098-923-922-890",
+          "occ-b352183e1bd0-root-953098-923-922-891",
+          "occ-b352183e1bd0-root-953098-923-922-866",
+          "occ-b352183e1bd0-root-953098-923-922-889",
+          "occ-b352183e1bd0-root-953098-923-922-871",
+          "occ-b352183e1bd0-root-953098-923-922-859",
+          "occ-b352183e1bd0-root-953098-923-922-878",
+          "occ-b352183e1bd0-root-953098-923-922-906",
+          "occ-b352183e1bd0-root-953098-923-922-898",
+          "occ-b352183e1bd0-root-953098-923-922-919",
+          "occ-b352183e1bd0-root-953098-923-922-893",
+          "occ-b352183e1bd0-root-953098-923-922-912",
+          "occ-b352183e1bd0-root-953098-923-922-858",
+          "occ-b352183e1bd0-root-953098-923-922-860",
+          "occ-b352183e1bd0-root-953098-923-922-918",
+          "occ-b352183e1bd0-root-953098-923-922-868",
+          "occ-b352183e1bd0-root-953098-923-922-854"
+        ],
+        "phase": "explode",
+        "kind": "repeat",
+        "firstBeat": 16,
+        "lastBeat": 22.200000000000003,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "batch-air",
+      "gain": 0.027,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 749687748
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 18.5,
+      "durationBeats": 2.4,
+      "gain": 0.037,
+      "midi": 66,
+      "pan": 0.15,
+      "seed": 3345835971
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 20,
+      "durationBeats": 2.9,
+      "gain": 0.039,
+      "midi": 47,
+      "pan": 0.03,
+      "seed": 1294077977
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 21,
+      "durationBeats": 2.6,
+      "gain": 0.041,
+      "midi": 74,
+      "pan": -0.15,
+      "seed": 422548429
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 22.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 45,
+      "pan": -0.5249999999999999,
+      "seed": 3943409353
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 22.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 52,
+      "pan": -0.175,
+      "seed": 1703382338
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 22.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 59,
+      "pan": 0.175,
+      "seed": 299584979
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 22.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 64,
+      "pan": 0.5249999999999999,
+      "seed": 1952435555
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 23.5,
+      "durationBeats": 2.7,
+      "gain": 0.032,
+      "midi": 69,
+      "pan": 0.15,
+      "seed": 2173889220
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 24,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 33,
+      "pan": -0.02,
+      "seed": 865237052
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 26,
+      "durationBeats": 3.4,
+      "gain": 0.026,
+      "midi": 64,
+      "pan": 0.15,
+      "seed": 1166979231
+    },
+    {
+      "id": "part-1-inspect-out-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 28,
+      "seconds": 15,
+      "durationBeats": 2.5,
+      "durationSeconds": 1.3392857142857142,
+      "animation": {
+        "motionEventIds": [
+          "part-1-inspect-out"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-922-864"
+        ],
+        "phase": "inspect-out",
+        "kind": "inspection",
+        "firstBeat": 28,
+        "lastBeat": 30.5,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "focus-air",
+      "gain": 0.022,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 2839268593
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 30.5,
+      "durationBeats": 4.2,
+      "gain": 0.025,
+      "midi": 71,
+      "pan": 0.15,
+      "seed": 3771061452
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 30.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 43,
+      "pan": -0.5249999999999999,
+      "seed": 3995674774
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 30.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 54,
+      "pan": -0.175,
+      "seed": 2890796105
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 30.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 57,
+      "pan": 0.175,
+      "seed": 3576180616
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 30.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 62,
+      "pan": 0.5249999999999999,
+      "seed": 3421870916
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 32,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 31,
+      "pan": -0.02,
+      "seed": 1799218794
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 34,
+      "durationBeats": 4.2,
+      "gain": 0.022,
+      "midi": 74,
+      "pan": 0.15,
+      "seed": 299328898
+    },
+    {
+      "id": "part-1-inspect-in-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 35.3,
+      "seconds": 18.910714285714285,
+      "durationBeats": 2.700000000000003,
+      "durationSeconds": 1.446428571428573,
+      "animation": {
+        "motionEventIds": [
+          "part-1-inspect-in"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-922-864"
+        ],
+        "phase": "inspect-in",
+        "kind": "inspection",
+        "firstBeat": 35.3,
+        "lastBeat": 38,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "focus-air",
+      "gain": 0.022,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 3290001567
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 38,
+      "durationBeats": 2.6,
+      "gain": 0.048,
+      "midi": 67,
+      "pan": 0.15,
+      "seed": 1367874863
+    },
+    {
+      "id": "bearing-small-parts-reassemble-wave",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 38,
+      "seconds": 20.357142857142858,
+      "durationBeats": 4.700000000000003,
+      "durationSeconds": 2.5178571428571446,
+      "animation": {
+        "motionEventIds": [
+          "small-sector-1-reassemble",
+          "small-sector-2-reassemble",
+          "small-sector-3-reassemble",
+          "small-sector-4-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-922-873",
+          "occ-b352183e1bd0-root-953098-923-922-888",
+          "occ-b352183e1bd0-root-953098-923-922-879",
+          "occ-b352183e1bd0-root-953098-923-922-901",
+          "occ-b352183e1bd0-root-953098-923-922-870",
+          "occ-b352183e1bd0-root-953098-923-922-892",
+          "occ-b352183e1bd0-root-953098-923-922-863",
+          "occ-b352183e1bd0-root-953098-923-922-886",
+          "occ-b352183e1bd0-root-953098-923-922-880",
+          "occ-b352183e1bd0-root-953098-923-922-881",
+          "occ-b352183e1bd0-root-953098-923-922-902",
+          "occ-b352183e1bd0-root-953098-923-922-921",
+          "occ-b352183e1bd0-root-953098-923-922-855",
+          "occ-b352183e1bd0-root-953098-923-922-914",
+          "occ-b352183e1bd0-root-953098-923-922-885",
+          "occ-b352183e1bd0-root-953098-923-922-875",
+          "occ-b352183e1bd0-root-953098-923-922-903",
+          "occ-b352183e1bd0-root-953098-923-922-915",
+          "occ-b352183e1bd0-root-953098-923-922-853",
+          "occ-b352183e1bd0-root-953098-923-922-887",
+          "occ-b352183e1bd0-root-953098-923-922-908",
+          "occ-b352183e1bd0-root-953098-923-922-896",
+          "occ-b352183e1bd0-root-953098-923-922-917",
+          "occ-b352183e1bd0-root-953098-923-922-856",
+          "occ-b352183e1bd0-root-953098-923-922-897",
+          "occ-b352183e1bd0-root-953098-923-922-916",
+          "occ-b352183e1bd0-root-953098-923-922-876",
+          "occ-b352183e1bd0-root-953098-923-922-883",
+          "occ-b352183e1bd0-root-953098-923-922-900",
+          "occ-b352183e1bd0-root-953098-923-922-869",
+          "occ-b352183e1bd0-root-953098-923-922-882",
+          "occ-b352183e1bd0-root-953098-923-922-867",
+          "occ-b352183e1bd0-root-953098-923-922-884",
+          "occ-b352183e1bd0-root-953098-923-922-907",
+          "occ-b352183e1bd0-root-953098-923-922-874",
+          "occ-b352183e1bd0-root-953098-923-922-864",
+          "occ-b352183e1bd0-root-953098-923-922-913",
+          "occ-b352183e1bd0-root-953098-923-922-894",
+          "occ-b352183e1bd0-root-953098-923-922-905",
+          "occ-b352183e1bd0-root-953098-923-922-857",
+          "occ-b352183e1bd0-root-953098-923-922-872",
+          "occ-b352183e1bd0-root-953098-923-922-862",
+          "occ-b352183e1bd0-root-953098-923-922-909",
+          "occ-b352183e1bd0-root-953098-923-922-865",
+          "occ-b352183e1bd0-root-953098-923-922-904",
+          "occ-b352183e1bd0-root-953098-923-922-899",
+          "occ-b352183e1bd0-root-953098-923-922-877",
+          "occ-b352183e1bd0-root-953098-923-922-910",
+          "occ-b352183e1bd0-root-953098-923-922-920",
+          "occ-b352183e1bd0-root-953098-923-922-890",
+          "occ-b352183e1bd0-root-953098-923-922-891",
+          "occ-b352183e1bd0-root-953098-923-922-866",
+          "occ-b352183e1bd0-root-953098-923-922-889",
+          "occ-b352183e1bd0-root-953098-923-922-871",
+          "occ-b352183e1bd0-root-953098-923-922-859",
+          "occ-b352183e1bd0-root-953098-923-922-878",
+          "occ-b352183e1bd0-root-953098-923-922-906",
+          "occ-b352183e1bd0-root-953098-923-922-898",
+          "occ-b352183e1bd0-root-953098-923-922-919",
+          "occ-b352183e1bd0-root-953098-923-922-893",
+          "occ-b352183e1bd0-root-953098-923-922-912",
+          "occ-b352183e1bd0-root-953098-923-922-858",
+          "occ-b352183e1bd0-root-953098-923-922-860",
+          "occ-b352183e1bd0-root-953098-923-922-918",
+          "occ-b352183e1bd0-root-953098-923-922-868",
+          "occ-b352183e1bd0-root-953098-923-922-854"
+        ],
+        "phase": "reassemble",
+        "kind": "repeat",
+        "firstBeat": 38,
+        "lastBeat": 42.7,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "batch-air",
+      "gain": 0.027,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 472221037
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 38.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 40,
+      "pan": -0.5249999999999999,
+      "seed": 703422450
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 38.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 55,
+      "pan": -0.175,
+      "seed": 3229393337
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 38.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 59,
+      "pan": 0.175,
+      "seed": 3711088766
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 38.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 66,
+      "pan": 0.5249999999999999,
+      "seed": 3449729344
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 40,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 28,
+      "pan": -0.02,
+      "seed": 1835339737
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 40.5,
+      "durationBeats": 2.6,
+      "gain": 0.037,
+      "midi": 71,
+      "pan": -0.15,
+      "seed": 401125574
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 43,
+      "durationBeats": 2.7,
+      "gain": 0.036,
+      "midi": 74,
+      "pan": 0.15,
+      "seed": 1073371102
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 44,
+      "durationBeats": 2.9,
+      "gain": 0.039,
+      "midi": 40,
+      "pan": 0.03,
+      "seed": 1599806260
+    },
+    {
+      "id": "part-62-reassemble-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 44.5,
+      "seconds": 23.839285714285715,
+      "durationBeats": 2.5,
+      "durationSeconds": 1.3392857142857142,
+      "animation": {
+        "motionEventIds": [
+          "part-62-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-922-911"
+        ],
+        "phase": "reassemble",
+        "kind": "hardware",
+        "firstBeat": 44.5,
+        "lastBeat": 47,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 2880287077
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 46,
+      "durationBeats": 2.8,
+      "gain": 0.039,
+      "midi": 71,
+      "pan": 0.15,
+      "seed": 3576702654
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 46.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 45,
+      "pan": -0.5249999999999999,
+      "seed": 3146317898
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 46.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 55,
+      "pan": -0.175,
+      "seed": 3951402218
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 46.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 59,
+      "pan": 0.175,
+      "seed": 1526909958
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 46.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 66,
+      "pan": 0.5249999999999999,
+      "seed": 1388807557
+    },
+    {
+      "id": "part-62-reassemble-seat",
+      "role": "editorial-sfx",
+      "cueRole": "seating",
+      "anchor": "movement-complete",
+      "beat": 47,
+      "seconds": 25.178571428571427,
+      "durationBeats": 0.48,
+      "durationSeconds": 0.2571428571428571,
+      "animation": {
+        "motionEventIds": [
+          "part-62-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-922-911"
+        ],
+        "phase": "reassemble",
+        "kind": "hardware",
+        "firstBeat": 44.5,
+        "lastBeat": 47,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "soft-seat",
+      "gain": 0.026,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 2913897317
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 48,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 33,
+      "pan": -0.02,
+      "seed": 3969221404
+    },
+    {
+      "id": "part-59-reassemble-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 48,
+      "seconds": 25.714285714285715,
+      "durationBeats": 2,
+      "durationSeconds": 1.0714285714285714,
+      "animation": {
+        "motionEventIds": [
+          "part-59-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-922-861"
+        ],
+        "phase": "reassemble",
+        "kind": "hardware",
+        "firstBeat": 48,
+        "lastBeat": 50,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 3834435046
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 49,
+      "durationBeats": 2.7,
+      "gain": 0.051,
+      "midi": 73,
+      "pan": -0.15,
+      "seed": 3977406411
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 51.5,
+      "durationBeats": 2.7,
+      "gain": 0.037,
+      "midi": 76,
+      "pan": 0.15,
+      "seed": 2627555352
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 52,
+      "durationBeats": 2.9,
+      "gain": 0.039,
+      "midi": 45,
+      "pan": 0.03,
+      "seed": 3258425765
+    },
+    {
+      "id": "part-69-reassemble-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 52,
+      "seconds": 27.857142857142858,
+      "durationBeats": 2.3999999999999986,
+      "durationSeconds": 1.285714285714285,
+      "animation": {
+        "motionEventIds": [
+          "part-69-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-922-895"
+        ],
+        "phase": "reassemble",
+        "kind": "hardware",
+        "firstBeat": 52,
+        "lastBeat": 54.4,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 3090240798
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 54,
+      "durationBeats": 2.8,
+      "gain": 0.033,
+      "midi": 71,
+      "pan": 0.15,
+      "seed": 3847422357
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 54.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 50,
+      "pan": -0.5249999999999999,
+      "seed": 4134284870
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 54.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 57,
+      "pan": -0.175,
+      "seed": 121242932
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 54.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 61,
+      "pan": 0.175,
+      "seed": 3020708250
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 54.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 64,
+      "pan": 0.5249999999999999,
+      "seed": 3638290051
+    },
+    {
+      "id": "outer-ring-reassemble-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 55,
+      "seconds": 29.464285714285715,
+      "durationBeats": 2.3999999999999986,
+      "durationSeconds": 1.285714285714285,
+      "animation": {
+        "motionEventIds": [
+          "outer-ring-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-852-851"
+        ],
+        "phase": "reassemble",
+        "kind": "hardware",
+        "firstBeat": 55,
+        "lastBeat": 57.4,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 3234690709
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 56,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 38,
+      "pan": -0.02,
+      "seed": 627942560
+    },
+    {
+      "id": "outer-ring-reassemble-seat",
+      "role": "editorial-sfx",
+      "cueRole": "seating",
+      "anchor": "movement-complete",
+      "beat": 57.4,
+      "seconds": 30.75,
+      "durationBeats": 0.48,
+      "durationSeconds": 0.2571428571428571,
+      "animation": {
+        "motionEventIds": [
+          "outer-ring-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-923-852-851"
+        ],
+        "phase": "reassemble",
+        "kind": "hardware",
+        "firstBeat": 55,
+        "lastBeat": 57.4,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "soft-seat",
+      "gain": 0.026,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 2918167224
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 57.5,
+      "durationBeats": 3.7,
+      "gain": 0.043,
+      "midi": 69,
+      "pan": -0.15,
+      "seed": 693233637
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 61,
+      "durationBeats": 4,
+      "gain": 0.025,
+      "midi": 73,
+      "pan": -0.15,
+      "seed": 2684914479
+    }
+  ],
+  "file": "audio/bearing-loop.wav",
+  "byteLength": 6048044,
+  "sha256": "02bb7d0918b4f05b700ef5cc9853ab4c698723c2ba6aaa62ef522f0c0d31d785",
+  "analysis": {
+    "sampleRate": 44100,
+    "frames": 1512000,
+    "durationSeconds": 34.285714285714285,
+    "peak": 0.3161919468037188,
+    "peakDbfs": -10.00098390902782,
+    "rmsDbfs": -23.88680286445569,
+    "clippedSamples": 0,
+    "masterScale": 1,
+    "loopBoundary": {
+      "maximumStep": 0.0003280860575589715,
+      "maximumInteriorStep": 0.02033468410212598,
+      "ratioToMaximumInteriorStep": 0.016134308057663423
+    },
+    "sections": [
+      {
+        "id": "whole",
+        "firstBeat": 0,
+        "lastBeat": 6,
+        "rmsDbfs": -22.97258885241029
+      },
+      {
+        "id": "bearing",
+        "firstBeat": 6,
+        "lastBeat": 16,
+        "rmsDbfs": -22.989326869409975
+      },
+      {
+        "id": "repeats",
+        "firstBeat": 16,
+        "lastBeat": 28,
+        "rmsDbfs": -23.334799055835276
+      },
+      {
+        "id": "component",
+        "firstBeat": 28,
+        "lastBeat": 38,
+        "rmsDbfs": -29.172536999070825
+      },
+      {
+        "id": "return",
+        "firstBeat": 38,
+        "lastBeat": 60,
+        "rmsDbfs": -23.240081659551876
+      },
+      {
+        "id": "resolve",
+        "firstBeat": 60,
+        "lastBeat": 64,
+        "rmsDbfs": -26.525372668898722
+      }
+    ],
+    "listeningReviewed": false,
+    "listeningReview": "Objective waveform checks only. Subjective listening is not claimed."
+  }
+}

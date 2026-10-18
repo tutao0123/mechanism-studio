@@ -1,571 +1,1217 @@
 {
-  "schemaVersion": "1.1.0",
-  "title": "WOLF / Motor Component Study",
-  "edition": "wolf-motor-detail-quiet-rebind-v1",
-  "authorship": "Original Mechanism Studio composition, synthesis and editorial effects; no third-party samples.",
+  "schemaVersion": "1.3.0",
+  "title": "WOLF / Continuous Motor Study",
+  "edition": "wolf-motor-continuous-v2",
+  "authorship": "Original Mechanism Studio composition, deterministic synthesis and editorial motion effects. No third-party samples, voice services or recordings.",
+  "originalScoreLicense": "MIT",
   "narration": false,
+  "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1",
+  "sourceSHA256": "b352183e1bd0d55c403a6f406c3b2886a3b1b374b47cf32bcb69d4277d252e35",
+  "storyRevision": "wolf-motor-detail-2",
   "bpm": 112,
   "feltBpm": 56,
-  "musicalFeel": "Relaxed half-time; sustained pads, warm bass and sparse rounded keys; no drum or tick bed.",
+  "totalBeats": 64,
+  "bars": 16,
   "meter": [
     4,
     4
   ],
-  "bars": 16,
-  "totalBeats": 64,
   "sampleRate": 44100,
   "channels": 2,
   "bitsPerSample": 16,
   "frames": 1512000,
   "durationSeconds": 34.285714285714285,
-  "deterministicSeed": 1380926031,
-  "timing": "One audio transport. timeSeconds = beat * 60 / bpm. Frame rounding is below one sample.",
+  "deterministicSeed": 1464686130,
+  "musicalFeel": "Quiet opening, continuous reveal phrases, a lighter single-magnet close-up, then a soft rising reassembly and resolved loop. No drums, narration or label dings.",
+  "timing": "One seekable PCM clock: seconds = beat * 60 / 112. Cues derive from the actual v2 motion-event windows and retained source occurrence IDs.",
+  "mix": {
+    "musicTargetSamplePeakDbfs": -10,
+    "finalCeilingDbfs": -8,
+    "percussion": false,
+    "effects": "Smooth filtered-air motion textures and three soft hardware seating cues. Editorial accents, not simulated friction, contact or physical motor sound."
+  },
+  "automation": {
+    "readingDip": {
+      "firstBeat": 27,
+      "fullBeat": 29.5,
+      "releaseBeat": 36.5,
+      "lastBeat": 39,
+      "gain": 0.53
+    },
+    "openingGain": 0.76,
+    "resolveGain": 0.76,
+    "method": "Continuous smoothstep gain, with matching beginning and ending gain."
+  },
   "effects": {
     "kind": "editorial",
-    "description": "Air/servo textures follow group motion; soft seats mark the four return completions. These sounds are designed accents, not physical motor or collision simulation.",
-    "clock": "Rendered into the same PCM buffer as the score. No independent timers, label dings or per-scene audio restarts.",
+    "clock": "Baked into the same PCM buffer. No wall-clock timers or scene restarts.",
+    "repetitionPolicy": "One continuous wave per repeated source family and movement phase; never one impact per magnet or cc occurrence.",
     "actionCues": [
       {
-        "id": "shaft-nut-explode-motion",
+        "id": "nut-explode-motion",
         "role": "editorial-sfx",
         "cueRole": "motion",
         "anchor": "movement-start",
+        "beat": 6,
+        "seconds": 3.2142857142857144,
+        "durationBeats": 1.4000000000000004,
+        "durationSeconds": 0.7500000000000002,
         "animation": {
-          "groupId": "shaft-nut",
+          "motionEventIds": [
+            "nut-explode"
+          ],
           "partIds": [
-            "occ-b352183e1bd0-root-953098-1010-934",
             "occ-b352183e1bd0-root-953098-1010-992"
           ],
           "phase": "explode",
-          "firstBeat": 8,
-          "lastBeat": 10
-        },
-        "beat": 8,
-        "durationBeats": 2,
-        "seconds": 4.285714285714286,
-        "durationSeconds": 1.0714285714285714
+          "kind": "hardware",
+          "firstBeat": 6,
+          "lastBeat": 7.4,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "shaft-explode-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 7.1,
+        "seconds": 3.8035714285714284,
+        "durationBeats": 2.200000000000001,
+        "durationSeconds": 1.178571428571429,
+        "animation": {
+          "motionEventIds": [
+            "shaft-explode"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-1010-934"
+          ],
+          "phase": "explode",
+          "kind": "hardware",
+          "firstBeat": 7.1,
+          "lastBeat": 9.3,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
       },
       {
         "id": "mount-explode-motion",
         "role": "editorial-sfx",
         "cueRole": "motion",
         "anchor": "movement-start",
+        "beat": 9,
+        "seconds": 4.821428571428571,
+        "durationBeats": 2.1999999999999993,
+        "durationSeconds": 1.1785714285714282,
         "animation": {
-          "groupId": "mount",
+          "motionEventIds": [
+            "mount-explode"
+          ],
           "partIds": [
             "occ-b352183e1bd0-root-953098-1010-946"
           ],
           "phase": "explode",
-          "firstBeat": 12,
-          "lastBeat": 14
-        },
-        "beat": 12,
-        "durationBeats": 2,
-        "seconds": 6.428571428571429,
-        "durationSeconds": 1.0714285714285714
+          "kind": "hardware",
+          "firstBeat": 9,
+          "lastBeat": 11.2,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
       },
       {
-        "id": "shells-explode-motion",
+        "id": "rotor-explode-motion",
         "role": "editorial-sfx",
         "cueRole": "motion",
         "anchor": "movement-start",
+        "beat": 11,
+        "seconds": 5.892857142857143,
+        "durationBeats": 2.5999999999999996,
+        "durationSeconds": 1.3928571428571426,
         "animation": {
-          "groupId": "shells",
+          "motionEventIds": [
+            "rotor-explode"
+          ],
           "partIds": [
-            "occ-b352183e1bd0-root-953098-1010-956",
+            "occ-b352183e1bd0-root-953098-1010-956"
+          ],
+          "phase": "explode",
+          "kind": "hardware",
+          "firstBeat": 11,
+          "lastBeat": 13.6,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "body-explode-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 12.4,
+        "seconds": 6.642857142857143,
+        "durationBeats": 2.5999999999999996,
+        "durationSeconds": 1.3928571428571426,
+        "animation": {
+          "motionEventIds": [
+            "body-explode"
+          ],
+          "partIds": [
             "occ-b352183e1bd0-root-953098-1010-970"
           ],
           "phase": "explode",
-          "firstBeat": 16,
-          "lastBeat": 18
-        },
+          "kind": "hardware",
+          "firstBeat": 12.4,
+          "lastBeat": 15,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "magnets-explode-wave",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
         "beat": 16,
-        "durationBeats": 2,
         "seconds": 8.571428571428571,
-        "durationSeconds": 1.0714285714285714
-      },
-      {
-        "id": "repeats-explode-motion",
-        "role": "editorial-sfx",
-        "cueRole": "motion",
-        "anchor": "movement-start",
+        "durationBeats": 5.050000000000001,
+        "durationSeconds": 2.7053571428571432,
         "animation": {
-          "groupId": "repeats",
+          "motionEventIds": [
+            "magnet-sector-1-explode",
+            "magnet-sector-2-explode",
+            "magnet-sector-3-explode",
+            "magnet-sector-4-explode"
+          ],
           "partIds": [
-            "occ-b352183e1bd0-root-953098-1010-924",
-            "occ-b352183e1bd0-root-953098-1010-926",
-            "occ-b352183e1bd0-root-953098-1010-927",
-            "occ-b352183e1bd0-root-953098-1010-928",
-            "occ-b352183e1bd0-root-953098-1010-931",
-            "occ-b352183e1bd0-root-953098-1010-932",
-            "occ-b352183e1bd0-root-953098-1010-936",
-            "occ-b352183e1bd0-root-953098-1010-937",
-            "occ-b352183e1bd0-root-953098-1010-939",
-            "occ-b352183e1bd0-root-953098-1010-941",
-            "occ-b352183e1bd0-root-953098-1010-943",
-            "occ-b352183e1bd0-root-953098-1010-944",
-            "occ-b352183e1bd0-root-953098-1010-945",
-            "occ-b352183e1bd0-root-953098-1010-947",
-            "occ-b352183e1bd0-root-953098-1010-948",
             "occ-b352183e1bd0-root-953098-1010-950",
-            "occ-b352183e1bd0-root-953098-1010-951",
-            "occ-b352183e1bd0-root-953098-1010-952",
-            "occ-b352183e1bd0-root-953098-1010-958",
+            "occ-b352183e1bd0-root-953098-1010-1008",
+            "occ-b352183e1bd0-root-953098-1010-1001",
+            "occ-b352183e1bd0-root-953098-1010-941",
+            "occ-b352183e1bd0-root-953098-1010-944",
+            "occ-b352183e1bd0-root-953098-1010-931",
+            "occ-b352183e1bd0-root-953098-1010-995",
+            "occ-b352183e1bd0-root-953098-1010-939",
+            "occ-b352183e1bd0-root-953098-1010-999",
+            "occ-b352183e1bd0-root-953098-1010-974",
             "occ-b352183e1bd0-root-953098-1010-966",
+            "occ-b352183e1bd0-root-953098-1010-948",
+            "occ-b352183e1bd0-root-953098-1010-980",
+            "occ-b352183e1bd0-root-953098-1010-975",
+            "occ-b352183e1bd0-root-953098-1010-958",
+            "occ-b352183e1bd0-root-953098-1010-998",
+            "occ-b352183e1bd0-root-953098-1010-1004",
+            "occ-b352183e1bd0-root-953098-1010-993",
+            "occ-b352183e1bd0-root-953098-1010-928",
+            "occ-b352183e1bd0-root-953098-1010-937",
+            "occ-b352183e1bd0-root-953098-1010-1000",
+            "occ-b352183e1bd0-root-953098-1010-982",
+            "occ-b352183e1bd0-root-953098-1010-943",
+            "occ-b352183e1bd0-root-953098-1010-945",
+            "occ-b352183e1bd0-root-953098-1010-951",
+            "occ-b352183e1bd0-root-953098-1010-947",
+            "occ-b352183e1bd0-root-953098-1010-1003",
+            "occ-b352183e1bd0-root-953098-1010-983",
+            "occ-b352183e1bd0-root-953098-1010-924",
+            "occ-b352183e1bd0-root-953098-1010-984",
             "occ-b352183e1bd0-root-953098-1010-968",
             "occ-b352183e1bd0-root-953098-1010-971",
-            "occ-b352183e1bd0-root-953098-1010-974",
-            "occ-b352183e1bd0-root-953098-1010-975",
-            "occ-b352183e1bd0-root-953098-1010-980",
-            "occ-b352183e1bd0-root-953098-1010-982",
-            "occ-b352183e1bd0-root-953098-1010-983",
-            "occ-b352183e1bd0-root-953098-1010-984",
-            "occ-b352183e1bd0-root-953098-1010-985",
-            "occ-b352183e1bd0-root-953098-1010-987",
+            "occ-b352183e1bd0-root-953098-1010-927",
+            "occ-b352183e1bd0-root-953098-1010-952",
             "occ-b352183e1bd0-root-953098-1010-988",
-            "occ-b352183e1bd0-root-953098-1010-993",
-            "occ-b352183e1bd0-root-953098-1010-995",
-            "occ-b352183e1bd0-root-953098-1010-998",
-            "occ-b352183e1bd0-root-953098-1010-999",
-            "occ-b352183e1bd0-root-953098-1010-1000",
-            "occ-b352183e1bd0-root-953098-1010-1001",
-            "occ-b352183e1bd0-root-953098-1010-1003",
-            "occ-b352183e1bd0-root-953098-1010-1004",
-            "occ-b352183e1bd0-root-953098-1010-1008",
-            "occ-b352183e1bd0-root-953098-1010-925",
-            "occ-b352183e1bd0-root-953098-1010-929",
-            "occ-b352183e1bd0-root-953098-1010-930",
-            "occ-b352183e1bd0-root-953098-1010-933",
-            "occ-b352183e1bd0-root-953098-1010-935",
-            "occ-b352183e1bd0-root-953098-1010-938",
-            "occ-b352183e1bd0-root-953098-1010-940",
-            "occ-b352183e1bd0-root-953098-1010-942",
-            "occ-b352183e1bd0-root-953098-1010-949",
-            "occ-b352183e1bd0-root-953098-1010-953",
-            "occ-b352183e1bd0-root-953098-1010-954",
-            "occ-b352183e1bd0-root-953098-1010-955",
-            "occ-b352183e1bd0-root-953098-1010-957",
-            "occ-b352183e1bd0-root-953098-1010-959",
-            "occ-b352183e1bd0-root-953098-1010-961",
-            "occ-b352183e1bd0-root-953098-1010-962",
-            "occ-b352183e1bd0-root-953098-1010-963",
-            "occ-b352183e1bd0-root-953098-1010-964",
-            "occ-b352183e1bd0-root-953098-1010-965",
-            "occ-b352183e1bd0-root-953098-1010-967",
-            "occ-b352183e1bd0-root-953098-1010-969",
-            "occ-b352183e1bd0-root-953098-1010-972",
-            "occ-b352183e1bd0-root-953098-1010-973",
-            "occ-b352183e1bd0-root-953098-1010-976",
-            "occ-b352183e1bd0-root-953098-1010-977",
-            "occ-b352183e1bd0-root-953098-1010-978",
-            "occ-b352183e1bd0-root-953098-1010-979",
-            "occ-b352183e1bd0-root-953098-1010-981",
-            "occ-b352183e1bd0-root-953098-1010-986",
-            "occ-b352183e1bd0-root-953098-1010-989",
-            "occ-b352183e1bd0-root-953098-1010-990",
-            "occ-b352183e1bd0-root-953098-1010-991",
-            "occ-b352183e1bd0-root-953098-1010-994",
-            "occ-b352183e1bd0-root-953098-1010-996",
-            "occ-b352183e1bd0-root-953098-1010-997",
-            "occ-b352183e1bd0-root-953098-1010-1002",
-            "occ-b352183e1bd0-root-953098-1010-1005",
-            "occ-b352183e1bd0-root-953098-1010-1006",
-            "occ-b352183e1bd0-root-953098-1010-1007",
-            "occ-b352183e1bd0-root-953098-1010-1009"
+            "occ-b352183e1bd0-root-953098-1010-936",
+            "occ-b352183e1bd0-root-953098-1010-932",
+            "occ-b352183e1bd0-root-953098-1010-926",
+            "occ-b352183e1bd0-root-953098-1010-987",
+            "occ-b352183e1bd0-root-953098-1010-985"
           ],
           "phase": "explode",
-          "firstBeat": 20,
-          "lastBeat": 22
-        },
-        "beat": 20,
-        "durationBeats": 2,
-        "seconds": 10.714285714285714,
-        "durationSeconds": 1.0714285714285714
+          "kind": "repeat",
+          "firstBeat": 16,
+          "lastBeat": 21.05,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
       },
       {
-        "id": "repeats-reassemble-motion",
+        "id": "cc-explode-wave",
         "role": "editorial-sfx",
         "cueRole": "motion",
         "anchor": "movement-start",
+        "beat": 18.1,
+        "seconds": 9.696428571428571,
+        "durationBeats": 5.2499999999999964,
+        "durationSeconds": 2.812499999999998,
         "animation": {
-          "groupId": "repeats",
-          "partIds": [
-            "occ-b352183e1bd0-root-953098-1010-924",
-            "occ-b352183e1bd0-root-953098-1010-926",
-            "occ-b352183e1bd0-root-953098-1010-927",
-            "occ-b352183e1bd0-root-953098-1010-928",
-            "occ-b352183e1bd0-root-953098-1010-931",
-            "occ-b352183e1bd0-root-953098-1010-932",
-            "occ-b352183e1bd0-root-953098-1010-936",
-            "occ-b352183e1bd0-root-953098-1010-937",
-            "occ-b352183e1bd0-root-953098-1010-939",
-            "occ-b352183e1bd0-root-953098-1010-941",
-            "occ-b352183e1bd0-root-953098-1010-943",
-            "occ-b352183e1bd0-root-953098-1010-944",
-            "occ-b352183e1bd0-root-953098-1010-945",
-            "occ-b352183e1bd0-root-953098-1010-947",
-            "occ-b352183e1bd0-root-953098-1010-948",
-            "occ-b352183e1bd0-root-953098-1010-950",
-            "occ-b352183e1bd0-root-953098-1010-951",
-            "occ-b352183e1bd0-root-953098-1010-952",
-            "occ-b352183e1bd0-root-953098-1010-958",
-            "occ-b352183e1bd0-root-953098-1010-966",
-            "occ-b352183e1bd0-root-953098-1010-968",
-            "occ-b352183e1bd0-root-953098-1010-971",
-            "occ-b352183e1bd0-root-953098-1010-974",
-            "occ-b352183e1bd0-root-953098-1010-975",
-            "occ-b352183e1bd0-root-953098-1010-980",
-            "occ-b352183e1bd0-root-953098-1010-982",
-            "occ-b352183e1bd0-root-953098-1010-983",
-            "occ-b352183e1bd0-root-953098-1010-984",
-            "occ-b352183e1bd0-root-953098-1010-985",
-            "occ-b352183e1bd0-root-953098-1010-987",
-            "occ-b352183e1bd0-root-953098-1010-988",
-            "occ-b352183e1bd0-root-953098-1010-993",
-            "occ-b352183e1bd0-root-953098-1010-995",
-            "occ-b352183e1bd0-root-953098-1010-998",
-            "occ-b352183e1bd0-root-953098-1010-999",
-            "occ-b352183e1bd0-root-953098-1010-1000",
-            "occ-b352183e1bd0-root-953098-1010-1001",
-            "occ-b352183e1bd0-root-953098-1010-1003",
-            "occ-b352183e1bd0-root-953098-1010-1004",
-            "occ-b352183e1bd0-root-953098-1010-1008",
-            "occ-b352183e1bd0-root-953098-1010-925",
-            "occ-b352183e1bd0-root-953098-1010-929",
-            "occ-b352183e1bd0-root-953098-1010-930",
-            "occ-b352183e1bd0-root-953098-1010-933",
-            "occ-b352183e1bd0-root-953098-1010-935",
-            "occ-b352183e1bd0-root-953098-1010-938",
-            "occ-b352183e1bd0-root-953098-1010-940",
-            "occ-b352183e1bd0-root-953098-1010-942",
-            "occ-b352183e1bd0-root-953098-1010-949",
-            "occ-b352183e1bd0-root-953098-1010-953",
-            "occ-b352183e1bd0-root-953098-1010-954",
-            "occ-b352183e1bd0-root-953098-1010-955",
-            "occ-b352183e1bd0-root-953098-1010-957",
-            "occ-b352183e1bd0-root-953098-1010-959",
-            "occ-b352183e1bd0-root-953098-1010-961",
-            "occ-b352183e1bd0-root-953098-1010-962",
-            "occ-b352183e1bd0-root-953098-1010-963",
-            "occ-b352183e1bd0-root-953098-1010-964",
-            "occ-b352183e1bd0-root-953098-1010-965",
-            "occ-b352183e1bd0-root-953098-1010-967",
-            "occ-b352183e1bd0-root-953098-1010-969",
-            "occ-b352183e1bd0-root-953098-1010-972",
-            "occ-b352183e1bd0-root-953098-1010-973",
-            "occ-b352183e1bd0-root-953098-1010-976",
-            "occ-b352183e1bd0-root-953098-1010-977",
-            "occ-b352183e1bd0-root-953098-1010-978",
-            "occ-b352183e1bd0-root-953098-1010-979",
-            "occ-b352183e1bd0-root-953098-1010-981",
-            "occ-b352183e1bd0-root-953098-1010-986",
-            "occ-b352183e1bd0-root-953098-1010-989",
-            "occ-b352183e1bd0-root-953098-1010-990",
-            "occ-b352183e1bd0-root-953098-1010-991",
-            "occ-b352183e1bd0-root-953098-1010-994",
-            "occ-b352183e1bd0-root-953098-1010-996",
-            "occ-b352183e1bd0-root-953098-1010-997",
-            "occ-b352183e1bd0-root-953098-1010-1002",
-            "occ-b352183e1bd0-root-953098-1010-1005",
-            "occ-b352183e1bd0-root-953098-1010-1006",
-            "occ-b352183e1bd0-root-953098-1010-1007",
-            "occ-b352183e1bd0-root-953098-1010-1009"
+          "motionEventIds": [
+            "cc-sector-1-explode",
+            "cc-sector-2-explode",
+            "cc-sector-3-explode",
+            "cc-sector-4-explode"
           ],
-          "phase": "reassemble",
-          "firstBeat": 40,
-          "lastBeat": 42
-        },
-        "beat": 40,
-        "durationBeats": 2,
-        "seconds": 21.428571428571427,
-        "durationSeconds": 1.0714285714285714
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-1010-996",
+            "occ-b352183e1bd0-root-953098-1010-1009",
+            "occ-b352183e1bd0-root-953098-1010-940",
+            "occ-b352183e1bd0-root-953098-1010-1002",
+            "occ-b352183e1bd0-root-953098-1010-963",
+            "occ-b352183e1bd0-root-953098-1010-938",
+            "occ-b352183e1bd0-root-953098-1010-972",
+            "occ-b352183e1bd0-root-953098-1010-1006",
+            "occ-b352183e1bd0-root-953098-1010-990",
+            "occ-b352183e1bd0-root-953098-1010-1005",
+            "occ-b352183e1bd0-root-953098-1010-979",
+            "occ-b352183e1bd0-root-953098-1010-989",
+            "occ-b352183e1bd0-root-953098-1010-1007",
+            "occ-b352183e1bd0-root-953098-1010-959",
+            "occ-b352183e1bd0-root-953098-1010-994",
+            "occ-b352183e1bd0-root-953098-1010-973",
+            "occ-b352183e1bd0-root-953098-1010-955",
+            "occ-b352183e1bd0-root-953098-1010-981",
+            "occ-b352183e1bd0-root-953098-1010-967",
+            "occ-b352183e1bd0-root-953098-1010-991",
+            "occ-b352183e1bd0-root-953098-1010-942",
+            "occ-b352183e1bd0-root-953098-1010-954",
+            "occ-b352183e1bd0-root-953098-1010-933",
+            "occ-b352183e1bd0-root-953098-1010-965",
+            "occ-b352183e1bd0-root-953098-1010-977",
+            "occ-b352183e1bd0-root-953098-1010-930",
+            "occ-b352183e1bd0-root-953098-1010-969",
+            "occ-b352183e1bd0-root-953098-1010-978",
+            "occ-b352183e1bd0-root-953098-1010-949",
+            "occ-b352183e1bd0-root-953098-1010-957",
+            "occ-b352183e1bd0-root-953098-1010-986",
+            "occ-b352183e1bd0-root-953098-1010-953",
+            "occ-b352183e1bd0-root-953098-1010-962",
+            "occ-b352183e1bd0-root-953098-1010-929",
+            "occ-b352183e1bd0-root-953098-1010-976",
+            "occ-b352183e1bd0-root-953098-1010-964",
+            "occ-b352183e1bd0-root-953098-1010-935",
+            "occ-b352183e1bd0-root-953098-1010-961",
+            "occ-b352183e1bd0-root-953098-1010-997",
+            "occ-b352183e1bd0-root-953098-1010-925"
+          ],
+          "phase": "explode",
+          "kind": "repeat",
+          "firstBeat": 18.1,
+          "lastBeat": 23.349999999999998,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
       },
       {
-        "id": "repeats-seated",
-        "role": "editorial-sfx",
-        "cueRole": "seating",
-        "anchor": "movement-complete",
-        "animation": {
-          "groupId": "repeats",
-          "partIds": [
-            "occ-b352183e1bd0-root-953098-1010-924",
-            "occ-b352183e1bd0-root-953098-1010-926",
-            "occ-b352183e1bd0-root-953098-1010-927",
-            "occ-b352183e1bd0-root-953098-1010-928",
-            "occ-b352183e1bd0-root-953098-1010-931",
-            "occ-b352183e1bd0-root-953098-1010-932",
-            "occ-b352183e1bd0-root-953098-1010-936",
-            "occ-b352183e1bd0-root-953098-1010-937",
-            "occ-b352183e1bd0-root-953098-1010-939",
-            "occ-b352183e1bd0-root-953098-1010-941",
-            "occ-b352183e1bd0-root-953098-1010-943",
-            "occ-b352183e1bd0-root-953098-1010-944",
-            "occ-b352183e1bd0-root-953098-1010-945",
-            "occ-b352183e1bd0-root-953098-1010-947",
-            "occ-b352183e1bd0-root-953098-1010-948",
-            "occ-b352183e1bd0-root-953098-1010-950",
-            "occ-b352183e1bd0-root-953098-1010-951",
-            "occ-b352183e1bd0-root-953098-1010-952",
-            "occ-b352183e1bd0-root-953098-1010-958",
-            "occ-b352183e1bd0-root-953098-1010-966",
-            "occ-b352183e1bd0-root-953098-1010-968",
-            "occ-b352183e1bd0-root-953098-1010-971",
-            "occ-b352183e1bd0-root-953098-1010-974",
-            "occ-b352183e1bd0-root-953098-1010-975",
-            "occ-b352183e1bd0-root-953098-1010-980",
-            "occ-b352183e1bd0-root-953098-1010-982",
-            "occ-b352183e1bd0-root-953098-1010-983",
-            "occ-b352183e1bd0-root-953098-1010-984",
-            "occ-b352183e1bd0-root-953098-1010-985",
-            "occ-b352183e1bd0-root-953098-1010-987",
-            "occ-b352183e1bd0-root-953098-1010-988",
-            "occ-b352183e1bd0-root-953098-1010-993",
-            "occ-b352183e1bd0-root-953098-1010-995",
-            "occ-b352183e1bd0-root-953098-1010-998",
-            "occ-b352183e1bd0-root-953098-1010-999",
-            "occ-b352183e1bd0-root-953098-1010-1000",
-            "occ-b352183e1bd0-root-953098-1010-1001",
-            "occ-b352183e1bd0-root-953098-1010-1003",
-            "occ-b352183e1bd0-root-953098-1010-1004",
-            "occ-b352183e1bd0-root-953098-1010-1008",
-            "occ-b352183e1bd0-root-953098-1010-925",
-            "occ-b352183e1bd0-root-953098-1010-929",
-            "occ-b352183e1bd0-root-953098-1010-930",
-            "occ-b352183e1bd0-root-953098-1010-933",
-            "occ-b352183e1bd0-root-953098-1010-935",
-            "occ-b352183e1bd0-root-953098-1010-938",
-            "occ-b352183e1bd0-root-953098-1010-940",
-            "occ-b352183e1bd0-root-953098-1010-942",
-            "occ-b352183e1bd0-root-953098-1010-949",
-            "occ-b352183e1bd0-root-953098-1010-953",
-            "occ-b352183e1bd0-root-953098-1010-954",
-            "occ-b352183e1bd0-root-953098-1010-955",
-            "occ-b352183e1bd0-root-953098-1010-957",
-            "occ-b352183e1bd0-root-953098-1010-959",
-            "occ-b352183e1bd0-root-953098-1010-961",
-            "occ-b352183e1bd0-root-953098-1010-962",
-            "occ-b352183e1bd0-root-953098-1010-963",
-            "occ-b352183e1bd0-root-953098-1010-964",
-            "occ-b352183e1bd0-root-953098-1010-965",
-            "occ-b352183e1bd0-root-953098-1010-967",
-            "occ-b352183e1bd0-root-953098-1010-969",
-            "occ-b352183e1bd0-root-953098-1010-972",
-            "occ-b352183e1bd0-root-953098-1010-973",
-            "occ-b352183e1bd0-root-953098-1010-976",
-            "occ-b352183e1bd0-root-953098-1010-977",
-            "occ-b352183e1bd0-root-953098-1010-978",
-            "occ-b352183e1bd0-root-953098-1010-979",
-            "occ-b352183e1bd0-root-953098-1010-981",
-            "occ-b352183e1bd0-root-953098-1010-986",
-            "occ-b352183e1bd0-root-953098-1010-989",
-            "occ-b352183e1bd0-root-953098-1010-990",
-            "occ-b352183e1bd0-root-953098-1010-991",
-            "occ-b352183e1bd0-root-953098-1010-994",
-            "occ-b352183e1bd0-root-953098-1010-996",
-            "occ-b352183e1bd0-root-953098-1010-997",
-            "occ-b352183e1bd0-root-953098-1010-1002",
-            "occ-b352183e1bd0-root-953098-1010-1005",
-            "occ-b352183e1bd0-root-953098-1010-1006",
-            "occ-b352183e1bd0-root-953098-1010-1007",
-            "occ-b352183e1bd0-root-953098-1010-1009"
-          ],
-          "phase": "reassemble",
-          "firstBeat": 40,
-          "lastBeat": 42
-        },
-        "beat": 42,
-        "durationBeats": 0.5,
-        "seconds": 22.5,
-        "durationSeconds": 0.26785714285714285
-      },
-      {
-        "id": "shells-reassemble-motion",
+        "id": "magnet-inspect-out-motion",
         "role": "editorial-sfx",
         "cueRole": "motion",
         "anchor": "movement-start",
+        "beat": 28,
+        "seconds": 15,
+        "durationBeats": 2.5,
+        "durationSeconds": 1.3392857142857142,
         "animation": {
-          "groupId": "shells",
+          "motionEventIds": [
+            "magnet-inspect-out"
+          ],
           "partIds": [
-            "occ-b352183e1bd0-root-953098-1010-956",
-            "occ-b352183e1bd0-root-953098-1010-970"
+            "occ-b352183e1bd0-root-953098-1010-926"
+          ],
+          "phase": "inspect-out",
+          "kind": "inspection",
+          "firstBeat": 28,
+          "lastBeat": 30.5,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "magnet-inspect-in-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 35.3,
+        "seconds": 18.910714285714285,
+        "durationBeats": 2.700000000000003,
+        "durationSeconds": 1.446428571428573,
+        "animation": {
+          "motionEventIds": [
+            "magnet-inspect-in"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-1010-926"
+          ],
+          "phase": "inspect-in",
+          "kind": "inspection",
+          "firstBeat": 35.3,
+          "lastBeat": 38,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "cc-reassemble-wave",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 38,
+        "seconds": 20.357142857142858,
+        "durationBeats": 4.5,
+        "durationSeconds": 2.4107142857142856,
+        "animation": {
+          "motionEventIds": [
+            "cc-sector-1-reassemble",
+            "cc-sector-2-reassemble",
+            "cc-sector-3-reassemble",
+            "cc-sector-4-reassemble"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-1010-996",
+            "occ-b352183e1bd0-root-953098-1010-1009",
+            "occ-b352183e1bd0-root-953098-1010-940",
+            "occ-b352183e1bd0-root-953098-1010-1002",
+            "occ-b352183e1bd0-root-953098-1010-963",
+            "occ-b352183e1bd0-root-953098-1010-938",
+            "occ-b352183e1bd0-root-953098-1010-972",
+            "occ-b352183e1bd0-root-953098-1010-1006",
+            "occ-b352183e1bd0-root-953098-1010-990",
+            "occ-b352183e1bd0-root-953098-1010-1005",
+            "occ-b352183e1bd0-root-953098-1010-979",
+            "occ-b352183e1bd0-root-953098-1010-989",
+            "occ-b352183e1bd0-root-953098-1010-1007",
+            "occ-b352183e1bd0-root-953098-1010-959",
+            "occ-b352183e1bd0-root-953098-1010-994",
+            "occ-b352183e1bd0-root-953098-1010-973",
+            "occ-b352183e1bd0-root-953098-1010-955",
+            "occ-b352183e1bd0-root-953098-1010-981",
+            "occ-b352183e1bd0-root-953098-1010-967",
+            "occ-b352183e1bd0-root-953098-1010-991",
+            "occ-b352183e1bd0-root-953098-1010-942",
+            "occ-b352183e1bd0-root-953098-1010-954",
+            "occ-b352183e1bd0-root-953098-1010-933",
+            "occ-b352183e1bd0-root-953098-1010-965",
+            "occ-b352183e1bd0-root-953098-1010-977",
+            "occ-b352183e1bd0-root-953098-1010-930",
+            "occ-b352183e1bd0-root-953098-1010-969",
+            "occ-b352183e1bd0-root-953098-1010-978",
+            "occ-b352183e1bd0-root-953098-1010-949",
+            "occ-b352183e1bd0-root-953098-1010-957",
+            "occ-b352183e1bd0-root-953098-1010-986",
+            "occ-b352183e1bd0-root-953098-1010-953",
+            "occ-b352183e1bd0-root-953098-1010-962",
+            "occ-b352183e1bd0-root-953098-1010-929",
+            "occ-b352183e1bd0-root-953098-1010-976",
+            "occ-b352183e1bd0-root-953098-1010-964",
+            "occ-b352183e1bd0-root-953098-1010-935",
+            "occ-b352183e1bd0-root-953098-1010-961",
+            "occ-b352183e1bd0-root-953098-1010-997",
+            "occ-b352183e1bd0-root-953098-1010-925"
           ],
           "phase": "reassemble",
-          "firstBeat": 44,
-          "lastBeat": 46
-        },
+          "kind": "repeat",
+          "firstBeat": 38,
+          "lastBeat": 42.5,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "magnets-reassemble-wave",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 39.2,
+        "seconds": 21,
+        "durationBeats": 4.299999999999997,
+        "durationSeconds": 2.303571428571427,
+        "animation": {
+          "motionEventIds": [
+            "magnet-sector-1-reassemble",
+            "magnet-sector-2-reassemble",
+            "magnet-sector-3-reassemble",
+            "magnet-sector-4-reassemble"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-1010-950",
+            "occ-b352183e1bd0-root-953098-1010-1008",
+            "occ-b352183e1bd0-root-953098-1010-1001",
+            "occ-b352183e1bd0-root-953098-1010-941",
+            "occ-b352183e1bd0-root-953098-1010-944",
+            "occ-b352183e1bd0-root-953098-1010-931",
+            "occ-b352183e1bd0-root-953098-1010-995",
+            "occ-b352183e1bd0-root-953098-1010-939",
+            "occ-b352183e1bd0-root-953098-1010-999",
+            "occ-b352183e1bd0-root-953098-1010-974",
+            "occ-b352183e1bd0-root-953098-1010-966",
+            "occ-b352183e1bd0-root-953098-1010-948",
+            "occ-b352183e1bd0-root-953098-1010-980",
+            "occ-b352183e1bd0-root-953098-1010-975",
+            "occ-b352183e1bd0-root-953098-1010-958",
+            "occ-b352183e1bd0-root-953098-1010-998",
+            "occ-b352183e1bd0-root-953098-1010-1004",
+            "occ-b352183e1bd0-root-953098-1010-993",
+            "occ-b352183e1bd0-root-953098-1010-928",
+            "occ-b352183e1bd0-root-953098-1010-937",
+            "occ-b352183e1bd0-root-953098-1010-1000",
+            "occ-b352183e1bd0-root-953098-1010-982",
+            "occ-b352183e1bd0-root-953098-1010-943",
+            "occ-b352183e1bd0-root-953098-1010-945",
+            "occ-b352183e1bd0-root-953098-1010-951",
+            "occ-b352183e1bd0-root-953098-1010-947",
+            "occ-b352183e1bd0-root-953098-1010-1003",
+            "occ-b352183e1bd0-root-953098-1010-983",
+            "occ-b352183e1bd0-root-953098-1010-924",
+            "occ-b352183e1bd0-root-953098-1010-984",
+            "occ-b352183e1bd0-root-953098-1010-968",
+            "occ-b352183e1bd0-root-953098-1010-971",
+            "occ-b352183e1bd0-root-953098-1010-927",
+            "occ-b352183e1bd0-root-953098-1010-952",
+            "occ-b352183e1bd0-root-953098-1010-988",
+            "occ-b352183e1bd0-root-953098-1010-936",
+            "occ-b352183e1bd0-root-953098-1010-932",
+            "occ-b352183e1bd0-root-953098-1010-926",
+            "occ-b352183e1bd0-root-953098-1010-987",
+            "occ-b352183e1bd0-root-953098-1010-985"
+          ],
+          "phase": "reassemble",
+          "kind": "repeat",
+          "firstBeat": 39.2,
+          "lastBeat": 43.5,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "body-reassemble-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
         "beat": 44,
-        "durationBeats": 2,
         "seconds": 23.571428571428573,
-        "durationSeconds": 1.0714285714285714
-      },
-      {
-        "id": "shells-seated",
-        "role": "editorial-sfx",
-        "cueRole": "seating",
-        "anchor": "movement-complete",
+        "durationBeats": 2.6000000000000014,
+        "durationSeconds": 1.3928571428571437,
         "animation": {
-          "groupId": "shells",
+          "motionEventIds": [
+            "body-reassemble"
+          ],
           "partIds": [
-            "occ-b352183e1bd0-root-953098-1010-956",
             "occ-b352183e1bd0-root-953098-1010-970"
           ],
           "phase": "reassemble",
+          "kind": "hardware",
           "firstBeat": 44,
-          "lastBeat": 46
-        },
+          "lastBeat": 46.6,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "rotor-reassemble-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
         "beat": 46,
-        "durationBeats": 0.5,
         "seconds": 24.642857142857142,
-        "durationSeconds": 0.26785714285714285
+        "durationBeats": 2.6000000000000014,
+        "durationSeconds": 1.3928571428571437,
+        "animation": {
+          "motionEventIds": [
+            "rotor-reassemble"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-1010-956"
+          ],
+          "phase": "reassemble",
+          "kind": "hardware",
+          "firstBeat": 46,
+          "lastBeat": 48.6,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "body-reassemble-seat",
+        "role": "editorial-sfx",
+        "cueRole": "seating",
+        "anchor": "movement-complete",
+        "beat": 46.6,
+        "seconds": 24.964285714285715,
+        "durationBeats": 0.48,
+        "durationSeconds": 0.2571428571428571,
+        "animation": {
+          "motionEventIds": [
+            "body-reassemble"
+          ],
+          "partIds": [
+            "occ-b352183e1bd0-root-953098-1010-970"
+          ],
+          "phase": "reassemble",
+          "kind": "hardware",
+          "firstBeat": 44,
+          "lastBeat": 46.6,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
       },
       {
         "id": "mount-reassemble-motion",
         "role": "editorial-sfx",
         "cueRole": "motion",
         "anchor": "movement-start",
+        "beat": 49,
+        "seconds": 26.25,
+        "durationBeats": 2.200000000000003,
+        "durationSeconds": 1.1785714285714302,
         "animation": {
-          "groupId": "mount",
+          "motionEventIds": [
+            "mount-reassemble"
+          ],
           "partIds": [
             "occ-b352183e1bd0-root-953098-1010-946"
           ],
           "phase": "reassemble",
-          "firstBeat": 48,
-          "lastBeat": 50
-        },
-        "beat": 48,
-        "durationBeats": 2,
-        "seconds": 25.714285714285715,
-        "durationSeconds": 1.0714285714285714
+          "kind": "hardware",
+          "firstBeat": 49,
+          "lastBeat": 51.2,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
       },
       {
-        "id": "mount-seated",
+        "id": "mount-reassemble-seat",
         "role": "editorial-sfx",
         "cueRole": "seating",
         "anchor": "movement-complete",
+        "beat": 51.2,
+        "seconds": 27.428571428571427,
+        "durationBeats": 0.48,
+        "durationSeconds": 0.2571428571428571,
         "animation": {
-          "groupId": "mount",
+          "motionEventIds": [
+            "mount-reassemble"
+          ],
           "partIds": [
             "occ-b352183e1bd0-root-953098-1010-946"
           ],
           "phase": "reassemble",
-          "firstBeat": 48,
-          "lastBeat": 50
-        },
-        "beat": 50,
-        "durationBeats": 0.5,
-        "seconds": 26.785714285714285,
-        "durationSeconds": 0.26785714285714285
+          "kind": "hardware",
+          "firstBeat": 49,
+          "lastBeat": 51.2,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
       },
       {
-        "id": "shaft-nut-reassemble-motion",
+        "id": "shaft-reassemble-motion",
         "role": "editorial-sfx",
         "cueRole": "motion",
         "anchor": "movement-start",
+        "beat": 53,
+        "seconds": 28.392857142857142,
+        "durationBeats": 2.200000000000003,
+        "durationSeconds": 1.1785714285714302,
         "animation": {
-          "groupId": "shaft-nut",
+          "motionEventIds": [
+            "shaft-reassemble"
+          ],
           "partIds": [
-            "occ-b352183e1bd0-root-953098-1010-934",
+            "occ-b352183e1bd0-root-953098-1010-934"
+          ],
+          "phase": "reassemble",
+          "kind": "hardware",
+          "firstBeat": 53,
+          "lastBeat": 55.2,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
+      },
+      {
+        "id": "nut-reassemble-motion",
+        "role": "editorial-sfx",
+        "cueRole": "motion",
+        "anchor": "movement-start",
+        "beat": 56,
+        "seconds": 30,
+        "durationBeats": 1.3999999999999986,
+        "durationSeconds": 0.7499999999999992,
+        "animation": {
+          "motionEventIds": [
+            "nut-reassemble"
+          ],
+          "partIds": [
             "occ-b352183e1bd0-root-953098-1010-992"
           ],
           "phase": "reassemble",
-          "firstBeat": 52,
-          "lastBeat": 54
-        },
-        "beat": 52,
-        "durationBeats": 2,
-        "seconds": 27.857142857142858,
-        "durationSeconds": 1.0714285714285714
+          "kind": "hardware",
+          "firstBeat": 56,
+          "lastBeat": 57.4,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
       },
       {
-        "id": "shaft-nut-seated",
+        "id": "nut-reassemble-seat",
         "role": "editorial-sfx",
         "cueRole": "seating",
         "anchor": "movement-complete",
+        "beat": 57.4,
+        "seconds": 30.75,
+        "durationBeats": 0.48,
+        "durationSeconds": 0.2571428571428571,
         "animation": {
-          "groupId": "shaft-nut",
+          "motionEventIds": [
+            "nut-reassemble"
+          ],
           "partIds": [
-            "occ-b352183e1bd0-root-953098-1010-934",
             "occ-b352183e1bd0-root-953098-1010-992"
           ],
           "phase": "reassemble",
-          "firstBeat": 52,
-          "lastBeat": 54
-        },
-        "beat": 54,
-        "durationBeats": 0.5,
-        "seconds": 28.928571428571427,
-        "durationSeconds": 0.26785714285714285
+          "kind": "hardware",
+          "firstBeat": 56,
+          "lastBeat": 57.4,
+          "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+        }
       }
     ]
   },
-  "mix": {
-    "targetSamplePeakDbfs": -8,
-    "music": "foreground bed",
-    "effects": "quiet, sparse accents",
-    "percussion": false
-  },
-  "harmony": [
+  "motionBindings": [
     {
-      "firstBar": 0,
-      "bars": 4,
-      "symbol": "Dmaj9"
+      "id": "nut-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-992"
+      ],
+      "phase": "explode",
+      "kind": "hardware",
+      "firstBeat": 6,
+      "lastBeat": 7.4
     },
     {
-      "firstBar": 4,
-      "bars": 4,
-      "symbol": "Aadd9"
+      "id": "shaft-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-934"
+      ],
+      "phase": "explode",
+      "kind": "hardware",
+      "firstBeat": 7.1,
+      "lastBeat": 9.3
     },
     {
-      "firstBar": 8,
-      "bars": 4,
-      "symbol": "Bm11"
+      "id": "mount-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-946"
+      ],
+      "phase": "explode",
+      "kind": "hardware",
+      "firstBeat": 9,
+      "lastBeat": 11.2
     },
     {
-      "firstBar": 12,
-      "bars": 4,
-      "symbol": "Gmaj9"
+      "id": "rotor-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-956"
+      ],
+      "phase": "explode",
+      "kind": "hardware",
+      "firstBeat": 11,
+      "lastBeat": 13.6
+    },
+    {
+      "id": "body-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-970"
+      ],
+      "phase": "explode",
+      "kind": "hardware",
+      "firstBeat": 12.4,
+      "lastBeat": 15
+    },
+    {
+      "id": "magnet-sector-1-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-950",
+        "occ-b352183e1bd0-root-953098-1010-1008",
+        "occ-b352183e1bd0-root-953098-1010-1001",
+        "occ-b352183e1bd0-root-953098-1010-941",
+        "occ-b352183e1bd0-root-953098-1010-944",
+        "occ-b352183e1bd0-root-953098-1010-931",
+        "occ-b352183e1bd0-root-953098-1010-995",
+        "occ-b352183e1bd0-root-953098-1010-939",
+        "occ-b352183e1bd0-root-953098-1010-999",
+        "occ-b352183e1bd0-root-953098-1010-974"
+      ],
+      "phase": "explode",
+      "kind": "repeat",
+      "firstBeat": 16,
+      "lastBeat": 17.6
+    },
+    {
+      "id": "magnet-sector-2-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-966",
+        "occ-b352183e1bd0-root-953098-1010-948",
+        "occ-b352183e1bd0-root-953098-1010-980",
+        "occ-b352183e1bd0-root-953098-1010-975",
+        "occ-b352183e1bd0-root-953098-1010-958",
+        "occ-b352183e1bd0-root-953098-1010-998",
+        "occ-b352183e1bd0-root-953098-1010-1004",
+        "occ-b352183e1bd0-root-953098-1010-993",
+        "occ-b352183e1bd0-root-953098-1010-928",
+        "occ-b352183e1bd0-root-953098-1010-937"
+      ],
+      "phase": "explode",
+      "kind": "repeat",
+      "firstBeat": 17.15,
+      "lastBeat": 18.75
+    },
+    {
+      "id": "cc-sector-1-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-996",
+        "occ-b352183e1bd0-root-953098-1010-1009",
+        "occ-b352183e1bd0-root-953098-1010-940",
+        "occ-b352183e1bd0-root-953098-1010-1002",
+        "occ-b352183e1bd0-root-953098-1010-963",
+        "occ-b352183e1bd0-root-953098-1010-938",
+        "occ-b352183e1bd0-root-953098-1010-972",
+        "occ-b352183e1bd0-root-953098-1010-1006",
+        "occ-b352183e1bd0-root-953098-1010-990",
+        "occ-b352183e1bd0-root-953098-1010-1005"
+      ],
+      "phase": "explode",
+      "kind": "repeat",
+      "firstBeat": 18.1,
+      "lastBeat": 19.9
+    },
+    {
+      "id": "magnet-sector-3-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-1000",
+        "occ-b352183e1bd0-root-953098-1010-982",
+        "occ-b352183e1bd0-root-953098-1010-943",
+        "occ-b352183e1bd0-root-953098-1010-945",
+        "occ-b352183e1bd0-root-953098-1010-951",
+        "occ-b352183e1bd0-root-953098-1010-947",
+        "occ-b352183e1bd0-root-953098-1010-1003",
+        "occ-b352183e1bd0-root-953098-1010-983",
+        "occ-b352183e1bd0-root-953098-1010-924",
+        "occ-b352183e1bd0-root-953098-1010-984"
+      ],
+      "phase": "explode",
+      "kind": "repeat",
+      "firstBeat": 18.3,
+      "lastBeat": 19.900000000000002
+    },
+    {
+      "id": "cc-sector-2-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-979",
+        "occ-b352183e1bd0-root-953098-1010-989",
+        "occ-b352183e1bd0-root-953098-1010-1007",
+        "occ-b352183e1bd0-root-953098-1010-959",
+        "occ-b352183e1bd0-root-953098-1010-994",
+        "occ-b352183e1bd0-root-953098-1010-973",
+        "occ-b352183e1bd0-root-953098-1010-955",
+        "occ-b352183e1bd0-root-953098-1010-981",
+        "occ-b352183e1bd0-root-953098-1010-967",
+        "occ-b352183e1bd0-root-953098-1010-991"
+      ],
+      "phase": "explode",
+      "kind": "repeat",
+      "firstBeat": 19.25,
+      "lastBeat": 21.049999999999997
+    },
+    {
+      "id": "magnet-sector-4-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-968",
+        "occ-b352183e1bd0-root-953098-1010-971",
+        "occ-b352183e1bd0-root-953098-1010-927",
+        "occ-b352183e1bd0-root-953098-1010-952",
+        "occ-b352183e1bd0-root-953098-1010-988",
+        "occ-b352183e1bd0-root-953098-1010-936",
+        "occ-b352183e1bd0-root-953098-1010-932",
+        "occ-b352183e1bd0-root-953098-1010-926",
+        "occ-b352183e1bd0-root-953098-1010-987",
+        "occ-b352183e1bd0-root-953098-1010-985"
+      ],
+      "phase": "explode",
+      "kind": "repeat",
+      "firstBeat": 19.45,
+      "lastBeat": 21.05
+    },
+    {
+      "id": "cc-sector-3-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-942",
+        "occ-b352183e1bd0-root-953098-1010-954",
+        "occ-b352183e1bd0-root-953098-1010-933",
+        "occ-b352183e1bd0-root-953098-1010-965",
+        "occ-b352183e1bd0-root-953098-1010-977",
+        "occ-b352183e1bd0-root-953098-1010-930",
+        "occ-b352183e1bd0-root-953098-1010-969",
+        "occ-b352183e1bd0-root-953098-1010-978",
+        "occ-b352183e1bd0-root-953098-1010-949",
+        "occ-b352183e1bd0-root-953098-1010-957"
+      ],
+      "phase": "explode",
+      "kind": "repeat",
+      "firstBeat": 20.400000000000002,
+      "lastBeat": 22.2
+    },
+    {
+      "id": "cc-sector-4-explode",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-986",
+        "occ-b352183e1bd0-root-953098-1010-953",
+        "occ-b352183e1bd0-root-953098-1010-962",
+        "occ-b352183e1bd0-root-953098-1010-929",
+        "occ-b352183e1bd0-root-953098-1010-976",
+        "occ-b352183e1bd0-root-953098-1010-964",
+        "occ-b352183e1bd0-root-953098-1010-935",
+        "occ-b352183e1bd0-root-953098-1010-961",
+        "occ-b352183e1bd0-root-953098-1010-997",
+        "occ-b352183e1bd0-root-953098-1010-925"
+      ],
+      "phase": "explode",
+      "kind": "repeat",
+      "firstBeat": 21.55,
+      "lastBeat": 23.349999999999998
+    },
+    {
+      "id": "magnet-inspect-out",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-926"
+      ],
+      "phase": "inspect-out",
+      "kind": "inspection",
+      "firstBeat": 28,
+      "lastBeat": 30.5
+    },
+    {
+      "id": "magnet-inspect-in",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-926"
+      ],
+      "phase": "inspect-in",
+      "kind": "inspection",
+      "firstBeat": 35.3,
+      "lastBeat": 38
+    },
+    {
+      "id": "cc-sector-1-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-996",
+        "occ-b352183e1bd0-root-953098-1010-1009",
+        "occ-b352183e1bd0-root-953098-1010-940",
+        "occ-b352183e1bd0-root-953098-1010-1002",
+        "occ-b352183e1bd0-root-953098-1010-963",
+        "occ-b352183e1bd0-root-953098-1010-938",
+        "occ-b352183e1bd0-root-953098-1010-972",
+        "occ-b352183e1bd0-root-953098-1010-1006",
+        "occ-b352183e1bd0-root-953098-1010-990",
+        "occ-b352183e1bd0-root-953098-1010-1005"
+      ],
+      "phase": "reassemble",
+      "kind": "repeat",
+      "firstBeat": 38,
+      "lastBeat": 39.8
+    },
+    {
+      "id": "cc-sector-2-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-979",
+        "occ-b352183e1bd0-root-953098-1010-989",
+        "occ-b352183e1bd0-root-953098-1010-1007",
+        "occ-b352183e1bd0-root-953098-1010-959",
+        "occ-b352183e1bd0-root-953098-1010-994",
+        "occ-b352183e1bd0-root-953098-1010-973",
+        "occ-b352183e1bd0-root-953098-1010-955",
+        "occ-b352183e1bd0-root-953098-1010-981",
+        "occ-b352183e1bd0-root-953098-1010-967",
+        "occ-b352183e1bd0-root-953098-1010-991"
+      ],
+      "phase": "reassemble",
+      "kind": "repeat",
+      "firstBeat": 38.9,
+      "lastBeat": 40.699999999999996
+    },
+    {
+      "id": "magnet-sector-1-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-950",
+        "occ-b352183e1bd0-root-953098-1010-1008",
+        "occ-b352183e1bd0-root-953098-1010-1001",
+        "occ-b352183e1bd0-root-953098-1010-941",
+        "occ-b352183e1bd0-root-953098-1010-944",
+        "occ-b352183e1bd0-root-953098-1010-931",
+        "occ-b352183e1bd0-root-953098-1010-995",
+        "occ-b352183e1bd0-root-953098-1010-939",
+        "occ-b352183e1bd0-root-953098-1010-999",
+        "occ-b352183e1bd0-root-953098-1010-974"
+      ],
+      "phase": "reassemble",
+      "kind": "repeat",
+      "firstBeat": 39.2,
+      "lastBeat": 40.8
+    },
+    {
+      "id": "cc-sector-3-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-942",
+        "occ-b352183e1bd0-root-953098-1010-954",
+        "occ-b352183e1bd0-root-953098-1010-933",
+        "occ-b352183e1bd0-root-953098-1010-965",
+        "occ-b352183e1bd0-root-953098-1010-977",
+        "occ-b352183e1bd0-root-953098-1010-930",
+        "occ-b352183e1bd0-root-953098-1010-969",
+        "occ-b352183e1bd0-root-953098-1010-978",
+        "occ-b352183e1bd0-root-953098-1010-949",
+        "occ-b352183e1bd0-root-953098-1010-957"
+      ],
+      "phase": "reassemble",
+      "kind": "repeat",
+      "firstBeat": 39.8,
+      "lastBeat": 41.599999999999994
+    },
+    {
+      "id": "magnet-sector-2-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-966",
+        "occ-b352183e1bd0-root-953098-1010-948",
+        "occ-b352183e1bd0-root-953098-1010-980",
+        "occ-b352183e1bd0-root-953098-1010-975",
+        "occ-b352183e1bd0-root-953098-1010-958",
+        "occ-b352183e1bd0-root-953098-1010-998",
+        "occ-b352183e1bd0-root-953098-1010-1004",
+        "occ-b352183e1bd0-root-953098-1010-993",
+        "occ-b352183e1bd0-root-953098-1010-928",
+        "occ-b352183e1bd0-root-953098-1010-937"
+      ],
+      "phase": "reassemble",
+      "kind": "repeat",
+      "firstBeat": 40.1,
+      "lastBeat": 41.699999999999996
+    },
+    {
+      "id": "cc-sector-4-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-986",
+        "occ-b352183e1bd0-root-953098-1010-953",
+        "occ-b352183e1bd0-root-953098-1010-962",
+        "occ-b352183e1bd0-root-953098-1010-929",
+        "occ-b352183e1bd0-root-953098-1010-976",
+        "occ-b352183e1bd0-root-953098-1010-964",
+        "occ-b352183e1bd0-root-953098-1010-935",
+        "occ-b352183e1bd0-root-953098-1010-961",
+        "occ-b352183e1bd0-root-953098-1010-997",
+        "occ-b352183e1bd0-root-953098-1010-925"
+      ],
+      "phase": "reassemble",
+      "kind": "repeat",
+      "firstBeat": 40.7,
+      "lastBeat": 42.5
+    },
+    {
+      "id": "magnet-sector-3-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-1000",
+        "occ-b352183e1bd0-root-953098-1010-982",
+        "occ-b352183e1bd0-root-953098-1010-943",
+        "occ-b352183e1bd0-root-953098-1010-945",
+        "occ-b352183e1bd0-root-953098-1010-951",
+        "occ-b352183e1bd0-root-953098-1010-947",
+        "occ-b352183e1bd0-root-953098-1010-1003",
+        "occ-b352183e1bd0-root-953098-1010-983",
+        "occ-b352183e1bd0-root-953098-1010-924",
+        "occ-b352183e1bd0-root-953098-1010-984"
+      ],
+      "phase": "reassemble",
+      "kind": "repeat",
+      "firstBeat": 41,
+      "lastBeat": 42.599999999999994
+    },
+    {
+      "id": "magnet-sector-4-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-968",
+        "occ-b352183e1bd0-root-953098-1010-971",
+        "occ-b352183e1bd0-root-953098-1010-927",
+        "occ-b352183e1bd0-root-953098-1010-952",
+        "occ-b352183e1bd0-root-953098-1010-988",
+        "occ-b352183e1bd0-root-953098-1010-936",
+        "occ-b352183e1bd0-root-953098-1010-932",
+        "occ-b352183e1bd0-root-953098-1010-926",
+        "occ-b352183e1bd0-root-953098-1010-987",
+        "occ-b352183e1bd0-root-953098-1010-985"
+      ],
+      "phase": "reassemble",
+      "kind": "repeat",
+      "firstBeat": 41.900000000000006,
+      "lastBeat": 43.5
+    },
+    {
+      "id": "body-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-970"
+      ],
+      "phase": "reassemble",
+      "kind": "hardware",
+      "firstBeat": 44,
+      "lastBeat": 46.6
+    },
+    {
+      "id": "rotor-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-956"
+      ],
+      "phase": "reassemble",
+      "kind": "hardware",
+      "firstBeat": 46,
+      "lastBeat": 48.6
+    },
+    {
+      "id": "mount-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-946"
+      ],
+      "phase": "reassemble",
+      "kind": "hardware",
+      "firstBeat": 49,
+      "lastBeat": 51.2
+    },
+    {
+      "id": "shaft-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-934"
+      ],
+      "phase": "reassemble",
+      "kind": "hardware",
+      "firstBeat": 53,
+      "lastBeat": 55.2
+    },
+    {
+      "id": "nut-reassemble",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-1010-992"
+      ],
+      "phase": "reassemble",
+      "kind": "hardware",
+      "firstBeat": 56,
+      "lastBeat": 57.4
     }
   ],
   "cues": [
     {
-      "id": "assembled",
+      "id": "whole",
       "firstBeat": 0,
-      "lastBeat": 8,
+      "lastBeat": 6,
       "startSeconds": 0,
-      "endSeconds": 4.285714285714286,
-      "purpose": "Establish the assembled WOLF actuator; title and first camera hold."
+      "endSeconds": 3.2142857142857144
     },
     {
-      "id": "explode",
-      "firstBeat": 8,
-      "lastBeat": 24,
-      "startSeconds": 4.285714285714286,
-      "endSeconds": 12.857142857142858,
-      "purpose": "Beat-aligned display groups expand with quiet movement textures, then hold."
+      "id": "motor",
+      "firstBeat": 6,
+      "lastBeat": 16,
+      "startSeconds": 3.2142857142857144,
+      "endSeconds": 8.571428571428571
     },
     {
-      "id": "inspect",
-      "firstBeat": 24,
-      "lastBeat": 40,
-      "startSeconds": 12.857142857142858,
-      "endSeconds": 21.428571428571427,
-      "purpose": "Stable detail views of the expanded assembly."
+      "id": "repeats",
+      "firstBeat": 16,
+      "lastBeat": 28,
+      "startSeconds": 8.571428571428571,
+      "endSeconds": 15
     },
     {
-      "id": "reassemble",
-      "firstBeat": 40,
-      "lastBeat": 56,
-      "startSeconds": 21.428571428571427,
-      "endSeconds": 30,
-      "purpose": "Display groups return to unchanged rest placements; soft accents mark seating."
+      "id": "magnet",
+      "firstBeat": 28,
+      "lastBeat": 38,
+      "startSeconds": 15,
+      "endSeconds": 20.357142857142858
+    },
+    {
+      "id": "return",
+      "firstBeat": 38,
+      "lastBeat": 60,
+      "startSeconds": 20.357142857142858,
+      "endSeconds": 32.142857142857146
     },
     {
       "id": "resolve",
-      "firstBeat": 56,
+      "firstBeat": 60,
       "lastBeat": 64,
-      "startSeconds": 30,
-      "endSeconds": 34.285714285714285,
-      "purpose": "Assembled hero view returns to the opening pose and framing."
+      "startSeconds": 32.142857142857146,
+      "endSeconds": 34.285714285714285
+    }
+  ],
+  "harmony": [
+    {
+      "firstBeat": 0,
+      "notes": [
+        50,
+        57,
+        61,
+        64
+      ],
+      "bass": 38,
+      "symbol": "Dmaj9"
+    },
+    {
+      "firstBeat": 8,
+      "notes": [
+        43,
+        54,
+        57,
+        62
+      ],
+      "bass": 31,
+      "symbol": "Gmaj9"
+    },
+    {
+      "firstBeat": 16,
+      "notes": [
+        47,
+        54,
+        57,
+        64
+      ],
+      "bass": 35,
+      "symbol": "Bm11"
+    },
+    {
+      "firstBeat": 24,
+      "notes": [
+        45,
+        52,
+        59,
+        64
+      ],
+      "bass": 33,
+      "symbol": "Aadd9"
+    },
+    {
+      "firstBeat": 32,
+      "notes": [
+        43,
+        54,
+        57,
+        62
+      ],
+      "bass": 31,
+      "symbol": "Gmaj9"
+    },
+    {
+      "firstBeat": 40,
+      "notes": [
+        40,
+        55,
+        59,
+        66
+      ],
+      "bass": 28,
+      "symbol": "Em9"
+    },
+    {
+      "firstBeat": 48,
+      "notes": [
+        45,
+        55,
+        59,
+        66
+      ],
+      "bass": 33,
+      "symbol": "A13"
+    },
+    {
+      "firstBeat": 56,
+      "notes": [
+        50,
+        57,
+        61,
+        64
+      ],
+      "bass": 38,
+      "symbol": "Dmaj9"
     }
   ],
   "beatGrid": [
@@ -962,1440 +1608,1432 @@
   ],
   "events": [
     {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": -1.1,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 50,
+      "pan": -0.5249999999999999,
+      "seed": 1290171926
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": -1.1,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 57,
+      "pan": -0.175,
+      "seed": 3334354852
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": -1.1,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 61,
+      "pan": 0.175,
+      "seed": 152594303
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": -1.1,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 64,
+      "pan": 0.5249999999999999,
+      "seed": 3102002163
+    },
+    {
       "instrument": "warm-bass",
       "role": "music",
       "beat": 0,
-      "durationBeats": 3.6,
-      "gain": 0.08,
+      "durationBeats": 3.8,
+      "gain": 0.057,
       "midi": 38,
-      "pan": -0.04,
-      "seed": 4208531147
+      "pan": -0.02,
+      "seed": 315702296
     },
     {
-      "instrument": "soft-pad",
+      "instrument": "felt-key",
       "role": "music",
       "beat": 0,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 50,
-      "pan": -0.48,
-      "seed": 2729483158
+      "durationBeats": 3.8,
+      "gain": 0.058,
+      "midi": 69,
+      "pan": -0.15,
+      "seed": 2931836924
     },
     {
-      "instrument": "soft-pad",
+      "instrument": "felt-key",
       "role": "music",
-      "beat": 0,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 54,
-      "pan": -0.24,
-      "seed": 2307280309
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 0,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 57,
-      "pan": 0,
-      "seed": 1176836205
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 0,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 61,
-      "pan": 0.24,
-      "seed": 1077802425
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 0,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 64,
-      "pan": 0.48,
-      "seed": 802395422
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 0.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 66,
-      "pan": -0.2,
-      "seed": 3625952075
+      "beat": 3.5,
+      "durationBeats": 3.6,
+      "gain": 0.038,
+      "midi": 73,
+      "pan": 0.15,
+      "seed": 1640573089
     },
     {
       "instrument": "warm-bass",
       "role": "music",
       "beat": 4,
-      "durationBeats": 3.6,
-      "gain": 0.062,
-      "midi": 38,
-      "pan": -0.04,
-      "seed": 4084936518
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 4.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 69,
-      "pan": 0.2,
-      "seed": 1155728845
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 6.65,
-      "durationBeats": 3.4,
-      "gain": 0.036,
-      "midi": 73,
-      "pan": 0.15,
-      "seed": 2936023938
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 8,
-      "durationBeats": 3.6,
-      "gain": 0.062,
-      "midi": 38,
-      "pan": -0.04,
-      "seed": 3832793562
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 8,
-      "durationBeats": 10.5,
-      "gain": 0.013,
+      "durationBeats": 2.9,
+      "gain": 0.039,
       "midi": 50,
-      "pan": -0.48,
-      "seed": 1137370078
+      "pan": 0.03,
+      "seed": 2668810415
     },
     {
-      "instrument": "soft-pad",
+      "instrument": "felt-key",
       "role": "music",
-      "beat": 8,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 54,
-      "pan": -0.24,
-      "seed": 3918564582
+      "beat": 6,
+      "durationBeats": 2.8,
+      "gain": 0.058,
+      "midi": 76,
+      "pan": 0.15,
+      "seed": 3748926283
     },
     {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 8,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 57,
-      "pan": 0,
-      "seed": 4186836160
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 8,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 61,
-      "pan": 0.24,
-      "seed": 986720649
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 8,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 64,
-      "pan": 0.48,
-      "seed": 3285170489
-    },
-    {
-      "instrument": "air-servo",
+      "id": "nut-explode-motion",
       "role": "editorial-sfx",
-      "beat": 8,
-      "durationBeats": 2,
-      "gain": 0.05,
-      "pan": -0.18,
-      "seed": 844367198,
-      "id": "shaft-nut-explode-motion",
       "cueRole": "motion",
       "anchor": "movement-start",
+      "beat": 6,
+      "seconds": 3.2142857142857144,
+      "durationBeats": 1.4000000000000004,
+      "durationSeconds": 0.7500000000000002,
       "animation": {
-        "groupId": "shaft-nut",
+        "motionEventIds": [
+          "nut-explode"
+        ],
         "partIds": [
-          "occ-b352183e1bd0-root-953098-1010-934",
           "occ-b352183e1bd0-root-953098-1010-992"
         ],
         "phase": "explode",
-        "firstBeat": 8,
-        "lastBeat": 10
-      }
+        "kind": "hardware",
+        "firstBeat": 6,
+        "lastBeat": 7.4,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 2629084006
     },
     {
-      "instrument": "rounded-key",
+      "instrument": "breathing-pad",
       "role": "music",
-      "beat": 8.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 64,
-      "pan": -0.2,
-      "seed": 498202043
+      "beat": 6.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 43,
+      "pan": -0.5249999999999999,
+      "seed": 1704129649
     },
     {
-      "instrument": "warm-bass",
+      "instrument": "breathing-pad",
       "role": "music",
-      "beat": 10,
-      "durationBeats": 1.8,
-      "gain": 0.039,
-      "midi": 50,
-      "pan": 0.04,
-      "seed": 877922462
+      "beat": 6.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 54,
+      "pan": -0.175,
+      "seed": 1485411963
     },
     {
-      "instrument": "warm-bass",
+      "instrument": "breathing-pad",
       "role": "music",
-      "beat": 12,
-      "durationBeats": 3.6,
-      "gain": 0.062,
-      "midi": 38,
-      "pan": -0.04,
-      "seed": 2851375757
+      "beat": 6.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 57,
+      "pan": 0.175,
+      "seed": 578963646
     },
     {
-      "instrument": "air-servo",
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 6.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 62,
+      "pan": 0.5249999999999999,
+      "seed": 421934036
+    },
+    {
+      "id": "shaft-explode-motion",
       "role": "editorial-sfx",
-      "beat": 12,
-      "durationBeats": 2,
-      "gain": 0.045,
-      "pan": -0.06,
-      "seed": 3248322041,
-      "id": "mount-explode-motion",
       "cueRole": "motion",
       "anchor": "movement-start",
+      "beat": 7.1,
+      "seconds": 3.8035714285714284,
+      "durationBeats": 2.200000000000001,
+      "durationSeconds": 1.178571428571429,
       "animation": {
-        "groupId": "mount",
+        "motionEventIds": [
+          "shaft-explode"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-1010-934"
+        ],
+        "phase": "explode",
+        "kind": "hardware",
+        "firstBeat": 7.1,
+        "lastBeat": 9.3,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 332441194
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 8,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 31,
+      "pan": -0.02,
+      "seed": 885224218
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 8.5,
+      "durationBeats": 2.7,
+      "gain": 0.041,
+      "midi": 74,
+      "pan": -0.15,
+      "seed": 4272555393
+    },
+    {
+      "id": "mount-explode-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 9,
+      "seconds": 4.821428571428571,
+      "durationBeats": 2.1999999999999993,
+      "durationSeconds": 1.1785714285714282,
+      "animation": {
+        "motionEventIds": [
+          "mount-explode"
+        ],
         "partIds": [
           "occ-b352183e1bd0-root-953098-1010-946"
         ],
         "phase": "explode",
-        "firstBeat": 12,
-        "lastBeat": 14
-      }
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 12.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 61,
-      "pan": 0.2,
-      "seed": 1764233805
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 14,
-      "durationBeats": 1.8,
-      "gain": 0.039,
-      "midi": 45,
-      "pan": 0.04,
-      "seed": 739216731
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 14.65,
-      "durationBeats": 3.4,
-      "gain": 0.036,
-      "midi": 73,
-      "pan": 0.15,
-      "seed": 123541565
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 16,
-      "durationBeats": 3.6,
-      "gain": 0.08,
-      "midi": 33,
-      "pan": -0.04,
-      "seed": 789301362
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 16,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 45,
-      "pan": -0.48,
-      "seed": 3228172540
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 16,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 52,
-      "pan": -0.24,
-      "seed": 2395600934
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 16,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 57,
+        "kind": "hardware",
+        "firstBeat": 9,
+        "lastBeat": 11.2,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
       "pan": 0,
-      "seed": 2288343264
+      "seed": 3836049732
     },
     {
-      "instrument": "soft-pad",
+      "instrument": "felt-key",
       "role": "music",
-      "beat": 16,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 59,
-      "pan": 0.24,
-      "seed": 1280590588
+      "beat": 11,
+      "durationBeats": 2.5,
+      "gain": 0.037,
+      "midi": 69,
+      "pan": 0.15,
+      "seed": 2103004014
     },
     {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 16,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 64,
-      "pan": 0.48,
-      "seed": 1165729783
-    },
-    {
-      "instrument": "air-servo",
+      "id": "rotor-explode-motion",
       "role": "editorial-sfx",
-      "beat": 16,
-      "durationBeats": 2,
-      "gain": 0.04,
-      "pan": 0.12,
-      "seed": 2206164974,
-      "id": "shells-explode-motion",
       "cueRole": "motion",
       "anchor": "movement-start",
+      "beat": 11,
+      "seconds": 5.892857142857143,
+      "durationBeats": 2.5999999999999996,
+      "durationSeconds": 1.3928571428571426,
       "animation": {
-        "groupId": "shells",
+        "motionEventIds": [
+          "rotor-explode"
+        ],
         "partIds": [
-          "occ-b352183e1bd0-root-953098-1010-956",
+          "occ-b352183e1bd0-root-953098-1010-956"
+        ],
+        "phase": "explode",
+        "kind": "hardware",
+        "firstBeat": 11,
+        "lastBeat": 13.6,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 976383202
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 12,
+      "durationBeats": 2.9,
+      "gain": 0.039,
+      "midi": 43,
+      "pan": 0.03,
+      "seed": 245888810
+    },
+    {
+      "id": "body-explode-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 12.4,
+      "seconds": 6.642857142857143,
+      "durationBeats": 2.5999999999999996,
+      "durationSeconds": 1.3928571428571426,
+      "animation": {
+        "motionEventIds": [
+          "body-explode"
+        ],
+        "partIds": [
           "occ-b352183e1bd0-root-953098-1010-970"
         ],
         "phase": "explode",
-        "firstBeat": 16,
-        "lastBeat": 18
-      }
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 16.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 64,
-      "pan": -0.2,
-      "seed": 1222951709
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 18,
-      "durationBeats": 1.8,
-      "gain": 0.039,
-      "midi": 45,
-      "pan": 0.04,
-      "seed": 2528505168
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 20,
-      "durationBeats": 3.6,
-      "gain": 0.062,
-      "midi": 33,
-      "pan": -0.04,
-      "seed": 3860075513
-    },
-    {
-      "instrument": "air-servo",
-      "role": "editorial-sfx",
-      "beat": 20,
-      "durationBeats": 2,
+        "kind": "hardware",
+        "firstBeat": 12.4,
+        "lastBeat": 15,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
       "gain": 0.035,
-      "pan": 0.22,
-      "seed": 797691543,
-      "id": "repeats-explode-motion",
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 2187907507
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 13.5,
+      "durationBeats": 2.5,
+      "gain": 0.039,
+      "midi": 66,
+      "pan": -0.15,
+      "seed": 3534008276
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 14.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 47,
+      "pan": -0.5249999999999999,
+      "seed": 4162784841
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 14.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 54,
+      "pan": -0.175,
+      "seed": 589174400
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 14.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 57,
+      "pan": 0.175,
+      "seed": 3624307365
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 14.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 64,
+      "pan": 0.5249999999999999,
+      "seed": 589008878
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 16,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 35,
+      "pan": -0.02,
+      "seed": 237933851
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 16,
+      "durationBeats": 2.5,
+      "gain": 0.054,
+      "midi": 69,
+      "pan": -0.15,
+      "seed": 2895881017
+    },
+    {
+      "id": "magnets-explode-wave",
+      "role": "editorial-sfx",
       "cueRole": "motion",
       "anchor": "movement-start",
+      "beat": 16,
+      "seconds": 8.571428571428571,
+      "durationBeats": 5.050000000000001,
+      "durationSeconds": 2.7053571428571432,
       "animation": {
-        "groupId": "repeats",
+        "motionEventIds": [
+          "magnet-sector-1-explode",
+          "magnet-sector-2-explode",
+          "magnet-sector-3-explode",
+          "magnet-sector-4-explode"
+        ],
         "partIds": [
-          "occ-b352183e1bd0-root-953098-1010-924",
-          "occ-b352183e1bd0-root-953098-1010-926",
-          "occ-b352183e1bd0-root-953098-1010-927",
-          "occ-b352183e1bd0-root-953098-1010-928",
-          "occ-b352183e1bd0-root-953098-1010-931",
-          "occ-b352183e1bd0-root-953098-1010-932",
-          "occ-b352183e1bd0-root-953098-1010-936",
-          "occ-b352183e1bd0-root-953098-1010-937",
-          "occ-b352183e1bd0-root-953098-1010-939",
-          "occ-b352183e1bd0-root-953098-1010-941",
-          "occ-b352183e1bd0-root-953098-1010-943",
-          "occ-b352183e1bd0-root-953098-1010-944",
-          "occ-b352183e1bd0-root-953098-1010-945",
-          "occ-b352183e1bd0-root-953098-1010-947",
-          "occ-b352183e1bd0-root-953098-1010-948",
           "occ-b352183e1bd0-root-953098-1010-950",
-          "occ-b352183e1bd0-root-953098-1010-951",
-          "occ-b352183e1bd0-root-953098-1010-952",
-          "occ-b352183e1bd0-root-953098-1010-958",
+          "occ-b352183e1bd0-root-953098-1010-1008",
+          "occ-b352183e1bd0-root-953098-1010-1001",
+          "occ-b352183e1bd0-root-953098-1010-941",
+          "occ-b352183e1bd0-root-953098-1010-944",
+          "occ-b352183e1bd0-root-953098-1010-931",
+          "occ-b352183e1bd0-root-953098-1010-995",
+          "occ-b352183e1bd0-root-953098-1010-939",
+          "occ-b352183e1bd0-root-953098-1010-999",
+          "occ-b352183e1bd0-root-953098-1010-974",
           "occ-b352183e1bd0-root-953098-1010-966",
+          "occ-b352183e1bd0-root-953098-1010-948",
+          "occ-b352183e1bd0-root-953098-1010-980",
+          "occ-b352183e1bd0-root-953098-1010-975",
+          "occ-b352183e1bd0-root-953098-1010-958",
+          "occ-b352183e1bd0-root-953098-1010-998",
+          "occ-b352183e1bd0-root-953098-1010-1004",
+          "occ-b352183e1bd0-root-953098-1010-993",
+          "occ-b352183e1bd0-root-953098-1010-928",
+          "occ-b352183e1bd0-root-953098-1010-937",
+          "occ-b352183e1bd0-root-953098-1010-1000",
+          "occ-b352183e1bd0-root-953098-1010-982",
+          "occ-b352183e1bd0-root-953098-1010-943",
+          "occ-b352183e1bd0-root-953098-1010-945",
+          "occ-b352183e1bd0-root-953098-1010-951",
+          "occ-b352183e1bd0-root-953098-1010-947",
+          "occ-b352183e1bd0-root-953098-1010-1003",
+          "occ-b352183e1bd0-root-953098-1010-983",
+          "occ-b352183e1bd0-root-953098-1010-924",
+          "occ-b352183e1bd0-root-953098-1010-984",
           "occ-b352183e1bd0-root-953098-1010-968",
           "occ-b352183e1bd0-root-953098-1010-971",
-          "occ-b352183e1bd0-root-953098-1010-974",
-          "occ-b352183e1bd0-root-953098-1010-975",
-          "occ-b352183e1bd0-root-953098-1010-980",
-          "occ-b352183e1bd0-root-953098-1010-982",
-          "occ-b352183e1bd0-root-953098-1010-983",
-          "occ-b352183e1bd0-root-953098-1010-984",
-          "occ-b352183e1bd0-root-953098-1010-985",
-          "occ-b352183e1bd0-root-953098-1010-987",
+          "occ-b352183e1bd0-root-953098-1010-927",
+          "occ-b352183e1bd0-root-953098-1010-952",
           "occ-b352183e1bd0-root-953098-1010-988",
-          "occ-b352183e1bd0-root-953098-1010-993",
-          "occ-b352183e1bd0-root-953098-1010-995",
-          "occ-b352183e1bd0-root-953098-1010-998",
-          "occ-b352183e1bd0-root-953098-1010-999",
-          "occ-b352183e1bd0-root-953098-1010-1000",
-          "occ-b352183e1bd0-root-953098-1010-1001",
-          "occ-b352183e1bd0-root-953098-1010-1003",
-          "occ-b352183e1bd0-root-953098-1010-1004",
-          "occ-b352183e1bd0-root-953098-1010-1008",
-          "occ-b352183e1bd0-root-953098-1010-925",
-          "occ-b352183e1bd0-root-953098-1010-929",
-          "occ-b352183e1bd0-root-953098-1010-930",
-          "occ-b352183e1bd0-root-953098-1010-933",
-          "occ-b352183e1bd0-root-953098-1010-935",
-          "occ-b352183e1bd0-root-953098-1010-938",
-          "occ-b352183e1bd0-root-953098-1010-940",
-          "occ-b352183e1bd0-root-953098-1010-942",
-          "occ-b352183e1bd0-root-953098-1010-949",
-          "occ-b352183e1bd0-root-953098-1010-953",
-          "occ-b352183e1bd0-root-953098-1010-954",
-          "occ-b352183e1bd0-root-953098-1010-955",
-          "occ-b352183e1bd0-root-953098-1010-957",
-          "occ-b352183e1bd0-root-953098-1010-959",
-          "occ-b352183e1bd0-root-953098-1010-961",
-          "occ-b352183e1bd0-root-953098-1010-962",
-          "occ-b352183e1bd0-root-953098-1010-963",
-          "occ-b352183e1bd0-root-953098-1010-964",
-          "occ-b352183e1bd0-root-953098-1010-965",
-          "occ-b352183e1bd0-root-953098-1010-967",
-          "occ-b352183e1bd0-root-953098-1010-969",
-          "occ-b352183e1bd0-root-953098-1010-972",
-          "occ-b352183e1bd0-root-953098-1010-973",
-          "occ-b352183e1bd0-root-953098-1010-976",
-          "occ-b352183e1bd0-root-953098-1010-977",
-          "occ-b352183e1bd0-root-953098-1010-978",
-          "occ-b352183e1bd0-root-953098-1010-979",
-          "occ-b352183e1bd0-root-953098-1010-981",
-          "occ-b352183e1bd0-root-953098-1010-986",
-          "occ-b352183e1bd0-root-953098-1010-989",
-          "occ-b352183e1bd0-root-953098-1010-990",
-          "occ-b352183e1bd0-root-953098-1010-991",
-          "occ-b352183e1bd0-root-953098-1010-994",
-          "occ-b352183e1bd0-root-953098-1010-996",
-          "occ-b352183e1bd0-root-953098-1010-997",
-          "occ-b352183e1bd0-root-953098-1010-1002",
-          "occ-b352183e1bd0-root-953098-1010-1005",
-          "occ-b352183e1bd0-root-953098-1010-1006",
-          "occ-b352183e1bd0-root-953098-1010-1007",
-          "occ-b352183e1bd0-root-953098-1010-1009"
+          "occ-b352183e1bd0-root-953098-1010-936",
+          "occ-b352183e1bd0-root-953098-1010-932",
+          "occ-b352183e1bd0-root-953098-1010-926",
+          "occ-b352183e1bd0-root-953098-1010-987",
+          "occ-b352183e1bd0-root-953098-1010-985"
         ],
         "phase": "explode",
-        "firstBeat": 20,
-        "lastBeat": 22
-      }
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 20.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 61,
-      "pan": 0.2,
-      "seed": 1112906989
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 22,
-      "durationBeats": 1.8,
-      "gain": 0.039,
-      "midi": 45,
-      "pan": 0.04,
-      "seed": 3909572654
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 22.65,
-      "durationBeats": 3.4,
-      "gain": 0.036,
-      "midi": 71,
-      "pan": 0.15,
-      "seed": 3368854857
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 24,
-      "durationBeats": 3.6,
-      "gain": 0.062,
-      "midi": 33,
-      "pan": -0.04,
-      "seed": 3504120951
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 24,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 45,
-      "pan": -0.48,
-      "seed": 1730670645
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 24,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 52,
-      "pan": -0.24,
-      "seed": 3171870821
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 24,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 57,
+        "kind": "repeat",
+        "firstBeat": 16,
+        "lastBeat": 21.05,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "batch-air",
+      "gain": 0.027,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
       "pan": 0,
-      "seed": 1614877830
+      "seed": 974187696
     },
     {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 24,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 59,
-      "pan": 0.24,
-      "seed": 418080782
+      "id": "cc-explode-wave",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 18.1,
+      "seconds": 9.696428571428571,
+      "durationBeats": 5.2499999999999964,
+      "durationSeconds": 2.812499999999998,
+      "animation": {
+        "motionEventIds": [
+          "cc-sector-1-explode",
+          "cc-sector-2-explode",
+          "cc-sector-3-explode",
+          "cc-sector-4-explode"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-1010-996",
+          "occ-b352183e1bd0-root-953098-1010-1009",
+          "occ-b352183e1bd0-root-953098-1010-940",
+          "occ-b352183e1bd0-root-953098-1010-1002",
+          "occ-b352183e1bd0-root-953098-1010-963",
+          "occ-b352183e1bd0-root-953098-1010-938",
+          "occ-b352183e1bd0-root-953098-1010-972",
+          "occ-b352183e1bd0-root-953098-1010-1006",
+          "occ-b352183e1bd0-root-953098-1010-990",
+          "occ-b352183e1bd0-root-953098-1010-1005",
+          "occ-b352183e1bd0-root-953098-1010-979",
+          "occ-b352183e1bd0-root-953098-1010-989",
+          "occ-b352183e1bd0-root-953098-1010-1007",
+          "occ-b352183e1bd0-root-953098-1010-959",
+          "occ-b352183e1bd0-root-953098-1010-994",
+          "occ-b352183e1bd0-root-953098-1010-973",
+          "occ-b352183e1bd0-root-953098-1010-955",
+          "occ-b352183e1bd0-root-953098-1010-981",
+          "occ-b352183e1bd0-root-953098-1010-967",
+          "occ-b352183e1bd0-root-953098-1010-991",
+          "occ-b352183e1bd0-root-953098-1010-942",
+          "occ-b352183e1bd0-root-953098-1010-954",
+          "occ-b352183e1bd0-root-953098-1010-933",
+          "occ-b352183e1bd0-root-953098-1010-965",
+          "occ-b352183e1bd0-root-953098-1010-977",
+          "occ-b352183e1bd0-root-953098-1010-930",
+          "occ-b352183e1bd0-root-953098-1010-969",
+          "occ-b352183e1bd0-root-953098-1010-978",
+          "occ-b352183e1bd0-root-953098-1010-949",
+          "occ-b352183e1bd0-root-953098-1010-957",
+          "occ-b352183e1bd0-root-953098-1010-986",
+          "occ-b352183e1bd0-root-953098-1010-953",
+          "occ-b352183e1bd0-root-953098-1010-962",
+          "occ-b352183e1bd0-root-953098-1010-929",
+          "occ-b352183e1bd0-root-953098-1010-976",
+          "occ-b352183e1bd0-root-953098-1010-964",
+          "occ-b352183e1bd0-root-953098-1010-935",
+          "occ-b352183e1bd0-root-953098-1010-961",
+          "occ-b352183e1bd0-root-953098-1010-997",
+          "occ-b352183e1bd0-root-953098-1010-925"
+        ],
+        "phase": "explode",
+        "kind": "repeat",
+        "firstBeat": 18.1,
+        "lastBeat": 23.349999999999998,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "batch-air",
+      "gain": 0.027,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 3613208881
     },
     {
-      "instrument": "soft-pad",
+      "instrument": "felt-key",
       "role": "music",
-      "beat": 24,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 64,
-      "pan": 0.48,
-      "seed": 3367824825
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 24.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 59,
-      "pan": -0.2,
-      "seed": 1376439110
+      "beat": 18.5,
+      "durationBeats": 2.4,
+      "gain": 0.037,
+      "midi": 66,
+      "pan": 0.15,
+      "seed": 3345835971
     },
     {
       "instrument": "warm-bass",
+      "role": "music",
+      "beat": 20,
+      "durationBeats": 2.9,
+      "gain": 0.039,
+      "midi": 47,
+      "pan": 0.03,
+      "seed": 1294077977
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 21,
+      "durationBeats": 2.6,
+      "gain": 0.041,
+      "midi": 74,
+      "pan": -0.15,
+      "seed": 422548429
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 22.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 45,
+      "pan": -0.5249999999999999,
+      "seed": 3943409353
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 22.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 52,
+      "pan": -0.175,
+      "seed": 1703382338
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 22.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 59,
+      "pan": 0.175,
+      "seed": 299584979
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 22.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 64,
+      "pan": 0.5249999999999999,
+      "seed": 1952435555
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 23.5,
+      "durationBeats": 2.7,
+      "gain": 0.032,
+      "midi": 69,
+      "pan": 0.15,
+      "seed": 2173889220
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 24,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 33,
+      "pan": -0.02,
+      "seed": 865237052
+    },
+    {
+      "instrument": "felt-key",
       "role": "music",
       "beat": 26,
-      "durationBeats": 1.8,
-      "gain": 0.039,
-      "midi": 45,
-      "pan": 0.04,
-      "seed": 3458419824
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 28,
-      "durationBeats": 3.6,
-      "gain": 0.062,
-      "midi": 33,
-      "pan": -0.04,
-      "seed": 4101726430
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 28.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 64,
-      "pan": 0.2,
-      "seed": 1967467074
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 30,
-      "durationBeats": 1.8,
-      "gain": 0.039,
-      "midi": 40,
-      "pan": 0.04,
-      "seed": 2490978574
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 30.65,
       "durationBeats": 3.4,
-      "gain": 0.036,
+      "gain": 0.026,
+      "midi": 64,
+      "pan": 0.15,
+      "seed": 1166979231
+    },
+    {
+      "id": "magnet-inspect-out-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 28,
+      "seconds": 15,
+      "durationBeats": 2.5,
+      "durationSeconds": 1.3392857142857142,
+      "animation": {
+        "motionEventIds": [
+          "magnet-inspect-out"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-1010-926"
+        ],
+        "phase": "inspect-out",
+        "kind": "inspection",
+        "firstBeat": 28,
+        "lastBeat": 30.5,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "focus-air",
+      "gain": 0.022,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 2476584698
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 30.5,
+      "durationBeats": 4.2,
+      "gain": 0.025,
       "midi": 71,
       "pan": 0.15,
-      "seed": 3517541092
+      "seed": 3771061452
     },
     {
-      "instrument": "warm-bass",
+      "instrument": "breathing-pad",
       "role": "music",
-      "beat": 32,
-      "durationBeats": 3.6,
-      "gain": 0.08,
-      "midi": 35,
-      "pan": -0.04,
-      "seed": 1648568190
+      "beat": 30.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 43,
+      "pan": -0.5249999999999999,
+      "seed": 3995674774
     },
     {
-      "instrument": "soft-pad",
+      "instrument": "breathing-pad",
       "role": "music",
-      "beat": 32,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 47,
-      "pan": -0.48,
-      "seed": 3862778770
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 32,
-      "durationBeats": 10.5,
-      "gain": 0.013,
+      "beat": 30.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
       "midi": 54,
-      "pan": -0.24,
-      "seed": 3316491059
+      "pan": -0.175,
+      "seed": 2890796105
     },
     {
-      "instrument": "soft-pad",
+      "instrument": "breathing-pad",
       "role": "music",
-      "beat": 32,
-      "durationBeats": 10.5,
-      "gain": 0.013,
+      "beat": 30.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
       "midi": 57,
-      "pan": 0,
-      "seed": 1218994672
+      "pan": 0.175,
+      "seed": 3576180616
     },
     {
-      "instrument": "soft-pad",
+      "instrument": "breathing-pad",
       "role": "music",
-      "beat": 32,
-      "durationBeats": 10.5,
-      "gain": 0.013,
+      "beat": 30.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
       "midi": 62,
-      "pan": 0.24,
-      "seed": 3596227833
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 32,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 64,
-      "pan": 0.48,
-      "seed": 208063895
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 32.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 62,
-      "pan": -0.2,
-      "seed": 968678626
+      "pan": 0.5249999999999999,
+      "seed": 3421870916
     },
     {
       "instrument": "warm-bass",
+      "role": "music",
+      "beat": 32,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 31,
+      "pan": -0.02,
+      "seed": 1799218794
+    },
+    {
+      "instrument": "felt-key",
       "role": "music",
       "beat": 34,
-      "durationBeats": 1.8,
-      "gain": 0.039,
-      "midi": 47,
-      "pan": 0.04,
-      "seed": 3543417096
+      "durationBeats": 4.2,
+      "gain": 0.022,
+      "midi": 74,
+      "pan": 0.15,
+      "seed": 299328898
     },
     {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 36,
-      "durationBeats": 3.6,
-      "gain": 0.062,
-      "midi": 35,
-      "pan": -0.04,
-      "seed": 1868646705
+      "id": "magnet-inspect-in-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 35.3,
+      "seconds": 18.910714285714285,
+      "durationBeats": 2.700000000000003,
+      "durationSeconds": 1.446428571428573,
+      "animation": {
+        "motionEventIds": [
+          "magnet-inspect-in"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-1010-926"
+        ],
+        "phase": "inspect-in",
+        "kind": "inspection",
+        "firstBeat": 35.3,
+        "lastBeat": 38,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "focus-air",
+      "gain": 0.022,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 3994642073
     },
     {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 36.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 66,
-      "pan": 0.2,
-      "seed": 3072398722
-    },
-    {
-      "instrument": "warm-bass",
+      "instrument": "felt-key",
       "role": "music",
       "beat": 38,
-      "durationBeats": 1.8,
-      "gain": 0.039,
-      "midi": 47,
-      "pan": 0.04,
-      "seed": 2393008176
+      "durationBeats": 2.6,
+      "gain": 0.048,
+      "midi": 67,
+      "pan": 0.15,
+      "seed": 1367874863
     },
     {
-      "instrument": "rounded-key",
+      "id": "cc-reassemble-wave",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 38,
+      "seconds": 20.357142857142858,
+      "durationBeats": 4.5,
+      "durationSeconds": 2.4107142857142856,
+      "animation": {
+        "motionEventIds": [
+          "cc-sector-1-reassemble",
+          "cc-sector-2-reassemble",
+          "cc-sector-3-reassemble",
+          "cc-sector-4-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-1010-996",
+          "occ-b352183e1bd0-root-953098-1010-1009",
+          "occ-b352183e1bd0-root-953098-1010-940",
+          "occ-b352183e1bd0-root-953098-1010-1002",
+          "occ-b352183e1bd0-root-953098-1010-963",
+          "occ-b352183e1bd0-root-953098-1010-938",
+          "occ-b352183e1bd0-root-953098-1010-972",
+          "occ-b352183e1bd0-root-953098-1010-1006",
+          "occ-b352183e1bd0-root-953098-1010-990",
+          "occ-b352183e1bd0-root-953098-1010-1005",
+          "occ-b352183e1bd0-root-953098-1010-979",
+          "occ-b352183e1bd0-root-953098-1010-989",
+          "occ-b352183e1bd0-root-953098-1010-1007",
+          "occ-b352183e1bd0-root-953098-1010-959",
+          "occ-b352183e1bd0-root-953098-1010-994",
+          "occ-b352183e1bd0-root-953098-1010-973",
+          "occ-b352183e1bd0-root-953098-1010-955",
+          "occ-b352183e1bd0-root-953098-1010-981",
+          "occ-b352183e1bd0-root-953098-1010-967",
+          "occ-b352183e1bd0-root-953098-1010-991",
+          "occ-b352183e1bd0-root-953098-1010-942",
+          "occ-b352183e1bd0-root-953098-1010-954",
+          "occ-b352183e1bd0-root-953098-1010-933",
+          "occ-b352183e1bd0-root-953098-1010-965",
+          "occ-b352183e1bd0-root-953098-1010-977",
+          "occ-b352183e1bd0-root-953098-1010-930",
+          "occ-b352183e1bd0-root-953098-1010-969",
+          "occ-b352183e1bd0-root-953098-1010-978",
+          "occ-b352183e1bd0-root-953098-1010-949",
+          "occ-b352183e1bd0-root-953098-1010-957",
+          "occ-b352183e1bd0-root-953098-1010-986",
+          "occ-b352183e1bd0-root-953098-1010-953",
+          "occ-b352183e1bd0-root-953098-1010-962",
+          "occ-b352183e1bd0-root-953098-1010-929",
+          "occ-b352183e1bd0-root-953098-1010-976",
+          "occ-b352183e1bd0-root-953098-1010-964",
+          "occ-b352183e1bd0-root-953098-1010-935",
+          "occ-b352183e1bd0-root-953098-1010-961",
+          "occ-b352183e1bd0-root-953098-1010-997",
+          "occ-b352183e1bd0-root-953098-1010-925"
+        ],
+        "phase": "reassemble",
+        "kind": "repeat",
+        "firstBeat": 38,
+        "lastBeat": 42.5,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "batch-air",
+      "gain": 0.027,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 854428895
+    },
+    {
+      "instrument": "breathing-pad",
       "role": "music",
-      "beat": 38.65,
-      "durationBeats": 3.4,
+      "beat": 38.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 40,
+      "pan": -0.5249999999999999,
+      "seed": 703422450
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 38.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 55,
+      "pan": -0.175,
+      "seed": 3229393337
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 38.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 59,
+      "pan": 0.175,
+      "seed": 3711088766
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 38.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 66,
+      "pan": 0.5249999999999999,
+      "seed": 3449729344
+    },
+    {
+      "id": "magnets-reassemble-wave",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 39.2,
+      "seconds": 21,
+      "durationBeats": 4.299999999999997,
+      "durationSeconds": 2.303571428571427,
+      "animation": {
+        "motionEventIds": [
+          "magnet-sector-1-reassemble",
+          "magnet-sector-2-reassemble",
+          "magnet-sector-3-reassemble",
+          "magnet-sector-4-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-1010-950",
+          "occ-b352183e1bd0-root-953098-1010-1008",
+          "occ-b352183e1bd0-root-953098-1010-1001",
+          "occ-b352183e1bd0-root-953098-1010-941",
+          "occ-b352183e1bd0-root-953098-1010-944",
+          "occ-b352183e1bd0-root-953098-1010-931",
+          "occ-b352183e1bd0-root-953098-1010-995",
+          "occ-b352183e1bd0-root-953098-1010-939",
+          "occ-b352183e1bd0-root-953098-1010-999",
+          "occ-b352183e1bd0-root-953098-1010-974",
+          "occ-b352183e1bd0-root-953098-1010-966",
+          "occ-b352183e1bd0-root-953098-1010-948",
+          "occ-b352183e1bd0-root-953098-1010-980",
+          "occ-b352183e1bd0-root-953098-1010-975",
+          "occ-b352183e1bd0-root-953098-1010-958",
+          "occ-b352183e1bd0-root-953098-1010-998",
+          "occ-b352183e1bd0-root-953098-1010-1004",
+          "occ-b352183e1bd0-root-953098-1010-993",
+          "occ-b352183e1bd0-root-953098-1010-928",
+          "occ-b352183e1bd0-root-953098-1010-937",
+          "occ-b352183e1bd0-root-953098-1010-1000",
+          "occ-b352183e1bd0-root-953098-1010-982",
+          "occ-b352183e1bd0-root-953098-1010-943",
+          "occ-b352183e1bd0-root-953098-1010-945",
+          "occ-b352183e1bd0-root-953098-1010-951",
+          "occ-b352183e1bd0-root-953098-1010-947",
+          "occ-b352183e1bd0-root-953098-1010-1003",
+          "occ-b352183e1bd0-root-953098-1010-983",
+          "occ-b352183e1bd0-root-953098-1010-924",
+          "occ-b352183e1bd0-root-953098-1010-984",
+          "occ-b352183e1bd0-root-953098-1010-968",
+          "occ-b352183e1bd0-root-953098-1010-971",
+          "occ-b352183e1bd0-root-953098-1010-927",
+          "occ-b352183e1bd0-root-953098-1010-952",
+          "occ-b352183e1bd0-root-953098-1010-988",
+          "occ-b352183e1bd0-root-953098-1010-936",
+          "occ-b352183e1bd0-root-953098-1010-932",
+          "occ-b352183e1bd0-root-953098-1010-926",
+          "occ-b352183e1bd0-root-953098-1010-987",
+          "occ-b352183e1bd0-root-953098-1010-985"
+        ],
+        "phase": "reassemble",
+        "kind": "repeat",
+        "firstBeat": 39.2,
+        "lastBeat": 43.5,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "batch-air",
+      "gain": 0.027,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 1578268782
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 40,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 28,
+      "pan": -0.02,
+      "seed": 1835339737
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 40.5,
+      "durationBeats": 2.6,
+      "gain": 0.037,
+      "midi": 71,
+      "pan": -0.15,
+      "seed": 401125574
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 43,
+      "durationBeats": 2.7,
       "gain": 0.036,
       "midi": 74,
       "pan": 0.15,
-      "seed": 666293802
+      "seed": 1073371102
     },
     {
       "instrument": "warm-bass",
       "role": "music",
-      "beat": 40,
-      "durationBeats": 3.6,
-      "gain": 0.062,
-      "midi": 35,
-      "pan": -0.04,
-      "seed": 1393220305
+      "beat": 44,
+      "durationBeats": 2.9,
+      "gain": 0.039,
+      "midi": 40,
+      "pan": 0.03,
+      "seed": 1599806260
     },
     {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 40,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 47,
-      "pan": -0.48,
-      "seed": 2083588752
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 40,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 54,
-      "pan": -0.24,
-      "seed": 4043538463
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 40,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 57,
-      "pan": 0,
-      "seed": 2717897922
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 40,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 62,
-      "pan": 0.24,
-      "seed": 932493167
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 40,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 64,
-      "pan": 0.48,
-      "seed": 2384862828
-    },
-    {
-      "instrument": "air-servo",
+      "id": "body-reassemble-motion",
       "role": "editorial-sfx",
-      "beat": 40,
-      "durationBeats": 2,
-      "gain": 0.030100000000000002,
-      "pan": 0.22,
-      "seed": 2638500659,
-      "id": "repeats-reassemble-motion",
       "cueRole": "motion",
       "anchor": "movement-start",
+      "beat": 44,
+      "seconds": 23.571428571428573,
+      "durationBeats": 2.6000000000000014,
+      "durationSeconds": 1.3928571428571437,
       "animation": {
-        "groupId": "repeats",
+        "motionEventIds": [
+          "body-reassemble"
+        ],
         "partIds": [
-          "occ-b352183e1bd0-root-953098-1010-924",
-          "occ-b352183e1bd0-root-953098-1010-926",
-          "occ-b352183e1bd0-root-953098-1010-927",
-          "occ-b352183e1bd0-root-953098-1010-928",
-          "occ-b352183e1bd0-root-953098-1010-931",
-          "occ-b352183e1bd0-root-953098-1010-932",
-          "occ-b352183e1bd0-root-953098-1010-936",
-          "occ-b352183e1bd0-root-953098-1010-937",
-          "occ-b352183e1bd0-root-953098-1010-939",
-          "occ-b352183e1bd0-root-953098-1010-941",
-          "occ-b352183e1bd0-root-953098-1010-943",
-          "occ-b352183e1bd0-root-953098-1010-944",
-          "occ-b352183e1bd0-root-953098-1010-945",
-          "occ-b352183e1bd0-root-953098-1010-947",
-          "occ-b352183e1bd0-root-953098-1010-948",
-          "occ-b352183e1bd0-root-953098-1010-950",
-          "occ-b352183e1bd0-root-953098-1010-951",
-          "occ-b352183e1bd0-root-953098-1010-952",
-          "occ-b352183e1bd0-root-953098-1010-958",
-          "occ-b352183e1bd0-root-953098-1010-966",
-          "occ-b352183e1bd0-root-953098-1010-968",
-          "occ-b352183e1bd0-root-953098-1010-971",
-          "occ-b352183e1bd0-root-953098-1010-974",
-          "occ-b352183e1bd0-root-953098-1010-975",
-          "occ-b352183e1bd0-root-953098-1010-980",
-          "occ-b352183e1bd0-root-953098-1010-982",
-          "occ-b352183e1bd0-root-953098-1010-983",
-          "occ-b352183e1bd0-root-953098-1010-984",
-          "occ-b352183e1bd0-root-953098-1010-985",
-          "occ-b352183e1bd0-root-953098-1010-987",
-          "occ-b352183e1bd0-root-953098-1010-988",
-          "occ-b352183e1bd0-root-953098-1010-993",
-          "occ-b352183e1bd0-root-953098-1010-995",
-          "occ-b352183e1bd0-root-953098-1010-998",
-          "occ-b352183e1bd0-root-953098-1010-999",
-          "occ-b352183e1bd0-root-953098-1010-1000",
-          "occ-b352183e1bd0-root-953098-1010-1001",
-          "occ-b352183e1bd0-root-953098-1010-1003",
-          "occ-b352183e1bd0-root-953098-1010-1004",
-          "occ-b352183e1bd0-root-953098-1010-1008",
-          "occ-b352183e1bd0-root-953098-1010-925",
-          "occ-b352183e1bd0-root-953098-1010-929",
-          "occ-b352183e1bd0-root-953098-1010-930",
-          "occ-b352183e1bd0-root-953098-1010-933",
-          "occ-b352183e1bd0-root-953098-1010-935",
-          "occ-b352183e1bd0-root-953098-1010-938",
-          "occ-b352183e1bd0-root-953098-1010-940",
-          "occ-b352183e1bd0-root-953098-1010-942",
-          "occ-b352183e1bd0-root-953098-1010-949",
-          "occ-b352183e1bd0-root-953098-1010-953",
-          "occ-b352183e1bd0-root-953098-1010-954",
-          "occ-b352183e1bd0-root-953098-1010-955",
-          "occ-b352183e1bd0-root-953098-1010-957",
-          "occ-b352183e1bd0-root-953098-1010-959",
-          "occ-b352183e1bd0-root-953098-1010-961",
-          "occ-b352183e1bd0-root-953098-1010-962",
-          "occ-b352183e1bd0-root-953098-1010-963",
-          "occ-b352183e1bd0-root-953098-1010-964",
-          "occ-b352183e1bd0-root-953098-1010-965",
-          "occ-b352183e1bd0-root-953098-1010-967",
-          "occ-b352183e1bd0-root-953098-1010-969",
-          "occ-b352183e1bd0-root-953098-1010-972",
-          "occ-b352183e1bd0-root-953098-1010-973",
-          "occ-b352183e1bd0-root-953098-1010-976",
-          "occ-b352183e1bd0-root-953098-1010-977",
-          "occ-b352183e1bd0-root-953098-1010-978",
-          "occ-b352183e1bd0-root-953098-1010-979",
-          "occ-b352183e1bd0-root-953098-1010-981",
-          "occ-b352183e1bd0-root-953098-1010-986",
-          "occ-b352183e1bd0-root-953098-1010-989",
-          "occ-b352183e1bd0-root-953098-1010-990",
-          "occ-b352183e1bd0-root-953098-1010-991",
-          "occ-b352183e1bd0-root-953098-1010-994",
-          "occ-b352183e1bd0-root-953098-1010-996",
-          "occ-b352183e1bd0-root-953098-1010-997",
-          "occ-b352183e1bd0-root-953098-1010-1002",
-          "occ-b352183e1bd0-root-953098-1010-1005",
-          "occ-b352183e1bd0-root-953098-1010-1006",
-          "occ-b352183e1bd0-root-953098-1010-1007",
-          "occ-b352183e1bd0-root-953098-1010-1009"
+          "occ-b352183e1bd0-root-953098-1010-970"
         ],
         "phase": "reassemble",
-        "firstBeat": 40,
-        "lastBeat": 42
-      }
+        "kind": "hardware",
+        "firstBeat": 44,
+        "lastBeat": 46.6,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 2609035294
     },
     {
-      "instrument": "rounded-key",
+      "instrument": "felt-key",
       "role": "music",
-      "beat": 40.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 64,
-      "pan": -0.2,
-      "seed": 619881599
+      "beat": 46,
+      "durationBeats": 2.8,
+      "gain": 0.039,
+      "midi": 71,
+      "pan": 0.15,
+      "seed": 3576702654
+    },
+    {
+      "id": "rotor-reassemble-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 46,
+      "seconds": 24.642857142857142,
+      "durationBeats": 2.6000000000000014,
+      "durationSeconds": 1.3928571428571437,
+      "animation": {
+        "motionEventIds": [
+          "rotor-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-1010-956"
+        ],
+        "phase": "reassemble",
+        "kind": "hardware",
+        "firstBeat": 46,
+        "lastBeat": 48.6,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 3225141846
+    },
+    {
+      "id": "body-reassemble-seat",
+      "role": "editorial-sfx",
+      "cueRole": "seating",
+      "anchor": "movement-complete",
+      "beat": 46.6,
+      "seconds": 24.964285714285715,
+      "durationBeats": 0.48,
+      "durationSeconds": 0.2571428571428571,
+      "animation": {
+        "motionEventIds": [
+          "body-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-1010-970"
+        ],
+        "phase": "reassemble",
+        "kind": "hardware",
+        "firstBeat": 44,
+        "lastBeat": 46.6,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "soft-seat",
+      "gain": 0.026,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 1554445758
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 46.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 45,
+      "pan": -0.5249999999999999,
+      "seed": 3146317898
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 46.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 55,
+      "pan": -0.175,
+      "seed": 3951402218
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 46.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 59,
+      "pan": 0.175,
+      "seed": 1526909958
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 46.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 66,
+      "pan": 0.5249999999999999,
+      "seed": 1388807557
     },
     {
       "instrument": "warm-bass",
       "role": "music",
-      "beat": 42,
-      "durationBeats": 1.8,
-      "gain": 0.039,
-      "midi": 47,
-      "pan": 0.04,
-      "seed": 37962169
+      "beat": 48,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 33,
+      "pan": -0.02,
+      "seed": 3969221404
     },
     {
-      "instrument": "soft-seat",
-      "role": "editorial-sfx",
-      "beat": 42,
-      "durationBeats": 0.5,
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 49,
+      "durationBeats": 2.7,
       "gain": 0.051,
-      "midi": 53,
-      "pan": 0.132,
-      "seed": 4084845572,
-      "id": "repeats-seated",
-      "cueRole": "seating",
-      "anchor": "movement-complete",
-      "animation": {
-        "groupId": "repeats",
-        "partIds": [
-          "occ-b352183e1bd0-root-953098-1010-924",
-          "occ-b352183e1bd0-root-953098-1010-926",
-          "occ-b352183e1bd0-root-953098-1010-927",
-          "occ-b352183e1bd0-root-953098-1010-928",
-          "occ-b352183e1bd0-root-953098-1010-931",
-          "occ-b352183e1bd0-root-953098-1010-932",
-          "occ-b352183e1bd0-root-953098-1010-936",
-          "occ-b352183e1bd0-root-953098-1010-937",
-          "occ-b352183e1bd0-root-953098-1010-939",
-          "occ-b352183e1bd0-root-953098-1010-941",
-          "occ-b352183e1bd0-root-953098-1010-943",
-          "occ-b352183e1bd0-root-953098-1010-944",
-          "occ-b352183e1bd0-root-953098-1010-945",
-          "occ-b352183e1bd0-root-953098-1010-947",
-          "occ-b352183e1bd0-root-953098-1010-948",
-          "occ-b352183e1bd0-root-953098-1010-950",
-          "occ-b352183e1bd0-root-953098-1010-951",
-          "occ-b352183e1bd0-root-953098-1010-952",
-          "occ-b352183e1bd0-root-953098-1010-958",
-          "occ-b352183e1bd0-root-953098-1010-966",
-          "occ-b352183e1bd0-root-953098-1010-968",
-          "occ-b352183e1bd0-root-953098-1010-971",
-          "occ-b352183e1bd0-root-953098-1010-974",
-          "occ-b352183e1bd0-root-953098-1010-975",
-          "occ-b352183e1bd0-root-953098-1010-980",
-          "occ-b352183e1bd0-root-953098-1010-982",
-          "occ-b352183e1bd0-root-953098-1010-983",
-          "occ-b352183e1bd0-root-953098-1010-984",
-          "occ-b352183e1bd0-root-953098-1010-985",
-          "occ-b352183e1bd0-root-953098-1010-987",
-          "occ-b352183e1bd0-root-953098-1010-988",
-          "occ-b352183e1bd0-root-953098-1010-993",
-          "occ-b352183e1bd0-root-953098-1010-995",
-          "occ-b352183e1bd0-root-953098-1010-998",
-          "occ-b352183e1bd0-root-953098-1010-999",
-          "occ-b352183e1bd0-root-953098-1010-1000",
-          "occ-b352183e1bd0-root-953098-1010-1001",
-          "occ-b352183e1bd0-root-953098-1010-1003",
-          "occ-b352183e1bd0-root-953098-1010-1004",
-          "occ-b352183e1bd0-root-953098-1010-1008",
-          "occ-b352183e1bd0-root-953098-1010-925",
-          "occ-b352183e1bd0-root-953098-1010-929",
-          "occ-b352183e1bd0-root-953098-1010-930",
-          "occ-b352183e1bd0-root-953098-1010-933",
-          "occ-b352183e1bd0-root-953098-1010-935",
-          "occ-b352183e1bd0-root-953098-1010-938",
-          "occ-b352183e1bd0-root-953098-1010-940",
-          "occ-b352183e1bd0-root-953098-1010-942",
-          "occ-b352183e1bd0-root-953098-1010-949",
-          "occ-b352183e1bd0-root-953098-1010-953",
-          "occ-b352183e1bd0-root-953098-1010-954",
-          "occ-b352183e1bd0-root-953098-1010-955",
-          "occ-b352183e1bd0-root-953098-1010-957",
-          "occ-b352183e1bd0-root-953098-1010-959",
-          "occ-b352183e1bd0-root-953098-1010-961",
-          "occ-b352183e1bd0-root-953098-1010-962",
-          "occ-b352183e1bd0-root-953098-1010-963",
-          "occ-b352183e1bd0-root-953098-1010-964",
-          "occ-b352183e1bd0-root-953098-1010-965",
-          "occ-b352183e1bd0-root-953098-1010-967",
-          "occ-b352183e1bd0-root-953098-1010-969",
-          "occ-b352183e1bd0-root-953098-1010-972",
-          "occ-b352183e1bd0-root-953098-1010-973",
-          "occ-b352183e1bd0-root-953098-1010-976",
-          "occ-b352183e1bd0-root-953098-1010-977",
-          "occ-b352183e1bd0-root-953098-1010-978",
-          "occ-b352183e1bd0-root-953098-1010-979",
-          "occ-b352183e1bd0-root-953098-1010-981",
-          "occ-b352183e1bd0-root-953098-1010-986",
-          "occ-b352183e1bd0-root-953098-1010-989",
-          "occ-b352183e1bd0-root-953098-1010-990",
-          "occ-b352183e1bd0-root-953098-1010-991",
-          "occ-b352183e1bd0-root-953098-1010-994",
-          "occ-b352183e1bd0-root-953098-1010-996",
-          "occ-b352183e1bd0-root-953098-1010-997",
-          "occ-b352183e1bd0-root-953098-1010-1002",
-          "occ-b352183e1bd0-root-953098-1010-1005",
-          "occ-b352183e1bd0-root-953098-1010-1006",
-          "occ-b352183e1bd0-root-953098-1010-1007",
-          "occ-b352183e1bd0-root-953098-1010-1009"
-        ],
-        "phase": "reassemble",
-        "firstBeat": 40,
-        "lastBeat": 42
-      }
+      "midi": 73,
+      "pan": -0.15,
+      "seed": 3977406411
     },
     {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 44,
-      "durationBeats": 3.6,
-      "gain": 0.062,
-      "midi": 35,
-      "pan": -0.04,
-      "seed": 4036529047
-    },
-    {
-      "instrument": "air-servo",
-      "role": "editorial-sfx",
-      "beat": 44,
-      "durationBeats": 2,
-      "gain": 0.0344,
-      "pan": 0.12,
-      "seed": 2681517549,
-      "id": "shells-reassemble-motion",
-      "cueRole": "motion",
-      "anchor": "movement-start",
-      "animation": {
-        "groupId": "shells",
-        "partIds": [
-          "occ-b352183e1bd0-root-953098-1010-956",
-          "occ-b352183e1bd0-root-953098-1010-970"
-        ],
-        "phase": "reassemble",
-        "firstBeat": 44,
-        "lastBeat": 46
-      }
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 44.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 57,
-      "pan": 0.2,
-      "seed": 2280598666
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 46,
-      "durationBeats": 1.8,
-      "gain": 0.039,
-      "midi": 42,
-      "pan": 0.04,
-      "seed": 3700725452
-    },
-    {
-      "instrument": "soft-seat",
-      "role": "editorial-sfx",
-      "beat": 46,
-      "durationBeats": 0.5,
-      "gain": 0.049,
-      "midi": 51,
-      "pan": 0.072,
-      "seed": 608655897,
-      "id": "shells-seated",
-      "cueRole": "seating",
-      "anchor": "movement-complete",
-      "animation": {
-        "groupId": "shells",
-        "partIds": [
-          "occ-b352183e1bd0-root-953098-1010-956",
-          "occ-b352183e1bd0-root-953098-1010-970"
-        ],
-        "phase": "reassemble",
-        "firstBeat": 44,
-        "lastBeat": 46
-      }
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 46.65,
-      "durationBeats": 3.4,
-      "gain": 0.036,
-      "midi": 74,
-      "pan": 0.15,
-      "seed": 766626611
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 48,
-      "durationBeats": 3.6,
-      "gain": 0.08,
-      "midi": 31,
-      "pan": -0.04,
-      "seed": 2386520766
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 48,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 43,
-      "pan": -0.48,
-      "seed": 523224939
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 48,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 50,
-      "pan": -0.24,
-      "seed": 528786732
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 48,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 54,
-      "pan": 0,
-      "seed": 4010366748
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 48,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 57,
-      "pan": 0.24,
-      "seed": 2025335015
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 48,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 59,
-      "pan": 0.48,
-      "seed": 3372732793
-    },
-    {
-      "instrument": "air-servo",
-      "role": "editorial-sfx",
-      "beat": 48,
-      "durationBeats": 2,
-      "gain": 0.0387,
-      "pan": -0.06,
-      "seed": 2338475786,
       "id": "mount-reassemble-motion",
+      "role": "editorial-sfx",
       "cueRole": "motion",
       "anchor": "movement-start",
+      "beat": 49,
+      "seconds": 26.25,
+      "durationBeats": 2.200000000000003,
+      "durationSeconds": 1.1785714285714302,
       "animation": {
-        "groupId": "mount",
+        "motionEventIds": [
+          "mount-reassemble"
+        ],
         "partIds": [
           "occ-b352183e1bd0-root-953098-1010-946"
         ],
         "phase": "reassemble",
-        "firstBeat": 48,
-        "lastBeat": 50
-      }
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 48.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 59,
-      "pan": -0.2,
-      "seed": 1399512753
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 50,
-      "durationBeats": 1.8,
-      "gain": 0.039,
-      "midi": 43,
-      "pan": 0.04,
-      "seed": 243260010
-    },
-    {
-      "instrument": "soft-seat",
-      "role": "editorial-sfx",
-      "beat": 50,
-      "durationBeats": 0.5,
-      "gain": 0.047,
-      "midi": 49,
-      "pan": -0.036,
-      "seed": 2464843529,
-      "id": "mount-seated",
-      "cueRole": "seating",
-      "anchor": "movement-complete",
-      "animation": {
-        "groupId": "mount",
-        "partIds": [
-          "occ-b352183e1bd0-root-953098-1010-946"
-        ],
-        "phase": "reassemble",
-        "firstBeat": 48,
-        "lastBeat": 50
-      }
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 52,
-      "durationBeats": 3.6,
-      "gain": 0.062,
-      "midi": 31,
-      "pan": -0.04,
-      "seed": 1446614317
-    },
-    {
-      "instrument": "air-servo",
-      "role": "editorial-sfx",
-      "beat": 52,
-      "durationBeats": 2,
-      "gain": 0.043000000000000003,
-      "pan": -0.18,
-      "seed": 3976738847,
-      "id": "shaft-nut-reassemble-motion",
-      "cueRole": "motion",
-      "anchor": "movement-start",
-      "animation": {
-        "groupId": "shaft-nut",
-        "partIds": [
-          "occ-b352183e1bd0-root-953098-1010-934",
-          "occ-b352183e1bd0-root-953098-1010-992"
-        ],
-        "phase": "reassemble",
-        "firstBeat": 52,
-        "lastBeat": 54
-      }
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 52.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 62,
-      "pan": 0.2,
-      "seed": 702804893
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 54,
-      "durationBeats": 1.8,
-      "gain": 0.039,
-      "midi": 43,
-      "pan": 0.04,
-      "seed": 4145056607
-    },
-    {
-      "instrument": "soft-seat",
-      "role": "editorial-sfx",
-      "beat": 54,
-      "durationBeats": 0.5,
-      "gain": 0.045,
-      "midi": 47,
-      "pan": -0.108,
-      "seed": 2877680101,
-      "id": "shaft-nut-seated",
-      "cueRole": "seating",
-      "anchor": "movement-complete",
-      "animation": {
-        "groupId": "shaft-nut",
-        "partIds": [
-          "occ-b352183e1bd0-root-953098-1010-934",
-          "occ-b352183e1bd0-root-953098-1010-992"
-        ],
-        "phase": "reassemble",
-        "firstBeat": 52,
-        "lastBeat": 54
-      }
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 54.65,
-      "durationBeats": 3.4,
-      "gain": 0.036,
-      "midi": 69,
-      "pan": 0.15,
-      "seed": 2777879189
-    },
-    {
-      "instrument": "warm-bass",
-      "role": "music",
-      "beat": 56,
-      "durationBeats": 3.6,
-      "gain": 0.062,
-      "midi": 31,
-      "pan": -0.04,
-      "seed": 1073192885
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 56,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 43,
-      "pan": -0.48,
-      "seed": 886684625
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 56,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 50,
-      "pan": -0.24,
-      "seed": 2010954338
-    },
-    {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 56,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 54,
+        "kind": "hardware",
+        "firstBeat": 49,
+        "lastBeat": 51.2,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
       "pan": 0,
-      "seed": 4068863818
+      "seed": 3059659662
     },
     {
-      "instrument": "soft-pad",
-      "role": "music",
-      "beat": 56,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 57,
-      "pan": 0.24,
-      "seed": 2734274396
+      "id": "mount-reassemble-seat",
+      "role": "editorial-sfx",
+      "cueRole": "seating",
+      "anchor": "movement-complete",
+      "beat": 51.2,
+      "seconds": 27.428571428571427,
+      "durationBeats": 0.48,
+      "durationSeconds": 0.2571428571428571,
+      "animation": {
+        "motionEventIds": [
+          "mount-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-1010-946"
+        ],
+        "phase": "reassemble",
+        "kind": "hardware",
+        "firstBeat": 49,
+        "lastBeat": 51.2,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "soft-seat",
+      "gain": 0.026,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 1707282583
     },
     {
-      "instrument": "soft-pad",
+      "instrument": "felt-key",
       "role": "music",
-      "beat": 56,
-      "durationBeats": 10.5,
-      "gain": 0.013,
-      "midi": 59,
-      "pan": 0.48,
-      "seed": 374994899
-    },
-    {
-      "instrument": "rounded-key",
-      "role": "music",
-      "beat": 56.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
-      "midi": 57,
-      "pan": -0.2,
-      "seed": 1277562741
+      "beat": 51.5,
+      "durationBeats": 2.7,
+      "gain": 0.037,
+      "midi": 76,
+      "pan": 0.15,
+      "seed": 2627555352
     },
     {
       "instrument": "warm-bass",
       "role": "music",
-      "beat": 60,
-      "durationBeats": 3.6,
-      "gain": 0.062,
-      "midi": 31,
-      "pan": -0.04,
-      "seed": 1020203812
+      "beat": 52,
+      "durationBeats": 2.9,
+      "gain": 0.039,
+      "midi": 45,
+      "pan": 0.03,
+      "seed": 3258425765
     },
     {
-      "instrument": "rounded-key",
+      "id": "shaft-reassemble-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 53,
+      "seconds": 28.392857142857142,
+      "durationBeats": 2.200000000000003,
+      "durationSeconds": 1.1785714285714302,
+      "animation": {
+        "motionEventIds": [
+          "shaft-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-1010-934"
+        ],
+        "phase": "reassemble",
+        "kind": "hardware",
+        "firstBeat": 53,
+        "lastBeat": 55.2,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 4258430319
+    },
+    {
+      "instrument": "felt-key",
       "role": "music",
-      "beat": 60.45,
-      "durationBeats": 3.5,
-      "gain": 0.067,
+      "beat": 54,
+      "durationBeats": 2.8,
+      "gain": 0.033,
+      "midi": 71,
+      "pan": 0.15,
+      "seed": 3847422357
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 54.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 50,
+      "pan": -0.5249999999999999,
+      "seed": 4134284870
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 54.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 57,
+      "pan": -0.175,
+      "seed": 121242932
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 54.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
+      "midi": 61,
+      "pan": 0.175,
+      "seed": 3020708250
+    },
+    {
+      "instrument": "breathing-pad",
+      "role": "music",
+      "beat": 54.9,
+      "durationBeats": 10.7,
+      "gain": 0.016,
       "midi": 64,
-      "pan": 0.2,
-      "seed": 198201967
+      "pan": 0.5249999999999999,
+      "seed": 3638290051
+    },
+    {
+      "instrument": "warm-bass",
+      "role": "music",
+      "beat": 56,
+      "durationBeats": 3.8,
+      "gain": 0.057,
+      "midi": 38,
+      "pan": -0.02,
+      "seed": 627942560
+    },
+    {
+      "id": "nut-reassemble-motion",
+      "role": "editorial-sfx",
+      "cueRole": "motion",
+      "anchor": "movement-start",
+      "beat": 56,
+      "seconds": 30,
+      "durationBeats": 1.3999999999999986,
+      "durationSeconds": 0.7499999999999992,
+      "animation": {
+        "motionEventIds": [
+          "nut-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-1010-992"
+        ],
+        "phase": "reassemble",
+        "kind": "hardware",
+        "firstBeat": 56,
+        "lastBeat": 57.4,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "mechanical-slide",
+      "gain": 0.035,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 4260933005
+    },
+    {
+      "id": "nut-reassemble-seat",
+      "role": "editorial-sfx",
+      "cueRole": "seating",
+      "anchor": "movement-complete",
+      "beat": 57.4,
+      "seconds": 30.75,
+      "durationBeats": 0.48,
+      "durationSeconds": 0.2571428571428571,
+      "animation": {
+        "motionEventIds": [
+          "nut-reassemble"
+        ],
+        "partIds": [
+          "occ-b352183e1bd0-root-953098-1010-992"
+        ],
+        "phase": "reassemble",
+        "kind": "hardware",
+        "firstBeat": 56,
+        "lastBeat": 57.4,
+        "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1"
+      },
+      "instrument": "soft-seat",
+      "gain": 0.026,
+      "gainReference": "Synthesized event mono sample peak before equal-power center panning.",
+      "pan": 0,
+      "seed": 3781831913
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 57.5,
+      "durationBeats": 3.7,
+      "gain": 0.043,
+      "midi": 69,
+      "pan": -0.15,
+      "seed": 693233637
+    },
+    {
+      "instrument": "felt-key",
+      "role": "music",
+      "beat": 61,
+      "durationBeats": 4,
+      "gain": 0.025,
+      "midi": 73,
+      "pan": -0.15,
+      "seed": 2684914479
     }
   ],
-  "file": "../audio/wolf-loop.wav",
-  "sha256": "7a463b9c86f7f7e4bcfacdbfdebb3522981182b23056cd980d377e6533f838e5",
+  "file": "audio/motor-loop.wav",
   "byteLength": 6048044,
+  "sha256": "b63e72e38f563c6646cf53806228906a5df6a0bdeb2f4ce71d8b3edc2a03bd5f",
   "analysis": {
     "sampleRate": 44100,
     "frames": 1512000,
     "durationSeconds": 34.285714285714285,
-    "peak": 0.3981071705534972,
-    "peakDbfs": -8,
-    "rms": 0.07562340771357168,
-    "rmsDbfs": -22.426875130356976,
+    "peak": 0.3160609106564939,
+    "peakDbfs": -10.004584258211723,
+    "rmsDbfs": -23.88385975838443,
     "clippedSamples": 0,
+    "masterScale": 1,
     "loopBoundary": {
-      "maximumStep": 0.0004153209304166442,
-      "maximumInteriorStep": 0.019016960714702,
-      "ratioToMaximumInteriorStep": 0.021839500888044632
+      "maximumStep": 0.0003280860575589715,
+      "maximumInteriorStep": 0.021000431534120165,
+      "ratioToMaximumInteriorStep": 0.015622824560815245
     },
-    "listeningReview": "Not claimed by automated analysis; audition the delivered file and its loop separately."
-  },
-  "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1",
-  "sourceSHA256": "b352183e1bd0d55c403a6f406c3b2886a3b1b374b47cf32bcb69d4277d252e35",
-  "compositionReuse": {
-    "source": "../audio/music-score.json",
-    "sourceEdition": "wolf-quiet-assembly-v1",
-    "pcmChanged": false,
-    "note": "Byte-identical original WOLF PCM. This metadata rebinds the same eight two-beat motion and four seating accents to source motor occurrences, at the same beats; no new sound or inference of physical motor sound."
+    "sections": [
+      {
+        "id": "whole",
+        "firstBeat": 0,
+        "lastBeat": 6,
+        "rmsDbfs": -22.97258885241029
+      },
+      {
+        "id": "motor",
+        "firstBeat": 6,
+        "lastBeat": 16,
+        "rmsDbfs": -22.987426801575346
+      },
+      {
+        "id": "repeats",
+        "firstBeat": 16,
+        "lastBeat": 28,
+        "rmsDbfs": -23.334507906597715
+      },
+      {
+        "id": "magnet",
+        "firstBeat": 28,
+        "lastBeat": 38,
+        "rmsDbfs": -29.16436112414912
+      },
+      {
+        "id": "return",
+        "firstBeat": 38,
+        "lastBeat": 60,
+        "rmsDbfs": -23.23472488099163
+      },
+      {
+        "id": "resolve",
+        "firstBeat": 60,
+        "lastBeat": 64,
+        "rmsDbfs": -26.525372668898722
+      }
+    ],
+    "listeningReviewed": false,
+    "listeningReview": "Objective waveform checks only. Subjective listening is not claimed."
   }
 }

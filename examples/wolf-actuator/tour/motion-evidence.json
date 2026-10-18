@@ -1,0 +1,1047 @@
+{
+  "revision": "wolf-input-rotation-illustrative-1",
+  "sourceSHA256": "b352183e1bd0d55c403a6f406c3b2886a3b1b374b47cf32bcb69d4277d252e35",
+  "sourceKind": "STEP source identities with authored teaching kinematics",
+  "sourceComponentId": "occ-b352183e1bd0-root-953098-1010",
+  "anglePolicy": "One illustrative input turn: angle=2*pi*motionDemoProgress; progress 0 and 1 return exact identity. The timeline owns easing and timing.",
+  "axisPolicy": "Original motor-shaft rest origin and its source local +Y axis, mapped into display world metres; this is an authored input-axis choice, not a recovered revolute mate.",
+  "membershipPolicy": "Rotor/body/magnet/shaft/nut co-rotation is an explicit mechanical interpretation of source names and coaxial geometry; the original STEP supplies no rigid mates. The source manual confirms sun-to-motor attachment and encoder-holder-to-rear-nut attachment.",
+  "fixedPolicy": "Stator, mount and forty generic cc pieces hold their source placement; cc is not assigned a winding function. Ring/planet/bearing output motion is not inferred.",
+  "sourceManual": "../source/WOLF-Assembly-Guide-V1.1.pdf",
+  "sourceManualSteps": [
+    2,
+    3,
+    12
+  ],
+  "sourceReadme": "../source/UPSTREAM-README.md",
+  "rotatingIds": [
+    "occ-b352183e1bd0-root-953098-1010-956",
+    "occ-b352183e1bd0-root-953098-1010-970",
+    "occ-b352183e1bd0-root-953098-1010-934",
+    "occ-b352183e1bd0-root-953098-1010-992",
+    "occ-b352183e1bd0-root-953098-1010-924",
+    "occ-b352183e1bd0-root-953098-1010-926",
+    "occ-b352183e1bd0-root-953098-1010-927",
+    "occ-b352183e1bd0-root-953098-1010-928",
+    "occ-b352183e1bd0-root-953098-1010-931",
+    "occ-b352183e1bd0-root-953098-1010-932",
+    "occ-b352183e1bd0-root-953098-1010-936",
+    "occ-b352183e1bd0-root-953098-1010-937",
+    "occ-b352183e1bd0-root-953098-1010-939",
+    "occ-b352183e1bd0-root-953098-1010-941",
+    "occ-b352183e1bd0-root-953098-1010-943",
+    "occ-b352183e1bd0-root-953098-1010-944",
+    "occ-b352183e1bd0-root-953098-1010-945",
+    "occ-b352183e1bd0-root-953098-1010-947",
+    "occ-b352183e1bd0-root-953098-1010-948",
+    "occ-b352183e1bd0-root-953098-1010-950",
+    "occ-b352183e1bd0-root-953098-1010-951",
+    "occ-b352183e1bd0-root-953098-1010-952",
+    "occ-b352183e1bd0-root-953098-1010-958",
+    "occ-b352183e1bd0-root-953098-1010-966",
+    "occ-b352183e1bd0-root-953098-1010-968",
+    "occ-b352183e1bd0-root-953098-1010-971",
+    "occ-b352183e1bd0-root-953098-1010-974",
+    "occ-b352183e1bd0-root-953098-1010-975",
+    "occ-b352183e1bd0-root-953098-1010-980",
+    "occ-b352183e1bd0-root-953098-1010-982",
+    "occ-b352183e1bd0-root-953098-1010-983",
+    "occ-b352183e1bd0-root-953098-1010-984",
+    "occ-b352183e1bd0-root-953098-1010-985",
+    "occ-b352183e1bd0-root-953098-1010-987",
+    "occ-b352183e1bd0-root-953098-1010-988",
+    "occ-b352183e1bd0-root-953098-1010-993",
+    "occ-b352183e1bd0-root-953098-1010-995",
+    "occ-b352183e1bd0-root-953098-1010-998",
+    "occ-b352183e1bd0-root-953098-1010-999",
+    "occ-b352183e1bd0-root-953098-1010-1000",
+    "occ-b352183e1bd0-root-953098-1010-1001",
+    "occ-b352183e1bd0-root-953098-1010-1003",
+    "occ-b352183e1bd0-root-953098-1010-1004",
+    "occ-b352183e1bd0-root-953098-1010-1008",
+    "occ-b352183e1bd0-root-953098-767",
+    "occ-b352183e1bd0-root-953098-761"
+  ],
+  "explicitStationaryIds": [
+    "occ-b352183e1bd0-root-953098-1010-960",
+    "occ-b352183e1bd0-root-953098-1010-946",
+    "occ-b352183e1bd0-root-953098-1010-925",
+    "occ-b352183e1bd0-root-953098-1010-929",
+    "occ-b352183e1bd0-root-953098-1010-930",
+    "occ-b352183e1bd0-root-953098-1010-933",
+    "occ-b352183e1bd0-root-953098-1010-935",
+    "occ-b352183e1bd0-root-953098-1010-938",
+    "occ-b352183e1bd0-root-953098-1010-940",
+    "occ-b352183e1bd0-root-953098-1010-942",
+    "occ-b352183e1bd0-root-953098-1010-949",
+    "occ-b352183e1bd0-root-953098-1010-953",
+    "occ-b352183e1bd0-root-953098-1010-954",
+    "occ-b352183e1bd0-root-953098-1010-955",
+    "occ-b352183e1bd0-root-953098-1010-957",
+    "occ-b352183e1bd0-root-953098-1010-959",
+    "occ-b352183e1bd0-root-953098-1010-961",
+    "occ-b352183e1bd0-root-953098-1010-962",
+    "occ-b352183e1bd0-root-953098-1010-963",
+    "occ-b352183e1bd0-root-953098-1010-964",
+    "occ-b352183e1bd0-root-953098-1010-965",
+    "occ-b352183e1bd0-root-953098-1010-967",
+    "occ-b352183e1bd0-root-953098-1010-969",
+    "occ-b352183e1bd0-root-953098-1010-972",
+    "occ-b352183e1bd0-root-953098-1010-973",
+    "occ-b352183e1bd0-root-953098-1010-976",
+    "occ-b352183e1bd0-root-953098-1010-977",
+    "occ-b352183e1bd0-root-953098-1010-978",
+    "occ-b352183e1bd0-root-953098-1010-979",
+    "occ-b352183e1bd0-root-953098-1010-981",
+    "occ-b352183e1bd0-root-953098-1010-986",
+    "occ-b352183e1bd0-root-953098-1010-989",
+    "occ-b352183e1bd0-root-953098-1010-990",
+    "occ-b352183e1bd0-root-953098-1010-991",
+    "occ-b352183e1bd0-root-953098-1010-994",
+    "occ-b352183e1bd0-root-953098-1010-996",
+    "occ-b352183e1bd0-root-953098-1010-997",
+    "occ-b352183e1bd0-root-953098-1010-1002",
+    "occ-b352183e1bd0-root-953098-1010-1005",
+    "occ-b352183e1bd0-root-953098-1010-1006",
+    "occ-b352183e1bd0-root-953098-1010-1007",
+    "occ-b352183e1bd0-root-953098-1010-1009"
+  ],
+  "limitations": [
+    "Not recovered CAD mates.",
+    "No gear contact, signed reduction, tooth counts, torque, speed or load model.",
+    "No dynamics, electromagnetic or collision validation.",
+    "Display translations remain separate; rotating labels must be suppressed."
+  ],
+  "axisWorld": [
+    0,
+    -1,
+    0
+  ],
+  "pivotWorld": [
+    0,
+    0.0149995213351072,
+    0
+  ],
+  "sourceRecords": [
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-956",
+      "name": "rotor",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953228",
+      "source": {
+        "xcafLabel": "0:1:1:98:33",
+        "nauoEntity": "#956",
+        "occurrenceId": "NAUO198",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953228",
+        "definition": {
+          "productDefinitionEntity": "#953228",
+          "productEntity": "#953964",
+          "productId": "rotor",
+          "productName": "rotor"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-970",
+      "name": "rotor-body",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953242",
+      "source": {
+        "xcafLabel": "0:1:1:98:47",
+        "nauoEntity": "#970",
+        "occurrenceId": "NAUO212",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953242",
+        "definition": {
+          "productDefinitionEntity": "#953242",
+          "productEntity": "#953978",
+          "productId": "rotor-body",
+          "productName": "rotor-body"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-934",
+      "name": "motor-shaft",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953206",
+      "source": {
+        "xcafLabel": "0:1:1:98:11",
+        "nauoEntity": "#934",
+        "occurrenceId": "NAUO176",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953206",
+        "definition": {
+          "productDefinitionEntity": "#953206",
+          "productEntity": "#953942",
+          "productId": "motor-shaft",
+          "productName": "motor-shaft"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-992",
+      "name": "motor-hex-nut",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953264",
+      "source": {
+        "xcafLabel": "0:1:1:98:69",
+        "nauoEntity": "#992",
+        "occurrenceId": "NAUO234",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953264",
+        "definition": {
+          "productDefinitionEntity": "#953264",
+          "productEntity": "#954000",
+          "productId": "motor-hex-nut",
+          "productName": "motor-hex-nut"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-924",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953196",
+      "source": {
+        "xcafLabel": "0:1:1:98:1",
+        "nauoEntity": "#924",
+        "occurrenceId": "NAUO166",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953196",
+        "definition": {
+          "productDefinitionEntity": "#953196",
+          "productEntity": "#953932",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-926",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953198",
+      "source": {
+        "xcafLabel": "0:1:1:98:3",
+        "nauoEntity": "#926",
+        "occurrenceId": "NAUO168",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953198",
+        "definition": {
+          "productDefinitionEntity": "#953198",
+          "productEntity": "#953934",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-927",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953199",
+      "source": {
+        "xcafLabel": "0:1:1:98:4",
+        "nauoEntity": "#927",
+        "occurrenceId": "NAUO169",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953199",
+        "definition": {
+          "productDefinitionEntity": "#953199",
+          "productEntity": "#953935",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-928",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953200",
+      "source": {
+        "xcafLabel": "0:1:1:98:5",
+        "nauoEntity": "#928",
+        "occurrenceId": "NAUO170",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953200",
+        "definition": {
+          "productDefinitionEntity": "#953200",
+          "productEntity": "#953936",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-931",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953203",
+      "source": {
+        "xcafLabel": "0:1:1:98:8",
+        "nauoEntity": "#931",
+        "occurrenceId": "NAUO173",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953203",
+        "definition": {
+          "productDefinitionEntity": "#953203",
+          "productEntity": "#953939",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-932",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953204",
+      "source": {
+        "xcafLabel": "0:1:1:98:9",
+        "nauoEntity": "#932",
+        "occurrenceId": "NAUO174",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953204",
+        "definition": {
+          "productDefinitionEntity": "#953204",
+          "productEntity": "#953940",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-936",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953208",
+      "source": {
+        "xcafLabel": "0:1:1:98:13",
+        "nauoEntity": "#936",
+        "occurrenceId": "NAUO178",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953208",
+        "definition": {
+          "productDefinitionEntity": "#953208",
+          "productEntity": "#953944",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-937",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953209",
+      "source": {
+        "xcafLabel": "0:1:1:98:14",
+        "nauoEntity": "#937",
+        "occurrenceId": "NAUO179",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953209",
+        "definition": {
+          "productDefinitionEntity": "#953209",
+          "productEntity": "#953945",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-939",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953211",
+      "source": {
+        "xcafLabel": "0:1:1:98:16",
+        "nauoEntity": "#939",
+        "occurrenceId": "NAUO181",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953211",
+        "definition": {
+          "productDefinitionEntity": "#953211",
+          "productEntity": "#953947",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-941",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953213",
+      "source": {
+        "xcafLabel": "0:1:1:98:18",
+        "nauoEntity": "#941",
+        "occurrenceId": "NAUO183",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953213",
+        "definition": {
+          "productDefinitionEntity": "#953213",
+          "productEntity": "#953949",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-943",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953215",
+      "source": {
+        "xcafLabel": "0:1:1:98:20",
+        "nauoEntity": "#943",
+        "occurrenceId": "NAUO185",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953215",
+        "definition": {
+          "productDefinitionEntity": "#953215",
+          "productEntity": "#953951",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-944",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953216",
+      "source": {
+        "xcafLabel": "0:1:1:98:21",
+        "nauoEntity": "#944",
+        "occurrenceId": "NAUO186",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953216",
+        "definition": {
+          "productDefinitionEntity": "#953216",
+          "productEntity": "#953952",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-945",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953217",
+      "source": {
+        "xcafLabel": "0:1:1:98:22",
+        "nauoEntity": "#945",
+        "occurrenceId": "NAUO187",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953217",
+        "definition": {
+          "productDefinitionEntity": "#953217",
+          "productEntity": "#953953",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-947",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953219",
+      "source": {
+        "xcafLabel": "0:1:1:98:24",
+        "nauoEntity": "#947",
+        "occurrenceId": "NAUO189",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953219",
+        "definition": {
+          "productDefinitionEntity": "#953219",
+          "productEntity": "#953955",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-948",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953220",
+      "source": {
+        "xcafLabel": "0:1:1:98:25",
+        "nauoEntity": "#948",
+        "occurrenceId": "NAUO190",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953220",
+        "definition": {
+          "productDefinitionEntity": "#953220",
+          "productEntity": "#953956",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-950",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953222",
+      "source": {
+        "xcafLabel": "0:1:1:98:27",
+        "nauoEntity": "#950",
+        "occurrenceId": "NAUO192",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953222",
+        "definition": {
+          "productDefinitionEntity": "#953222",
+          "productEntity": "#953958",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-951",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953223",
+      "source": {
+        "xcafLabel": "0:1:1:98:28",
+        "nauoEntity": "#951",
+        "occurrenceId": "NAUO193",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953223",
+        "definition": {
+          "productDefinitionEntity": "#953223",
+          "productEntity": "#953959",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-952",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953224",
+      "source": {
+        "xcafLabel": "0:1:1:98:29",
+        "nauoEntity": "#952",
+        "occurrenceId": "NAUO194",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953224",
+        "definition": {
+          "productDefinitionEntity": "#953224",
+          "productEntity": "#953960",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-958",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953230",
+      "source": {
+        "xcafLabel": "0:1:1:98:35",
+        "nauoEntity": "#958",
+        "occurrenceId": "NAUO200",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953230",
+        "definition": {
+          "productDefinitionEntity": "#953230",
+          "productEntity": "#953966",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-966",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953238",
+      "source": {
+        "xcafLabel": "0:1:1:98:43",
+        "nauoEntity": "#966",
+        "occurrenceId": "NAUO208",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953238",
+        "definition": {
+          "productDefinitionEntity": "#953238",
+          "productEntity": "#953974",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-968",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953240",
+      "source": {
+        "xcafLabel": "0:1:1:98:45",
+        "nauoEntity": "#968",
+        "occurrenceId": "NAUO210",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953240",
+        "definition": {
+          "productDefinitionEntity": "#953240",
+          "productEntity": "#953976",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-971",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953243",
+      "source": {
+        "xcafLabel": "0:1:1:98:48",
+        "nauoEntity": "#971",
+        "occurrenceId": "NAUO213",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953243",
+        "definition": {
+          "productDefinitionEntity": "#953243",
+          "productEntity": "#953979",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-974",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953246",
+      "source": {
+        "xcafLabel": "0:1:1:98:51",
+        "nauoEntity": "#974",
+        "occurrenceId": "NAUO216",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953246",
+        "definition": {
+          "productDefinitionEntity": "#953246",
+          "productEntity": "#953982",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-975",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953247",
+      "source": {
+        "xcafLabel": "0:1:1:98:52",
+        "nauoEntity": "#975",
+        "occurrenceId": "NAUO217",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953247",
+        "definition": {
+          "productDefinitionEntity": "#953247",
+          "productEntity": "#953983",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-980",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953252",
+      "source": {
+        "xcafLabel": "0:1:1:98:57",
+        "nauoEntity": "#980",
+        "occurrenceId": "NAUO222",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953252",
+        "definition": {
+          "productDefinitionEntity": "#953252",
+          "productEntity": "#953988",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-982",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953254",
+      "source": {
+        "xcafLabel": "0:1:1:98:59",
+        "nauoEntity": "#982",
+        "occurrenceId": "NAUO224",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953254",
+        "definition": {
+          "productDefinitionEntity": "#953254",
+          "productEntity": "#953990",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-983",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953255",
+      "source": {
+        "xcafLabel": "0:1:1:98:60",
+        "nauoEntity": "#983",
+        "occurrenceId": "NAUO225",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953255",
+        "definition": {
+          "productDefinitionEntity": "#953255",
+          "productEntity": "#953991",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-984",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953256",
+      "source": {
+        "xcafLabel": "0:1:1:98:61",
+        "nauoEntity": "#984",
+        "occurrenceId": "NAUO226",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953256",
+        "definition": {
+          "productDefinitionEntity": "#953256",
+          "productEntity": "#953992",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-985",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953257",
+      "source": {
+        "xcafLabel": "0:1:1:98:62",
+        "nauoEntity": "#985",
+        "occurrenceId": "NAUO227",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953257",
+        "definition": {
+          "productDefinitionEntity": "#953257",
+          "productEntity": "#953993",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-987",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953259",
+      "source": {
+        "xcafLabel": "0:1:1:98:64",
+        "nauoEntity": "#987",
+        "occurrenceId": "NAUO229",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953259",
+        "definition": {
+          "productDefinitionEntity": "#953259",
+          "productEntity": "#953995",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-988",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953260",
+      "source": {
+        "xcafLabel": "0:1:1:98:65",
+        "nauoEntity": "#988",
+        "occurrenceId": "NAUO230",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953260",
+        "definition": {
+          "productDefinitionEntity": "#953260",
+          "productEntity": "#953996",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-993",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953265",
+      "source": {
+        "xcafLabel": "0:1:1:98:70",
+        "nauoEntity": "#993",
+        "occurrenceId": "NAUO235",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953265",
+        "definition": {
+          "productDefinitionEntity": "#953265",
+          "productEntity": "#954001",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-995",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953267",
+      "source": {
+        "xcafLabel": "0:1:1:98:72",
+        "nauoEntity": "#995",
+        "occurrenceId": "NAUO237",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953267",
+        "definition": {
+          "productDefinitionEntity": "#953267",
+          "productEntity": "#954003",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-998",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953270",
+      "source": {
+        "xcafLabel": "0:1:1:98:75",
+        "nauoEntity": "#998",
+        "occurrenceId": "NAUO240",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953270",
+        "definition": {
+          "productDefinitionEntity": "#953270",
+          "productEntity": "#954006",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-999",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953271",
+      "source": {
+        "xcafLabel": "0:1:1:98:76",
+        "nauoEntity": "#999",
+        "occurrenceId": "NAUO241",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953271",
+        "definition": {
+          "productDefinitionEntity": "#953271",
+          "productEntity": "#954007",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-1000",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953272",
+      "source": {
+        "xcafLabel": "0:1:1:98:77",
+        "nauoEntity": "#1000",
+        "occurrenceId": "NAUO242",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953272",
+        "definition": {
+          "productDefinitionEntity": "#953272",
+          "productEntity": "#954008",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-1001",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953273",
+      "source": {
+        "xcafLabel": "0:1:1:98:78",
+        "nauoEntity": "#1001",
+        "occurrenceId": "NAUO243",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953273",
+        "definition": {
+          "productDefinitionEntity": "#953273",
+          "productEntity": "#954009",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-1003",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953275",
+      "source": {
+        "xcafLabel": "0:1:1:98:80",
+        "nauoEntity": "#1003",
+        "occurrenceId": "NAUO245",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953275",
+        "definition": {
+          "productDefinitionEntity": "#953275",
+          "productEntity": "#954011",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-1004",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953276",
+      "source": {
+        "xcafLabel": "0:1:1:98:81",
+        "nauoEntity": "#1004",
+        "occurrenceId": "NAUO246",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953276",
+        "definition": {
+          "productDefinitionEntity": "#953276",
+          "productEntity": "#954012",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-1010-1008",
+      "name": "magnet",
+      "parentId": "occ-b352183e1bd0-root-953098-1010",
+      "definitionId": "def-b352183e1bd0-953280",
+      "source": {
+        "xcafLabel": "0:1:1:98:85",
+        "nauoEntity": "#1008",
+        "occurrenceId": "NAUO250",
+        "parentDefinitionEntity": "#953195",
+        "childDefinitionEntity": "#953280",
+        "definition": {
+          "productDefinitionEntity": "#953280",
+          "productEntity": "#954016",
+          "productId": "magnet",
+          "productName": "magnet"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-767",
+      "name": "sun-gear",
+      "parentId": "occ-b352183e1bd0-root-953098",
+      "definitionId": "def-b352183e1bd0-953107",
+      "source": {
+        "xcafLabel": "0:1:1:1:9",
+        "nauoEntity": "#767",
+        "occurrenceId": "NAUO9",
+        "parentDefinitionEntity": "#953098",
+        "childDefinitionEntity": "#953107",
+        "definition": {
+          "productDefinitionEntity": "#953107",
+          "productEntity": "#953843",
+          "productId": "sun-gear",
+          "productName": "sun-gear"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    },
+    {
+      "id": "occ-b352183e1bd0-root-953098-761",
+      "name": "encoder-magnet-holder",
+      "parentId": "occ-b352183e1bd0-root-953098",
+      "definitionId": "def-b352183e1bd0-953101",
+      "source": {
+        "xcafLabel": "0:1:1:1:3",
+        "nauoEntity": "#761",
+        "occurrenceId": "NAUO3",
+        "parentDefinitionEntity": "#953098",
+        "childDefinitionEntity": "#953101",
+        "definition": {
+          "productDefinitionEntity": "#953101",
+          "productEntity": "#953837",
+          "productId": "encoder-magnet-holder",
+          "productName": "encoder-magnet-holder"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      }
+    }
+  ]
+}

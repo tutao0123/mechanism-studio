@@ -1,0 +1,783 @@
+{
+  "schemaVersion": 1,
+  "id": "wolf-pair-cues-4",
+  "route": "Explain",
+  "recordedAt": "2026-10-18T14:39:17.193Z",
+  "note": "Portable fingerprint handoff assembled from the completed v4 delivery. Declared checks are historical evidence, not newly executed by the hash checker. The 72-file capture inventory is a conservative declared input set; the helper does not discover dependency completeness.",
+  "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1",
+  "entry": {
+    "serverCommand": "node examples/wolf-actuator/serve.mjs",
+    "path": "/tour-v4/",
+    "musicCommand": "node examples/wolf-actuator/tour-v2/audio/build.mjs"
+  },
+  "moduleStages": {
+    "assemblyExplode": "validated within the inherited source/display scope",
+    "cameraDirection": "validated for retained views and sampled output sizes",
+    "materialsLighting": "validated for scoped appearance and restoration",
+    "matingCloseup": "validated phase/direction cues; no contact solver"
+  },
+  "outputFormat": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 2572,
+    "encodedDurationSeconds": 85.73333333333333,
+    "authoredDurationSeconds": 85.71428571428571
+  },
+  "captureReuse": {
+    "recapturedFrames": 391,
+    "retainedFrames": 2181,
+    "recapturedIntervalInclusive": [
+      320,
+      710
+    ],
+    "metadataOnlyChanges": [
+      {
+        "path": "examples/wolf-actuator/tour-v4/plan.json",
+        "captureSha256": "70a035569090faccc3e5e135cb1bc31348b57dbfc76044b3b10f2e35d2bbe904",
+        "finalSha256": "33d2ae83603d25488c1ca5ae2957d26ac4236ac7964a096e1f616fe8e81686d3",
+        "reason": "Delivery metadata finalized after capture; this plan is not a renderer input."
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "examples/wolf-actuator/assets/assembly.glb",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "2793c41488d07527d85e5e1f0729096739575f43ed9a5ef93ec0b37079fdd819",
+      "bytes": 15407320
+    },
+    {
+      "path": "examples/wolf-actuator/assets/scene-contract.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "d53b28547ec98351f0b0ec6cff136aaa17faff265881247e55d77a1a341e4985",
+      "bytes": 354959
+    },
+    {
+      "path": "examples/wolf-actuator/assets/scene-index.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "1cfbbffbc397a0a9d39381bd76bcdbfb4226fe51064bd2a8545938b4b0b37fc2",
+      "bytes": 496990
+    },
+    {
+      "path": "examples/wolf-actuator/bearing/annotations.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "0a38955e5ab96e5750fdb366e26e85dbaf9ef98f5ca792173a43d26933d8cdc8",
+      "bytes": 1129
+    },
+    {
+      "path": "examples/wolf-actuator/bearing/app.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "e22b94c7000c34a1bcc8ae848633d8a1585e43a3dcb9d8ee88d4de82c2177f20",
+      "bytes": 2076
+    },
+    {
+      "path": "examples/wolf-actuator/bearing/build-plans.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "9028a8b938898df47adec2c385263c1293044b39e428d3da75614e79e17aef34",
+      "bytes": 3695
+    },
+    {
+      "path": "examples/wolf-actuator/bearing/framing.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "b66ac07242a52cf0b1b8b220730a0f597629a87fad282105c019d1910dbab271",
+      "bytes": 1653
+    },
+    {
+      "path": "examples/wolf-actuator/bearing/index.html",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "3078909d360bae54ce90ca42a270e90d645a81126be56e53887f1dfdd5f67f52",
+      "bytes": 681
+    },
+    {
+      "path": "examples/wolf-actuator/bearing/music-score.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "a4ae50bbc8697a288cfb3cd4bb605b3d677df71270f3afd1270836f5c1b708cc",
+      "bytes": 74010
+    },
+    {
+      "path": "examples/wolf-actuator/bearing/plan.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "da19e29a20fef007f479390ac383e9b071df45abf537372e547ea30d517e6dc2",
+      "bytes": 87178
+    },
+    {
+      "path": "examples/wolf-actuator/bearing/review.html",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "896f8029869e2d4524e05fb238a45c0ccd9c360c934b715a4b0b30860e27fe91",
+      "bytes": 1383
+    },
+    {
+      "path": "examples/wolf-actuator/bearing/story.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "e401e115d6cd2ad56d40b36c21acee05963d39f308732b97508aa573192827ac",
+      "bytes": 9827
+    },
+    {
+      "path": "examples/wolf-actuator/detail/annotations.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "badedad4c19a694d3a96b4ce60274d9d4ad3bc7e3ed0cfdc78f73efdbfc6c8b6",
+      "bytes": 1153
+    },
+    {
+      "path": "examples/wolf-actuator/detail/app.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "6832e94721598690c849e46377df99fbed5e0691d89434f14d882a83a1242b01",
+      "bytes": 2050
+    },
+    {
+      "path": "examples/wolf-actuator/detail/build-plans.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "d86c79159f03a8ff0129240a344633aa35b191e5a6875e496565c206f004ed67",
+      "bytes": 3192
+    },
+    {
+      "path": "examples/wolf-actuator/detail/framing.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "1722a4808ae2b4ab6e6ece72ea323700e7468c7a19ae3e109658c57d9a164b8a",
+      "bytes": 8943
+    },
+    {
+      "path": "examples/wolf-actuator/detail/index.html",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "ea39b93e638e0af0c833e30ef80dce608174ea759386c2e8790681a671191e78",
+      "bytes": 682
+    },
+    {
+      "path": "examples/wolf-actuator/detail/music-score.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "12019758df435f2bb02ca76ec1847a96ff2976e11c7688c44f7949760100e9f0",
+      "bytes": 86064
+    },
+    {
+      "path": "examples/wolf-actuator/detail/plan.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "97ed4a823915044ca09490272da63b026071a79cbdcc37f90dee848482ccd970",
+      "bytes": 95235
+    },
+    {
+      "path": "examples/wolf-actuator/detail/review.html",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "07fa94da7ff4cc5e27c342144e423a8dfa13ece481634d39deec78fd7f4a396f",
+      "bytes": 1359
+    },
+    {
+      "path": "examples/wolf-actuator/detail/story.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "0a52b230a796af587890b7da4a8894f57ecf905c2569635c661b8a1eb50ca0aa",
+      "bytes": 10349
+    },
+    {
+      "path": "examples/wolf-actuator/source/provenance.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "19b3ed3cdc086f51c9fe90e93f1a6adb02d8ff156b3e2893a97231f41c19b3be",
+      "bytes": 2819
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/annotations.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "1629f9f6b18129763ef807150f58978264cd12bc0fa8ac8ae441aef3bf654884",
+      "bytes": 498
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/app.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "ec3a5a3b063c02b45e30e1f42bc4a3a006f419119556df6bddd9fc33608af30e",
+      "bytes": 2531
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/audio/tour-loop.wav",
+      "storage": "local",
+      "role": "input",
+      "sha256": "6f1afefecdcd9229fe7f80ec024b0c0d90d63c12df97398fe01279c4f0885513",
+      "bytes": 15120044
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/bearing-data.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "ca76be113315cb4ecf8372e8d781a1923ac053f3dbea9367a9cf05a6d2e4c01c",
+      "bytes": 34815
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/bearings.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "c2fe874fa1dc324e620aaec8e5a3d0c2bb225abe680b835854665603ea646bfe",
+      "bytes": 7807
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/build-plans.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "bafaadad83963cb19a871e4460dd40cd0156840825cbc2f1aadb3b85e14f0a2e",
+      "bytes": 11521
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/framing.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "94438633d98f45c1d98ddc33cc50b82982f55629b7335ee694b2ad7930dd2cc5",
+      "bytes": 4153
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/gearing.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "700588b54c71a24051a4b324c1e0c7e902a4a8348b43254a21b7c5d3c0224f3e",
+      "bytes": 7332
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/index.html",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "5f1fe5edd570968e1f0ca616039d16ade8fe650ccd135c606d856489f7442005",
+      "bytes": 496
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/kinematics.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "2d3474054e365d2551689620447a1fdbe393d0357853c68c4113d4b7f026b9a9",
+      "bytes": 1485
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/music-score.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "bf8218c47614f3584a1e9a56273e30e6c5e386ab7444616b6ec9751347d75c0b",
+      "bytes": 252551
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/plan.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "01c5bb69e98bdf40208512ff743465f6e59550ea7430d1c42a9d2976315cd894",
+      "bytes": 262383
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/review.html",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "d421fdee33f3faa72637a93c1735583c12bfc1d7bbeffe1994a702848b799cc6",
+      "bytes": 1101
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v2/story.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "63fdb68aefe11d1490042a98b2d7882f093a59917c143c5eff2dde92c81f8386",
+      "bytes": 5249
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v3/app.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "73ffd386b305ea90b4ef4a45a659bddfb5ff45141e638a81d941f062d5174133",
+      "bytes": 2557
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v3/build-plans.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "7073fe479fbb296c5bfe809815ce3e04a2283935ae6670aee34b1599c1d0d2a4",
+      "bytes": 3308
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v3/framing.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "6adc5f4fd72e0abec6bf920090b8ad3dfab39de94778109bf7b7443acb2676d9",
+      "bytes": 3174
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v3/index.html",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "63619aadc0c4a8278d20415814d7fac49386640cb8b1e572ff18eb854b69bea7",
+      "bytes": 493
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v3/plan.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "1ea37f179d8cffd84354f185287b90c4a2d973335996379a9b96741cf6665c85",
+      "bytes": 3996
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v3/review.html",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "e5b1cb0fdb6dc1e9b3a02fdb91a913d3167b5390ddff592111c408fb9b18a4c5",
+      "bytes": 1115
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v3/story.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "27f8e8fcebf588b9c08b90b3142923af48e8b7584fc180f8713bdafe7bdd4c26",
+      "bytes": 1471
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/app.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "e7dddc4b6f5cf9d782e4e81347cbf7a7d36318070a5c619721811b81f4dbed21",
+      "bytes": 2722
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/direction-cues.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "ccd007ccdecc9f6211b012f7d0fa7fa1ae29887e04121be2314c00fe34c3acf9",
+      "bytes": 5006
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/index.html",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "0aaea0fb52efd4df8e3642d4f35ef57df163279a88a55b18b85c6ce878574ec0",
+      "bytes": 491
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/pair-layer.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "035918b2145c4201e970d38fcbaab3ef7fecf5d26e216f29491c3cca348860f9",
+      "bytes": 5263
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/plan.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "33d2ae83603d25488c1ca5ae2957d26ac4236ac7964a096e1f616fe8e81686d3",
+      "bytes": 4920
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/review.html",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "60ddd42739b2f8634825153ef18b63a09520a25ad63532638c45a1c2c6f96883",
+      "bytes": 1234
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/story.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "806ca7a3d93f36228b0a3ac669a23496532d64a89316e82d3641fa2fca96317d",
+      "bytes": 603
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/tooth-phase.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "f79a8344371baf131d8a1ee7ec52890e4f02cd36827ff60e3f401cb0a51bd4da",
+      "bytes": 7032
+    },
+    {
+      "path": "examples/wolf-actuator/tour/annotations.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "0d0c669c63cbc60874ec84b82a313f365a423c2ad45ab978869fa3ff344ffd68",
+      "bytes": 2232
+    },
+    {
+      "path": "examples/wolf-actuator/tour/app.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "25708ac19cac3d68978c107c7c65a20fc6a76bc950b462b6788b22cb2b4dc88d",
+      "bytes": 2243
+    },
+    {
+      "path": "examples/wolf-actuator/tour/build-plans.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "41bb1c33f987f325a3b9832c80033a91167c8d0d681cf625717531ea702c730f",
+      "bytes": 3599
+    },
+    {
+      "path": "examples/wolf-actuator/tour/framing.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "e5865cc30a25c79e0918b33c87ae09a5a39bb92a6551330fa6365bc78f2e7f58",
+      "bytes": 7740
+    },
+    {
+      "path": "examples/wolf-actuator/tour/index.html",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "3e1a29ab01ceb7d08bcb57cf1378945ddb0c9794a1096328bfb318f77426f450",
+      "bytes": 689
+    },
+    {
+      "path": "examples/wolf-actuator/tour/kinematics.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "a912241a893bb4e4f644c24b7d35790edace81867821d4f6ea9739f0e23d9ae9",
+      "bytes": 7546
+    },
+    {
+      "path": "examples/wolf-actuator/tour/motion-evidence.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "a1517919d67dc46b01bc8097344b59af1e10db980f5618fe8880cd1079502a4c",
+      "bytes": 35779
+    },
+    {
+      "path": "examples/wolf-actuator/tour/music-score.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "e7a7d7bb56b8f671c24f6e2694226f4323b4e8b083f2a60d48d96b19516a20dd",
+      "bytes": 239978
+    },
+    {
+      "path": "examples/wolf-actuator/tour/plan.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "20662579f11d50c32ce90c0fc3abd821463efee5aecb2accf58ddccc8747047e",
+      "bytes": 229260
+    },
+    {
+      "path": "examples/wolf-actuator/tour/review.html",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "bcdd91beb6b1ea49101100ef37bb7ce99d04249136d2fd4a4f556707b75d4ad3",
+      "bytes": 1326
+    },
+    {
+      "path": "examples/wolf-actuator/tour/story.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "b0f012f2e6a085f3d5beb25480b5febaa07de9d7e54d1779bc691f476739f9d4",
+      "bytes": 10683
+    },
+    {
+      "path": "shared/appearance/color-accents.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "ed92ef9949836160ac97ad35b6d8e8a8f55391bcaef53e5ddfdf1bef9cd46cc4",
+      "bytes": 1963
+    },
+    {
+      "path": "shared/appearance/mesh-color-layer.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "366d2f260c3c74d5c07bd81063b889db4271ead205432c2f7d0931925f564b0b",
+      "bytes": 3877
+    },
+    {
+      "path": "shared/study/shell.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "3e15966c7aed96fa202e3bb66a9bed1fec6d5d504e7fd1bae955791a026d1b88",
+      "bytes": 3663
+    },
+    {
+      "path": "shared/study/study.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "9fb1f306e11f862854dc1469ed5b6b86a41a19517ce69ddb1d21e72650e3c04f",
+      "bytes": 23303
+    },
+    {
+      "path": "shared/study/style.css",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "92df24f7525e4f40e1b678df3b59704a3124a4430528ecba73648bbdd4d8f2d1",
+      "bytes": 9279
+    },
+    {
+      "path": "shared/viewer/annotation-layout.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "5294525824f9c5fbb458b1db41987de8c23ce922fa7df8927832c3fb07104baa",
+      "bytes": 3730
+    },
+    {
+      "path": "shared/viewer/example.css",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "6077567c45c7db2ac44a5c291ff888702d1d77313695c86decad3e4b45a7556e",
+      "bytes": 3627
+    },
+    {
+      "path": "shared/viewer/line-art.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "c6b8b61de789c30b3ee2e5dfa248ce2b3937c41fa5d54ec3c653acbca7711914",
+      "bytes": 12494
+    },
+    {
+      "path": "shared/viewer/scene.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "92c8744606ce811e9495555190b30384c63084790f419b803075448fb79a96de",
+      "bytes": 5554
+    },
+    {
+      "path": "shared/viewer/viewer.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "73d514d6c2a1d8ca8b4bc754560ec27e8de1cacf82703ae55f9a88f34b33bd11",
+      "bytes": 7936
+    },
+    {
+      "path": "examples/wolf-actuator/source/assembly.step",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "b352183e1bd0d55c403a6f406c3b2886a3b1b374b47cf32bcb69d4277d252e35",
+      "bytes": 88565658
+    },
+    {
+      "path": "examples/wolf-actuator/source/NOTICE.md",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "f5dc8826ffaf274f2e68e1a57f220e55d558ea80fdaf75db9e920f9db93562d1",
+      "bytes": 1216
+    },
+    {
+      "path": "examples/wolf-actuator/source/LICENSE",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "7abe19ec9bb73b36141b999b861d24ad855e808bafe0f81e84cce28556f6c297",
+      "bytes": 20131
+    },
+    {
+      "path": "package-lock.json",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "44701727183357ecbca05e50de46ac8e4a8088052b716bd6968e8ee04b13e9c6",
+      "bytes": 955
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/research/tooth-phase-probe.py",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "ced22968376e69f5cdc685d13a5d9a1ebba6882f68311d08ce9ca22e6648c522",
+      "bytes": 2656
+    },
+    {
+      "path": "examples/wolf-actuator/tests/tooth-phase-v4.test.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "01b4bba87bc20c12aa8c2e66285672780bce1c503283e6a4cf84eddbbc099bfd",
+      "bytes": 6496
+    },
+    {
+      "path": "examples/wolf-actuator/tests/pair-cues-v4.test.mjs",
+      "storage": "repository",
+      "role": "input",
+      "sha256": "2cf39a085bd1a0f50b761e6e3cd850ec2e46e1156b96c4e4336c1c9a1abf83ae",
+      "bytes": 7754
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/research/tooth-phase-evidence.md",
+      "storage": "repository",
+      "role": "evidence",
+      "sha256": "f816e0efe75532d725a2911e991f7e5e11f0b07987beba43519395eccb7dc495",
+      "bytes": 5100
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/research/tooth-phase-sections.json",
+      "storage": "repository",
+      "role": "evidence",
+      "sha256": "e1c293095ee3492d713bf01d5977bf18156f99cca00ea02ebfcf7aa7d296d2fa",
+      "bytes": 11296
+    },
+    {
+      "path": "examples/wolf-actuator/tour/research-v2/gear-evidence.md",
+      "storage": "repository",
+      "role": "evidence",
+      "sha256": "0902eae4a70f080a4f5e04d4a05cce3fccd49d2e4a4963f8d9f3c8c67af8a9c7",
+      "bytes": 4761
+    },
+    {
+      "path": "examples/wolf-actuator/tour/research-v2/bearing-evidence.md",
+      "storage": "repository",
+      "role": "evidence",
+      "sha256": "44e49493718ee38552197297f4d5ed7ec2c95ecbf14f6da9d88a41dd2653d134",
+      "bytes": 6940
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/output/delivery-review.json",
+      "storage": "local",
+      "role": "evidence",
+      "sha256": "1e0243e60bf18c515974dc2cb9a828e687a538aea71af97ee7823cc812049bdf",
+      "bytes": 5365
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/output/tests.log",
+      "storage": "local",
+      "role": "evidence",
+      "sha256": "5b98faed1cf28e4fffb36fd300fb9cbc919b67c02e5428c3f3629f71b2090410",
+      "bytes": 50401
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/output/focused-tests.log",
+      "storage": "local",
+      "role": "evidence",
+      "sha256": "4c42c3be39b7236eb3735b85c696ad676194bc0ae34b9f2231a38653bc3611c2",
+      "bytes": 961
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/output/native-playback.json",
+      "storage": "local",
+      "role": "evidence",
+      "sha256": "cb6f6d6b17d37ee0d775d1c795e589ff70fcc5b801de37c7fb72b83bcdb53758",
+      "bytes": 135
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/output/wolf-pair-cues-86s-v4-verification.json",
+      "storage": "local",
+      "role": "evidence",
+      "sha256": "5f29b1240b351060b43e336ae9ab864d5ac3738a570c9e795cc6dddca30b3f4a",
+      "bytes": 7436
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/output/capture-v4/input-manifest.json",
+      "storage": "local",
+      "role": "evidence",
+      "sha256": "600593d56b92dc0655bc9db240d199dff913673a6523c5b4c84fad79e5537a8c",
+      "bytes": 11919
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/output/capture-v4/capture-verification.json",
+      "storage": "local",
+      "role": "evidence",
+      "sha256": "e12a5d22fa794cd46a241932489b1cc8f03956814fd473a781765c5115afacb2",
+      "bytes": 719
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/output/capture-v4/outside-equivalence.json",
+      "storage": "local",
+      "role": "evidence",
+      "sha256": "c9c3ae0a7fbf30cdbb2296b2772d59244d8abb8fafaba198ff253a3fb7a35d24",
+      "bytes": 389
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/output/capture-v4/responsive-preservation.json",
+      "storage": "local",
+      "role": "evidence",
+      "sha256": "4779e91ac4417a28da78a8d0abe6f08928f9ed544fe137bcea94d65bc7750132",
+      "bytes": 187
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/output/orbit-640.jpg",
+      "storage": "local",
+      "role": "evidence",
+      "sha256": "2284f5232acf51667f560d64476c61cf5259a97457e96610d40f52cc4bba459d",
+      "bytes": 17471
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/output/spin-960.jpg",
+      "storage": "local",
+      "role": "evidence",
+      "sha256": "894c5ff64852864cd6758d104dd5baf9852d4cd0be2b807e4006592146613edf",
+      "bytes": 32516
+    },
+    {
+      "path": "examples/wolf-actuator/tour-v4/output/wolf-pair-cues-86s-v4.mp4",
+      "storage": "local",
+      "role": "artifact",
+      "sha256": "88fbadcd191b6dd857353701a000ca1b692101d05b26936bed45e7b01bc2b76f",
+      "bytes": 28188358
+    }
+  ],
+  "checks": [
+    {
+      "id": "source-phase",
+      "status": "limited",
+      "summary": "Measured tessellated tooth sections and source-based gear/bearing evidence; exact contact parameters and source ratio discrepancy remain unresolved.",
+      "evidence": [
+        "examples/wolf-actuator/tour-v4/research/tooth-phase-evidence.md",
+        "examples/wolf-actuator/tour-v4/research/tooth-phase-sections.json",
+        "examples/wolf-actuator/tour/research-v2/gear-evidence.md",
+        "examples/wolf-actuator/tour/research-v2/bearing-evidence.md"
+      ]
+    },
+    {
+      "id": "historical-automated-tests",
+      "status": "passed",
+      "summary": "The completed v4 delivery records 502 passing suite tests and 8 focused checks; these counts describe that run, not future repository changes.",
+      "evidence": [
+        "examples/wolf-actuator/tour-v4/output/tests.log",
+        "examples/wolf-actuator/tour-v4/output/focused-tests.log"
+      ]
+    },
+    {
+      "id": "capture-reuse",
+      "status": "limited",
+      "summary": "391 recaptured frames and 2181 retained frames. Five boundaries match exactly; an outside sample has small rasterization differences, as recorded.",
+      "evidence": [
+        "examples/wolf-actuator/tour-v4/output/capture-v4/input-manifest.json",
+        "examples/wolf-actuator/tour-v4/output/capture-v4/capture-verification.json",
+        "examples/wolf-actuator/tour-v4/output/capture-v4/outside-equivalence.json",
+        "examples/wolf-actuator/tour-v4/output/capture-v4/responsive-preservation.json"
+      ]
+    },
+    {
+      "id": "native-loop",
+      "status": "limited",
+      "summary": "Recorded 26 loops with 67258 total frames, 1 dropped frame, 0 corrupt frames and no reported media errors.",
+      "evidence": [
+        "examples/wolf-actuator/tour-v4/output/native-playback.json"
+      ]
+    },
+    {
+      "id": "encoded-delivery",
+      "status": "passed",
+      "summary": "Exporter recorded 1920x1080 H.264/AAC, 2572 frames and successful full decode with no listed failures.",
+      "evidence": [
+        "examples/wolf-actuator/tour-v4/output/wolf-pair-cues-86s-v4-verification.json"
+      ]
+    },
+    {
+      "id": "encoded-reading-review",
+      "status": "passed",
+      "summary": "Authoring-agent visual review of the 640px orbit and 960px spin details; this claim is recorded, not inferred from image hashes.",
+      "evidence": [
+        "examples/wolf-actuator/tour-v4/output/orbit-640.jpg",
+        "examples/wolf-actuator/tour-v4/output/spin-960.jpg",
+        "examples/wolf-actuator/tour-v4/output/delivery-review.json"
+      ]
+    },
+    {
+      "id": "subjective-listening",
+      "status": "not-run",
+      "summary": "No new subjective listening review; the previously retained original score was reused without resynthesis.",
+      "evidence": []
+    }
+  ],
+  "limitations": [
+    "Source-bound tooth phase and direction marks are explanatory cues, not computed loaded tooth-flank contact.",
+    "Retained CAD implies reverse 31.5:1; upstream 34:1 discrepancy remains unresolved.",
+    "Inherited ideal kinematic and crossed-roller assumptions remain.",
+    "No new subjective listening or force/backlash/deformation/collision validation is claimed.",
+    "A fresh checkout intentionally lacks ignored local music, films and raw review files; run the documented music builder for playback.",
+    "The manifest checks listed file integrity and evidence availability only. It does not certify mechanical validity, visual quality, complete dependencies, public distribution rights or remote publication."
+  ]
+}

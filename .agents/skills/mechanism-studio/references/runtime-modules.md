@@ -13,6 +13,7 @@ The [input brief](input-brief.md) and [module handoffs](module-orchestration.md)
 | Reversible chapter color accents | [shared/appearance](../../../../shared/appearance/README.md) | Same-clock actual part cues |
 | Music-led assembly study, near labels, capture transport | [shared/study](../../../../shared/study/README.md) | Thin timeline/index/framing/annotation/offset/score adapter |
 | Captured frames + verified track → MP4 | [tools/video](../../../../tools/video/README.md) | Actual input paths/counts and reviewed output; the tool does not capture or publish |
+| Input/report/output fingerprint handoff | [delivery evidence](delivery-evidence.md), [checker](../../../../scripts/check-delivery.mjs) | Declared paths, hashes, check scope and storage; the helper checks integrity and availability, not report truth or publication |
 | Optional provider-neutral speech API; existing Doubao lesson/digest/browser playback | [shared/voice](../../../../shared/voice/README.md) | Text, explicit speech model/voice/endpoint, media-clock binding; old lesson integration stays separate |
 | GLB/accessor/units/identity/hierarchy/rest/ownership checks | [shared/assets](../../../../shared/assets/README.md) | Mechanism length/phase/contact/mapping invariants |
 | Definition/occurrence identity, tree selection, hide/isolate | [shared/cad](../../../../shared/cad/README.md) | Actual XCAF graph/provenance/matrices and page layout |
@@ -42,4 +43,4 @@ The voice player owns narrative playback, not mechanical judgments. Example inpu
 
 Checks cannot restore engineering fields lost during import. Keep legacy compatibility limited; new assets declare canonical identity, actual parents and motionOwner. Root npm test aggregates appropriate checks; it does not call paid synthesis or publish remotely.
 
-Public packaging retains code-generated WAV music and text/manifests/CLI for narration. Generated Doubao MP3s and local .blend exports may exist locally but are excluded from the public Git package; do not claim they are shipped. Rebuild Blender assets using their source builders, and generate speech only with the user's own authorized account and applicable service terms.
+Public packaging retains code-music builders, selected WAVs and text/manifests/CLI for narration. The WOLF v2–v4 long score is generated locally with `node examples/wolf-actuator/tour-v2/audio/build.mjs`; its WAV is ignored. Generated Doubao MP3s and local .blend exports may also exist locally but are excluded from the public Git package; do not claim they are shipped. Rebuild Blender assets using their source builders, and generate speech only with the user's own authorized account and applicable service terms.

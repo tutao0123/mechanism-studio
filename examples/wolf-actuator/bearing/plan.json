@@ -1,0 +1,3581 @@
+{
+  "schemaVersion": "1.1.0",
+  "stage": "bound",
+  "planRevision": "wolf-bearing-study-1",
+  "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1",
+  "sourceSHA256": "b352183e1bd0d55c403a6f406c3b2886a3b1b374b47cf32bcb69d4277d252e35",
+  "sourceComponentId": "occ-b352183e1bd0-root-953098-923",
+  "sourceComponentName": "bearing-assembly-A <1>",
+  "sourcePartCount": 70,
+  "sourceGroups": {
+    "namedOuterRing": 1,
+    "largerGenericPartN": 3,
+    "smallerGenericPartN": 66
+  },
+  "identityPolicy": "Original occurrence identities, geometry and parents. Part 1 is translated into observation space and magnified by the camera; no clone, mesh scale or inferred functional name.",
+  "durationSeconds": 34.285714285714285,
+  "bpm": 112,
+  "chapters": [
+    {
+      "id": "whole",
+      "firstBeat": 0,
+      "lastBeat": 6,
+      "title": "Inside a robot joint.",
+      "copy": "From the WOLF actuator to one of its bearing assemblies.",
+      "labels": [
+        [
+          "occ-b352183e1bd0-root-953098-763",
+          "Front plate"
+        ]
+      ]
+    },
+    {
+      "id": "bearing",
+      "firstBeat": 6,
+      "lastBeat": 16,
+      "title": "Seventy connected parts.",
+      "copy": "The outer ring and three larger components separate in sequence.",
+      "labels": [
+        [
+          "occ-b352183e1bd0-root-953098-923-852-851",
+          "Outer ring A"
+        ],
+        [
+          "occ-b352183e1bd0-root-953098-923-922-861",
+          "Part 59"
+        ]
+      ]
+    },
+    {
+      "id": "repeats",
+      "firstBeat": 16,
+      "lastBeat": 28,
+      "title": "A ring of small details.",
+      "copy": "Sixty-six small components open around the centre.",
+      "labels": [
+        [
+          "occ-b352183e1bd0-root-953098-923-922-864",
+          "Part 1"
+        ]
+      ]
+    },
+    {
+      "id": "component",
+      "firstBeat": 28,
+      "lastBeat": 38,
+      "title": "One component, up close.",
+      "copy": "The original Part 1, isolated from its ring.",
+      "labels": [
+        [
+          "occ-b352183e1bd0-root-953098-923-922-864",
+          "Part 1"
+        ]
+      ]
+    },
+    {
+      "id": "return",
+      "firstBeat": 38,
+      "lastBeat": 60,
+      "title": "Every part finds its place.",
+      "copy": "Small components return first. The larger layers follow.",
+      "labels": [
+        [
+          "occ-b352183e1bd0-root-953098-923-852-851",
+          "Outer ring A"
+        ]
+      ]
+    },
+    {
+      "id": "resolve",
+      "firstBeat": 60,
+      "lastBeat": 64,
+      "title": "Back in the WOLF assembly.",
+      "copy": "One bearing. Seventy original components.",
+      "labels": [
+        [
+          "occ-b352183e1bd0-root-953098-763",
+          "Front plate"
+        ]
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "outer-ring",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-852-851"
+      ],
+      "outBeat": 6,
+      "outEndBeat": 8.4,
+      "inBeat": 55,
+      "inEndBeat": 57.4,
+      "kind": "hardware",
+      "family": "bearing-layers"
+    },
+    {
+      "id": "part-69",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-895"
+      ],
+      "outBeat": 9,
+      "outEndBeat": 11.4,
+      "inBeat": 52,
+      "inEndBeat": 54.4,
+      "kind": "hardware",
+      "family": "bearing-layers"
+    },
+    {
+      "id": "part-59",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-861"
+      ],
+      "outBeat": 11,
+      "outEndBeat": 13,
+      "inBeat": 48,
+      "inEndBeat": 50,
+      "kind": "hardware",
+      "family": "bearing-layers"
+    },
+    {
+      "id": "part-62",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-911"
+      ],
+      "outBeat": 13,
+      "outEndBeat": 15.5,
+      "inBeat": 44.5,
+      "inEndBeat": 47,
+      "kind": "hardware",
+      "family": "bearing-layers"
+    },
+    {
+      "id": "small-sector-1",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-873",
+        "occ-b352183e1bd0-root-953098-923-922-888",
+        "occ-b352183e1bd0-root-953098-923-922-879",
+        "occ-b352183e1bd0-root-953098-923-922-901",
+        "occ-b352183e1bd0-root-953098-923-922-870",
+        "occ-b352183e1bd0-root-953098-923-922-892",
+        "occ-b352183e1bd0-root-953098-923-922-863",
+        "occ-b352183e1bd0-root-953098-923-922-886",
+        "occ-b352183e1bd0-root-953098-923-922-880",
+        "occ-b352183e1bd0-root-953098-923-922-881",
+        "occ-b352183e1bd0-root-953098-923-922-902",
+        "occ-b352183e1bd0-root-953098-923-922-921",
+        "occ-b352183e1bd0-root-953098-923-922-855",
+        "occ-b352183e1bd0-root-953098-923-922-914",
+        "occ-b352183e1bd0-root-953098-923-922-885",
+        "occ-b352183e1bd0-root-953098-923-922-875",
+        "occ-b352183e1bd0-root-953098-923-922-903"
+      ],
+      "outBeat": 16,
+      "outEndBeat": 17.85,
+      "inBeat": 38,
+      "inEndBeat": 39.85,
+      "kind": "repeat",
+      "family": "bearing-small-parts"
+    },
+    {
+      "id": "small-sector-2",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-915",
+        "occ-b352183e1bd0-root-953098-923-922-853",
+        "occ-b352183e1bd0-root-953098-923-922-887",
+        "occ-b352183e1bd0-root-953098-923-922-908",
+        "occ-b352183e1bd0-root-953098-923-922-896",
+        "occ-b352183e1bd0-root-953098-923-922-917",
+        "occ-b352183e1bd0-root-953098-923-922-856",
+        "occ-b352183e1bd0-root-953098-923-922-897",
+        "occ-b352183e1bd0-root-953098-923-922-916",
+        "occ-b352183e1bd0-root-953098-923-922-876",
+        "occ-b352183e1bd0-root-953098-923-922-883",
+        "occ-b352183e1bd0-root-953098-923-922-900",
+        "occ-b352183e1bd0-root-953098-923-922-869",
+        "occ-b352183e1bd0-root-953098-923-922-882",
+        "occ-b352183e1bd0-root-953098-923-922-867",
+        "occ-b352183e1bd0-root-953098-923-922-884",
+        "occ-b352183e1bd0-root-953098-923-922-907"
+      ],
+      "outBeat": 17.45,
+      "outEndBeat": 19.3,
+      "inBeat": 38.95,
+      "inEndBeat": 40.800000000000004,
+      "kind": "repeat",
+      "family": "bearing-small-parts"
+    },
+    {
+      "id": "small-sector-3",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-874",
+        "occ-b352183e1bd0-root-953098-923-922-864",
+        "occ-b352183e1bd0-root-953098-923-922-913",
+        "occ-b352183e1bd0-root-953098-923-922-894",
+        "occ-b352183e1bd0-root-953098-923-922-905",
+        "occ-b352183e1bd0-root-953098-923-922-857",
+        "occ-b352183e1bd0-root-953098-923-922-872",
+        "occ-b352183e1bd0-root-953098-923-922-862",
+        "occ-b352183e1bd0-root-953098-923-922-909",
+        "occ-b352183e1bd0-root-953098-923-922-865",
+        "occ-b352183e1bd0-root-953098-923-922-904",
+        "occ-b352183e1bd0-root-953098-923-922-899",
+        "occ-b352183e1bd0-root-953098-923-922-877",
+        "occ-b352183e1bd0-root-953098-923-922-910",
+        "occ-b352183e1bd0-root-953098-923-922-920",
+        "occ-b352183e1bd0-root-953098-923-922-890"
+      ],
+      "outBeat": 18.9,
+      "outEndBeat": 20.75,
+      "inBeat": 39.9,
+      "inEndBeat": 41.75,
+      "kind": "repeat",
+      "family": "bearing-small-parts"
+    },
+    {
+      "id": "small-sector-4",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-891",
+        "occ-b352183e1bd0-root-953098-923-922-866",
+        "occ-b352183e1bd0-root-953098-923-922-889",
+        "occ-b352183e1bd0-root-953098-923-922-871",
+        "occ-b352183e1bd0-root-953098-923-922-859",
+        "occ-b352183e1bd0-root-953098-923-922-878",
+        "occ-b352183e1bd0-root-953098-923-922-906",
+        "occ-b352183e1bd0-root-953098-923-922-898",
+        "occ-b352183e1bd0-root-953098-923-922-919",
+        "occ-b352183e1bd0-root-953098-923-922-893",
+        "occ-b352183e1bd0-root-953098-923-922-912",
+        "occ-b352183e1bd0-root-953098-923-922-858",
+        "occ-b352183e1bd0-root-953098-923-922-860",
+        "occ-b352183e1bd0-root-953098-923-922-918",
+        "occ-b352183e1bd0-root-953098-923-922-868",
+        "occ-b352183e1bd0-root-953098-923-922-854"
+      ],
+      "outBeat": 20.35,
+      "outEndBeat": 22.200000000000003,
+      "inBeat": 40.85,
+      "inEndBeat": 42.7,
+      "kind": "repeat",
+      "family": "bearing-small-parts"
+    }
+  ],
+  "motionEvents": [
+    {
+      "id": "outer-ring-explode",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-852-851"
+      ],
+      "startBeat": 6,
+      "endBeat": 8.4,
+      "phase": "explode",
+      "kind": "hardware",
+      "family": "bearing-layers",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-852-851"
+      ],
+      "firstBeat": 6,
+      "lastBeat": 8.4
+    },
+    {
+      "id": "part-69-explode",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-895"
+      ],
+      "startBeat": 9,
+      "endBeat": 11.4,
+      "phase": "explode",
+      "kind": "hardware",
+      "family": "bearing-layers",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-895"
+      ],
+      "firstBeat": 9,
+      "lastBeat": 11.4
+    },
+    {
+      "id": "part-59-explode",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-861"
+      ],
+      "startBeat": 11,
+      "endBeat": 13,
+      "phase": "explode",
+      "kind": "hardware",
+      "family": "bearing-layers",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-861"
+      ],
+      "firstBeat": 11,
+      "lastBeat": 13
+    },
+    {
+      "id": "part-62-explode",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-911"
+      ],
+      "startBeat": 13,
+      "endBeat": 15.5,
+      "phase": "explode",
+      "kind": "hardware",
+      "family": "bearing-layers",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-911"
+      ],
+      "firstBeat": 13,
+      "lastBeat": 15.5
+    },
+    {
+      "id": "small-sector-1-explode",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-873",
+        "occ-b352183e1bd0-root-953098-923-922-888",
+        "occ-b352183e1bd0-root-953098-923-922-879",
+        "occ-b352183e1bd0-root-953098-923-922-901",
+        "occ-b352183e1bd0-root-953098-923-922-870",
+        "occ-b352183e1bd0-root-953098-923-922-892",
+        "occ-b352183e1bd0-root-953098-923-922-863",
+        "occ-b352183e1bd0-root-953098-923-922-886",
+        "occ-b352183e1bd0-root-953098-923-922-880",
+        "occ-b352183e1bd0-root-953098-923-922-881",
+        "occ-b352183e1bd0-root-953098-923-922-902",
+        "occ-b352183e1bd0-root-953098-923-922-921",
+        "occ-b352183e1bd0-root-953098-923-922-855",
+        "occ-b352183e1bd0-root-953098-923-922-914",
+        "occ-b352183e1bd0-root-953098-923-922-885",
+        "occ-b352183e1bd0-root-953098-923-922-875",
+        "occ-b352183e1bd0-root-953098-923-922-903"
+      ],
+      "startBeat": 16,
+      "endBeat": 17.85,
+      "phase": "explode",
+      "kind": "repeat",
+      "family": "bearing-small-parts",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-873",
+        "occ-b352183e1bd0-root-953098-923-922-888",
+        "occ-b352183e1bd0-root-953098-923-922-879",
+        "occ-b352183e1bd0-root-953098-923-922-901",
+        "occ-b352183e1bd0-root-953098-923-922-870",
+        "occ-b352183e1bd0-root-953098-923-922-892",
+        "occ-b352183e1bd0-root-953098-923-922-863",
+        "occ-b352183e1bd0-root-953098-923-922-886",
+        "occ-b352183e1bd0-root-953098-923-922-880",
+        "occ-b352183e1bd0-root-953098-923-922-881",
+        "occ-b352183e1bd0-root-953098-923-922-902",
+        "occ-b352183e1bd0-root-953098-923-922-921",
+        "occ-b352183e1bd0-root-953098-923-922-855",
+        "occ-b352183e1bd0-root-953098-923-922-914",
+        "occ-b352183e1bd0-root-953098-923-922-885",
+        "occ-b352183e1bd0-root-953098-923-922-875",
+        "occ-b352183e1bd0-root-953098-923-922-903"
+      ],
+      "firstBeat": 16,
+      "lastBeat": 17.85
+    },
+    {
+      "id": "small-sector-2-explode",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-915",
+        "occ-b352183e1bd0-root-953098-923-922-853",
+        "occ-b352183e1bd0-root-953098-923-922-887",
+        "occ-b352183e1bd0-root-953098-923-922-908",
+        "occ-b352183e1bd0-root-953098-923-922-896",
+        "occ-b352183e1bd0-root-953098-923-922-917",
+        "occ-b352183e1bd0-root-953098-923-922-856",
+        "occ-b352183e1bd0-root-953098-923-922-897",
+        "occ-b352183e1bd0-root-953098-923-922-916",
+        "occ-b352183e1bd0-root-953098-923-922-876",
+        "occ-b352183e1bd0-root-953098-923-922-883",
+        "occ-b352183e1bd0-root-953098-923-922-900",
+        "occ-b352183e1bd0-root-953098-923-922-869",
+        "occ-b352183e1bd0-root-953098-923-922-882",
+        "occ-b352183e1bd0-root-953098-923-922-867",
+        "occ-b352183e1bd0-root-953098-923-922-884",
+        "occ-b352183e1bd0-root-953098-923-922-907"
+      ],
+      "startBeat": 17.45,
+      "endBeat": 19.3,
+      "phase": "explode",
+      "kind": "repeat",
+      "family": "bearing-small-parts",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-915",
+        "occ-b352183e1bd0-root-953098-923-922-853",
+        "occ-b352183e1bd0-root-953098-923-922-887",
+        "occ-b352183e1bd0-root-953098-923-922-908",
+        "occ-b352183e1bd0-root-953098-923-922-896",
+        "occ-b352183e1bd0-root-953098-923-922-917",
+        "occ-b352183e1bd0-root-953098-923-922-856",
+        "occ-b352183e1bd0-root-953098-923-922-897",
+        "occ-b352183e1bd0-root-953098-923-922-916",
+        "occ-b352183e1bd0-root-953098-923-922-876",
+        "occ-b352183e1bd0-root-953098-923-922-883",
+        "occ-b352183e1bd0-root-953098-923-922-900",
+        "occ-b352183e1bd0-root-953098-923-922-869",
+        "occ-b352183e1bd0-root-953098-923-922-882",
+        "occ-b352183e1bd0-root-953098-923-922-867",
+        "occ-b352183e1bd0-root-953098-923-922-884",
+        "occ-b352183e1bd0-root-953098-923-922-907"
+      ],
+      "firstBeat": 17.45,
+      "lastBeat": 19.3
+    },
+    {
+      "id": "small-sector-3-explode",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-874",
+        "occ-b352183e1bd0-root-953098-923-922-864",
+        "occ-b352183e1bd0-root-953098-923-922-913",
+        "occ-b352183e1bd0-root-953098-923-922-894",
+        "occ-b352183e1bd0-root-953098-923-922-905",
+        "occ-b352183e1bd0-root-953098-923-922-857",
+        "occ-b352183e1bd0-root-953098-923-922-872",
+        "occ-b352183e1bd0-root-953098-923-922-862",
+        "occ-b352183e1bd0-root-953098-923-922-909",
+        "occ-b352183e1bd0-root-953098-923-922-865",
+        "occ-b352183e1bd0-root-953098-923-922-904",
+        "occ-b352183e1bd0-root-953098-923-922-899",
+        "occ-b352183e1bd0-root-953098-923-922-877",
+        "occ-b352183e1bd0-root-953098-923-922-910",
+        "occ-b352183e1bd0-root-953098-923-922-920",
+        "occ-b352183e1bd0-root-953098-923-922-890"
+      ],
+      "startBeat": 18.9,
+      "endBeat": 20.75,
+      "phase": "explode",
+      "kind": "repeat",
+      "family": "bearing-small-parts",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-874",
+        "occ-b352183e1bd0-root-953098-923-922-864",
+        "occ-b352183e1bd0-root-953098-923-922-913",
+        "occ-b352183e1bd0-root-953098-923-922-894",
+        "occ-b352183e1bd0-root-953098-923-922-905",
+        "occ-b352183e1bd0-root-953098-923-922-857",
+        "occ-b352183e1bd0-root-953098-923-922-872",
+        "occ-b352183e1bd0-root-953098-923-922-862",
+        "occ-b352183e1bd0-root-953098-923-922-909",
+        "occ-b352183e1bd0-root-953098-923-922-865",
+        "occ-b352183e1bd0-root-953098-923-922-904",
+        "occ-b352183e1bd0-root-953098-923-922-899",
+        "occ-b352183e1bd0-root-953098-923-922-877",
+        "occ-b352183e1bd0-root-953098-923-922-910",
+        "occ-b352183e1bd0-root-953098-923-922-920",
+        "occ-b352183e1bd0-root-953098-923-922-890"
+      ],
+      "firstBeat": 18.9,
+      "lastBeat": 20.75
+    },
+    {
+      "id": "small-sector-4-explode",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-891",
+        "occ-b352183e1bd0-root-953098-923-922-866",
+        "occ-b352183e1bd0-root-953098-923-922-889",
+        "occ-b352183e1bd0-root-953098-923-922-871",
+        "occ-b352183e1bd0-root-953098-923-922-859",
+        "occ-b352183e1bd0-root-953098-923-922-878",
+        "occ-b352183e1bd0-root-953098-923-922-906",
+        "occ-b352183e1bd0-root-953098-923-922-898",
+        "occ-b352183e1bd0-root-953098-923-922-919",
+        "occ-b352183e1bd0-root-953098-923-922-893",
+        "occ-b352183e1bd0-root-953098-923-922-912",
+        "occ-b352183e1bd0-root-953098-923-922-858",
+        "occ-b352183e1bd0-root-953098-923-922-860",
+        "occ-b352183e1bd0-root-953098-923-922-918",
+        "occ-b352183e1bd0-root-953098-923-922-868",
+        "occ-b352183e1bd0-root-953098-923-922-854"
+      ],
+      "startBeat": 20.35,
+      "endBeat": 22.200000000000003,
+      "phase": "explode",
+      "kind": "repeat",
+      "family": "bearing-small-parts",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-891",
+        "occ-b352183e1bd0-root-953098-923-922-866",
+        "occ-b352183e1bd0-root-953098-923-922-889",
+        "occ-b352183e1bd0-root-953098-923-922-871",
+        "occ-b352183e1bd0-root-953098-923-922-859",
+        "occ-b352183e1bd0-root-953098-923-922-878",
+        "occ-b352183e1bd0-root-953098-923-922-906",
+        "occ-b352183e1bd0-root-953098-923-922-898",
+        "occ-b352183e1bd0-root-953098-923-922-919",
+        "occ-b352183e1bd0-root-953098-923-922-893",
+        "occ-b352183e1bd0-root-953098-923-922-912",
+        "occ-b352183e1bd0-root-953098-923-922-858",
+        "occ-b352183e1bd0-root-953098-923-922-860",
+        "occ-b352183e1bd0-root-953098-923-922-918",
+        "occ-b352183e1bd0-root-953098-923-922-868",
+        "occ-b352183e1bd0-root-953098-923-922-854"
+      ],
+      "firstBeat": 20.35,
+      "lastBeat": 22.200000000000003
+    },
+    {
+      "id": "part-1-inspect-out",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-864"
+      ],
+      "startBeat": 28,
+      "endBeat": 30.5,
+      "phase": "inspect-out",
+      "kind": "inspection",
+      "family": "bearing-focus",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-864"
+      ],
+      "firstBeat": 28,
+      "lastBeat": 30.5
+    },
+    {
+      "id": "part-1-inspect-in",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-864"
+      ],
+      "startBeat": 35.3,
+      "endBeat": 38,
+      "phase": "inspect-in",
+      "kind": "inspection",
+      "family": "bearing-focus",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-864"
+      ],
+      "firstBeat": 35.3,
+      "lastBeat": 38
+    },
+    {
+      "id": "small-sector-1-reassemble",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-873",
+        "occ-b352183e1bd0-root-953098-923-922-888",
+        "occ-b352183e1bd0-root-953098-923-922-879",
+        "occ-b352183e1bd0-root-953098-923-922-901",
+        "occ-b352183e1bd0-root-953098-923-922-870",
+        "occ-b352183e1bd0-root-953098-923-922-892",
+        "occ-b352183e1bd0-root-953098-923-922-863",
+        "occ-b352183e1bd0-root-953098-923-922-886",
+        "occ-b352183e1bd0-root-953098-923-922-880",
+        "occ-b352183e1bd0-root-953098-923-922-881",
+        "occ-b352183e1bd0-root-953098-923-922-902",
+        "occ-b352183e1bd0-root-953098-923-922-921",
+        "occ-b352183e1bd0-root-953098-923-922-855",
+        "occ-b352183e1bd0-root-953098-923-922-914",
+        "occ-b352183e1bd0-root-953098-923-922-885",
+        "occ-b352183e1bd0-root-953098-923-922-875",
+        "occ-b352183e1bd0-root-953098-923-922-903"
+      ],
+      "startBeat": 38,
+      "endBeat": 39.85,
+      "phase": "reassemble",
+      "kind": "repeat",
+      "family": "bearing-small-parts",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-873",
+        "occ-b352183e1bd0-root-953098-923-922-888",
+        "occ-b352183e1bd0-root-953098-923-922-879",
+        "occ-b352183e1bd0-root-953098-923-922-901",
+        "occ-b352183e1bd0-root-953098-923-922-870",
+        "occ-b352183e1bd0-root-953098-923-922-892",
+        "occ-b352183e1bd0-root-953098-923-922-863",
+        "occ-b352183e1bd0-root-953098-923-922-886",
+        "occ-b352183e1bd0-root-953098-923-922-880",
+        "occ-b352183e1bd0-root-953098-923-922-881",
+        "occ-b352183e1bd0-root-953098-923-922-902",
+        "occ-b352183e1bd0-root-953098-923-922-921",
+        "occ-b352183e1bd0-root-953098-923-922-855",
+        "occ-b352183e1bd0-root-953098-923-922-914",
+        "occ-b352183e1bd0-root-953098-923-922-885",
+        "occ-b352183e1bd0-root-953098-923-922-875",
+        "occ-b352183e1bd0-root-953098-923-922-903"
+      ],
+      "firstBeat": 38,
+      "lastBeat": 39.85
+    },
+    {
+      "id": "small-sector-2-reassemble",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-915",
+        "occ-b352183e1bd0-root-953098-923-922-853",
+        "occ-b352183e1bd0-root-953098-923-922-887",
+        "occ-b352183e1bd0-root-953098-923-922-908",
+        "occ-b352183e1bd0-root-953098-923-922-896",
+        "occ-b352183e1bd0-root-953098-923-922-917",
+        "occ-b352183e1bd0-root-953098-923-922-856",
+        "occ-b352183e1bd0-root-953098-923-922-897",
+        "occ-b352183e1bd0-root-953098-923-922-916",
+        "occ-b352183e1bd0-root-953098-923-922-876",
+        "occ-b352183e1bd0-root-953098-923-922-883",
+        "occ-b352183e1bd0-root-953098-923-922-900",
+        "occ-b352183e1bd0-root-953098-923-922-869",
+        "occ-b352183e1bd0-root-953098-923-922-882",
+        "occ-b352183e1bd0-root-953098-923-922-867",
+        "occ-b352183e1bd0-root-953098-923-922-884",
+        "occ-b352183e1bd0-root-953098-923-922-907"
+      ],
+      "startBeat": 38.95,
+      "endBeat": 40.800000000000004,
+      "phase": "reassemble",
+      "kind": "repeat",
+      "family": "bearing-small-parts",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-915",
+        "occ-b352183e1bd0-root-953098-923-922-853",
+        "occ-b352183e1bd0-root-953098-923-922-887",
+        "occ-b352183e1bd0-root-953098-923-922-908",
+        "occ-b352183e1bd0-root-953098-923-922-896",
+        "occ-b352183e1bd0-root-953098-923-922-917",
+        "occ-b352183e1bd0-root-953098-923-922-856",
+        "occ-b352183e1bd0-root-953098-923-922-897",
+        "occ-b352183e1bd0-root-953098-923-922-916",
+        "occ-b352183e1bd0-root-953098-923-922-876",
+        "occ-b352183e1bd0-root-953098-923-922-883",
+        "occ-b352183e1bd0-root-953098-923-922-900",
+        "occ-b352183e1bd0-root-953098-923-922-869",
+        "occ-b352183e1bd0-root-953098-923-922-882",
+        "occ-b352183e1bd0-root-953098-923-922-867",
+        "occ-b352183e1bd0-root-953098-923-922-884",
+        "occ-b352183e1bd0-root-953098-923-922-907"
+      ],
+      "firstBeat": 38.95,
+      "lastBeat": 40.800000000000004
+    },
+    {
+      "id": "small-sector-3-reassemble",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-874",
+        "occ-b352183e1bd0-root-953098-923-922-864",
+        "occ-b352183e1bd0-root-953098-923-922-913",
+        "occ-b352183e1bd0-root-953098-923-922-894",
+        "occ-b352183e1bd0-root-953098-923-922-905",
+        "occ-b352183e1bd0-root-953098-923-922-857",
+        "occ-b352183e1bd0-root-953098-923-922-872",
+        "occ-b352183e1bd0-root-953098-923-922-862",
+        "occ-b352183e1bd0-root-953098-923-922-909",
+        "occ-b352183e1bd0-root-953098-923-922-865",
+        "occ-b352183e1bd0-root-953098-923-922-904",
+        "occ-b352183e1bd0-root-953098-923-922-899",
+        "occ-b352183e1bd0-root-953098-923-922-877",
+        "occ-b352183e1bd0-root-953098-923-922-910",
+        "occ-b352183e1bd0-root-953098-923-922-920",
+        "occ-b352183e1bd0-root-953098-923-922-890"
+      ],
+      "startBeat": 39.9,
+      "endBeat": 41.75,
+      "phase": "reassemble",
+      "kind": "repeat",
+      "family": "bearing-small-parts",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-874",
+        "occ-b352183e1bd0-root-953098-923-922-864",
+        "occ-b352183e1bd0-root-953098-923-922-913",
+        "occ-b352183e1bd0-root-953098-923-922-894",
+        "occ-b352183e1bd0-root-953098-923-922-905",
+        "occ-b352183e1bd0-root-953098-923-922-857",
+        "occ-b352183e1bd0-root-953098-923-922-872",
+        "occ-b352183e1bd0-root-953098-923-922-862",
+        "occ-b352183e1bd0-root-953098-923-922-909",
+        "occ-b352183e1bd0-root-953098-923-922-865",
+        "occ-b352183e1bd0-root-953098-923-922-904",
+        "occ-b352183e1bd0-root-953098-923-922-899",
+        "occ-b352183e1bd0-root-953098-923-922-877",
+        "occ-b352183e1bd0-root-953098-923-922-910",
+        "occ-b352183e1bd0-root-953098-923-922-920",
+        "occ-b352183e1bd0-root-953098-923-922-890"
+      ],
+      "firstBeat": 39.9,
+      "lastBeat": 41.75
+    },
+    {
+      "id": "small-sector-4-reassemble",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-891",
+        "occ-b352183e1bd0-root-953098-923-922-866",
+        "occ-b352183e1bd0-root-953098-923-922-889",
+        "occ-b352183e1bd0-root-953098-923-922-871",
+        "occ-b352183e1bd0-root-953098-923-922-859",
+        "occ-b352183e1bd0-root-953098-923-922-878",
+        "occ-b352183e1bd0-root-953098-923-922-906",
+        "occ-b352183e1bd0-root-953098-923-922-898",
+        "occ-b352183e1bd0-root-953098-923-922-919",
+        "occ-b352183e1bd0-root-953098-923-922-893",
+        "occ-b352183e1bd0-root-953098-923-922-912",
+        "occ-b352183e1bd0-root-953098-923-922-858",
+        "occ-b352183e1bd0-root-953098-923-922-860",
+        "occ-b352183e1bd0-root-953098-923-922-918",
+        "occ-b352183e1bd0-root-953098-923-922-868",
+        "occ-b352183e1bd0-root-953098-923-922-854"
+      ],
+      "startBeat": 40.85,
+      "endBeat": 42.7,
+      "phase": "reassemble",
+      "kind": "repeat",
+      "family": "bearing-small-parts",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-891",
+        "occ-b352183e1bd0-root-953098-923-922-866",
+        "occ-b352183e1bd0-root-953098-923-922-889",
+        "occ-b352183e1bd0-root-953098-923-922-871",
+        "occ-b352183e1bd0-root-953098-923-922-859",
+        "occ-b352183e1bd0-root-953098-923-922-878",
+        "occ-b352183e1bd0-root-953098-923-922-906",
+        "occ-b352183e1bd0-root-953098-923-922-898",
+        "occ-b352183e1bd0-root-953098-923-922-919",
+        "occ-b352183e1bd0-root-953098-923-922-893",
+        "occ-b352183e1bd0-root-953098-923-922-912",
+        "occ-b352183e1bd0-root-953098-923-922-858",
+        "occ-b352183e1bd0-root-953098-923-922-860",
+        "occ-b352183e1bd0-root-953098-923-922-918",
+        "occ-b352183e1bd0-root-953098-923-922-868",
+        "occ-b352183e1bd0-root-953098-923-922-854"
+      ],
+      "firstBeat": 40.85,
+      "lastBeat": 42.7
+    },
+    {
+      "id": "part-62-reassemble",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-911"
+      ],
+      "startBeat": 44.5,
+      "endBeat": 47,
+      "phase": "reassemble",
+      "kind": "hardware",
+      "family": "bearing-layers",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-911"
+      ],
+      "firstBeat": 44.5,
+      "lastBeat": 47
+    },
+    {
+      "id": "part-59-reassemble",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-861"
+      ],
+      "startBeat": 48,
+      "endBeat": 50,
+      "phase": "reassemble",
+      "kind": "hardware",
+      "family": "bearing-layers",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-861"
+      ],
+      "firstBeat": 48,
+      "lastBeat": 50
+    },
+    {
+      "id": "part-69-reassemble",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-922-895"
+      ],
+      "startBeat": 52,
+      "endBeat": 54.4,
+      "phase": "reassemble",
+      "kind": "hardware",
+      "family": "bearing-layers",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-922-895"
+      ],
+      "firstBeat": 52,
+      "lastBeat": 54.4
+    },
+    {
+      "id": "outer-ring-reassemble",
+      "ids": [
+        "occ-b352183e1bd0-root-953098-923-852-851"
+      ],
+      "startBeat": 55,
+      "endBeat": 57.4,
+      "phase": "reassemble",
+      "kind": "hardware",
+      "family": "bearing-layers",
+      "partIds": [
+        "occ-b352183e1bd0-root-953098-923-852-851"
+      ],
+      "firstBeat": 55,
+      "lastBeat": 57.4
+    }
+  ],
+  "maximumOffsets": {
+    "occ-b352183e1bd0-root-953098-759": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-760": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-761": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-762": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-763": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-764": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-765": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-766": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-767": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-768": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-769": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-770": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-771": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-772": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-773": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-774": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-775": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-776": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-777": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-779-778": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-780": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-781": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-782": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-783": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-784": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-785": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-786": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-787": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-788": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-789": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-790": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-791": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-792": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-793": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-794": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-795": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-796": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-797": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-798": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-799": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-800": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-801": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-802": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-803": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-804": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-805": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-806": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-807": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-808": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-809": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-810": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-811": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-812": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-813": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-814": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-815": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-816": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-817": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-818": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-819": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-820": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-821": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-822": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-823": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-824": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-825": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-826": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-827": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-828": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-829": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-830": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-831": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-832": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-833": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-834": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-835": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-836": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-837": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-838": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-839": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-840": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-841": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-842": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-843": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-844": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-845": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-846": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-847": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-848": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-923-852-851": [
+      0,
+      -0.105,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-853": [
+      0.005306560052621279,
+      -0.01,
+      -0.0315569393384074
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-854": [
+      -0.031918467731013034,
+      -0.01,
+      0.0022828529747400874
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-855": [
+      -0.012596807047578774,
+      -0.01,
+      -0.02941632968618059
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-856": [
+      0.019176885583081418,
+      -0.01,
+      -0.025617319518899794
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-857": [
+      0.026500776962317566,
+      -0.01,
+      0.01793624320735807
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-858": [
+      -0.028783630731117577,
+      -0.01,
+      0.013982224498793602
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-859": [
+      -0.01398222439962841,
+      -0.01,
+      0.028783630779289048
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-860": [
+      -0.029982391119507738,
+      -0.01,
+      0.011182853962958787
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-861": [
+      0,
+      -0.053,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-862": [
+      0.022627417499852556,
+      -0.01,
+      0.022627416496086475
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-863": [
+      -0.026500776962317566,
+      -0.01,
+      -0.01793624320735807
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-864": [
+      0.031268699719612734,
+      -0.01,
+      0.006802089226457619
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-865": [
+      0.017936243360045578,
+      -0.01,
+      0.02650077685897568
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-866": [
+      -0.005306560052621279,
+      -0.01,
+      0.0315569393384074
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-867": [
+      0.031556939292857265,
+      -0.01,
+      -0.005306560323497802
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-868": [
+      -0.031556939292857265,
+      -0.01,
+      0.005306560323497802
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-869": [
+      0.029982391119507738,
+      -0.01,
+      -0.011182853962958787
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-870": [
+      -0.029416330123377576,
+      -0.01,
+      -0.012596806026627109
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-871": [
+      -0.011182853668424048,
+      -0.01,
+      0.029982391229363525
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-872": [
+      0.02467583115106405,
+      -0.01,
+      0.02037408542742906
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-873": [
+      -0.03199093742931554,
+      -0.01,
+      -0.000761526357796021
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-874": [
+      0.03177369222498748,
+      -0.01,
+      0.003799010712247359
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-875": [
+      -0.0037990101345587004,
+      -0.01,
+      -0.03177369229405862
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-876": [
+      0.025617320378830705,
+      -0.01,
+      -0.019176884434348174
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-877": [
+      0.009743567624742096,
+      -0.01,
+      0.030480532966831102
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-878": [
+      -0.016654970398514154,
+      -0.01,
+      0.027324201013471872
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-879": [
+      -0.031268699719612734,
+      -0.01,
+      -0.006802089226457619
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-880": [
+      -0.022627417499852556,
+      -0.01,
+      -0.022627416496086475
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-881": [
+      -0.020374085121020714,
+      -0.01,
+      -0.02467583140405612
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-882": [
+      0.03090962656096791,
+      -0.01,
+      -0.008282208996488004
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-883": [
+      0.02732420127269625,
+      -0.01,
+      -0.01665496997322975
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-884": [
+      0.031918467731013034,
+      -0.01,
+      -0.0022828529747400874
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-885": [
+      -0.006802088870176808,
+      -0.01,
+      -0.03126869979711687
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-886": [
+      -0.02467583115106405,
+      -0.01,
+      -0.02037408542742906
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-887": [
+      0.008282209443280673,
+      -0.01,
+      -0.030909626441250178
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-888": [
+      -0.03177369222498748,
+      -0.01,
+      -0.003799010712247359
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-889": [
+      -0.008282209443280673,
+      -0.01,
+      0.030909626441250178
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-890": [
+      0.0007615259961355627,
+      -0.01,
+      0.031990937437924666
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-891": [
+      -0.0022828540363568598,
+      -0.01,
+      0.031918467655084715
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-892": [
+      -0.02808572753650575,
+      -0.01,
+      -0.01533596781247153
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-893": [
+      -0.025617320378830705,
+      -0.01,
+      0.019176884434348174
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-894": [
+      0.029416330123377576,
+      -0.01,
+      0.012596806026627109
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-895": [
+      0,
+      0.062,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-896": [
+      0.01398222439962841,
+      -0.01,
+      -0.028783630779289048
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-897": [
+      0.021525131939213116,
+      -0.01,
+      -0.023678443677730743
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-898": [
+      -0.021525131939213116,
+      -0.01,
+      0.023678443677730743
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-899": [
+      0.012596807047578774,
+      -0.01,
+      0.02941632968618059
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-900": [
+      0.028783630731117577,
+      -0.01,
+      -0.013982224498793602
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-901": [
+      -0.0304805329368181,
+      -0.01,
+      -0.009743567718630938
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-902": [
+      -0.017936243360045578,
+      -0.01,
+      -0.02650077685897568
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-903": [
+      -0.0007615259961355627,
+      -0.01,
+      -0.031990937437924666
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-904": [
+      0.015335968230624546,
+      -0.01,
+      0.028085727308176923
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-905": [
+      0.02808572753650575,
+      -0.01,
+      0.01533596781247153
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-906": [
+      -0.019176885583081418,
+      -0.01,
+      0.025617319518899794
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-907": [
+      0.03199093742931554,
+      -0.01,
+      0.000761526357796021
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-908": [
+      0.011182853654114675,
+      -0.01,
+      -0.029982391234700645
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-909": [
+      0.020374085121020714,
+      -0.01,
+      0.02467583140405612
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-910": [
+      0.006802088870176808,
+      -0.01,
+      0.03126869979711687
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-911": [
+      0,
+      0.03,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-912": [
+      -0.02732420127269625,
+      -0.01,
+      0.01665496997322975
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-913": [
+      0.0304805329368181,
+      -0.01,
+      0.009743567718630938
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-914": [
+      -0.009743567624742096,
+      -0.01,
+      -0.030480532966831102
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-915": [
+      0.0022828540363568598,
+      -0.01,
+      -0.031918467655084715
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-916": [
+      0.023678444276369705,
+      -0.01,
+      -0.02152513128068804
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-917": [
+      0.016654970398514154,
+      -0.01,
+      -0.027324201013471872
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-918": [
+      -0.03090962656096791,
+      -0.01,
+      0.008282208996488004
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-919": [
+      -0.023678444276369705,
+      -0.01,
+      0.02152513128068804
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-920": [
+      0.0037990101345587004,
+      -0.01,
+      0.03177369229405862
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-921": [
+      -0.015335968230624546,
+      -0.01,
+      -0.028085727308176923
+    ],
+    "occ-b352183e1bd0-root-953098-1010-924": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-925": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-926": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-927": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-928": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-929": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-930": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-931": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-932": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-933": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-934": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-935": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-936": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-937": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-938": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-939": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-940": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-941": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-942": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-943": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-944": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-945": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-946": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-947": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-948": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-949": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-950": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-951": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-952": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-953": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-954": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-955": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-956": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-957": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-958": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-959": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-960": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-961": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-962": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-963": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-964": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-965": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-966": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-967": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-968": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-969": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-970": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-971": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-972": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-973": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-974": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-975": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-976": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-977": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-978": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-979": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-980": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-981": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-982": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-983": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-984": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-985": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-986": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-987": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-988": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-989": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-990": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-991": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-992": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-993": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-994": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-995": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-996": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-997": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-998": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-999": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1000": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1001": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1002": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1003": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1004": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1005": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1006": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1007": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1008": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1009": [
+      0,
+      0,
+      0
+    ]
+  },
+  "pathMaximumOffsets": {
+    "occ-b352183e1bd0-root-953098-759": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-760": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-761": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-762": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-763": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-764": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-765": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-766": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-767": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-768": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-769": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-770": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-771": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-772": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-773": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-774": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-775": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-776": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-777": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-779-778": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-780": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-781": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-782": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-783": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-784": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-785": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-786": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-787": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-788": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-789": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-790": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-791": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-792": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-793": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-794": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-795": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-796": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-797": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-798": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-799": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-800": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-801": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-802": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-803": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-804": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-805": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-806": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-807": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-808": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-809": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-810": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-811": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-812": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-813": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-814": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-815": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-816": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-817": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-818": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-819": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-820": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-821": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-822": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-823": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-824": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-825": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-826": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-827": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-828": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-829": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-830": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-831": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-832": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-833": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-834": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-835": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-836": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-837": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-838": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-839": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-840": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-841": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-842": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-843": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-844": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-845": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-846": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-847": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-850-849-848": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-923-852-851": [
+      0,
+      -0.105,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-853": [
+      0.005306560052621279,
+      -0.01,
+      -0.0315569393384074
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-854": [
+      -0.031918467731013034,
+      -0.01,
+      0.0022828529747400874
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-855": [
+      -0.012596807047578774,
+      -0.01,
+      -0.02941632968618059
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-856": [
+      0.019176885583081418,
+      -0.01,
+      -0.025617319518899794
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-857": [
+      0.026500776962317566,
+      -0.01,
+      0.01793624320735807
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-858": [
+      -0.028783630731117577,
+      -0.01,
+      0.013982224498793602
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-859": [
+      -0.01398222439962841,
+      -0.01,
+      0.028783630779289048
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-860": [
+      -0.029982391119507738,
+      -0.01,
+      0.011182853962958787
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-861": [
+      0,
+      -0.053,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-862": [
+      0.022627417499852556,
+      -0.01,
+      0.022627416496086475
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-863": [
+      -0.026500776962317566,
+      -0.01,
+      -0.01793624320735807
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-864": [
+      0.12898338634340253,
+      -0.035,
+      0.02805861805913768
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-865": [
+      0.017936243360045578,
+      -0.01,
+      0.02650077685897568
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-866": [
+      -0.005306560052621279,
+      -0.01,
+      0.0315569393384074
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-867": [
+      0.031556939292857265,
+      -0.01,
+      -0.005306560323497802
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-868": [
+      -0.031556939292857265,
+      -0.01,
+      0.005306560323497802
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-869": [
+      0.029982391119507738,
+      -0.01,
+      -0.011182853962958787
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-870": [
+      -0.029416330123377576,
+      -0.01,
+      -0.012596806026627109
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-871": [
+      -0.011182853668424048,
+      -0.01,
+      0.029982391229363525
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-872": [
+      0.02467583115106405,
+      -0.01,
+      0.02037408542742906
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-873": [
+      -0.03199093742931554,
+      -0.01,
+      -0.000761526357796021
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-874": [
+      0.03177369222498748,
+      -0.01,
+      0.003799010712247359
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-875": [
+      -0.0037990101345587004,
+      -0.01,
+      -0.03177369229405862
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-876": [
+      0.025617320378830705,
+      -0.01,
+      -0.019176884434348174
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-877": [
+      0.009743567624742096,
+      -0.01,
+      0.030480532966831102
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-878": [
+      -0.016654970398514154,
+      -0.01,
+      0.027324201013471872
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-879": [
+      -0.031268699719612734,
+      -0.01,
+      -0.006802089226457619
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-880": [
+      -0.022627417499852556,
+      -0.01,
+      -0.022627416496086475
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-881": [
+      -0.020374085121020714,
+      -0.01,
+      -0.02467583140405612
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-882": [
+      0.03090962656096791,
+      -0.01,
+      -0.008282208996488004
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-883": [
+      0.02732420127269625,
+      -0.01,
+      -0.01665496997322975
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-884": [
+      0.031918467731013034,
+      -0.01,
+      -0.0022828529747400874
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-885": [
+      -0.006802088870176808,
+      -0.01,
+      -0.03126869979711687
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-886": [
+      -0.02467583115106405,
+      -0.01,
+      -0.02037408542742906
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-887": [
+      0.008282209443280673,
+      -0.01,
+      -0.030909626441250178
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-888": [
+      -0.03177369222498748,
+      -0.01,
+      -0.003799010712247359
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-889": [
+      -0.008282209443280673,
+      -0.01,
+      0.030909626441250178
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-890": [
+      0.0007615259961355627,
+      -0.01,
+      0.031990937437924666
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-891": [
+      -0.0022828540363568598,
+      -0.01,
+      0.031918467655084715
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-892": [
+      -0.02808572753650575,
+      -0.01,
+      -0.01533596781247153
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-893": [
+      -0.025617320378830705,
+      -0.01,
+      0.019176884434348174
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-894": [
+      0.029416330123377576,
+      -0.01,
+      0.012596806026627109
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-895": [
+      0,
+      0.062,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-896": [
+      0.01398222439962841,
+      -0.01,
+      -0.028783630779289048
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-897": [
+      0.021525131939213116,
+      -0.01,
+      -0.023678443677730743
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-898": [
+      -0.021525131939213116,
+      -0.01,
+      0.023678443677730743
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-899": [
+      0.012596807047578774,
+      -0.01,
+      0.02941632968618059
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-900": [
+      0.028783630731117577,
+      -0.01,
+      -0.013982224498793602
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-901": [
+      -0.0304805329368181,
+      -0.01,
+      -0.009743567718630938
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-902": [
+      -0.017936243360045578,
+      -0.01,
+      -0.02650077685897568
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-903": [
+      -0.0007615259961355627,
+      -0.01,
+      -0.031990937437924666
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-904": [
+      0.015335968230624546,
+      -0.01,
+      0.028085727308176923
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-905": [
+      0.02808572753650575,
+      -0.01,
+      0.01533596781247153
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-906": [
+      -0.019176885583081418,
+      -0.01,
+      0.025617319518899794
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-907": [
+      0.03199093742931554,
+      -0.01,
+      0.000761526357796021
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-908": [
+      0.011182853654114675,
+      -0.01,
+      -0.029982391234700645
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-909": [
+      0.020374085121020714,
+      -0.01,
+      0.02467583140405612
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-910": [
+      0.006802088870176808,
+      -0.01,
+      0.03126869979711687
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-911": [
+      0,
+      0.03,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-912": [
+      -0.02732420127269625,
+      -0.01,
+      0.01665496997322975
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-913": [
+      0.0304805329368181,
+      -0.01,
+      0.009743567718630938
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-914": [
+      -0.009743567624742096,
+      -0.01,
+      -0.030480532966831102
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-915": [
+      0.0022828540363568598,
+      -0.01,
+      -0.031918467655084715
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-916": [
+      0.023678444276369705,
+      -0.01,
+      -0.02152513128068804
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-917": [
+      0.016654970398514154,
+      -0.01,
+      -0.027324201013471872
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-918": [
+      -0.03090962656096791,
+      -0.01,
+      0.008282208996488004
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-919": [
+      -0.023678444276369705,
+      -0.01,
+      0.02152513128068804
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-920": [
+      0.0037990101345587004,
+      -0.01,
+      0.03177369229405862
+    ],
+    "occ-b352183e1bd0-root-953098-923-922-921": [
+      -0.015335968230624546,
+      -0.01,
+      -0.028085727308176923
+    ],
+    "occ-b352183e1bd0-root-953098-1010-924": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-925": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-926": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-927": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-928": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-929": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-930": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-931": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-932": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-933": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-934": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-935": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-936": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-937": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-938": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-939": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-940": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-941": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-942": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-943": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-944": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-945": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-946": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-947": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-948": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-949": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-950": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-951": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-952": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-953": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-954": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-955": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-956": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-957": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-958": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-959": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-960": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-961": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-962": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-963": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-964": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-965": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-966": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-967": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-968": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-969": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-970": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-971": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-972": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-973": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-974": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-975": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-976": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-977": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-978": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-979": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-980": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-981": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-982": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-983": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-984": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-985": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-986": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-987": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-988": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-989": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-990": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-991": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-992": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-993": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-994": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-995": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-996": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-997": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-998": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-999": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1000": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1001": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1002": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1003": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1004": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1005": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1006": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1007": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1008": [
+      0,
+      0,
+      0
+    ],
+    "occ-b352183e1bd0-root-953098-1010-1009": [
+      0,
+      0,
+      0
+    ]
+  },
+  "focusOffset": [
+    0.0977146866237898,
+    -0.025,
+    0.02125652883268006
+  ],
+  "bindings": {
+    "bearing": "occ-b352183e1bd0-root-953098-923",
+    "bearingParts": [
+      "occ-b352183e1bd0-root-953098-923-852-851",
+      "occ-b352183e1bd0-root-953098-923-922-853",
+      "occ-b352183e1bd0-root-953098-923-922-854",
+      "occ-b352183e1bd0-root-953098-923-922-855",
+      "occ-b352183e1bd0-root-953098-923-922-856",
+      "occ-b352183e1bd0-root-953098-923-922-857",
+      "occ-b352183e1bd0-root-953098-923-922-858",
+      "occ-b352183e1bd0-root-953098-923-922-859",
+      "occ-b352183e1bd0-root-953098-923-922-860",
+      "occ-b352183e1bd0-root-953098-923-922-861",
+      "occ-b352183e1bd0-root-953098-923-922-862",
+      "occ-b352183e1bd0-root-953098-923-922-863",
+      "occ-b352183e1bd0-root-953098-923-922-864",
+      "occ-b352183e1bd0-root-953098-923-922-865",
+      "occ-b352183e1bd0-root-953098-923-922-866",
+      "occ-b352183e1bd0-root-953098-923-922-867",
+      "occ-b352183e1bd0-root-953098-923-922-868",
+      "occ-b352183e1bd0-root-953098-923-922-869",
+      "occ-b352183e1bd0-root-953098-923-922-870",
+      "occ-b352183e1bd0-root-953098-923-922-871",
+      "occ-b352183e1bd0-root-953098-923-922-872",
+      "occ-b352183e1bd0-root-953098-923-922-873",
+      "occ-b352183e1bd0-root-953098-923-922-874",
+      "occ-b352183e1bd0-root-953098-923-922-875",
+      "occ-b352183e1bd0-root-953098-923-922-876",
+      "occ-b352183e1bd0-root-953098-923-922-877",
+      "occ-b352183e1bd0-root-953098-923-922-878",
+      "occ-b352183e1bd0-root-953098-923-922-879",
+      "occ-b352183e1bd0-root-953098-923-922-880",
+      "occ-b352183e1bd0-root-953098-923-922-881",
+      "occ-b352183e1bd0-root-953098-923-922-882",
+      "occ-b352183e1bd0-root-953098-923-922-883",
+      "occ-b352183e1bd0-root-953098-923-922-884",
+      "occ-b352183e1bd0-root-953098-923-922-885",
+      "occ-b352183e1bd0-root-953098-923-922-886",
+      "occ-b352183e1bd0-root-953098-923-922-887",
+      "occ-b352183e1bd0-root-953098-923-922-888",
+      "occ-b352183e1bd0-root-953098-923-922-889",
+      "occ-b352183e1bd0-root-953098-923-922-890",
+      "occ-b352183e1bd0-root-953098-923-922-891",
+      "occ-b352183e1bd0-root-953098-923-922-892",
+      "occ-b352183e1bd0-root-953098-923-922-893",
+      "occ-b352183e1bd0-root-953098-923-922-894",
+      "occ-b352183e1bd0-root-953098-923-922-895",
+      "occ-b352183e1bd0-root-953098-923-922-896",
+      "occ-b352183e1bd0-root-953098-923-922-897",
+      "occ-b352183e1bd0-root-953098-923-922-898",
+      "occ-b352183e1bd0-root-953098-923-922-899",
+      "occ-b352183e1bd0-root-953098-923-922-900",
+      "occ-b352183e1bd0-root-953098-923-922-901",
+      "occ-b352183e1bd0-root-953098-923-922-902",
+      "occ-b352183e1bd0-root-953098-923-922-903",
+      "occ-b352183e1bd0-root-953098-923-922-904",
+      "occ-b352183e1bd0-root-953098-923-922-905",
+      "occ-b352183e1bd0-root-953098-923-922-906",
+      "occ-b352183e1bd0-root-953098-923-922-907",
+      "occ-b352183e1bd0-root-953098-923-922-908",
+      "occ-b352183e1bd0-root-953098-923-922-909",
+      "occ-b352183e1bd0-root-953098-923-922-910",
+      "occ-b352183e1bd0-root-953098-923-922-911",
+      "occ-b352183e1bd0-root-953098-923-922-912",
+      "occ-b352183e1bd0-root-953098-923-922-913",
+      "occ-b352183e1bd0-root-953098-923-922-914",
+      "occ-b352183e1bd0-root-953098-923-922-915",
+      "occ-b352183e1bd0-root-953098-923-922-916",
+      "occ-b352183e1bd0-root-953098-923-922-917",
+      "occ-b352183e1bd0-root-953098-923-922-918",
+      "occ-b352183e1bd0-root-953098-923-922-919",
+      "occ-b352183e1bd0-root-953098-923-922-920",
+      "occ-b352183e1bd0-root-953098-923-922-921"
+    ],
+    "outerRing": "occ-b352183e1bd0-root-953098-923-852-851",
+    "part59": "occ-b352183e1bd0-root-953098-923-922-861",
+    "part69": "occ-b352183e1bd0-root-953098-923-922-895",
+    "part62": "occ-b352183e1bd0-root-953098-923-922-911",
+    "largeParts": [
+      "occ-b352183e1bd0-root-953098-923-852-851",
+      "occ-b352183e1bd0-root-953098-923-922-861",
+      "occ-b352183e1bd0-root-953098-923-922-895",
+      "occ-b352183e1bd0-root-953098-923-922-911"
+    ],
+    "smallParts": [
+      "occ-b352183e1bd0-root-953098-923-922-853",
+      "occ-b352183e1bd0-root-953098-923-922-854",
+      "occ-b352183e1bd0-root-953098-923-922-855",
+      "occ-b352183e1bd0-root-953098-923-922-856",
+      "occ-b352183e1bd0-root-953098-923-922-857",
+      "occ-b352183e1bd0-root-953098-923-922-858",
+      "occ-b352183e1bd0-root-953098-923-922-859",
+      "occ-b352183e1bd0-root-953098-923-922-860",
+      "occ-b352183e1bd0-root-953098-923-922-862",
+      "occ-b352183e1bd0-root-953098-923-922-863",
+      "occ-b352183e1bd0-root-953098-923-922-864",
+      "occ-b352183e1bd0-root-953098-923-922-865",
+      "occ-b352183e1bd0-root-953098-923-922-866",
+      "occ-b352183e1bd0-root-953098-923-922-867",
+      "occ-b352183e1bd0-root-953098-923-922-868",
+      "occ-b352183e1bd0-root-953098-923-922-869",
+      "occ-b352183e1bd0-root-953098-923-922-870",
+      "occ-b352183e1bd0-root-953098-923-922-871",
+      "occ-b352183e1bd0-root-953098-923-922-872",
+      "occ-b352183e1bd0-root-953098-923-922-873",
+      "occ-b352183e1bd0-root-953098-923-922-874",
+      "occ-b352183e1bd0-root-953098-923-922-875",
+      "occ-b352183e1bd0-root-953098-923-922-876",
+      "occ-b352183e1bd0-root-953098-923-922-877",
+      "occ-b352183e1bd0-root-953098-923-922-878",
+      "occ-b352183e1bd0-root-953098-923-922-879",
+      "occ-b352183e1bd0-root-953098-923-922-880",
+      "occ-b352183e1bd0-root-953098-923-922-881",
+      "occ-b352183e1bd0-root-953098-923-922-882",
+      "occ-b352183e1bd0-root-953098-923-922-883",
+      "occ-b352183e1bd0-root-953098-923-922-884",
+      "occ-b352183e1bd0-root-953098-923-922-885",
+      "occ-b352183e1bd0-root-953098-923-922-886",
+      "occ-b352183e1bd0-root-953098-923-922-887",
+      "occ-b352183e1bd0-root-953098-923-922-888",
+      "occ-b352183e1bd0-root-953098-923-922-889",
+      "occ-b352183e1bd0-root-953098-923-922-890",
+      "occ-b352183e1bd0-root-953098-923-922-891",
+      "occ-b352183e1bd0-root-953098-923-922-892",
+      "occ-b352183e1bd0-root-953098-923-922-893",
+      "occ-b352183e1bd0-root-953098-923-922-894",
+      "occ-b352183e1bd0-root-953098-923-922-896",
+      "occ-b352183e1bd0-root-953098-923-922-897",
+      "occ-b352183e1bd0-root-953098-923-922-898",
+      "occ-b352183e1bd0-root-953098-923-922-899",
+      "occ-b352183e1bd0-root-953098-923-922-900",
+      "occ-b352183e1bd0-root-953098-923-922-901",
+      "occ-b352183e1bd0-root-953098-923-922-902",
+      "occ-b352183e1bd0-root-953098-923-922-903",
+      "occ-b352183e1bd0-root-953098-923-922-904",
+      "occ-b352183e1bd0-root-953098-923-922-905",
+      "occ-b352183e1bd0-root-953098-923-922-906",
+      "occ-b352183e1bd0-root-953098-923-922-907",
+      "occ-b352183e1bd0-root-953098-923-922-908",
+      "occ-b352183e1bd0-root-953098-923-922-909",
+      "occ-b352183e1bd0-root-953098-923-922-910",
+      "occ-b352183e1bd0-root-953098-923-922-912",
+      "occ-b352183e1bd0-root-953098-923-922-913",
+      "occ-b352183e1bd0-root-953098-923-922-914",
+      "occ-b352183e1bd0-root-953098-923-922-915",
+      "occ-b352183e1bd0-root-953098-923-922-916",
+      "occ-b352183e1bd0-root-953098-923-922-917",
+      "occ-b352183e1bd0-root-953098-923-922-918",
+      "occ-b352183e1bd0-root-953098-923-922-919",
+      "occ-b352183e1bd0-root-953098-923-922-920",
+      "occ-b352183e1bd0-root-953098-923-922-921"
+    ],
+    "smallBatches": [
+      [
+        "occ-b352183e1bd0-root-953098-923-922-873",
+        "occ-b352183e1bd0-root-953098-923-922-888",
+        "occ-b352183e1bd0-root-953098-923-922-879",
+        "occ-b352183e1bd0-root-953098-923-922-901",
+        "occ-b352183e1bd0-root-953098-923-922-870",
+        "occ-b352183e1bd0-root-953098-923-922-892",
+        "occ-b352183e1bd0-root-953098-923-922-863",
+        "occ-b352183e1bd0-root-953098-923-922-886",
+        "occ-b352183e1bd0-root-953098-923-922-880",
+        "occ-b352183e1bd0-root-953098-923-922-881",
+        "occ-b352183e1bd0-root-953098-923-922-902",
+        "occ-b352183e1bd0-root-953098-923-922-921",
+        "occ-b352183e1bd0-root-953098-923-922-855",
+        "occ-b352183e1bd0-root-953098-923-922-914",
+        "occ-b352183e1bd0-root-953098-923-922-885",
+        "occ-b352183e1bd0-root-953098-923-922-875",
+        "occ-b352183e1bd0-root-953098-923-922-903"
+      ],
+      [
+        "occ-b352183e1bd0-root-953098-923-922-915",
+        "occ-b352183e1bd0-root-953098-923-922-853",
+        "occ-b352183e1bd0-root-953098-923-922-887",
+        "occ-b352183e1bd0-root-953098-923-922-908",
+        "occ-b352183e1bd0-root-953098-923-922-896",
+        "occ-b352183e1bd0-root-953098-923-922-917",
+        "occ-b352183e1bd0-root-953098-923-922-856",
+        "occ-b352183e1bd0-root-953098-923-922-897",
+        "occ-b352183e1bd0-root-953098-923-922-916",
+        "occ-b352183e1bd0-root-953098-923-922-876",
+        "occ-b352183e1bd0-root-953098-923-922-883",
+        "occ-b352183e1bd0-root-953098-923-922-900",
+        "occ-b352183e1bd0-root-953098-923-922-869",
+        "occ-b352183e1bd0-root-953098-923-922-882",
+        "occ-b352183e1bd0-root-953098-923-922-867",
+        "occ-b352183e1bd0-root-953098-923-922-884",
+        "occ-b352183e1bd0-root-953098-923-922-907"
+      ],
+      [
+        "occ-b352183e1bd0-root-953098-923-922-874",
+        "occ-b352183e1bd0-root-953098-923-922-864",
+        "occ-b352183e1bd0-root-953098-923-922-913",
+        "occ-b352183e1bd0-root-953098-923-922-894",
+        "occ-b352183e1bd0-root-953098-923-922-905",
+        "occ-b352183e1bd0-root-953098-923-922-857",
+        "occ-b352183e1bd0-root-953098-923-922-872",
+        "occ-b352183e1bd0-root-953098-923-922-862",
+        "occ-b352183e1bd0-root-953098-923-922-909",
+        "occ-b352183e1bd0-root-953098-923-922-865",
+        "occ-b352183e1bd0-root-953098-923-922-904",
+        "occ-b352183e1bd0-root-953098-923-922-899",
+        "occ-b352183e1bd0-root-953098-923-922-877",
+        "occ-b352183e1bd0-root-953098-923-922-910",
+        "occ-b352183e1bd0-root-953098-923-922-920",
+        "occ-b352183e1bd0-root-953098-923-922-890"
+      ],
+      [
+        "occ-b352183e1bd0-root-953098-923-922-891",
+        "occ-b352183e1bd0-root-953098-923-922-866",
+        "occ-b352183e1bd0-root-953098-923-922-889",
+        "occ-b352183e1bd0-root-953098-923-922-871",
+        "occ-b352183e1bd0-root-953098-923-922-859",
+        "occ-b352183e1bd0-root-953098-923-922-878",
+        "occ-b352183e1bd0-root-953098-923-922-906",
+        "occ-b352183e1bd0-root-953098-923-922-898",
+        "occ-b352183e1bd0-root-953098-923-922-919",
+        "occ-b352183e1bd0-root-953098-923-922-893",
+        "occ-b352183e1bd0-root-953098-923-922-912",
+        "occ-b352183e1bd0-root-953098-923-922-858",
+        "occ-b352183e1bd0-root-953098-923-922-860",
+        "occ-b352183e1bd0-root-953098-923-922-918",
+        "occ-b352183e1bd0-root-953098-923-922-868",
+        "occ-b352183e1bd0-root-953098-923-922-854"
+      ]
+    ],
+    "focus": "occ-b352183e1bd0-root-953098-923-922-864",
+    "focusName": "Part 1",
+    "front": "occ-b352183e1bd0-root-953098-763"
+  },
+  "editorialAxis": {
+    "direction": [
+      0,
+      -1,
+      0
+    ],
+    "radialU": [
+      1,
+      0,
+      0
+    ],
+    "radialV": [
+      0,
+      0,
+      1
+    ],
+    "center": [
+      0,
+      0.010999999998603016,
+      0
+    ],
+    "assemblySpan": 0.20217426121234894,
+    "basis": "Actual source front/back plate world-bound centres; this is a presentation axis, not a recovered mate."
+  },
+  "annotationWindows": {
+    "whole": [
+      [
+        0.45,
+        2.05
+      ]
+    ],
+    "bearing": [
+      [
+        1.65,
+        5.35
+      ],
+      [
+        3.95,
+        5.35
+      ]
+    ],
+    "repeats": [
+      [
+        3.75,
+        6.428571428571429
+      ]
+    ],
+    "component": [
+      [
+        1.85,
+        3.9
+      ]
+    ],
+    "return": [
+      [
+        1.05,
+        8.85
+      ]
+    ],
+    "resolve": [
+      [
+        0.85,
+        2.142857142857143
+      ]
+    ]
+  },
+  "presentation": {
+    "cameraRevision": "wolf-bearing-camera-1",
+    "camera": "Absolute timeline, tracking before zoom, widening before handing target back; reduced motion uses wide stills and a true settled macro.",
+    "context": "Original leaves stay in the scene. Outside-bearing context fades; nonfocus bearing leaves retain at least 0.12 alpha.",
+    "framingEvidence": "Source AABB endpoint unions cover authored linear offsets, including base/inspection/rest for the original Part 1. Macro fits that actual bearing component; ghost context may leave frame.",
+    "styleReference": "detail/framing.mjs: source-component tracking before zoom; no motor geometry is used"
+  },
+  "diagnostics": {
+    "method": "120 Hz finite differences of display translations, excluding camera/opacity, threshold 1e-9 metres/sample.",
+    "movingSeconds": 18.424999999999596,
+    "movingFraction": 0.5373958333333215,
+    "longestUnmovingIntervalSeconds": 3.5333333333333234
+  },
+  "music": {
+    "file": "audio/bearing-loop.wav",
+    "sha256": "02bb7d0918b4f05b700ef5cc9853ab4c698723c2ba6aaa62ef522f0c0d31d785",
+    "byteLength": 6048044,
+    "edition": "wolf-bearing-continuous-v1"
+  },
+  "limitations": [
+    "Editorial explosion and observation excursion, not collision-checked service disassembly.",
+    "Generic Part N names do not establish balls, rollers, races, seals, cages, material, preload or load ratings.",
+    "No inferred bearing rotation, contact, joint constraints, force or dynamics."
+  ]
+}

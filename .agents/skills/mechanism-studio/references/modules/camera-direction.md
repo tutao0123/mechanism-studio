@@ -1,6 +1,6 @@
 # Camera Direction
 
-Called by [the orchestrator](../module-orchestration.md) for authored views, tours or framing fixes. A camera-plan is a handoff record, not an implemented generic JSON loader or automatic CAD cinematography service. Read [visual style](../presentation-style.md); tours also use [pacing](../presentation-pacing.md) and [transport](../presentation-tour.md).
+Called by [the orchestrator](../module-orchestration.md) for authored views, tours or framing fixes. A camera-plan is a handoff record, not an implemented generic JSON loader or automatic CAD cinematography service. Read [visual style](../presentation-style.md); tours also use [pacing](../presentation-pacing.md), [motion choreography](../motion-choreography.md) and [transport](../presentation-tour.md).
 
 ## Responsibility and inputs
 
@@ -25,7 +25,7 @@ After offsets, motion ranges, visibility and process paths are finalized:
 
 1. Resolve real targets and units/parents; repeated screws are occurrences, not a name lookup.
 2. Compute in copied transforms or independent calculation space. Trial framing must not mutate source, working or display state.
-3. Include geometry, intended motion, maximum/intermediate explosion and process paths. Curve endpoints alone are insufficient. Disclose sample ranges and uncovered risks.
+3. Include geometry, intended motion, maximum/intermediate explosion and process paths. During contextual fades include still-displayed surrounding geometry; a selected repeated part also needs bounds through extraction and return. Curve endpoints alone are insufficient. Disclose sample ranges and uncovered risks.
 4. Use causal overview → necessary detail → expansion/reassembly views. A stable view may serve several chapters.
 5. Fit actual desktop, narrow-window and phone aspects with title, labels and credit reserves.
 6. Recheck after actual annotations are placed.
@@ -37,6 +37,8 @@ Geometry/rest/basis/identity, explosion, motion or process-range changes invalid
 ## Output: camera-plan
 
 Record stage and revisions for geometry, explosion, mechanics/processes, timeline and profile; each chapter includes observation purpose, real target IDs, position/target/orthographic halfHeight, envelope inputs and method. Include viewport fitting rules, reserved areas, near-outline candidate anchors/regions, actual projection coordinates, and optional authored pullback.
+
+For a single-part close-up, record the same occurrence's set/context, observation position, camera approach, settled read and pullback intervals. Magnify through framing, without mesh scaling or source changes. A fixed authored target/scale path can follow the known extraction; it must not chase changing live bounds or carry moving labels through the approach.
 
 Specify first frame, continuous transitions, pause, explicit seek, loop, exploration return, resize and reduced-motion behavior. Attach actual range checks, sampled camera poses, representative screenshots, unresolved targets and limits. Inspect may deliver static presets without chapters. A plan without an adapter remains an unimplemented plan.
 
@@ -53,7 +55,7 @@ Specify first frame, continuous transitions, pause, explicit seek, loop, explora
 
 Open directly on the planned first pose. Use precomputed conservative envelopes; rotating or separating geometry must not cause camera breathing, jitter or target chasing.
 
-At continuous chapter transitions, capture the actual starting camera once, use quintic smoothstep, shortest azimuth arc and smooth scale. Use the selected profile's transition duration. Explicit seek/restart/paused selection cuts to the planned pose; exploration return starts from the actual user pose. Large visible-solid membership changes may need deliberate editorial cuts, as in the kinetic robot, rather than revealing the whole arm inside a jaw macro frame.
+At continuous chapter transitions, capture the actual starting camera once, use quintic smoothstep, shortest azimuth arc and smooth scale. Use the selected profile's duration unless a purposeful approach has its own authored interval. Explicit seek/restart/paused selection cuts to the planned pose; exploration return starts from the actual user pose. Coordinate approach and context fades before entering a tight close-up. When a continuous composition cannot communicate the change well, use a deliberate editorial cut; membership changes alone do not require one. Never reveal the whole arm inside a jaw macro frame.
 
 Pause freezes chapter time and transitions. Planned frames are deterministic from story/time; continuous interpolation also depends on captured start pose/time. Do not claim identical transition frames for arbitrary playback histories. Resize refits without resetting phase/play state; capture repaint must not restart transitions.
 

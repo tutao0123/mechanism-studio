@@ -2,6 +2,8 @@
 
 An internal [authoring contract](../module-orchestration.md), not a separate skill or general material-plan executor. It maps a visual intention onto the actual renderer and stable component identities. Read [visual style](../presentation-style.md) for the common tokens.
 
+For a continuous whole-to-component focus, read [motion choreography](../motion-choreography.md). Appearance owns the planned contrast/opacity treatment while explosion owns movement and camera owns magnification; no visual focus operation changes source identity or geometry.
+
 ## Responsibility and preconditions
 
 Own base fills, feature/silhouette edges, surface parameters, lights, optional textures and their source/terms. Preserve dimensions, identity, parents, mechanical state and quantitative readouts. Physical material grade, manufacturing finish and measured roughness are engineering facts only when supported by source data; renderer metalness is a visual parameter.
@@ -13,6 +15,7 @@ Inputs: brief and target renderer, scene-index with real IDs/geometryRevision, a
 Record stage, geometryRevision, planRevision, actual role-to-part/occurrence bindings, neutral fallback, renderer-specific fill/roughness/metalness/opacity values, edge hierarchy, lights/environment and declared coordinates. Include:
 
 - Selection/hover/process/cutaway/hidden/isolation priorities and restoration behavior.
+- If requested, context fade intervals and affected occurrence IDs for both solids and edges, plus depth/selection/label policy. Bind these to the supplied timeline and restore the current user observation state.
 - Only needed local texture files, purpose, color space, provenance/license, UV/mapping scale and fallback.
 - Target renderer/color management, actual adapter and effects that cannot be reproduced equivalently.
 - Actual visual/interaction checks, missing resources and unresolved bindings.
@@ -34,6 +37,7 @@ Base colors must not consume process meanings: airflow/fuel/combustion have thei
 - Temporary selection/hover restores the current appearance plan, not stale source defaults. Avoid permanently editing source materials.
 - Preserve process semantics when a selected part has process color; use an additional outline or clearly explained treatment.
 - Shared definitions/materials do not authorize changing every occurrence. Selecting one screw must not tint all repeats.
+- A repeated-part close-up accents the chosen real occurrence only. Context fades must handle edges as well as fills; inspect intermediate transparency rather than assuming a material opacity change makes a clear scene. Explicit hidden/isolation choices take precedence over authored context restoration.
 - Transparency changes depth and line readability; inspect it. Disabling depth to expose all hidden lines does not establish understandable structure.
 - Geometry/displacement/topology/UV asset changes that affect bindings or silhouette return to the orchestrator for a new geometryRevision and dependent explosion/camera checks. Pure color/light changes do not invent geometry identity.
 

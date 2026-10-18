@@ -55,3 +55,5 @@ Apply [visual style](presentation-style.md) and [pacing](presentation-pacing.md)
 Check pause/seek/loop/mode switch/exploration/viewport/visibility return/reduced motion. Stopped numbers and geometry agree. Static scenes redraw on demand; animations advance only under their chosen clock. Missing graphics/audio retain usable text/numbers and honest status, with the failed layer identified.
 
 For selected narration/music measure the actual files and verify matching timeline. Claim subjective listening only when performed. Existing screenshots/reports do not automatically validate changed assets. Passing release checks does not grant publication rights or replace user authorization.
+
+For a substantial handoff, use [delivery evidence](delivery-evidence.md) to retain input/output fingerprints and declared review evidence. Its checker reports byte integrity and unavailable local files; it does not perform these substantive checks or certify a report's claims.

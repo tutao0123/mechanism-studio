@@ -23,7 +23,7 @@ For reusable effects, consult the [reviewed sound libraries](../../../../docs/so
 
 Default music supports white-line observation: sparse soft keys/pads, restrained bass/percussion and space. A half-time feel or lower percussion density may soften music without slowing the entire animation. BPM is per-example, not a global skill constant.
 
-Sparse editorial cues may mark a group beginning separation, a short joint detail, or completed reassembly. Bind cue identity/time/beat/envelope to the actual authored action stage, not each rendered frame or screw. Use smooth attacks/releases and low levels, then measure and listen. These are authored sound cues, not recorded hardware or solved collision/friction/torque.
+Sparse editorial cues may mark a group beginning separation, a selected part settling into a close-up, or completed reassembly. Bind cue identity/time/beat/envelope and affected real part/group IDs to the final authored motion event, not each rendered frame or screw. When movement is retimed, recheck those bindings against its actual start/settle/return; a chapter timestamp alone is insufficient. Label reveal does not itself need a ding. Use smooth attacks/releases and low levels, then measure and listen. These are authored sound cues, not recorded hardware or solved collision/friction/torque. [Motion choreography](motion-choreography.md) coordinates this handoff with the visual adapters.
 
 Use one deterministic timeline. Mix events into one seekable track or use a cancellable schedule on the same audio clock. No independent wall-clock timers or replay-on-every-RAF effects. Pause, backwards seek, restart, loop and fallback cannot leave old sounds running.
 

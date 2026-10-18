@@ -8,7 +8,7 @@ background service or a generic JSON-plan execution engine.
 ```mermaid
 flowchart LR
   I[Text / image / CAD brief] --> S[Mechanism Studio skill]
-  S --> E[Explosion / camera / appearance plans]
+  S --> E[Explosion / camera / appearance / mating close-up plans]
   C[Retained STEP / URDF or authored geometry] --> A[Source index + GLB + scene contract]
   A --> V[Shared viewer]
   M[Example motion / process adapter] --> V
@@ -22,7 +22,8 @@ flowchart LR
 ## Authoring boundary
 
 There is one discoverable [skill entry](../.agents/skills/mechanism-studio/SKILL.md)
-and three specialist contracts: explosion, camera direction and materials/lighting.
+and four specialist contracts: explosion, camera direction, materials/lighting
+and mating close-ups.
 The [skill guide](skill-guide.md) and [module catalog](modules.md) describe each
 input/output, dependency, validation step and actual implementation helper.
 Inputs first become a brief separating supplied facts, visible observations,

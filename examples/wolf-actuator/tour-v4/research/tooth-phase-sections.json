@@ -1,0 +1,365 @@
+{
+  "revision": "wolf-source-tooth-phase-4",
+  "sourceSHA256": "b352183e1bd0d55c403a6f406c3b2886a3b1b374b47cf32bcb69d4277d252e35",
+  "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1",
+  "assetSHA256": "2793c41488d07527d85e5e1f0729096739575f43ed9a5ef93ec0b37079fdd819",
+  "method": "16384 radial rays per triangle-plane section, complete-turn peak count, tooth-count Fourier phase, period-unwrapped along axial Y. Original source triangles and world transforms retained.",
+  "parts": [
+    {
+      "role": "sun",
+      "name": "sun-gear",
+      "id": "occ-b352183e1bd0-root-953098-767",
+      "count": 96,
+      "center": [
+        0,
+        0.006000000052154064,
+        0
+      ],
+      "samples": [
+        {
+          "y": 0.00025,
+          "phase": -0.02853809138923812,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.006678865161867942,
+          "harmonicAmplitude": 0.0005761262858068469,
+          "radialRangeMetres": [
+            0.04875287457235829,
+            0.05078082736723635
+          ]
+        },
+        {
+          "y": 0.001,
+          "phase": -0.01989777796156555,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.004557970082709764,
+          "harmonicAmplitude": 0.0005761179265120534,
+          "radialRangeMetres": [
+            0.04874286448595228,
+            0.05077549040862299
+          ]
+        },
+        {
+          "y": 0.003,
+          "phase": 0.0031943331265448325,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.0015325206063360505,
+          "harmonicAmplitude": 0.0005760893189376708,
+          "radialRangeMetres": [
+            0.04873236584278851,
+            0.050771702989323514
+          ]
+        },
+        {
+          "y": 0.004,
+          "phase": 0.014802275658901147,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.004447905340674132,
+          "harmonicAmplitude": 0.0005759155841409671,
+          "radialRangeMetres": [
+            0.04873676228177538,
+            0.050775477487847234
+          ]
+        },
+        {
+          "y": 0.006,
+          "phase": 0.03795115995842475,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.0046168069054025205,
+          "harmonicAmplitude": 0.0005774918978390675,
+          "radialRangeMetres": [
+            0.04873462851798729,
+            0.05077548819476988
+          ]
+        },
+        {
+          "y": 0.008,
+          "phase": 0.06104566605769187,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.001476078794800722,
+          "harmonicAmplitude": 0.0005766523536436869,
+          "radialRangeMetres": [
+            0.04873342797448904,
+            0.05077175697021544
+          ]
+        },
+        {
+          "y": 0.01,
+          "phase": 0.08432477938720705,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.007370076528278293,
+          "harmonicAmplitude": 0.000576115679236316,
+          "radialRangeMetres": [
+            0.04875628613293632,
+            0.05078306381785649
+          ]
+        },
+        {
+          "y": 0.011,
+          "phase": 0.08432398997439583,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.007369287115467005,
+          "harmonicAmplitude": 0.0005760205619864801,
+          "radialRangeMetres": [
+            0.04875628613293632,
+            0.05078305987488331
+          ]
+        },
+        {
+          "y": 0.012,
+          "phase": 0.0843246773111306,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.007369974452202027,
+          "harmonicAmplitude": 0.0005758851983707209,
+          "radialRangeMetres": [
+            0.048756286132936325,
+            0.05078305485222851
+          ]
+        },
+        {
+          "y": 0.014,
+          "phase": 0.06114848734717115,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.0015789000842799416,
+          "harmonicAmplitude": 0.0005759767429218086,
+          "radialRangeMetres": [
+            0.04873342797519552,
+            0.05077175418007282
+          ]
+        },
+        {
+          "y": 0.016,
+          "phase": 0.037993546047832366,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.004574420815994402,
+          "harmonicAmplitude": 0.0005765718857496522,
+          "radialRangeMetres": [
+            0.04873462852155357,
+            0.0507754851683306
+          ]
+        },
+        {
+          "y": 0.018,
+          "phase": 0.014900356165543744,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.004545985847317077,
+          "harmonicAmplitude": 0.0005770599351813848,
+          "radialRangeMetres": [
+            0.04873656081812369,
+            0.05077547664765916
+          ]
+        },
+        {
+          "y": 0.019,
+          "phase": 0.00334479137877817,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.0016829788585693466,
+          "harmonicAmplitude": 0.0005767301346184217,
+          "radialRangeMetres": [
+            0.048732079002727545,
+            0.05077170271768664
+          ]
+        },
+        {
+          "y": 0.021,
+          "phase": -0.019816883314760243,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.004477075435904847,
+          "harmonicAmplitude": 0.0005760582843508046,
+          "radialRangeMetres": [
+            0.04873914507451361,
+            0.050775490321775155
+          ]
+        },
+        {
+          "y": 0.02175,
+          "phase": -0.02851538249614954,
+          "peakCount": 96,
+          "maxPeakErrorRadians": 0.0066561562687800675,
+          "harmonicAmplitude": 0.0005759025930951297,
+          "radialRangeMetres": [
+            0.04875220506172406,
+            0.050780827437222495
+          ]
+        }
+      ]
+    },
+    {
+      "role": "planet",
+      "name": "planet-4",
+      "id": "occ-b352183e1bd0-root-953098-774",
+      "count": 24,
+      "center": [
+        -0.03117699921131134,
+        0.01100000087171793,
+        0.05400014854967594
+      ],
+      "samples": [
+        {
+          "y": 0.00025,
+          "phase": -0.011259539686711515,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.018525253944736034,
+          "harmonicAmplitude": 0.0005817890798452049,
+          "radialRangeMetres": [
+            0.011329047212743634,
+            0.013370102436997962
+          ]
+        },
+        {
+          "y": 0.001,
+          "phase": -0.04583004323388904,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.004540393693300574,
+          "harmonicAmplitude": 0.0005778692738950584,
+          "radialRangeMetres": [
+            0.011317012953981222,
+            0.013369309230787125
+          ]
+        },
+        {
+          "y": 0.003,
+          "phase": -0.1388172100953975,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.025813958721155453,
+          "harmonicAmplitude": 0.0005861809709746797,
+          "radialRangeMetres": [
+            0.011327006811729894,
+            0.013362597030894954
+          ]
+        },
+        {
+          "y": 0.004,
+          "phase": -0.1853292468106896,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.015238741205358715,
+          "harmonicAmplitude": 0.0005850793453707062,
+          "radialRangeMetres": [
+            0.011321668491901629,
+            0.013357630010255757
+          ]
+        },
+        {
+          "y": 0.006,
+          "phase": -0.27765247520139374,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.015213928740625687,
+          "harmonicAmplitude": 0.0005850781075943066,
+          "radialRangeMetres": [
+            0.011321666173088078,
+            0.01335775287908557
+          ]
+        },
+        {
+          "y": 0.008,
+          "phase": -0.37089153572536854,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.025386834478422424,
+          "harmonicAmplitude": 0.0005834649342011589,
+          "radialRangeMetres": [
+            0.011312760999592155,
+            0.013364109068053905
+          ]
+        },
+        {
+          "y": 0.01,
+          "phase": -0.46291183145465387,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.02591671295157068,
+          "harmonicAmplitude": 0.0005846365156509837,
+          "radialRangeMetres": [
+            0.011333210125807989,
+            0.013370958072500772
+          ]
+        },
+        {
+          "y": 0.011,
+          "phase": -0.46291619381953647,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.025912350586688056,
+          "harmonicAmplitude": 0.0005846446688450956,
+          "radialRangeMetres": [
+            0.011333210125807996,
+            0.01337095807250077
+          ]
+        },
+        {
+          "y": 0.012,
+          "phase": -0.4629117879134648,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.025916756492759766,
+          "harmonicAmplitude": 0.0005846354996468947,
+          "radialRangeMetres": [
+            0.01133321012580799,
+            0.013370958072500766
+          ]
+        },
+        {
+          "y": 0.014,
+          "phase": -0.37024315431727645,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.01589359231569366,
+          "harmonicAmplitude": 0.0005829958588826127,
+          "radialRangeMetres": [
+            0.011312761002174166,
+            0.013369699250822199
+          ]
+        },
+        {
+          "y": 0.016,
+          "phase": -0.2776325482116266,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.01583316041247731,
+          "harmonicAmplitude": 0.0005852386208817573,
+          "radialRangeMetres": [
+            0.011321666241066532,
+            0.013359300971764883
+          ]
+        },
+        {
+          "y": 0.018,
+          "phase": -0.18534918807203815,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.015730126873305144,
+          "harmonicAmplitude": 0.0005852401575772095,
+          "radialRangeMetres": [
+            0.011321668838255666,
+            0.013359254269455268
+          ]
+        },
+        {
+          "y": 0.019,
+          "phase": -0.13889562938665848,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.01592150289115957,
+          "harmonicAmplitude": 0.0005878011720619728,
+          "radialRangeMetres": [
+            0.011327006513055033,
+            0.013369015130597928
+          ]
+        },
+        {
+          "y": 0.021,
+          "phase": -0.04634388318563939,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.025753213844985995,
+          "harmonicAmplitude": 0.0005846664813735912,
+          "radialRangeMetres": [
+            0.011316979881975345,
+            0.013360577476064391
+          ]
+        },
+        {
+          "y": 0.02175,
+          "phase": -0.011602610947882416,
+          "peakCount": 24,
+          "maxPeakErrorRadians": 0.022144966385602215,
+          "harmonicAmplitude": 0.0005843813100505638,
+          "radialRangeMetres": [
+            0.011328998805081496,
+            0.013365849633373098
+          ]
+        }
+      ]
+    }
+  ]
+}

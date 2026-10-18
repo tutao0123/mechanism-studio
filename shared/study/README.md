@@ -27,6 +27,13 @@ Required configuration:
   source solids change between a detail and whole view. A listed chapter cuts
   once on entry; it does not suppress the adapter's authored detail arc. Other
   chapter changes keep the ordinary camera transition. Omission changes nothing.
+- `cameraContinuity: 'authored'`: opt in when `cameraFor` already supplies a
+  continuous path on story time, including chapter boundaries. The director uses
+  one path key and adds no second chapter interpolation; exploration return still
+  blends from the actual user view. The adapter must verify seam and transition
+  bounds, and hold labels until its own camera movement has settled.
+  Optional `stillCameraFor(chapterId, aspect, localTime)` supplies a stable reduced
+  motion view; omission keeps the chapter-start plan.
 - `workingPoses(state)`: optional complete absolute pose object keyed by stable
   source ID, in the viewer's existing position/quaternion/scale format. This
   writes the `model` wrapper before applying display offsets and never writes
@@ -36,8 +43,30 @@ Required configuration:
 - `appearanceCues(state, labelCues)`: optional `{id, weight}` array for authored
   action accents; omission preserves named-part accents. The existing complete
   neutral map, colour toggle and selection-layer behaviour remain in force.
+- `createPresentationLayer({ viewer, index, viewport })`: optional factory for
+  example-specific material regions or explanatory marks. It runs once after
+  source loading and matrix setup and must return an object with
+  `update({ state, viewer, index, viewport, colorCues, capturing, manualCamera,
+  playing })`. Update runs after working poses, observation offsets, the current
+  camera and base color cues, immediately before drawing. Sample the supplied
+  state on the common clock; do not start another timer or advance mechanics.
+  This layer owns only its presentation resources. Preserve source vertices,
+  rest transforms, IDs, working poses, camera and audio; respect selection,
+  visibility, the color toggle and exploration state. `capturing` identifies an
+  explicitly sampled frame, not permission to alter its time. Repeated updates
+  at the same state must not accumulate changes. Omission preserves existing
+  studies; this hook does not infer mates or supply a universal cue/contact
+  renderer. The factory and its resources remain owned by the example adapter.
 - `detailIds(state)`: optional list of owned solid IDs to show; `null` shows all.
   Hiding a source wrapper is intentionally avoided because it can hide children.
+- `presentationOpacity(state, id)`: optional source-ID-bound value in [0, 1].
+  Fades the solid and its owned feature lines together; solid depth surfaces are
+  retained to suppress hidden-edge clutter, and zero opacity hides only the owned solid. Source transforms,
+  hierarchy and geometry remain unchanged. Existing examples stay opaque when
+  this hook is omitted. Labels require at least 0.5 opacity on their named target;
+  context below 0.5 is excluded from label obstacles. `labelObstacleIds(state)`
+  can explicitly restrict obstacles for an authored detail, without changing
+  target anchors. Check contrast and actual overlap in the delivered viewport.
 - `cameraUp`: optional finite nonzero three-component orientation vector. It is
   assigned before OrbitControls is constructed and inherited by annotation
   camera clones. The framing adapter must fit with the same up basis. Omission
@@ -74,6 +103,12 @@ against the same timeline. Capture CSS hides transport/status/navigation while
 keeping chapter explanations and source credit. Set the browser viewport to
 1920×1080 for an HD frame; the page fits that viewport without forcing a size on
 ordinary readers. The `?clean=1` page remains the interactive viewing mode.
+
+HD capture uses its own type hierarchy: 58 px main title, 46 px chapter title,
+36 px explanatory copy and part names, and 18 px source credit. Keep copy short
+enough for two lines and measure label placement using the actual rendered font.
+Inspect the encoded MP4 at 640 and 960 px display widths as well as full HD;
+ordinary responsive web text is not a substitute for video readability review.
 
 Capture keeps the WebGL drawing buffer and repaints the same frozen chapter time
 when a screenshot or viewport change invalidates the canvas. That repaint does

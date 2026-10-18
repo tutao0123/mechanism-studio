@@ -6,9 +6,13 @@ Mechanism Studio is a project-local AI authoring skill and a working browser too
 
 **Status: working research prototype, version 0.4.0.** Ten implemented experiences range from simplified teaching mechanisms to real STEP assemblies and source-backed robot descriptions. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
 
+**Latest: [WOLF complete teardown, v4](examples/wolf-actuator/tour-v4/README.md).** One 245-leaf assembly moves from the whole actuator into gear-pair, magnet and bearing close-ups, then fully reassembles. Its 85.7-second tour demonstrates the new [Mating Close-up module](.agents/skills/mechanism-studio/references/modules/mating-closeup.md); a portable [delivery record](examples/wolf-actuator/tour-v4/delivery.json) makes the source and output fingerprints inspectable. [Run it locally](#try-it-locally).
+
+[Watch the complete WOLF film on X](https://x.com/tutao0123/status/2111833346468938203). WOLF source and adapted visuals: Anthrobotics and contributors, CC BY-SA 4.0; original score: Mechanism Studio.
+
 ![Unitree G1 source bodies separated in the English humanoid showcase](docs/media/humanoid-g1-preview.jpg)
 
-*New: [A humanoid, revealed](examples/humanoid/README.md), a 35.56-second expansion/reassembly loop. Unitree G1 model © Unitree Robotics, via MuJoCo Menagerie, [BSD-3-Clause](examples/humanoid/source/unitree_g1/LICENSE). Thirty source bodies and 35 visual occurrences retain their identities; this is link-level presentation, not a detailed actuator teardown. Original score plus five separately credited Kenney CC0 effects.*
+*[A humanoid, revealed](examples/humanoid/README.md), a 35.56-second expansion/reassembly loop. Unitree G1 model © Unitree Robotics, via MuJoCo Menagerie, [BSD-3-Clause](examples/humanoid/source/unitree_g1/LICENSE). Thirty source bodies and 35 visual occurrences retain their identities; this is link-level presentation, not a detailed actuator teardown. Original score plus five separately credited Kenney CC0 effects.*
 
 ![SO-ARM 102 separated into source links in the kinetic presentation](docs/media/so-arm102-kinetic.jpg)
 
@@ -40,6 +44,20 @@ For the new humanoid, run `node examples/humanoid/serve.mjs` and open
 reverse-order reassembly, gentle original music and sparse CC0 effects. The
 source rest pose is preserved; no gait or dynamic balancing is simulated.
 
+For the latest WOLF actuator tour, build its shared score once on a fresh clone:
+
+```sh
+node examples/wolf-actuator/tour-v2/audio/build.mjs
+node examples/wolf-actuator/serve.mjs
+```
+
+Open **http://127.0.0.1:4181/tour-v4/** for the 85.714-second whole-to-detail
+tour: gear pairing and spin/orbit cues, magnet and bearing close-ups, then full
+reassembly. The WOLF server defaults to port 4181; use its printed URL if `PORT`
+is overridden. The score is generated locally from deterministic source; the
+long WAV and recorded MP4 are excluded from Git. See the [v4 guide](examples/wolf-actuator/tour-v4/README.md)
+for the 85.733-second encoded delivery and its recorded verification.
+
 ## Examples
 
 | Example | What to explore | Scope |
@@ -47,7 +65,7 @@ source rest pose is preserved; no gait or dynamic balancing is simulated.
 | [Unitree G1 humanoid](examples/humanoid/README.md) | Full-body expansion, close shoulder/wrist and knee/ankle views, restoration, music and action cues; 35.56 seconds | 30 MJCF body identities, 35 source visual occurrences, 29 retained joint declarations; static source pose, no per-screw internals |
 | [SO-ARM 102 kinetic cut](EXAMPLE_ROBOT/kinetic/README.md) | Source-backed jaw and arm movement, cascading explosion, two readable details, musical reassembly; 25.7 seconds | Five revolute and two prismatic URDF joints; eight merged link meshes |
 | [SO-ARM 102 assembly study](EXAMPLE_ROBOT/README.md) | Near-part names, restrained colour changes, original music; 34.3 seconds | Link-level visual separation; no per-fastener identity |
-| [WOLF actuator](examples/wolf-actuator/README.md) and [motor detail edition](examples/wolf-actuator/detail/README.md) | Whole 245-leaf actuator or an isolated 86-leaf motor: 40 `magnet`, 40 generically named `cc` and six named hardware occurrences; 34.3-second cuts | Real STEP-derived component identities and editorial separation; `cc` function is unspecified, and this is separate from G1 hardware |
+| [WOLF actuator: complete v4 tour](examples/wolf-actuator/tour-v4/README.md) | Whole 245-leaf actuator → source-bound tooth pairing and spin/orbit cues → magnet and roller close-ups → full reassembly; 85.714 seconds | Ideal source-based gear/bearing kinematics; phase highlights are explanatory, not solved contact. CAD-derived −31.5:1 differs from upstream 34:1; older whole/motor/bearing cuts remain |
 | [Galileo 2 source inspector](examples/shaft-bearing/README.md) | Shaft, bearing holder, repeated screws; source tree and mesh selection, hide/isolate/restore | 69 definitions, 146 source usage relations, 147 occurrences including the root |
 | [KFL08 bearing assembly](examples/step-assembly/README.md) | Retained STEP, import reports, display fragments and restoration | Historical importer trial: 22 source leaf instances versus 35 display fragments; incomplete identity mapping |
 | [Five-pin lock](prototype-3d/README.md) | Key comparison, shear line, insertion, turning and explosion | Authored teaching geometry; ideal pin-stack alignment |
@@ -67,13 +85,14 @@ from this robot source. Include explosion and reassembly, close part labels,
 white line art and code-generated music. Keep all work in this project.
 ```
 
-There is **one discoverable skill** coordinating three specialist authoring modules. They share real part IDs, a geometry revision, units, coordinate frames and one timeline:
+There is **one discoverable skill** coordinating four specialist authoring modules. They share real part IDs, a geometry revision, units, coordinate frames and one timeline:
 
 | Module | Responsibility | Main output |
 | --- | --- | --- |
 | [Assembly explosion](.agents/skills/mechanism-studio/references/modules/assembly-explode.md) | Grouping, separation order, offsets, restoration and parent compensation | An explosion plan bound to actual parts and implementation adapters |
 | [Camera direction](.agents/skills/mechanism-studio/references/modules/camera-direction.md) | Envelope framing, shot selection, deliberate cuts, settled reading and loop closure | A camera plan compatible with motion, visibility and annotations |
 | [Materials and lighting](.agents/skills/mechanism-studio/references/modules/materials-lighting.md) | Neutral line art, readable surfaces, restrained colour cues and owned appearance layers | An appearance plan with reversible source-ID bindings |
+| [Mating close-up](.agents/skills/mechanism-studio/references/modules/mating-closeup.md) | Source-bound component relationships, local phase highlights and spin/orbit direction | A close-up plan with evidence, cue meaning and camera/appearance handoffs |
 
 These are documented modules within the main skill, rather than separately installed autonomous skills. Their plan files are authoring handoffs; current pages execute explicit JavaScript adapters. A generic JSON plan engine is not implemented.
 
@@ -93,12 +112,15 @@ show body/link structure; it cannot reveal unmodeled screws or actuator internal
 Deeper component examples need their own sufficiently detailed source and clear
 provenance rather than invented internals attributed to an existing robot.
 
-The [WOLF motor detail edition](examples/wolf-actuator/detail/README.md) demonstrates
-that deeper source evidence: complete actuator → actual motor subassembly →
-separate source components → restoration. Run the same WOLF server and open
-**http://127.0.0.1:4181/detail/?clean=1**. It is another edition of the existing
-WOLF example, using its original soundtrack, not an eleventh independent model
-or a representation of Unitree G1's actuator design.
+The [WOLF v4 tour](examples/wolf-actuator/tour-v4/README.md) demonstrates deeper
+source evidence within one assembly and one music clock. Its paired-tooth
+highlights follow retained source geometry, and short arcs distinguish gear
+spin from the planet center's orbit. It preserves the existing camera and music
+from the earlier full tour. The [motor detail edition](examples/wolf-actuator/detail/README.md)
+and other older cuts remain available on the same server. These are editions of
+the existing WOLF example, not additional independently modeled assemblies or
+representations of Unitree G1's actuator design. They provide no general CAD
+mate/contact solver or validated force model.
 
 ## How it is built
 
@@ -143,7 +165,12 @@ npm run audit:cad -- --example examples/shaft-bearing
 
 # Optional CAD rebuilding requires the documented project-local OCCT runtime.
 npm run import:cad -- --example examples/shaft-bearing
+
+# Verify the v4 source/evidence fingerprints without requiring local exports.
+npm run check:delivery -- --manifest examples/wolf-actuator/tour-v4/delivery.json
 ```
+
+The [delivery checker](.agents/skills/mechanism-studio/references/delivery-evidence.md) detects changed recorded files and distinguishes missing local exports from missing repository assets. Add `--require-local` to require the authoring-machine film and raw reports. A fresh clone can verify bundled inputs while reporting ignored local evidence as unavailable. File integrity does not establish engineering correctness, confirm a review happened, or prove publication; the record keeps those claims separate.
 
 See [XCAF setup](tools/cad/README-xcaf.md), [video encoding](tools/video/README.md) and [voice generation](shared/voice/README.md). Viewing examples never requires speech keys. New optional narration uses a provider-neutral Node/CLI interface with an explicit speech-capable model, matching voice and trusted endpoint; OpenRouter uses its dedicated speech API. Existing Doubao lessons are retained without compulsory migration. No credentials or generated narration are bundled, and preview/tests do not make paid calls.
 

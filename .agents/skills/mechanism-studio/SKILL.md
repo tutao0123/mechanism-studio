@@ -15,7 +15,7 @@ Read only the references needed for the user's deliverable. The public [skill gu
 | --- | --- | --- |
 | Inspect a supported STEP and repeated parts | **Inspect**: [CAD workflow](references/cad-workflow.md), [capability boundaries](references/cad-direction.md) | Source/provenance, definitions and occurrences, assembly tree, linked selection, evidence report; silent by default |
 | Explain a mechanism and its controls | **Explain**: [scene contract](references/scene-contract.md), [teaching and validation](references/teaching-and-validation.md), [process animation](references/process-animation.md) when needed | Explicit model assumptions, mechanical inputs, coherent motion/readouts, optional lesson |
-| Make a public looping demo | **Showcase**: [visual style](references/presentation-style.md), [pacing](references/presentation-pacing.md), [tour transport](references/presentation-tour.md), [audio choice](references/audio-delivery.md) | English, white line art, normally 30–40 seconds; preserve existing longer cuts |
+| Make a public looping demo | **Showcase**: [visual style](references/presentation-style.md), [pacing](references/presentation-pacing.md), [motion choreography](references/motion-choreography.md), [tour transport](references/presentation-tour.md), [audio choice](references/audio-delivery.md) | English, white line art, normally 30–40 seconds; preserve existing longer cuts |
 | Change an existing example or tool | [Runtime map](references/runtime-modules.md), then that component's README | Reuse working assets and shared code; validate the changed behavior |
 
 These routes are authoring choices, not universal URL parameters. STEP placement alone does not supply joints or an operating cycle. Text and images first go through the [input brief](references/input-brief.md); there is no automatic image-to-CAD service.
@@ -31,8 +31,13 @@ Use [module orchestration](references/module-orchestration.md) to share real IDs
 | [Assembly & Explode](references/modules/assembly-explode.md) | Display groups, offsets, expansion/reassembly, bounds and recovery checks |
 | [Camera Direction](references/modules/camera-direction.md) | Purposeful views, motion/explosion envelopes, transitions and annotation space |
 | [Materials & Lighting](references/modules/materials-lighting.md) | Base appearance, edges, lighting, source-aware textures and selection-safe overrides |
+| [Mating Close-up](references/modules/mating-closeup.md) | Source-bound component pairs, local phase cues and spin/orbit explanations; handoffs to camera and appearance |
 
-These are three internal authoring contracts within **one skill**. They are not separately installed autonomous skills, MCP tools, or a generic JSON-plan executor. Adapt their outputs to [existing runtime APIs](references/runtime-modules.md); distinguish `concept`, `bound`, and `validated` work.
+These are four internal authoring contracts within **one skill**. They are not separately installed autonomous skills, MCP tools, or a generic JSON-plan executor. Adapt their outputs to [existing runtime APIs](references/runtime-modules.md); distinguish `concept`, `bound`, and `validated` work.
+
+For continuous dismantling, reassembly or a close-up of one repeated component, coordinate these contracts through [motion choreography](references/motion-choreography.md). This cross-module layer owns the shared editorial rhythm and context; example adapters implement it.
+
+For a close-up that explains how components interact, select Mating Close-up: bind actual occurrences and supported relative motion before adding tooth/region highlights or direction arcs. Keep phase cues distinct from contact simulation, spin distinct from orbit, and cues on the existing common clock.
 
 ## Preserve the important invariants
 
@@ -42,6 +47,7 @@ These are three internal authoring contracts within **one skill**. They are not 
 - Match teardown depth to actual geometry and evidence. A body, source leaf, mesh or provided joint does not establish the internals of an actuator; retain unknowns and obtain source-backed component geometry before claiming finer disassembly.
 - Apply units and full coordinate transforms once. Keep source rest, mechanical poses and observation offsets separate as specified by the [scene contract](references/scene-contract.md). One owner writes each mechanical channel; explosion must not change mechanical results.
 - New presentations use the shared white-background fine-line style, atlas serif type, near-part labels, short leaders, sequential reveal, same-scene retention and group fade at scene changes. Read the visual and pacing references before generating frames. User preferences override defaults; do not silently restyle old examples.
+- Match motion tempo to the part, travel and explanatory purpose; retain useful context between whole and detail views. A single-part close-up follows a real occurrence through extraction, camera magnification and return, without duplicating it or scaling its geometry. Keep the named part and camera settled during reading.
 - Public UI, captions and copy default to English. X clips normally omit narration; optional music uses original code synthesis and sparse authored action effects. Requested narration uses the optional provider-neutral [narration workflow](references/narration.md), with explicit speech-capable model/voice/endpoint selection; retain the existing Doubao adapter without forcing it on new examples. Do not regenerate valid paid audio merely to reorganize files.
 - Use one seekable time source for mechanics, explosion, process effects, camera plans, captions and audio. Camera transitions additionally retain a captured starting pose. Never add independent wall-clock motion or sound timers.
 - The project-local [Blender MCP](../../../tools/blender-mcp/README.md) has four lock-specific operations. It is optional, is not automatically connected, and is not a general CAD backend. Existing authorized Blender CLI tooling can be used without expanding that MCP.
@@ -51,3 +57,5 @@ These are three internal authoring contracts within **one skill**. They are not 
 Choose the relevant layers in [teaching and validation](references/teaching-and-validation.md). Check source/identity, model invariants, actual transformed geometry, controls and recovery, relevant time/audio paths, and real desktop/narrow-screen views. Automated checks, generated files and actual browser usability are separate evidence. State unexecuted checks and remaining limits plainly.
 
 Return a working entry point, relevant source/assets/provenance, reproduction commands and validation results. Use the [runtime map](references/runtime-modules.md) for component commands. Do not represent display explosion as collision-checked disassembly, tessellation as exact measurement, or source-based kinematics as a dynamics solver.
+
+For substantial media delivery, cross-agent handoff or reuse of old checks, use [delivery evidence](references/delivery-evidence.md) to bind inputs, reports and outputs to actual file fingerprints. Distinguish implemented, checked, exported and published results; a successful local export or X post does not establish that source changes reached GitHub.

@@ -268,7 +268,19 @@ manifests and opt-in generation scripts. Existing local recordings are retained
 locally. [docs/licensing.md](docs/licensing.md#optional-doubao-narration) records
 the scope/evidence; recipients must confirm their own account/voice/service
 rights before generating or redistributing narration. No credentials or account
-configuration is published. Code-synthesized WAV music remains included.
+configuration is published. Code-synthesized music is original MIT work;
+some longer generated WAV editions are rebuilt locally from their included scripts.
+
+## WOLF modular-bearing motion evidence
+
+`examples/wolf-actuator/tour/research-v2/bearing-generator.scad` and
+`bearing-UPSTREAM-README.md` retain the Anthrobotics modular-bearing project’s
+CC BY-SA 4.0 terms, pinned at revision
+`2b63192188d81eea663c04e5a2b98c44d60186f2`. Source URLs and hashes are recorded in
+`bearing-source.json`; the corresponding license is retained in
+`examples/wolf-actuator/source/LICENSE`. Source-derived geometric observations
+and rendered WOLF media retain CC BY-SA 4.0; original motion adapters, analysis
+code and music remain MIT. See the motion tour’s evidence notes for assumptions.
 
 ## Fonts, references and trademarks
 

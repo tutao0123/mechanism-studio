@@ -13,7 +13,7 @@ mechanical/source evidence coupled with a reusable presentation workflow.
 
 | Mechanism Studio area | Current implementation |
 | --- | --- |
-| Authoring | One main skill, three specialist contracts, text/image/CAD intake and explicit Inspect/Explain/Showcase routes |
+| Authoring | One main skill, four specialist contracts, text/image/CAD intake and explicit Inspect/Explain/Showcase routes |
 | Shared code | Seven runtime libraries with example-specific mechanism models and clear motion/display ownership |
 | Teaching | Authored lock, inline-four, turbofan and quadruped; process effects tied to model phase |
 | Engineering sources | Licensed STEP/URDF specimens, pinned bytes, definitions/occurrences, placements and source-bound selection |

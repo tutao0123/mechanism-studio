@@ -2,7 +2,7 @@
 
 Mechanism Studio is a project-local authoring skill backed by a runnable JavaScript toolkit. It helps an AI coding agent prepare inspectable mechanical scenes and short stories while preserving the difference between source engineering data, teaching models and presentation effects.
 
-There is **one discoverable skill** at [SKILL.md](../.agents/skills/mechanism-studio/SKILL.md), with **three specialist authoring contracts** for explosion, camera direction and appearance. They work with seven reusable shared libraries, the Showcase application and local tooling. They are not a collection of independently installed autonomous agents. See the [module catalog](modules.md) for each responsibility and interface.
+There is **one discoverable skill** at [SKILL.md](../.agents/skills/mechanism-studio/SKILL.md), with **four specialist authoring contracts** for explosion, camera direction, appearance and mating close-ups. They work with seven reusable shared libraries, the Showcase application and local tooling. They are not a collection of independently installed autonomous agents. See the [module catalog](modules.md) for each responsibility and interface.
 
 ## Run locally
 
@@ -37,6 +37,8 @@ Example requests:
 > Use the skill to make a 34-second English white-line assembly showcase, with expansion and reassembly, near-part names and original code music. Keep changes inside this repository.
 
 > Use this photo as a visual reference for an illustrative exploded view. First list visible components and unknown internals. Do not claim image-to-CAD reconstruction accuracy.
+
+> Add a close-up of this actual sun–planet pair. Keep the existing camera, music and white line art; use subtle tooth-phase highlights and short rotation arcs to distinguish spin from orbit. Bind the cues to the supported motion and disclose any idealized contact-region assumption.
 
 The skill's directory and real-path checks define the intended project scope. They are not an operating-system permission sandbox. Actual agent/tool permissions still come from the host and user. The skill does not grant permission to read arbitrary credentials, publish a repository, post to social media, install global tools or purchase synthesis.
 
@@ -73,6 +75,8 @@ New scenes use a white background, pale neutral solids, dark feature/silhouette 
 
 Camera plans use conservative motion/explosion envelopes. Motion must not cause frame-by-frame auto-fit, jitter or breathing. Explicit seek cuts to the planned frame; continuous transitions capture the actual start once. Preserve pause, resize, reduced-motion and exploration behavior. Defaults and their implementation boundaries are in [visual style](../.agents/skills/mechanism-studio/references/presentation-style.md) and [pacing](../.agents/skills/mechanism-studio/references/presentation-pacing.md).
 
+The [Mating Close-up contract](../.agents/skills/mechanism-studio/references/modules/mating-closeup.md) handles a different question from extracting a small part: how two components work together. It first binds actual occurrences, evidence, axes and supported relative motion, then coordinates local phase highlights and concise direction marks. Small rotation arcs may have restrained arrowheads; name leaders keep their existing style. Marks follow the motion's sign, disappear at rest and distinguish spin from orbit. These cues use the common clock and restore the current appearance; they do not infer CAD mates or establish physical tooth contact.
+
 Social clips normally omit narration. Optional original code music and sparse action effects share the mechanical/display timeline. Doubao narration is available when requested, through an explicit local synthesis command; the browser receives only verified local audio. Credentials never belong in source, plans, web assets or Git. See [audio delivery](../.agents/skills/mechanism-studio/references/audio-delivery.md).
 
 ## CAD and engineering boundaries
@@ -101,6 +105,18 @@ npm run release:check
 Use focused commands from [the module catalog](modules.md) while editing. Passing automated tests does not prove correct framing, mechanical feasibility, third-party rights or good audio. Record actual browser/visual checks separately; claim subjective listening only after listening.
 
 The shared study's explicit `?capture=1` path supports deterministic sequential frames; `tools/video/export.mjs` encodes captured JPEGs and a verified timeline-matched track. It does not capture a browser or publish online. Full export procedure and failure limits are in [the video tool](../tools/video/README.md).
+
+Substantial deliveries can retain a [delivery manifest](../.agents/skills/mechanism-studio/references/delivery-evidence.md) with exact input, evidence and output fingerprints. WOLF v4 is the worked example:
+
+```powershell
+npm run check:delivery -- --manifest examples/wolf-actuator/tour-v4/delivery.json
+# On the authoring machine, also require ignored media and review files:
+npm run check:delivery -- --manifest examples/wolf-actuator/tour-v4/delivery.json --require-local
+```
+
+Default mode permits missing files explicitly marked local, so an absent MP4 does not make a fresh checkout an unfinished model. Present files must match their recorded bytes and hashes; repository files must exist. The report distinguishes byte integrity, declared check results and evidence availability. It neither runs the declared reviews nor proves engineering validity. Updating a changed file's digest requires reviewing and rechecking its dependents, not simply refreshing the record. The [worked module handoff](../.agents/skills/mechanism-studio/references/module-orchestration.md#worked-handoff-wolf-sun-and-one-planet) shows the actual WOLF pair and adapter ownership.
+
+Keep implementation, validation, export and remote publication separate in completion messages. Verify the current remote commit and relevant paths when asked what reached GitHub; posting a video to X does not update the source repository.
 
 Project-authored code and documentation use [MIT](../LICENSE). Third-party assets, adapted upstream components, generated voice and runtime dependencies have separate terms in [third-party notices](../THIRD_PARTY_NOTICES.md) and source-local files. A successful technical import/release check does not grant redistribution rights or authorize remote publication.
 

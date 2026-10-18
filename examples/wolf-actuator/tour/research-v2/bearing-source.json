@@ -1,0 +1,19 @@
+{
+  "revision": "2b63192188d81eea663c04e5a2b98c44d60186f2",
+  "readmeUrl": "https://raw.githubusercontent.com/Anthrobotics/modular-bearing/2b63192188d81eea663c04e5a2b98c44d60186f2/README.md",
+  "scadUrl": "https://raw.githubusercontent.com/Anthrobotics/modular-bearing/2b63192188d81eea663c04e5a2b98c44d60186f2/ModularBearingGenerator.scad",
+  "files": [
+    {
+      "file": "bearing-UPSTREAM-README.md",
+      "sha256": "201a15831fe2a88b32eb602bac647956fb37b1fb379634a17d9804c54a08156e",
+      "license": "CC-BY-SA-4.0",
+      "copyright": "Anthrobotics 2024"
+    },
+    {
+      "file": "bearing-generator.scad",
+      "sha256": "34f8aaffefaed29f1cbd61fd2a057bd0b0a72d89a9c6df4f088c35b593501c26",
+      "license": "CC-BY-SA-4.0",
+      "copyright": "Anthrobotics 2024"
+    }
+  ]
+}

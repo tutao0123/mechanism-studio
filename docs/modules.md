@@ -1,6 +1,6 @@
 # Skill modules and runtime catalog
 
-The repository exposes **one project-local skill**, **three specialist authoring contracts** and **seven reusable `shared/` libraries**. The Showcase application and CAD/video/Blender tools are additional integration layers. The labels describe actual organization, not independently installed autonomous child skills.
+The repository exposes **one project-local skill**, **four specialist authoring contracts** and **seven reusable `shared/` libraries**. The Showcase application and CAD/video/Blender tools are additional integration layers. The labels describe actual organization, not independently installed autonomous child skills.
 
 Start with [the skill guide](skill-guide.md) for installation/use and [SKILL.md](../.agents/skills/mechanism-studio/SKILL.md) for task routing. Read only the detailed references relevant to a task.
 
@@ -13,8 +13,11 @@ These contracts define responsibilities and handoffs; an example adapter must im
 | [Assembly & Explode](../.agents/skills/mechanism-studio/references/modules/assembly-explode.md) | Goal, actual IDs/parents/rest/units, geometryRevision, pose ownership, fixed parts, optional caller timeline | Bound groups/offsets in declared parent space, stage/hold/reassembly plan, envelope, restoration checks | Observation only; no changed source placement, mates, threads or collision-free removal proof. Camera consumes the full/intermediate envelope |
 | [Camera Direction](../.agents/skills/mechanism-studio/references/modules/camera-direction.md) | Real geometry, mechanical/process ranges, finalized explosion revision, viewport/text reserves, chapter clock | Purposeful poses, conservative envelopes, transition/control behavior, near-label space and viewport checks | No motion/explosion changes to rescue a shot; no live auto-fit. Missing bounds leave a candidate plan |
 | [Materials & Lighting](../.agents/skills/mechanism-studio/references/modules/materials-lighting.md) | Stable bindings/revision, renderer, style, process/selection rules, licensed local resources | Role-to-occurrence appearance plan, fill/edges/lights/textures, restoration and fallback evidence | No material certification or geometry identity changes. Geometry-changing appearance invalidates dependent plans |
+| [Mating Close-up](../.agents/skills/mechanism-studio/references/modules/mating-closeup.md) | Actual pair/interface IDs, source evidence, mechanical adapter/axes/phases, local region, existing timeline/style | Bound interaction plan, tooth/region phase cues, spin/orbit semantics, zero/reversal behavior and camera/appearance handoffs | No inferred mates, new motion solver or contact-force claims. A pitch-region anchor is an observation target; example code implements the contract |
 
-All three return `stage`, input revisions, actual checks, assumptions and limits. `concept` means design only; `bound` means real asset integration; `validated` means claimed checks were run. They share [orchestration records](../.agents/skills/mechanism-studio/references/module-orchestration.md): brief, scene-index, timeline and per-module plans.
+All four return `stage`, input revisions, actual checks, assumptions and limits. `concept` means design only; `bound` means real asset integration; `validated` means claimed checks were run. They share [orchestration records](../.agents/skills/mechanism-studio/references/module-orchestration.md): brief, scene-index, timeline and per-module plans.
+
+[Motion choreography](../.agents/skills/mechanism-studio/references/motion-choreography.md) coordinates these contracts through the orchestrator. It covers component-specific tempo, modest source-aware staggering, continuous context fades, reading holds and event-linked sound. A single-part close-up extracts one existing occurrence, magnifies with the camera, then returns it; it does not duplicate the part or scale its mesh. A mating close-up retains the supported component relationship and explains its relative motion. This is authoring guidance implemented by each example adapter, not an additional installed skill, library or generic plan executor. Movement/hold diagnostics support review without a universal pass/fail percentage or physics claim.
 
 ## Shared libraries: implemented code
 
@@ -122,12 +125,15 @@ The [runtime map](../.agents/skills/mechanism-studio/references/runtime-modules.
 | [Input brief](../.agents/skills/mechanism-studio/references/input-brief.md) | Text/image/CAD evidence, unknown internals, authorized source and model basis |
 | [Scene contract](../.agents/skills/mechanism-studio/references/scene-contract.md) | Stable IDs, rest, source/working/display layers, units and one mechanical writer |
 | [CAD workflow](../.agents/skills/mechanism-studio/references/cad-workflow.md) | Source retention, importer support, staged publication, evidence and linked selection |
-| [Visual style](../.agents/skills/mechanism-studio/references/presentation-style.md) | White line art, atlas type, short near-part leaders, honest projection and safety areas |
-| [Pacing](../.agents/skills/mechanism-studio/references/presentation-pacing.md) | 30–40s default, action/hold separation, sequential names, same-scene retention/group fade |
+| [Visual style](../.agents/skills/mechanism-studio/references/presentation-style.md) | White line art, atlas type, short near-part leaders, honest projection and safety areas; separate video typography with measured labels and encoded 640px/960px readability review |
+| [Assembly depth](../.agents/skills/mechanism-studio/references/assembly-depth.md) | Whole → sourced assembly → actual child occurrences; requested/available depth, generic source-name limits, nested bearing detail without invented internals |
+| [Pacing](../.agents/skills/mechanism-studio/references/presentation-pacing.md) | 30–40s default, purposeful movement/read intervals, sequential names, same-scene retention/group fade |
+| [Motion choreography](../.agents/skills/mechanism-studio/references/motion-choreography.md) | Cross-module movement/context/sound coordination, real-occurrence extraction and camera close-up, motion/hold review without fixed thresholds |
 | [Tour transport](../.agents/skills/mechanism-studio/references/presentation-tour.md) | One clock, pause/seek/loop/exploration/reduced-motion and fallback |
 | [Audio delivery](../.agents/skills/mechanism-studio/references/audio-delivery.md) | Silence/music/optional provider-neutral speech selection, synchronized editorial effects and actual media review |
 | [Process animation](../.agents/skills/mechanism-studio/references/process-animation.md) | Phase-driven qualitative flow/spark/combustion, regions and unsupported physics |
 | [Teaching and validation](../.agents/skills/mechanism-studio/references/teaching-and-validation.md) | Observable question, model invariants, evidence layers and browser checks |
+| [Delivery evidence](../.agents/skills/mechanism-studio/references/delivery-evidence.md) | Fingerprinted inputs/reports/outputs, fresh-checkout versus local media availability, invalidation and separate publication status; `npm run check:delivery` checks byte integrity, not substantive review |
 
 ## Failure and scope policy
 

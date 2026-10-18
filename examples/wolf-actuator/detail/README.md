@@ -8,8 +8,8 @@ source-bound separation, white line rendering, camera direction and annotations.
 Open `/detail/?clean=1` on the WOLF preview server. This separate
 **34.285714-second** English study goes from the complete WOLF actuator to its
 actual `motor-8318 <1>` subassembly, separates its real source components,
-examines the repeated pieces and named hardware, restores the motor, then
-returns to the complete source assembly.
+reveals the repeated pieces in staggered sectors, follows **one real magnet**
+into close-up, restores the motor, then returns to the complete source assembly.
 
 It uses the existing WOLF STEP-derived GLB and source index. It does **not**
 insert this actuator into the G1 humanoid, or claim that it is G1 hardware.
@@ -49,21 +49,27 @@ line rendering, source-bound display translations, camera, labels and score.
 
 ## One timeline, immutable source geometry
 
-All 245 original actuator leaf IDs stay present in the scene and the complete
-offset map. Only the 85 moving motor occurrences receive display translations;
-the stator and all non-motor source parts remain at rest. Detail visibility
-isolates actual owned solids, leaving the original source hierarchy untouched.
-Whole-to-component, repeated-piece and hardware edits are deliberate cuts when
-the visible source solid set changes. Camera envelopes use actual rest bounds
-and all authored extrema, never live expansion feedback.
+All 245 original actuator leaf IDs stay present in the scene and complete offset
+map. Only the 85 moving motor occurrences receive display translations; the
+stator and all non-motor source parts remain at rest. Owned solid fills and feature
+lines fade together to preserve context during the continuous camera approach.
+The original source hierarchy is untouched. Camera envelopes include source rest,
+separation and the selected magnet's observation excursion, never live auto-fit.
 
-Four two-beat groups expand at beats **8 / 12 / 16 / 20** and restore in reverse
-at **40 / 44 / 48 / 52**. The existing original WOLF score uses the same 112 BPM,
-64-beat transport and exactly those motion/seating times. `music-score.json`
-rebinds its editorial cue metadata to this edition's actual motor IDs; the WAV
-bytes are reused unchanged. Native audio time, silent playback and deterministic
-capture all drive the same scene function. The sound effects are authored
-textures, not measured hardware sound or collision results.
+The v2 sequence uses varied travel times for the nut, shaft, mount and shells.
+Forty magnets and forty source-named `cc` pieces follow adjacent sectors based on
+their actual angular positions. The selected magnet then leaves its expanded
+ring, receives a settled camera close-up, and returns before group reassembly.
+It is the same source occurrence throughout: no focus clone, enlarged mesh,
+invented threads, material grade or magnetic simulation.
+
+The six chapters cover beats **0–6 / 6–16 / 16–28 / 28–38 / 38–60 / 60–64**.
+An original v2 score in `audio/motor-loop.wav` follows the new `MOTION_EVENTS`,
+with quieter space during the close-up and sparse movement/seating accents.
+`music-score.json` records actual source IDs, intervals, synthesis and PCM digest;
+the old score is not retimed by metadata. Native audio time, silent playback and
+deterministic capture drive the same scene function. Sounds are editorial
+textures, not measured hardware acoustics or collision results.
 
 Names appear sequentially near their source solids after those targets stop,
 remain together within each scene, then fade at the scene boundary. The same
@@ -73,6 +79,7 @@ English; no narration service is required.
 From the Mechanism Studio repository root:
 
 ```powershell
+node examples/wolf-actuator/detail/audio/build.mjs
 node examples/wolf-actuator/detail/build-plans.mjs
 node --test examples/wolf-actuator/tests/detail.test.mjs
 node examples/wolf-actuator/serve.mjs
@@ -86,13 +93,19 @@ only with `?capture=1`, the shared deterministic capture API.
 
 ## Recorded delivery
 
-The local 1920×1080, 30 fps cut is `output/wolf-motor-34s-v1.mp4` after
+The local 1920×1080, 30 fps cut is `output/wolf-motor-34s-v3.mp4` after
 capture and encoding. Open `/detail/review.html` on this server to review it.
 Its 1,029 frames last 34.3 seconds; the 34.285714-second source music receives
 14.286 milliseconds of end padding, without changing playback speed.
 Recorded MP4s, frames and QA reports are ignored local outputs. A fresh clone
 includes the source assets, score and runnable adapters; the review page does
-not generate a missing recording.
+not generate a missing recording. The previous v1 and v2 MP4s are retained
+locally for comparison. Edition 3 keeps the v2 motion and score, with video-only
+58 px main titles, 46 px chapter headings and 36 px captions/part names. The
+interactive page keeps its own typography. A separate [bearing study](../bearing/README.md)
+follows 70 original bearing components and a real Part 1 close-up.
+`plan.json` records motion/hold diagnostics as review aids,
+not as proof that animation feels natural.
 
 This is an actual source-component illustration. Explosion is editorial, not
 collision-checked disassembly. Source placement does not establish recovered

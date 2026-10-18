@@ -20,6 +20,7 @@ public/local distinctions are listed in the [status audit](../docs/examples-stat
 <a href="step-assembly/README.md"><img src="../docs/media/kfl08-preview.jpg" alt="KFL08 historical STEP import in the actual viewer" width="480"></a>
 
 [G1 humanoid](humanoid/README.md) ·
+[Latest WOLF tour](wolf-actuator/tour-v4/README.md) ·
 [SO-ARM kinetic cut](../EXAMPLE_ROBOT/kinetic/README.md) ·
 [Quadruped](quadruped/README.md) ·
 [Original lock preview](../prototype-3d/assets/lock-preview.png).
@@ -45,22 +46,49 @@ these pages; use a local server below to load models and play music.
 | SO-ARM 102 assembly study | `node EXAMPLE_ROBOT/serve.mjs` | `http://127.0.0.1:4180/?clean=1` | 34.285714-second music-driven exploded view and restoration |
 | SO-ARM 102 kinetic cut | `node EXAMPLE_ROBOT/serve.mjs` | `http://127.0.0.1:4180/kinetic/?clean=1` | 25.714286-second source-backed joint motion and assembly edit |
 | WOLF actuator | `node examples/wolf-actuator/serve.mjs` | `http://127.0.0.1:4181/?clean=1` | 34.285714-second real STEP-derived whole-assembly music study |
+| WOLF complete v4 tour | Same WOLF server; build shared score below first | [`http://127.0.0.1:4181/tour-v4/`](http://127.0.0.1:4181/tour-v4/) | 85.714286 seconds, 160 beats at 112 BPM: whole → tooth pairing and spin/orbit → magnet → bearing/roller → full reassembly; 245 retained source leaves |
+| WOLF original complete tour | Same WOLF server | [`http://127.0.0.1:4181/tour/?clean=1`](http://127.0.0.1:4181/tour/?clean=1) | Retained 68.571429-second v1 edition: whole → illustrative input turn → motor/magnet → bearing/Part 1 → full restoration |
 | WOLF motor detail edition | Same WOLF server | `http://127.0.0.1:4181/detail/?clean=1` | Another 34.285714-second edition: 245-leaf actuator → actual 86-leaf motor → source components → restoration |
+| WOLF bearing detail edition | Same WOLF server | `http://127.0.0.1:4181/bearing/?clean=1` | 34.285714 seconds: actual 70-leaf bearing A → one original Part 1 close-up → restoration; generic source names retained |
 
 The root server handles the studio and original mechanisms; SO-ARM, humanoid and WOLF studies use their own explicit read-only route allowlists. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
 
-The WOLF [motor detail cut](wolf-actuator/detail/README.md) is an edition of the
+The WOLF [complete v4 tour](wolf-actuator/tour-v4/README.md),
+[motor detail cut](wolf-actuator/detail/README.md) and
+[bearing detail cut](wolf-actuator/bearing/README.md) are editions of the
 same sourced actuator, so the inventory remains **ten experiences**. Its motor
 contains 40 source-named `magnet`, 40 unspecified `cc` and six explicitly named
 hardware leaves. The generic `cc` label is not asserted to mean copper winding
 or another inferred function. All geometry comes from WOLF's retained source;
-it is not claimed to be inside the G1 humanoid. It reuses the original WOLF WAV
-with independently bound cue metadata, at 112 BPM and 64 beats.
+it is not claimed to be inside the G1 humanoid. The current motor and bearing
+cuts use newly synthesized action cues on their 112 BPM, 64-beat timelines.
+The latest full tour has one continuous 160-beat score. It inherits the v2
+source-based ideal gear and crossed-roller kinematics and the v3 camera,
+adding tooth-phase highlights and staged spin/orbit cues. These cues do not
+compute loaded contact, forces or recovered CAD mates. The retained geometry
+implies −31.5:1, with the upstream 34:1 discrepancy still disclosed. Its recorded
+30 fps delivery is 85.733333 seconds; the authored timeline remains
+85.714286 seconds. The [v4 video review page](http://127.0.0.1:4181/tour-v4/review.html)
+opens the separately generated local MP4 when available. All earlier cuts remain
+available, including the [128-beat v1 tour](wolf-actuator/tour/README.md).
+
+On a fresh clone, generate the shared score for v2, v3 and v4 before music playback:
+
+```sh
+node examples/wolf-actuator/tour-v2/audio/build.mjs
+node examples/wolf-actuator/serve.mjs
+```
+
+The WOLF server defaults to **4181**. A `PORT` override changes the local URL;
+follow the address printed by the server. The shared long WAV and exported
+videos are excluded from Git; the synthesis source, score and viewing adapters
+are retained. Recording and encoded-media review remain separate from running
+the interactive page.
 
 ## What a fresh clone includes
 
 - GLB display geometry, scene contracts, models, lessons, source/provenance records and implementation adapters.
-- Original code-synthesized WAV music and its deterministic synthesis source for the robot, humanoid and WOLF studies. The humanoid additionally retains five separately licensed Kenney CC0 effects and their provenance. Click **Play with music** to enable audio; the media clock controls motion, camera, labels and effects together.
+- Deterministic original-music synthesis source and the bundled WAVs for the robot, humanoid and earlier WOLF studies. The longer shared WOLF v2/v3/v4 WAV is excluded and built with the command above. The humanoid additionally retains five separately licensed Kenney CC0 effects and their provenance. Click **Play with music** to enable audio; the media clock controls motion, camera, labels and effects together.
 - Blender Python builders for the original teaching models. Local `.blend` exports remain on the author's machine because their binary metadata embeds machine-specific paths; rebuild them if needed.
 - Original third-party CAD/URDF files with licenses. Galileo also retains its upstream native Fusion source. These assets are separately licensed from the MIT runtime.
 
@@ -84,7 +112,7 @@ Read the mechanism's model and README before using its diagrams as engineering e
 
 Each source folder retains the pinned upstream revision, source links, hashes and a change notice. Never label all example files MIT. The new whole-repository MIT license applies to original implementation code; [third-party notices](../THIRD_PARTY_NOTICES.md) and [license scope](../docs/licensing.md) identify asset exceptions.
 
-The robot kinetic adapter reads five revolute and two prismatic joints, including the opposed-jaw mimic relation. It resets working poses before display explosion. This is source-backed kinematics, not validated motor control, collision checking or per-screw disassembly. WOLF's movement is authored observation separation; it has no gear/contact/mate solver.
+The robot kinetic adapter reads five revolute and two prismatic joints, including the opposed-jaw mimic relation. It resets working poses before display explosion. This is source-backed kinematics, not validated motor control, collision checking or per-screw disassembly. WOLF retains authored observation separation alongside example-specific ideal gear and bearing kinematics. Its v4 highlights follow actual source tooth regions; they are phase cues, not contact patches. Neither example provides a general CAD mate, contact or dynamics solver.
 
 ## Reproduction and checks
 
@@ -93,11 +121,20 @@ npm test
 npm run release:check
 npm run audit:cad -- --example examples/shaft-bearing
 npm run audit:cad -- --example examples/wolf-actuator
+npm run check:delivery -- --manifest examples/wolf-actuator/tour-v4/delivery.json
 ```
+
+The WOLF [delivery record](wolf-actuator/tour-v4/delivery.json) fingerprints the
+recorded inputs, evidence and encoded output. Its checker treats absent ignored
+local files as unavailable in a fresh clone; changed files or missing repository
+assets fail. Add `--require-local` when checking a complete local delivery. The
+[delivery rules](../.agents/skills/mechanism-studio/references/delivery-evidence.md)
+separate implementation, verification, export and publication; a matching hash
+does not independently validate a mechanical claim or a recorded review.
 
 Use [CAD import setup](../tools/cad/README.md) and [XCAF setup](../tools/cad/README-xcaf.md) before rebuilding engineering derivatives. The root `npm run import:cad -- --example examples/<name>` command requires a supported source package and project-local OCCT backend; it does not generate a new viewer page or recover joints.
 
-Music rebuild commands are `node EXAMPLE_ROBOT/audio/build.mjs`, `node EXAMPLE_ROBOT/kinetic/audio/build.mjs`, and `node examples/wolf-actuator/audio/build.mjs`. Rebuilding visual assets may require the example's documented Python/Blender environment. Recording is separate from viewing: deterministic capture plus [video encoding](../tools/video/README.md) can produce an MP4, while captured frames, exports and browser review screenshots remain local ignored outputs.
+Music rebuild commands are `node EXAMPLE_ROBOT/audio/build.mjs`, `node EXAMPLE_ROBOT/kinetic/audio/build.mjs`, and `node examples/wolf-actuator/audio/build.mjs`. The retained v1 WOLF tour uses `node examples/wolf-actuator/tour/audio/build.mjs`; v2, v3 and v4 share `node examples/wolf-actuator/tour-v2/audio/build.mjs`. Rebuilding visual assets may require the example's documented Python/Blender environment. Recording is separate from viewing: deterministic capture plus [video encoding](../tools/video/README.md) can produce an MP4, while captured frames, exports and browser review screenshots remain local ignored outputs.
 
 The humanoid rebuilds with `node examples/humanoid/build-humanoid.mjs` (Node and
 Python 3 standard library) and `node examples/humanoid/audio/build.mjs` (Node,
@@ -106,4 +143,4 @@ before treating a source-body explosion as a deeper engineering teardown.
 
 ## Adding another example
 
-Follow the [skill guide](../docs/skill-guide.md) and [module catalog](../docs/modules.md). Begin with an input brief, provenance and real part IDs. Reuse the explosion/camera/appearance handoffs, bind them to existing runtime adapters, test seek/reset/loop invariants, and document unsupported claims. A text prompt or image supplies a design brief; it does not prove hidden fasteners, native CAD identity or assembly constraints.
+Follow the [skill guide](../docs/skill-guide.md) and [module catalog](../docs/modules.md). Begin with an input brief, provenance and real part IDs. Reuse the explosion/camera/appearance handoffs and select Mating Close-up for an evidenced component relationship. Bind plans to existing runtime adapters, test seek/reset/loop invariants, and document unsupported claims. A text prompt or image supplies a design brief; it does not prove hidden fasteners, native CAD identity or assembly constraints.

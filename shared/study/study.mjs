@@ -3,7 +3,7 @@ import { createMechanismViewer } from '/shared/viewer/viewer.mjs';
 import { createCameraDirector } from '/showcase/camera-director.mjs';
 import { placeAnnotation, moveAnnotation } from '/shared/viewer/annotation-layout.mjs';
 import { COLOR_ACCENT_REVISION, sampleColorAccents } from '/shared/appearance/color-accents.mjs';
-import { createMeshColorLayer } from '/shared/appearance/mesh-color-layer.mjs';
+import { createMeshColorLayer, createMeshVisibilityLayer } from '/shared/appearance/mesh-color-layer.mjs';
 
 /** One instance owns the study shell on a page. The example supplies all source
  * identities, mechanics, chapter timing, detail targets and framing policy. */
@@ -23,7 +23,7 @@ let partRecords = new Map(), partIds = [];
 let playing = !reduced.matches, musicClock = false, muted = false, time = 0, lastFrame = 0, lastChapter = -1, loops = 0, previousTime = 0;
 let dirty = true, cut = true, manualCamera = false, transportEpoch = 0, hiddenResume = false;
 let annotationLayouts = [], annotationKey = null, annotationSnapshots = [];
-let colorLayer, colorCues = true, colorAssignments = new Map();
+let colorLayer, visibilityLayer, presentationLayer, colorCues = true, colorAssignments = new Map();
 let capturing = false, lastCaptureTime = -1;
 const director = createCameraDirector({ duration: config.cameraTransitionSeconds ?? .8 });
 const formatTime = value => `${Math.floor(value / 60)}:${Math.floor(value % 60).toString().padStart(2, '0')}`;
@@ -80,7 +80,7 @@ function seek(value) {
 }
 function prepareLabels(state, width, height, viewportBox) {
   const aspect = width / height, plan = reduced.matches && !capturing
-    ? framing.cameraFor(state.chapter.id, aspect, 0)
+    ? framing.stillCameraFor?.(state.chapter.id, aspect, state.localTime) ?? framing.cameraFor(state.chapter.id, aspect, 0)
     : framing.annotationCameraFor?.(state.chapter.id, aspect) ?? framing.cameraFor(state.chapter.id, aspect, 0);
   const camera = viewer.camera.clone();
   camera.position.fromArray(plan.position); camera.lookAt(new THREE.Vector3(...plan.target));
@@ -93,9 +93,11 @@ function prepareLabels(state, width, height, viewportBox) {
   };
   const chapterStart = state.chapter.firstBeat * 60 / BPM, chapterEnd = state.chapter.lastBeat * 60 / BPM;
   const endpoints = [stateAt(chapterStart), stateAt(chapterEnd - 1e-6)];
+  const obstacleIds = config.labelObstacleIds?.(state);
   const credit = document.querySelector('.asset-credit').getBoundingClientRect();
   for (const [i, [id, text]] of state.chapter.labels.entries()) {
     const reference = stateAt(chapterStart + CUE_WINDOWS[state.chapter.id][i][0] + .001);
+    if (config.presentationOpacity && config.presentationOpacity(reference, id) < .5) { layouts.push(null); continue; }
     const label = $(`label-${i ? 'b' : 'a'}`); label.textContent = text;
     const points = [], obstacles = [...placed, { x: credit.left - viewportBox.left, y: credit.top - viewportBox.top, width: credit.width, height: credit.height }];
     for (const mesh of viewer.meshes) {
@@ -108,6 +110,7 @@ function prepareLabels(state, width, height, viewportBox) {
           points.push({ ...project(world), world });
         }
       } else {
+        if (obstacleIds ? !obstacleIds.includes(meshId) : config.presentationOpacity && config.presentationOpacity(reference, meshId) < .5) continue;
         const part = partRecords.get(meshId), projected = [];
         // Every other link follows an authored linear segment. Reserve its full
         // chapter sweep so retained names are not covered by a later movement.
@@ -136,6 +139,7 @@ function showLabels(state, cues) {
   const key = `${state.chapter.id}:${width}:${height}:${reduced.matches && !capturing ? 'still' : 'motion'}`;
   if (annotationKey !== key) { annotationKey = key; annotationLayouts = prepareLabels(state, width, height, box); }
   for (const cue of cues) {
+    if (config.presentationOpacity && config.presentationOpacity(state, cue.id) < .5) continue;
     const cached = annotationLayouts[cue.index];
     if (!cached) continue;
     const p = new THREE.Vector3(...cached.anchorWorld).project(viewer.camera);
@@ -160,13 +164,20 @@ function applyFrame({ forceCut = false } = {}) {
   const detailIds = config.detailIds?.(state) ?? null;
   // Hide only owned solids, never semantic source wrappers with descendants.
   for (const mesh of viewer.meshes) mesh.visible = !detailIds || detailIds.includes(mesh.userData.selectionId);
+  visibilityLayer?.apply(id => (!detailIds || detailIds.includes(id)) ? config.presentationOpacity(state, id) : 0);
   if (!manualCamera) {
     const aspect = Math.max(1, $('viewport').clientWidth) / Math.max(1, $('viewport').clientHeight);
-    const plan = framing.cameraFor(state.chapter.id, aspect, reduced.matches && !capturing ? 0 : state.localTime);
+    const plan = reduced.matches && !capturing
+      ? framing.stillCameraFor?.(state.chapter.id, aspect, state.localTime) ?? framing.cameraFor(state.chapter.id, aspect, 0)
+      : framing.cameraFor(state.chapter.id, aspect, state.localTime);
     // A detail edit changes which source solids are shown. Explicit editorial
     // cuts prevent a new whole assembly popping into the previous macro camera.
     const chapterCut = lastChapter !== state.chapterIndex && config.cameraCuts?.includes(state.chapter.id);
-    const pose = director.sample({ chapterKey: state.chapter.id, localTime: state.localTime, pose: plan, cut: forceCut || cut || chapterCut || (reduced.matches && !capturing) });
+    // Authored paths already interpolate on the common story clock. Keep a
+    // single director key so chapter boundaries do not interpolate them twice;
+    // manual exploration return still uses the director's captured actual pose.
+    const authored = config.cameraContinuity === 'authored';
+    const pose = director.sample({ chapterKey: authored ? 'authored-path' : state.chapter.id, localTime: authored ? state.time : state.localTime, pose: plan, cut: forceCut || cut || (!authored && chapterCut) || (reduced.matches && !capturing) });
     viewer.camera.position.fromArray(pose.position); viewer.controls.target.fromArray(pose.target);
     viewer.camera.zoom = 1; viewer.camera.left = -pose.halfHeight * aspect; viewer.camera.right = pose.halfHeight * aspect;
     viewer.camera.top = pose.halfHeight; viewer.camera.bottom = -pose.halfHeight;
@@ -181,6 +192,10 @@ function applyFrame({ forceCut = false } = {}) {
   const accents = config.appearanceCues?.(state, cues) ?? cues.map(cue => ({ id: cue.id, weight: cue.opacity }));
   colorAssignments = sampleColorAccents(partIds, accents, { enabled: colorCues });
   colorLayer.apply(colorAssignments);
+  // Optional presentation-only material/annotation adapter. It shares the
+  // resolved story clock and camera; source and mechanical pose ownership stay
+  // with the existing adapters above. Omitted layers preserve old studies.
+  presentationLayer?.update({state,viewer,index,viewport:$('viewport'),colorCues,capturing,manualCamera,playing});
   viewer.draw(); showLabels(state, cues); cut = dirty = false;
 }
 function frame(now) {
@@ -193,7 +208,12 @@ function frame(now) {
   if (ready && playing && !document.hidden) {
     const dt = lastFrame ? Math.max(0, (now - lastFrame) / 1000) : 0;
     time = musicClock && !audio.paused ? normalizeTime(audio.currentTime) : normalizeTime(time + dt);
-    if (time < previousTime - .1) loops++;
+    if (time < previousTime - .1) {
+      loops++;
+      // Clear an old exploration-return origin before the absolute clock wraps.
+      // The adapter owns an equal first/last path pose; the next sample is exact.
+      if (config.cameraContinuity === 'authored') director.reset();
+    }
     previousTime = time; lastFrame = now; applyFrame();
   } else if (ready && dirty) applyFrame();
   requestAnimationFrame(frame);
@@ -247,6 +267,12 @@ async function init() {
   });
   await viewer.ready; if (viewer.parts.size !== partIds.length || [...viewer.parts.keys()].some(id => !partRecords.has(id))) throw new Error('Scene-index and visible source parts disagree.');
   colorLayer = createMeshColorLayer(viewer.meshes);
+  if (config.presentationOpacity) visibilityLayer = createMeshVisibilityLayer(viewer.meshes);
+  if (config.createPresentationLayer) {
+    viewer.scene.updateMatrixWorld(true);
+    presentationLayer = config.createPresentationLayer({viewer,index,viewport:$('viewport')});
+    if (!presentationLayer || typeof presentationLayer.update !== 'function') throw new TypeError('Presentation layer must implement update(context).');
+  }
   viewer.controls.enabled = !playing; ready = true; applyFrame({ forceCut: true });
   status(config.initialStatus);
   await musicPromise;

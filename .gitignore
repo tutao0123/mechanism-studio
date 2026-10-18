@@ -35,6 +35,8 @@ shots/
 *.mp4
 *.webm
 *.mov
+# Rebuild this longer deterministic score with tour-v2/audio/build.mjs.
+examples/wolf-actuator/tour-v2/audio/tour-loop.wav
 # Per-machine editor state, credential material and Python environments.
 .vscode/
 .idea/

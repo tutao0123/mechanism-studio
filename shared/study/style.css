@@ -184,10 +184,20 @@ body.clean h1 { font-size: clamp(29px, 2.7vw, 40px); }
 /* Explicit capture mode keeps the explanatory chapter and source credit while
  * fitting the actual browser viewport. Use a 1920 x 1080 viewport for HD output. */
 body.capture .transport, body.capture .status, body.capture .masthead, body.capture footer { display: none; }
-body.capture main, body.capture.clean main { height: 100svh; min-height: 0; max-width: none; padding: 22px 38px 19px; display: flex; flex-direction: column; }
-body.capture .intro, body.capture.clean .intro { flex: none; padding: 0 0 10px; }
+body.capture main, body.capture.clean main { height: 100svh; min-height: 0; max-width: none; padding: 32px 52px 32px; display: flex; flex-direction: column; }
+body.capture .intro, body.capture.clean .intro { flex: none; padding: 0 0 14px; }
+/* HD recording has its own type hierarchy: review the encoded frame at 640 px
+ * wide as well as at 1920 px. These rules do not resize the interactive page. */
+body.capture h1, body.capture.clean h1 { font-size: 58px; }
+body.capture .eyebrow, body.capture.clean .eyebrow { font-size: 22px; margin-bottom: 6px; }
+body.capture .intro-note { display: none; }
 body.capture #stage { flex: 1; }
 body.capture #viewport { height: auto; flex: 1; min-height: 0; }
-body.capture .chapter { flex: none; padding: 18px 0 0; min-height: 92px; }
-body.capture .asset-credit { white-space: pre-line; }
+body.capture .chapter { flex: none; grid-template-columns: 82px minmax(0, .9fr) minmax(0, 1.3fr); gap: 28px; padding: 24px 0 0; min-height: 136px; }
+body.capture .chapter-index { font-size: 24px; white-space: nowrap; }
+body.capture h2 { font-size: 46px; line-height: 1.16; }
+body.capture #chapter-copy { grid-column: auto; max-width: none; font-size: 36px; line-height: 1.38; }
+body.capture #annotations text { font-size: 36px; stroke-width: 5px; }
+body.capture #annotations path { stroke-width: 1; }
+body.capture .asset-credit { white-space: pre-line; font-size: 18px; line-height: 1.4; bottom: 14px; right: 8px; }
 .asset-credit { white-space: pre-line; }

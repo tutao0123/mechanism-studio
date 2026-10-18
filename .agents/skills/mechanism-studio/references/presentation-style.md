@@ -1,6 +1,6 @@
 # Default presentation style
 
-Apply these defaults to new mechanical scenes and tours unless the user overrides them. Free inspection does not need automatic cameras; historical pages are not silently restyled. [Pacing](presentation-pacing.md) owns timing and [tour transport](presentation-tour.md) owns playback.
+Apply these defaults to new mechanical scenes and tours unless the user overrides them. Free inspection does not need automatic cameras; historical pages are not silently restyled. [Pacing](presentation-pacing.md) owns timing, [motion choreography](motion-choreography.md) coordinates continuous context and repeated-part close-ups, and [tour transport](presentation-tour.md) owns playback.
 
 ## Visual intention and implementation
 
@@ -16,9 +16,9 @@ Use orthographic engineering views by default; existing tour/study uses orthogra
 
 Precompute conservative envelopes for full motion, maximum and intermediate explosion, and relevant process paths, with viewport/label reserves. Replan on actual asset/configuration or viewport changes. Live bounds help verification/manual fit; never drive automatic framing from moving bounds each frame. Trial planning must not mutate source poses.
 
-Choose overview → necessary causal detail → separation/reassembly. Several chapters may share a view. Avoid constant orbit, tracking every moving part, or simultaneous large rotation and zoom. A useful detail may have a small authored entry arc, settled before names appear.
+Choose overview → necessary causal detail → separation/reassembly. Several chapters may share a view. Avoid constant orbit, tracking every moving part, or simultaneous large rotation and zoom. A useful detail may have a small authored entry arc, settled before names appear. For one repeated component, follow its real occurrence from the set into an observation position and magnify with camera framing; keep mesh scale and source rest unchanged.
 
-Continuous transitions capture the actual starting view once and use the common director's quintic smoothstep, shortest azimuth arc and smooth scale. Showcase typically uses 0.6–1s (current profile 0.8s), Explain may use 2.4s. Explicit seek/restart/paused chapter selection cuts to planned pose; exploration return begins from the actual user camera. Deliberate editorial cuts are appropriate when visible-solid membership changes between macro and whole views; verify no newly shown arm pops into a jaw macro frame.
+Continuous transitions capture the actual starting view once and use the common director's quintic smoothstep, shortest azimuth arc and smooth scale. Showcase typically uses 0.6–1s (current profile 0.8s), Explain may use 2.4s; a purposeful approach/extraction may have its own longer authored path. Explicit seek/restart/paused chapter selection cuts to planned pose; exploration return begins from the actual user camera. Prefer a readable contextual transition between whole and detail: approach, soften surrounding solids and edges, then focus. Verify envelopes for all geometry still shown during the fade. Deliberate editorial cuts remain appropriate when they communicate the relationship better; membership changes do not automatically require them. Never reveal a whole arm inside an already tight jaw frame.
 
 Pause freezes transition time. Planned poses are deterministic from chapter/time; interpolated transitions additionally depend on captured start pose/time. Resize preserves phase/play state. Reduced motion pauses autoplay and uses still views until deliberate playback. No second wall-clock camera.
 
@@ -40,7 +40,7 @@ Do not reveal labels during large camera changes. A new scene clears the old gro
 
 ## Typography and layout tokens
 
-Actual CSS remains authoritative.
+Actual CSS remains authoritative. The following sizes describe the interactive web layout; an encoded video needs its own capture profile below.
 
 | Role | Default |
 | --- | --- |
@@ -54,8 +54,24 @@ Actual CSS remains authoritative.
 
 No external font request is required. Phone layouts may scroll vertically; model, text and transport remain reachable. Desktop clean/capture views should fit their intended frame. Keep visible focus, semantic controls and keyboard access.
 
+## Typography for recorded video
+
+Design the recording for its **displayed size**, not only the capture canvas. A 1920×1080 video shown at 640px wide reduces every element to one third: a 16px web label becomes about 5.3px and a 30px label about 10px. Capturing a working webpage at HD resolution does not make that text readable in a social feed.
+
+Keep the existing web layout and typeface choices. Use a scoped capture/export profile for larger text and sufficient reserved space; do not enlarge every interactive page or scale the entire scene as a substitute. For a 1920×1080 capture, useful starting estimates are a **48–56px title**, **30–36px short caption**, **32–40px near-part name** and about **18–20px credit**. These are authoring estimates, not guaranteed readability or a universal minimum. Choose the actual size after the downscale review; key names may need more space or larger type.
+
+- Write one short English observation per shot, normally one concise sentence. Keep labels to a part name or similarly brief phrase. Put source-depth explanations and detailed limitations in the example README or surrounding page, retaining any essential distinction in the frame. Prefer deleting repeated prose to shrinking important text.
+- Recompute actual text widths/heights with the capture fonts. Recheck label-to-part leaders, name/name and name/solid intersections, chapter wrapping, credits and camera safety areas. A web-size layout test does not validate the enlarged video labels.
+- Keep the short-leader, serif and restrained white-line language. Larger type does not justify remote sidebars, leader endpoints that miss the part, cropped titles or labels sitting over useful contact detail. If two names cannot fit, show one or recompose the shot.
+- Review representative frames of the **encoded delivery**, including the densest label/caption shot, at **960px and 640px display widths** without zooming back in. Check a playback segment at those sizes as well: reading time, compression and movement matter. A full-size PNG or browser-only screenshot is insufficient evidence for the final video.
+- Preserve required attribution in the delivered media or its accompanying notice according to the source terms. Fine credit is secondary to the mechanical explanation, but must remain intact and legible in its intended credit view; do not hide a legal requirement merely to clear the frame.
+
+Record capture dimensions, actual font sizes, reviewed display widths, representative timestamps and any remaining limitations. Keep “layout checks passed,” “encoded downscale visually reviewed” and “readable during playback” as separate claims; do not mark the latter checks complete before performing them.
+
 ## Acceptance
 
 Inspect real first/last, whole/detail/intermediate/max-explosion frames and intended aspect ratios. Check conservative bounds, no breathing, pause/seek/loop/exploration/resize/reduced-motion behavior, and label reveal/read/retain/fade. Review long text/crowded chapters, truthful anchors, short leaders, credit visibility and no horizontal overflow.
+
+For video, also run the capture-profile and encoded 960px/640px readability review above. Enlarged typography changes the composition and annotation constraints even when geometry and camera paths are unchanged.
 
 Run relevant [camera-plan](../../../../showcase/tests/camera-plan.test.mjs) and [director](../../../../showcase/tests/camera-director.test.mjs) checks plus new adapter bounds/anchors. Existing tests or a reference screenshot do not validate new geometry. No new modeling, TTS or expanded MCP scope is implied by a style change.

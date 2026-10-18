@@ -34,3 +34,43 @@ export function createMeshColorLayer(meshes, { canApply = mesh => !mesh.userData
     },
   };
 }
+
+/** Optional presentation fades for already-owned viewer materials. Source nodes,
+ * geometry, transforms and semantic hierarchy remain untouched. Feature edges
+ * fade with their solid so a context silhouette cannot linger at full strength. */
+export function createMeshVisibilityLayer(meshes) {
+  const records = meshes.map(mesh => {
+    const objects = [mesh, ...mesh.children.filter(child => child.userData?.isLineArt)];
+    const materials = objects.flatMap(object => (Array.isArray(object.material) ? object.material : [object.material])
+      .filter(Boolean).map(material => ({ material, opacity: material.opacity, transparent: material.transparent,
+        depthWrite: material.depthWrite })));
+    return { mesh, id: mesh.userData?.selectionId, materials, visible: mesh.visible };
+  });
+  return {
+    apply(opacityForId) {
+      for (const record of records) {
+        const opacity = opacityForId(record.id);
+        if (!Number.isFinite(opacity) || opacity < 0 || opacity > 1) throw new RangeError('Presentation opacity must be between zero and one.');
+        record.mesh.visible = opacity > .0001;
+        for (const entry of record.materials) {
+          const transparent = entry.transparent || opacity < .9999;
+          if (entry.material.transparent !== transparent) { entry.material.transparent = transparent; entry.material.needsUpdate = true; }
+          entry.material.opacity = entry.opacity * opacity;
+          // Keep the solid's depth surface while its colour fades. Otherwise
+          // dozens of hidden bearing/edge layers bleed through as a wire cloud.
+          // Feature lines keep their original depthWrite=false policy.
+          entry.material.depthWrite = entry.depthWrite;
+        }
+      }
+    },
+    restore() {
+      for (const record of records) {
+        record.mesh.visible = record.visible;
+        for (const entry of record.materials) {
+          Object.assign(entry.material, { opacity: entry.opacity, transparent: entry.transparent, depthWrite: entry.depthWrite });
+          entry.material.needsUpdate = true;
+        }
+      }
+    },
+  };
+}
