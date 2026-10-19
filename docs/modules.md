@@ -107,7 +107,9 @@ Optional hooks add source-backed workingPoses, visibility detailIds, authored ap
 
 API: `play()`, `pause()`, `seek(seconds)`, `snapshot()` and viewer/index/framing access. Native audio currentTime is the live music clock; explicit capture mode freezes it and accepts monotonically increasing frame times. Retained labels require stationary named targets. The actual score BPM/duration/byte length/hash must agree.
 
-Focused checks: `node --test shared/study/tests/runtime-delivery.test.mjs`, plus the actual adapter's tests and browser loop.
+Preview: the isolated study servers share `shared/study/preview-server.mjs`; its `STUDY_RUNTIME_FILES` is the one list of shared runtime files they serve. `tests/preview-pages.test.mjs` walks every served page's static dependency graph and fails on a refused, missing or unused entry.
+
+Focused checks: `node --test shared/study/tests/runtime-delivery.test.mjs tests/preview-pages.test.mjs`, plus the actual adapter's tests and browser loop.
 
 ## Application and toolchains
 

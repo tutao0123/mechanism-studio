@@ -17,6 +17,13 @@ inspection layer can own selection appearance. Custom selection systems should
 provide `canApply` or compose selection after this layer. An animation should not
 modify a material shared by repeated occurrences directly.
 
+`createMeshVisibilityLayer(meshes)` fades a solid and its feature-line children
+together from an absolute per-frame opacity (`apply(id => opacity)`), keeps the
+solid's depth writes, sets `visible` false at zero and restores the creation-time
+state with `restore()`. It never reveals a part hidden on its display wrapper by
+cutaway or isolation. Create it after `createMeshColorLayer`: it captures each
+mesh's material at creation, so an earlier layer would fade the replaced originals.
+
 Colour is an explanatory overlay, not a physical material or simulation result.
 Use one restrained accent with names or a legend; do not encode information only
 in hue. Recompute from the same scene/annotation time on play, pause, seek and

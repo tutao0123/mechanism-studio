@@ -126,3 +126,20 @@ full `clip: {x:0,y:0,width:1920,height:1080,scale:1}` with `fromSurface:true` an
 the default CUA screenshot was scaled when the host was at 130% zoom. Calibrate
 again per session instead of assuming either path is universally correct. Inspect the
 returned byte signature rather than assuming a PNG/JPEG format from a filename.
+
+## Preview servers
+
+Each isolated study example (`EXAMPLE_ROBOT`, `examples/humanoid`,
+`examples/wolf-actuator`) keeps its own read-only `serve.mjs` with page-specific
+routes. The shared runtime every study page loads is declared once in
+`STUDY_RUNTIME_FILES` in `preview-server.mjs`, together with the common
+GET/HEAD/range file server. When the shell imports a new shared file, add it to
+that list once; do not add `/shared/...` rules to an example server.
+
+`tests/preview-pages.test.mjs` walks every served HTML page of those servers with
+`scripts/page-graph.mjs` (HTML tags, import map, ES imports, CSS, and literal
+`fetch()` / `*Url:` runtime resources) and fails when a dependency is refused,
+missing or unmapped, or when a declared runtime file is used by no page. Files
+git ignores, such as rendered video or synthesized music, may be absent. It is a
+static check: a green result does not prove the page renders, so still open the
+page after a visual change.

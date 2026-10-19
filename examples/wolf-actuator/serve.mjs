@@ -1,17 +1,13 @@
-import { createServer } from 'node:http';
-import { readFile, realpath, stat } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { dirname, resolve, relative, isAbsolute, extname } from 'node:path';
+import { dirname, resolve } from 'node:path';
+import { createPreviewFileServer, isSafeUrlPath, listenPreview, studyRuntimeFile } from '../../shared/study/preview-server.mjs';
 
 const exampleRoot = dirname(fileURLToPath(import.meta.url));
 const projectRoot = resolve(exampleRoot, '../..');
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.json': 'application/json', '.glb': 'model/gltf-binary', '.wav': 'audio/wav', '.mp4': 'video/mp4', '.jpg': 'image/jpeg', '.md': 'text/plain; charset=utf-8', '.txt': 'text/plain; charset=utf-8', '.toml': 'text/plain; charset=utf-8' };
-function within(root, target) {
-  const path = relative(root, target);
-  return path && path !== '..' && !path.startsWith('..\\') && !path.startsWith('../') && !isAbsolute(path);
-}
+// Page-specific files only. The shared study runtime and vendored Three.js come
+// from one declared list in shared/study/preview-server.mjs.
 export function publicFile(path) {
-  if (path.includes('\\') || path.includes('\0') || path.split('/').some(part => part === '..' || part.startsWith('.'))) return null;
+  if (!isSafeUrlPath(path)) return null;
   if (path === '/' || path === '/index.html') return resolve(exampleRoot, 'index.html');
   if (path === '/tour-v4/' || path === '/tour-v4/index.html') return resolve(exampleRoot, 'tour-v4/index.html');
   if (/^\/tour-v4\/(?:app\.mjs|story\.mjs|pair-layer\.mjs|direction-cues\.mjs|tooth-phase\.mjs|tooth-data\.json|README\.md|review\.html|plan\.json)$/.test(path)) return resolve(exampleRoot, path.slice(1));
@@ -47,42 +43,11 @@ export function publicFile(path) {
   if (path === '/detail/output/wolf-motor-34s-v2.mp4' || path === '/detail/output/wolf-motor-34s-v2-contact-sheet.jpg') return resolve(exampleRoot, path.slice(1));
   if (path === '/detail/output/wolf-motor-34s-v3.mp4' || path === '/detail/output/wolf-motor-34s-v3-contact-sheet.jpg') return resolve(exampleRoot, path.slice(1));
   if (/^\/source\/(?:provenance\.json|LICENSE|NOTICE\.md|UPSTREAM-README\.md)$/.test(path)) return resolve(exampleRoot, path.slice(1));
-  if (/^\/shared\/viewer\/(?:viewer|scene|line-art|annotation-layout)\.mjs$/.test(path) || path === '/showcase/camera-director.mjs') return resolve(projectRoot, path.slice(1));
-  if (path === '/shared/appearance/color-accents.mjs' || path === '/shared/appearance/mesh-color-layer.mjs') return resolve(projectRoot, path.slice(1));
-  if (path === '/shared/study/study.mjs' || path === '/shared/study/shell.mjs' || path === '/shared/study/style.css') return resolve(projectRoot, path.slice(1));
-  if (/^\/vendor\/three\/(?:build|src|examples\/jsm)\/[\w./-]+\.js$/.test(path)) return resolve(projectRoot, 'node_modules', path.slice('/vendor/'.length));
-  return null;
+  return studyRuntimeFile(path, projectRoot);
 }
 export function createWolfServer() {
-  return createServer(async (request, response) => {
-    try {
-      if (!['GET', 'HEAD'].includes(request.method)) { response.writeHead(405, { Allow: 'GET, HEAD' }).end(); return; }
-      const path = decodeURIComponent(new URL(request.url, 'http://127.0.0.1').pathname);
-      const candidate = publicFile(path);
-      if (!candidate) { response.writeHead(403).end('Forbidden'); return; }
-      const actual = await realpath(candidate), root = await realpath(projectRoot);
-      if (!within(root, actual) || !(await stat(actual)).isFile()) { response.writeHead(403).end('Forbidden'); return; }
-      const data = await readFile(actual), headers = { 'Content-Type': types[extname(actual)] || (actual.endsWith('LICENSE') ? 'text/plain; charset=utf-8' : 'application/octet-stream'), 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'Accept-Ranges': 'bytes' };
-      let body = data, status = 200;
-      if (request.headers.range) {
-        const match = /^bytes=(\d*)-(\d*)$/.exec(request.headers.range);
-        let start = 0, end = data.length - 1;
-        if (match && (match[1] || match[2])) {
-          if (match[1]) { start = Number(match[1]); if (match[2]) end = Math.min(Number(match[2]), end); }
-          else start = Math.max(0, data.length - Number(match[2]));
-        }
-        if (!match || (!match[1] && !match[2]) || start > end || start >= data.length || (match[1] === '' && Number(match[2]) === 0)) {
-          response.writeHead(416, { 'Content-Range': `bytes */${data.length}` }).end(); return;
-        }
-        body = data.subarray(start, end + 1); status = 206; headers['Content-Range'] = `bytes ${start}-${end}/${data.length}`;
-      }
-      headers['Content-Length'] = body.length;
-      response.writeHead(status, headers).end(request.method === 'HEAD' ? undefined : body);
-    } catch { response.writeHead(404).end('Not found'); }
-  });
+  return createPreviewFileServer({ projectRoot, publicFile });
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const port = Number(process.env.PORT || 4181);
-  if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('Invalid preview port');
-  createWolfServer().listen(port, '127.0.0.1', () => console.log(`WOLF showcase: http://127.0.0.1:${port}/`));
+  listenPreview(createWolfServer(), { defaultPort: 4181, label: 'WOLF showcase' });
 }

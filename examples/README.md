@@ -51,7 +51,7 @@ these pages; use a local server below to load models and play music.
 | WOLF motor detail edition | Same WOLF server | `http://127.0.0.1:4181/detail/?clean=1` | Another 34.285714-second edition: 245-leaf actuator → actual 86-leaf motor → source components → restoration |
 | WOLF bearing detail edition | Same WOLF server | `http://127.0.0.1:4181/bearing/?clean=1` | 34.285714 seconds: actual 70-leaf bearing A → one original Part 1 close-up → restoration; generic source names retained |
 
-The root server handles the studio and original mechanisms; SO-ARM, humanoid and WOLF studies use their own explicit read-only route allowlists. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
+The root server handles the studio and original mechanisms; SO-ARM, humanoid and WOLF studies use their own explicit read-only route allowlists, sharing one declared study runtime list (`shared/study/preview-server.mjs`) that `tests/preview-pages.test.mjs` checks against every served page. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
 
 The WOLF [complete v4 tour](wolf-actuator/tour-v4/README.md),
 [motor detail cut](wolf-actuator/detail/README.md) and
