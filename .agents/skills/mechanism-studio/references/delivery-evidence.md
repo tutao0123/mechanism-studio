@@ -48,6 +48,56 @@ listed in the public manifest without shipping their contents. `repository`
 means intended package storage, not confirmation that a file was committed or
 pushed. Mark ignored generated music as `local` and document its build command.
 
+## Prefer direct frame composition for studies
+
+For study-shell films, prefer rendering each supplied timeline time into a fixed
+output frame: read the WebGL canvas pixels, explicitly compose SVG annotations,
+titles, chapter copy and credits, then encode the sequence and mux the verified
+audio. A canvas-only export omits the DOM/SVG overlays. Set output dimensions and
+render scale explicitly so host display DPI or browser-window zoom cannot choose
+the output geometry. Keep the authored mechanics, camera and pacing unchanged.
+
+The legacy `capture.frame(seconds)` name identifies the study's deterministic
+timeline API; it does not record the screen or produce image bytes by itself.
+Record the compositor/version, frame times, fixed layout/output dimensions,
+renderer ratio, canvas dimensions, fonts and included overlay layers. Validate
+the direct compositor and the complete exported sequence before declaring this
+route implemented and checked for a delivery; a proposed module is not evidence.
+Use browser screenshots only when the requested output needs that surface or a
+direct composition route is unavailable, and record that choice explicitly.
+
+## Validate captured frame geometry
+
+For a browser-screenshot route, also retain its setup with the frame evidence:
+CSS layout viewport width/height, visual viewport scale/offsets when available,
+browser `devicePixelRatio`, renderer pixel ratio and canvas backing dimensions,
+output pixel dimensions, screenshot API and its explicit clip rectangle/scale.
+Record surface and beyond-viewport options where the API exposes them. CSS
+viewport size, drawing-buffer size and screenshot size are distinct measurements;
+matching output dimensions alone do not establish a correctly framed capture.
+
+For either route, calibrate the opening frame and a consecutive test sequence,
+then validate **every source frame** against an invariant landmark, such as a
+fixed title, rule or credit. Check position and extent/scale as well as pixel differences;
+exclude authored changes from the reference region. Record the reference crop,
+method, compression-aware tolerance, checked/expected frame counts and flagged
+frame numbers/times. Review and resolve each flag before declaring the sequence
+passed. If no invariant region is available, record the alternative geometry
+check and its limits rather than claiming an unperformed landmark check.
+
+Repeat the landmark/scale check over **every decoded delivery frame**, allowing
+for encoding differences, and retain separate source and encoded results. An
+unplanned scale/crop jump that also moves static composition landmarks in source
+frames indicates a frame-generation defect; it does not establish that the
+mechanical camera or line renderer needs changing. Use the actual frame sequence
+to localize the failing stage before changing it.
+
+Still samples, contact sheets, hashes, correct dimensions and a clean opening
+frame do not prove absence of intermittent flicker. A passing static-landmark
+check establishes frame geometry only; motion/line stability still needs
+continuous playback review of the delivered film and targeted frame analysis
+where artifacts are suspected. State the reviewed coverage and remaining limits.
+
 ## Check the handoff
 
 From the repository root:

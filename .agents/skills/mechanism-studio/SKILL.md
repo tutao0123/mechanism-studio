@@ -20,6 +20,10 @@ Read only the references needed for the user's deliverable. The public [skill gu
 
 These routes are authoring choices, not universal URL parameters. STEP placement alone does not supply joints or an operating cycle. Text and images first go through the [input brief](references/input-brief.md); there is no automatic image-to-CAD service.
 
+Showcase has two [pace profiles](references/presentation-pacing.md#preview-speed-and-authored-editions): **Detailed** keeps the 30–40s default; an explicit **Fast** request starts around 18–24s for X. Explain may be longer as needed. Preserve existing cuts and deliver only the requested profile(s). A 2× playback preview changes viewing speed; an authored fast cut needs its own readable captions, timeline and synchronized selected audio. These are authoring contracts, not an automatic two-version generator.
+
+For a requested cinematic or technology-film treatment, read the optional [Cinematic profile](references/presentation-cinematic.md): coordinated perspective camera, PBR materials/light, large sans-serif film typography and action-linked music. A short Cinematic request starts with Fast pacing unless specified otherwise; style and pace remain independent. White fine-line Atlas remains the default, and the profile requires an actual example adapter rather than a global style switch.
+
 For component-level breakdown or internal parts, read [assembly depth](references/assembly-depth.md) before grouping: plan whole mechanism → sourced subassembly → available physical components, with the requested depth and actual source limits recorded.
 
 ## Compose specialist modules
@@ -49,7 +53,7 @@ For a close-up that explains how components interact, select Mating Close-up: bi
 - New presentations use the shared white-background fine-line style, atlas serif type, near-part labels, short leaders, sequential reveal, same-scene retention and group fade at scene changes. Read the visual and pacing references before generating frames. User preferences override defaults; do not silently restyle old examples.
 - Match motion tempo to the part, travel and explanatory purpose; retain useful context between whole and detail views. A single-part close-up follows a real occurrence through extraction, camera magnification and return, without duplicating it or scaling its geometry. Keep the named part and camera settled during reading.
 - Public UI, captions and copy default to English. X clips normally omit narration; optional music uses original code synthesis and sparse authored action effects. Requested narration uses the optional provider-neutral [narration workflow](references/narration.md), with explicit speech-capable model/voice/endpoint selection; retain the existing Doubao adapter without forcing it on new examples. Do not regenerate valid paid audio merely to reorganize files.
-- Use one seekable time source for mechanics, explosion, process effects, camera plans, captions and audio. Camera transitions additionally retain a captured starting pose. Never add independent wall-clock motion or sound timers.
+- Use one seekable time source for mechanics, explosion, process effects, camera plans, captions and audio. Interactive camera transitions retain a captured starting pose; an authored film path samples its continuous pose from that same absolute time. Never add independent wall-clock motion or sound timers.
 - The project-local [Blender MCP](../../../tools/blender-mcp/README.md) has four lock-specific operations. It is optional, is not automatically connected, and is not a general CAD backend. Existing authorized Blender CLI tooling can be used without expanding that MCP.
 
 ## Deliver evidence

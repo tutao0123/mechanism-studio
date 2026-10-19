@@ -53,6 +53,8 @@ Specify first frame, continuous transitions, pause, explicit seek, loop, explora
 
 ## Stability and timing
 
+For a requested [Cinematic film](../presentation-cinematic.md#camera-and-composition), a fixed authored perspective path may replace the default orthographic transition pattern below. Require continuous position/target/lens velocity for smooth passages and matching endpoint pose/velocity for a loop; sample the common absolute time. Conservative envelope checks, source identity and recovery responsibilities remain the same. This profile is implemented by an example adapter, not by assuming the shared director already supplies perspective film rendering.
+
 Open directly on the planned first pose. Use precomputed conservative envelopes; rotating or separating geometry must not cause camera breathing, jitter or target chasing.
 
 At continuous chapter transitions, capture the actual starting camera once, use quintic smoothstep, shortest azimuth arc and smooth scale. Use the selected profile's duration unless a purposeful approach has its own authored interval. Explicit seek/restart/paused selection cuts to the planned pose; exploration return starts from the actual user pose. Coordinate approach and context fades before entering a tight close-up. When a continuous composition cannot communicate the change well, use a deliberate editorial cut; membership changes alone do not require one. Never reveal the whole arm inside a jaw macro frame.

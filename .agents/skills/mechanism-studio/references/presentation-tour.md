@@ -23,7 +23,9 @@ Continuous camera transitions also capture the actual starting camera/time once.
 | Sound loading/retry | Retained chapter position | Freeze or explicitly switch to silent, without secretly advancing audible mode |
 | Play rejection/failure | Explicit silent fallback | Useful captions/controls, accurate English status and retry |
 | Music study | One native track currentTime | Global time maps chapters; no per-chapter music restart |
-| Explicit frame capture | Monotonic supplied frame time | Audio paused; continuous transitions still sampled, not repeated force-cut seek |
+| Explicit frame rendering | Monotonic supplied frame time | Audio paused; continuous transitions still sampled, not repeated force-cut seek |
+
+Study films prefer direct composition of WebGL pixels, SVG annotations and text into fixed-size frames, followed by sequence encoding and audio muxing. `capture.frame(seconds)` is the legacy timeline API name, not screen recording. Canvas pixels alone omit the page's overlays. Set the export layout/output scale independently of host display DPI and validate the actual compositor before claiming the route ready; see [direct frame delivery](delivery-evidence.md#prefer-direct-frame-composition-for-studies).
 
 Measured chapter audio durations replace hints where available. durationHint is bounded preview/fallback information, not word-level timing. Same-mode silent and audible paths share action/duration configuration. Waiting/buffering sound cannot advance an independent audible clock.
 
@@ -40,5 +42,7 @@ Real STEP retains source units/identity/placement. Geometry or fragment mapping 
 ## Acceptance
 
 Check one complete actual loop, chapter boundaries, pause/resume, both seek directions, story/mode switch, exploration return, viewport/visibility recovery and reduced motion. Verify planned-frame determinism and transition continuity separately. No opening jitter, live fit, stale labels, changed mechanical readings from explosion or cropped credit.
+
+For video delivery, retain the fixed output/layout, renderer and composition settings (plus CSS viewport, clip/scale and DPR for a screenshot route) and run the [every-frame source and decoded landmark/scale checks](delivery-evidence.md#validate-captured-frame-geometry). Review continuous encoded playback separately; representative stills or a clean opening frame do not establish absence of intermittent flicker.
 
 Review actual duration/action/result holds, near-name layout and scene fade. For delivered narration, verify matching text, actual sound playback and pause, then exercise missing/corrupt/stale audio and rejected play. For music/silent versions, validate only the chosen path. Objective file generation is not subjective listening or browser evidence. Do not claim a review that was not executed.

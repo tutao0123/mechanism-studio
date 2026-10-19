@@ -62,7 +62,7 @@ credential values are never printed or saved. The gate checks:
 - CAD provenance that explicitly forbids redistribution or lacks permission
   for a user-provided source.
 - Reviewed file types and repository size budgets: **95 MiB per file** and
-  **320 MiB total** (expanded from 300 MiB for the two retained robot models), below GitHub's individual file limit. The large WOLF STEP is
+  **328 MiB total** (the two retained robot models raised the budget to 320 MiB; the separate cinematic edition adds a reproducible 4.4 MiB PCM score), below GitHub's individual file limit. The large WOLF STEP is
   intentionally retained together with its source license and provenance.
 
 Tests exercise redacted findings, forced private entries, unsafe `.env.example`

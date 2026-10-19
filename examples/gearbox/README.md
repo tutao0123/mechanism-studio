@@ -38,7 +38,7 @@ built score the page plays silently and says so. Pause,
 seek, restart, free exploration and **Color cues** work as in the other study
 pages. Rotation is shown deliberately slowly so individual teeth stay readable.
 
-## Two editions
+## 40-second editions
 
 ![The same moment in the default atlas edition (top) and the blueprint edition (bottom), with indexed spec labels and the 81 mm centre distance](../../docs/media/gearbox-editions.jpg)
 
@@ -115,6 +115,22 @@ carries torque only when its synchronizer sleeve is slid over its dog teeth.
   pitch per frame of a 15 fps GIF. The brief alignment nudge stays under
   7 teeth/s, below the half-pitch limit where teeth appear to turn backwards.
 
+## Optional 24-second cinematic edition
+
+[Transmission / Revealed](cinematic/README.md) is a separate 1920 × 1080,
+30 fps treatment with procedural PBR metal, a continuous perspective camera
+path, dynamic power-path emphasis and its own original 120 BPM score. It uses
+direct WebGL + Canvas frame composition, not browser-window recording. The
+40-second white atlas and blueprint studies remain available; this optional
+edition does not change the skill's default visual style.
+
+Open `/cinematic/` for the live model or `/cinematic/review.html` for the locally
+generated film. Its delivery path is
+`examples/gearbox/output/gearbox-cinematic-24s-v1.mp4`; rendered media are excluded
+from Git. The [cinematic instructions](cinematic/README.md) cover score building,
+720-frame synthesis, encoding and final review. It remains the same original
+MIT teaching model, not imported commercial CAD or a validated real gearbox.
+
 ## Rebuild
 
 ```sh
@@ -173,6 +189,30 @@ reviewed by listening.
 - Speeds are slowed far below real engine speeds so teeth do not strobe on screen.
 
 ## README media
+
+### Direct MP4 synthesis
+
+`/render.html` is the local film-rendering workspace. Its fixed 1080 × 1080
+engine iframe samples the original story at `frameIndex / 30`. The shared
+`createStudyFrameRenderer()` composes WebGL pixels, SVG labels/drafting marks,
+titles, chapter copy and attribution into a detached canvas. It does not record
+the window or capture screenshots. The workspace shows progress rather than
+rapidly changing working frames.
+
+Await `gearboxFilm.ready`, call `gearboxFilm.start()`, then await
+`gearboxFilm.frame(n / 30)` for each of 1,200 frames. Save each returned JPEG data
+URL before requesting the next frame; call `gearboxFilm.stop()` at the end.
+This local API writes no files and publishes nothing. Check the source frame
+sequence with `tools/video/check-static-region.mjs`, then use
+`tools/video/export.mjs` with the existing `audio/gearbox-loop.wav`. The source
+title region for this layout is `x=0, y=0, width=1080, height=125`.
+
+The earlier browser-screenshot path could intermittently enlarge/crop an entire
+frame even while its JPEG dimensions stayed correct. Direct composition avoids
+that window capture path; every-frame checks and full encoded playback review
+are still required. Do not infer line stability from a contact sheet alone.
+
+### Existing README assets
 
 The README GIF is made from one deterministic 1920×1080, 30 fps capture of
 `?clean=1&capture=1`. The capture drives `gearboxShowcase.capture.frame(t)` for

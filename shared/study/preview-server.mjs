@@ -20,6 +20,7 @@ export const STUDY_RUNTIME_FILES = Object.freeze([
   'shared/appearance/styles.mjs',
   'shared/study/study.mjs',
   'shared/study/shell.mjs',
+  'shared/study/direct-frame.mjs',
   'shared/study/style.css',
   'shared/study/drafting.css',
   'shared/study/blueprint.css',

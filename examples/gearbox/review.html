@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gearbox — encoded film review</title>
+<style>
+  body{margin:0;background:#fff;color:#252525;font:16px Georgia,serif}
+  main{max-width:1080px;margin:auto}h1,p,nav{margin:14px 18px}
+  h1{font-size:24px;font-weight:normal}video{display:block;width:100%;height:auto}
+  nav{display:flex;gap:8px;flex-wrap:wrap}button{font:inherit;padding:6px 10px;border:1px solid #ccc;background:white;color:inherit}
+  nav[hidden]{display:none}
+  button[aria-pressed="true"]{background:#252525;color:white;border-color:#252525}
+</style>
+<main>
+  <h1>A gearbox, revealed.</h1>
+  <p id="film-description">Directly rendered 40-second film · 1080 × 1080 · 30 fps · Original code music</p>
+  <nav aria-label="Playback and display width">
+    <button id="play">Play full loop</button><button id="pause">Pause</button>
+    <button data-width="390">390 px</button><button data-width="640">640 px</button><button data-width="960">960 px</button>
+  </nav>
+  <nav aria-label="Playback speed">
+    <button data-rate="1" aria-pressed="false">1× · Detail</button>
+    <button data-rate="1.5" aria-pressed="false">1.5× · Brisk</button>
+    <button data-rate="2" aria-pressed="true">2× · Quick</button>
+  </nav>
+  <p id="speed-note">2× preview · 40 seconds in about 20 seconds · Pitch preserved</p>
+  <video playsinline controls preload="auto" loop src="/output/gearbox-40s-direct-v2.mp4"></video>
+  <nav aria-label="Review moments">
+    <button data-time="0">Start</button><button data-time="10.5">Explosion</button>
+    <button data-time="19.4">Power path</button><button data-time="22.8">Synchronizer</button>
+    <button data-time="29.8">Overdrive</button><button data-time="38.5">Reassembled</button>
+  </nav>
+  <p id="review-status" aria-live="polite">Original teaching model · MIT · Mechanism Studio</p>
+</main>
+<script>
+const film=document.querySelector('video');
+const rates=[1,1.5,2];
+const requestedRate=Number(new URLSearchParams(location.search).get('speed'));
+let speed=rates.includes(requestedRate)?requestedRate:2;
+if(new URLSearchParams(location.search).get('clip')==='preview'){
+  film.src='/output/gearbox-direct-preview.mp4';
+  document.querySelector('#film-description').textContent='Direct rendering test · 4-second gear detail · Original code music';
+  document.querySelector('[aria-label="Review moments"]').hidden=true;
+  document.querySelector('#play').textContent='Play gear detail';
+}
+document.querySelector('#play').addEventListener('click',()=>{film.currentTime=0;film.play();});
+document.querySelector('#pause').addEventListener('click',()=>film.pause());
+document.querySelectorAll('[data-width]').forEach(button=>button.addEventListener('click',()=>{document.querySelector('main').style.maxWidth=`${button.dataset.width}px`;}));
+document.querySelectorAll('[data-time]').forEach(button=>button.addEventListener('click',()=>{film.pause();film.currentTime=Number(button.dataset.time);}));
+function updateSpeed(){
+  const seconds=Number.isFinite(film.duration)?film.duration:(new URLSearchParams(location.search).get('clip')==='preview'?4:40);
+  document.querySelectorAll('[data-rate]').forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.rate)===film.playbackRate)));
+  document.querySelector('#speed-note').textContent=`${film.playbackRate}× preview · ${seconds.toFixed(0)} seconds in about ${(seconds/film.playbackRate).toFixed(1)} seconds · Pitch preserved; music plays faster at higher speeds`;
+}
+function setSpeed(value){speed=value;film.defaultPlaybackRate=value;film.playbackRate=value;film.preservesPitch=true;updateSpeed();}
+document.querySelectorAll('[data-rate]').forEach(button=>button.addEventListener('click',()=>setSpeed(Number(button.dataset.rate))));
+film.addEventListener('loadedmetadata',()=>setSpeed(speed));
+film.addEventListener('ratechange',updateSpeed);
+setSpeed(speed);
+film.addEventListener('timeupdate',()=>{document.querySelector('#review-status').textContent=`${film.currentTime.toFixed(1)} / ${film.duration.toFixed(1)} s · ${film.playbackRate}× · Original teaching model · MIT`;});
+</script>
+</html>

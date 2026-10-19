@@ -16,6 +16,8 @@ Mechanism Studio is the single skill entry point. The four specialist modules ar
 
 Start with the [input brief](input-brief.md). Text, images and CAD offer different evidence. Style references must not override source geometry. An image without geometry supports a storyboard or reconstruction proposal, not a verified assembly.
 
+Select presentation style separately from route and pace. White fine-line Atlas remains the default; an explicitly requested [Cinematic profile](presentation-cinematic.md) coordinates camera, appearance, typography and sound through these same owners. Record its separate entry/timeline/output and preserve existing editions. It does not add an autonomous module or a generic renderer flag.
+
 [Motion choreography](motion-choreography.md) is the orchestrator's coordination layer across these owners. It aligns component-specific tempo, context fades, real-occurrence close-ups, reading holds and action-linked sound. It is not an additional contract or executable runtime; the existing example adapters own the implementation.
 
 ## Shared authoring records

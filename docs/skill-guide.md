@@ -36,6 +36,8 @@ Example requests:
 
 > Use the skill to make a 34-second English white-line assembly showcase, with expansion and reassembly, near-part names and original code music. Keep changes inside this repository.
 
+> Make a separate short Cinematic edition of this mechanism: a dark studio setting, readable metal finishes, smooth perspective close-ups, large English titles and original music tied to the actions. Preserve the white fine-line edition and the actual mechanical relationships.
+
 > Use this photo as a visual reference for an illustrative exploded view. First list visible components and unknown internals. Do not claim image-to-CAD reconstruction accuracy.
 
 > Add a close-up of this actual sun–planet pair. Keep the existing camera, music and white line art; use subtle tooth-phase highlights and short rotation arcs to distinguish spin from orbit. Bind the cues to the supported motion and disclose any idealized contact-region assumption.
@@ -51,6 +53,20 @@ The skill's directory and real-path checks define the intended project scope. Th
 | **Showcase** | Public first impression, repository demo, looping social clip | English, white fine-line style, normally 30–40 seconds, purposeful views and readable holds |
 
 Routes are authoring choices. Only the existing `showcase/` application implements `mode=showcase|explain`; a standalone page does not gain that URL parameter by choosing a route. The robot's 25.714-second kinetic cut is an explicitly authored short exception, and its original 34-second study remains available.
+
+Showcase offers two authoring pace profiles: **Detailed** retains the normal
+30–40 seconds; an explicitly requested **Fast** social cut starts around
+18–24 seconds for X. Explain can be longer when the explanation needs it. Ask
+for either or both; the skill does not require multiple outputs or silently
+shorten existing cuts. The gearbox's 40-second full version remains Detailed.
+
+A **2× playback preview** lets you judge a faster viewing pace without producing
+a new cut. The gearbox review provides 1×, 1.5× and 2×, initially 2×, while its
+source file stays 40 seconds. Pitch preservation keeps musical pitch while
+tempo and visual speed increase, and text gets less reading time. An authored
+Fast edition needs its own timeline, concise readable captions and music arranged
+for that timing when selected. These are authoring contracts, not a universal
+fast/detailed generator. See [pace profiles](../.agents/skills/mechanism-studio/references/presentation-pacing.md#preview-speed-and-authored-editions).
 
 ## Input evidence
 
@@ -78,6 +94,14 @@ Camera plans use conservative motion/explosion envelopes. Motion must not cause 
 The [Mating Close-up contract](../.agents/skills/mechanism-studio/references/modules/mating-closeup.md) handles a different question from extracting a small part: how two components work together. It first binds actual occurrences, evidence, axes and supported relative motion, then coordinates local phase highlights and concise direction marks. Small rotation arcs may have restrained arrowheads; name leaders keep their existing style. Marks follow the motion's sign, disappear at rest and distinguish spin from orbit. These cues use the common clock and restore the current appearance; they do not infer CAD mates or establish physical tooth contact.
 
 Social clips normally omit narration. Optional original code music and sparse action effects share the mechanical/display timeline. Doubao narration is available when requested, through an explicit local synthesis command; the browser receives only verified local audio. Credentials never belong in source, plans, web assets or Git. See [audio delivery](../.agents/skills/mechanism-studio/references/audio-delivery.md).
+
+## Optional Cinematic edition
+
+Ask for the [Cinematic profile](../.agents/skills/mechanism-studio/references/presentation-cinematic.md) when you want a technology-film or product-reveal treatment. It coordinates perspective camera paths with continuous velocity, restrained PBR metal/light, large sans-serif English film graphics and action-linked music. White fine-line Atlas remains the default. Both treatments preserve the same source identity, geometry and supported mechanical relationships.
+
+Style and pace are separate choices: a short Cinematic request starts around 18–24 seconds using Fast pacing unless you specify otherwise; a longer explanation can retain Detailed or Explain timing. A new edition gets its own timeline and score when selected, and the earlier version stays available. There is no automatic `cinematic` URL flag, global renderer switch or mandatory dual-version export.
+
+The [24-second cinematic gearbox](../examples/gearbox/cinematic/README.md) is a working reference with direct WebGL + Canvas film composition, an original synthesized score and repeatable export instructions. Its exact camera, 120 BPM music and duration belong to that example. Fixed-frame export avoids dependence on the recording window; encoded playback, phone-size text and sound still need their own review. More realistic materials remain presentation choices, not evidence of engineering validation.
 
 ## CAD and engineering boundaries
 

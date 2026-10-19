@@ -100,21 +100,36 @@ Pause/seek, reduced motion, native audio time and neutral colour viewing retain
 the same semantics as the robot reference. UI titles and chapter counts come from
 the example, not a hard-coded robot or six-chapter assumption.
 
-With the explicit local `?capture=1` URL, `.capture` is added:
+## Frame export
+
+Prefer direct frame composition for study films: render the model at each
+supplied time, read its WebGL canvas pixels, explicitly add SVG annotations,
+titles, chapter text and credits, then encode those frames and mux the verified
+audio. Reading the WebGL canvas alone omits all DOM/SVG overlays. The compositor
+must use fixed output dimensions and an explicit layout/render scale independent
+of host display DPI or browser-window zoom. Preserve the authored camera,
+mechanics and timing. Verify the actual implementation and full output sequence
+before calling a direct export complete.
+
+### Timeline API
+
+With the explicit local `?capture=1` URL, `.capture` is added. This legacy name
+denotes a deterministic timeline API, not screen recording; `.capture.frame()`
+updates the model and overlays and returns state, not image bytes:
 
 1. Await `.ready`, then `.capture.start()`. It pauses audio and starts a fresh
    zero-time deterministic render run with continuous camera transitions.
 2. Call `.capture.frame(seconds)` in monotonically nondecreasing order within
-   `[0, DURATION]`, capturing each rendered frame before asking for the next one.
+   `[0, DURATION]`, composing each rendered frame before asking for the next one.
    RAF stays alive but cannot advance the clock. Each chapter boundary captures
-   the prior real camera once; recording is not a sequence of force-cut seeks.
+   the prior real camera once; export is not a sequence of force-cut seeks.
 3. Call `.capture.stop()` to return to a paused, readable ordinary view.
 
 Capture overrides reduced-motion camera stillness only during that explicit
-recording run. It does not play or synthesize audio: mux the verified score file
+rendering run. It does not play or synthesize audio: mux the verified score file
 against the same timeline. Capture CSS hides transport/status/navigation while
-keeping chapter explanations and source credit. Set the browser viewport to
-1920×1080 for an HD frame; the page fits that viewport without forcing a size on
+keeping chapter explanations and source credit. Set the export layout to
+1920×1080 for an HD frame; the page fits that layout without forcing a size on
 ordinary readers. The `?clean=1` page remains the interactive viewing mode.
 
 HD capture uses its own type hierarchy: 58 px main title, 46 px chapter title,
@@ -123,22 +138,65 @@ enough for two lines and measure label placement using the actual rendered font.
 Inspect the encoded MP4 at 640 and 960 px display widths as well as full HD;
 ordinary responsive web text is not a substitute for video readability review.
 
-Capture keeps the WebGL drawing buffer and repaints the same frozen chapter time
-when a screenshot or viewport change invalidates the canvas. That repaint does
-not advance the clock or restart the camera transition. Wait for the initial
-layout to settle before starting, and verify the actual captured model rather
-than only the DOM or image dimensions.
+The timeline API keeps the WebGL drawing buffer and repaints the same frozen
+chapter time when a screenshot or viewport change invalidates the canvas. That
+repaint does not advance the clock or restart the camera transition. Wait for
+the initial layout and fonts to settle, and verify the actual composed model
+and overlays rather than only the DOM or image dimensions.
 
-Verify the first captured image against the actual page before recording a full
-loop. A 1920×1080 file can still contain a scaled or cropped browser surface.
-Check the full title, chapter text, source credit and part envelope. On the current
-IAB setup, CUA `tab.getScreenshot({ emit: false })` retains the whole page, while
-a raw default `Page.captureScreenshot` produced a mismatched crop. An explicit
-full `clip: {x:0,y:0,width:1920,height:1080,scale:1}` with `fromSurface:true` and
-`captureBeyondViewport:true` was verified on the current kinetic capture session;
-the default CUA screenshot was scaled when the host was at 130% zoom. Calibrate
-again per session instead of assuming either path is universally correct. Inspect the
+### Direct compositor API
+
+`direct-frame.mjs` exposes `createStudyFrameRenderer(api, { width, height })`.
+The gearbox atlas layout has been exercised in a fixed 1080 × 1080 iframe,
+including text, part labels and drafting dimensions. A repeated frame remained
+byte-identical across parent viewport/DPR changes. This coverage does not extend
+to arbitrary DOM layouts or establish perceptual quality by itself. Set a fixed CSS viewport equal to
+the requested output dimensions, including when using a parent-controlled iframe.
+The compositor uses the WebGL canvas's owning document/window for layout, then
+draws its pixels, SVG overlays and HTML text into the explicit output canvas.
+It does not use browser-window screenshots or SVG `foreignObject`.
+
+```js
+import { createStudyFrameRenderer } from '/shared/study/direct-frame.mjs';
+
+// api is the study API returned by this example's createAssemblyStudy().
+await api.ready;
+const frames = createStudyFrameRenderer(api, { width: 1080, height: 1080 });
+const canvas = await frames.render(0);
+const firstFrame = canvas.toDataURL('image/jpeg', .94);
+// Encode/save each returned canvas before rendering the next time n / fps.
+```
+
+`render(t)` starts the deterministic timeline automatically and requires
+monotonically nondecreasing times. Await each frame; `restart()` begins another
+sequence, `snapshot()` exposes its state, and `dispose()` releases the exporter.
+Host DPI is not the output-size setting. Validate the actual canvas dimensions,
+model content, text, SVGs and complete source/decoded sequences before delivery.
+
+### Browser-screenshot fallback
+
+Use this route when the requested output needs the browser surface or direct
+composition is unavailable. Verify the first image against the actual page before
+a full loop. A 1920×1080 file can still contain a scaled or cropped browser surface.
+Check the full title, chapter text, source credit and part envelope. Set and record
+the intended CSS viewport and explicit screenshot clip; for a 1920×1080 CSS
+viewport, the CDP profile is
+`clip: {x:0,y:0,width:1920,height:1080,scale:1}`, `fromSurface:true`,
+`captureBeyondViewport:true`. Use the actual target width/height for other formats.
+Record `devicePixelRatio`, the renderer's actual pixel ratio (capture requests 1),
+canvas backing dimensions and visual viewport scale/offsets as well. Neither the
+default screenshot path nor matching image dimensions guarantees stable scale.
+Calibrate the chosen API again per session with consecutive frames. Inspect the
 returned byte signature rather than assuming a PNG/JPEG format from a filename.
+
+### Frame validation
+
+For either route, follow the [frame geometry evidence checklist](../../.agents/skills/mechanism-studio/references/delivery-evidence.md#validate-captured-frame-geometry):
+check a static title/rule/credit region for position and scale in every source
+frame and every decoded output frame, recording coverage and any exceptions.
+A successful short test or representative stills cannot rule out intermittent
+zoom/crop jumps later in the run. Review continuous encoded playback for motion
+and line stability separately from this static-region check.
 
 ## Preview servers
 

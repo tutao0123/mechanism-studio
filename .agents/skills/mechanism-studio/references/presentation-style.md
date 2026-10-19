@@ -2,6 +2,8 @@
 
 Apply these defaults to new mechanical scenes and tours unless the user overrides them. Free inspection does not need automatic cameras; historical pages are not silently restyled. [Pacing](presentation-pacing.md) owns timing, [motion choreography](motion-choreography.md) coordinates continuous context and repeated-part close-ups, and [tour transport](presentation-tour.md) owns playback.
 
+For an explicitly requested cinematic or technology-film edition, read the optional [Cinematic profile](presentation-cinematic.md). It scopes the perspective camera, dark PBR lighting and sans-serif film typography overrides to that edition; the Atlas defaults below remain unchanged.
+
 ## Visual intention and implementation
 
 White background, fine dark contours, pale neutral solids and light volume read as a mechanical atlas. Use whitespace, edge weight and occlusion to explain structure. Avoid triangle wireframes, glow, heavy shadows or decorative UI competing with mechanics. Preserve needed picking, views, cutaway/hiding and explosion/reassembly.
@@ -70,7 +72,7 @@ Record capture dimensions, actual font sizes, reviewed display widths, represent
 
 ## Opt-in alternative styles and drafting grammar
 
-The white atlas stays the default. When the user asks for another look, a study page may name a style from the [style registry](../../../../shared/appearance/README.md#study-styles) through the shell's `appearance` option. Currently the only alternative is `blueprint`: white line work on a Prussian-blue sheet, unlit sheet-coloured solids, centre lines on real axes, a ruled title block, and at most one red stamp tied to a real state. Build it as a separate edition next to the default page. Do not switch an existing page or delivery over, because that changes its fingerprints.
+The white atlas stays the default. When the user asks for another look, a study page may name a style from the [style registry](../../../../shared/appearance/README.md#study-styles) through the shell's `appearance` option. The registry's alternative is `blueprint`: white line work on a Prussian-blue sheet, unlit sheet-coloured solids, centre lines on real axes, a ruled title block, and at most one red stamp tied to a real state. The optional [Cinematic profile](presentation-cinematic.md) instead uses a dedicated film adapter; it is not another value in this registry. Build requested alternatives as separate editions next to the default page. Do not switch an existing page or delivery over, because that changes its fingerprints.
 
 These grammar elements may be used in either style when they explain something:
 

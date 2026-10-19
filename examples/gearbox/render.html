@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gearbox · Direct film renderer</title>
+<style>
+body{margin:48px;background:white;color:#252525;font:18px/1.6 Georgia,serif}h1{font-weight:normal}
+#engine{position:fixed;left:-12000px;top:0;width:1080px;height:1080px;border:0;pointer-events:none}
+p{max-width:650px}progress{width:400px;max-width:100%}
+</style></head><body>
+<h1>Rendering a gearbox, frame by frame.</h1>
+<p>The model, labels and typography are composed directly into a fixed 1080 × 1080 image. This page is a rendering workspace; the finished MP4 is the preview.</p>
+<progress id="progress" value="0" max="1200"></progress><p id="status" role="status">Preparing the engine…</p>
+<p><a href="/review.html">Open film review</a></p>
+<iframe id="engine" title="Offscreen mechanical rendering engine" src="/?clean=1&amp;capture=1" width="1080" height="1080"></iframe>
+<script type="module" src="./render.mjs"></script></body></html>

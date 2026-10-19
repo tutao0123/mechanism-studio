@@ -29,6 +29,8 @@ A lighting intention should survive chapter changes: soft upper key, restrained 
 3. **Surface rendering:** prefer explainable metal/plastic parameters. Do not add scratches, grime or decals without a useful purpose.
 4. **Textures when needed:** local files with clear terms; verify UV, physical visual scale, direction and repeated occurrences. Distinguish color textures from normal/roughness/metalness data maps and state renderer normal-axis convention.
 
+The optional [Cinematic profile](../presentation-cinematic.md#materials-light-and-typography) coordinates surface rendering with a dark studio environment, restrained highlights, filtered stable grain and large sans-serif film graphics. Apply it only to the requested edition, leaving default Atlas materials/type intact. Verify the actual perspective/PBR adapter and motion stability rather than passing an unsupported style name to the orthographic line renderer.
+
 Base colors must not consume process meanings: airflow/fuel/combustion have their own legend. Structure remains readable in neutral viewing and without hue.
 
 ## Interaction and restoration
