@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "stage": "bound",
   "geometryRevision": "gearbox-93d9bd770540-display-1",
-  "planRevision": "gearbox-story-2",
+  "planRevision": "gearbox-story-3",
   "base": "White surfaces with fine dark feature edges and atlas serif typography.",
   "color": "Restrained pale blue for the parts carrying torque in the engaged gear, plus any part being named.",
   "contextFade": {

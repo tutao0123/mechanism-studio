@@ -2,59 +2,99 @@
   "schemaVersion": 1,
   "stage": "bound",
   "geometryRevision": "gearbox-93d9bd770540-display-1",
-  "planRevision": "gearbox-story-2",
+  "planRevision": "gearbox-story-3",
   "annotationRevision": "gearbox-annotations-1",
   "labels": {
     "whole": [
       [
         "gb:case/shift-lever",
-        "Shift lever"
+        {
+          "index": "01",
+          "name": "Shift lever",
+          "spec": "3 rails · 6 positions"
+        }
       ]
     ],
     "open": [
       [
         "gb:input/shaft",
-        "Input shaft"
+        {
+          "index": "02",
+          "name": "Input shaft",
+          "spec": "20 T · m 3"
+        }
       ],
       [
         "gb:counter/shaft",
-        "Countershaft"
+        {
+          "index": "03",
+          "name": "Countershaft",
+          "spec": "6 gears · 81 mm below"
+        }
       ]
     ],
     "explode": [
       [
         "gb:main/synchro-s12/sleeve",
-        "Synchronizer"
+        {
+          "index": "04",
+          "name": "Synchronizer",
+          "spec": "24 splines · 9.5 mm travel"
+        }
       ],
       [
         "gb:idler/gear",
-        "Reverse idler"
+        {
+          "index": "05",
+          "name": "Reverse idler",
+          "spec": "18 T · reverses the output"
+        }
       ]
     ],
     "low": [
       [
         "gb:main/gear-1",
-        "1st gear"
+        {
+          "index": "06",
+          "name": "1st gear",
+          "spec": "37 T · 3.70 : 1"
+        }
       ],
       [
         "gb:main/gear-2",
-        "2nd gear"
+        {
+          "index": "07",
+          "name": "2nd gear",
+          "spec": "30 T · 2.13 : 1"
+        }
       ]
     ],
     "sync": [
       [
         "gb:main/synchro-s34/sleeve",
-        "Sleeve"
+        {
+          "index": "08",
+          "name": "Sleeve",
+          "spec": "slides 9.5 mm"
+        }
       ],
       [
         "gb:main/synchro-s34/ring-front",
-        "Blocker ring"
+        {
+          "index": "09",
+          "name": "Blocker ring",
+          "spec": "24 teeth · Ø 60 mm"
+        }
       ]
     ],
     "over": [
       [
         "gb:main/gear-5",
-        "5th gear"
+        {
+          "index": "10",
+          "name": "5th gear",
+          "spec": "17 T · 0.78 : 1"
+        }
       ]
     ],
     "close": []

@@ -38,6 +38,49 @@ built score the page plays silently and says so. Pause,
 seek, restart, free exploration and **Color cues** work as in the other study
 pages. Rotation is shown deliberately slowly so individual teeth stay readable.
 
+## Two editions
+
+![The same moment in the default atlas edition (top) and the blueprint edition (bottom), with indexed spec labels and the 81 mm centre distance](../../docs/media/gearbox-editions.jpg)
+
+*Top: default atlas. Bottom: blueprint. Both show 19.4 s into the loop.*
+
+| Edition | Open | Look |
+| --- | --- | --- |
+| Atlas (default) | `/?clean=1` | Thin black line art on a white sheet, with a pale blue accent on the power path |
+| Blueprint | `/blueprint/?clean=1` | White line work on a Prussian-blue sheet, centre lines on the three shaft axes, a ruled title block and one red stamp |
+
+Both editions run the same story, kinematics, camera, labels and score. The
+only difference is `appearance: 'blueprint'` in `blueprint/app.mjs`, which the
+[study shell](../../shared/study/README.md) resolves from the shared
+[style registry](../../shared/appearance/README.md#study-styles). In the
+blueprint the solids are unlit and filled with the sheet colour, so they hide
+the lines behind them. The power-path accent is a deeper blue.
+
+### Annotation grammar
+
+- **Spec labels.** Each name has a two-digit index, in order of appearance,
+  and one spec line, for example `06 1st gear — 37 T · 3.70 : 1`.
+  [`labels.mjs`](labels.mjs) computes every spec line from `spec.mjs`. A test
+  checks those lines against the spec, and the blocker ring's 60 mm diameter
+  against the GLB vertices.
+- **Dimensions on the object.** Two dimensions are drawn on the model with
+  extension lines and slanted ticks. The **81 mm** centre distance runs from the
+  main axis to the countershaft axis. The **584 mm** overall length is taken
+  from the assembled bounds in the scene index. Each appears only while every
+  part it measures is assembled and at rest, and a test samples both windows.
+- **Wave lift.** In each of the four ball bearings and three synchronizers, the
+  balls or keys lift one after another rather than all at once. They are ordered
+  by distance from one corner of their own set, with a spread of 0.6 beat, and
+  return in reverse order a little quicker. Each part still moves along its own
+  real offset; nothing is copied or scaled.
+- **Stamp (blueprint only).** `DIRECT 1 : 1` appears while 4th gear is engaged.
+  A test checks that 4th is engaged throughout that window.
+
+The blueprint palette, the index–name–spec label grammar and the wave lift are
+ideas from the MIT-licensed
+[lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) style library. They
+are implemented independently here. No code, film or asset is copied.
+
 ## Mechanism
 
 Straight-cut spur gears of module 3 mm. Every countershaft–mainshaft pair has
@@ -106,6 +149,9 @@ makes a test fail.
   - the case is hidden inside
   - the accent follows the real power path (4th bypasses the countershaft)
   - the score is the delivered file and its cues sit on real engagements
+- **Drafting:** every drawn number and spec line comes from the spec, scene
+  index or GLB; dimensions appear only over assembled parts; the stamp only
+  in 4th; nothing is drawn at the loop seam; each wave set has distinct ranks.
 - **Server:** the preview serves only the page's files; `tests/preview-pages.test.mjs`
   walks the page's full dependency graph.
 
@@ -136,6 +182,10 @@ which is gitignored.
 - `docs/media/gearbox-readme.gif` is an 800 px, 15 fps excerpt from 3 s to 20 s
   (case off, explosion, reassembly, then 1st and 2nd with the power path).
   GitHub renders it inline.
+- `docs/media/gearbox-editions.jpg` stacks two 1080×540 crops of the same
+  moment (19.4 s): the default page above, `/blueprint/` below. Both come from
+  `seek(19.4)` on `?clean=1&capture=1` at 1920×1080. Seeking cuts the camera
+  to its planned pose, so the labels are already shown.
 - A silent 1280 px MP4 of the full loop (about 2 MB) is made by the second
   command, for uploading to sites or GitHub's own video attachments. Like every
   MP4 delivery in this repository, it is kept out of Git by the release policy.

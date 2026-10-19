@@ -57,3 +57,25 @@ controls and owned line/renderer resources; example assets remain source-owned.
 
 The historical `prototype-3d/line-art.mjs` is a compatibility re-export. The
 implementation exists once, in this directory.
+
+## Spec labels and drafting marks
+
+`spec-label.mjs` defines the optional spec-label grammar for near-part names:
+`specLabel({ index, name, spec })` returns a frozen label with a two-digit
+index, the name, and at most one spec line. `writeLabel`, `measureLabel` and
+`placeLabelText` fill, measure and position an SVG `<text>` as two centred
+lines. A plain string keeps the original single text node and measurement, so
+existing labels are unaffected. The example computes spec numbers from its own
+data; this module only lays them out.
+
+`drafting.mjs` draws marks on the model itself. `centreLinePositions(from, to)`
+returns a long–short centre line along a real axis. `dimensionPositions(a, b,
+side, offset)` returns extension lines, the dimension line and 45° ticks
+between two real points, with an anchor for the number. Both return
+`Float32Array` segment pairs in world metres. `formatMillimetres(m)` writes whole
+millimetres, with one decimal below 10 mm. `createDraftingOverlay(viewport)` is
+an SVG layer for dimension numbers and one framed stamp at projected screen
+points. The builders are pure. The example decides when a mark is true: a
+dimension of the assembled state must be hidden once its parts move.
+
+Tests: `node --test shared/viewer/tests/drafting.test.mjs`.

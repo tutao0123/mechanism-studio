@@ -4,21 +4,22 @@
  * function of loop time; the drive angles come from kinematics.createDrive. */
 import { LAYOUT, SYNCHROS, BEARINGS, AXES, GEARS, SLEEVE_TRAVEL, RING_GAP } from './spec.mjs';
 import { createDrive, memberAngles, leverAngles, smooth } from './kinematics.mjs';
+import { LABELS } from './labels.mjs';
 
 export const BPM = 96;
 export const TOTAL_BEATS = 64;
 export const DURATION = TOTAL_BEATS * 60 / BPM;
-export const PLAN_REVISION = 'gearbox-story-2';
+export const PLAN_REVISION = 'gearbox-story-3';
 const beat = value => value * 60 / BPM;
 const freeze = Object.freeze;
 
 export const CHAPTERS = freeze([
-  { id: 'whole', firstBeat: 0, lastBeat: 5, title: 'A five-speed gearbox.', copy: 'Three shafts, thirteen gears, three synchronizers. One lever chooses the path.', labels: [['gb:case/shift-lever', 'Shift lever']] },
-  { id: 'open', firstBeat: 5, lastBeat: 12, title: 'Lift the case.', copy: 'The input shaft drives a countershaft below it; the mainshaft carries the output.', labels: [['gb:input/shaft', 'Input shaft'], ['gb:counter/shaft', 'Countershaft']] },
-  { id: 'explode', firstBeat: 12, lastBeat: 22, title: 'Gears that spin free.', copy: 'Mainshaft gears turn on needle bearings until a synchronizer locks one of them to the shaft.', labels: [['gb:main/synchro-s12/sleeve', 'Synchronizer'], ['gb:idler/gear', 'Reverse idler']] },
-  { id: 'low', firstBeat: 22, lastBeat: 32, title: 'First, then second.', copy: 'Power crosses to the countershaft and back up through one gear pair: 3.70 : 1, then 2.13 : 1.', labels: [['gb:main/gear-1', '1st gear'], ['gb:main/gear-2', '2nd gear']] },
-  { id: 'sync', firstBeat: 32, lastBeat: 44, title: 'Matching speeds.', copy: 'A blocker ring brings the gear to shaft speed; then the sleeve slides over its dog teeth. Fourth is direct.', labels: [['gb:main/synchro-s34/sleeve', 'Sleeve'], ['gb:main/synchro-s34/ring-front', 'Blocker ring']] },
-  { id: 'over', firstBeat: 44, lastBeat: 54, title: 'Fifth: overdrive.', copy: '0.78 : 1 — the mainshaft now turns faster than the input shaft.', labels: [['gb:main/gear-5', '5th gear']] },
+  { id: 'whole', firstBeat: 0, lastBeat: 5, title: 'A five-speed gearbox.', copy: 'Three shafts, thirteen gears, three synchronizers. One lever chooses the path.', labels: [['gb:case/shift-lever', LABELS.lever]] },
+  { id: 'open', firstBeat: 5, lastBeat: 12, title: 'Lift the case.', copy: 'The input shaft drives a countershaft below it; the mainshaft carries the output.', labels: [['gb:input/shaft', LABELS.input], ['gb:counter/shaft', LABELS.counter]] },
+  { id: 'explode', firstBeat: 12, lastBeat: 22, title: 'Gears that spin free.', copy: 'Mainshaft gears turn on needle bearings until a synchronizer locks one of them to the shaft.', labels: [['gb:main/synchro-s12/sleeve', LABELS.synchro], ['gb:idler/gear', LABELS.idler]] },
+  { id: 'low', firstBeat: 22, lastBeat: 32, title: 'First, then second.', copy: 'Power crosses to the countershaft and back up through one gear pair: 3.70 : 1, then 2.13 : 1.', labels: [['gb:main/gear-1', LABELS.first], ['gb:main/gear-2', LABELS.second]] },
+  { id: 'sync', firstBeat: 32, lastBeat: 44, title: 'Matching speeds.', copy: 'A blocker ring brings the gear to shaft speed; then the sleeve slides over its dog teeth. Fourth is direct.', labels: [['gb:main/synchro-s34/sleeve', LABELS.sleeve], ['gb:main/synchro-s34/ring-front', LABELS.ring]] },
+  { id: 'over', firstBeat: 44, lastBeat: 54, title: 'Fifth: overdrive.', copy: '0.78 : 1 — the mainshaft now turns faster than the input shaft.', labels: [['gb:main/gear-5', LABELS.fifth]] },
   { id: 'close', firstBeat: 54, lastBeat: 64, title: 'Whole again.', copy: 'An original teaching model: ideal tooth ratios, no loads, friction or wear.', labels: [] },
 ].map(chapter => freeze({ ...chapter, labels: freeze(chapter.labels.map(freeze)) })));
 
@@ -61,6 +62,11 @@ export const COHORTS = freeze({
   inner: freeze({ out: 14.2, back: 18.8, beats: 1.0 }),
 });
 const AXIAL_SPREAD = .55, PIVOT_X = LAYOUT.s12.centre;
+/** Repeated parts (bearing balls, synchronizer keys) lift in a wave across
+ * their set, ordered by distance from one corner, and return in reverse order
+ * a little quicker. `span` is the beat offset between first and last;
+ * `returnBeats` is the return duration of each part. */
+export const WAVE = Object.freeze({ span: .6, returnBeats: .8, corner: Object.freeze([0, 1, 1]) });
 
 const normalize = v => { const l = Math.hypot(...v) || 1; return v.map(x => x / l); };
 const add = (a, b) => a.map((v, i) => v + b[i]);
@@ -163,6 +169,18 @@ export function createGearboxStory(index) {
     return { id: part.id, kind, key: rest.join(':'), pivot: [part.localMatrix[12], part.localMatrix[13], part.localMatrix[14]] };
   });
   const cohortProgress = (b, cohort) => smooth((b - cohort.out) / cohort.beats) * (1 - smooth((b - cohort.back) / cohort.beats));
+  // Wave rank of each repeated part within its own set (same parent assembly).
+  const waveDelay = new Map(), sets = new Map();
+  for (const part of index.parts) if (/:(balls|keys)$/.test(part.group ?? '')) { const list = sets.get(part.parentId) ?? []; list.push(part); sets.set(part.parentId, list); }
+  for (const [parentId, list] of sets) {
+    const origin = assemblies.get(parentId).worldMatrix.slice(12, 15), reach = part => -part.worldCenter.reduce((sum, v, i) => sum + (v - origin[i]) * WAVE.corner[i], 0);
+    [...list].sort((a, b) => reach(a) - reach(b) || a.id.localeCompare(b.id)).forEach((part, rank, all) => waveDelay.set(part.id, all.length > 1 ? WAVE.span * rank / (all.length - 1) : 0));
+  }
+  const innerProgress = (b, id) => {
+    const delay = waveDelay.get(id) ?? 0, cohort = COHORTS.inner;
+    if (!waveDelay.has(id)) return cohortProgress(b, cohort);
+    return smooth((b - cohort.out - delay) / cohort.beats) * (1 - smooth((b - cohort.back - (WAVE.span - delay)) / WAVE.returnBeats));
+  };
   const caseOpen = b => smooth((b - CASE_TIMING.open[0]) / (CASE_TIMING.open[1] - CASE_TIMING.open[0])) * (1 - smooth((b - CASE_TIMING.close[0]) / (CASE_TIMING.close[1] - CASE_TIMING.close[0])));
 
   function stateAt(seconds) {
@@ -179,7 +197,7 @@ export function createGearboxStory(index) {
     for (const part of index.parts) {
       const vectors = explode.get(part.id), lift = caseParts.get(part.id);
       let offset = [0, 0, 0];
-      for (const name of Object.keys(COHORTS)) offset = add(offset, scale(vectors[name], progress[name]));
+      for (const name of Object.keys(COHORTS)) offset = add(offset, scale(vectors[name], name === 'inner' ? innerProgress(b, part.id) : progress[name]));
       if (lift) offset = add(offset, scale(lift, progress.caseLift));
       offsetsWorld[part.id] = offset;
     }
@@ -230,7 +248,7 @@ export function createGearboxStory(index) {
   const DENSE = new Set(['low', 'sync', 'over']);
   const labelObstacleIds = state => DENSE.has(state.chapter.id) ? state.chapter.labels.map(([id]) => id)
     : index.parts.filter(part => presentationOpacity(state, part.id) >= .5).map(part => part.id);
-  return { BPM, TOTAL_BEATS, DURATION, PLAN_REVISION, CHAPTERS, SCHEDULE, COHORTS, CASE_TIMING, FOCUS, normalizeTime, stateAt, localDisplayOffsets,
+  return { BPM, TOTAL_BEATS, DURATION, PLAN_REVISION, CHAPTERS, SCHEDULE, COHORTS, CASE_TIMING, FOCUS, WAVE, waveDelay, normalizeTime, stateAt, localDisplayOffsets,
     workingPoses, appearanceCues, presentationOpacity, labelObstacleIds, drive, explode, caseParts, powerPathIds,
     geometryRevision: index.geometryRevision, sleeveTravel: SLEEVE_TRAVEL, bearings: BEARINGS, synchros: SYNCHROS, axes: AXES };
 }

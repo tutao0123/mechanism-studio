@@ -95,6 +95,8 @@ Recompute from the same timeline on pause/seek/restart; never accumulate tint. A
 
 `line-art-style.mjs` holds the shared white line-art preset: `LINE_ART_LINE_STYLE`, `createLineArtFill()` (fresh per-occurrence fill with polygon offset) and `addLineArtLighting(scene)`. New examples use it rather than per-page light tuning; existing pages, including the study shell, are migrated deliberately.
 
+`styles.mjs` is the study shell's style registry (`study-styles-1`). `atlas` reproduces the shell's original look value for value. `blueprint` is opt-in: white line work on a Prussian-blue sheet with unlit sheet-coloured solids, a centre-line colour and one stamp colour. A style changes appearance only.
+
 Focused checks: `node --test shared/appearance/tests/*.test.mjs`.
 
 ### 7. Study — music-driven assembly presentation
@@ -103,7 +105,7 @@ Focused checks: `node --test shared/appearance/tests/*.test.mjs`.
 
 `createStudyShell()` builds the common DOM; `createAssemblyStudy(config)` combines viewer, music transport, stable camera director, near labels and reversible color cues. Inputs are a real scene index/GLB/contract/provenance, score/audio hashes and an example adapter for timeline, annotations, framing and display offsets.
 
-Optional hooks add source-backed workingPoses, visibility detailIds, authored appearanceCues, cameraUp, transition duration and deliberate cameraCuts. The adapter owns mechanics/joint limits and motion/explosion gates; the shell infers none. `.ready` and snapshot().ready/musicReady distinguish model success from music availability.
+Optional hooks add source-backed workingPoses, visibility detailIds, authored appearanceCues, cameraUp, transition duration, deliberate cameraCuts and an `appearance` style; omitting it keeps the default rendering byte-identical ([evidence](../shared/study/evidence/default-style-pixels.json)). Labels may be spec labels (`shared/viewer/spec-label.mjs`: index, name, one spec line computed from data). `shared/viewer/drafting.mjs` provides centre lines, dimension lines and an SVG number/stamp overlay for an example's presentation layer. The adapter owns mechanics/joint limits and motion/explosion gates; the shell infers none. `.ready` and snapshot().ready/musicReady distinguish model success from music availability.
 
 API: `play()`, `pause()`, `seek(seconds)`, `snapshot()` and viewer/index/framing access. Native audio currentTime is the live music clock; explicit capture mode freezes it and accepts monotonically increasing frame times. Retained labels require stationary named targets. The actual score BPM/duration/byte length/hash must agree.
 

@@ -1,0 +1,29 @@
+/* Blueprint study style: white line work on a Prussian-blue sheet. Opt in with
+ * appearance: 'blueprint' (body.style-blueprint) and load after drafting.css.
+ * Lettering uses system faces; no external font request is made. */
+body.style-blueprint {
+  --ink: #e7f0f9; --muted: #9fbbe3; --rule: rgba(231, 240, 249, .3); --sheet: #18336b;
+  --draft: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  background: var(--sheet); color: var(--ink); color-scheme: dark;
+}
+html:has(body.style-blueprint) { background: #18336b; }
+body.style-blueprint #viewport { background: var(--sheet); }
+body.style-blueprint .eyebrow, body.style-blueprint .intro-note, body.style-blueprint .chapter-index { font-family: var(--draft); font-style: normal; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+/* The index column is narrow; keep its figures untracked so they never touch the title. */
+body.style-blueprint .chapter-index { letter-spacing: 0; white-space: nowrap; }
+body.style-blueprint.capture .chapter-index { font-size: 20px; }
+body.style-blueprint h1, body.style-blueprint h2 { font-family: var(--draft); font-weight: 400; letter-spacing: .07em; text-transform: uppercase; }
+body.style-blueprint #chapter-copy { font-family: var(--draft); color: #cfe0f5; letter-spacing: .02em; }
+body.style-blueprint button { color: var(--ink); border-color: var(--rule); }
+body.style-blueprint button:hover { color: #fff; background: rgba(231, 240, 249, .08); }
+body.style-blueprint #seek { accent-color: var(--ink); }
+body.style-blueprint #color-cues[aria-pressed="true"] { color: var(--ink); text-decoration-color: #6f9be0; }
+body.style-blueprint #annotations text { font-family: var(--draft); font-style: normal; letter-spacing: .03em; fill: var(--ink); stroke: var(--sheet); }
+body.style-blueprint #annotations path { stroke: var(--muted); }
+body.style-blueprint #annotations .label-index { fill: #fff; font-weight: 700; }
+body.style-blueprint #annotations .label-line-spec { fill: #cddcf0; }
+body.style-blueprint .drafting-dimension text { font-family: var(--draft); fill: var(--ink); stroke: var(--sheet); }
+body.style-blueprint .drafting-stamp text { font-family: var(--draft); fill: #d8322a; }
+body.style-blueprint .drafting-stamp rect { stroke: #d8322a; }
+/* The credit becomes the sheet's title block. */
+body.style-blueprint .asset-credit { color: #cfe0f5; background: var(--sheet); border: 3px double rgba(231, 240, 249, .7); padding: 5px 10px; text-align: left; font-family: var(--draft); letter-spacing: .08em; text-transform: uppercase; }

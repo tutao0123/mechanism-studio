@@ -67,6 +67,19 @@ Required configuration:
   context below 0.5 is excluded from label obstacles. `labelObstacleIds(state)`
   can explicitly restrict obstacles for an authored detail, without changing
   target anchors. Check contrast and actual overlap in the delivered viewport.
+- `appearance`: optional style ID or style object from
+  `shared/appearance/styles.mjs`. Omission and `'atlas'` keep the shell's existing
+  background, lights, solid fill, feature lines and accent colours value for value;
+  the [pixel-identity record](evidence/default-style-pixels.json) shows existing
+  pages unchanged. `'blueprint'` adds `body.style-blueprint`: load `blueprint.css`
+  with it. A style changes appearance only, never identity, geometry, motion,
+  camera, labels or timing. `snapshot().style` reports the active ID.
+- Chapter `labels` name a part with a short string, rendered exactly as before, or
+  a spec label from `shared/viewer/spec-label.mjs`: `specLabel({ index, name,
+  spec })` gives a two-digit index, the name and at most one spec line. Compute
+  spec numbers from the example's own model data; never type a measurement by
+  hand. Load `drafting.css` for the label lines. Placement measures the whole
+  two-line block, and snapshots report the label as plain text.
 - `cameraUp`: optional finite nonzero three-component orientation vector. It is
   assigned before OrbitControls is constructed and inherited by annotation
   camera clones. The framing adapter must fit with the same up basis. Omission

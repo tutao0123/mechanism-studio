@@ -12,12 +12,17 @@ export const STUDY_RUNTIME_FILES = Object.freeze([
   'shared/viewer/scene.mjs',
   'shared/viewer/line-art.mjs',
   'shared/viewer/annotation-layout.mjs',
+  'shared/viewer/spec-label.mjs',
+  'shared/viewer/drafting.mjs',
   'showcase/camera-director.mjs',
   'shared/appearance/color-accents.mjs',
   'shared/appearance/mesh-color-layer.mjs',
+  'shared/appearance/styles.mjs',
   'shared/study/study.mjs',
   'shared/study/shell.mjs',
   'shared/study/style.css',
+  'shared/study/drafting.css',
+  'shared/study/blueprint.css',
 ]);
 const runtimeFiles = new Set(STUDY_RUNTIME_FILES);
 const VENDOR_THREE = /^\/vendor\/three\/(?:build|src|examples\/jsm)\/[\w./-]+\.js$/;

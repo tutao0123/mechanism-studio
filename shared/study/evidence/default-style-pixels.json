@@ -1,0 +1,612 @@
+{
+  "schemaVersion": 1,
+  "id": "study-styles-1-default-pixels",
+  "purpose": "Evidence that adding the opt-in appearance option, spec labels and drafting hooks to the shared study shell left the default (atlas) rendering of existing study pages byte-identical.",
+  "baseCommit": "bf55be66bd0e9eff6124cee37e454585cb3a1ac4",
+  "changedShellInputs": {
+    "shared/study/study.mjs": {
+      "beforeSha256": "9fb1f306e11f862854dc1469ed5b6b86a41a19517ce69ddb1d21e72650e3c04f",
+      "afterSha256": "fa3dd0f2756bfc21d09dfb48d81a81ba6e62fe1f1c64b44280544b91a6997c4b"
+    }
+  },
+  "addedShellInputs": [
+    "shared/appearance/styles.mjs",
+    "shared/viewer/spec-label.mjs",
+    "shared/viewer/drafting.mjs",
+    "shared/study/drafting.css",
+    "shared/study/blueprint.css"
+  ],
+  "method": {
+    "browser": "Chromium (Playwright-driven, local tooling not shipped), --use-gl=swiftshader, 1920x1080, deviceScaleFactor 1",
+    "query": "?clean=1&capture=1",
+    "transitionFrames": "capture.start() then capture.frame(t); each jump starts the 0.8 s camera transition, so near-part labels are mostly hidden",
+    "settledFrames": "seek(t) at (i + 0.5) / 12 of each page duration, 400 ms wait, then screenshot; seek cuts the camera so labels show",
+    "comparison": "PNG bytes and snapshot().annotations names compared between the base commit and the working tree; both captured from the same running preview servers"
+  },
+  "result": {
+    "pages": 6,
+    "transitionFrames": 18,
+    "settledFrames": 72,
+    "settledFramesWithLabels": 19,
+    "identical": true,
+    "labelNamesIdentical": true
+  },
+  "limits": [
+    "Software (swiftshader) rendering only; GPU drivers were not compared.",
+    "The gearbox page changed intentionally (spec labels, wave lift, dimension marks) and is excluded.",
+    "The WOLF tour-v4 settled frames sampled show no near-part labels; its labels path is covered by the other five pages.",
+    "This proves identical rendering for the sampled frames, not every frame of every loop."
+  ],
+  "frames": {
+    "transition": [
+      {
+        "page": "humanoid",
+        "seconds": 15,
+        "sha256": "573515160ab929da66d44f42a974ebff86f3e6539aee68401db371996cc40d76"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 30,
+        "sha256": "6b317de2c3f4f1480636a703c46a97c0376e68920f055186d7833dee14a52d6a"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 5,
+        "sha256": "85533a83c25f40e5bae80173cb8df0e6e82c9202654bb7aeece99f8239d39998"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 12,
+        "sha256": "7fec89b358946303b60aaf5648c49cc5ac8ba4b8621f7c02560bbb4ad965a577"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 20,
+        "sha256": "8db2a81a916b5adfdc9e7412524bc8d99617205ae96d93a3481ab877c8ac84a4"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 5,
+        "sha256": "c0fdedd2c385fe5f9628f0c4f88ea4a71893319fc6e4b502cff93ed2c1989e81"
+      },
+      {
+        "page": "robot",
+        "seconds": 15,
+        "sha256": "4380f2cdbff81979639ad71941fb2b7fc5774ce4ca190a42b4705fa38e9cc682"
+      },
+      {
+        "page": "robot",
+        "seconds": 28,
+        "sha256": "d5f296794e7573fad77621b9bab0b3121c8c0226799767786916eeb5b6e7b6cb"
+      },
+      {
+        "page": "robot",
+        "seconds": 5,
+        "sha256": "7b9cff502721ebea64ba41896c476a8a6ba9a65692629ffb45a067ca56c17c74"
+      },
+      {
+        "page": "wolf",
+        "seconds": 15,
+        "sha256": "dfb1e2995efa121955b0ec1fd763792a738ef4bc2532088f48efb982d9c8fbb4"
+      },
+      {
+        "page": "wolf",
+        "seconds": 28,
+        "sha256": "ff769d95e9006677a552c87692efb2e70654357bf64f17aeede4fd9b7ac39b2b"
+      },
+      {
+        "page": "wolf",
+        "seconds": 5,
+        "sha256": "5a7ec762a9d57fa54b26854790eb8964420e60d2c8b1b752a5d09395a4b1e2e1"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 15,
+        "sha256": "039bb2cdbc2fdf7587063a41e3a8341a89ac13d71436485e37a2be73e8c26438"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 28,
+        "sha256": "27c10afae82beeeccb9ce9d3a6ad9ecf0cc756a6c74a023ab3c2453b008afe17"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 5,
+        "sha256": "277e2496154fba69930f5a3b2f37a995d47116444233b477412a2cb759cec1c2"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 10,
+        "sha256": "77103c22c4c95afb334f8f8523d69ad063cf9f4995a15ead372f5e550aecb50d"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 40,
+        "sha256": "a6426e2997edc0bdfe000c44a0cb9b059bf444dd872ca192d59808ddd043b0ee"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 70,
+        "sha256": "2c18a7323cc78abe89a8e7eb1a2eaca1a2b6aef2be4371dd3803e947047bde7b"
+      }
+    ],
+    "settled": [
+      {
+        "page": "robot",
+        "seconds": 1.43,
+        "labels": [
+          "Fixed base"
+        ],
+        "sha256": "506205d03d9ec936e094f9aa8d7411464dd1d3186b625f7508ef9bede53ea77d"
+      },
+      {
+        "page": "robot",
+        "seconds": 4.29,
+        "labels": [],
+        "sha256": "d5d074aa7bdd6e68b2f6368879c2e63ec806a0f7439a22e87423fb2d0f76d33a"
+      },
+      {
+        "page": "robot",
+        "seconds": 7.14,
+        "labels": [
+          "Shoulder link"
+        ],
+        "sha256": "f891eda6f038dfba62e3f4237d88e783d97f83a1488a1246cddec2a23b8a7292"
+      },
+      {
+        "page": "robot",
+        "seconds": 10,
+        "labels": [
+          "Shoulder link",
+          "Elbow / forearm"
+        ],
+        "sha256": "65e35b31b7cabe4f134ee08ecd1ed9de41f752d42e7e3bbde378a4ac62c0edb7"
+      },
+      {
+        "page": "robot",
+        "seconds": 12.86,
+        "labels": [],
+        "sha256": "336d407df3f56d60dfa2907aec423036ffb2b425cac601801ad0b058b2494847"
+      },
+      {
+        "page": "robot",
+        "seconds": 15.71,
+        "labels": [
+          "Wrist link",
+          "Gripper carriage"
+        ],
+        "sha256": "bee950c9327563e67d216227c35a9c571b066d935083f82182f40aac28c49d8c"
+      },
+      {
+        "page": "robot",
+        "seconds": 18.57,
+        "labels": [
+          "Sliding jaw"
+        ],
+        "sha256": "1340564b7dc643fcc148862277b04f9c65f0d94583155e4f3650ea24d8549a04"
+      },
+      {
+        "page": "robot",
+        "seconds": 21.43,
+        "labels": [],
+        "sha256": "74b5b87fe29cf4acf3237943f0b2fb579734b939449cbc19afa2d2a63da26882"
+      },
+      {
+        "page": "robot",
+        "seconds": 24.29,
+        "labels": [
+          "Fixed reference"
+        ],
+        "sha256": "785c6eea46b4014bd5a8ce78fe4c2d5159b0423b80cf37466effd6fb45d1dde7"
+      },
+      {
+        "page": "robot",
+        "seconds": 27.14,
+        "labels": [
+          "Fixed reference"
+        ],
+        "sha256": "b3c30c8254f669829f58b1a64d4c3e6be88489d1e973b3af117db37bfa6e91c7"
+      },
+      {
+        "page": "robot",
+        "seconds": 30,
+        "labels": [],
+        "sha256": "f12bdbb38be1f0e68c5e6620130ec2682db2d2cca389dd7dd68cbd069e011b8e"
+      },
+      {
+        "page": "robot",
+        "seconds": 32.86,
+        "labels": [
+          "Original assembly",
+          "Ready to repeat"
+        ],
+        "sha256": "bbb2a3b9c7d7af4be0db35a276fe48dece7e188cb8c100a0759edd2529f4c8b2"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 1.07,
+        "labels": [],
+        "sha256": "68be593e905ea212020ec4453123defc37993c66253774ae12a9671f7e03bb6d"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 3.21,
+        "labels": [],
+        "sha256": "2c1026c29108885f537c0be63a5b8a5152bbdce5b54f6c7ed9a9e5e57a2aa5f2"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 5.36,
+        "labels": [],
+        "sha256": "d55bb22be6c1d731a64a3133cab00b4183dc254bfd2f87b15be61ad961639466"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 7.5,
+        "labels": [],
+        "sha256": "d01cf35a99f36af4eb236d37b58b83cffbb7d2efe7fd07f77e169ca35bdda0aa"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 9.64,
+        "labels": [],
+        "sha256": "c0dc7c70c9ed9c5d464a810b886a98190f9417684c3d98261e76245c589a8628"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 11.79,
+        "labels": [
+          "Wrist link"
+        ],
+        "sha256": "7fec89b358946303b60aaf5648c49cc5ac8ba4b8621f7c02560bbb4ad965a577"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 13.93,
+        "labels": [],
+        "sha256": "70e117f98ad4d6e4a0cf4c46b08ef8caaefb1178dffeb5c3adbea2a29e86b7d2"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 16.07,
+        "labels": [
+          "Sliding jaw",
+          "Opposed jaw"
+        ],
+        "sha256": "a0d0421eed3c074b5f71abb94a156ded5105b38f5313586c386e74bda5cb28c3"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 18.21,
+        "labels": [],
+        "sha256": "3b0a00c2706ed94c4f5b2398eb1bb8f45160d9dc7aab5724c88b2cdd63e067e5"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 20.36,
+        "labels": [],
+        "sha256": "4540f6ff07e467de55659a50c4bfe14f166753e287f6700aea09d2b679e12e16"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 22.5,
+        "labels": [],
+        "sha256": "c1c2e42b7f3ff96c6aa59bf5dc6681c48279ebf518b13581015362fe25c5450e"
+      },
+      {
+        "page": "kinetic",
+        "seconds": 24.64,
+        "labels": [],
+        "sha256": "e09a803eb9f9fb4fe399cf55d3c909bbda54696c83e574faefbc55012a65042f"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 1.48,
+        "labels": [],
+        "sha256": "13057697182e90dad95efb1c72114b78239ea8309bcad639abf070d72b4bd717"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 4.44,
+        "labels": [],
+        "sha256": "a74019e20843a0960b16cc35f2e14b202767f7e3dc5240064e5788c60f7a61de"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 7.41,
+        "labels": [],
+        "sha256": "1c1677ac051fd4a1fbaa02c03b926b218678e918bb85f3ed4d53c3936774b012"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 10.37,
+        "labels": [],
+        "sha256": "23920aa992b9319367dc0ccacd3abf657267bf2d79f270c939da198a9db257fd"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 13.33,
+        "labels": [],
+        "sha256": "d8f0d38afb0d80be785c0601c783cf5f0355b227b82f1bb6c5fdf9930712afc4"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 16.3,
+        "labels": [
+          "Shoulder yaw link"
+        ],
+        "sha256": "53fee405c7e156034dd01c0856eb4899520a85b26fb772d22373a7aabd2c78d7"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 19.26,
+        "labels": [],
+        "sha256": "b1b30a826b39f8b3b69aa7fe12ff1691dfa9126f087e83cb496f0b071e962a3b"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 22.22,
+        "labels": [
+          "Knee / shank",
+          "Ankle roll / foot"
+        ],
+        "sha256": "8ced40b0fdd224c441aa613c4909c7c8cd02cb2dd0962bda3fa7884eb557376f"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 25.19,
+        "labels": [],
+        "sha256": "a5705fdefa08f496e2a71083287b6bc5f921654969630080f395f0045087cb50"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 28.15,
+        "labels": [],
+        "sha256": "e4acbc8279cfd09ad02c123e72b52c9f8973ae037430ad51f38191eedcb54a88"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 31.11,
+        "labels": [],
+        "sha256": "30e9afd59818134537f9714340c660220bd53e7802b0e348792da902212d43fa"
+      },
+      {
+        "page": "humanoid",
+        "seconds": 34.07,
+        "labels": [],
+        "sha256": "d68edf9308c47992e051f735a54cee8c3aec95ebbfe42dd0d3957b40b58a1f3c"
+      },
+      {
+        "page": "wolf",
+        "seconds": 1.43,
+        "labels": [],
+        "sha256": "91aaba86023c31140d3cffb7eb3221e7a6116a5104aed151ad069e3f73310dc2"
+      },
+      {
+        "page": "wolf",
+        "seconds": 4.29,
+        "labels": [],
+        "sha256": "fa8a82e04f62183e5c23afa85b03a49c5d3be56b36c96ab13158e38f48c7ff3b"
+      },
+      {
+        "page": "wolf",
+        "seconds": 7.14,
+        "labels": [
+          "Front plate"
+        ],
+        "sha256": "3a47752412aa6e11fdca1d7138eed8c73a86b83216551beec73a4e222ada68a4"
+      },
+      {
+        "page": "wolf",
+        "seconds": 10,
+        "labels": [
+          "Front plate"
+        ],
+        "sha256": "90241e1a7cea52a5aa7451c12d4d6cb7770aba456d37b46ae4761515122057da"
+      },
+      {
+        "page": "wolf",
+        "seconds": 12.86,
+        "labels": [],
+        "sha256": "b08a58d573a898b14c75cbbf80c573a70253b1f5977ff740dc0e83b996d5e93b"
+      },
+      {
+        "page": "wolf",
+        "seconds": 15.71,
+        "labels": [
+          "Internal ring A",
+          "Internal ring B"
+        ],
+        "sha256": "9cac4a90821fbde90f384a8e05c692ac860c4d2751d8dc19ee2b4459d53d2228"
+      },
+      {
+        "page": "wolf",
+        "seconds": 18.57,
+        "labels": [
+          "Sun gear"
+        ],
+        "sha256": "f1eac1aa039f6a91869b518ef2a68c6848628d79bdf978c42df137dbe3126ea2"
+      },
+      {
+        "page": "wolf",
+        "seconds": 21.43,
+        "labels": [],
+        "sha256": "436316c9fad979ade94d46057b49998395ae263b486c5cf74b456d54320e5dc1"
+      },
+      {
+        "page": "wolf",
+        "seconds": 24.29,
+        "labels": [],
+        "sha256": "116b468c920cf99e1b69021400817cee76c086bf1925211fd6457d5b6f5f04f6"
+      },
+      {
+        "page": "wolf",
+        "seconds": 27.14,
+        "labels": [],
+        "sha256": "2d704f4b04e7bd3f0c61dfc9c1acbbede64cd74d35dd39d866e9828cacd12ec2"
+      },
+      {
+        "page": "wolf",
+        "seconds": 30,
+        "labels": [],
+        "sha256": "9e57e6f452a34632ebc20fb6b6fd36e7281918304a7c1e7ffdd67bfcbd8efbb9"
+      },
+      {
+        "page": "wolf",
+        "seconds": 32.86,
+        "labels": [],
+        "sha256": "f7f5054b0191fd4b3edd20a591e7b9998ba4976f0bf74a78e2f4bc65e4183c3f"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 1.43,
+        "labels": [],
+        "sha256": "cae7ea8c48e17495e3c6735bbe792f2716ea45c34fb24e1aaace18d1e508a486"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 4.29,
+        "labels": [],
+        "sha256": "d88b81a88b3132f63dbe4093cf62900dbdcb9dc7fea318326a4f0f92a3d6a92d"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 7.14,
+        "labels": [
+          "Motor hex nut"
+        ],
+        "sha256": "aba744fdba6725701a2d866c9c3da055afc37eee3ab49ae00011d2c85413dc9b"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 10,
+        "labels": [],
+        "sha256": "059b31a59a75216d2f4a05ba120ef43fe4b9ffed097e6ce5d74a71ac4683b69c"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 12.86,
+        "labels": [
+          "Magnet"
+        ],
+        "sha256": "f15495bad88c67665fcd619121e2e9528f7c7574544500e1b7c39fe422c91118"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 15.71,
+        "labels": [],
+        "sha256": "7a5010c33b685eae2de5ebed71fbe8183bc74558a166c17420ec0ff61c9ef80d"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 18.57,
+        "labels": [
+          "Magnet"
+        ],
+        "sha256": "4fe6e746de259bece02cb6e9200819b1e72b6546846f5d3959a6ef4f2a2bab50"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 21.43,
+        "labels": [],
+        "sha256": "05938ee0b5f1790b512178625aea26d1c5f3af980d0ccbac1a2aa3373ed37244"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 24.29,
+        "labels": [],
+        "sha256": "00a970447b48a6936a6bb61a52bd9d94e31ab63325ce261462bc23022a5a01ee"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 27.14,
+        "labels": [],
+        "sha256": "a518ab5ef781c5dfbe3fa3e8cb5aeee2c8272bd545b39ead7e1ac8e9fcece1de"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 30,
+        "labels": [],
+        "sha256": "aea015b9de157d5e23e755464661939c7cc6a0a30b83442426dd355ee86ccc9b"
+      },
+      {
+        "page": "wolf-detail",
+        "seconds": 32.86,
+        "labels": [],
+        "sha256": "8ba4a983a5dfb6c034fb8ca276d1dc61d96bd59c463f24dcf4b1cc3cac940e89"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 3.57,
+        "labels": [],
+        "sha256": "1926a3b7954cac1e1c03f9e7c428a50d0d75cb4206be285058f4e5e568b50a8b"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 10.71,
+        "labels": [],
+        "sha256": "01f3cf21b9e36c4e0772de87ef5bfd2a94e17f6bf35895a5cfa218ad4348a009"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 17.86,
+        "labels": [],
+        "sha256": "cc222c0b59f4d1e93f3d0bdbaba2d2103761eb6826d341dfb1f26cbd89bbaae4"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 25,
+        "labels": [],
+        "sha256": "aaa33ecb669baeba099c09f7fc644769e9e8f51ff1ef14ea671f7296dbf1298d"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 32.14,
+        "labels": [],
+        "sha256": "cf6621524e7b2f4f9012565fcbc76f62da5d9368acc188776cf7fcc817867611"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 39.29,
+        "labels": [],
+        "sha256": "11713a9c39a7c7b0609b6778663b67e4edacbb1ab8f8eae2ed138123942d9ac3"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 46.43,
+        "labels": [],
+        "sha256": "99ddcadf55d2aa87743c7e1bfe02eeaf55c017104d811bd81622d19a604b5b7f"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 53.57,
+        "labels": [],
+        "sha256": "c33562121fd6274cb7e442bdb3078f45f465bb8dc32130c5c8184da3a89eb3ba"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 60.71,
+        "labels": [],
+        "sha256": "1f49418bffe3ad0c8efefc4554d1286392006473f003af07484ad07fcf2a403c"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 67.86,
+        "labels": [],
+        "sha256": "7d764a844eeacabaa1345710c0e3acb5bc7880275abaec98b45a0c9cefa819bd"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 75,
+        "labels": [],
+        "sha256": "3a6097d669ce90052bfef84af3a7e2d8f30461ac956564770f7d841959f2e42e"
+      },
+      {
+        "page": "wolf-tour-v4",
+        "seconds": 82.14,
+        "labels": [],
+        "sha256": "985172f68a329cd283791277619a3eb000292e90cc47ddce5f389af7fe1f0ad7"
+      }
+    ]
+  }
+}

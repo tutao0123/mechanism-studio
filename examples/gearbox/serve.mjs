@@ -10,7 +10,9 @@ export function publicFile(path) {
   if (!isSafeUrlPath(path)) return null;
   if (path === '/' || path === '/index.html') return resolve(exampleRoot, 'index.html');
   if (path === '/review.html') return resolve(exampleRoot, 'review.html');
-  if (/^\/(?:app\.mjs|story\.mjs|framing\.mjs|annotations\.mjs|kinematics\.mjs|spec\.mjs|README\.md)$/.test(path)) return resolve(exampleRoot, path.slice(1));
+  if (path === '/blueprint/' || path === '/blueprint/index.html') return resolve(exampleRoot, 'blueprint/index.html');
+  if (path === '/blueprint/app.mjs') return resolve(exampleRoot, 'blueprint/app.mjs');
+  if (/^\/(?:app\.mjs|story\.mjs|framing\.mjs|annotations\.mjs|kinematics\.mjs|spec\.mjs|labels\.mjs|drafting-layer\.mjs|study-config\.mjs|README\.md)$/.test(path)) return resolve(exampleRoot, path.slice(1));
   if (/^\/assets\/(?:gearbox\.glb|scene-contract\.json|scene-index\.json|build-report\.json|provenance\.json)$/.test(path)) return resolve(exampleRoot, path.slice(1));
   if (/^\/audio\/(?:gearbox-loop\.wav|music-score\.json)$/.test(path)) return resolve(exampleRoot, path.slice(1));
   if (/^\/planning\/[a-z-]+\.json$/.test(path)) return resolve(exampleRoot, path.slice(1));
