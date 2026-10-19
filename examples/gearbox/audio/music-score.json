@@ -5,8 +5,8 @@
   "authorship": "Original Mechanism Studio composition and code synthesis. No samples, recordings or narration.",
   "originalScoreLicense": "MIT",
   "narration": false,
-  "geometryRevision": "gearbox-4babbc47aa4c-display-1",
-  "storyRevision": "gearbox-story-1",
+  "geometryRevision": "gearbox-93d9bd770540-display-1",
+  "storyRevision": "gearbox-story-2",
   "bpm": 96,
   "feltBpm": 48,
   "totalBeats": 64,
@@ -43,7 +43,7 @@
           "phase": "lift"
         },
         "audible": true,
-        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+        "geometryRevision": "gearbox-93d9bd770540-display-1"
       },
       {
         "id": "explode-out",
@@ -55,7 +55,7 @@
           "phase": "separate"
         },
         "audible": true,
-        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+        "geometryRevision": "gearbox-93d9bd770540-display-1"
       },
       {
         "id": "explode-seated",
@@ -67,7 +67,7 @@
           "phase": "return-complete"
         },
         "audible": true,
-        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+        "geometryRevision": "gearbox-93d9bd770540-display-1"
       },
       {
         "id": "engage-1",
@@ -79,7 +79,7 @@
           "synchro": "s12"
         },
         "audible": true,
-        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+        "geometryRevision": "gearbox-93d9bd770540-display-1"
       },
       {
         "id": "engage-2",
@@ -91,7 +91,7 @@
           "synchro": "s12"
         },
         "audible": true,
-        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+        "geometryRevision": "gearbox-93d9bd770540-display-1"
       },
       {
         "id": "engage-3",
@@ -103,7 +103,7 @@
           "synchro": "s34"
         },
         "audible": true,
-        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+        "geometryRevision": "gearbox-93d9bd770540-display-1"
       },
       {
         "id": "engage-4",
@@ -115,7 +115,7 @@
           "synchro": "s34"
         },
         "audible": true,
-        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+        "geometryRevision": "gearbox-93d9bd770540-display-1"
       },
       {
         "id": "engage-5",
@@ -127,7 +127,7 @@
           "synchro": "s5r"
         },
         "audible": true,
-        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+        "geometryRevision": "gearbox-93d9bd770540-display-1"
       },
       {
         "id": "case-closed",
@@ -139,7 +139,7 @@
           "phase": "restored"
         },
         "audible": true,
-        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+        "geometryRevision": "gearbox-93d9bd770540-display-1"
       }
     ]
   },

@@ -15,7 +15,7 @@ const MB = 1024 * 1024;
 const DEFAULTS = { 'gif-width': 800, 'gif-fps': 15, 'gif-colors': 128, 'mp4-width': 1280, 'mp4-crf': 28, 'max-gif-mb': 8, 'max-mp4-mb': 4 };
 
 export function parsePreviewArguments(argv) {
-  const options = { ...DEFAULTS }, allowed = new Set(['frames', 'fps', 'out', 'start', 'end', ...Object.keys(DEFAULTS)]), seen = new Set();
+  const options = { ...DEFAULTS }, allowed = new Set(['frames', 'fps', 'out', 'start', 'end', 'only', ...Object.keys(DEFAULTS)]), seen = new Set();
   for (let i = 0; i < argv.length; i++) {
     const flag = argv[i];
     if (flag === '--help') { options.help = true; continue; }
@@ -27,6 +27,8 @@ export function parsePreviewArguments(argv) {
   if (options.help) return options;
   for (const key of ['frames', 'fps', 'out']) ensure(options[key] !== undefined, `Missing --${key}.`);
   for (const key of ['fps', 'start', 'end', ...Object.keys(DEFAULTS)]) if (options[key] !== undefined) options[key] = Number(options[key]);
+  ensure(options.only === undefined || ['gif', 'mp4'].includes(options.only), '--only must be gif or mp4.');
+  options.formats = options.only ? [options.only] : ['gif', 'mp4'];
   ensure([24, 25, 30, 50, 60].includes(options.fps), '--fps must be 24, 25, 30, 50 or 60.');
   ensure(Number.isInteger(options['gif-fps']) && options['gif-fps'] >= 5 && options['gif-fps'] <= options.fps && options.fps % options['gif-fps'] === 0,
     '--gif-fps must divide the capture rate evenly so no frame is held twice (e.g. 10, 15 or 30 for 30 fps).');
@@ -57,8 +59,8 @@ const probe = path => JSON.parse(run('ffprobe', ['-v', 'error', '-count_frames',
 
 export async function encodeReadmePreview(options) {
   const framesPath = await checkedPath(options.frames), stemPath = await checkedPath(options.out, { output: true });
-  const gifPath = `${stemPath}.gif`, mp4Path = `${stemPath}.mp4`, reportPath = `${stemPath}-preview.json`;
-  for (const path of [gifPath, mp4Path, reportPath]) {
+  const gifPath = `${stemPath}.gif`, mp4Path = `${stemPath}.mp4`, reportPath = `${stemPath}-preview.json`, formats = options.formats ?? ['gif', 'mp4'];
+  for (const path of [...formats.map(format => `${stemPath}.${format}`), reportPath]) {
     ensure(relative(framesPath, path).startsWith('..'), 'Outputs cannot be written into the frame folder.');
     if (!options.overwrite) { let exists = true; try { await stat(path); } catch { exists = false; } ensure(!exists, `${relative(projectRoot, path)} already exists; pass --overwrite to replace it.`); }
   }
@@ -71,27 +73,27 @@ export async function encodeReadmePreview(options) {
   // n-th frame (an exact divisor) so motion stays evenly spaced. The palette is
   // built from frame differences.
   const step = options.fps / options['gif-fps'];
-  run('ffmpeg', [...input, '-vf', `trim=end_frame=${frames},select='not(mod(n\\,${step}))',setpts=N/${options['gif-fps']}/TB,scale=${options['gif-width']}:-2:flags=lanczos,split[a][b];[a]palettegen=max_colors=${options['gif-colors']}:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle`,
+  if (formats.includes('gif')) run('ffmpeg', [...input, '-vf', `trim=end_frame=${frames},select='not(mod(n\\,${step}))',setpts=N/${options['gif-fps']}/TB,scale=${options['gif-width']}:-2:flags=lanczos,split[a][b];[a]palettegen=max_colors=${options['gif-colors']}:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle`,
     '-r', String(options['gif-fps']), '-loop', '0', gifPath]);
-  run('ffmpeg', [...input, '-vf', `scale=${options['mp4-width']}:-2:flags=lanczos,format=yuv420p`, '-c:v', 'libx264', '-preset', 'slow', '-crf', String(options['mp4-crf']),
+  if (formats.includes('mp4')) run('ffmpeg', [...input, '-vf', `scale=${options['mp4-width']}:-2:flags=lanczos,format=yuv420p`, '-c:v', 'libx264', '-preset', 'slow', '-crf', String(options['mp4-crf']),
     '-tune', 'animation', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-an', '-r', String(options.fps), mp4Path]);
   const describe = async (path, limitMb) => {
     const bytes = await readFile(path), info = probe(path), stream = info.streams[0];
     return { file: relative(projectRoot, path).split(sep).join('/'), bytes: bytes.length, megabytes: Number((bytes.length / MB).toFixed(3)), limitMegabytes: limitMb, withinLimit: bytes.length <= limitMb * MB,
       sha256: hash(bytes), codec: stream.codec_name, width: stream.width, height: stream.height, frames: Number(stream.nb_read_frames), durationSeconds: Number(Number(info.format.duration).toFixed(3)) };
   };
-  const gif = await describe(gifPath, options['max-gif-mb']), mp4 = await describe(mp4Path, options['max-mp4-mb']);
+  const gif = formats.includes('gif') ? { ...await describe(gifPath, options['max-gif-mb']), fps: options['gif-fps'], colors: options['gif-colors'], loop: 'forever' } : null;
+  const mp4 = formats.includes('mp4') ? { ...await describe(mp4Path, options['max-mp4-mb']), crf: options['mp4-crf'], audio: false } : null;
   const report = { schemaVersion: 1, tool: 'tools/video/readme-preview.mjs', source: { frames: relative(projectRoot, framesPath).split(sep).join('/'), fps: options.fps, firstFrame: first, frameCount: frames, seconds: frames / options.fps },
-    gif: { ...gif, fps: options['gif-fps'], colors: options['gif-colors'], loop: 'forever' }, mp4: { ...mp4, crf: options['mp4-crf'], audio: false },
-    passed: gif.withinLimit && mp4.withinLimit, visuallyReviewed: false,
+    ...(gif && { gif }), ...(mp4 && { mp4 }), passed: [gif, mp4].every(item => !item || item.withinLimit), visuallyReviewed: false,
     note: 'Size and decode checks only. Review the GIF at its README display width for strobing teeth, label legibility and credit before publishing.' };
   await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`);
-  ensure(gif.withinLimit, `GIF is ${gif.megabytes} MB (limit ${options['max-gif-mb']} MB): shorten with --start/--end, lower --gif-fps or --gif-width.`);
-  ensure(mp4.withinLimit, `MP4 is ${mp4.megabytes} MB (limit ${options['max-mp4-mb']} MB): raise --mp4-crf or lower --mp4-width.`);
+  ensure(!gif || gif.withinLimit, `GIF is ${gif?.megabytes} MB (limit ${options['max-gif-mb']} MB): shorten with --start/--end, lower --gif-fps or --gif-width.`);
+  ensure(!mp4 || mp4.withinLimit, `MP4 is ${mp4?.megabytes} MB (limit ${options['max-mp4-mb']} MB): raise --mp4-crf or lower --mp4-width.`);
   return report;
 }
 
-export const help = `Usage: node tools/video/readme-preview.mjs --frames <project-relative-folder> --fps 30 --out <output/stem> [--start s] [--end s]
+export const help = `Usage: node tools/video/readme-preview.mjs --frames <project-relative-folder> --fps 30 --out <output/stem> [--start s] [--end s] [--only gif|mp4]
   [--gif-width 800] [--gif-fps 15] [--gif-colors 128] [--mp4-width 1280] [--mp4-crf 28] [--max-gif-mb 8] [--max-mp4-mb 4] [--overwrite]
 Writes <stem>.gif, <stem>.mp4 (silent) and <stem>-preview.json inside an output directory.`;
 
@@ -99,6 +101,6 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   try {
     const options = parsePreviewArguments(process.argv.slice(2));
     if (options.help) console.log(help);
-    else { const report = await encodeReadmePreview(options); console.log(JSON.stringify({ gif: report.gif, mp4: report.mp4, passed: report.passed }, null, 2)); }
+    else { const report = await encodeReadmePreview(options); console.log(JSON.stringify({ gif: report.gif ?? null, mp4: report.mp4 ?? null, passed: report.passed }, null, 2)); }
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }

@@ -79,7 +79,8 @@ silent H.264 MP4 for places that accept video uploads.
 node tools/video/readme-preview.mjs --frames examples/gearbox/output/frames --fps 30 --out examples/gearbox/output/gearbox-readme --gif-width 800 --gif-fps 15
 ```
 
-`--start`/`--end` take an excerpt in seconds. The GIF keeps every n-th frame,
+`--start`/`--end` take an excerpt in seconds, and `--only gif|mp4` encodes one
+format, so a short GIF excerpt and a full-length MP4 can come from one capture. The GIF keeps every n-th frame,
 where n must divide the capture rate exactly, so motion stays evenly spaced; its
 palette is built from frame differences. Size gates (`--max-gif-mb`, default 8;
 `--max-mp4-mb`, default 4) fail with a concrete suggestion instead of shipping a

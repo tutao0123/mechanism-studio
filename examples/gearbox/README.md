@@ -61,6 +61,10 @@ carries torque only when its synchronizer sleeve is slid over its dog teeth.
   10⁻⁶ rad.
 - Gear tooth phases are computed so every mesh interlocks at angle zero and
   stays interlocked at any input angle.
+- Speeds are chosen for legibility, and a test enforces it. In steady motion no
+  visible tooth or spline passes faster than 5.5 teeth/s, about 0.37 of a tooth
+  pitch per frame of a 15 fps GIF. The brief alignment nudge stays under
+  7 teeth/s, below the half-pitch limit where teeth appear to turn backwards.
 
 ## Rebuild
 
@@ -118,9 +122,24 @@ reviewed by listening.
 
 ## README media
 
-`docs/media/gearbox-readme.gif` (GIF, renders inline on GitHub) and
-`docs/media/gearbox-readme.mp4` (silent, for video uploads) are made from the
-captured frames with `tools/video/readme-preview.mjs`. The full 1080p MP4 with
-music is a local delivery made with `tools/video/export.mjs` and is not committed.
+Two files are made from one deterministic 1920×1080, 30 fps capture of
+`?clean=1&capture=1`. The capture drives `gearboxShowcase.capture.frame(t)` for
+every frame and screenshots the page into `examples/gearbox/output/frames/`,
+which is gitignored.
+
+- `docs/media/gearbox-readme.gif`: an 800 px, 15 fps excerpt from 3 s to 20 s
+  (case off, explosion, reassembly, then 1st and 2nd with the power path).
+  GitHub renders it inline.
+- `docs/media/gearbox-readme.mp4`: the full 40 s loop, silent, 1280 px, for
+  places that accept video uploads.
+
+```sh
+node tools/video/readme-preview.mjs --frames examples/gearbox/output/frames --fps 30 --out examples/gearbox/output/gearbox-readme --only gif --start 3 --end 20
+node tools/video/readme-preview.mjs --frames examples/gearbox/output/frames --fps 30 --out examples/gearbox/output/gearbox-readme-full --only mp4
+```
+
+The whole loop as a GIF is about 14 MB because every gear turns, so the README
+uses the excerpt. A full 1080p MP4 with music can be made locally with
+`tools/video/export.mjs`; it is not committed.
 
 Original code, model, score and media: MIT, © Mechanism Studio contributors.

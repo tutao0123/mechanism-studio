@@ -35,4 +35,8 @@ test('a small fixture becomes a looping GIF and a silent MP4 within their size g
   await assert.rejects(encodeReadmePreview(parsePreviewArguments(args)), /already exists/);
   await assert.rejects(encodeReadmePreview(parsePreviewArguments([...args, '--overwrite', '--max-gif-mb', '0.00001'])), /GIF is .* MB \(limit/);
   await assert.rejects(encodeReadmePreview(parsePreviewArguments(['--frames', relative(projectRoot, frames), '--fps', '30', '--out', 'docs/clip'])), /output directory/);
+  // One format per range: a short GIF excerpt and a full-length video.
+  const video = await encodeReadmePreview(parsePreviewArguments(['--frames', relative(projectRoot, frames), '--fps', '30', '--out', relative(projectRoot, join(fixture, 'full')), '--only', 'mp4', '--mp4-width', '320']));
+  assert.equal(video.gif, undefined); assert.equal(video.mp4.frames, 60); assert.equal(video.passed, true);
+  assert.throws(() => parsePreviewArguments([...args, '--only', 'webm']), /gif or mp4/);
 });

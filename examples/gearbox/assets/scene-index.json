@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "geometryRevision": "gearbox-4babbc47aa4c-display-1",
+  "geometryRevision": "gearbox-93d9bd770540-display-1",
   "units": "m",
   "coordinateBasis": "glTF metres, right-handed, +Y up; shafts along +X from the engine side (−X) to the output (+X)",
   "rootId": "gb-asm:gearbox",
@@ -9,11 +9,11 @@
     "author": "Mechanism Studio",
     "license": "MIT",
     "specRevision": "gearbox-spec-1",
-    "kinematicsRevision": "gearbox-kinematics-1"
+    "kinematicsRevision": "gearbox-kinematics-2"
   },
   "asset": {
     "file": "assets/gearbox.glb",
-    "sha256": "aeeba8112bb2331a8cf67a740cdfb9292b83784a55ffa47acedec146ddb0cd7c",
+    "sha256": "832559c27b92f1e9af261c98a8bf9c25b9d11cb2fe6f6d9b7bc811e5857c7037",
     "assembledWorldBounds": {
       "min": [
         -0.27,

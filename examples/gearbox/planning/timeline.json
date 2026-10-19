@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "stage": "bound",
-  "geometryRevision": "gearbox-4babbc47aa4c-display-1",
-  "planRevision": "gearbox-story-1",
+  "geometryRevision": "gearbox-93d9bd770540-display-1",
+  "planRevision": "gearbox-story-2",
   "bpm": 96,
   "beats": 64,
   "seconds": 40,
@@ -129,7 +129,7 @@
       "gear": "1",
       "engine": [
         0,
-        0.36
+        0.25
       ],
       "t0": 14.6875,
       "t1": 16.875
@@ -145,8 +145,8 @@
       "type": "drive",
       "gear": "2",
       "engine": [
-        0.20675675675675678,
-        0.36
+        0.14358108108108109,
+        0.25
       ],
       "t0": 17.625,
       "t1": 20
@@ -162,8 +162,8 @@
       "type": "drive",
       "gear": "3",
       "engine": [
-        0.23039999999999997,
-        0.3
+        0.15999999999999998,
+        0.2
       ],
       "t0": 20.750000000000004,
       "t1": 23.75
@@ -179,8 +179,8 @@
       "type": "drive",
       "gear": "4",
       "engine": [
-        0.22058823529411767,
-        0.3
+        0.1470588235294118,
+        0.2
       ],
       "t0": 25,
       "t1": 27.8125
@@ -196,8 +196,8 @@
       "type": "drive",
       "gear": "5",
       "engine": [
-        0.23432432432432432,
-        0.3
+        0.15621621621621623,
+        0.16
       ],
       "t0": 28.5625,
       "t1": 31.25
@@ -232,29 +232,29 @@
       "to": "2",
       "time": 17.4375,
       "multiplier": 0.47058823529411764,
-      "inputAdjustment": 0.18256261903521678,
-      "residual": 1.6165957461566904e-11
+      "inputAdjustment": 0.08041928829613902,
+      "residual": 9.164891068280667e-13
     },
     {
       "to": "3",
       "time": 20.562500000000004,
       "multiplier": 0.7352941176470589,
-      "inputAdjustment": -0.1474557456362366,
-      "residual": 2.0401902389721727e-11
+      "inputAdjustment": -0.17472190426033288,
+      "residual": 3.0877522760874854e-12
     },
     {
       "to": "4",
       "time": 24.6875,
       "multiplier": 1,
-      "inputAdjustment": -0.049213290351549865,
-      "residual": 1.183941833460267e-12
+      "inputAdjustment": -0.2624632511155574,
+      "residual": 8.615330671091215e-13
     },
     {
       "to": "5",
       "time": 28.375,
       "multiplier": 1.2802768166089966,
-      "inputAdjustment": 0.06912525533706855,
-      "residual": 1.6637358157822746e-11
+      "inputAdjustment": -0.15371429621104843,
+      "residual": 4.810374321095878e-12
     }
   ],
   "shiftPhases": {

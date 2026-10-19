@@ -4,7 +4,7 @@
   "title": "Five-speed teaching gearbox",
   "author": "Mechanism Studio",
   "license": "MIT",
-  "revision": "gearbox-spec-1+gearbox-kinematics-1",
+  "revision": "gearbox-spec-1+gearbox-kinematics-2",
   "generator": "examples/gearbox/build-gearbox.mjs",
   "inputs": [
     "examples/gearbox/spec.mjs",

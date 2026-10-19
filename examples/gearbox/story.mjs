@@ -8,7 +8,7 @@ import { createDrive, memberAngles, leverAngles, smooth } from './kinematics.mjs
 export const BPM = 96;
 export const TOTAL_BEATS = 64;
 export const DURATION = TOTAL_BEATS * 60 / BPM;
-export const PLAN_REVISION = 'gearbox-story-1';
+export const PLAN_REVISION = 'gearbox-story-2';
 const beat = value => value * 60 / BPM;
 const freeze = Object.freeze;
 
@@ -22,9 +22,14 @@ export const CHAPTERS = freeze([
   { id: 'close', firstBeat: 54, lastBeat: 64, title: 'Whole again.', copy: 'An original teaching model: ideal tooth ratios, no loads, friction or wear.', labels: [] },
 ].map(chapter => freeze({ ...chapter, labels: freeze(chapter.labels.map(freeze)) })));
 
-/** Contiguous drive schedule in beats; createDrive works in seconds. Engine
- * (input) speeds are deliberately slow so teeth stay readable on screen. */
-const PEAK = .36, CLOSE_PEAK = .30;
+/** Contiguous drive schedule in beats; createDrive works in seconds. Speeds
+ * are deliberately slow so teeth read in a 15 fps README GIF: steady motion
+ * passes at most VISIBLE_TOOTH_RATE teeth per second (≈0.37 pitch per frame).
+ * The brief dog-alignment nudge inside a shift may reach ALIGNMENT_TOOTH_RATE,
+ * still under the 0.5-pitch Nyquist limit where teeth would appear to reverse.
+ * Fifth cruises slower, because the mainshaft splines outrun the input there. */
+export const VISIBLE_TOOTH_RATE = 5.5, ALIGNMENT_TOOTH_RATE = 7;
+const PEAK = .25, CLOSE_PEAK = .20, FIFTH_PEAK = .16;
 const SCHEDULE_BEATS = [
   { type: 'hold', t0: 0, t1: 22.5 },
   { type: 'shift', from: 'N', to: '1', t0: 22.5, t1: 23.5 },
@@ -36,7 +41,7 @@ const SCHEDULE_BEATS = [
   { type: 'shift', from: '3', to: '4', t0: 38, t1: 40 },
   { type: 'drive', gear: '4', engine: [CLOSE_PEAK / GEARS[3].ratio, CLOSE_PEAK], t0: 40, t1: 44.5 },
   { type: 'shift', from: '4', to: '5', t0: 44.5, t1: 45.7 },
-  { type: 'drive', gear: '5', engine: [CLOSE_PEAK * GEARS[5].ratio, CLOSE_PEAK], t0: 45.7, t1: 50 },
+  { type: 'drive', gear: '5', engine: [CLOSE_PEAK * GEARS[5].ratio, FIFTH_PEAK], t0: 45.7, t1: 50 },
   { type: 'shift', from: '5', to: 'N', t0: 50, t1: 50.8 },
   { type: 'coast', t0: 50.8, t1: 53.5 },
   { type: 'hold', t0: 53.5, t1: 64 },

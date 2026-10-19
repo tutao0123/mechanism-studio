@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "stage": "bound",
-  "geometryRevision": "gearbox-4babbc47aa4c-display-1",
-  "planRevision": "gearbox-story-1",
+  "geometryRevision": "gearbox-93d9bd770540-display-1",
+  "planRevision": "gearbox-story-2",
   "cameraRevision": "gearbox-framing-1",
   "boundsMethod": "Actual part AABB unions at rest and at every display-offset endpoint; sliding sleeves, rings, keys, rails and forks reserve one travel. Presentation evidence, not a collision certificate.",
   "envelopes": {

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
   "mechanismId": "teaching-gearbox-5r",
-  "geometryRevision": "gearbox-4babbc47aa4c-display-1",
-  "glbSHA256": "aeeba8112bb2331a8cf67a740cdfb9292b83784a55ffa47acedec146ddb0cd7c",
+  "geometryRevision": "gearbox-93d9bd770540-display-1",
+  "glbSHA256": "832559c27b92f1e9af261c98a8bf9c25b9d11cb2fe6f6d9b7bc811e5857c7037",
   "glbBytes": 4216112,
   "partCount": 124,
   "assemblyCount": 15,

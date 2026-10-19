@@ -120,3 +120,25 @@ test('bearing balls orbit at the pure-rolling cage speed and races follow their 
     assert.ok(ratio > .35 && ratio < .45, `${key} cage ratio ${ratio}`);
   }
 });
+
+test('no visible teeth pass fast enough to strobe in a 15 fps README GIF', async () => {
+  const { VISIBLE_TOOTH_RATE, ALIGNMENT_TOOTH_RATE } = await import('../story.mjs');
+  const { SPLINE_TEETH } = await import('../spec.mjs');
+  const { ALIGN_WINDOW } = await import('../kinematics.mjs');
+  // Gear teeth on every input-train member, plus the 24-tooth splines that turn
+  // with the mainshaft (hubs, sleeves, blocker rings).
+  const toothed = [['input', TEETH.input], ['counter', Math.max(TEETH.counterDrive, TEETH.counter1, TEETH.counter2, TEETH.counter3, TEETH.counter5, TEETH.counterR)],
+    ['main1', TEETH.main1], ['main2', TEETH.main2], ['main3', TEETH.main3], ['main5', TEETH.main5], ['mainR', TEETH.mainR], ['idler', TEETH.idler]];
+  const nudging = t => SCHEDULE.some(s => s.type === 'shift' && t > s.t0 + ALIGN_WINDOW[0] * (s.t1 - s.t0) && t < s.t0 + ALIGN_WINDOW[1] * (s.t1 - s.t0));
+  let steady = 0, nudge = 0;
+  for (const t of sample(0, DURATION, 8000)) {
+    const { input, output } = drive.speeds(t);
+    let rate = SPLINE_TEETH * Math.abs(output);
+    for (const [member, teeth] of toothed) rate = Math.max(rate, teeth * Math.abs(TRAIN[member] * input));
+    if (nudging(t)) nudge = Math.max(nudge, rate); else steady = Math.max(steady, rate);
+  }
+  assert.ok(steady <= VISIBLE_TOOTH_RATE, `steady tooth rate ${steady.toFixed(2)}/s`);
+  assert.ok(nudge <= ALIGNMENT_TOOTH_RATE, `alignment nudge tooth rate ${nudge.toFixed(2)}/s`);
+  assert.ok(steady > 3, 'still visibly turning');
+  assert.ok(VISIBLE_TOOTH_RATE / 15 < .4 && ALIGNMENT_TOOTH_RATE / 15 < .5, 'pitch per 15 fps GIF frame stays readable and under Nyquist');
+});

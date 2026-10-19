@@ -11,7 +11,7 @@
  * that window lines the sleeve teeth up with the dog teeth before engagement. */
 import { TEETH, GEARS, SPLINE_TEETH, SLEEVE_TRAVEL, RING_GAP, AXES, BEARINGS, bearingGeometry, SYNCHROS } from './spec.mjs';
 
-export const KINEMATICS_REVISION = 'gearbox-kinematics-1';
+export const KINEMATICS_REVISION = 'gearbox-kinematics-2';
 const TAU = 2 * Math.PI;
 export const DOG_PITCH = TAU / SPLINE_TEETH;
 export const GRID_HZ = 1200;
@@ -62,6 +62,9 @@ const sideOf = gear => gear === 'N' ? 0 : GEARS[gear].side;
 
 /** Shift phases as fractions of the shift interval. */
 export const SHIFT_PHASES = Object.freeze({ release: [0, .3], approach: [.3, .45], sync: [.45, .75], engage: [.75, 1] });
+/** The sleeve is free of both dog rings from u = 0.25 to 0.75; only then may the
+ * input be nudged into alignment without breaking an engaged gear's ratio. */
+export const ALIGN_WINDOW = Object.freeze([.25, .75]);
 const window = ([a, b], u) => (u - a) / (b - a);
 
 function validateSchedule(schedule, duration) {
@@ -119,7 +122,7 @@ export function createDrive(schedule, duration) {
     if (s.type === 'coast') { const k = 1 - smooth(u); return { input: s.inputIn * k, output: s.outputIn * k }; }
     const output = s.outputIn, from = s.from === 'N' ? s.inputIn : output * ratioOf(s.from);
     const to = s.to === 'N' ? from : output * ratioOf(s.to), w = window(SHIFT_PHASES.sync, u);
-    const bump = s.bump * smoothRate(w) / ((SHIFT_PHASES.sync[1] - SHIFT_PHASES.sync[0]) * (s.t1 - s.t0)) / TAU;
+    const bump = s.bump * smoothRate(window(ALIGN_WINDOW, u)) / ((ALIGN_WINDOW[1] - ALIGN_WINDOW[0]) * (s.t1 - s.t0)) / TAU;
     return { input: from + (to - from) * smooth(w) + bump, output };
   }
   const count = Math.round(duration * GRID_HZ) + 1, dt = duration / (count - 1);
@@ -147,7 +150,17 @@ export function createDrive(schedule, duration) {
     const wrapped = error - DOG_PITCH * Math.round(error / DOG_PITCH);
     // At rest a speed bump would spin a stationary input; rest engagements
     // must already be aligned and are checked below like every other.
-    if (s.outputIn !== 0 || s.inputIn !== 0) { s.bump = wrapped / multiplier; integrate(); }
+    if (s.outputIn !== 0 || s.inputIn !== 0) {
+      // Any whole number of dog pitches aligns equally well. Pick the
+      // adjustment with the lowest peak input speed that never reverses it.
+      const candidates = [-2, -1, 0, 1, 2].map(k => (wrapped + k * DOG_PITCH) / multiplier).map(bump => {
+        s.bump = bump; let peak = 0, low = Infinity;
+        for (let i = 0; i <= 200; i++) { const t = s.t0 + (ALIGN_WINDOW[0] + (ALIGN_WINDOW[1] - ALIGN_WINDOW[0]) * i / 200) * (s.t1 - s.t0), v = speeds(t).input; peak = Math.max(peak, Math.abs(v)); low = Math.min(low, v); }
+        return { bump, peak, reverses: low < -1e-12 };
+      }).filter(candidate => !candidate.reverses).sort((a, b) => a.peak - b.peak);
+      if (!candidates.length) throw new Error(`No non-reversing alignment for ${s.to}; lengthen the shift.`);
+      s.bump = candidates[0].bump; integrate();
+    }
     alignments.push({ to: s.to, time: tAlign, multiplier, inputAdjustment: s.bump });
   }
   for (const record of alignments) {
