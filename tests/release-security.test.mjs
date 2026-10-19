@@ -16,6 +16,10 @@ test('release policy blocks private delivery artifacts even if force-added', () 
   }
   for (const mode of ['120000', '160000']) assert.ok(inspect('entry.md', '', { mode }).some(failure => /symbolic link or submodule/.test(failure)));
   assert.ok(inspect('unknown.bin', '').some(failure => /unreviewed file type/.test(failure)));
+  // README animations are reviewed only in docs/media; videos stay local.
+  assert.deepEqual(inspect('docs/media/example-readme.gif', 'GIF89a'), []);
+  assert.ok(inspect('examples/gearbox/preview.gif', 'GIF89a').some(failure => /unreviewed file type/.test(failure)));
+  assert.ok(inspect('docs/media/example-readme.mp4', '').some(failure => /local\/private/.test(failure)));
 });
 
 test('credential scanning covers examples, binary metadata, literal assignments and redacts results', () => {

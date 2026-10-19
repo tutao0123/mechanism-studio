@@ -37,6 +37,8 @@ shots/
 *.mov
 # Rebuild this longer deterministic score with tour-v2/audio/build.mjs.
 examples/wolf-actuator/tour-v2/audio/tour-loop.wav
+# Rebuild with examples/gearbox/audio/build.mjs; music-score.json keeps its hash.
+examples/gearbox/audio/gearbox-loop.wav
 # Per-machine editor state, credential material and Python environments.
 .vscode/
 .idea/

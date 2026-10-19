@@ -1,5 +1,9 @@
 # A gearbox, revealed
 
+![Five-speed teaching gearbox: the case lifts, the shafts separate, and power flows through 1st and 2nd](../../docs/media/gearbox-readme.gif)
+
+*17-second excerpt; run the page below for the full 40-second loop with music.*
+
 A **40-second English looping study** of an original five-speed manual gearbox
 with reverse. The case lifts away, the shafts and synchronizers separate, and
 then the gearbox drives up through all five forward gears. A pale blue accent
@@ -25,10 +29,12 @@ From the repository root:
 
 ```sh
 npm ci
+node examples/gearbox/audio/build.mjs   # once: renders the gitignored score
 node examples/gearbox/serve.mjs
 ```
 
-Open **http://127.0.0.1:4183/?clean=1** and click **Play with music**. Pause,
+Open **http://127.0.0.1:4183/?clean=1** and click **Play with music**. Without the
+built score the page plays silently and says so. Pause,
 seek, restart, free exploration and **Color cues** work as in the other study
 pages. Rotation is shown deliberately slowly so individual teeth stay readable.
 
@@ -122,16 +128,17 @@ reviewed by listening.
 
 ## README media
 
-Two files are made from one deterministic 1920×1080, 30 fps capture of
+The README GIF is made from one deterministic 1920×1080, 30 fps capture of
 `?clean=1&capture=1`. The capture drives `gearboxShowcase.capture.frame(t)` for
 every frame and screenshots the page into `examples/gearbox/output/frames/`,
 which is gitignored.
 
-- `docs/media/gearbox-readme.gif`: an 800 px, 15 fps excerpt from 3 s to 20 s
+- `docs/media/gearbox-readme.gif` is an 800 px, 15 fps excerpt from 3 s to 20 s
   (case off, explosion, reassembly, then 1st and 2nd with the power path).
   GitHub renders it inline.
-- `docs/media/gearbox-readme.mp4`: the full 40 s loop, silent, 1280 px, for
-  places that accept video uploads.
+- A silent 1280 px MP4 of the full loop (about 2 MB) is made by the second
+  command, for uploading to sites or GitHub's own video attachments. Like every
+  MP4 delivery in this repository, it is kept out of Git by the release policy.
 
 ```sh
 node tools/video/readme-preview.mjs --frames examples/gearbox/output/frames --fps 30 --out examples/gearbox/output/gearbox-readme --only gif --start 3 --end 20
@@ -139,7 +146,8 @@ node tools/video/readme-preview.mjs --frames examples/gearbox/output/frames --fp
 ```
 
 The whole loop as a GIF is about 14 MB because every gear turns, so the README
-uses the excerpt. A full 1080p MP4 with music can be made locally with
+uses the excerpt. The score WAV is gitignored and rebuilt by `audio/build.mjs`; its
+test re-renders it and checks the hash recorded in `music-score.json`. A full 1080p MP4 with music can be made locally with
 `tools/video/export.mjs`; it is not committed.
 
 Original code, model, score and media: MIT, © Mechanism Studio contributors.

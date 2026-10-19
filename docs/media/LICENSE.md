@@ -11,6 +11,7 @@ in this documentation directory.
 | `inline-four-preview.jpg` | Original inline-four teaching model, TuTao | Project MIT; source in `examples/inline-four/` |
 | `turbofan-preview.jpg` | Original two-spool teaching model, TuTao | Project MIT; source in `examples/turbofan/` |
 | `quadruped-preview.jpg` | Original eight-DoF teaching model, TuTao | Project MIT; source in `examples/quadruped/` |
+| `gearbox-readme.gif` | Original five-speed teaching gearbox, Mechanism Studio | Project MIT; model, score and capture source in `examples/gearbox/` |
 | `so-arm102-kinetic.jpg` | SO-ARM 102, Robonine | CC BY 4.0; source and change notice below |
 | `kfl08-preview.jpg` | KFL08, hasecilu / FreeCAD community library | CC BY 3.0; source and change notice below |
 | `shaft-bearing-preview.jpg` | Galileo 2, JaredC01 and contributors | Retains source-derived GPL-3.0-only notice; source and conversion materials below |

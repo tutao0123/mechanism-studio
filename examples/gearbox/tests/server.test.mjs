@@ -14,7 +14,7 @@ test('the gearbox preview serves the page and its assets, never build inputs, te
       assert.equal(publicFile(path), null, path); assert.equal((await fetch(base + path)).status, 403, path);
     }
     assert.equal((await fetch(base + '/', { method: 'POST' })).status, 405);
-    const range = await fetch(base + '/audio/gearbox-loop.wav', { headers: { Range: 'bytes=0-11' } });
+    const range = await fetch(base + '/assets/gearbox.glb', { headers: { Range: 'bytes=0-11' } });
     assert.equal(range.status, 206); assert.equal((await range.arrayBuffer()).byteLength, 12);
   } finally { await new Promise(resolve => { server.close(resolve); server.closeAllConnections(); }); }
 });

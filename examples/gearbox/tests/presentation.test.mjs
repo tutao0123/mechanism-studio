@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { createScore, renderScore, encodeWav } from '../audio/synth.mjs';
 import { createGearboxStory, CHAPTERS, DURATION, BPM, SCHEDULE } from '../story.mjs';
 import { createGearboxFraming } from '../framing.mjs';
 import { CUE_WINDOWS, annotationCues } from '../annotations.mjs';
@@ -81,8 +82,13 @@ test('planned cameras are finite and tighten from explosion to close-up', () => 
   assert.throws(() => framing.cameraFor('unknown', 1));
 });
 
-test('the score is the delivered file and its cues sit on real engagements', async () => {
-  const score = JSON.parse(await read('../audio/music-score.json')), wav = await read('../audio/gearbox-loop.wav');
+test('the score renders to its recorded hash and its cues sit on real engagements', async () => {
+  // The WAV is gitignored and rebuilt locally; synthesis is deterministic, so a
+  // fresh render must reproduce the hash recorded in the committed score.
+  const score = JSON.parse(await read('../audio/music-score.json'));
+  const rendered = encodeWav(renderScore(createScore(story, index.geometryRevision)));
+  assert.equal(createHash('sha256').update(rendered).digest('hex'), score.sha256, 'deterministic render');
+  const wav = await read('../audio/gearbox-loop.wav').catch(error => { if (error.code !== 'ENOENT') throw error; return rendered; });
   assert.equal(score.bpm, BPM); assert.equal(score.durationSeconds, DURATION); assert.equal(score.geometryRevision, index.geometryRevision);
   assert.equal(score.byteLength, wav.length); assert.equal(score.sha256, createHash('sha256').update(wav).digest('hex'));
   assert.equal(wav.readUInt32LE(40), score.frames * 4); assert.equal(score.frames, 44100 * 40);

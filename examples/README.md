@@ -10,6 +10,7 @@ public/local distinctions are listed in the [status audit](../docs/examples-stat
 
 ## Visual entry points
 
+<a href="gearbox/README.md"><img src="../docs/media/gearbox-readme.gif" alt="Original five-speed teaching gearbox separating and driving through its gears" width="480"></a>
 <a href="humanoid/README.md"><img src="../docs/media/humanoid-g1-preview.jpg" alt="Unitree G1 source-body exploded presentation" width="480"></a>
 <a href="../EXAMPLE_ROBOT/kinetic/README.md"><img src="../docs/media/so-arm102-kinetic.jpg" alt="SO-ARM 102 kinetic cut with source robot credit" width="480"></a>
 <a href="inline-four/README.md"><img src="../docs/media/inline-four-preview.jpg" alt="Inline-four engine with ignition cues" width="480"></a>
@@ -79,6 +80,8 @@ On a fresh clone, generate the shared score for v2, v3 and v4 before music playb
 node examples/wolf-actuator/tour-v2/audio/build.mjs
 node examples/wolf-actuator/serve.mjs
 ```
+
+The gearbox score is generated the same way: `node examples/gearbox/audio/build.mjs`.
 
 The WOLF server defaults to **4181**. A `PORT` override changes the local URL;
 follow the address printed by the server. The shared long WAV and exported
