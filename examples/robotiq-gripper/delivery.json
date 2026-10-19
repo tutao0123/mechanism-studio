@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 1,
+  "id": "robotiq-gripper-showcase-1",
+  "route": "Showcase",
+  "state": {
+    "implemented": true,
+    "checked": true,
+    "exported": false,
+    "published": false
+  },
+  "timeline": {
+    "bpm": 108,
+    "beats": 64,
+    "durationSeconds": 35.55555555555556
+  },
+  "checks": [
+    {
+      "id": "project-tests",
+      "status": "passed",
+      "summary": "577 project tests passed, zero failures/skips; includes pinned source/import, example mechanics, restoration, framing, label windows and deterministic music.",
+      "evidence": [
+        "output/robot-studies/test-results.txt"
+      ]
+    },
+    {
+      "id": "browser-review",
+      "status": "passed",
+      "summary": "Actual desktop key scenes and 390x844 narrow detail reviewed; both names visible, no horizontal overflow or console errors; real play, pause and seek exercised.",
+      "evidence": [
+        "examples/robotiq-gripper/validation.md",
+        "docs/media/robotiq-gripper-preview.png",
+        "output/robot-studies/robotiq-narrow.png"
+      ]
+    },
+    {
+      "id": "media-clock",
+      "status": "passed",
+      "summary": "Real audio playback active with common media clock; snapshot loops=1; absolute animation/audio clock difference 0.0159 seconds at observation.",
+      "evidence": [
+        "output/robot-studies/browser-snapshots.json"
+      ]
+    },
+    {
+      "id": "listening",
+      "status": "not-run",
+      "summary": "No human listening review claimed; deterministic PCM, peak/headroom and continuity were tested.",
+      "evidence": []
+    },
+    {
+      "id": "export-publication",
+      "status": "not-run",
+      "summary": "No encoded video, GitHub upload or X post performed for these new examples.",
+      "evidence": []
+    }
+  ],
+  "limitations": [
+    "Visual source bodies are not manufacturing components; no invented screws or actuator internals.",
+    "Authored display separation is not collision-checked disassembly.",
+    "Source-based kinematics do not establish contact, force, dynamics or hardware-control validation.",
+    "The source model retains its BSD-2-Clause license; original presentation code/music are MIT."
+  ],
+  "files": [
+    {
+      "path": "docs/media/robotiq-gripper-preview.png",
+      "role": "evidence",
+      "storage": "repository",
+      "bytes": 44655,
+      "sha256": "cfcf5be5437ff8818393b27267ded5904a75e34ccdc64b6648bff23349d5519e"
+    },
+    {
+      "path": "examples/robotiq-gripper/annotations.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 598,
+      "sha256": "f8ba3c2a92735c97ef7cf0e3710a550eb5d06c792bb039467e65196dd05c16f2"
+    },
+    {
+      "path": "examples/robotiq-gripper/app.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2151,
+      "sha256": "e8f356e82ec0adfe81c1f9cc903d28d71e6d5a9182286e58df9e10c1f2f74e51"
+    },
+    {
+      "path": "examples/robotiq-gripper/assets/assembly.glb",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 12492020,
+      "sha256": "1e9fb19a6a4c046a8e74bbc0d0e5f0dc49dd4d77791f9d19e34c61ba693ff9ea"
+    },
+    {
+      "path": "examples/robotiq-gripper/assets/build-report.json",
+      "role": "evidence",
+      "storage": "repository",
+      "bytes": 1893,
+      "sha256": "ee9df7db7e277dc6847a5003c87ee66bdb980966b0eedd725adc573b5220609d"
+    },
+    {
+      "path": "examples/robotiq-gripper/assets/LICENSE",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1297,
+      "sha256": "3d5edd18d1e22a17666e9bb84270171ed5ac90b192d24e0177fd171708ea2316"
+    },
+    {
+      "path": "examples/robotiq-gripper/assets/scene-contract.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 23095,
+      "sha256": "2ad012cebbdd959acc4bfe96bb788f2f6dddbdad1e8557d107a28a4837f03e49"
+    },
+    {
+      "path": "examples/robotiq-gripper/assets/scene-index.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 33882,
+      "sha256": "3dfd204e8e74111ba55f8cbdde61de0c955585985864999cedf837fdc2ebf946"
+    },
+    {
+      "path": "examples/robotiq-gripper/assets/source-assembly.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 58438,
+      "sha256": "97fa31940b5cdfd23d8b73c4616a745fd22f0a119552117d1a350e9a5f887ebf"
+    },
+    {
+      "path": "examples/robotiq-gripper/audio/music-score.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 16735,
+      "sha256": "d5989292f3e793ec04f5b868581ab498b115ad3bd3d84b48883906459ee59d1b"
+    },
+    {
+      "path": "examples/robotiq-gripper/audio/showcase-loop.wav",
+      "role": "artifact",
+      "storage": "local",
+      "bytes": 6272044,
+      "sha256": "5b0ea0bf1133773be2594022d2c734279fbd053fe6bd271afd3cacef30018deb"
+    },
+    {
+      "path": "examples/robotiq-gripper/framing.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2225,
+      "sha256": "b1ab08b7dcbb595206b26d207c969a6cfebe8b8db5bb3ab021c62dbfc57be540"
+    },
+    {
+      "path": "examples/robotiq-gripper/index.html",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 627,
+      "sha256": "e07bf17a063445632e1ef3c1ce6cdb535d57f2e0d048509695d8716219d9aa56"
+    },
+    {
+      "path": "examples/robotiq-gripper/kinematics.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 5938,
+      "sha256": "c621933677fb24bbf8ffd59075e35999a2a44e52e244c28480645475bb5ed017"
+    },
+    {
+      "path": "examples/robotiq-gripper/planning/module-plan.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2599,
+      "sha256": "59b2bcac0d47a956b57f27e31c1e34dfccb2001ae9e83df3a5c8e3209dd18421"
+    },
+    {
+      "path": "examples/robotiq-gripper/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 5555,
+      "sha256": "db235e610b58917dd54cf9bb13dc8d9204e4261d39198973e997f273066197e7"
+    },
+    {
+      "path": "examples/robotiq-gripper/serve.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 5039,
+      "sha256": "bfe23bcdc4a415e390de2ddbe7b48836d94685e9b18559b61572e5b5d22459b8"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/2f85.xml",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 9973,
+      "sha256": "8d4a4f840ff5f928d56e387a8325d1f34437b35f72b82792e4d46f8de879e133"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/assets/base_coupling.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 540884,
+      "sha256": "6a2517f9d6d78f89d9edb617fb93a279b4d52ac61c12d9cb743c701676eeb06d"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/assets/base.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2307084,
+      "sha256": "1019b87c1dcff4a08a2fdca2dfd4893d60a5e2fc53512c6b5fe2e372b75c9aa3"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/assets/c-a01-85-open.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 283384,
+      "sha256": "13ad73ef491f6f28b9ed6b8fbb3d6fb45896110ea7d415cda1689fc8daa5d925"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/assets/coupler.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 641884,
+      "sha256": "54949f7355c35c976d854fb77272feb92d9201213e343a8852429556fc81d416"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/assets/driver.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 438284,
+      "sha256": "baf8b4dde18ce59eeebc0928a289c69dccec9da81bb186e2838e2e304274e106"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/assets/follower.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 572284,
+      "sha256": "28811d3651345dbb5f2020c67d3bd05f754b5e3e791e379c3c4d1d87418bb9c5"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/assets/spring_link.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 656084,
+      "sha256": "56e9f28ce90841d654ab6d953161aeb62142b1459c210335d5862e7fcb281aab"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/assets/tongue.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 383384,
+      "sha256": "2bd5df8a2132542703d40d94be36a990bbc3eabe070283232871147081348d52"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/import-config.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 91,
+      "sha256": "3f337073ca9e34e979629728e5a6862d6d4a682959d769f483291391c91d2284"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/LICENSE",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1297,
+      "sha256": "3d5edd18d1e22a17666e9bb84270171ed5ac90b192d24e0177fd171708ea2316"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/provenance.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2809,
+      "sha256": "150f262bcb09d72e9c3cdf8b783296377f28427bc8a3f1c7e286ed55bc630205"
+    },
+    {
+      "path": "examples/robotiq-gripper/source/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1663,
+      "sha256": "deefa594ae97861719e1a09be132dc660629bb9f3c5a7b8b89055bed37117598"
+    },
+    {
+      "path": "examples/robotiq-gripper/story.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4586,
+      "sha256": "4048b79b6938c4849f26f88aa12809b0a83c263d39099a9ad302d5741bcb5032"
+    },
+    {
+      "path": "examples/robotiq-gripper/tests/kinematics.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2723,
+      "sha256": "5d88ca670a662fc3a30a77d3d3a6489675da31305b76601c25e3410806d188ec"
+    },
+    {
+      "path": "examples/robotiq-gripper/tests/presentation.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3434,
+      "sha256": "78114371e6881a158be7647a00636f7d925480e64c0c2612d33ab1dd2cb58b1d"
+    },
+    {
+      "path": "examples/robotiq-gripper/tests/server.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1460,
+      "sha256": "e4755fa1193e2af1fdc2aa834bf8d4ec74b83d7159bae72cc4ac4e928b66fbc9"
+    },
+    {
+      "path": "examples/robotiq-gripper/validation.md",
+      "role": "evidence",
+      "storage": "repository",
+      "bytes": 1808,
+      "sha256": "d373c8b1f9373a3f0f881cf900123e3c179cf2a0a7b5bd3004b3d6592649b14e"
+    },
+    {
+      "path": "output/robot-studies/browser-snapshots.json",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 40644,
+      "sha256": "9987b0e9fba402622da05fe67ac6872d77dafbea40fb57fddc9252baa2d29066"
+    },
+    {
+      "path": "output/robot-studies/robotiq-narrow.png",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 28136,
+      "sha256": "b4217de1999bf9124ee158c54502527acbeeedb21787766e0d7b3277ecf165d2"
+    },
+    {
+      "path": "output/robot-studies/test-results.txt",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 55869,
+      "sha256": "65c751ab3af49e0c275ed2611977e87afe85617527e82879337959cbbc4915a9"
+    },
+    {
+      "path": "package-lock.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 955,
+      "sha256": "44701727183357ecbca05e50de46ac8e4a8088052b716bd6968e8ee04b13e9c6"
+    },
+    {
+      "path": "package.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1246,
+      "sha256": "802e449c611e7ceced833d4e0c84d4e5347ab9fc1e4896c291ebf7043f24e221"
+    },
+    {
+      "path": "shared/appearance/color-accents.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1963,
+      "sha256": "ed92ef9949836160ac97ad35b6d8e8a8f55391bcaef53e5ddfdf1bef9cd46cc4"
+    },
+    {
+      "path": "shared/appearance/mesh-color-layer.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3877,
+      "sha256": "366d2f260c3c74d5c07bd81063b889db4271ead205432c2f7d0931925f564b0b"
+    },
+    {
+      "path": "shared/appearance/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1710,
+      "sha256": "edbfa0564781d09a6022e0445c4fec3cd9131bd078f46629d9cfe5bfc4826b38"
+    },
+    {
+      "path": "shared/appearance/tests/color-accents.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4327,
+      "sha256": "30c491d050f7d7426f9e5860cb2ebe76b78973fb1d5eedded996f61eb0244042"
+    },
+    {
+      "path": "shared/assets/assets.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2333,
+      "sha256": "dba65ed7b662eec711ef7b1b46d66162334c2ab3bc2cf164b25059a1bd3ae834"
+    },
+    {
+      "path": "shared/assets/contract.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4333,
+      "sha256": "4a86e0a36f5892f83037bb5a06a9b734ee3094187eabd4b7b430ce35780d08c5"
+    },
+    {
+      "path": "shared/assets/glb.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4823,
+      "sha256": "726c6ca7663fa8b1d2250e41a1501a9e2a422721f559fab5c06b9741d61015cc"
+    },
+    {
+      "path": "shared/assets/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2389,
+      "sha256": "a580e94bb574a5142d8584db3e9fcf19f8ad85b50c8c33d9bbe07af07a678039"
+    },
+    {
+      "path": "shared/assets/write-glb.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2261,
+      "sha256": "735b71008cf26da21e07307d556de81067902048c8a96ff69c6732f3a92d7ff5"
+    },
+    {
+      "path": "shared/study/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 9097,
+      "sha256": "2f3085de11f286d83d35095f62a626980568140209e77b1beff35caa04b0a87e"
+    },
+    {
+      "path": "shared/study/shell.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3663,
+      "sha256": "3e15966c7aed96fa202e3bb66a9bed1fec6d5d504e7fd1bae955791a026d1b88"
+    },
+    {
+      "path": "shared/study/study.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 23303,
+      "sha256": "9fb1f306e11f862854dc1469ed5b6b86a41a19517ce69ddb1d21e72650e3c04f"
+    },
+    {
+      "path": "shared/study/style.css",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 9279,
+      "sha256": "92df24f7525e4f40e1b678df3b59704a3124a4430528ecba73648bbdd4d8f2d1"
+    },
+    {
+      "path": "shared/study/tests/presentation-visibility.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2017,
+      "sha256": "9c13b87c593c3eb418618b8c942f5a4523c8152c878944a02c0b4e18776c8a52"
+    },
+    {
+      "path": "shared/study/tests/runtime-delivery.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1483,
+      "sha256": "731e92b72e46c84d3c87ffebe65297265f0804da746a696e37d8cdc30a558de7"
+    },
+    {
+      "path": "shared/viewer/annotation-layout.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3730,
+      "sha256": "5294525824f9c5fbb458b1db41987de8c23ce922fa7df8927832c3fb07104baa"
+    },
+    {
+      "path": "shared/viewer/example.css",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3627,
+      "sha256": "6077567c45c7db2ac44a5c291ff888702d1d77313695c86decad3e4b45a7556e"
+    },
+    {
+      "path": "shared/viewer/line-art.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 12494,
+      "sha256": "c6b8b61de789c30b3ee2e5dfa248ce2b3937c41fa5d54ec3c653acbca7711914"
+    },
+    {
+      "path": "shared/viewer/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3081,
+      "sha256": "17a9c539393ffd5916338e93b4f49ce0d71f48e1bf862357ab59adfc51aebecb"
+    },
+    {
+      "path": "shared/viewer/scene.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 5554,
+      "sha256": "92c8744606ce811e9495555190b30384c63084790f419b803075448fb79a96de"
+    },
+    {
+      "path": "shared/viewer/tests/assets.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3308,
+      "sha256": "2dc9bfc97cf59506987e85366c2371d657debf83e457c64370df5382ef9666b8"
+    },
+    {
+      "path": "shared/viewer/tests/scene.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 7060,
+      "sha256": "a69a6da1c5d60d6ac10d68c8e5945308a1db1871e6a7d0079033afe455f6aada"
+    },
+    {
+      "path": "shared/viewer/viewer.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 7936,
+      "sha256": "73d514d6c2a1d8ca8b4bc754560ec27e8de1cacf82703ae55f9a88f34b33bd11"
+    },
+    {
+      "path": "showcase/camera-director.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4504,
+      "sha256": "02c4bd2fce2c5f7e43253932e948cbead20606b08029e5a4142928b441d1d2d8"
+    },
+    {
+      "path": "tests/study-music.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3097,
+      "sha256": "8d738be29c910326f552dfd8d20bcff60e983bc5fa1f4cede434b82661da676b"
+    },
+    {
+      "path": "tools/audio/build-study-score.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2080,
+      "sha256": "eec3391fb60768d178e9d73afb846f70a09eededaec5f187dcd2b73b0f50dbde"
+    },
+    {
+      "path": "tools/audio/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1321,
+      "sha256": "ce70a7e86d455d573fcc680c8af3dc876410c8707306aad5f6d8a59aacbc0ffc"
+    },
+    {
+      "path": "tools/audio/study-score.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 7668,
+      "sha256": "a9a6872d4dcf908fbf7a637cac87743e4875cfcdfd1cb037d491f9b2d739e976"
+    },
+    {
+      "path": "tools/robot/build-mjcf.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 15313,
+      "sha256": "c9819647289bb5da46915ce5c20938aae08c48161dc0c01415e58c1554597676"
+    },
+    {
+      "path": "tools/robot/parse-mjcf.py",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 10502,
+      "sha256": "fda7e1c2c80ecb98083d49c6c2e851ac2b0474a1a46dddb5a585b9265da7624a"
+    },
+    {
+      "path": "tools/robot/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4986,
+      "sha256": "8576026429d85265e417c1ede4f06b68bcfa2ad5b05cb8b31c694e3327843230"
+    },
+    {
+      "path": "tools/robot/tests/import.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 12988,
+      "sha256": "f7e8b0db46f36e52650e15838a1a86625bf45904e649e4e93b2829daa66c616a"
+    }
+  ]
+}

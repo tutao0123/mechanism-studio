@@ -1,0 +1,582 @@
+{
+  "schemaVersion": 1,
+  "id": "allegro-hand-showcase-1",
+  "route": "Showcase",
+  "state": {
+    "implemented": true,
+    "checked": true,
+    "exported": false,
+    "published": false
+  },
+  "timeline": {
+    "bpm": 108,
+    "beats": 64,
+    "durationSeconds": 35.55555555555556
+  },
+  "checks": [
+    {
+      "id": "project-tests",
+      "status": "passed",
+      "summary": "577 project tests passed, zero failures/skips; includes pinned source/import, example mechanics, restoration, framing, label windows and deterministic music.",
+      "evidence": [
+        "output/robot-studies/test-results.txt"
+      ]
+    },
+    {
+      "id": "browser-review",
+      "status": "passed",
+      "summary": "Actual desktop key scenes and 390x844 narrow detail reviewed; both names visible, no horizontal overflow or console errors; real play, pause and seek exercised.",
+      "evidence": [
+        "examples/allegro-hand/validation.md",
+        "docs/media/allegro-hand-preview.png",
+        "output/robot-studies/allegro-narrow.png"
+      ]
+    },
+    {
+      "id": "media-clock",
+      "status": "passed",
+      "summary": "Real audio playback active with common media clock; snapshot loops=2; absolute animation/audio clock difference 0.0127 seconds at observation.",
+      "evidence": [
+        "output/robot-studies/browser-snapshots.json"
+      ]
+    },
+    {
+      "id": "listening",
+      "status": "not-run",
+      "summary": "No human listening review claimed; deterministic PCM, peak/headroom and continuity were tested.",
+      "evidence": []
+    },
+    {
+      "id": "export-publication",
+      "status": "not-run",
+      "summary": "No encoded video, GitHub upload or X post performed for these new examples.",
+      "evidence": []
+    }
+  ],
+  "limitations": [
+    "Visual source bodies are not manufacturing components; no invented screws or actuator internals.",
+    "Authored display separation is not collision-checked disassembly.",
+    "Source-based kinematics do not establish contact, force, dynamics or hardware-control validation.",
+    "The source model retains its BSD-2-Clause license; original presentation code/music are MIT."
+  ],
+  "files": [
+    {
+      "path": "docs/media/allegro-hand-preview.png",
+      "role": "evidence",
+      "storage": "repository",
+      "bytes": 46803,
+      "sha256": "ef8342103005f079b2c5ba66837bd73e659b9642faa3e7b7a858d984cb7c808a"
+    },
+    {
+      "path": "examples/allegro-hand/annotations.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 676,
+      "sha256": "7a0c89d60e811e7c846631a4f96fb3d45c258b19dbb29269dec5edab6a41c59a"
+    },
+    {
+      "path": "examples/allegro-hand/app.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2007,
+      "sha256": "eff3421cff204870d4ae4a87a68f5a6874411e38e52e569ad5246274fe9556ed"
+    },
+    {
+      "path": "examples/allegro-hand/assets/assembly.glb",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2018336,
+      "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68"
+    },
+    {
+      "path": "examples/allegro-hand/assets/build-report.json",
+      "role": "evidence",
+      "storage": "repository",
+      "bytes": 1453,
+      "sha256": "e13f73e7599ac66b2fad5a464aa16e3f65446a2c27dfdb0a53fd54e3145c849c"
+    },
+    {
+      "path": "examples/allegro-hand/assets/LICENSE",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1289,
+      "sha256": "09c187439ecece8b00330e71eb988d3d30f29373c580dc31ab54200d0aa4deb4"
+    },
+    {
+      "path": "examples/allegro-hand/assets/scene-contract.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 37904,
+      "sha256": "b1a50d853c83511de25c778d4f237caf055586086148b111d984a696bd273398"
+    },
+    {
+      "path": "examples/allegro-hand/assets/scene-index.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 60367,
+      "sha256": "cd016b269ac12aa1239c9182796bc3f92f2ebb10056318a8cb5371c7b2da5e12"
+    },
+    {
+      "path": "examples/allegro-hand/assets/source-assembly.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 90889,
+      "sha256": "34d1ab4a66dcafed0b56d8476e3f67e21b0ac8a7b3ddccde7f1cd2827091eba5"
+    },
+    {
+      "path": "examples/allegro-hand/audio/music-score.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 14424,
+      "sha256": "28f6fb57cd4e2f2ebc3ab1bcb0b274e7da53452af013005c0730539e5a2f328d"
+    },
+    {
+      "path": "examples/allegro-hand/audio/showcase-loop.wav",
+      "role": "artifact",
+      "storage": "local",
+      "bytes": 6272044,
+      "sha256": "3216525ab9eb518fe05219583485148bf40d27590f2eebc4763ef2aa1b781c39"
+    },
+    {
+      "path": "examples/allegro-hand/framing.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3009,
+      "sha256": "3d68702816e112cf37365b2b9e12fac8b0172612625427bfc5ead9007254b7c3"
+    },
+    {
+      "path": "examples/allegro-hand/index.html",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 651,
+      "sha256": "9031466c1793a3826eea9ed0672e2a959e15b8ddf8665f24a1404e87fd95a796"
+    },
+    {
+      "path": "examples/allegro-hand/motion.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4098,
+      "sha256": "ab4c9b849cde02f8580bb1f40ad1bfd4fbf0118e109b59601730e9eb69e8a6d2"
+    },
+    {
+      "path": "examples/allegro-hand/plan.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1602,
+      "sha256": "b00eb3b30a2880901dc26613f93536e902b7ee4342e6d97bd5c966c14e23f4d8"
+    },
+    {
+      "path": "examples/allegro-hand/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4007,
+      "sha256": "869877f8fc38a73982c00b78394428767c0a13f22bd2455b4a5d5bb3ca6c9b31"
+    },
+    {
+      "path": "examples/allegro-hand/serve.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3568,
+      "sha256": "1ca925e71aa112e10bb37ef70a3e57d64dfe0df4db4c306f2dcf42fb2598e5af"
+    },
+    {
+      "path": "examples/allegro-hand/source/assets/base_link.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 163884,
+      "sha256": "4060e1ae52bca21367e15a1dfab16bc7c2e81849566631b7f55e2cf376b7bc85"
+    },
+    {
+      "path": "examples/allegro-hand/source/assets/link_0.0.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 57584,
+      "sha256": "32b90a6744d472a6ffaee02cbf32eb8a5600b1da0944e86aeb9f53503a9f8ac9"
+    },
+    {
+      "path": "examples/allegro-hand/source/assets/link_1.0.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 70084,
+      "sha256": "e3dfb35b6682f62f18ca6ed0b39cb94ff627b68e0e3373cf7212390574604680"
+    },
+    {
+      "path": "examples/allegro-hand/source/assets/link_12.0_right.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 204284,
+      "sha256": "c5418fc127311eefee1d8ee69dfcfde2157d038286900bee91608d2701b00f13"
+    },
+    {
+      "path": "examples/allegro-hand/source/assets/link_13.0.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 22484,
+      "sha256": "e906896afc078a12c9c377e3a2b07f375583d3b869581f9962030cabc888be29"
+    },
+    {
+      "path": "examples/allegro-hand/source/assets/link_14.0.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 46884,
+      "sha256": "a9e4983e4bff7fc7d868b4965c9865edb2669b946434095703766202b5de01ff"
+    },
+    {
+      "path": "examples/allegro-hand/source/assets/link_15.0_tip.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 71984,
+      "sha256": "a7147c765d4b6d2eb16fa14bba2e8eceec4a750bc346260893ca02aca1fd7a63"
+    },
+    {
+      "path": "examples/allegro-hand/source/assets/link_15.0.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 43284,
+      "sha256": "bf963adb775b79b27649f4f5dff4ced58ef676ce86cc677de49d3810382d11e0"
+    },
+    {
+      "path": "examples/allegro-hand/source/assets/link_2.0.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 52884,
+      "sha256": "9c98477c65b45f5a3de1df0e1b54281da2385f4eafd057d103ab40893771c2d0"
+    },
+    {
+      "path": "examples/allegro-hand/source/assets/link_3.0_tip.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 71984,
+      "sha256": "9c3fa04fea0dfa1257c8a1b02d2b7d982b0d985c1ddda1edf148827944835f39"
+    },
+    {
+      "path": "examples/allegro-hand/source/assets/link_3.0.stl",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 18084,
+      "sha256": "fe333088176395aa7d8a913aa953d3cd649c4c77753224239b78b2c99e3e314c"
+    },
+    {
+      "path": "examples/allegro-hand/source/import-config.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 119,
+      "sha256": "7c60a38b63652bcc2b73f173796d653d19891031ff67f19b033d794c8c23344a"
+    },
+    {
+      "path": "examples/allegro-hand/source/LICENSE",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1289,
+      "sha256": "09c187439ecece8b00330e71eb988d3d30f29373c580dc31ab54200d0aa4deb4"
+    },
+    {
+      "path": "examples/allegro-hand/source/NOTICE.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1528,
+      "sha256": "a4b9e51f7af8968d7f8cf654d7d048133d435adf82b6904c17ee47e49c2466d4"
+    },
+    {
+      "path": "examples/allegro-hand/source/provenance.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 5606,
+      "sha256": "03bb020d659085883c1c660d914d716de9d5889d049a57c48f6af88268aca9ad"
+    },
+    {
+      "path": "examples/allegro-hand/source/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1543,
+      "sha256": "10d8795ad8682bdab403aab8fb7b5d4c051b68e025accfe58ebf0d440188665b"
+    },
+    {
+      "path": "examples/allegro-hand/source/right_hand.xml",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 9983,
+      "sha256": "cec3efe34be49c8220c23afdae0cfacbce10164a5bc7c34075b6668ee0a862a6"
+    },
+    {
+      "path": "examples/allegro-hand/story.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 5488,
+      "sha256": "23508b9776e473f8c211585e79849f0683ca72b82ff6f36bf64fa2b755db105a"
+    },
+    {
+      "path": "examples/allegro-hand/tests/study.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 8547,
+      "sha256": "75a0bd58d14ab5e12fb7ae6a1fef2cc98db3b405b24665721f9ab60f538b3352"
+    },
+    {
+      "path": "examples/allegro-hand/validation.md",
+      "role": "evidence",
+      "storage": "repository",
+      "bytes": 1808,
+      "sha256": "d373c8b1f9373a3f0f881cf900123e3c179cf2a0a7b5bd3004b3d6592649b14e"
+    },
+    {
+      "path": "output/robot-studies/allegro-narrow.png",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 27044,
+      "sha256": "e51913420a1a460b3e52901a22f7f518bb1215011ba5ca3fc1a69224ba917d10"
+    },
+    {
+      "path": "output/robot-studies/browser-snapshots.json",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 40644,
+      "sha256": "9987b0e9fba402622da05fe67ac6872d77dafbea40fb57fddc9252baa2d29066"
+    },
+    {
+      "path": "output/robot-studies/test-results.txt",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 55869,
+      "sha256": "65c751ab3af49e0c275ed2611977e87afe85617527e82879337959cbbc4915a9"
+    },
+    {
+      "path": "package-lock.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 955,
+      "sha256": "44701727183357ecbca05e50de46ac8e4a8088052b716bd6968e8ee04b13e9c6"
+    },
+    {
+      "path": "package.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1246,
+      "sha256": "802e449c611e7ceced833d4e0c84d4e5347ab9fc1e4896c291ebf7043f24e221"
+    },
+    {
+      "path": "shared/appearance/color-accents.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1963,
+      "sha256": "ed92ef9949836160ac97ad35b6d8e8a8f55391bcaef53e5ddfdf1bef9cd46cc4"
+    },
+    {
+      "path": "shared/appearance/mesh-color-layer.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3877,
+      "sha256": "366d2f260c3c74d5c07bd81063b889db4271ead205432c2f7d0931925f564b0b"
+    },
+    {
+      "path": "shared/appearance/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1710,
+      "sha256": "edbfa0564781d09a6022e0445c4fec3cd9131bd078f46629d9cfe5bfc4826b38"
+    },
+    {
+      "path": "shared/appearance/tests/color-accents.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4327,
+      "sha256": "30c491d050f7d7426f9e5860cb2ebe76b78973fb1d5eedded996f61eb0244042"
+    },
+    {
+      "path": "shared/assets/assets.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2333,
+      "sha256": "dba65ed7b662eec711ef7b1b46d66162334c2ab3bc2cf164b25059a1bd3ae834"
+    },
+    {
+      "path": "shared/assets/contract.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4333,
+      "sha256": "4a86e0a36f5892f83037bb5a06a9b734ee3094187eabd4b7b430ce35780d08c5"
+    },
+    {
+      "path": "shared/assets/glb.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4823,
+      "sha256": "726c6ca7663fa8b1d2250e41a1501a9e2a422721f559fab5c06b9741d61015cc"
+    },
+    {
+      "path": "shared/assets/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2389,
+      "sha256": "a580e94bb574a5142d8584db3e9fcf19f8ad85b50c8c33d9bbe07af07a678039"
+    },
+    {
+      "path": "shared/assets/write-glb.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2261,
+      "sha256": "735b71008cf26da21e07307d556de81067902048c8a96ff69c6732f3a92d7ff5"
+    },
+    {
+      "path": "shared/study/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 9097,
+      "sha256": "2f3085de11f286d83d35095f62a626980568140209e77b1beff35caa04b0a87e"
+    },
+    {
+      "path": "shared/study/shell.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3663,
+      "sha256": "3e15966c7aed96fa202e3bb66a9bed1fec6d5d504e7fd1bae955791a026d1b88"
+    },
+    {
+      "path": "shared/study/study.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 23303,
+      "sha256": "9fb1f306e11f862854dc1469ed5b6b86a41a19517ce69ddb1d21e72650e3c04f"
+    },
+    {
+      "path": "shared/study/style.css",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 9279,
+      "sha256": "92df24f7525e4f40e1b678df3b59704a3124a4430528ecba73648bbdd4d8f2d1"
+    },
+    {
+      "path": "shared/study/tests/presentation-visibility.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2017,
+      "sha256": "9c13b87c593c3eb418618b8c942f5a4523c8152c878944a02c0b4e18776c8a52"
+    },
+    {
+      "path": "shared/study/tests/runtime-delivery.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1483,
+      "sha256": "731e92b72e46c84d3c87ffebe65297265f0804da746a696e37d8cdc30a558de7"
+    },
+    {
+      "path": "shared/viewer/annotation-layout.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3730,
+      "sha256": "5294525824f9c5fbb458b1db41987de8c23ce922fa7df8927832c3fb07104baa"
+    },
+    {
+      "path": "shared/viewer/example.css",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3627,
+      "sha256": "6077567c45c7db2ac44a5c291ff888702d1d77313695c86decad3e4b45a7556e"
+    },
+    {
+      "path": "shared/viewer/line-art.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 12494,
+      "sha256": "c6b8b61de789c30b3ee2e5dfa248ce2b3937c41fa5d54ec3c653acbca7711914"
+    },
+    {
+      "path": "shared/viewer/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3081,
+      "sha256": "17a9c539393ffd5916338e93b4f49ce0d71f48e1bf862357ab59adfc51aebecb"
+    },
+    {
+      "path": "shared/viewer/scene.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 5554,
+      "sha256": "92c8744606ce811e9495555190b30384c63084790f419b803075448fb79a96de"
+    },
+    {
+      "path": "shared/viewer/tests/assets.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3308,
+      "sha256": "2dc9bfc97cf59506987e85366c2371d657debf83e457c64370df5382ef9666b8"
+    },
+    {
+      "path": "shared/viewer/tests/scene.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 7060,
+      "sha256": "a69a6da1c5d60d6ac10d68c8e5945308a1db1871e6a7d0079033afe455f6aada"
+    },
+    {
+      "path": "shared/viewer/viewer.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 7936,
+      "sha256": "73d514d6c2a1d8ca8b4bc754560ec27e8de1cacf82703ae55f9a88f34b33bd11"
+    },
+    {
+      "path": "showcase/camera-director.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4504,
+      "sha256": "02c4bd2fce2c5f7e43253932e948cbead20606b08029e5a4142928b441d1d2d8"
+    },
+    {
+      "path": "tests/study-music.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3097,
+      "sha256": "8d738be29c910326f552dfd8d20bcff60e983bc5fa1f4cede434b82661da676b"
+    },
+    {
+      "path": "tools/audio/build-study-score.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2080,
+      "sha256": "eec3391fb60768d178e9d73afb846f70a09eededaec5f187dcd2b73b0f50dbde"
+    },
+    {
+      "path": "tools/audio/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1321,
+      "sha256": "ce70a7e86d455d573fcc680c8af3dc876410c8707306aad5f6d8a59aacbc0ffc"
+    },
+    {
+      "path": "tools/audio/study-score.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 7668,
+      "sha256": "a9a6872d4dcf908fbf7a637cac87743e4875cfcdfd1cb037d491f9b2d739e976"
+    },
+    {
+      "path": "tools/robot/build-mjcf.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 15313,
+      "sha256": "c9819647289bb5da46915ce5c20938aae08c48161dc0c01415e58c1554597676"
+    },
+    {
+      "path": "tools/robot/parse-mjcf.py",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 10502,
+      "sha256": "fda7e1c2c80ecb98083d49c6c2e851ac2b0474a1a46dddb5a585b9265da7624a"
+    },
+    {
+      "path": "tools/robot/README.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4986,
+      "sha256": "8576026429d85265e417c1ede4f06b68bcfa2ad5b05cb8b31c694e3327843230"
+    },
+    {
+      "path": "tools/robot/tests/import.test.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 12988,
+      "sha256": "f7e8b0db46f36e52650e15838a1a86625bf45904e649e4e93b2829daa66c616a"
+    }
+  ]
+}

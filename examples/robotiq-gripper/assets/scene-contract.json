@@ -1,0 +1,960 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "robotiq-2f85-v4",
+  "assetRevision": "robotiq-2f85-v4-8d4a4f840ff5-7b89e693c1e1-pinned-mjcf-visual-1",
+  "units": {
+    "source": "MJCF m; rad",
+    "asset": "m",
+    "angle": "rad"
+  },
+  "sourceSHA256": "8d4a4f840ff5f928d56e387a8325d1f34437b35f72b82792e4d46f8de879e133",
+  "coordinateMap": "B=[x,z,-y]; source body B*M*B^-1; visual B*geomTransform*meshScale; once only",
+  "limitations": [
+    "Source is a simplified articulated MJCF model with STL mesh geometry, not a complete engineering CAD assembly.",
+    "Only the eight meshes referenced by 2f85.xml are retained. Unused force-sensor files and image previews are omitted.",
+    "Source inertial parameters were inherited by upstream from its earlier gripper model; this showcase makes no dynamic or contact-force claims.",
+    "Visual mesh conversion preserves source bodies and declared joints; it does not solve constraints, dynamics, contacts or collision-free disassembly.",
+    "Collision primitives and inertial/actuation metadata are retained as source evidence, not displayed as manufacturing components.",
+    "Source reference pose uses each hinge q=ref, even where that reference is outside a declared limit; authored working motion must validate its own joint limits."
+  ],
+  "parts": [
+    {
+      "part_id": "mjcf:base",
+      "parent_id": null,
+      "label": "base",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "base",
+        "parentBody": null,
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:base/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:base",
+            "meshName": "base",
+            "file": "source/assets/base.stl",
+            "sha256": "1019b87c1dcff4a08a2fdca2dfd4893d60a5e2fc53512c6b5fe2e372b75c9aa3",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0.0108
+              ],
+              "quatWxyz": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 138420,
+            "triangleCount": 46140
+          },
+          {
+            "visualOccurrenceId": "mjcf:base/geom:1",
+            "sourceGeomIndex": 1,
+            "definitionId": "mjcf-mesh:base_coupling",
+            "meshName": "base_coupling",
+            "file": "source/assets/base_coupling.stl",
+            "sha256": "6a2517f9d6d78f89d9edb617fb93a279b4d52ac61c12d9cb743c701676eeb06d",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0.004
+              ],
+              "quatWxyz": [
+                1,
+                -1,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 138420,
+            "indexCount": 32448,
+            "triangleCount": 10816
+          },
+          {
+            "visualOccurrenceId": "mjcf:base/geom:2",
+            "sourceGeomIndex": 2,
+            "definitionId": "mjcf-mesh:c-a01-85-open",
+            "meshName": "c-a01-85-open",
+            "file": "source/assets/c-a01-85-open.stl",
+            "sha256": "13ad73ef491f6f28b9ed6b8fbb3d6fb45896110ea7d415cda1689fc8daa5d925",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0.0108
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 170868,
+            "indexCount": 16998,
+            "triangleCount": 5666
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.04241207614541054,
+          -0.0030000002589076757,
+          -0.03750000149011612
+        ],
+        "max": [
+          0.04241207614541054,
+          0.10080000013113022,
+          0.03750000149011612
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_driver",
+      "parent_id": "mjcf:base",
+      "label": "left_driver",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2.220446049250313e-16,
+          -0.9999999999999998,
+          0,
+          0,
+          0.9999999999999998,
+          2.220446049250313e-16,
+          0,
+          -0.0306011,
+          0.0657045,
+          -0.00475,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_driver",
+        "parentBody": "base",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_driver/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:driver",
+            "meshName": "driver",
+            "file": "source/assets/driver.stl",
+            "sha256": "baf8b4dde18ce59eeebc0928a289c69dccec9da81bb186e2838e2e304274e106",
+            "sourceGeomTransform": {
+              "pos": [
+                0.0306011,
+                0.0549045,
+                -0.0047
+              ],
+              "quatWxyz": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 26292,
+            "triangleCount": 8764
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.03741931915283203,
+          -0.018200000748038292,
+          -0.010529493913054466
+        ],
+        "max": [
+          0.007499956525862217,
+          0.008799999952316284,
+          0.009626967832446098
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_coupler",
+      "parent_id": "mjcf:left_driver",
+      "label": "left_coupler",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -0.0314249,
+          -0.0102,
+          -0.00453223,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_coupler",
+        "parentBody": "left_driver",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_coupler/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:coupler",
+            "meshName": "coupler",
+            "file": "source/assets/coupler.stl",
+            "sha256": "54949f7355c35c976d854fb77272feb92d9201213e343a8852429556fc81d416",
+            "sourceGeomTransform": {
+              "pos": [
+                -0.062026,
+                -0.0503723,
+                0.0055
+              ],
+              "quatWxyz": [
+                1,
+                -1,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 38508,
+            "triangleCount": 12836
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.014364050701260567,
+          -0.008100000210106373,
+          -0.053030405193567276
+        ],
+        "max": [
+          0.015254812315106392,
+          0.019100001081824303,
+          0.006353942211717367
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_spring_link",
+      "parent_id": "mjcf:base",
+      "label": "left_spring_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2.220446049250313e-16,
+          -0.9999999999999998,
+          0,
+          0,
+          0.9999999999999998,
+          2.220446049250313e-16,
+          0,
+          -0.0127,
+          0.07222,
+          0.012,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_spring_link",
+        "parentBody": "base",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_spring_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:spring_link",
+            "meshName": "spring_link",
+            "file": "source/assets/spring_link.stl",
+            "sha256": "56e9f28ce90841d654ab6d953161aeb62142b1459c210335d5862e7fcb281aab",
+            "sourceGeomTransform": {
+              "pos": [
+                0.0127,
+                0.06142,
+                0.01205
+              ],
+              "quatWxyz": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 39360,
+            "triangleCount": 13120
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.04420442506670952,
+          -0.005450000055134296,
+          -0.005996505729854107
+        ],
+        "max": [
+          0.00599650526419282,
+          0.02954999916255474,
+          0.048496827483177185
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_follower",
+      "parent_id": "mjcf:left_spring_link",
+      "label": "left_follower",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          0.9999999992762433,
+          0,
+          -0.00003804619998623192,
+          0,
+          0,
+          -1.0000000000000004,
+          0,
+          0,
+          -0.00003804619998623192,
+          0,
+          -0.9999999992762438,
+          0,
+          -0.0382079,
+          0.00295,
+          0.0425003,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_follower",
+        "parentBody": "left_spring_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:left_follower/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:follower",
+            "meshName": "follower",
+            "file": "source/assets/follower.stl",
+            "sha256": "28811d3651345dbb5f2020c67d3bd05f754b5e3e791e379c3c4d1d87418bb9c5",
+            "sourceGeomTransform": {
+              "pos": [
+                0.0509079,
+                -0.10392,
+                -0.0091
+              ],
+              "quatWxyz": [
+                1,
+                -1,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 34332,
+            "triangleCount": 11444
+          },
+          {
+            "visualOccurrenceId": "mjcf:left_follower/geom:1",
+            "sourceGeomIndex": 1,
+            "definitionId": "mjcf-mesh:tongue",
+            "meshName": "tongue",
+            "file": "source/assets/tongue.stl",
+            "sha256": "2bd5df8a2132542703d40d94be36a990bbc3eabe070283232871147081348d52",
+            "sourceGeomTransform": {
+              "pos": [
+                0.0509079,
+                -0.10392,
+                -0.0091
+              ],
+              "quatWxyz": [
+                1,
+                -1,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 34332,
+            "indexCount": 22998,
+            "triangleCount": 7666
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.023901449516415596,
+          -0.022600000724196434,
+          -0.044528450816869736
+        ],
+        "max": [
+          0.007449993398040533,
+          0.004400000441819429,
+          0.012514354661107063
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:left_pad",
+      "parent_id": "mjcf:left_follower",
+      "label": "left_pad",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2.220446049250313e-16,
+          -0.9999999999999998,
+          0,
+          0,
+          0.9999999999999998,
+          2.220446049250313e-16,
+          0,
+          -0.0377897,
+          -0.0091,
+          0.103916,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "left_pad",
+        "parentBody": "left_follower",
+        "visuals": []
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_driver",
+      "parent_id": "mjcf:base",
+      "label": "right_driver",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          -0.9999999999999996,
+          0,
+          0,
+          0,
+          0,
+          2.220446049250313e-16,
+          0.9999999999999998,
+          0,
+          0,
+          0.9999999999999998,
+          2.220446049250313e-16,
+          0,
+          0.0306011,
+          0.0657045,
+          0.00475,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_driver",
+        "parentBody": "base",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_driver/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:driver",
+            "meshName": "driver",
+            "file": "source/assets/driver.stl",
+            "sha256": "baf8b4dde18ce59eeebc0928a289c69dccec9da81bb186e2838e2e304274e106",
+            "sourceGeomTransform": {
+              "pos": [
+                0.0306011,
+                0.0549045,
+                -0.0047
+              ],
+              "quatWxyz": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 26292,
+            "triangleCount": 8764
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.03741931915283203,
+          -0.018200000748038292,
+          -0.010529493913054466
+        ],
+        "max": [
+          0.007499956525862217,
+          0.008799999952316284,
+          0.009626967832446098
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_coupler",
+      "parent_id": "mjcf:right_driver",
+      "label": "right_coupler",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -0.0314249,
+          -0.0102,
+          -0.00453223,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_coupler",
+        "parentBody": "right_driver",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_coupler/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:coupler",
+            "meshName": "coupler",
+            "file": "source/assets/coupler.stl",
+            "sha256": "54949f7355c35c976d854fb77272feb92d9201213e343a8852429556fc81d416",
+            "sourceGeomTransform": {
+              "pos": [
+                -0.062026,
+                -0.0503723,
+                0.0055
+              ],
+              "quatWxyz": [
+                1,
+                -1,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 38508,
+            "triangleCount": 12836
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.014364050701260567,
+          -0.008100000210106373,
+          -0.053030405193567276
+        ],
+        "max": [
+          0.015254812315106392,
+          0.019100001081824303,
+          0.006353942211717367
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_spring_link",
+      "parent_id": "mjcf:base",
+      "label": "right_spring_link",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          -0.9999999999999996,
+          0,
+          0,
+          0,
+          0,
+          2.220446049250313e-16,
+          0.9999999999999998,
+          0,
+          0,
+          0.9999999999999998,
+          2.220446049250313e-16,
+          0,
+          0.0127,
+          0.07222,
+          -0.012,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_spring_link",
+        "parentBody": "base",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_spring_link/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:spring_link",
+            "meshName": "spring_link",
+            "file": "source/assets/spring_link.stl",
+            "sha256": "56e9f28ce90841d654ab6d953161aeb62142b1459c210335d5862e7fcb281aab",
+            "sourceGeomTransform": {
+              "pos": [
+                0.0127,
+                0.06142,
+                0.01205
+              ],
+              "quatWxyz": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 39360,
+            "triangleCount": 13120
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.04420442506670952,
+          -0.005450000055134296,
+          -0.005996505729854107
+        ],
+        "max": [
+          0.00599650526419282,
+          0.02954999916255474,
+          0.048496827483177185
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_follower",
+      "parent_id": "mjcf:right_spring_link",
+      "label": "right_follower",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -0.0382079,
+          0.00295,
+          0.0425003,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_follower",
+        "parentBody": "right_spring_link",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:right_follower/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:tongue",
+            "meshName": "tongue",
+            "file": "source/assets/tongue.stl",
+            "sha256": "2bd5df8a2132542703d40d94be36a990bbc3eabe070283232871147081348d52",
+            "sourceGeomTransform": {
+              "pos": [
+                0.0509079,
+                -0.10392,
+                -0.0091
+              ],
+              "quatWxyz": [
+                1,
+                -1,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "metal",
+            "firstIndex": 0,
+            "indexCount": 22998,
+            "triangleCount": 7666
+          },
+          {
+            "visualOccurrenceId": "mjcf:right_follower/geom:1",
+            "sourceGeomIndex": 1,
+            "definitionId": "mjcf-mesh:follower",
+            "meshName": "follower",
+            "file": "source/assets/follower.stl",
+            "sha256": "28811d3651345dbb5f2020c67d3bd05f754b5e3e791e379c3c4d1d87418bb9c5",
+            "sourceGeomTransform": {
+              "pos": [
+                0.0509079,
+                -0.10392,
+                -0.0091
+              ],
+              "quatWxyz": [
+                1,
+                -1,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 22998,
+            "indexCount": 34332,
+            "triangleCount": 11444
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.023901449516415596,
+          -0.022600000724196434,
+          -0.044528450816869736
+        ],
+        "max": [
+          0.007449993398040533,
+          0.004400000441819429,
+          0.012514354661107063
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:right_pad",
+      "parent_id": "mjcf:right_follower",
+      "label": "right_pad",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2.220446049250313e-16,
+          -0.9999999999999998,
+          0,
+          0,
+          0.9999999999999998,
+          2.220446049250313e-16,
+          0,
+          -0.0377897,
+          -0.0091,
+          0.103916,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "right_pad",
+        "parentBody": "right_follower",
+        "visuals": []
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ]
+}

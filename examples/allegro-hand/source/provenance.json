@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "title": "Allegro Hand V3, right hand",
+  "repository": "https://github.com/google-deepmind/mujoco_menagerie",
+  "sourceUrl": "https://github.com/google-deepmind/mujoco_menagerie/tree/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro",
+  "revision": "62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35",
+  "localFile": "right_hand.xml",
+  "sha256": "cec3efe34be49c8220c23afdae0cfacbce10164a5bc7c34075b6668ee0a862a6",
+  "license": "BSD-2-Clause",
+  "licenseFile": "LICENSE",
+  "authors": [
+    "SimLab",
+    "Wonik Robotics",
+    "MuJoCo Menagerie contributors"
+  ],
+  "upstreamDescription": "https://github.com/simlabrobotics/allegro_hand_ros/tree/master/allegro_hand_description",
+  "format": "MJCF + binary STL",
+  "units": "m",
+  "files": [
+    {
+      "localFile": "right_hand.xml",
+      "bytes": 9983,
+      "sha256": "cec3efe34be49c8220c23afdae0cfacbce10164a5bc7c34075b6668ee0a862a6",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/right_hand.xml"
+    },
+    {
+      "localFile": "LICENSE",
+      "bytes": 1289,
+      "sha256": "09c187439ecece8b00330e71eb988d3d30f29373c580dc31ab54200d0aa4deb4",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/LICENSE"
+    },
+    {
+      "localFile": "README.md",
+      "bytes": 1543,
+      "sha256": "10d8795ad8682bdab403aab8fb7b5d4c051b68e025accfe58ebf0d440188665b",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/README.md"
+    },
+    {
+      "localFile": "assets/base_link.stl",
+      "bytes": 163884,
+      "sha256": "4060e1ae52bca21367e15a1dfab16bc7c2e81849566631b7f55e2cf376b7bc85",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/assets/base_link.stl"
+    },
+    {
+      "localFile": "assets/link_0.0.stl",
+      "bytes": 57584,
+      "sha256": "32b90a6744d472a6ffaee02cbf32eb8a5600b1da0944e86aeb9f53503a9f8ac9",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/assets/link_0.0.stl"
+    },
+    {
+      "localFile": "assets/link_1.0.stl",
+      "bytes": 70084,
+      "sha256": "e3dfb35b6682f62f18ca6ed0b39cb94ff627b68e0e3373cf7212390574604680",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/assets/link_1.0.stl"
+    },
+    {
+      "localFile": "assets/link_12.0_right.stl",
+      "bytes": 204284,
+      "sha256": "c5418fc127311eefee1d8ee69dfcfde2157d038286900bee91608d2701b00f13",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/assets/link_12.0_right.stl"
+    },
+    {
+      "localFile": "assets/link_13.0.stl",
+      "bytes": 22484,
+      "sha256": "e906896afc078a12c9c377e3a2b07f375583d3b869581f9962030cabc888be29",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/assets/link_13.0.stl"
+    },
+    {
+      "localFile": "assets/link_14.0.stl",
+      "bytes": 46884,
+      "sha256": "a9e4983e4bff7fc7d868b4965c9865edb2669b946434095703766202b5de01ff",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/assets/link_14.0.stl"
+    },
+    {
+      "localFile": "assets/link_15.0.stl",
+      "bytes": 43284,
+      "sha256": "bf963adb775b79b27649f4f5dff4ced58ef676ce86cc677de49d3810382d11e0",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/assets/link_15.0.stl"
+    },
+    {
+      "localFile": "assets/link_15.0_tip.stl",
+      "bytes": 71984,
+      "sha256": "a7147c765d4b6d2eb16fa14bba2e8eceec4a750bc346260893ca02aca1fd7a63",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/assets/link_15.0_tip.stl"
+    },
+    {
+      "localFile": "assets/link_2.0.stl",
+      "bytes": 52884,
+      "sha256": "9c98477c65b45f5a3de1df0e1b54281da2385f4eafd057d103ab40893771c2d0",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/assets/link_2.0.stl"
+    },
+    {
+      "localFile": "assets/link_3.0.stl",
+      "bytes": 18084,
+      "sha256": "fe333088176395aa7d8a913aa953d3cd649c4c77753224239b78b2c99e3e314c",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/assets/link_3.0.stl"
+    },
+    {
+      "localFile": "assets/link_3.0_tip.stl",
+      "bytes": 71984,
+      "sha256": "9c3fa04fea0dfa1257c8a1b02d2b7d982b0d985c1ddda1edf148827944835f39",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro/assets/link_3.0_tip.stl"
+    }
+  ],
+  "limitations": [
+    "Simulation link geometry; not manufacturing STEP or a complete fastener assembly.",
+    "This example evaluates source hinge transforms and authored joint poses; it does not run contact dynamics.",
+    "Source thj0 has reference 0 rad outside its declared [0.263,1.396] limit. The example retains that source frame but uses 0.263 rad as its assembled display baseline."
+  ]
+}

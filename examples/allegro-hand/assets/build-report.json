@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "allegro-right",
+  "importer": "pinned-mjcf-visual-1",
+  "geometryRevision": "allegro-right-cec3efe34be4-a7691b8aba0b-pinned-mjcf-visual-1",
+  "sourceSHA256": "cec3efe34be49c8220c23afdae0cfacbce10164a5bc7c34075b6668ee0a862a6",
+  "glbSHA256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+  "glbBytes": 2018336,
+  "originalFilesVerified": 14,
+  "partCount": 21,
+  "meshCount": 21,
+  "sourceJointCount": 16,
+  "sourceVisualCount": 21,
+  "emptySemanticBodies": [],
+  "sourceEqualityCount": 0,
+  "triangleCount": 27258,
+  "assetBoundsMeters": {
+    "min": [
+      -0.09806434680032403,
+      -0.029500000178813948,
+      -0.06774971451950357
+    ],
+    "max": [
+      0.14819999945163723,
+      0.012000000104308154,
+      0.17969724516416663
+    ]
+  },
+  "geometrySimplified": false,
+  "exactAttributeDeduplication": true,
+  "sourcePoseModified": false,
+  "mcpUsed": false,
+  "constraintsSolved": false,
+  "limitations": [
+    "Visual mesh conversion preserves source bodies and declared joints; it does not solve constraints, dynamics, contacts or collision-free disassembly.",
+    "Collision primitives and inertial/actuation metadata are retained as source evidence, not displayed as manufacturing components.",
+    "Source reference pose uses each hinge q=ref, even where that reference is outside a declared limit; authored working motion must validate its own joint limits."
+  ]
+}

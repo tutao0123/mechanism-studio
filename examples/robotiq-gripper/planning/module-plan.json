@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "robotiq-linkage-showcase-1",
+  "route": "Showcase",
+  "sourceSHA256": "8d4a4f840ff5f928d56e387a8325d1f34437b35f72b82792e4d46f8de879e133",
+  "geometryBinding": "assets/scene-index.json geometryRevision; app rejects incompatible pinned source",
+  "units": "m",
+  "basis": "Y up; all source local frames converted with B=[x,z,-y]",
+  "clock": {"bpm": 108, "beats": 64, "durationSeconds": 35.55555555555556},
+  "mechanism": {
+    "adapter": "kinematics.mjs",
+    "ownedChannels": "six source hinge angles; both driver inputs equal",
+    "closure": "two-circle intersection in source hinge plane, source-continuous branch, actual follower angle",
+    "validatedDriverRange": [0, 0.75],
+    "storyMaximum": 0.72,
+    "sourceRestRequiredBeforeExplosion": true,
+    "limitations": ["No contact, forces, dynamics or adaptive grasp behavior", "No invented fastener CAD", "Display explosion is not collision-checked dismantling"]
+  },
+  "modules": {
+    "assembly-explode": {"adapter": "story.mjs", "input": "actual body IDs and parent rest matrices", "output": "world display offsets with parent compensation", "groups": ["drivers", "springs", "followers"], "expandedBeats": [20, 44], "restoredBeat": 52},
+    "camera-direction": {"adapter": "framing.mjs", "input": "actual bounds at source rest, working samples and explosion endpoints", "output": "static per-chapter orthographic plans; common captured-start transition", "localDetail": ["mjcf:right_driver", "mjcf:right_coupler", "mjcf:right_spring_link", "mjcf:right_follower"], "scaleGeometry": false},
+    "materials-lighting": {"adapter": "shared/study + shared/viewer line art", "input": "source-bound body selections", "output": "white fine-line base and restrained name accent", "noPhysicsColorClaims": true},
+    "mating-closeup": {"adapter": "kinematics.mjs + detail story chapter", "input": "source equality/closure relationships and stable body IDs", "output": "one source linkage detail with driver/follower names", "scope": "static exploded structure close-up, assembled working motion before and after; no contact overlay"}
+  },
+  "annotations": {"revealSeconds": [1.05, 2.25], "retainWithinScene": true, "groupFadeSeconds": 0.32, "nearPart": true, "arrowheads": false},
+  "audio": {"events": "story.mjs MUSIC_EVENTS", "builder": "tools/audio/build-study-score.mjs", "generatedWav": "audio/showcase-loop.wav", "voice": null},
+  "review": {"automated": "tests/*.test.mjs", "browserVisualReview": "reported separately after actual inspection", "encodedVideoReview": "not applicable until an MP4 is captured"}
+}

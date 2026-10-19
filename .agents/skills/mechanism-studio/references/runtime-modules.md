@@ -12,6 +12,8 @@ The [input brief](input-brief.md) and [module handoffs](module-orchestration.md)
 | Fill/edges/lights/textures | [appearance contract](modules/materials-lighting.md), viewer/Blender adapter | Real part roles, licensed resources, parameters and restoration |
 | Reversible chapter color accents | [shared/appearance](../../../../shared/appearance/README.md) | Same-clock actual part cues |
 | Music-led assembly study, near labels, capture transport | [shared/study](../../../../shared/study/README.md) | Thin timeline/index/framing/annotation/offset/score adapter |
+| Pinned Allegro / Robotiq MJCF visual import | [tools/robot](../../../../tools/robot/README.md) | Retained model hashes, source body hierarchy and per-example kinematics; this importer only supports the two pinned sources |
+| Original robot-study score and action accents | [tools/audio](../../../../tools/audio/README.md) | Actual part IDs and story events; reproducible local WAV, no service calls |
 | Captured frames + verified track → MP4 | [tools/video](../../../../tools/video/README.md) | Actual input paths/counts and reviewed output; the tool does not capture or publish |
 | Input/report/output fingerprint handoff | [delivery evidence](delivery-evidence.md), [checker](../../../../scripts/check-delivery.mjs) | Declared paths, hashes, check scope and storage; the helper checks integrity and availability, not report truth or publication |
 | Optional provider-neutral speech API; existing Doubao lesson/digest/browser playback | [shared/voice](../../../../shared/voice/README.md) | Text, explicit speech model/voice/endpoint, media-clock binding; old lesson integration stays separate |
@@ -32,6 +34,8 @@ The [input brief](input-brief.md) and [module handoffs](module-orchestration.md)
 - [SO-ARM 102 study](../../../../EXAMPLE_ROBOT/README.md): sourced URDF link identity, music clock, grouped explosion, near sequential labels and scene-group fades. Eight merged links are not per-screw/native STEP solids.
 - [SO-ARM kinetic cut](../../../../EXAMPLE_ROBOT/kinetic/README.md): explicit 25.714-second variant using five revolute/two prismatic source-backed joints, opposed jaws, zero-pose gate before explosion, deliberate detail/whole cuts and original score; original study retained.
 - [WOLF actuator](../../../../examples/wolf-actuator/README.md): source-native-metre AP242 with analytic and source-triangulated geometry, actual occurrences, shared study and authored separation. Source triangles are not recovered analytic solids.
+- [Allegro hand](../../../../examples/allegro-hand/README.md): source-axis finger gestures, valid neutral thumb pose, parent-aware link explosion and one original finger close-up; source references stay immutable.
+- [Robotiq gripper](../../../../examples/robotiq-gripper/README.md): analytic four-bar closure, equal driver angles, source-link separation and reassembly. No contact adaptation or hidden actuator internals.
 
 Use actual current reports, not this map's prose, for counts and hashes. Do not turn an example's axes, IDs, formulas, steps or tool paths into universal constraints.
 

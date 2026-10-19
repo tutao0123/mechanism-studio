@@ -4,13 +4,15 @@ Choose an example by the evidence it can demonstrate: a teaching model, a source
 
 **These are implemented examples, not empty plans.** The maintained lock lives
 in `prototype-3d/`, and both SO-ARM robot cuts live in `EXAMPLE_ROBOT/`; neither
-is a missing child of this directory. The eleven implemented experiences and exact
+is a missing child of this directory. The thirteen implemented experiences and exact
 public/local distinctions are listed in the [status audit](../docs/examples-status.md).
 `lock-comparison/` is an explicitly [historical artifact](lock-comparison/README.md).
 
 ## Visual entry points
 
 <a href="gearbox/README.md"><img src="../docs/media/gearbox-readme.gif" alt="Original five-speed teaching gearbox separating and driving through its gears" width="480"></a>
+<a href="allegro-hand/README.md"><img src="../docs/media/allegro-hand-preview.png" alt="Allegro source finger chains separated around the palm" width="480"></a>
+<a href="robotiq-gripper/README.md"><img src="../docs/media/robotiq-gripper-preview.png" alt="Robotiq source four-bar link groups in an exploded view" width="480"></a>
 <a href="humanoid/README.md"><img src="../docs/media/humanoid-g1-preview.jpg" alt="Unitree G1 source-body exploded presentation" width="480"></a>
 <a href="../EXAMPLE_ROBOT/kinetic/README.md"><img src="../docs/media/so-arm102-kinetic.jpg" alt="SO-ARM 102 kinetic cut with source robot credit" width="480"></a>
 <a href="inline-four/README.md"><img src="../docs/media/inline-four-preview.jpg" alt="Inline-four engine with ignition cues" width="480"></a>
@@ -26,7 +28,8 @@ public/local distinctions are listed in the [status audit](../docs/examples-stat
 [Quadruped](quadruped/README.md) ·
 [Original lock preview](../prototype-3d/assets/lock-preview.png).
 Preview licenses are listed in [media notices](../docs/media/LICENSE.md): G1
-retains BSD-3-Clause, SO-ARM CC BY 4.0, Galileo GPL v3 and WOLF CC BY-SA 4.0;
+retains BSD-3-Clause, Allegro and Robotiq BSD-2-Clause, SO-ARM CC BY 4.0,
+Galileo GPL v3 and WOLF CC BY-SA 4.0;
 original teaching-model previews use the project's MIT terms.
 Videos are generated local deliveries, not missing source assets: captured
 frames and MP4 exports are intentionally excluded from Git. GitHub does not run
@@ -37,6 +40,8 @@ these pages; use a local server below to load models and play music.
 | Example | Server command | Local route | Included experience |
 | --- | --- | --- | --- |
 | Five-speed gearbox | `node examples/gearbox/serve.mjs` | `http://127.0.0.1:4183/?clean=1`, blueprint edition `/blueprint/?clean=1` | 40-second original teaching model: case off, explosion to synchronizer keys and bearing balls, power path through 1st–5th, synchronizer close-up, restoration. Spec labels and measured dimensions; the blueprint edition is the same study drawn white-on-blue |
+| Allegro dexterous hand | `node examples/allegro-hand/serve.mjs` | `http://127.0.0.1:4185/?clean=1` | 35.56-second articulated finger/ thumb study, source-link expansion, local view and restoration |
+| Robotiq 2F-85 gripper | `node examples/robotiq-gripper/serve.mjs` | `http://127.0.0.1:4186/?clean=1` | 35.56-second jaw motion, four-bar closure, link-level explosion and reassembly |
 | Unitree G1 humanoid | `node examples/humanoid/serve.mjs` | `http://127.0.0.1:4182/?clean=1` | 35.555556-second body-level explosion/reassembly, close reading views, original score and sparse CC0 effects |
 | Five-pin lock | `npm run preview` | `http://127.0.0.1:4179/prototype-3d/?palette=line-light` | Key profiles, insertion and turning, shear-line view, camera presets and display explosion |
 | Inline-four | `npm run preview` | `http://127.0.0.1:4179/examples/inline-four/` | Crank-slider motion, valve timing, port spray, ignition and exhaust cues |
@@ -53,12 +58,19 @@ these pages; use a local server below to load models and play music.
 | WOLF motor detail edition | Same WOLF server | `http://127.0.0.1:4181/detail/?clean=1` | Another 34.285714-second edition: 245-leaf actuator → actual 86-leaf motor → source components → restoration |
 | WOLF bearing detail edition | Same WOLF server | `http://127.0.0.1:4181/bearing/?clean=1` | 34.285714 seconds: actual 70-leaf bearing A → one original Part 1 close-up → restoration; generic source names retained |
 
-The root server handles the studio and original mechanisms; SO-ARM, humanoid, WOLF and gearbox studies use their own explicit read-only route allowlists, sharing one declared study runtime list (`shared/study/preview-server.mjs`) that `tests/preview-pages.test.mjs` checks against every served page. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
+The root server handles the studio and original mechanisms; SO-ARM, humanoid, WOLF, gearbox, Allegro and Robotiq studies use their own explicit read-only route allowlists, sharing one declared study runtime list (`shared/study/preview-server.mjs`) that `tests/preview-pages.test.mjs` checks against every served page. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
+
+The Allegro and Robotiq pages require their dedicated servers; their root-gallery
+cards expose the launch commands instead of a root `/examples/` route. The
+[19 October integration report](../docs/robot-studies-release.md) records their
+shared-runtime compatibility checks. Their retained 18 October `validation.md`
+and `delivery.json` files describe the earlier local review and its pre-sync
+inputs, rather than certifying the current checkout or an exported video.
 
 The WOLF [complete v4 tour](wolf-actuator/tour-v4/README.md),
 [motor detail cut](wolf-actuator/detail/README.md) and
 [bearing detail cut](wolf-actuator/bearing/README.md) are editions of the
-same sourced actuator, so the inventory remains **eleven experiences**. Its motor
+same sourced actuator, so those cuts do not add separate experiences. The robot and gearbox studies bring the inventory to **thirteen experiences**. WOLF's motor
 contains 40 source-named `magnet`, 40 unspecified `cc` and six explicitly named
 hardware leaves. The generic `cc` label is not asserted to mean copper winding
 or another inferred function. All geometry comes from WOLF's retained source;
@@ -91,6 +103,19 @@ the interactive page.
 
 ## What a fresh clone includes
 
+Build the two new robot soundtracks before music playback. Their original
+synthesis code and score metadata are retained; the generated WAVs stay local.
+
+```sh
+node tools/audio/build-study-score.mjs --example examples/allegro-hand
+node tools/audio/build-study-score.mjs --example examples/robotiq-gripper
+```
+
+Their visual assets are included, so these viewing commands need no Python.
+Optional regeneration from retained MJCF/STL uses the
+[pinned robot importer](../tools/robot/README.md) and Python 3's standard library;
+it is separate from launching a page or generating its score.
+
 - GLB display geometry, scene contracts, models, lessons, source/provenance records and implementation adapters.
 - Deterministic original-music synthesis source and the bundled WAVs for the robot, humanoid and earlier WOLF studies. The longer shared WOLF v2/v3/v4 WAV is excluded and built with the command above. The humanoid additionally retains five separately licensed Kenney CC0 effects and their provenance. Click **Play with music** to enable audio; the media clock controls motion, camera, labels and effects together.
 - Blender Python builders for the original teaching models. Local `.blend` exports remain on the author's machine because their binary metadata embeds machine-specific paths; rebuild them if needed.
@@ -108,6 +133,8 @@ Read the mechanism's model and README before using its diagrams as engineering e
 
 | Specimen | Source and identity | Asset license and limits |
 | --- | --- | --- |
+| [Allegro right hand](allegro-hand/README.md) | SimLab / Wonik Robotics model via MuJoCo Menagerie; retained MJCF bodies, sixteen hinges and visual meshes | Model-specific BSD-2-Clause; source-link geometry, no separate tendons, motors, screws or force/contact model |
+| [Robotiq 2F-85 v4](robotiq-gripper/README.md) | ROS-Industrial / Robotiq model via MuJoCo Menagerie; retained hinge axes, limits and loop-closure constraints | Model-specific BSD-2-Clause; analytic linkage visualization on the authored free-space branch, not a dynamics or gripping-force model |
 | [Unitree G1](humanoid/README.md) | Unitree Robotics / Menagerie MJCF; 30 source bodies, 35 visual occurrences, 29 hinge declarations, 393,270 triangles | BSD-3-Clause at model-directory scope. Static zero-joint source pose; merged link visuals, no individual screws or actuator internals. |
 | [KFL08](step-assembly/README.md) | FreeCAD-library model by hasecilu; 22 leaf instances and 7 subassembly instances | CC BY 3.0. Historical display has 35 fragments; only partial source mapping. |
 | [Galileo 2](shaft-bearing/README.md) | JaredC01 and contributors; OCCT XCAF retains 69 definitions, 146 usages and 147 root-inclusive occurrences | GPL v3 for CAD source and derivatives. Includes original STEP, preferred native Fusion source and license. Six faces required recorded meshing retries. |

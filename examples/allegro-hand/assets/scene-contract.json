@@ -1,0 +1,1699 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "allegro-right",
+  "assetRevision": "allegro-right-cec3efe34be4-a7691b8aba0b-pinned-mjcf-visual-1",
+  "units": {
+    "source": "MJCF m; rad",
+    "asset": "m",
+    "angle": "rad"
+  },
+  "sourceSHA256": "cec3efe34be49c8220c23afdae0cfacbce10164a5bc7c34075b6668ee0a862a6",
+  "coordinateMap": "B=[x,z,-y]; source body B*M*B^-1; visual B*geomTransform*meshScale; once only",
+  "limitations": [
+    "Visual mesh conversion preserves source bodies and declared joints; it does not solve constraints, dynamics, contacts or collision-free disassembly.",
+    "Collision primitives and inertial/actuation metadata are retained as source evidence, not displayed as manufacturing components.",
+    "Source reference pose uses each hinge q=ref, even where that reference is outside a declared limit; authored working motion must validate its own joint limits."
+  ],
+  "parts": [
+    {
+      "part_id": "mjcf:palm",
+      "parent_id": null,
+      "label": "palm",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.220446049250313e-16,
+          0.9999999999999998,
+          0,
+          0,
+          0.9999999999999998,
+          2.220446049250313e-16,
+          0,
+          0,
+          0,
+          0,
+          -0.9999999999999996,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "palm",
+        "parentBody": null,
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:palm/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:base_link",
+            "meshName": "base_link",
+            "file": "source/assets/base_link.stl",
+            "sha256": "4060e1ae52bca21367e15a1dfab16bc7c2e81849566631b7f55e2cf376b7bc85",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 9828,
+            "triangleCount": 3276
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.029500000178813934,
+          -0.0949999988079071,
+          -0.056738533079624176
+        ],
+        "max": [
+          0.011300000362098217,
+          0.0017000000225380063,
+          0.056738533079624176
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:ff_base",
+      "parent_id": "mjcf:palm",
+      "label": "ff_base",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0.9961946942067061,
+          -0.08715578715385049,
+          0,
+          0,
+          0.08715578715385049,
+          0.9961946942067061,
+          0,
+          0,
+          -0.001542,
+          -0.0435,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "ff_base",
+        "parentBody": "palm",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:ff_base/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_0.0",
+            "meshName": "link_0.0",
+            "file": "source/assets/link_0.0.stl",
+            "sha256": "32b90a6744d472a6ffaee02cbf32eb8a5600b1da0944e86aeb9f53503a9f8ac9",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 3450,
+            "triangleCount": 1150
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -2.3174461447875074e-16,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.02199999988079071,
+          0.013450000435113907
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:ff_proximal",
+      "parent_id": "mjcf:ff_base",
+      "label": "ff_proximal",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.0164,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "ff_proximal",
+        "parentBody": "ff_base",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:ff_proximal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_1.0",
+            "meshName": "link_1.0",
+            "file": "source/assets/link_1.0.stl",
+            "sha256": "e3dfb35b6682f62f18ca6ed0b39cb94ff627b68e0e3373cf7212390574604680",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 4200,
+            "triangleCount": 1400
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -0.008799999952316284,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.06279999762773514,
+          0.01355000026524067
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:ff_medial",
+      "parent_id": "mjcf:ff_proximal",
+      "label": "ff_medial",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.054,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "ff_medial",
+        "parentBody": "ff_proximal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:ff_medial/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_2.0",
+            "meshName": "link_2.0",
+            "file": "source/assets/link_2.0.stl",
+            "sha256": "9c98477c65b45f5a3de1df0e1b54281da2385f4eafd057d103ab40893771c2d0",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 3168,
+            "triangleCount": 1056
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -0.006300000008195639,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.047200001776218414,
+          0.01355000026524067
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:ff_distal",
+      "parent_id": "mjcf:ff_medial",
+      "label": "ff_distal",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.0384,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "ff_distal",
+        "parentBody": "ff_medial",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:ff_distal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_3.0",
+            "meshName": "link_3.0",
+            "file": "source/assets/link_3.0.stl",
+            "sha256": "fe333088176395aa7d8a913aa953d3cd649c4c77753224239b78b2c99e3e314c",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 1080,
+            "triangleCount": 360
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -0.006300000008195639,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.015699999406933784,
+          0.013450000435113907
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:ff_tip",
+      "parent_id": "mjcf:ff_distal",
+      "label": "ff_tip",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "ff_tip",
+        "parentBody": "ff_distal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:ff_tip/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_3.0_tip",
+            "meshName": "link_3.0_tip",
+            "file": "source/assets/link_3.0_tip.stl",
+            "sha256": "9c3fa04fea0dfa1257c8a1b02d2b7d982b0d985c1ddda1edf148827944835f39",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0.0267
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "white",
+            "firstIndex": 0,
+            "indexCount": 4314,
+            "triangleCount": 1438
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.012000000104308128,
+          0.015699999406933784,
+          -0.011976320296525955
+        ],
+        "max": [
+          0.012000000104308128,
+          0.03869999945163727,
+          0.012000000104308128
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:mf_base",
+      "parent_id": "mjcf:palm",
+      "label": "mf_base",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.0007,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "mf_base",
+        "parentBody": "palm",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:mf_base/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_0.0",
+            "meshName": "link_0.0",
+            "file": "source/assets/link_0.0.stl",
+            "sha256": "32b90a6744d472a6ffaee02cbf32eb8a5600b1da0944e86aeb9f53503a9f8ac9",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 3450,
+            "triangleCount": 1150
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -2.3174461447875074e-16,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.02199999988079071,
+          0.013450000435113907
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:mf_proximal",
+      "parent_id": "mjcf:mf_base",
+      "label": "mf_proximal",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.0164,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "mf_proximal",
+        "parentBody": "mf_base",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:mf_proximal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_1.0",
+            "meshName": "link_1.0",
+            "file": "source/assets/link_1.0.stl",
+            "sha256": "e3dfb35b6682f62f18ca6ed0b39cb94ff627b68e0e3373cf7212390574604680",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 4200,
+            "triangleCount": 1400
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -0.008799999952316284,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.06279999762773514,
+          0.01355000026524067
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:mf_medial",
+      "parent_id": "mjcf:mf_proximal",
+      "label": "mf_medial",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.054,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "mf_medial",
+        "parentBody": "mf_proximal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:mf_medial/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_2.0",
+            "meshName": "link_2.0",
+            "file": "source/assets/link_2.0.stl",
+            "sha256": "9c98477c65b45f5a3de1df0e1b54281da2385f4eafd057d103ab40893771c2d0",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 3168,
+            "triangleCount": 1056
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -0.006300000008195639,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.047200001776218414,
+          0.01355000026524067
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:mf_distal",
+      "parent_id": "mjcf:mf_medial",
+      "label": "mf_distal",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.0384,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "mf_distal",
+        "parentBody": "mf_medial",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:mf_distal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_3.0",
+            "meshName": "link_3.0",
+            "file": "source/assets/link_3.0.stl",
+            "sha256": "fe333088176395aa7d8a913aa953d3cd649c4c77753224239b78b2c99e3e314c",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 1080,
+            "triangleCount": 360
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -0.006300000008195639,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.015699999406933784,
+          0.013450000435113907
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:mf_tip",
+      "parent_id": "mjcf:mf_distal",
+      "label": "mf_tip",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "mf_tip",
+        "parentBody": "mf_distal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:mf_tip/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_3.0_tip",
+            "meshName": "link_3.0_tip",
+            "file": "source/assets/link_3.0_tip.stl",
+            "sha256": "9c3fa04fea0dfa1257c8a1b02d2b7d982b0d985c1ddda1edf148827944835f39",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0.0267
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "white",
+            "firstIndex": 0,
+            "indexCount": 4314,
+            "triangleCount": 1438
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.012000000104308128,
+          0.015699999406933784,
+          -0.011976320296525955
+        ],
+        "max": [
+          0.012000000104308128,
+          0.03869999945163727,
+          0.012000000104308128
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:rf_base",
+      "parent_id": "mjcf:palm",
+      "label": "rf_base",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0.9961946942067061,
+          0.08715578715385049,
+          0,
+          0,
+          -0.08715578715385049,
+          0.9961946942067061,
+          0,
+          0,
+          -0.001542,
+          0.0435,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "rf_base",
+        "parentBody": "palm",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:rf_base/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_0.0",
+            "meshName": "link_0.0",
+            "file": "source/assets/link_0.0.stl",
+            "sha256": "32b90a6744d472a6ffaee02cbf32eb8a5600b1da0944e86aeb9f53503a9f8ac9",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 3450,
+            "triangleCount": 1150
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -2.3174461447875074e-16,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.02199999988079071,
+          0.013450000435113907
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:rf_proximal",
+      "parent_id": "mjcf:rf_base",
+      "label": "rf_proximal",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.0164,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "rf_proximal",
+        "parentBody": "rf_base",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:rf_proximal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_1.0",
+            "meshName": "link_1.0",
+            "file": "source/assets/link_1.0.stl",
+            "sha256": "e3dfb35b6682f62f18ca6ed0b39cb94ff627b68e0e3373cf7212390574604680",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 4200,
+            "triangleCount": 1400
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -0.008799999952316284,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.06279999762773514,
+          0.01355000026524067
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:rf_medial",
+      "parent_id": "mjcf:rf_proximal",
+      "label": "rf_medial",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.054,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "rf_medial",
+        "parentBody": "rf_proximal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:rf_medial/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_2.0",
+            "meshName": "link_2.0",
+            "file": "source/assets/link_2.0.stl",
+            "sha256": "9c98477c65b45f5a3de1df0e1b54281da2385f4eafd057d103ab40893771c2d0",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 3168,
+            "triangleCount": 1056
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -0.006300000008195639,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.047200001776218414,
+          0.01355000026524067
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:rf_distal",
+      "parent_id": "mjcf:rf_medial",
+      "label": "rf_distal",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.0384,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "rf_distal",
+        "parentBody": "rf_medial",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:rf_distal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_3.0",
+            "meshName": "link_3.0",
+            "file": "source/assets/link_3.0.stl",
+            "sha256": "fe333088176395aa7d8a913aa953d3cd649c4c77753224239b78b2c99e3e314c",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 1080,
+            "triangleCount": 360
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -0.006300000008195639,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.015699999406933784,
+          0.013450000435113907
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:rf_tip",
+      "parent_id": "mjcf:rf_distal",
+      "label": "rf_tip",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "rf_tip",
+        "parentBody": "rf_distal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:rf_tip/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_3.0_tip",
+            "meshName": "link_3.0_tip",
+            "file": "source/assets/link_3.0_tip.stl",
+            "sha256": "9c3fa04fea0dfa1257c8a1b02d2b7d982b0d985c1ddda1edf148827944835f39",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0.0267
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "white",
+            "firstIndex": 0,
+            "indexCount": 4314,
+            "triangleCount": 1438
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.012000000104308128,
+          0.015699999406933784,
+          -0.011976320296525955
+        ],
+        "max": [
+          0.012000000104308128,
+          0.03869999945163727,
+          0.012000000104308128
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:th_base",
+      "parent_id": "mjcf:palm",
+      "label": "th_base",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          0,
+          0.996194589718569,
+          -0.08715698144986422,
+          0,
+          0,
+          -0.08715698144986428,
+          -0.996194589718569,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -0.0182,
+          -0.045987,
+          -0.019333,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "th_base",
+        "parentBody": "palm",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:th_base/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_12.0_right",
+            "meshName": "link_12.0_right",
+            "file": "source/assets/link_12.0_right.stl",
+            "sha256": "c5418fc127311eefee1d8ee69dfcfde2157d038286900bee91608d2701b00f13",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 12252,
+            "triangleCount": 4084
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.03920000046491623,
+          -0.00800000037997961,
+          -0.026000000536441803
+        ],
+        "max": [
+          0.005499999970197678,
+          0.04149999842047691,
+          0.00800000037997961
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:th_proximal",
+      "parent_id": "mjcf:th_base",
+      "label": "th_proximal",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.027,
+          0.0399,
+          -0.005,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "th_proximal",
+        "parentBody": "th_base",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:th_proximal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_13.0",
+            "meshName": "link_13.0",
+            "file": "source/assets/link_13.0.stl",
+            "sha256": "e906896afc078a12c9c377e3a2b07f375583d3b869581f9962030cabc888be29",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 1344,
+            "triangleCount": 448
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -0.00016711471835151315,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.021832885220646858,
+          0.013450000435113907
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:th_medial",
+      "parent_id": "mjcf:th_proximal",
+      "label": "th_medial",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.0177,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "th_medial",
+        "parentBody": "th_proximal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:th_medial/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_14.0",
+            "meshName": "link_14.0",
+            "file": "source/assets/link_14.0.stl",
+            "sha256": "a9e4983e4bff7fc7d868b4965c9865edb2669b946434095703766202b5de01ff",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 2808,
+            "triangleCount": 936
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -0.008799999952316284,
+          -0.01355000026524067
+        ],
+        "max": [
+          0.009800000116229057,
+          0.05770000070333481,
+          0.013450000435113907
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:th_distal",
+      "parent_id": "mjcf:th_medial",
+      "label": "th_distal",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.0514,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "th_distal",
+        "parentBody": "th_medial",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:th_distal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_15.0",
+            "meshName": "link_15.0",
+            "file": "source/assets/link_15.0.stl",
+            "sha256": "bf963adb775b79b27649f4f5dff4ced58ef676ce86cc677de49d3810382d11e0",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 2592,
+            "triangleCount": 864
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.009800000116229057,
+          -0.008799999952316284,
+          -0.01355000026524067
+        ],
+        "max": [
+          0.009800000116229057,
+          0.031300000846385956,
+          0.013450000435113907
+        ]
+      }
+    },
+    {
+      "part_id": "mjcf:th_tip",
+      "parent_id": "mjcf:th_distal",
+      "label": "th_tip",
+      "sourceKind": "mjcf-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "body": "th_tip",
+        "parentBody": "th_distal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:th_tip/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_15.0_tip",
+            "meshName": "link_15.0_tip",
+            "file": "source/assets/link_15.0_tip.stl",
+            "sha256": "a7147c765d4b6d2eb16fa14bba2e8eceec4a750bc346260893ca02aca1fd7a63",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0.0423
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "white",
+            "firstIndex": 0,
+            "indexCount": 4314,
+            "triangleCount": 1438
+          }
+        ]
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.012000000104308128,
+          0.031300000846385956,
+          -0.011976320296525955
+        ],
+        "max": [
+          0.012000000104308128,
+          0.05429999902844429,
+          0.012000000104308128
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "robotiq-2f85-v4",
+  "importer": "pinned-mjcf-visual-1",
+  "geometryRevision": "robotiq-2f85-v4-8d4a4f840ff5-7b89e693c1e1-pinned-mjcf-visual-1",
+  "sourceSHA256": "8d4a4f840ff5f928d56e387a8325d1f34437b35f72b82792e4d46f8de879e133",
+  "glbSHA256": "1e9fb19a6a4c046a8e74bbc0d0e5f0dc49dd4d77791f9d19e34c61ba693ff9ea",
+  "glbBytes": 12492020,
+  "originalFilesVerified": 11,
+  "partCount": 11,
+  "meshCount": 9,
+  "sourceJointCount": 6,
+  "sourceVisualCount": 13,
+  "emptySemanticBodies": [
+    "mjcf:left_pad",
+    "mjcf:right_pad"
+  ],
+  "sourceEqualityCount": 3,
+  "triangleCount": 170282,
+  "assetBoundsMeters": {
+    "min": [
+      -0.07728081231510639,
+      -0.0030000002589076757,
+      -0.03750000149011612
+    ],
+    "max": [
+      0.07728081231510636,
+      0.15924875081686973,
+      0.03750000149011612
+    ]
+  },
+  "geometrySimplified": false,
+  "exactAttributeDeduplication": true,
+  "sourcePoseModified": false,
+  "mcpUsed": false,
+  "constraintsSolved": false,
+  "limitations": [
+    "Source is a simplified articulated MJCF model with STL mesh geometry, not a complete engineering CAD assembly.",
+    "Only the eight meshes referenced by 2f85.xml are retained. Unused force-sensor files and image previews are omitted.",
+    "Source inertial parameters were inherited by upstream from its earlier gripper model; this showcase makes no dynamic or contact-force claims.",
+    "Visual mesh conversion preserves source bodies and declared joints; it does not solve constraints, dynamics, contacts or collision-free disassembly.",
+    "Collision primitives and inertial/actuation metadata are retained as source evidence, not displayed as manufacturing components.",
+    "Source reference pose uses each hinge q=ref, even where that reference is outside a declared limit; authored working motion must validate its own joint limits."
+  ]
+}

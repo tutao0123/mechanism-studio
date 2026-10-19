@@ -8,6 +8,8 @@ import * as robot from '../EXAMPLE_ROBOT/serve.mjs';
 import * as humanoid from '../examples/humanoid/serve.mjs';
 import * as wolf from '../examples/wolf-actuator/serve.mjs';
 import * as gearbox from '../examples/gearbox/serve.mjs';
+import * as allegro from '../examples/allegro-hand/serve.mjs';
+import * as robotiq from '../examples/robotiq-gripper/serve.mjs';
 
 const project = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const servers = [
@@ -15,6 +17,8 @@ const servers = [
   ['examples/humanoid', humanoid.publicFile],
   ['examples/wolf-actuator', wolf.publicFile],
   ['examples/gearbox', gearbox.publicFile],
+  ['examples/allegro-hand', allegro.publicFile],
+  ['examples/robotiq-gripper', robotiq.publicFile],
 ];
 // Gitignored local renders and synthesized music may be absent in a clean
 // checkout; every tracked dependency must be present and served.

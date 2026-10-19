@@ -1,0 +1,2557 @@
+{
+  "schemaVersion": "1.0.0",
+  "geometryRevision": "allegro-right-cec3efe34be4-a7691b8aba0b-pinned-mjcf-visual-1",
+  "units": "m",
+  "coordinateBasis": "glTF right-handed Y up; B=[x,z,-y]",
+  "source": {
+    "title": "Allegro Hand V3, right hand",
+    "repository": "https://github.com/google-deepmind/mujoco_menagerie",
+    "revision": "62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35",
+    "license": "BSD-2-Clause",
+    "sourceFile": "source/right_hand.xml",
+    "sha256": "cec3efe34be49c8220c23afdae0cfacbce10164a5bc7c34075b6668ee0a862a6"
+  },
+  "asset": {
+    "file": "assets/assembly.glb",
+    "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+    "assembledWorldBounds": {
+      "min": [
+        -0.09806434680032403,
+        -0.029500000178813948,
+        -0.06774971451950357
+      ],
+      "max": [
+        0.14819999945163723,
+        0.012000000104308154,
+        0.17969724516416663
+      ]
+    },
+    "assembledWorldCenter": [
+      0.0250678263256566,
+      -0.008750000037252896,
+      0.05597376532233153
+    ]
+  },
+  "parts": [
+    {
+      "id": "mjcf:palm",
+      "name": "palm",
+      "parentId": null,
+      "worldBounds": {
+        "min": [
+          -0.09499999880790708,
+          -0.029500000178813948,
+          -0.05673853307962415
+        ],
+        "max": [
+          0.0017000000225380026,
+          0.011300000362098215,
+          0.05673853307962415
+        ]
+      },
+      "worldCenter": [
+        -0.046649999392684535,
+        -0.009099999908357866,
+        0
+      ],
+      "localBounds": {
+        "min": [
+          -0.029500000178813934,
+          -0.0949999988079071,
+          -0.056738533079624176
+        ],
+        "max": [
+          0.011300000362098217,
+          0.0017000000225380063,
+          0.056738533079624176
+        ]
+      },
+      "localMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9999999999999998,
+        2.220446049250313e-16,
+        0,
+        0,
+        0,
+        0,
+        -0.9999999999999996,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9999999999999998,
+        2.220446049250313e-16,
+        0,
+        0,
+        0,
+        0,
+        -0.9999999999999996,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "source": {
+        "body": "palm",
+        "parentBody": null,
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:palm/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:base_link",
+            "meshName": "base_link",
+            "file": "source/assets/base_link.stl",
+            "sha256": "4060e1ae52bca21367e15a1dfab16bc7c2e81849566631b7f55e2cf376b7bc85",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 9828,
+            "triangleCount": 3276
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 3276,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 0,
+        "ownedBodyNodeIndex": 21,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:ff_base",
+      "name": "ff_base",
+      "parentId": "mjcf:palm",
+      "worldBounds": {
+        "min": [
+          -0.0027142453751421505,
+          -0.009800000116229056,
+          0.030101180929461596
+        ],
+        "max": [
+          0.021546528528933854,
+          0.009800000116229057,
+          0.058816246377533264
+        ]
+      },
+      "worldCenter": [
+        0.009416141576895852,
+        8.673617379884035e-19,
+        0.044458713653497434
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -2.3174461447875074e-16,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.02199999988079071,
+          0.013450000435113907
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0.9961946942067061,
+        -0.08715578715385049,
+        0,
+        0,
+        0.08715578715385049,
+        0.9961946942067061,
+        0,
+        0,
+        -0.001542,
+        -0.0435,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9961946942067059,
+        2.2119965730354044e-16,
+        0.08715578715385044,
+        0,
+        0.08715578715385047,
+        1.935247232550685e-17,
+        -0.9961946942067057,
+        0,
+        -0.0015419999999999995,
+        -3.4239278079439827e-19,
+        0.043499999999999976,
+        1
+      ],
+      "source": {
+        "body": "ff_base",
+        "parentBody": "palm",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:ff_base/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_0.0",
+            "meshName": "link_0.0",
+            "file": "source/assets/link_0.0.stl",
+            "sha256": "32b90a6744d472a6ffaee02cbf32eb8a5600b1da0944e86aeb9f53503a9f8ac9",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 3450,
+            "triangleCount": 1150
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1150,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 1,
+        "ownedBodyNodeIndex": 22,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:ff_proximal",
+      "name": "ff_proximal",
+      "parentId": "mjcf:ff_base",
+      "worldBounds": {
+        "min": [
+          0.005074723851930739,
+          -0.009800000116229052,
+          0.03212816286893914
+        ],
+        "max": [
+          0.07830225772556598,
+          0.009800000116229071,
+          0.062337340196730935
+        ]
+      },
+      "worldCenter": [
+        0.04168849078874836,
+        9.540979117872439e-18,
+        0.047232751532835036
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -0.008799999952316284,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.06279999762773514,
+          0.01355000026524067
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.0164,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9961946942067059,
+        2.2119965730354044e-16,
+        0.08715578715385044,
+        0,
+        0.08715578715385047,
+        1.935247232550685e-17,
+        -0.9961946942067057,
+        0,
+        0.01479559298498998,
+        3.2852815989836656e-18,
+        0.04492935490932312,
+        1
+      ],
+      "source": {
+        "body": "ff_proximal",
+        "parentBody": "ff_base",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:ff_proximal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_1.0",
+            "meshName": "link_1.0",
+            "file": "source/assets/link_1.0.stl",
+            "sha256": "e3dfb35b6682f62f18ca6ed0b39cb94ff627b68e0e3373cf7212390574604680",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 4200,
+            "triangleCount": 1400
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1400,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 2,
+        "ownedBodyNodeIndex": 23,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:ff_medial",
+      "name": "ff_medial",
+      "parentId": "mjcf:ff_proximal",
+      "worldBounds": {
+        "min": [
+          0.061141834515343406,
+          -0.00980000011622904,
+          0.03558824758511528
+        ],
+        "max": [
+          0.11655613811580051,
+          0.00980000011622908,
+          0.06568412246032251
+        ]
+      },
+      "worldCenter": [
+        0.08884898631557196,
+        1.9949319973733282e-17,
+        0.050636185022718896
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -0.006300000008195639,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.047200001776218414,
+          0.01355000026524067
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.054,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9961946942067059,
+        2.2119965730354044e-16,
+        0.08715578715385044,
+        0,
+        0.08715578715385047,
+        1.935247232550685e-17,
+        -0.9961946942067057,
+        0,
+        0.0685901064721521,
+        1.523006309337485e-17,
+        0.04963576741563105,
+        1
+      ],
+      "source": {
+        "body": "ff_medial",
+        "parentBody": "ff_proximal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:ff_medial/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_2.0",
+            "meshName": "link_2.0",
+            "file": "source/assets/link_2.0.stl",
+            "sha256": "9c98477c65b45f5a3de1df0e1b54281da2385f4eafd057d103ab40893771c2d0",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 3168,
+            "triangleCount": 1056
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1056,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 3,
+        "ownedBodyNodeIndex": 24,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:ff_distal",
+      "name": "ff_distal",
+      "parentId": "mjcf:ff_medial",
+      "worldBounds": {
+        "min": [
+          0.09939571077288091,
+          -0.009800000116229031,
+          0.039034649112017
+        ],
+        "max": [
+          0.12365648421306744,
+          0.009800000116229083,
+          0.06774971451950357
+        ]
+      },
+      "worldCenter": [
+        0.11152609749297418,
+        2.6020852139652106e-17,
+        0.05339218181576028
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -0.006300000008195639,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.015699999406933784,
+          0.013450000435113907
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.0384,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9961946942067059,
+        2.2119965730354044e-16,
+        0.08715578715385044,
+        0,
+        0.08715578715385047,
+        1.935247232550685e-17,
+        -0.9961946942067057,
+        0,
+        0.10684398272968959,
+        2.3724129933830803e-17,
+        0.05298254964233891,
+        1
+      ],
+      "source": {
+        "body": "ff_distal",
+        "parentBody": "ff_medial",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:ff_distal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_3.0",
+            "meshName": "link_3.0",
+            "file": "source/assets/link_3.0.stl",
+            "sha256": "fe333088176395aa7d8a913aa953d3cd649c4c77753224239b78b2c99e3e314c",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 1080,
+            "triangleCount": 360
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 360,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 4,
+        "ownedBodyNodeIndex": 25,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:ff_tip",
+      "name": "ff_tip",
+      "parentId": "mjcf:ff_distal",
+      "worldBounds": {
+        "min": [
+          0.12144257975994699,
+          -0.012000000104308095,
+          0.04239655901457354
+        ],
+        "max": [
+          0.14543537448664545,
+          0.012000000104308154,
+          0.06727943300363302
+        ]
+      },
+      "worldCenter": [
+        0.13343897712329622,
+        2.949029909160572e-17,
+        0.05483799600910328
+      ],
+      "localBounds": {
+        "min": [
+          -0.012000000104308128,
+          0.015699999406933784,
+          -0.011976320296525955
+        ],
+        "max": [
+          0.012000000104308128,
+          0.03869999945163727,
+          0.012000000104308128
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9961946942067059,
+        2.2119965730354044e-16,
+        0.08715578715385044,
+        0,
+        0.08715578715385047,
+        1.935247232550685e-17,
+        -0.9961946942067057,
+        0,
+        0.10684398272968959,
+        2.3724129933830803e-17,
+        0.05298254964233891,
+        1
+      ],
+      "source": {
+        "body": "ff_tip",
+        "parentBody": "ff_distal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:ff_tip/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_3.0_tip",
+            "meshName": "link_3.0_tip",
+            "file": "source/assets/link_3.0_tip.stl",
+            "sha256": "9c3fa04fea0dfa1257c8a1b02d2b7d982b0d985c1ddda1edf148827944835f39",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0.0267
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "white",
+            "firstIndex": 0,
+            "indexCount": 4314,
+            "triangleCount": 1438
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1438,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 5,
+        "ownedBodyNodeIndex": 26,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:mf_base",
+      "name": "mf_base",
+      "parentId": "mjcf:palm",
+      "worldBounds": {
+        "min": [
+          0.0006999999999997659,
+          -0.009800000116229056,
+          -0.013450000435113902
+        ],
+        "max": [
+          0.022699999880790706,
+          0.009800000116229057,
+          0.013450000435113902
+        ]
+      },
+      "worldCenter": [
+        0.011699999940395236,
+        8.673617379884035e-19,
+        0
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -2.3174461447875074e-16,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.02199999988079071,
+          0.013450000435113907
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.0007,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9999999999999998,
+        2.220446049250313e-16,
+        0,
+        0,
+        0,
+        0,
+        -0.9999999999999996,
+        0,
+        0.0006999999999999999,
+        1.5543122344752191e-19,
+        0,
+        1
+      ],
+      "source": {
+        "body": "mf_base",
+        "parentBody": "palm",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:mf_base/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_0.0",
+            "meshName": "link_0.0",
+            "file": "source/assets/link_0.0.stl",
+            "sha256": "32b90a6744d472a6ffaee02cbf32eb8a5600b1da0944e86aeb9f53503a9f8ac9",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 3450,
+            "triangleCount": 1150
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1150,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 6,
+        "ownedBodyNodeIndex": 27,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:mf_proximal",
+      "name": "mf_proximal",
+      "parentId": "mjcf:mf_base",
+      "worldBounds": {
+        "min": [
+          0.008300000047683713,
+          -0.009800000116229052,
+          -0.013550000265240664
+        ],
+        "max": [
+          0.07989999762773511,
+          0.009800000116229071,
+          0.013450000435113902
+        ]
+      },
+      "worldCenter": [
+        0.04409999883770942,
+        9.540979117872439e-18,
+        -0.000049999915063381195
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -0.008799999952316284,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.06279999762773514,
+          0.01355000026524067
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.0164,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9999999999999998,
+        2.220446049250313e-16,
+        0,
+        0,
+        0,
+        0,
+        -0.9999999999999996,
+        0,
+        0.017099999999999997,
+        3.7969627442180355e-18,
+        0,
+        1
+      ],
+      "source": {
+        "body": "mf_proximal",
+        "parentBody": "mf_base",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:mf_proximal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_1.0",
+            "meshName": "link_1.0",
+            "file": "source/assets/link_1.0.stl",
+            "sha256": "e3dfb35b6682f62f18ca6ed0b39cb94ff627b68e0e3373cf7212390574604680",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 4200,
+            "triangleCount": 1400
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1400,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 7,
+        "ownedBodyNodeIndex": 28,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:mf_medial",
+      "name": "mf_medial",
+      "parentId": "mjcf:mf_proximal",
+      "worldBounds": {
+        "min": [
+          0.06479999999180434,
+          -0.00980000011622904,
+          -0.013550000265240664
+        ],
+        "max": [
+          0.11830000177621838,
+          0.00980000011622908,
+          0.013450000435113902
+        ]
+      },
+      "worldCenter": [
+        0.09155000088401136,
+        1.9949319973733282e-17,
+        -0.000049999915063381195
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -0.006300000008195639,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.047200001776218414,
+          0.01355000026524067
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.054,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9999999999999998,
+        2.220446049250313e-16,
+        0,
+        0,
+        0,
+        0,
+        -0.9999999999999996,
+        0,
+        0.07109999999999998,
+        1.5787371410169725e-17,
+        0,
+        1
+      ],
+      "source": {
+        "body": "mf_medial",
+        "parentBody": "mf_proximal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:mf_medial/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_2.0",
+            "meshName": "link_2.0",
+            "file": "source/assets/link_2.0.stl",
+            "sha256": "9c98477c65b45f5a3de1df0e1b54281da2385f4eafd057d103ab40893771c2d0",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 3168,
+            "triangleCount": 1056
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1056,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 8,
+        "ownedBodyNodeIndex": 29,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:mf_distal",
+      "name": "mf_distal",
+      "parentId": "mjcf:mf_medial",
+      "worldBounds": {
+        "min": [
+          0.10319999999180433,
+          -0.009800000116229031,
+          -0.013450000435113902
+        ],
+        "max": [
+          0.12519999940693377,
+          0.009800000116229083,
+          0.013450000435113902
+        ]
+      },
+      "worldCenter": [
+        0.11419999969936906,
+        2.6020852139652106e-17,
+        0
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -0.006300000008195639,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.015699999406933784,
+          0.013450000435113907
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.0384,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9999999999999998,
+        2.220446049250313e-16,
+        0,
+        0,
+        0,
+        0,
+        -0.9999999999999996,
+        0,
+        0.10949999999999997,
+        2.4313884239290925e-17,
+        0,
+        1
+      ],
+      "source": {
+        "body": "mf_distal",
+        "parentBody": "mf_medial",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:mf_distal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_3.0",
+            "meshName": "link_3.0",
+            "file": "source/assets/link_3.0.stl",
+            "sha256": "fe333088176395aa7d8a913aa953d3cd649c4c77753224239b78b2c99e3e314c",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 1080,
+            "triangleCount": 360
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 360,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 9,
+        "ownedBodyNodeIndex": 30,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:mf_tip",
+      "name": "mf_tip",
+      "parentId": "mjcf:mf_distal",
+      "worldBounds": {
+        "min": [
+          0.12519999940693374,
+          -0.012000000104308095,
+          -0.012000000104308123
+        ],
+        "max": [
+          0.14819999945163723,
+          0.012000000104308154,
+          0.01197632029652595
+        ]
+      },
+      "worldCenter": [
+        0.13669999942928548,
+        2.949029909160572e-17,
+        -0.000011839903891086578
+      ],
+      "localBounds": {
+        "min": [
+          -0.012000000104308128,
+          0.015699999406933784,
+          -0.011976320296525955
+        ],
+        "max": [
+          0.012000000104308128,
+          0.03869999945163727,
+          0.012000000104308128
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9999999999999998,
+        2.220446049250313e-16,
+        0,
+        0,
+        0,
+        0,
+        -0.9999999999999996,
+        0,
+        0.10949999999999997,
+        2.4313884239290925e-17,
+        0,
+        1
+      ],
+      "source": {
+        "body": "mf_tip",
+        "parentBody": "mf_distal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:mf_tip/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_3.0_tip",
+            "meshName": "link_3.0_tip",
+            "file": "source/assets/link_3.0_tip.stl",
+            "sha256": "9c3fa04fea0dfa1257c8a1b02d2b7d982b0d985c1ddda1edf148827944835f39",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0.0267
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "white",
+            "firstIndex": 0,
+            "indexCount": 4314,
+            "triangleCount": 1438
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1438,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 10,
+        "ownedBodyNodeIndex": 31,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:rf_base",
+      "name": "rf_base",
+      "parentId": "mjcf:palm",
+      "worldBounds": {
+        "min": [
+          -0.0027142453751422164,
+          -0.009800000116229056,
+          -0.058816246377533264
+        ],
+        "max": [
+          0.021546528528933854,
+          0.009800000116229057,
+          -0.030101180929461603
+        ]
+      },
+      "worldCenter": [
+        0.009416141576895819,
+        8.673617379884035e-19,
+        -0.044458713653497434
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -2.3174461447875074e-16,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.02199999988079071,
+          0.013450000435113907
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0.9961946942067061,
+        0.08715578715385049,
+        0,
+        0,
+        -0.08715578715385049,
+        0.9961946942067061,
+        0,
+        0,
+        -0.001542,
+        0.0435,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9961946942067059,
+        2.2119965730354044e-16,
+        -0.08715578715385044,
+        0,
+        -0.08715578715385047,
+        -1.935247232550685e-17,
+        -0.9961946942067057,
+        0,
+        -0.0015419999999999995,
+        -3.4239278079439827e-19,
+        -0.043499999999999976,
+        1
+      ],
+      "source": {
+        "body": "rf_base",
+        "parentBody": "palm",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:rf_base/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_0.0",
+            "meshName": "link_0.0",
+            "file": "source/assets/link_0.0.stl",
+            "sha256": "32b90a6744d472a6ffaee02cbf32eb8a5600b1da0944e86aeb9f53503a9f8ac9",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 3450,
+            "triangleCount": 1150
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1150,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 11,
+        "ownedBodyNodeIndex": 32,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:rf_proximal",
+      "name": "rf_proximal",
+      "parentId": "mjcf:rf_base",
+      "worldBounds": {
+        "min": [
+          0.005083439415840689,
+          -0.009800000116229052,
+          -0.062436959496924786
+        ],
+        "max": [
+          0.07831097328947594,
+          0.009800000116229071,
+          -0.03222778216913299
+        ]
+      },
+      "worldCenter": [
+        0.04169720635265831,
+        9.540979117872439e-18,
+        -0.04733237083302889
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -0.008799999952316284,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.06279999762773514,
+          0.01355000026524067
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.0164,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9961946942067059,
+        2.2119965730354044e-16,
+        -0.08715578715385044,
+        0,
+        -0.08715578715385047,
+        -1.935247232550685e-17,
+        -0.9961946942067057,
+        0,
+        0.01479559298498998,
+        3.2852815989836656e-18,
+        -0.04492935490932312,
+        1
+      ],
+      "source": {
+        "body": "rf_proximal",
+        "parentBody": "rf_base",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:rf_proximal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_1.0",
+            "meshName": "link_1.0",
+            "file": "source/assets/link_1.0.stl",
+            "sha256": "e3dfb35b6682f62f18ca6ed0b39cb94ff627b68e0e3373cf7212390574604680",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 4200,
+            "triangleCount": 1400
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1400,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 12,
+        "ownedBodyNodeIndex": 33,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:rf_medial",
+      "name": "rf_medial",
+      "parentId": "mjcf:rf_proximal",
+      "worldBounds": {
+        "min": [
+          0.06113311895143346,
+          -0.00980000011622904,
+          -0.06578374176051636
+        ],
+        "max": [
+          0.11656485367971045,
+          0.00980000011622908,
+          -0.03568786688530914
+        ]
+      },
+      "worldCenter": [
+        0.08884898631557195,
+        1.9949319973733282e-17,
+        -0.05073580432291275
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -0.006300000008195639,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.047200001776218414,
+          0.01355000026524067
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.054,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9961946942067059,
+        2.2119965730354044e-16,
+        -0.08715578715385044,
+        0,
+        -0.08715578715385047,
+        -1.935247232550685e-17,
+        -0.9961946942067057,
+        0,
+        0.0685901064721521,
+        1.523006309337485e-17,
+        -0.04963576741563105,
+        1
+      ],
+      "source": {
+        "body": "rf_medial",
+        "parentBody": "rf_proximal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:rf_medial/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_2.0",
+            "meshName": "link_2.0",
+            "file": "source/assets/link_2.0.stl",
+            "sha256": "9c98477c65b45f5a3de1df0e1b54281da2385f4eafd057d103ab40893771c2d0",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 3168,
+            "triangleCount": 1056
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1056,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 13,
+        "ownedBodyNodeIndex": 34,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:rf_distal",
+      "name": "rf_distal",
+      "parentId": "mjcf:rf_medial",
+      "worldBounds": {
+        "min": [
+          0.09939571077288091,
+          -0.009800000116229031,
+          -0.06774971451950357
+        ],
+        "max": [
+          0.12365648421306744,
+          0.009800000116229083,
+          -0.039034649112017
+        ]
+      },
+      "worldCenter": [
+        0.11152609749297418,
+        2.6020852139652106e-17,
+        -0.05339218181576028
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -0.006300000008195639,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.015699999406933784,
+          0.013450000435113907
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.0384,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9961946942067059,
+        2.2119965730354044e-16,
+        -0.08715578715385044,
+        0,
+        -0.08715578715385047,
+        -1.935247232550685e-17,
+        -0.9961946942067057,
+        0,
+        0.10684398272968959,
+        2.3724129933830803e-17,
+        -0.05298254964233891,
+        1
+      ],
+      "source": {
+        "body": "rf_distal",
+        "parentBody": "rf_medial",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:rf_distal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_3.0",
+            "meshName": "link_3.0",
+            "file": "source/assets/link_3.0.stl",
+            "sha256": "fe333088176395aa7d8a913aa953d3cd649c4c77753224239b78b2c99e3e314c",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 1080,
+            "triangleCount": 360
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 360,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 14,
+        "ownedBodyNodeIndex": 35,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:rf_tip",
+      "name": "rf_tip",
+      "parentId": "mjcf:rf_distal",
+      "worldBounds": {
+        "min": [
+          0.12143836938298819,
+          -0.012000000104308095,
+          -0.06727943300363302
+        ],
+        "max": [
+          0.14543537448664545,
+          0.012000000104308154,
+          -0.042444683818719374
+        ]
+      },
+      "worldCenter": [
+        0.13343687193481682,
+        2.949029909160572e-17,
+        -0.054862058411176196
+      ],
+      "localBounds": {
+        "min": [
+          -0.012000000104308128,
+          0.015699999406933784,
+          -0.011976320296525955
+        ],
+        "max": [
+          0.012000000104308128,
+          0.03869999945163727,
+          0.012000000104308128
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        2.220446049250313e-16,
+        0.9999999999999998,
+        0,
+        0,
+        0.9961946942067059,
+        2.2119965730354044e-16,
+        -0.08715578715385044,
+        0,
+        -0.08715578715385047,
+        -1.935247232550685e-17,
+        -0.9961946942067057,
+        0,
+        0.10684398272968959,
+        2.3724129933830803e-17,
+        -0.05298254964233891,
+        1
+      ],
+      "source": {
+        "body": "rf_tip",
+        "parentBody": "rf_distal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:rf_tip/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_3.0_tip",
+            "meshName": "link_3.0_tip",
+            "file": "source/assets/link_3.0_tip.stl",
+            "sha256": "9c3fa04fea0dfa1257c8a1b02d2b7d982b0d985c1ddda1edf148827944835f39",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0.0267
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "white",
+            "firstIndex": 0,
+            "indexCount": 4314,
+            "triangleCount": 1438
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1438,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 15,
+        "ownedBodyNodeIndex": 36,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:th_base",
+      "name": "th_base",
+      "parentId": "mjcf:palm",
+      "worldBounds": {
+        "min": [
+          -0.08546485713040906,
+          -0.026200000379979625,
+          0.00824322307327038
+        ],
+        "max": [
+          -0.04015930184387839,
+          0.007800000536441788,
+          0.060675073899808196
+        ]
+      },
+      "worldCenter": [
+        -0.06281207948714373,
+        -0.009199999921768919,
+        0.03445914848653929
+      ],
+      "localBounds": {
+        "min": [
+          -0.03920000046491623,
+          -0.00800000037997961,
+          -0.026000000536441803
+        ],
+        "max": [
+          0.005499999970197678,
+          0.04149999842047691,
+          0.00800000037997961
+        ]
+      },
+      "localMatrix": [
+        0,
+        0.996194589718569,
+        -0.08715698144986422,
+        0,
+        0,
+        -0.08715698144986428,
+        -0.996194589718569,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        -0.0182,
+        -0.045987,
+        -0.019333,
+        1
+      ],
+      "worldMatrix": [
+        0.9961945897185688,
+        2.211996341025133e-16,
+        0.08715698144986418,
+        0,
+        -0.08715698144986427,
+        -1.9352737512493396e-17,
+        0.9961945897185686,
+        0,
+        -2.220446049250313e-16,
+        -0.9999999999999998,
+        0,
+        0,
+        -0.045987,
+        -0.018200000000000008,
+        0.019332999999999993,
+        1
+      ],
+      "source": {
+        "body": "th_base",
+        "parentBody": "palm",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:th_base/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_12.0_right",
+            "meshName": "link_12.0_right",
+            "file": "source/assets/link_12.0_right.stl",
+            "sha256": "c5418fc127311eefee1d8ee69dfcfde2157d038286900bee91608d2701b00f13",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 12252,
+            "triangleCount": 4084
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 4084,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 16,
+        "ownedBodyNodeIndex": 37,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:th_proximal",
+      "name": "th_proximal",
+      "parentId": "mjcf:th_base",
+      "worldBounds": {
+        "min": [
+          -0.08776594196224458,
+          -0.02665000043511392,
+          0.055707308424001574
+        ],
+        "max": [
+          -0.06658454517281484,
+          0.0002500004351138896,
+          0.07804368476627473
+        ]
+      },
+      "worldCenter": [
+        -0.07717524356752971,
+        -0.013200000000000016,
+        0.06687549659513815
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -0.00016711471835151315,
+          -0.013450000435113907
+        ],
+        "max": [
+          0.009800000116229057,
+          0.021832885220646858,
+          0.013450000435113907
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.027,
+        0.0399,
+        -0.005,
+        1
+      ],
+      "worldMatrix": [
+        0.9961945897185688,
+        2.211996341025133e-16,
+        0.08715698144986418,
+        0,
+        -0.08715698144986427,
+        -1.9352737512493396e-17,
+        0.9961945897185686,
+        0,
+        -2.220446049250313e-16,
+        -0.9999999999999998,
+        0,
+        0,
+        -0.07636181748225093,
+        -0.013200000000000016,
+        0.05672792563062454,
+        1
+      ],
+      "source": {
+        "body": "th_proximal",
+        "parentBody": "th_base",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:th_proximal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_13.0",
+            "meshName": "link_13.0",
+            "file": "source/assets/link_13.0.stl",
+            "sha256": "e906896afc078a12c9c377e3a2b07f375583d3b869581f9962030cabc888be29",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 1344,
+            "triangleCount": 448
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 448,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 17,
+        "ownedBodyNodeIndex": 38,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:th_medial",
+      "name": "th_medial",
+      "parentId": "mjcf:th_proximal",
+      "worldBounds": {
+        "min": [
+          -0.09243468989034942,
+          -0.026650000435113924,
+          0.06517570399579198
+        ],
+        "max": [
+          -0.06781059242379073,
+          0.000350000265240652,
+          0.13147493908702584
+        ]
+      },
+      "worldCenter": [
+        -0.08012264115707007,
+        -0.013150000084936636,
+        0.09832532154140891
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -0.008799999952316284,
+          -0.01355000026524067
+        ],
+        "max": [
+          0.009800000116229057,
+          0.05770000070333481,
+          0.013450000435113907
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.0177,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        0.9961945897185688,
+        2.211996341025133e-16,
+        0.08715698144986418,
+        0,
+        -0.08715698144986427,
+        -1.9352737512493396e-17,
+        0.9961945897185686,
+        0,
+        -2.220446049250313e-16,
+        -0.9999999999999998,
+        0,
+        0,
+        -0.07790449605391353,
+        -0.013200000000000016,
+        0.0743605698686432,
+        1
+      ],
+      "source": {
+        "body": "th_medial",
+        "parentBody": "th_proximal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:th_medial/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_14.0",
+            "meshName": "link_14.0",
+            "file": "source/assets/link_14.0.stl",
+            "sha256": "a9e4983e4bff7fc7d868b4965c9865edb2669b946434095703766202b5de01ff",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 2808,
+            "triangleCount": 936
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 936,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 18,
+        "ownedBodyNodeIndex": 39,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:th_distal",
+      "name": "th_distal",
+      "parentId": "mjcf:th_medial",
+      "worldBounds": {
+        "min": [
+          -0.09487508558861447,
+          -0.026650000435113924,
+          0.11638010590732639
+        ],
+        "max": [
+          -0.07229046127031374,
+          0.00035000026524065024,
+          0.15760000170987276
+        ]
+      },
+      "worldCenter": [
+        -0.0835827734294641,
+        -0.013150000084936636,
+        0.13699005380859958
+      ],
+      "localBounds": {
+        "min": [
+          -0.009800000116229057,
+          -0.008799999952316284,
+          -0.01355000026524067
+        ],
+        "max": [
+          0.009800000116229057,
+          0.031300000846385956,
+          0.013450000435113907
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.0514,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        0.9961945897185688,
+        2.211996341025133e-16,
+        0.08715698144986418,
+        0,
+        -0.08715698144986427,
+        -1.9352737512493396e-17,
+        0.9961945897185686,
+        0,
+        -2.220446049250313e-16,
+        -0.9999999999999998,
+        0,
+        0,
+        -0.08238436490043655,
+        -0.013200000000000017,
+        0.12556497178017761,
+        1
+      ],
+      "source": {
+        "body": "th_distal",
+        "parentBody": "th_medial",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:th_distal/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_15.0",
+            "meshName": "link_15.0",
+            "file": "source/assets/link_15.0.stl",
+            "sha256": "bf963adb775b79b27649f4f5dff4ced58ef676ce86cc677de49d3810382d11e0",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "black",
+            "firstIndex": 0,
+            "indexCount": 2592,
+            "triangleCount": 864
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 864,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 19,
+        "ownedBodyNodeIndex": 40,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    },
+    {
+      "id": "mjcf:th_tip",
+      "name": "th_tip",
+      "parentId": "mjcf:th_distal",
+      "worldBounds": {
+        "min": [
+          -0.09806434680032403,
+          -0.025200000104308142,
+          0.15570103261102816
+        ],
+        "max": [
+          -0.07317008031144195,
+          -0.0012236797034740655,
+          0.17969724516416663
+        ]
+      },
+      "worldCenter": [
+        -0.08561721355588299,
+        -0.013211839903891104,
+        0.1676991388875974
+      ],
+      "localBounds": {
+        "min": [
+          -0.012000000104308128,
+          0.031300000846385956,
+          -0.011976320296525955
+        ],
+        "max": [
+          0.012000000104308128,
+          0.05429999902844429,
+          0.012000000104308128
+        ]
+      },
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        0.9961945897185688,
+        2.211996341025133e-16,
+        0.08715698144986418,
+        0,
+        -0.08715698144986427,
+        -1.9352737512493396e-17,
+        0.9961945897185686,
+        0,
+        -2.220446049250313e-16,
+        -0.9999999999999998,
+        0,
+        0,
+        -0.08238436490043655,
+        -0.013200000000000017,
+        0.12556497178017761,
+        1
+      ],
+      "source": {
+        "body": "th_tip",
+        "parentBody": "th_distal",
+        "visuals": [
+          {
+            "visualOccurrenceId": "mjcf:th_tip/geom:0",
+            "sourceGeomIndex": 0,
+            "definitionId": "mjcf-mesh:link_15.0_tip",
+            "meshName": "link_15.0_tip",
+            "file": "source/assets/link_15.0_tip.stl",
+            "sha256": "a7147c765d4b6d2eb16fa14bba2e8eceec4a750bc346260893ca02aca1fd7a63",
+            "sourceGeomTransform": {
+              "pos": [
+                0,
+                0,
+                0.0423
+              ],
+              "quatWxyz": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "meshScale": [
+              1,
+              1,
+              1
+            ],
+            "materialName": "white",
+            "firstIndex": 0,
+            "indexCount": 4314,
+            "triangleCount": 1438
+          }
+        ]
+      },
+      "zeroPose": true,
+      "hasGeometry": true,
+      "boundsKind": "visual-mesh-AABB",
+      "mesh": {
+        "file": "assets/assembly.glb",
+        "sha256": "24f809124f9003ab5579b65c693ab25d0c224cb3ec1fcf8b2e8716f98b697f68",
+        "triangleCount": 1438,
+        "sourceVisualCount": 1
+      },
+      "displayBinding": {
+        "semanticNodeIndex": 20,
+        "ownedBodyNodeIndex": 41,
+        "ownedBodyRest": "identity; source-local visual geometry"
+      }
+    }
+  ]
+}

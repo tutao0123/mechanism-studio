@@ -1,8 +1,8 @@
 # What is actually in the examples?
 
 Audit date: **2026-10-19**. This inventory describes retained source files and
-implemented entry points, not every local development export. There are **eleven
-implemented experiences**, including the new gearbox. The English Showcase
+implemented entry points, not every local development export. There are **thirteen
+implemented experiences**, including the gearbox, Allegro hand and Robotiq gripper. The English Showcase
 offers further cuts of the same engine, turbofan and quadruped models; those
 are not three more independently modeled assemblies.
 
@@ -11,9 +11,16 @@ are not three more independently modeled assemblies.
 Run commands from the repository root after `npm ci`. The root server and the
 specialized study servers use separate, read-only route allowlists.
 
+The [19 October robot integration report](robot-studies-release.md) records the
+Allegro and Robotiq compatibility checks after the upstream shared-runtime sync.
+Their 18 October validation notes and delivery manifests remain historical
+records of earlier inputs; they do not certify the current runtime or an MP4.
+
 | Experience | Actual location / implementation | Open after starting the server | Current boundary |
 | --- | --- | --- | --- |
 | Five-speed gearbox | `examples/gearbox/`: original authored spec, exact-ratio kinematics, 124-part GLB in 15 nested assemblies, deterministic story/score, plans and tests | `node examples/gearbox/serve.mjs` → [40 s study](http://127.0.0.1:4183/?clean=1), [blueprint edition](http://127.0.0.1:4183/blueprint/?clean=1) | Original teaching model; ideal rigid tooth ratios and authored synchronizer timing; no load, friction, clutch or contact simulation |
+| Allegro dexterous hand | `examples/allegro-hand/`: pinned MJCF/STL, source-body GLB, joint adapter, story and source-bound music | Build score below; `node examples/allegro-hand/serve.mjs` → [35.56 s hand](http://127.0.0.1:4185/?clean=1) | Sixteen hinges; motion stays in source limits, valid neutral pose differs from XML zero reference; no tendon/force model or fastener internals |
+| Robotiq 2F-85 gripper | `examples/robotiq-gripper/`: pinned source meshes, six-hinge linkage model, source connect constraints and story | Build score below; `node examples/robotiq-gripper/serve.mjs` → [35.56 s gripper](http://127.0.0.1:4186/?clean=1) | Analytic closed linkage on an authored free-space branch; no object-contact, force or hardware-control validation |
 | Unitree G1 humanoid | `examples/humanoid/`: retained complete 29-DoF model visual source, 30 source-body identities, GLB, deterministic story/score and tests | `node examples/humanoid/serve.mjs` → [35.56 s study](http://127.0.0.1:4182/?clean=1) | Static source-pose/link-level separation; no per-screw or actuator internals, native CAD or dynamics claim |
 | Five-pin lock | `prototype-3d/`: GLB, controller, line art, key profiles, Blender builder and lesson | `npm run preview` → [lock](http://127.0.0.1:4179/prototype-3d/?palette=line-light) | Authored teaching geometry, idealized pin stack; no lock tolerancing/contact solver |
 | Inline-four engine | `examples/inline-four/`: 25 tracked files in the audited release, including GLB, crank/valve/process model and tests | Root server → [engine](http://127.0.0.1:4179/examples/inline-four/) | Prescribed kinematics and qualitative injection/ignition; no combustion simulation |
@@ -110,6 +117,16 @@ described above applies to the v4 output, not automatically to other recordings.
 All older cuts remain.
 
 ## Why some folders can look unfinished on GitHub
+
+The new Allegro and Robotiq music loops are local deterministic outputs. Build
+them with `node tools/audio/build-study-score.mjs --example examples/allegro-hand`
+and `node tools/audio/build-study-score.mjs --example examples/robotiq-gripper`.
+They share the [music tool](../tools/audio/README.md) and a narrowly supported
+[MJCF visual exporter](../tools/robot/README.md); neither is an automatic CAD
+reconstruction or arbitrary robot-dynamics service.
+Their source and GLBs are included. Python is needed only for optional geometry
+rebuilding; the Node.js preview and score commands do not require it. Each study
+uses its documented dedicated server, not a root-server `/examples/` route.
 
 - **The lock and robot are outside `examples/`.** The lock predates that layout;
   the two SO-ARM cuts live in `EXAMPLE_ROBOT/`. They are real implementations.

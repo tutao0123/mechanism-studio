@@ -39,6 +39,9 @@ shots/
 examples/wolf-actuator/tour-v2/audio/tour-loop.wav
 # Rebuild with examples/gearbox/audio/build.mjs; music-score.json keeps its hash.
 examples/gearbox/audio/gearbox-loop.wav
+# Rebuild new robot study scores with tools/audio/build-study-score.mjs.
+examples/allegro-hand/audio/showcase-loop.wav
+examples/robotiq-gripper/audio/showcase-loop.wav
 # Per-machine editor state, credential material and Python environments.
 .vscode/
 .idea/

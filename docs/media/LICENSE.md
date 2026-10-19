@@ -19,6 +19,36 @@ in this documentation directory.
 | `wolf-preview.jpg` | WOLF V1.2, Anthrobotics and contributors | CC BY-SA 4.0; source and change notice below |
 | `wolf-motor-detail.jpg` | WOLF V1.2 motor subassembly, Anthrobotics and contributors | Same CC BY-SA 4.0 terms; actual source components, separate from G1 |
 | `humanoid-g1-preview.jpg` | Unitree G1, Unitree Robotics / MuJoCo Menagerie contributors | BSD-3-Clause; model-specific notice and full terms below |
+| `allegro-hand-preview.png` | Allegro Hand V3, SimLab / Wonik Robotics / MuJoCo Menagerie contributors | Model-specific BSD-2-Clause; retained source license and change notice below |
+| `robotiq-gripper-preview.png` | Robotiq 2F-85 v4, ROS-Industrial / Robotiq / MuJoCo Menagerie contributors | Model-specific BSD-2-Clause; retained source license and change notice below |
+
+## Allegro Hand and Robotiq gripper
+
+`allegro-hand-preview.png` depicts the **Allegro Hand V3 right-hand model**,
+copyright (c) 2016, SimLab, from
+[the pinned Menagerie model](https://github.com/google-deepmind/mujoco_menagerie/tree/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/wonik_allegro).
+Retain its [complete BSD-2-Clause license](../../examples/allegro-hand/source/LICENSE),
+[source notice](../../examples/allegro-hand/source/NOTICE.md) and
+[provenance](../../examples/allegro-hand/source/provenance.json) with redistributed
+model or image material.
+
+`robotiq-gripper-preview.png` depicts the **Robotiq 2F-85 v4 model**, copyright
+(c) 2013, ROS-Industrial, from
+[the pinned Menagerie model](https://github.com/google-deepmind/mujoco_menagerie/tree/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/robotiq_2f85_v4).
+Retain its [complete BSD-2-Clause license](../../examples/robotiq-gripper/source/LICENSE),
+[source and change notes](../../examples/robotiq-gripper/README.md) and
+[provenance](../../examples/robotiq-gripper/source/provenance.json) with redistributed
+model or image material. Both licenses require retaining their copyright,
+conditions and disclaimer; the general Menagerie repository license does not
+replace the model-specific terms.
+
+Mechanism Studio converts source meshes and coordinate frames, preserves body
+identity, and adds working poses, display separation, white-line materials,
+camera framing and English annotations. These renders depict simulation link
+geometry; they do not establish individual internal fasteners, contact dynamics
+or manufacturing clearances. They imply no endorsement by source authors.
+Original rendering software and documentation text remain MIT; that grant does
+not replace the source model notices accompanying these visual derivatives.
 
 ## SO-ARM 102
 

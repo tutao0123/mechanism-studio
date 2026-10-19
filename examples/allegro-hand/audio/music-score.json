@@ -1,0 +1,720 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Allegro / Four fingers, sixteen joints",
+  "edition": "robot-chamber-hand-1",
+  "originalScoreLicense": "MIT",
+  "authorship": "Original Mechanism Studio code synthesis. No external samples, voice or hardware recordings.",
+  "narration": false,
+  "variant": "hand",
+  "bpm": 108,
+  "totalBeats": 64,
+  "sampleRate": 44100,
+  "frames": 1568000,
+  "channels": 2,
+  "bitsPerSample": 16,
+  "durationSeconds": 35.55555555555556,
+  "geometryRevision": "allegro-right-cec3efe34be4-a7691b8aba0b-pinned-mjcf-visual-1",
+  "storyRevision": "allegro-source-study-1",
+  "sourceSHA256": "cec3efe34be49c8220c23afdae0cfacbce10164a5bc7c34075b6668ee0a862a6",
+  "deterministicSeed": 3721699667,
+  "musicalFeel": "Gentle half-time felt keys, sustained chords, warm bass and sparse quiet action accents. No drum beat or label dings.",
+  "effectMeaning": "Editorial accents bound to actual story moments; no claim of measured robot acoustics or physical contact.",
+  "actionCues": [
+    {
+      "id": "finger-flex",
+      "beat": 1,
+      "kind": "motion",
+      "level": 0.38,
+      "partIds": [
+        "mjcf:ff_proximal",
+        "mjcf:mf_proximal",
+        "mjcf:rf_proximal"
+      ],
+      "seconds": 0.5555555555555556,
+      "geometryRevision": "allegro-right-cec3efe34be4-a7691b8aba0b-pinned-mjcf-visual-1"
+    },
+    {
+      "id": "thumb-opposition",
+      "beat": 13,
+      "kind": "motion",
+      "level": 0.32,
+      "partIds": [
+        "mjcf:th_base",
+        "mjcf:th_proximal"
+      ],
+      "seconds": 7.222222222222222,
+      "geometryRevision": "allegro-right-cec3efe34be4-a7691b8aba0b-pinned-mjcf-visual-1"
+    },
+    {
+      "id": "chains-release",
+      "beat": 22.5,
+      "kind": "release",
+      "level": 0.4,
+      "partIds": [
+        "mjcf:ff_base",
+        "mjcf:mf_base",
+        "mjcf:rf_base",
+        "mjcf:th_base"
+      ],
+      "seconds": 12.5,
+      "geometryRevision": "allegro-right-cec3efe34be4-a7691b8aba0b-pinned-mjcf-visual-1"
+    },
+    {
+      "id": "finger-detail",
+      "beat": 36.8,
+      "kind": "detail",
+      "level": 0.22,
+      "partIds": [
+        "mjcf:ff_base",
+        "mjcf:ff_proximal"
+      ],
+      "seconds": 20.444444444444443,
+      "geometryRevision": "allegro-right-cec3efe34be4-a7691b8aba0b-pinned-mjcf-visual-1"
+    },
+    {
+      "id": "last-chain-seat",
+      "beat": 57,
+      "kind": "seat",
+      "level": 0.38,
+      "partIds": [
+        "mjcf:ff_base",
+        "mjcf:ff_proximal",
+        "mjcf:ff_medial",
+        "mjcf:ff_distal",
+        "mjcf:ff_tip"
+      ],
+      "seconds": 31.666666666666668,
+      "geometryRevision": "allegro-right-cec3efe34be4-a7691b8aba0b-pinned-mjcf-visual-1"
+    },
+    {
+      "id": "whole-resolve",
+      "beat": 60,
+      "kind": "resolve",
+      "level": 0.25,
+      "partIds": [
+        "mjcf:palm"
+      ],
+      "seconds": 33.333333333333336,
+      "geometryRevision": "allegro-right-cec3efe34be4-a7691b8aba0b-pinned-mjcf-visual-1"
+    }
+  ],
+  "events": [
+    {
+      "voice": "pad",
+      "beat": -0.75,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 53,
+      "pan": -0.5249999999999999,
+      "seed": 1981960236
+    },
+    {
+      "voice": "pad",
+      "beat": -0.75,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 60,
+      "pan": -0.175,
+      "seed": 3101559263
+    },
+    {
+      "voice": "pad",
+      "beat": -0.75,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 64,
+      "pan": 0.175,
+      "seed": 1163882637
+    },
+    {
+      "voice": "pad",
+      "beat": -0.75,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 67,
+      "pan": 0.5249999999999999,
+      "seed": 3265142890
+    },
+    {
+      "voice": "bass",
+      "beat": 0,
+      "beats": 3.4,
+      "gain": 0.06,
+      "midi": 41,
+      "pan": 0,
+      "seed": 3573483331
+    },
+    {
+      "voice": "felt",
+      "beat": 0.35,
+      "beats": 3.8,
+      "gain": 0.055,
+      "midi": 72,
+      "pan": -0.13,
+      "seed": 574737520
+    },
+    {
+      "voice": "air",
+      "beat": 1,
+      "beats": 1.25,
+      "gain": 0.009500000000000001,
+      "midi": 55,
+      "pan": 0,
+      "seed": 4130638341,
+      "cueId": "finger-flex",
+      "role": "editorial-sfx"
+    },
+    {
+      "voice": "bass",
+      "beat": 4,
+      "beats": 2.7,
+      "gain": 0.025,
+      "midi": 53,
+      "pan": 0,
+      "seed": 3069760584
+    },
+    {
+      "voice": "felt",
+      "beat": 4.75,
+      "beats": 3.2,
+      "gain": 0.032,
+      "midi": 76,
+      "pan": 0.16,
+      "seed": 1647833975
+    },
+    {
+      "voice": "pad",
+      "beat": 7.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 50,
+      "pan": -0.5249999999999999,
+      "seed": 393410107
+    },
+    {
+      "voice": "pad",
+      "beat": 7.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 57,
+      "pan": -0.175,
+      "seed": 2130964161
+    },
+    {
+      "voice": "pad",
+      "beat": 7.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 60,
+      "pan": 0.175,
+      "seed": 1503803948
+    },
+    {
+      "voice": "pad",
+      "beat": 7.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 67,
+      "pan": 0.5249999999999999,
+      "seed": 3255901887
+    },
+    {
+      "voice": "bass",
+      "beat": 8,
+      "beats": 3.4,
+      "gain": 0.06,
+      "midi": 38,
+      "pan": 0,
+      "seed": 3642181084
+    },
+    {
+      "voice": "felt",
+      "beat": 8.35,
+      "beats": 3.8,
+      "gain": 0.055,
+      "midi": 79,
+      "pan": -0.13,
+      "seed": 70745162
+    },
+    {
+      "voice": "felt",
+      "beat": 12.75,
+      "beats": 3.2,
+      "gain": 0.032,
+      "midi": 76,
+      "pan": 0.16,
+      "seed": 2625076021
+    },
+    {
+      "voice": "air",
+      "beat": 13,
+      "beats": 1.25,
+      "gain": 0.008,
+      "midi": 55,
+      "pan": 0,
+      "seed": 2314677855,
+      "cueId": "thumb-opposition",
+      "role": "editorial-sfx"
+    },
+    {
+      "voice": "pad",
+      "beat": 15.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 46,
+      "pan": -0.5249999999999999,
+      "seed": 288208157
+    },
+    {
+      "voice": "pad",
+      "beat": 15.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 57,
+      "pan": -0.175,
+      "seed": 1447468442
+    },
+    {
+      "voice": "pad",
+      "beat": 15.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 60,
+      "pan": 0.175,
+      "seed": 994472800
+    },
+    {
+      "voice": "pad",
+      "beat": 15.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 65,
+      "pan": 0.5249999999999999,
+      "seed": 1349203797
+    },
+    {
+      "voice": "bass",
+      "beat": 16,
+      "beats": 3.4,
+      "gain": 0.06,
+      "midi": 34,
+      "pan": 0,
+      "seed": 3870297781
+    },
+    {
+      "voice": "felt",
+      "beat": 16.35,
+      "beats": 3.8,
+      "gain": 0.055,
+      "midi": 72,
+      "pan": -0.13,
+      "seed": 616044356
+    },
+    {
+      "voice": "bass",
+      "beat": 20,
+      "beats": 2.7,
+      "gain": 0.025,
+      "midi": 46,
+      "pan": 0,
+      "seed": 196967878
+    },
+    {
+      "voice": "felt",
+      "beat": 20.75,
+      "beats": 3.2,
+      "gain": 0.032,
+      "midi": 69,
+      "pan": 0.16,
+      "seed": 3963619820
+    },
+    {
+      "voice": "air",
+      "beat": 22.5,
+      "beats": 1.25,
+      "gain": 0.010000000000000002,
+      "midi": 55,
+      "pan": 0,
+      "seed": 3953389665,
+      "cueId": "chains-release",
+      "role": "editorial-sfx"
+    },
+    {
+      "voice": "pad",
+      "beat": 23.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 48,
+      "pan": -0.5249999999999999,
+      "seed": 1120015634
+    },
+    {
+      "voice": "pad",
+      "beat": 23.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 55,
+      "pan": -0.175,
+      "seed": 208335202
+    },
+    {
+      "voice": "pad",
+      "beat": 23.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 62,
+      "pan": 0.175,
+      "seed": 446009441
+    },
+    {
+      "voice": "pad",
+      "beat": 23.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 67,
+      "pan": 0.5249999999999999,
+      "seed": 3148177805
+    },
+    {
+      "voice": "bass",
+      "beat": 24,
+      "beats": 3.4,
+      "gain": 0.06,
+      "midi": 36,
+      "pan": 0,
+      "seed": 3842867879
+    },
+    {
+      "voice": "felt",
+      "beat": 24.35,
+      "beats": 3.8,
+      "gain": 0.055,
+      "midi": 77,
+      "pan": -0.13,
+      "seed": 4268771691
+    },
+    {
+      "voice": "felt",
+      "beat": 28.75,
+      "beats": 3.2,
+      "gain": 0.032,
+      "midi": 72,
+      "pan": 0.16,
+      "seed": 485952101
+    },
+    {
+      "voice": "pad",
+      "beat": 31.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 46,
+      "pan": -0.5249999999999999,
+      "seed": 1254179768
+    },
+    {
+      "voice": "pad",
+      "beat": 31.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 57,
+      "pan": -0.175,
+      "seed": 880291459
+    },
+    {
+      "voice": "pad",
+      "beat": 31.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 60,
+      "pan": 0.175,
+      "seed": 77765815
+    },
+    {
+      "voice": "pad",
+      "beat": 31.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 65,
+      "pan": 0.5249999999999999,
+      "seed": 2982064781
+    },
+    {
+      "voice": "bass",
+      "beat": 32,
+      "beats": 3.4,
+      "gain": 0.06,
+      "midi": 34,
+      "pan": 0,
+      "seed": 2584415802
+    },
+    {
+      "voice": "felt",
+      "beat": 32.35,
+      "beats": 3.8,
+      "gain": 0.055,
+      "midi": 74,
+      "pan": -0.13,
+      "seed": 2742293116
+    },
+    {
+      "voice": "bass",
+      "beat": 36,
+      "beats": 2.7,
+      "gain": 0.025,
+      "midi": 46,
+      "pan": 0,
+      "seed": 2185906268
+    },
+    {
+      "voice": "felt",
+      "beat": 36.75,
+      "beats": 3.2,
+      "gain": 0.032,
+      "midi": 79,
+      "pan": 0.16,
+      "seed": 105635521
+    },
+    {
+      "voice": "wood",
+      "beat": 36.8,
+      "beats": 0.9,
+      "gain": 0.00264,
+      "midi": 76,
+      "pan": 0,
+      "seed": 542952566,
+      "cueId": "finger-detail",
+      "role": "editorial-sfx"
+    },
+    {
+      "voice": "pad",
+      "beat": 39.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 43,
+      "pan": -0.5249999999999999,
+      "seed": 3488334088
+    },
+    {
+      "voice": "pad",
+      "beat": 39.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 58,
+      "pan": -0.175,
+      "seed": 1318700877
+    },
+    {
+      "voice": "pad",
+      "beat": 39.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 62,
+      "pan": 0.175,
+      "seed": 3095122645
+    },
+    {
+      "voice": "pad",
+      "beat": 39.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 69,
+      "pan": 0.5249999999999999,
+      "seed": 2248371045
+    },
+    {
+      "voice": "bass",
+      "beat": 40,
+      "beats": 3.4,
+      "gain": 0.06,
+      "midi": 31,
+      "pan": 0,
+      "seed": 2258134162
+    },
+    {
+      "voice": "felt",
+      "beat": 40.35,
+      "beats": 3.8,
+      "gain": 0.055,
+      "midi": 72,
+      "pan": -0.13,
+      "seed": 3410383735
+    },
+    {
+      "voice": "felt",
+      "beat": 44.75,
+      "beats": 3.2,
+      "gain": 0.032,
+      "midi": 69,
+      "pan": 0.16,
+      "seed": 608096131
+    },
+    {
+      "voice": "pad",
+      "beat": 47.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 48,
+      "pan": -0.5249999999999999,
+      "seed": 1142226404
+    },
+    {
+      "voice": "pad",
+      "beat": 47.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 58,
+      "pan": -0.175,
+      "seed": 2930382384
+    },
+    {
+      "voice": "pad",
+      "beat": 47.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 62,
+      "pan": 0.175,
+      "seed": 1642094790
+    },
+    {
+      "voice": "pad",
+      "beat": 47.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 69,
+      "pan": 0.5249999999999999,
+      "seed": 3538571642
+    },
+    {
+      "voice": "bass",
+      "beat": 48,
+      "beats": 3.4,
+      "gain": 0.06,
+      "midi": 36,
+      "pan": 0,
+      "seed": 2154757656
+    },
+    {
+      "voice": "felt",
+      "beat": 48.35,
+      "beats": 3.8,
+      "gain": 0.055,
+      "midi": 76,
+      "pan": -0.13,
+      "seed": 3050730277
+    },
+    {
+      "voice": "bass",
+      "beat": 52,
+      "beats": 2.7,
+      "gain": 0.025,
+      "midi": 48,
+      "pan": 0,
+      "seed": 2853693454
+    },
+    {
+      "voice": "felt",
+      "beat": 52.75,
+      "beats": 3.2,
+      "gain": 0.032,
+      "midi": 79,
+      "pan": 0.16,
+      "seed": 233779580
+    },
+    {
+      "voice": "pad",
+      "beat": 55.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 53,
+      "pan": -0.5249999999999999,
+      "seed": 2480428828
+    },
+    {
+      "voice": "pad",
+      "beat": 55.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 60,
+      "pan": -0.175,
+      "seed": 3192449953
+    },
+    {
+      "voice": "pad",
+      "beat": 55.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 64,
+      "pan": 0.175,
+      "seed": 3299859935
+    },
+    {
+      "voice": "pad",
+      "beat": 55.25,
+      "beats": 9.5,
+      "gain": 0.018,
+      "midi": 67,
+      "pan": 0.5249999999999999,
+      "seed": 3717228789
+    },
+    {
+      "voice": "bass",
+      "beat": 56,
+      "beats": 3.4,
+      "gain": 0.06,
+      "midi": 41,
+      "pan": 0,
+      "seed": 3243947762
+    },
+    {
+      "voice": "felt",
+      "beat": 56.35,
+      "beats": 3.8,
+      "gain": 0.055,
+      "midi": 74,
+      "pan": -0.13,
+      "seed": 1729305392
+    },
+    {
+      "voice": "wood",
+      "beat": 57,
+      "beats": 0.5,
+      "gain": 0.009500000000000001,
+      "midi": 55,
+      "pan": 0,
+      "seed": 2207794047,
+      "cueId": "last-chain-seat",
+      "role": "editorial-sfx"
+    },
+    {
+      "voice": "wood",
+      "beat": 60,
+      "beats": 0.9,
+      "gain": 0.003,
+      "midi": 76,
+      "pan": 0,
+      "seed": 4111152644,
+      "cueId": "whole-resolve",
+      "role": "editorial-sfx"
+    },
+    {
+      "voice": "felt",
+      "beat": 60.75,
+      "beats": 3.2,
+      "gain": 0.032,
+      "midi": 72,
+      "pan": 0.16,
+      "seed": 2329294922
+    }
+  ],
+  "listeningReviewed": false,
+  "file": "showcase-loop.wav",
+  "byteLength": 6272044,
+  "sha256": "3216525ab9eb518fe05219583485148bf40d27590f2eebc4763ef2aa1b781c39",
+  "analysis": {
+    "peakDbfs": -10,
+    "rmsDbfs": -22.85198203487425,
+    "clippedSamples": 0,
+    "loopBoundaryStep": 0.00041607748514491897,
+    "listeningReviewed": false
+  }
+}

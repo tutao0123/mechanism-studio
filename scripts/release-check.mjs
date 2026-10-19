@@ -4,7 +4,9 @@ import { readFile, realpath, lstat, mkdir, writeFile } from 'node:fs/promises';
 import { resolve, relative, sep, isAbsolute, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export const releaseLimits = Object.freeze({ fileBytes: 95 * 1024 * 1024, totalBytes: 300 * 1024 * 1024 });
+// Thirteen experiences include the retained Allegro/Robotiq sources and their GLBs.
+// Keep a modest package allowance while retaining the individual-file ceiling.
+export const releaseLimits = Object.freeze({ fileBytes: 95 * 1024 * 1024, totalBytes: 320 * 1024 * 1024 });
 const slash = name => name.split(sep).join('/');
 const inside = (root, name) => { const part = relative(root, name); return part !== '' && !isAbsolute(part) && part !== '..' && !part.startsWith(`..${sep}`); };
 const placeholder = value => !value || /^(?:your[_-]|replace[_-]|example(?:[_-]|$)|<[^>]*>|\$\{|process\.env\.|config\.|undefined$|null$)/i.test(value);
@@ -91,7 +93,7 @@ export async function checkRelease(root, { staged = false } = {}) {
   }
   const totalBytes = entries.reduce((total, entry) => total + entry.bytes, 0);
   if (!files.length) failures.push('release list is empty');
-  if (totalBytes > releaseLimits.totalBytes) failures.push('release list exceeds the 300 MiB total budget');
+  if (totalBytes > releaseLimits.totalBytes) failures.push('release list exceeds the 320 MiB total budget');
   const report = { generatedAt: new Date().toISOString(), project: 'mechanism-studio', mode: staged ? 'staged-index' : 'worktree-candidates', fileCount: files.length, totalBytes, limits: releaseLimits, files, entries, checksPassed: failures.length === 0, failures, publication: 'not-performed', ownLicense: 'MIT (third-party exceptions retain their own licenses)', note: 'Local deterministic preflight, not a proof that every possible secret or license issue has been found. Staged mode scans exact index bytes. Reports never include matched credential values.' };
   await mkdir(resolve(root, 'output'), { recursive: true });
   await writeFile(resolve(root, 'output/release-check.json'), JSON.stringify(report, null, 2) + '\n');

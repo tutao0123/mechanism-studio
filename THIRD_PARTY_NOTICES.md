@@ -282,6 +282,26 @@ CC BY-SA 4.0 terms, pinned at revision
 and rendered WOLF media retain CC BY-SA 4.0; original motion adapters, analysis
 code and music remain MIT. See the motion tour’s evidence notes for assumptions.
 
+## Allegro and Robotiq source robot descriptions
+
+The new `examples/allegro-hand/source/` and `examples/robotiq-gripper/source/`
+packages retain selected right-hand and 2F-85 v4 descriptions from
+[MuJoCo Menagerie revision 62ab00f](https://github.com/google-deepmind/mujoco_menagerie/tree/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35).
+The model directories each use **BSD-2-Clause**, rather than the repository's
+general Apache license. Allegro retains **Copyright (c) 2016, SimLab**;
+Robotiq retains **Copyright (c) 2013, ROS-Industrial**. Preserve each complete
+copyright, conditions and disclaimer in accompanying material for redistributed
+assets or visual derivatives:
+[Allegro license](examples/allegro-hand/source/LICENSE),
+[Robotiq license](examples/robotiq-gripper/source/LICENSE).
+
+Per-file provenance keeps upstream revisions and hashes. Mechanism Studio adds
+coordinate/visual conversion, source-bound kinematics, display separation,
+camera, English annotations and independently synthesized music. This does not
+claim robot authorship, source-author endorsement, native CAD mates or verified
+contact/dynamics. Original adapters, exporter and music remain MIT; retained
+model geometry and derivatives carry their source BSD notices.
+
 ## Fonts, references and trademarks
 
 System-font CSS stacks are used; no font binaries or stock textures are bundled.

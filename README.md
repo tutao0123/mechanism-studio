@@ -4,7 +4,21 @@
 
 Mechanism Studio is a project-local AI authoring skill and a working browser toolkit for mechanical explanation. It connects source-aware part identities, independent motion and display layers, exploded views, guided cameras, close annotations and synchronized sound. The default presentation is white surfaces with fine dark edges and restrained colour cues.
 
-**Status: working research prototype, version 0.4.0.** Eleven implemented experiences range from simplified teaching mechanisms to real STEP assemblies and source-backed robot descriptions. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
+**Status: working research prototype, version 0.4.0.** Thirteen implemented experiences range from simplified teaching mechanisms to real STEP assemblies and source-backed robot descriptions. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
+
+**New robot studies:** [Allegro dexterous hand](examples/allegro-hand/README.md)
+and [Robotiq 2F-85 gripper](examples/robotiq-gripper/README.md). Each has a
+35.6-second English loop: source-based joint motion, link separation, a local
+mechanism view and reassembly, with original code-generated music. Their MJCF
+link models are separate from fastener-level manufacturing CAD.
+
+<a href="examples/allegro-hand/README.md"><img src="docs/media/allegro-hand-preview.png" alt="Allegro hand with the original finger-chain links separated around the palm" width="400"></a>
+<a href="examples/robotiq-gripper/README.md"><img src="docs/media/robotiq-gripper-preview.png" alt="Robotiq 2F-85 source linkage bodies in the exploded study" width="400"></a>
+
+*Allegro model: SimLab / Wonik Robotics; Robotiq model: ROS-Industrial, both via
+MuJoCo Menagerie. Source and adapted geometry retain their model-specific
+[BSD-2-Clause notices](THIRD_PARTY_NOTICES.md). The [integration report](docs/robot-studies-release.md)
+covers their compatibility with the shared study server after the latest upstream sync.*
 
 **Latest: [WOLF complete teardown, v4](examples/wolf-actuator/tour-v4/README.md).** One 245-leaf assembly moves from the whole actuator into gear-pair, magnet and bearing close-ups, then fully reassembles. Its 85.7-second tour demonstrates the new [Mating Close-up module](.agents/skills/mechanism-studio/references/modules/mating-closeup.md); a portable [delivery record](examples/wolf-actuator/tour-v4/delivery.json) makes the source and output fingerprints inspectable. [Run it locally](#try-it-locally).
 
@@ -39,6 +53,29 @@ npm run preview
 
 Open **http://127.0.0.1:4179/**. The included viewing assets run locally with no Blender installation, MCP connection or speech credentials. Dependencies are served from the local installation. A first clone includes substantial CAD source files for provenance and reproducibility.
 
+For the new dexterous-hand study, generate its local score and start its server:
+
+```sh
+node tools/audio/build-study-score.mjs --example examples/allegro-hand
+node examples/allegro-hand/serve.mjs
+```
+
+Open **http://127.0.0.1:4185/?clean=1**. For the Robotiq gripper, use a separate
+terminal:
+
+```sh
+node tools/audio/build-study-score.mjs --example examples/robotiq-gripper
+node examples/robotiq-gripper/serve.mjs
+```
+
+Open **http://127.0.0.1:4186/?clean=1**. Both studies include their source and
+display assets; the WAVs are generated locally. Click **Play with music** to
+enable sound, or use the silent loop. Their example READMEs include optional
+MJCF-to-GLB rebuilding commands and exact source limitations.
+Both specialized servers reuse the shared preview runtime while retaining their
+own explicit routes. The root gallery links to these server commands; it does
+not serve either study under `/examples/`.
+
 For the robot music studies, use a second terminal:
 
 ```sh
@@ -71,6 +108,8 @@ for the 85.733-second encoded delivery and its recorded verification.
 | Example | What to explore | Scope |
 | --- | --- | --- |
 | [Five-speed gearbox](examples/gearbox/README.md) | Case, three shafts, 13 gears and three synchronizers; drive through 1st–5th with the active power path highlighted and a synchronizer close-up; 40 seconds | Original teaching model, 124 parts / 15 assemblies; exact tooth ratios, no load, friction or clutch simulation |
+| [Allegro dexterous hand](examples/allegro-hand/README.md) | Finger curl, thumb opposition, source finger-chain separation and restoration; 35.56 seconds | Sixteen declared hinges; valid neutral pose and source limits, no tendon/contact simulation or invented internal parts |
+| [Robotiq 2F-85 gripper](examples/robotiq-gripper/README.md) | Coordinated jaws, local four-bar linkage, exploded links and reassembly; 35.56 seconds | Analytic closure of the pinned source linkage; authored free-space path, no object-contact or force solution |
 | [Unitree G1 humanoid](examples/humanoid/README.md) | Full-body expansion, close shoulder/wrist and knee/ankle views, restoration, music and action cues; 35.56 seconds | 30 MJCF body identities, 35 source visual occurrences, 29 retained joint declarations; static source pose, no per-screw internals |
 | [SO-ARM 102 kinetic cut](EXAMPLE_ROBOT/kinetic/README.md) | Source-backed jaw and arm movement, cascading explosion, two readable details, musical reassembly; 25.7 seconds | Five revolute and two prismatic URDF joints; eight merged link meshes |
 | [SO-ARM 102 assembly study](EXAMPLE_ROBOT/README.md) | Near-part names, restrained colour changes, original music; 34.3 seconds | Link-level visual separation; no per-fastener identity |
@@ -193,7 +232,7 @@ Next milestones are source-bound B-rep measurement with known-answer fixtures; e
 
 ## License, sources and contributions
 
-**Original Mechanism Studio code, skill instructions and documentation are MIT-licensed**; see [LICENSE](LICENSE). Third-party code and model assets retain their own licenses. Unitree G1 model data and derived visuals retain BSD-3-Clause; Kenney effects retain CC0. SO-ARM 102 is CC BY 4.0, KFL08 is CC BY 3.0, WOLF is CC BY-SA 4.0, and Galileo 2 source and geometry derivatives are GPL v3. The repository's MIT license does not replace those terms.
+**Original Mechanism Studio code, skill instructions and documentation are MIT-licensed**; see [LICENSE](LICENSE). Third-party code and model assets retain their own licenses. Allegro and Robotiq model data and derived visuals retain their model-specific BSD-2-Clause notices; Unitree G1 retains BSD-3-Clause and Kenney effects retain CC0. SO-ARM 102 is CC BY 4.0, KFL08 is CC BY 3.0, WOLF is CC BY-SA 4.0, and Galileo 2 source and geometry derivatives are GPL v3. The repository's MIT license does not replace those terms.
 
 Read [licensing and the file-scope map](docs/licensing.md) and [third-party notices](THIRD_PARTY_NOTICES.md) before redistributing example assets or recordings. The project began with workflow ideas adapted from Anatomy; that history and the retained MIT notice are recorded in [origins](docs/origins.md). Upstream model authors are credited separately from Mechanism Studio's implementation.
 

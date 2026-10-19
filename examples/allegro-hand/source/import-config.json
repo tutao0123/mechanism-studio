@@ -1,0 +1,8 @@
+{
+  "modelId": "allegro-right",
+  "expected": {
+    "bodyCount": 21,
+    "jointCount": 16,
+    "visualCount": 21
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "allegro-source-study-1",
+  "route": "Showcase",
+  "bpm": 108,
+  "totalBeats": 64,
+  "durationSeconds": 35.55555555555556,
+  "source": "source/provenance.json",
+  "geometry": "assets/assembly.glb",
+  "timeline": "story.mjs",
+  "appearance": "White solids and fine dark contours; no per-part color cycling.",
+  "motion": "Authored in-range source-axis joint poses. thj0 neutral is 0.263 rad; others are 0. Source nodes remain unchanged.",
+  "chapters": [
+    {"id":"gesture","beats":[0,12],"action":"Open, curl and reopen; 16 source hinge joints, no contact solver."},
+    {"id":"opposition","beats":[12,22],"action":"Opposing thumb movement, returning to valid neutral before expansion."},
+    {"id":"separate","beats":[22,34],"action":"Four actual finger chains separate in overlapping cohorts; read two settled names."},
+    {"id":"detail","beats":[34,46],"action":"Context fades before the camera magnifies the original first-finger chain. Two sequential near names."},
+    {"id":"restore","beats":[46,58],"action":"Pull back before context returns; reverse the real occurrence offsets."},
+    {"id":"resolve","beats":[58,64],"action":"Whole view restores the valid neutral pose and beginning camera before looping."}
+  ],
+  "detailIds": ["mjcf:ff_base","mjcf:ff_proximal","mjcf:ff_medial","mjcf:ff_distal","mjcf:ff_tip"],
+  "limitations": ["Simulation link geometry, not manufacturing STEP or internals.","No contacts, collision-free disassembly, grip forces or hardware operation validated.","A live showcase is not a synthesized video or proof of publication."]
+}
