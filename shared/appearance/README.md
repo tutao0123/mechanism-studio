@@ -44,4 +44,21 @@ keep their own settings: changing them alters published delivery fingerprints,
 so migrate one deliberately and re-record its evidence. These are visual parameters, not a
 physical material or finish.
 
+## Study styles
+
+`styles.mjs` holds the study shell's styles as frozen data (revision
+`study-styles-1`). `atlas` is the shell's long-standing look with the same values,
+so a page that names no style is unchanged. `blueprint` draws white lines on a
+Prussian-blue sheet. Its solids are unlit `MeshBasicMaterial` in the sheet colour, so
+they hide the lines behind them, as ink on paper would. It also has a lighter
+centre-line colour and one red stamp colour. `resolveStyle(id)` refuses unknown
+IDs and any style whose accent base is not its solid fill, because the colour
+layer tints from that base. `applyStyleScene(scene, style)` sets the background
+and lights in the shell's original order, and `createStyleFill(style)` returns a
+fresh solid material per mesh. Styles are opt-in per page; do not restyle an
+existing page or its delivery by changing a default. The blueprint palette is an
+idea taken from the MIT-licensed
+[lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) style library. No code
+or asset is copied.
+
 Tests: `node --test shared/appearance/tests/*.test.mjs`.

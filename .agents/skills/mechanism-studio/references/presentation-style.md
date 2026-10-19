@@ -68,6 +68,18 @@ Keep the existing web layout and typeface choices. Use a scoped capture/export p
 
 Record capture dimensions, actual font sizes, reviewed display widths, representative timestamps and any remaining limitations. Keep “layout checks passed,” “encoded downscale visually reviewed” and “readable during playback” as separate claims; do not mark the latter checks complete before performing them.
 
+## Opt-in alternative styles and drafting grammar
+
+The white atlas stays the default. When the user asks for another look, a study page may name a style from the [style registry](../../../../shared/appearance/README.md#study-styles) through the shell's `appearance` option. Currently the only alternative is `blueprint`: white line work on a Prussian-blue sheet, unlit sheet-coloured solids, centre lines on real axes, a ruled title block, and at most one red stamp tied to a real state. Build it as a separate edition next to the default page. Do not switch an existing page or delivery over, because that changes its fingerprints.
+
+These grammar elements may be used in either style when they explain something:
+
+- **Spec labels.** A two-digit index in order of appearance, the name, and one spec line. Compute every number from the model's own data, such as its spec, scene index or measured GLB, and test it. Never type a measurement into a label. Keep the two-label limit and the short-leader placement.
+- **Dimensions.** Draw a dimension on the object with extension lines and slanted ticks, between real points. Show it only while every part it measures sits at its assembled rest; a dimension of a displaced state is false.
+- **Wave lift.** Within one repeated set, parts may lift one after another, ordered by their geometry, with a small total spread, and return in reverse order. Each part moves along its own real offset; never copy or scale parts.
+
+These ideas come from the MIT-licensed [lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) style library and are implemented independently. Copy none of its code, films or assets. Credit it where a page or README describes the style. The [gearbox example](../../../../examples/gearbox/README.md#two-editions) is the reference implementation.
+
 ## Acceptance
 
 Inspect real first/last, whole/detail/intermediate/max-explosion frames and intended aspect ratios. Check conservative bounds, no breathing, pause/seek/loop/exploration/resize/reduced-motion behavior, and label reveal/read/retain/fade. Review long text/crowded chapters, truthful anchors, short leaders, credit visibility and no horizontal overflow.

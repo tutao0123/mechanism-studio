@@ -156,6 +156,25 @@ this README and the plan's delivery status are metadata only: no renderer,
 source geometry, camera, timeline or audio input changed, so no new frame
 capture is needed for that documentation update.
 
+### Shared shell change after delivery
+
+The [delivery record](delivery.json) is kept as captured. Since then the shared
+study shell `shared/study/study.mjs` has gained an opt-in appearance option,
+spec labels and drafting hooks (study styles revision `study-styles-1`). Its
+digest therefore no longer matches the record
+(`9fb1f306…c04f` at capture, `fa3dd0f2…7c4b` now), and `npm run check:delivery`
+reports that one file as failed by design. The record is not re-hashed to make
+it pass. This edition passes no `appearance` option, so it renders with the
+default `atlas` style, whose values are those the shell used before.
+
+The [pixel-identity record](../../../shared/study/evidence/default-style-pixels.json)
+compares deterministic Chromium frames from before and after the change on six
+existing study pages. These include this tour at 10, 40 and 70 s and at twelve
+settled seek points. All 90 frames are byte-identical, as are the label names.
+That evidence covers the sampled frames under software rendering. It is not a
+recapture of the 2572-frame film. Issue a new delivery record if this tour is
+recaptured or its own inputs change.
+
 ## Source and older editions
 
 [Tour v3](../tour-v3/README.md), [v2](../tour-v2/README.md), the [v1 complete film](../tour/README.md),

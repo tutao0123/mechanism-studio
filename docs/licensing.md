@@ -89,6 +89,9 @@ The only third-party sampled audio currently bundled is the five-file Kenney
 CC0 **sound-effect** subset, distinct from the original music composition.
 SOLIDWORKS, Creo, Fusion, VS Code and GitHub names identify appearance references;
 they are not claims of affiliation or native CAD compatibility.
+The blueprint style and drafting annotation grammar take ideas from the
+MIT-licensed lemo-opuscar style library; they are independent implementations
+with no copied code or media ([notice](../THIRD_PARTY_NOTICES.md#design-ideas-from-lemo-opuscar)).
 
 <a id="optional-doubao-narration"></a>
 

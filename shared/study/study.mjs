@@ -4,6 +4,8 @@ import { createCameraDirector } from '/showcase/camera-director.mjs';
 import { placeAnnotation, moveAnnotation } from '/shared/viewer/annotation-layout.mjs';
 import { COLOR_ACCENT_REVISION, sampleColorAccents } from '/shared/appearance/color-accents.mjs';
 import { createMeshColorLayer, createMeshVisibilityLayer } from '/shared/appearance/mesh-color-layer.mjs';
+import { resolveStyle, applyStyleScene, createStyleFill } from '/shared/appearance/styles.mjs';
+import { writeLabel, measureLabel, placeLabelText, labelPlainText } from '/shared/viewer/spec-label.mjs';
 
 /** One instance owns the study shell on a page. The example supplies all source
  * identities, mechanics, chapter timing, detail targets and framing policy. */
@@ -16,6 +18,9 @@ const parameters = new URLSearchParams(location.search);
 const captureEnabled = parameters.get('capture') === '1';
 if (parameters.get('clean') === '1') document.body.classList.add('clean');
 if (captureEnabled) document.body.classList.add('capture');
+// Optional visual style; omitting it keeps the original atlas look exactly.
+const style = resolveStyle(config.appearance ?? 'atlas');
+if (style.bodyClass) document.body.classList.add(style.bodyClass);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 const audio = new Audio(); audio.id = 'study-audio'; audio.loop = true; audio.preload = 'auto'; document.body.append(audio);
 let viewer, index, framing, score, source, musicReady = false, ready = false, musicError = null;
@@ -98,7 +103,7 @@ function prepareLabels(state, width, height, viewportBox) {
   for (const [i, [id, text]] of state.chapter.labels.entries()) {
     const reference = stateAt(chapterStart + CUE_WINDOWS[state.chapter.id][i][0] + .001);
     if (config.presentationOpacity && config.presentationOpacity(reference, id) < .5) { layouts.push(null); continue; }
-    const label = $(`label-${i ? 'b' : 'a'}`); label.textContent = text;
+    const label = $(`label-${i ? 'b' : 'a'}`); writeLabel(label, text);
     const points = [], obstacles = [...placed, { x: credit.left - viewportBox.left, y: credit.top - viewportBox.top, width: credit.width, height: credit.height }];
     for (const mesh of viewer.meshes) {
       if (!mesh.visible) continue;
@@ -122,7 +127,7 @@ function prepareLabels(state, width, height, viewportBox) {
         obstacles.push({ x: Math.min(...xs), y: Math.min(...ys), width: Math.max(...xs) - Math.min(...xs), height: Math.max(...ys) - Math.min(...ys) });
       }
     }
-    const layout = placeAnnotation({ points, width, height, textWidth: label.getComputedTextLength(), textHeight: parseFloat(getComputedStyle(label).fontSize) * 1.3, obstacles, preferredSide: i ? 'right' : 'left' });
+    const size = measureLabel(label), layout = placeAnnotation({ points, width, height, textWidth: size.width, textHeight: size.height, obstacles, preferredSide: i ? 'right' : 'left' });
     if (layout) {
       layout.anchorWorld = points.find(p => p.x === layout.anchor.x && p.y === layout.anchor.y).world;
       placed.push(layout.rect);
@@ -148,10 +153,10 @@ function showLabels(state, cues) {
     const rect = layout.rect;
     if (rect.x < 5 || rect.y < 5 || rect.x + rect.width > width - 5 || rect.y + rect.height > height - 5 || annotationSnapshots.some(other => rect.x < other.rect.x + other.rect.width + 4 && rect.x + rect.width > other.rect.x - 4 && rect.y < other.rect.y + other.rect.height + 4 && rect.y + rect.height > other.rect.y - 4)) continue;
     const suffix = cue.index ? 'b' : 'a', label = $(`label-${suffix}`);
-    label.setAttribute('x', layout.text.x); label.setAttribute('y', layout.text.y); label.setAttribute('text-anchor', layout.text.anchor);
+    placeLabelText(label, layout.text.x, layout.text.y, layout.text.anchor);
     $(`leader-${suffix}`).setAttribute('d', `M${layout.anchor.x},${layout.anchor.y} L${layout.end.x},${layout.end.y}`);
     $(`annotation-${suffix}`).style.opacity = String(cue.opacity);
-    annotationSnapshots.push({ id: cue.id, name: cue.text, opacity: cue.opacity, ...layout });
+    annotationSnapshots.push({ id: cue.id, name: labelPlainText(cue.text), opacity: cue.opacity, ...layout });
   }
 }
 function applyFrame({ forceCut = false } = {}) {
@@ -190,7 +195,7 @@ function applyFrame({ forceCut = false } = {}) {
   $('seek').value = time; $('elapsed').textContent = formatTime(time);
   const cues = manualCamera ? [] : annotationCues(state, { paused: !playing, cameraSettled: director.snapshot().progress >= .999 });
   const accents = config.appearanceCues?.(state, cues) ?? cues.map(cue => ({ id: cue.id, weight: cue.opacity }));
-  colorAssignments = sampleColorAccents(partIds, accents, { enabled: colorCues });
+  colorAssignments = sampleColorAccents(partIds, accents, { enabled: colorCues, baseColor: style.accents.base, accentColor: style.accents.accent });
   colorLayer.apply(colorAssignments);
   // Optional presentation-only material/annotation adapter. It shares the
   // resolved story clock and camera; source and mechanical pose ownership stay
@@ -245,10 +250,7 @@ async function init() {
   if (config.creditLabel) document.querySelector('.asset-credit').textContent = config.creditLabel;
   $('duration').textContent = formatTime(DURATION); $('seek').max = DURATION;
   framing = config.createFraming(index);
-  const scene = new THREE.Scene(); scene.background = new THREE.Color('#ffffff');
-  scene.add(new THREE.HemisphereLight('#ffffff', '#d9d9d5', 2.4));
-  const key = new THREE.DirectionalLight('#ffffff', 2.2); key.position.set(-.5, 1.5, 1.2); scene.add(key);
-  const fill = new THREE.DirectionalLight('#ffffff', .65); fill.position.set(.8, .35, -.7); scene.add(fill);
+  const scene = new THREE.Scene(); applyStyleScene(scene, style);
   const camera = new THREE.OrthographicCamera(-.4, .4, .3, -.3, .001, 20);
   if (config.cameraUp !== undefined) {
     if (!Array.isArray(config.cameraUp) || config.cameraUp.length !== 3 || !config.cameraUp.every(Number.isFinite) || Math.hypot(...config.cameraUp) <= 0) throw new TypeError('Camera up must contain three finite coordinates with nonzero length.');
@@ -258,11 +260,11 @@ async function init() {
   }
   viewer = createMechanismViewer({
     viewport: $('viewport'), scene, camera, assetUrl: config.assetUrl, contractUrl: config.contractUrl, autoRender: false,
-    lineStyle: { enabled: true, color: '#353532', detailColor: '#93938e' }, pixelRatio: captureEnabled ? 1 : 1.8,
+    lineStyle: { ...style.lines }, pixelRatio: captureEnabled ? 1 : 1.8,
     // A deterministic recording can sit on one frame between screenshot calls.
     // Retain that frame instead of depending on a live RAF repaint at capture.
     rendererOptions: captureEnabled ? { preserveDrawingBuffer: true } : {},
-    configureMesh(mesh) { mesh.material = new THREE.MeshStandardMaterial({ color: '#f1f1ed', metalness: 0, roughness: .88, side: THREE.FrontSide }); },
+    configureMesh(mesh) { mesh.material = createStyleFill(style); },
     onControlsChange() { if (manualCamera) dirty = true; }, onResize() { dirty = true; if (!capturing) cut = true; },
   });
   await viewer.ready; if (viewer.parts.size !== partIds.length || [...viewer.parts.keys()].some(id => !partRecords.has(id))) throw new Error('Scene-index and visible source parts disagree.');
@@ -283,7 +285,7 @@ async function init() {
 const api = {
   seek(seconds) { pause(); seek(seconds); applyFrame({ forceCut: true }); },
   play: playMusic, pause,
-  snapshot() { const state = stateAt(time); return { ready, playing, musicReady, musicClock, muted, capturing, colorCues, colorAccentRevision: COLOR_ACCENT_REVISION, appearance: Object.fromEntries(colorAssignments), audioEdition: score?.edition, audioSha256: score?.sha256, feltBpm: score?.feltBpm, time, audioTime: audio.currentTime, duration: DURATION, loops, chapter: state.chapter.id, progress: state.progress, offsetsWorld: state.offsetsWorld, camera: viewer && currentPose(), annotations: annotationSnapshots, geometryRevision: index?.geometryRevision, sourceRevision: source?.revision || source?.commit, parts: viewer?.parts.size }; },
+  snapshot() { const state = stateAt(time); return { ready, style: style.id, playing, musicReady, musicClock, muted, capturing, colorCues, colorAccentRevision: COLOR_ACCENT_REVISION, appearance: Object.fromEntries(colorAssignments), audioEdition: score?.edition, audioSha256: score?.sha256, feltBpm: score?.feltBpm, time, audioTime: audio.currentTime, duration: DURATION, loops, chapter: state.chapter.id, progress: state.progress, offsetsWorld: state.offsetsWorld, camera: viewer && currentPose(), annotations: annotationSnapshots, geometryRevision: index?.geometryRevision, sourceRevision: source?.revision || source?.commit, parts: viewer?.parts.size }; },
   get viewer() { return viewer; }, get framing() { return framing; }, get index() { return index; },
 };
 if (captureEnabled) api.capture = {

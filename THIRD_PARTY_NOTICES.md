@@ -291,3 +291,14 @@ compatibility. Official screenshots, CAD manuals/reference render captures used
 only for private appearance research are excluded; original reference URLs and
 written observations may remain. Separately licensed open source assembly
 manuals explicitly listed above are retained with their source licenses.
+
+### Design ideas from lemo-opuscar
+
+The opt-in blueprint study style, the index–name–spec label grammar, drawn
+dimensions and the wave lift of repeated parts follow ideas described in
+[lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) by lemomo-ai, whose
+code and documentation are MIT-licensed and whose films are CC BY 4.0. These
+features are implemented independently in `shared/appearance/styles.mjs`,
+`shared/viewer/spec-label.mjs`, `shared/viewer/drafting.mjs`, the study CSS and
+the gearbox example. No lemo-opuscar code, film, frame, font or other asset is
+bundled, and nothing from the related lemo-wake project (CC BY-NC 4.0) is included.
