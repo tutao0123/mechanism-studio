@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "stage": "bound",
+  "geometryRevision": "gearbox-4babbc47aa4c-display-1",
+  "planRevision": "gearbox-story-1",
+  "route": "Showcase",
+  "language": "en",
+  "inputKind": "Original authored teaching model (no third-party source)",
+  "license": "MIT",
+  "goal": "Show how one lever chooses a different power path: structure, free-running gears, synchronizer engagement and the ratio of every forward gear.",
+  "requestedDepth": "Whole gearbox to synchronizer keys and bearing balls",
+  "availableDepth": "124 parts in 15 assemblies",
+  "engineeringEvidence": "Authored spec gearbox-spec-1: module 3 mm, one 81 mm centre distance, exact tooth ratios.",
+  "presentation": "Slowed rotation for legibility; authored shift timing; editorial explosion offsets.",
+  "limitations": [
+    "Original teaching model with authored dimensions; not a production gearbox or engineering CAD.",
+    "Straight-cut spur gears of one module for legibility; production gearboxes typically use helical forward gears.",
+    "Gear speeds follow ideal rigid tooth ratios. No load, friction, backlash, efficiency or contact stress is computed.",
+    "Synchronizer speed matching and dog alignment are authored on the timeline, not simulated friction or indexing.",
+    "Ball bearings are idealized pure rolling; needle bearings are plain display sleeves. Seals, oil, the clutch and the shift interlock are omitted."
+  ]
+}

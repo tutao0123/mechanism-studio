@@ -1,8 +1,8 @@
 # What is actually in the examples?
 
-Audit date: **2026-10-18**. This inventory describes retained source files and
-implemented entry points, not every local development export. There are **ten
-implemented experiences**, including the new humanoid. The English Showcase
+Audit date: **2026-10-19**. This inventory describes retained source files and
+implemented entry points, not every local development export. There are **eleven
+implemented experiences**, including the new gearbox. The English Showcase
 offers further cuts of the same engine, turbofan and quadruped models; those
 are not three more independently modeled assemblies.
 
@@ -13,6 +13,7 @@ specialized study servers use separate, read-only route allowlists.
 
 | Experience | Actual location / implementation | Open after starting the server | Current boundary |
 | --- | --- | --- | --- |
+| Five-speed gearbox | `examples/gearbox/`: original authored spec, exact-ratio kinematics, 124-part GLB in 15 nested assemblies, deterministic story/score, plans and tests | `node examples/gearbox/serve.mjs` → [40 s study](http://127.0.0.1:4183/?clean=1) | Original teaching model; ideal rigid tooth ratios and authored synchronizer timing; no load, friction, clutch or contact simulation |
 | Unitree G1 humanoid | `examples/humanoid/`: retained complete 29-DoF model visual source, 30 source-body identities, GLB, deterministic story/score and tests | `node examples/humanoid/serve.mjs` → [35.56 s study](http://127.0.0.1:4182/?clean=1) | Static source-pose/link-level separation; no per-screw or actuator internals, native CAD or dynamics claim |
 | Five-pin lock | `prototype-3d/`: GLB, controller, line art, key profiles, Blender builder and lesson | `npm run preview` → [lock](http://127.0.0.1:4179/prototype-3d/?palette=line-light) | Authored teaching geometry, idealized pin stack; no lock tolerancing/contact solver |
 | Inline-four engine | `examples/inline-four/`: 25 tracked files in the audited release, including GLB, crank/valve/process model and tests | Root server → [engine](http://127.0.0.1:4179/examples/inline-four/) | Prescribed kinematics and qualitative injection/ignition; no combustion simulation |

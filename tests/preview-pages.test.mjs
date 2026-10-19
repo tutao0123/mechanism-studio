@@ -7,12 +7,14 @@ import { STUDY_RUNTIME_FILES } from '../shared/study/preview-server.mjs';
 import * as robot from '../EXAMPLE_ROBOT/serve.mjs';
 import * as humanoid from '../examples/humanoid/serve.mjs';
 import * as wolf from '../examples/wolf-actuator/serve.mjs';
+import * as gearbox from '../examples/gearbox/serve.mjs';
 
 const project = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const servers = [
   ['EXAMPLE_ROBOT', robot.publicFile],
   ['examples/humanoid', humanoid.publicFile],
   ['examples/wolf-actuator', wolf.publicFile],
+  ['examples/gearbox', gearbox.publicFile],
 ];
 // Gitignored local renders and synthesized music may be absent in a clean
 // checkout; every tracked dependency must be present and served.

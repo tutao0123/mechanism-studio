@@ -68,3 +68,26 @@ node --test tools/video/export.test.mjs tools/video/integration.test.mjs
 These tests use temporary folders under `output/video-tool-tests`; no browser,
 credentials or network are involved. The integration test exercises the full
 encoder with a two-second generated fixture; it skips if FFmpeg/FFprobe is absent.
+
+## README previews
+
+`readme-preview.mjs` turns the same numbered frames into README-sized media:
+an animated GIF, which GitHub renders inline from the repository, and a small
+silent H.264 MP4 for places that accept video uploads.
+
+```sh
+node tools/video/readme-preview.mjs --frames examples/gearbox/output/frames --fps 30 --out examples/gearbox/output/gearbox-readme --gif-width 800 --gif-fps 15
+```
+
+`--start`/`--end` take an excerpt in seconds. The GIF keeps every n-th frame,
+where n must divide the capture rate exactly, so motion stays evenly spaced; its
+palette is built from frame differences. Size gates (`--max-gif-mb`, default 8;
+`--max-mp4-mb`, default 4) fail with a concrete suggestion instead of shipping a
+heavy README. The tool writes `<stem>.gif`, `<stem>.mp4` and
+`<stem>-preview.json` (hashes, dimensions, decoded frame counts) inside an
+`output` directory and refuses to overwrite without `--overwrite`.
+
+It checks size and decoding only. Before publishing, watch the GIF at its README
+width: fast gear teeth can strobe at low GIF frame rates, and small labels or
+credits may become unreadable. Copy reviewed files into `docs/media/` and list
+their terms in `docs/media/LICENSE.md`.

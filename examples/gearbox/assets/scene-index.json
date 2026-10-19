@@ -1,0 +1,10125 @@
+{
+  "schemaVersion": "1.0.0",
+  "geometryRevision": "gearbox-4babbc47aa4c-display-1",
+  "units": "m",
+  "coordinateBasis": "glTF metres, right-handed, +Y up; shafts along +X from the engine side (−X) to the output (+X)",
+  "rootId": "gb-asm:gearbox",
+  "source": {
+    "title": "Five-speed teaching gearbox",
+    "author": "Mechanism Studio",
+    "license": "MIT",
+    "specRevision": "gearbox-spec-1",
+    "kinematicsRevision": "gearbox-kinematics-1"
+  },
+  "asset": {
+    "file": "assets/gearbox.glb",
+    "sha256": "aeeba8112bb2331a8cf67a740cdfb9292b83784a55ffa47acedec146ddb0cd7c",
+    "assembledWorldBounds": {
+      "min": [
+        -0.27,
+        -0.18299999999999997,
+        -0.165
+      ],
+      "max": [
+        0.314,
+        0.2235,
+        0.165
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "gb:input/shaft",
+      "name": "Input shaft",
+      "parentId": "gb-asm:input",
+      "role": "spin:input",
+      "group": "input",
+      "motionOwner": "model",
+      "definitionId": "gb-def:input/shaft",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.09,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.09,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.18000000000000002,
+          -0.032998395298027096,
+          -0.032998395298027096
+        ],
+        "max": [
+          0.016,
+          0.032998395298027096,
+          0.032998395298027096
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.27,
+          -0.032998395298027096,
+          -0.032998395298027096
+        ],
+        "max": [
+          -0.074,
+          0.032998395298027096,
+          0.032998395298027096
+        ]
+      },
+      "worldCenter": [
+        -0.17200000000000001,
+        0,
+        0
+      ],
+      "triangleCount": 4624
+    },
+    {
+      "id": "gb:input/bearing-input/inner",
+      "name": "Inner race",
+      "parentId": "gb-asm:input/bearing-input",
+      "role": "spin:inner:input",
+      "group": "input-bearing",
+      "motionOwner": "model",
+      "definitionId": "gb-def:race-inner-input",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.020288,
+          -0.020288
+        ],
+        "max": [
+          0.008,
+          0.020288,
+          0.020288
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.134,
+          -0.020288,
+          -0.020288
+        ],
+        "max": [
+          -0.118,
+          0.020288,
+          0.020288
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:input/bearing-input/outer",
+      "name": "Outer race",
+      "parentId": "gb-asm:input/bearing-input",
+      "role": "static",
+      "group": "input-bearing",
+      "motionOwner": "static",
+      "definitionId": "gb-def:race-outer-input",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.034,
+          -0.034
+        ],
+        "max": [
+          0.008,
+          0.034,
+          0.034
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.134,
+          -0.034,
+          -0.034
+        ],
+        "max": [
+          -0.118,
+          0.034,
+          0.034
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:input/bearing-input/ball-1",
+      "name": "Ball 1",
+      "parentId": "gb-asm:input/bearing-input",
+      "role": "spin:cage:input",
+      "group": "input-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-input",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.024,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        0.024,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0058000000000000005,
+          -0.0058000000000000005,
+          -0.005711884967470808
+        ],
+        "max": [
+          0.0058000000000000005,
+          0.0058000000000000005,
+          0.005711884967470807
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.1318,
+          0.0182,
+          -0.005711884967470808
+        ],
+        "max": [
+          -0.1202,
+          0.0298,
+          0.005711884967470807
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        0.024,
+        -4.336808689942018e-19
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:input/bearing-input/ball-2",
+      "name": "Ball 2",
+      "parentId": "gb-asm:input/bearing-input",
+      "role": "spin:cage:input",
+      "group": "input-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-input",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.018385066634855472,
+        0.015426902632476942,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        0.018385066634855472,
+        0.015426902632476942,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0058000000000000005,
+          -0.0058000000000000005,
+          -0.005711884967470808
+        ],
+        "max": [
+          0.0058000000000000005,
+          0.0058000000000000005,
+          0.005711884967470807
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.1318,
+          0.012585066634855473,
+          0.009715017665006133
+        ],
+        "max": [
+          -0.1202,
+          0.024185066634855472,
+          0.02113878759994775
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        0.018385066634855472,
+        0.015426902632476942
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:input/bearing-input/ball-3",
+      "name": "Ball 3",
+      "parentId": "gb-asm:input/bearing-input",
+      "role": "spin:cage:input",
+      "group": "input-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-input",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.00416755626400633,
+        0.023635386072292992,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        0.00416755626400633,
+        0.023635386072292992,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0058000000000000005,
+          -0.0058000000000000005,
+          -0.005711884967470808
+        ],
+        "max": [
+          0.0058000000000000005,
+          0.0058000000000000005,
+          0.005711884967470807
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.1318,
+          -0.0016324437359936704,
+          0.017923501104822184
+        ],
+        "max": [
+          -0.1202,
+          0.00996755626400633,
+          0.029347271039763798
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        0.00416755626400633,
+        0.023635386072292992
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:input/bearing-input/ball-4",
+      "name": "Ball 4",
+      "parentId": "gb-asm:input/bearing-input",
+      "role": "spin:cage:input",
+      "group": "input-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-input",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.011999999999999995,
+        0.02078460969082653,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.011999999999999995,
+        0.02078460969082653,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0058000000000000005,
+          -0.0058000000000000005,
+          -0.005711884967470808
+        ],
+        "max": [
+          0.0058000000000000005,
+          0.0058000000000000005,
+          0.005711884967470807
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.1318,
+          -0.017799999999999996,
+          0.015072724723355722
+        ],
+        "max": [
+          -0.1202,
+          -0.006199999999999995,
+          0.026496494658297336
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.011999999999999995,
+        0.02078460969082653
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:input/bearing-input/ball-5",
+      "name": "Ball 5",
+      "parentId": "gb-asm:input/bearing-input",
+      "role": "spin:cage:input",
+      "group": "input-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-input",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.0225526228988618,
+        0.008208483439816052,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.0225526228988618,
+        0.008208483439816052,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0058000000000000005,
+          -0.0058000000000000005,
+          -0.005711884967470808
+        ],
+        "max": [
+          0.0058000000000000005,
+          0.0058000000000000005,
+          0.005711884967470807
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.1318,
+          -0.0283526228988618,
+          0.0024965984723452446
+        ],
+        "max": [
+          -0.1202,
+          -0.0167526228988618,
+          0.01392036840728686
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.0225526228988618,
+        0.008208483439816052
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:input/bearing-input/ball-6",
+      "name": "Ball 6",
+      "parentId": "gb-asm:input/bearing-input",
+      "role": "spin:cage:input",
+      "group": "input-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-input",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.022552622898861802,
+        -0.008208483439816047,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.022552622898861802,
+        -0.008208483439816047,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0058000000000000005,
+          -0.0058000000000000005,
+          -0.005711884967470808
+        ],
+        "max": [
+          0.0058000000000000005,
+          0.0058000000000000005,
+          0.005711884967470807
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.1318,
+          -0.028352622898861802,
+          -0.013920368407286856
+        ],
+        "max": [
+          -0.1202,
+          -0.016752622898861803,
+          -0.0024965984723452402
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.022552622898861802,
+        -0.008208483439816047
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:input/bearing-input/ball-7",
+      "name": "Ball 7",
+      "parentId": "gb-asm:input/bearing-input",
+      "role": "spin:cage:input",
+      "group": "input-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-input",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.01200000000000001,
+        -0.020784609690826523,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.01200000000000001,
+        -0.020784609690826523,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0058000000000000005,
+          -0.0058000000000000005,
+          -0.005711884967470808
+        ],
+        "max": [
+          0.0058000000000000005,
+          0.0058000000000000005,
+          0.005711884967470807
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.1318,
+          -0.01780000000000001,
+          -0.026496494658297332
+        ],
+        "max": [
+          -0.1202,
+          -0.00620000000000001,
+          -0.015072724723355716
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.01200000000000001,
+        -0.020784609690826523
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:input/bearing-input/ball-8",
+      "name": "Ball 8",
+      "parentId": "gb-asm:input/bearing-input",
+      "role": "spin:cage:input",
+      "group": "input-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-input",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.00416755626400632,
+        -0.023635386072292996,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        0.00416755626400632,
+        -0.023635386072292996,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0058000000000000005,
+          -0.0058000000000000005,
+          -0.005711884967470808
+        ],
+        "max": [
+          0.0058000000000000005,
+          0.0058000000000000005,
+          0.005711884967470807
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.1318,
+          -0.0016324437359936808,
+          -0.029347271039763805
+        ],
+        "max": [
+          -0.1202,
+          0.00996755626400632,
+          -0.017923501104822187
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        0.00416755626400632,
+        -0.023635386072292996
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:input/bearing-input/ball-9",
+      "name": "Ball 9",
+      "parentId": "gb-asm:input/bearing-input",
+      "role": "spin:cage:input",
+      "group": "input-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-input",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.01838506663485547,
+        -0.01542690263247695,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        0.01838506663485547,
+        -0.01542690263247695,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0058000000000000005,
+          -0.0058000000000000005,
+          -0.005711884967470808
+        ],
+        "max": [
+          0.0058000000000000005,
+          0.0058000000000000005,
+          0.005711884967470807
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.1318,
+          0.01258506663485547,
+          -0.021138787599947757
+        ],
+        "max": [
+          -0.1202,
+          0.02418506663485547,
+          -0.009715017665006143
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        0.01838506663485547,
+        -0.01542690263247695
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:main/shaft",
+      "name": "Mainshaft",
+      "parentId": "gb-asm:main",
+      "role": "spin:output",
+      "group": "mainshaft",
+      "motionOwner": "model",
+      "definitionId": "gb-def:main/shaft",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.11099999999999999,
+          -0.016,
+          -0.016
+        ],
+        "max": [
+          0.276,
+          0.016,
+          0.016
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.07299999999999998,
+          -0.016,
+          -0.016
+        ],
+        "max": [
+          0.314,
+          0.016,
+          0.016
+        ]
+      },
+      "worldCenter": [
+        0.12050000000000001,
+        0,
+        0
+      ],
+      "triangleCount": 480
+    },
+    {
+      "id": "gb:main/gear-3",
+      "name": "3rd gear",
+      "parentId": "gb-asm:main",
+      "role": "spin:main3",
+      "group": "gear:main3",
+      "motionOwner": "model",
+      "definitionId": "gb-def:main/gear-3",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.022,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.022,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.016,
+          -0.038785025194197145,
+          -0.038785025194197145
+        ],
+        "max": [
+          0.01,
+          0.038785025194197145,
+          0.03878502519419715
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.038,
+          -0.038785025194197145,
+          -0.038785025194197145
+        ],
+        "max": [
+          -0.011999999999999999,
+          0.038785025194197145,
+          0.03878502519419715
+        ]
+      },
+      "worldCenter": [
+        -0.024999999999999998,
+        0,
+        3.469446951953614e-18
+      ],
+      "triangleCount": 4896
+    },
+    {
+      "id": "gb:main/needle-3",
+      "name": "3rd gear needle bearing",
+      "parentId": "gb-asm:main",
+      "role": "needle:main3",
+      "group": "gear:main3",
+      "motionOwner": "model",
+      "definitionId": "gb-def:main/needle-3",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.022,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.022,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.015,
+          -0.0188,
+          -0.0188
+        ],
+        "max": [
+          0.008999999999999998,
+          0.0188,
+          0.0188
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.037,
+          -0.0188,
+          -0.0188
+        ],
+        "max": [
+          -0.013000000000000001,
+          0.0188,
+          0.0188
+        ]
+      },
+      "worldCenter": [
+        -0.025,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:main/gear-2",
+      "name": "2nd gear",
+      "parentId": "gb-asm:main",
+      "role": "spin:main2",
+      "group": "gear:main2",
+      "motionOwner": "model",
+      "definitionId": "gb-def:main/gear-2",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.004,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.004,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.01,
+          -0.04783472172584509,
+          -0.04799874309312589
+        ],
+        "max": [
+          0.016,
+          0.04783472172584508,
+          0.04799874309312589
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.006,
+          -0.04783472172584509,
+          -0.04799874309312589
+        ],
+        "max": [
+          0.02,
+          0.04783472172584508,
+          0.04799874309312589
+        ]
+      },
+      "worldCenter": [
+        0.007,
+        -3.469446951953614e-18,
+        0
+      ],
+      "triangleCount": 5880
+    },
+    {
+      "id": "gb:main/needle-2",
+      "name": "2nd gear needle bearing",
+      "parentId": "gb-asm:main",
+      "role": "needle:main2",
+      "group": "gear:main2",
+      "motionOwner": "model",
+      "definitionId": "gb-def:main/needle-2",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.004,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.004,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.009000000000000001,
+          -0.0188,
+          -0.0188
+        ],
+        "max": [
+          0.015,
+          0.0188,
+          0.0188
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.005000000000000001,
+          -0.0188,
+          -0.0188
+        ],
+        "max": [
+          0.019,
+          0.0188,
+          0.0188
+        ]
+      },
+      "worldCenter": [
+        0.006999999999999999,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:main/gear-1",
+      "name": "1st gear",
+      "parentId": "gb-asm:main",
+      "role": "spin:main1",
+      "group": "gear:main1",
+      "motionOwner": "model",
+      "definitionId": "gb-def:main/gear-1",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.072,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.072,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.016,
+          -0.05837017693849118,
+          -0.058482899654566815
+        ],
+        "max": [
+          0.01,
+          0.058498914665659894,
+          0.058482899654566815
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.055999999999999994,
+          -0.05837017693849118,
+          -0.058482899654566815
+        ],
+        "max": [
+          0.08199999999999999,
+          0.058498914665659894,
+          0.058482899654566815
+        ]
+      },
+      "worldCenter": [
+        0.06899999999999999,
+        0.00006436886358435548,
+        0
+      ],
+      "triangleCount": 7028
+    },
+    {
+      "id": "gb:main/needle-1",
+      "name": "1st gear needle bearing",
+      "parentId": "gb-asm:main",
+      "role": "needle:main1",
+      "group": "gear:main1",
+      "motionOwner": "model",
+      "definitionId": "gb-def:main/needle-1",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.072,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.072,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.015,
+          -0.0188,
+          -0.0188
+        ],
+        "max": [
+          0.008999999999999994,
+          0.0188,
+          0.0188
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.056999999999999995,
+          -0.0188,
+          -0.0188
+        ],
+        "max": [
+          0.08099999999999999,
+          0.0188,
+          0.0188
+        ]
+      },
+      "worldCenter": [
+        0.06899999999999999,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:main/gear-r",
+      "name": "Reverse gear",
+      "parentId": "gb-asm:main",
+      "role": "spin:mainR",
+      "group": "gear:mainR",
+      "motionOwner": "model",
+      "definitionId": "gb-def:main/gear-r",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.097,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.097,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.009,
+          -0.05084737792433258,
+          -0.05084737792433258
+        ],
+        "max": [
+          0.015,
+          0.05084737792433258,
+          0.05084737792433258
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.08800000000000001,
+          -0.05084737792433258,
+          -0.05084737792433258
+        ],
+        "max": [
+          0.112,
+          0.05084737792433258,
+          0.05084737792433258
+        ]
+      },
+      "worldCenter": [
+        0.1,
+        0,
+        0
+      ],
+      "triangleCount": 6208
+    },
+    {
+      "id": "gb:main/needle-r",
+      "name": "Reverse gear needle bearing",
+      "parentId": "gb-asm:main",
+      "role": "needle:mainR",
+      "group": "gear:mainR",
+      "motionOwner": "model",
+      "definitionId": "gb-def:main/needle-r",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.097,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.097,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008000000000000007,
+          -0.0188,
+          -0.0188
+        ],
+        "max": [
+          0.013999999999999999,
+          0.0188,
+          0.0188
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.089,
+          -0.0188,
+          -0.0188
+        ],
+        "max": [
+          0.111,
+          0.0188,
+          0.0188
+        ]
+      },
+      "worldCenter": [
+        0.1,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:main/gear-5",
+      "name": "5th gear",
+      "parentId": "gb-asm:main",
+      "role": "spin:main5",
+      "group": "gear:main5",
+      "motionOwner": "model",
+      "definitionId": "gb-def:main/gear-5",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.16299999999999998,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.16299999999999998,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.014999999999999986,
+          -0.028172803753869876,
+          -0.028449947087411498
+        ],
+        "max": [
+          0.009,
+          0.028498262692529024,
+          0.028449947087411498
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.148,
+          -0.028172803753869876,
+          -0.028449947087411498
+        ],
+        "max": [
+          0.172,
+          0.028498262692529024,
+          0.028449947087411498
+        ]
+      },
+      "worldCenter": [
+        0.15999999999999998,
+        0.00016272946932957381,
+        0
+      ],
+      "triangleCount": 3748
+    },
+    {
+      "id": "gb:main/needle-5",
+      "name": "5th gear needle bearing",
+      "parentId": "gb-asm:main",
+      "role": "needle:main5",
+      "group": "gear:main5",
+      "motionOwner": "model",
+      "definitionId": "gb-def:main/needle-5",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.16299999999999998,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.16299999999999998,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.013999999999999985,
+          -0.0188,
+          -0.0188
+        ],
+        "max": [
+          0.008000000000000007,
+          0.0188,
+          0.0188
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.149,
+          -0.0188,
+          -0.0188
+        ],
+        "max": [
+          0.17099999999999999,
+          0.0188,
+          0.0188
+        ]
+      },
+      "worldCenter": [
+        0.15999999999999998,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:main/washer-23",
+      "name": "Thrust washer",
+      "parentId": "gb-asm:main",
+      "role": "spin:output",
+      "group": "washer:washer-23",
+      "motionOwner": "model",
+      "definitionId": "gb-def:thrust-washer",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.009000000000000001,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.009000000000000001,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.002,
+          -0.03,
+          -0.03
+        ],
+        "max": [
+          0.002,
+          0.03,
+          0.03
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.011000000000000001,
+          -0.03,
+          -0.03
+        ],
+        "max": [
+          -0.007000000000000001,
+          0.03,
+          0.03
+        ]
+      },
+      "worldCenter": [
+        -0.009000000000000001,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:main/washer-1r",
+      "name": "Thrust washer",
+      "parentId": "gb-asm:main",
+      "role": "spin:output",
+      "group": "washer:washer-1r",
+      "motionOwner": "model",
+      "definitionId": "gb-def:thrust-washer",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.08499999999999999,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.08499999999999999,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.002,
+          -0.03,
+          -0.03
+        ],
+        "max": [
+          0.002,
+          0.03,
+          0.03
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.08299999999999999,
+          -0.03,
+          -0.03
+        ],
+        "max": [
+          0.087,
+          0.03,
+          0.03
+        ]
+      },
+      "worldCenter": [
+        0.08499999999999999,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:main/synchro-s34/hub",
+      "name": "Synchronizer hub",
+      "parentId": "gb-asm:main/synchro-s34",
+      "role": "spin:output",
+      "group": "synchro:s34",
+      "motionOwner": "model",
+      "definitionId": "gb-def:hub-s34",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.055999999999999994,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.011,
+          -0.029945630797634744,
+          -0.029945630797634744
+        ],
+        "max": [
+          0.011,
+          0.029945630797634744,
+          0.029945630797634744
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.06699999999999999,
+          -0.029945630797634744,
+          -0.029945630797634744
+        ],
+        "max": [
+          -0.045,
+          0.029945630797634744,
+          0.029945630797634744
+        ]
+      },
+      "worldCenter": [
+        -0.055999999999999994,
+        0,
+        0
+      ],
+      "triangleCount": 960
+    },
+    {
+      "id": "gb:main/synchro-s34/sleeve",
+      "name": "Synchronizer sleeve",
+      "parentId": "gb-asm:main/synchro-s34",
+      "role": "sleeve:s34",
+      "group": "synchro:s34:sleeve",
+      "motionOwner": "model",
+      "definitionId": "gb-def:sleeve-s34",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.055999999999999994,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.013,
+          -0.041999999999999996,
+          -0.041999999999999996
+        ],
+        "max": [
+          0.013,
+          0.041999999999999996,
+          0.041999999999999996
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.06899999999999999,
+          -0.041999999999999996,
+          -0.041999999999999996
+        ],
+        "max": [
+          -0.043,
+          0.041999999999999996,
+          0.041999999999999996
+        ]
+      },
+      "worldCenter": [
+        -0.055999999999999994,
+        0,
+        0
+      ],
+      "triangleCount": 1728
+    },
+    {
+      "id": "gb:main/synchro-s34/ring-front",
+      "name": "Blocker ring (front)",
+      "parentId": "gb-asm:main/synchro-s34",
+      "role": "ring:s34:-1",
+      "group": "synchro:s34:ring-1",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ring-s34",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.014,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.06999999999999999,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.029945630797634744,
+          -0.029945630797634744
+        ],
+        "max": [
+          0.0025,
+          0.029945630797634744,
+          0.029945630797634744
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0725,
+          -0.029945630797634744,
+          -0.029945630797634744
+        ],
+        "max": [
+          -0.06749999999999999,
+          0.029945630797634744,
+          0.029945630797634744
+        ]
+      },
+      "worldCenter": [
+        -0.06999999999999999,
+        0,
+        0
+      ],
+      "triangleCount": 960
+    },
+    {
+      "id": "gb:main/synchro-s34/ring-rear",
+      "name": "Blocker ring (rear)",
+      "parentId": "gb-asm:main/synchro-s34",
+      "role": "ring:s34:1",
+      "group": "synchro:s34:ring1",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ring-s34",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.014,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.041999999999999996,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.029945630797634744,
+          -0.029945630797634744
+        ],
+        "max": [
+          0.0025,
+          0.029945630797634744,
+          0.029945630797634744
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0445,
+          -0.029945630797634744,
+          -0.029945630797634744
+        ],
+        "max": [
+          -0.03949999999999999,
+          0.029945630797634744,
+          0.029945630797634744
+        ]
+      },
+      "worldCenter": [
+        -0.041999999999999996,
+        0,
+        0
+      ],
+      "triangleCount": 960
+    },
+    {
+      "id": "gb:main/synchro-s34/key-1",
+      "name": "Synchronizer key 1",
+      "parentId": "gb-asm:main/synchro-s34",
+      "role": "key:s34",
+      "group": "synchro:s34:keys",
+      "motionOwner": "model",
+      "definitionId": "gb-def:key-s34-1",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.055999999999999994,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          0.020833647796503183,
+          0.0105849364905389
+        ],
+        "max": [
+          0.008,
+          0.026191531628991835,
+          0.016565063509461096
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.064,
+          0.020833647796503183,
+          0.0105849364905389
+        ],
+        "max": [
+          -0.047999999999999994,
+          0.026191531628991835,
+          0.016565063509461096
+        ]
+      },
+      "worldCenter": [
+        -0.055999999999999994,
+        0.023512589712747507,
+        0.013574999999999999
+      ],
+      "triangleCount": 12
+    },
+    {
+      "id": "gb:main/synchro-s34/key-2",
+      "name": "Synchronizer key 2",
+      "parentId": "gb-asm:main/synchro-s34",
+      "role": "key:s34",
+      "group": "synchro:s34:keys",
+      "motionOwner": "model",
+      "definitionId": "gb-def:key-s34-2",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.055999999999999994,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.026191531628991828,
+          0.010584936490538911
+        ],
+        "max": [
+          0.008,
+          -0.02083364779650318,
+          0.016565063509461107
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.064,
+          -0.026191531628991828,
+          0.010584936490538911
+        ],
+        "max": [
+          -0.047999999999999994,
+          -0.02083364779650318,
+          0.016565063509461107
+        ]
+      },
+      "worldCenter": [
+        -0.055999999999999994,
+        -0.023512589712747504,
+        0.013575000000000009
+      ],
+      "triangleCount": 12
+    },
+    {
+      "id": "gb:main/synchro-s34/key-3",
+      "name": "Synchronizer key 3",
+      "parentId": "gb-asm:main/synchro-s34",
+      "role": "key:s34",
+      "group": "synchro:s34:keys",
+      "motionOwner": "model",
+      "definitionId": "gb-def:key-s34-3",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.055999999999999994,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.0025000000000000053,
+          -0.0288
+        ],
+        "max": [
+          0.008,
+          0.0024999999999999953,
+          -0.0255
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.064,
+          -0.0025000000000000053,
+          -0.0288
+        ],
+        "max": [
+          -0.047999999999999994,
+          0.0024999999999999953,
+          -0.0255
+        ]
+      },
+      "worldCenter": [
+        -0.055999999999999994,
+        -4.9873299934333204e-18,
+        -0.02715
+      ],
+      "triangleCount": 12
+    },
+    {
+      "id": "gb:main/synchro-s12/hub",
+      "name": "Synchronizer hub",
+      "parentId": "gb-asm:main/synchro-s12",
+      "role": "spin:output",
+      "group": "synchro:s12",
+      "motionOwner": "model",
+      "definitionId": "gb-def:hub-s12",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.011,
+          -0.033938381570652716,
+          -0.033938381570652716
+        ],
+        "max": [
+          0.011,
+          0.033938381570652716,
+          0.033938381570652716
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.027,
+          -0.033938381570652716,
+          -0.033938381570652716
+        ],
+        "max": [
+          0.049,
+          0.033938381570652716,
+          0.033938381570652716
+        ]
+      },
+      "worldCenter": [
+        0.038,
+        0,
+        0
+      ],
+      "triangleCount": 960
+    },
+    {
+      "id": "gb:main/synchro-s12/sleeve",
+      "name": "Synchronizer sleeve",
+      "parentId": "gb-asm:main/synchro-s12",
+      "role": "sleeve:s12",
+      "group": "synchro:s12:sleeve",
+      "motionOwner": "model",
+      "definitionId": "gb-def:sleeve-s12",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.013,
+          -0.046,
+          -0.046
+        ],
+        "max": [
+          0.013,
+          0.046,
+          0.046
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.025,
+          -0.046,
+          -0.046
+        ],
+        "max": [
+          0.051,
+          0.046,
+          0.046
+        ]
+      },
+      "worldCenter": [
+        0.038,
+        0,
+        0
+      ],
+      "triangleCount": 1728
+    },
+    {
+      "id": "gb:main/synchro-s12/ring-front",
+      "name": "Blocker ring (front)",
+      "parentId": "gb-asm:main/synchro-s12",
+      "role": "ring:s12:-1",
+      "group": "synchro:s12:ring-1",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ring-s12",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.014,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.024,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.033938381570652716,
+          -0.033938381570652716
+        ],
+        "max": [
+          0.0025,
+          0.033938381570652716,
+          0.033938381570652716
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.021500000000000002,
+          -0.033938381570652716,
+          -0.033938381570652716
+        ],
+        "max": [
+          0.0265,
+          0.033938381570652716,
+          0.033938381570652716
+        ]
+      },
+      "worldCenter": [
+        0.024,
+        0,
+        0
+      ],
+      "triangleCount": 960
+    },
+    {
+      "id": "gb:main/synchro-s12/ring-rear",
+      "name": "Blocker ring (rear)",
+      "parentId": "gb-asm:main/synchro-s12",
+      "role": "ring:s12:1",
+      "group": "synchro:s12:ring1",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ring-s12",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.014,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.052,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.033938381570652716,
+          -0.033938381570652716
+        ],
+        "max": [
+          0.0025,
+          0.033938381570652716,
+          0.033938381570652716
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.049499999999999995,
+          -0.033938381570652716,
+          -0.033938381570652716
+        ],
+        "max": [
+          0.0545,
+          0.033938381570652716,
+          0.033938381570652716
+        ]
+      },
+      "worldCenter": [
+        0.052,
+        0,
+        0
+      ],
+      "triangleCount": 960
+    },
+    {
+      "id": "gb:main/synchro-s12/key-1",
+      "name": "Synchronizer key 1",
+      "parentId": "gb-asm:main/synchro-s12",
+      "role": "key:s12",
+      "group": "synchro:s12:keys",
+      "motionOwner": "model",
+      "definitionId": "gb-def:key-s12-1",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          0.024297749411640944,
+          0.012584936490538903
+        ],
+        "max": [
+          0.008,
+          0.029655633244129592,
+          0.018565063509461095
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.03,
+          0.024297749411640944,
+          0.012584936490538903
+        ],
+        "max": [
+          0.046,
+          0.029655633244129592,
+          0.018565063509461095
+        ]
+      },
+      "worldCenter": [
+        0.038,
+        0.026976691327885268,
+        0.015574999999999999
+      ],
+      "triangleCount": 12
+    },
+    {
+      "id": "gb:main/synchro-s12/key-2",
+      "name": "Synchronizer key 2",
+      "parentId": "gb-asm:main/synchro-s12",
+      "role": "key:s12",
+      "group": "synchro:s12:keys",
+      "motionOwner": "model",
+      "definitionId": "gb-def:key-s12-2",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.029655633244129585,
+          0.012584936490538915
+        ],
+        "max": [
+          0.008,
+          -0.024297749411640937,
+          0.01856506350946111
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.03,
+          -0.029655633244129585,
+          0.012584936490538915
+        ],
+        "max": [
+          0.046,
+          -0.024297749411640937,
+          0.01856506350946111
+        ]
+      },
+      "worldCenter": [
+        0.038,
+        -0.02697669132788526,
+        0.015575000000000012
+      ],
+      "triangleCount": 12
+    },
+    {
+      "id": "gb:main/synchro-s12/key-3",
+      "name": "Synchronizer key 3",
+      "parentId": "gb-asm:main/synchro-s12",
+      "role": "key:s12",
+      "group": "synchro:s12:keys",
+      "motionOwner": "model",
+      "definitionId": "gb-def:key-s12-3",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.002500000000000006,
+          -0.0328
+        ],
+        "max": [
+          0.008,
+          0.002499999999999995,
+          -0.029500000000000002
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.03,
+          -0.002500000000000006,
+          -0.0328
+        ],
+        "max": [
+          0.046,
+          0.002499999999999995,
+          -0.029500000000000002
+        ]
+      },
+      "worldCenter": [
+        0.038,
+        -5.637851296924623e-18,
+        -0.031150000000000004
+      ],
+      "triangleCount": 12
+    },
+    {
+      "id": "gb:main/synchro-s5r/hub",
+      "name": "Synchronizer hub",
+      "parentId": "gb-asm:main/synchro-s5r",
+      "role": "spin:output",
+      "group": "synchro:s5r",
+      "motionOwner": "model",
+      "definitionId": "gb-def:hub-s5r",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.13,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.011,
+          -0.02595288002461678,
+          -0.02595288002461678
+        ],
+        "max": [
+          0.011,
+          0.02595288002461678,
+          0.02595288002461678
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.11900000000000001,
+          -0.02595288002461678,
+          -0.02595288002461678
+        ],
+        "max": [
+          0.14100000000000001,
+          0.02595288002461678,
+          0.02595288002461678
+        ]
+      },
+      "worldCenter": [
+        0.13,
+        0,
+        0
+      ],
+      "triangleCount": 960
+    },
+    {
+      "id": "gb:main/synchro-s5r/sleeve",
+      "name": "Synchronizer sleeve",
+      "parentId": "gb-asm:main/synchro-s5r",
+      "role": "sleeve:s5r",
+      "group": "synchro:s5r:sleeve",
+      "motionOwner": "model",
+      "definitionId": "gb-def:sleeve-s5r",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.13,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.013,
+          -0.038,
+          -0.038
+        ],
+        "max": [
+          0.013,
+          0.038,
+          0.038
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.117,
+          -0.038,
+          -0.038
+        ],
+        "max": [
+          0.14300000000000002,
+          0.038,
+          0.038
+        ]
+      },
+      "worldCenter": [
+        0.13,
+        0,
+        0
+      ],
+      "triangleCount": 1728
+    },
+    {
+      "id": "gb:main/synchro-s5r/ring-front",
+      "name": "Blocker ring (front)",
+      "parentId": "gb-asm:main/synchro-s5r",
+      "role": "ring:s5r:-1",
+      "group": "synchro:s5r:ring-1",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ring-s5r",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.014,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.116,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.02595288002461678,
+          -0.02595288002461678
+        ],
+        "max": [
+          0.0025,
+          0.02595288002461678,
+          0.02595288002461678
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1135,
+          -0.02595288002461678,
+          -0.02595288002461678
+        ],
+        "max": [
+          0.11850000000000001,
+          0.02595288002461678,
+          0.02595288002461678
+        ]
+      },
+      "worldCenter": [
+        0.116,
+        0,
+        0
+      ],
+      "triangleCount": 960
+    },
+    {
+      "id": "gb:main/synchro-s5r/ring-rear",
+      "name": "Blocker ring (rear)",
+      "parentId": "gb-asm:main/synchro-s5r",
+      "role": "ring:s5r:1",
+      "group": "synchro:s5r:ring1",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ring-s5r",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.014,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.14400000000000002,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.02595288002461678,
+          -0.02595288002461678
+        ],
+        "max": [
+          0.0025,
+          0.02595288002461678,
+          0.02595288002461678
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.14150000000000001,
+          -0.02595288002461678,
+          -0.02595288002461678
+        ],
+        "max": [
+          0.14650000000000002,
+          0.02595288002461678,
+          0.02595288002461678
+        ]
+      },
+      "worldCenter": [
+        0.14400000000000002,
+        0,
+        0
+      ],
+      "triangleCount": 960
+    },
+    {
+      "id": "gb:main/synchro-s5r/key-1",
+      "name": "Synchronizer key 1",
+      "parentId": "gb-asm:main/synchro-s5r",
+      "role": "key:s5r",
+      "group": "synchro:s5r:keys",
+      "motionOwner": "model",
+      "definitionId": "gb-def:key-s5r-1",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.13,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          0.01736954618136543,
+          0.0085849364905389
+        ],
+        "max": [
+          0.008,
+          0.02272743001385408,
+          0.014565063509461094
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.122,
+          0.01736954618136543,
+          0.0085849364905389
+        ],
+        "max": [
+          0.138,
+          0.02272743001385408,
+          0.014565063509461094
+        ]
+      },
+      "worldCenter": [
+        0.13,
+        0.020048488097609757,
+        0.011574999999999998
+      ],
+      "triangleCount": 12
+    },
+    {
+      "id": "gb:main/synchro-s5r/key-2",
+      "name": "Synchronizer key 2",
+      "parentId": "gb-asm:main/synchro-s5r",
+      "role": "key:s5r",
+      "group": "synchro:s5r:keys",
+      "motionOwner": "model",
+      "definitionId": "gb-def:key-s5r-2",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.13,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.022727430013854074,
+          0.00858493649053891
+        ],
+        "max": [
+          0.008,
+          -0.017369546181365426,
+          0.014565063509461105
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.122,
+          -0.022727430013854074,
+          0.00858493649053891
+        ],
+        "max": [
+          0.138,
+          -0.017369546181365426,
+          0.014565063509461105
+        ]
+      },
+      "worldCenter": [
+        0.13,
+        -0.02004848809760975,
+        0.011575000000000007
+      ],
+      "triangleCount": 12
+    },
+    {
+      "id": "gb:main/synchro-s5r/key-3",
+      "name": "Synchronizer key 3",
+      "parentId": "gb-asm:main/synchro-s5r",
+      "role": "key:s5r",
+      "group": "synchro:s5r:keys",
+      "motionOwner": "model",
+      "definitionId": "gb-def:key-s5r-3",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.13,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.002500000000000005,
+          -0.0248
+        ],
+        "max": [
+          0.008,
+          0.002499999999999996,
+          -0.0215
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.122,
+          -0.002500000000000005,
+          -0.0248
+        ],
+        "max": [
+          0.138,
+          0.002499999999999996,
+          -0.0215
+        ]
+      },
+      "worldCenter": [
+        0.13,
+        -4.336808689942018e-18,
+        -0.023149999999999997
+      ],
+      "triangleCount": 12
+    },
+    {
+      "id": "gb:main/output-flange",
+      "name": "Output flange",
+      "parentId": "gb-asm:main",
+      "role": "spin:output",
+      "group": "output",
+      "motionOwner": "model",
+      "definitionId": "gb-def:main/output-flange",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.302,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.302,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.018,
+          -0.047,
+          -0.047
+        ],
+        "max": [
+          0.009,
+          0.047,
+          0.047
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.284,
+          -0.047,
+          -0.047
+        ],
+        "max": [
+          0.311,
+          0.047,
+          0.047
+        ]
+      },
+      "worldCenter": [
+        0.2975,
+        0,
+        0
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "gb:main/bearing-rear/inner",
+      "name": "Inner race",
+      "parentId": "gb-asm:main/bearing-rear",
+      "role": "spin:inner:rear",
+      "group": "rear-bearing",
+      "motionOwner": "model",
+      "definitionId": "gb-def:race-inner-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.022288,
+          -0.022288
+        ],
+        "max": [
+          0.008,
+          0.022288,
+          0.022288
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.186,
+          -0.022288,
+          -0.022288
+        ],
+        "max": [
+          0.202,
+          0.022288,
+          0.022288
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:main/bearing-rear/outer",
+      "name": "Outer race",
+      "parentId": "gb-asm:main/bearing-rear",
+      "role": "static",
+      "group": "rear-bearing",
+      "motionOwner": "static",
+      "definitionId": "gb-def:race-outer-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.036,
+          -0.036
+        ],
+        "max": [
+          0.008,
+          0.036,
+          0.036
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.186,
+          -0.036,
+          -0.036
+        ],
+        "max": [
+          0.202,
+          0.036,
+          0.036
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:main/bearing-rear/ball-1",
+      "name": "Ball 1",
+      "parentId": "gb-asm:main/bearing-rear",
+      "role": "spin:cage:rear",
+      "group": "rear-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.026,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        0.026,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005799999999999999,
+          -0.005799999999999999,
+          -0.005711884967470806
+        ],
+        "max": [
+          0.005799999999999999,
+          0.005799999999999999,
+          0.005711884967470805
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1882,
+          0.0202,
+          -0.005711884967470806
+        ],
+        "max": [
+          0.1998,
+          0.031799999999999995,
+          0.005711884967470805
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        0.025999999999999995,
+        -4.336808689942018e-19
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:main/bearing-rear/ball-2",
+      "name": "Ball 2",
+      "parentId": "gb-asm:main/bearing-rear",
+      "role": "spin:cage:rear",
+      "group": "rear-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.021034441853748632,
+        0.0152824165596043,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        0.021034441853748632,
+        0.0152824165596043,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005799999999999999,
+          -0.005799999999999999,
+          -0.005711884967470806
+        ],
+        "max": [
+          0.005799999999999999,
+          0.005799999999999999,
+          0.005711884967470805
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1882,
+          0.015234441853748632,
+          0.009570531592133495
+        ],
+        "max": [
+          0.1998,
+          0.02683444185374863,
+          0.020994301527075106
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        0.021034441853748632,
+        0.0152824165596043
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:main/bearing-rear/ball-3",
+      "name": "Ball 3",
+      "parentId": "gb-asm:main/bearing-rear",
+      "role": "spin:cage:rear",
+      "group": "rear-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.008034441853748634,
+        0.02472746942367399,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        0.008034441853748634,
+        0.02472746942367399,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005799999999999999,
+          -0.005799999999999999,
+          -0.005711884967470806
+        ],
+        "max": [
+          0.005799999999999999,
+          0.005799999999999999,
+          0.005711884967470805
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1882,
+          0.0022344418537486354,
+          0.019015584456203185
+        ],
+        "max": [
+          0.1998,
+          0.013834441853748634,
+          0.030439354391144795
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        0.008034441853748634,
+        0.02472746942367399
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:main/bearing-rear/ball-4",
+      "name": "Ball 4",
+      "parentId": "gb-asm:main/bearing-rear",
+      "role": "spin:cage:rear",
+      "group": "rear-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.00803444185374863,
+        0.024727469423673994,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.00803444185374863,
+        0.024727469423673994,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005799999999999999,
+          -0.005799999999999999,
+          -0.005711884967470806
+        ],
+        "max": [
+          0.005799999999999999,
+          0.005799999999999999,
+          0.005711884967470805
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1882,
+          -0.01383444185374863,
+          0.01901558445620319
+        ],
+        "max": [
+          0.1998,
+          -0.002234441853748632,
+          0.0304393543911448
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.00803444185374863,
+        0.024727469423673994
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:main/bearing-rear/ball-5",
+      "name": "Ball 5",
+      "parentId": "gb-asm:main/bearing-rear",
+      "role": "spin:cage:rear",
+      "group": "rear-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.02103444185374863,
+        0.015282416559604304,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.02103444185374863,
+        0.015282416559604304,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005799999999999999,
+          -0.005799999999999999,
+          -0.005711884967470806
+        ],
+        "max": [
+          0.005799999999999999,
+          0.005799999999999999,
+          0.005711884967470805
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1882,
+          -0.026834441853748628,
+          0.009570531592133499
+        ],
+        "max": [
+          0.1998,
+          -0.015234441853748629,
+          0.02099430152707511
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.02103444185374863,
+        0.015282416559604304
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:main/bearing-rear/ball-6",
+      "name": "Ball 6",
+      "parentId": "gb-asm:main/bearing-rear",
+      "role": "spin:cage:rear",
+      "group": "rear-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.026,
+        3.1840816777831182e-18,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.026,
+        3.1840816777831182e-18,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005799999999999999,
+          -0.005799999999999999,
+          -0.005711884967470806
+        ],
+        "max": [
+          0.005799999999999999,
+          0.005799999999999999,
+          0.005711884967470805
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1882,
+          -0.031799999999999995,
+          -0.005711884967470803
+        ],
+        "max": [
+          0.1998,
+          -0.0202,
+          0.005711884967470809
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.025999999999999995,
+        3.0357660829594124e-18
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:main/bearing-rear/ball-7",
+      "name": "Ball 7",
+      "parentId": "gb-asm:main/bearing-rear",
+      "role": "spin:cage:rear",
+      "group": "rear-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.021034441853748632,
+        -0.015282416559604299,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.021034441853748632,
+        -0.015282416559604299,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005799999999999999,
+          -0.005799999999999999,
+          -0.005711884967470806
+        ],
+        "max": [
+          0.005799999999999999,
+          0.005799999999999999,
+          0.005711884967470805
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1882,
+          -0.02683444185374863,
+          -0.020994301527075106
+        ],
+        "max": [
+          0.1998,
+          -0.015234441853748632,
+          -0.009570531592133493
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.021034441853748632,
+        -0.0152824165596043
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:main/bearing-rear/ball-8",
+      "name": "Ball 8",
+      "parentId": "gb-asm:main/bearing-rear",
+      "role": "spin:cage:rear",
+      "group": "rear-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.008034441853748636,
+        -0.02472746942367399,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.008034441853748636,
+        -0.02472746942367399,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005799999999999999,
+          -0.005799999999999999,
+          -0.005711884967470806
+        ],
+        "max": [
+          0.005799999999999999,
+          0.005799999999999999,
+          0.005711884967470805
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1882,
+          -0.013834441853748634,
+          -0.030439354391144795
+        ],
+        "max": [
+          0.1998,
+          -0.002234441853748637,
+          -0.019015584456203185
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.008034441853748636,
+        -0.02472746942367399
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:main/bearing-rear/ball-9",
+      "name": "Ball 9",
+      "parentId": "gb-asm:main/bearing-rear",
+      "role": "spin:cage:rear",
+      "group": "rear-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.008034441853748627,
+        -0.024727469423673994,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        0.008034441853748627,
+        -0.024727469423673994,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005799999999999999,
+          -0.005799999999999999,
+          -0.005711884967470806
+        ],
+        "max": [
+          0.005799999999999999,
+          0.005799999999999999,
+          0.005711884967470805
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1882,
+          0.0022344418537486284,
+          -0.0304393543911448
+        ],
+        "max": [
+          0.1998,
+          0.013834441853748627,
+          -0.01901558445620319
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        0.008034441853748627,
+        -0.024727469423673994
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:main/bearing-rear/ball-10",
+      "name": "Ball 10",
+      "parentId": "gb-asm:main/bearing-rear",
+      "role": "spin:cage:rear",
+      "group": "rear-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.02103444185374863,
+        -0.015282416559604307,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        0.02103444185374863,
+        -0.015282416559604307,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005799999999999999,
+          -0.005799999999999999,
+          -0.005711884967470806
+        ],
+        "max": [
+          0.005799999999999999,
+          0.005799999999999999,
+          0.005711884967470805
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1882,
+          0.015234441853748629,
+          -0.020994301527075113
+        ],
+        "max": [
+          0.1998,
+          0.026834441853748628,
+          -0.009570531592133502
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        0.02103444185374863,
+        -0.015282416559604307
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/shaft",
+      "name": "Countershaft",
+      "parentId": "gb-asm:counter",
+      "role": "spin:counter",
+      "group": "counter",
+      "motionOwner": "model",
+      "definitionId": "gb-def:counter/shaft",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.03399999999999999,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.03399999999999999,
+        -0.081,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.16799999999999998,
+          -0.014,
+          -0.014
+        ],
+        "max": [
+          0.16799999999999998,
+          0.014,
+          0.014
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.134,
+          -0.095,
+          -0.014
+        ],
+        "max": [
+          0.20199999999999996,
+          -0.067,
+          0.014
+        ]
+      },
+      "worldCenter": [
+        0.033999999999999975,
+        -0.081,
+        0
+      ],
+      "triangleCount": 192
+    },
+    {
+      "id": "gb:counter/gear-drive",
+      "name": "Countershaft drive gear",
+      "parentId": "gb-asm:counter",
+      "role": "spin:counter",
+      "group": "counter",
+      "motionOwner": "model",
+      "definitionId": "gb-def:counter/gear-drive",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.09,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.09,
+        -0.081,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.01,
+          -0.053856990358548275,
+          -0.053998846865210656
+        ],
+        "max": [
+          0.01,
+          0.05385699035854827,
+          0.053998846865210656
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.09999999999999999,
+          -0.13485699035854828,
+          -0.053998846865210656
+        ],
+        "max": [
+          -0.08,
+          -0.027143009641451735,
+          0.053998846865210656
+        ]
+      },
+      "worldCenter": [
+        -0.09,
+        -0.08100000000000002,
+        0
+      ],
+      "triangleCount": 5576
+    },
+    {
+      "id": "gb:counter/gear-3",
+      "name": "Countershaft 3rd gear",
+      "parentId": "gb-asm:counter",
+      "role": "spin:counter",
+      "group": "counter",
+      "motionOwner": "model",
+      "definitionId": "gb-def:counter/gear-3",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.022,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.022,
+        -0.081,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.01,
+          -0.04799874309312589,
+          -0.04783472172584508
+        ],
+        "max": [
+          0.01,
+          0.04799874309312589,
+          0.04783472172584508
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.032,
+          -0.1289987430931259,
+          -0.04783472172584508
+        ],
+        "max": [
+          -0.011999999999999999,
+          -0.03300125690687411,
+          0.04783472172584508
+        ]
+      },
+      "worldCenter": [
+        -0.022,
+        -0.081,
+        0
+      ],
+      "triangleCount": 4920
+    },
+    {
+      "id": "gb:counter/gear-2",
+      "name": "Countershaft 2nd gear",
+      "parentId": "gb-asm:counter",
+      "role": "spin:counter",
+      "group": "counter",
+      "motionOwner": "model",
+      "definitionId": "gb-def:counter/gear-2",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.004,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.004,
+        -0.081,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.01,
+          -0.03899855168899698,
+          -0.03899855168899698
+        ],
+        "max": [
+          0.01,
+          0.03899855168899698,
+          0.03899855168899698
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.006,
+          -0.11999855168899698,
+          -0.03899855168899698
+        ],
+        "max": [
+          0.014,
+          -0.042001448311003026,
+          0.03899855168899698
+        ]
+      },
+      "worldCenter": [
+        0.004,
+        -0.081,
+        0
+      ],
+      "triangleCount": 3936
+    },
+    {
+      "id": "gb:counter/gear-1",
+      "name": "Countershaft 1st gear",
+      "parentId": "gb-asm:counter",
+      "role": "spin:counter",
+      "group": "counter",
+      "motionOwner": "model",
+      "definitionId": "gb-def:counter/gear-1",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.072,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.072,
+        -0.081,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.01,
+          -0.028172803753869873,
+          -0.028449947087411498
+        ],
+        "max": [
+          0.01,
+          0.028498262692529024,
+          0.028449947087411498
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.06199999999999999,
+          -0.10917280375386987,
+          -0.028449947087411498
+        ],
+        "max": [
+          0.08199999999999999,
+          -0.05250173730747098,
+          0.028449947087411498
+        ]
+      },
+      "worldCenter": [
+        0.072,
+        -0.08083727053067043,
+        0
+      ],
+      "triangleCount": 2788
+    },
+    {
+      "id": "gb:counter/gear-r",
+      "name": "Countershaft reverse gear",
+      "parentId": "gb-asm:counter",
+      "role": "spin:counter",
+      "group": "counter",
+      "motionOwner": "model",
+      "definitionId": "gb-def:counter/gear-r",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.097,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.097,
+        -0.081,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.009,
+          -0.02699687612091022,
+          -0.02699687612091022
+        ],
+        "max": [
+          0.009,
+          0.02699687612091022,
+          0.02699687612091022
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.08800000000000001,
+          -0.10799687612091022,
+          -0.02699687612091022
+        ],
+        "max": [
+          0.106,
+          -0.05400312387908979,
+          0.02699687612091022
+        ]
+      },
+      "worldCenter": [
+        0.097,
+        -0.081,
+        0
+      ],
+      "triangleCount": 2624
+    },
+    {
+      "id": "gb:counter/gear-5",
+      "name": "Countershaft 5th gear",
+      "parentId": "gb-asm:counter",
+      "role": "spin:counter",
+      "group": "counter",
+      "motionOwner": "model",
+      "definitionId": "gb-def:counter/gear-5",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.16299999999999998,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.16299999999999998,
+        -0.081,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.009,
+          -0.05837017693849118,
+          -0.058482899654566815
+        ],
+        "max": [
+          0.009,
+          0.058498914665659894,
+          0.058482899654566815
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.15399999999999997,
+          -0.13937017693849119,
+          -0.058482899654566815
+        ],
+        "max": [
+          0.172,
+          -0.022501085334340108,
+          0.058482899654566815
+        ]
+      },
+      "worldCenter": [
+        0.16299999999999998,
+        -0.08093563113641565,
+        0
+      ],
+      "triangleCount": 6068
+    },
+    {
+      "id": "gb:counter/bearing-counterFront/inner",
+      "name": "Inner race",
+      "parentId": "gb-asm:counter/bearing-counterFront",
+      "role": "spin:inner:counterFront",
+      "group": "counter-bearing",
+      "motionOwner": "model",
+      "definitionId": "gb-def:race-inner-counterFront",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.081,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.019659199999999998,
+          -0.019659199999999998
+        ],
+        "max": [
+          0.008,
+          0.019659199999999998,
+          0.019659199999999998
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.134,
+          -0.1006592,
+          -0.019659199999999998
+        ],
+        "max": [
+          -0.118,
+          -0.0613408,
+          0.019659199999999998
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.081,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:counter/bearing-counterFront/outer",
+      "name": "Outer race",
+      "parentId": "gb-asm:counter/bearing-counterFront",
+      "role": "static",
+      "group": "counter-bearing",
+      "motionOwner": "static",
+      "definitionId": "gb-def:race-outer-counterFront",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.081,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.032,
+          -0.032
+        ],
+        "max": [
+          0.008,
+          0.032,
+          0.032
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.134,
+          -0.113,
+          -0.032
+        ],
+        "max": [
+          -0.118,
+          -0.049,
+          0.032
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.081,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:counter/bearing-counterFront/ball-1",
+      "name": "Ball 1",
+      "parentId": "gb-asm:counter/bearing-counterFront",
+      "role": "spin:cage:counterFront",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterFront",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.023,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.058,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.13122,
+          -0.06322,
+          -0.0051406964707237275
+        ],
+        "max": [
+          -0.12078,
+          -0.05278,
+          0.005140696470723727
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.057999999999999996,
+        -4.336808689942018e-19
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterFront/ball-2",
+      "name": "Ball 2",
+      "parentId": "gb-asm:counter/bearing-counterFront",
+      "role": "spin:cage:counterFront",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterFront",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.017619022191736493,
+        0.014784115022790402,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.06338097780826352,
+        0.014784115022790402,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.13122,
+          -0.06860097780826352,
+          0.009643418552066674
+        ],
+        "max": [
+          -0.12078,
+          -0.058160977808263514,
+          0.01992481149351413
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.06338097780826352,
+        0.014784115022790402
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterFront/ball-3",
+      "name": "Ball 3",
+      "parentId": "gb-asm:counter/bearing-counterFront",
+      "role": "spin:cage:counterFront",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterFront",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.003993908086339399,
+        0.022650578319280783,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.0770060919136606,
+        0.022650578319280783,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.13122,
+          -0.0822260919136606,
+          0.017509881848557056
+        ],
+        "max": [
+          -0.12078,
+          -0.0717860919136606,
+          0.02779127479000451
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.0770060919136606,
+        0.022650578319280783
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterFront/ball-4",
+      "name": "Ball 4",
+      "parentId": "gb-asm:counter/bearing-counterFront",
+      "role": "spin:cage:counterFront",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterFront",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.011499999999999995,
+        0.01991858428704209,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.0925,
+        0.01991858428704209,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.13122,
+          -0.09772,
+          0.014777887816318364
+        ],
+        "max": [
+          -0.12078,
+          -0.08728,
+          0.02505928075776582
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.0925,
+        0.01991858428704209
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterFront/ball-5",
+      "name": "Ball 5",
+      "parentId": "gb-asm:counter/bearing-counterFront",
+      "role": "spin:cage:counterFront",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterFront",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.02161293027807589,
+        0.007866463296490385,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.10261293027807589,
+        0.007866463296490385,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.13122,
+          -0.10783293027807589,
+          0.0027257668257666574
+        ],
+        "max": [
+          -0.12078,
+          -0.09739293027807588,
+          0.013007159767214112
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.10261293027807589,
+        0.007866463296490385
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterFront/ball-6",
+      "name": "Ball 6",
+      "parentId": "gb-asm:counter/bearing-counterFront",
+      "role": "spin:cage:counterFront",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterFront",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.021612930278075895,
+        -0.00786646329649038,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.1026129302780759,
+        -0.00786646329649038,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.13122,
+          -0.1078329302780759,
+          -0.013007159767214107
+        ],
+        "max": [
+          -0.12078,
+          -0.0973929302780759,
+          -0.002725766825766653
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.1026129302780759,
+        -0.00786646329649038
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterFront/ball-7",
+      "name": "Ball 7",
+      "parentId": "gb-asm:counter/bearing-counterFront",
+      "role": "spin:cage:counterFront",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterFront",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.01150000000000001,
+        -0.019918584287042084,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.09250000000000001,
+        -0.019918584287042084,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.13122,
+          -0.09772000000000002,
+          -0.02505928075776581
+        ],
+        "max": [
+          -0.12078,
+          -0.08728000000000001,
+          -0.014777887816318357
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.09250000000000001,
+        -0.019918584287042084
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterFront/ball-8",
+      "name": "Ball 8",
+      "parentId": "gb-asm:counter/bearing-counterFront",
+      "role": "spin:cage:counterFront",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterFront",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.00399390808633939,
+        -0.022650578319280787,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.07700609191366062,
+        -0.022650578319280787,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.13122,
+          -0.08222609191366062,
+          -0.027791274790004514
+        ],
+        "max": [
+          -0.12078,
+          -0.07178609191366062,
+          -0.01750988184855706
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.07700609191366062,
+        -0.022650578319280787
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterFront/ball-9",
+      "name": "Ball 9",
+      "parentId": "gb-asm:counter/bearing-counterFront",
+      "role": "spin:cage:counterFront",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterFront",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.01761902219173649,
+        -0.01478411502279041,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.06338097780826352,
+        -0.01478411502279041,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.13122,
+          -0.06860097780826352,
+          -0.01992481149351414
+        ],
+        "max": [
+          -0.12078,
+          -0.058160977808263514,
+          -0.009643418552066685
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.06338097780826352,
+        -0.014784115022790412
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterRear/inner",
+      "name": "Inner race",
+      "parentId": "gb-asm:counter/bearing-counterRear",
+      "role": "spin:inner:counterRear",
+      "group": "counter-bearing",
+      "motionOwner": "model",
+      "definitionId": "gb-def:race-inner-counterRear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.081,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.019659199999999998,
+          -0.019659199999999998
+        ],
+        "max": [
+          0.008,
+          0.019659199999999998,
+          0.019659199999999998
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.186,
+          -0.1006592,
+          -0.019659199999999998
+        ],
+        "max": [
+          0.202,
+          -0.0613408,
+          0.019659199999999998
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.081,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:counter/bearing-counterRear/outer",
+      "name": "Outer race",
+      "parentId": "gb-asm:counter/bearing-counterRear",
+      "role": "static",
+      "group": "counter-bearing",
+      "motionOwner": "static",
+      "definitionId": "gb-def:race-outer-counterRear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.081,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.032,
+          -0.032
+        ],
+        "max": [
+          0.008,
+          0.032,
+          0.032
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.186,
+          -0.113,
+          -0.032
+        ],
+        "max": [
+          0.202,
+          -0.049,
+          0.032
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.081,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:counter/bearing-counterRear/ball-1",
+      "name": "Ball 1",
+      "parentId": "gb-asm:counter/bearing-counterRear",
+      "role": "spin:cage:counterRear",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterRear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.023,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.058,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.18878,
+          -0.06322,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.19922,
+          -0.05278,
+          0.005140696470723727
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.057999999999999996,
+        -4.336808689942018e-19
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterRear/ball-2",
+      "name": "Ball 2",
+      "parentId": "gb-asm:counter/bearing-counterRear",
+      "role": "spin:cage:counterRear",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterRear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.017619022191736493,
+        0.014784115022790402,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.06338097780826352,
+        0.014784115022790402,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.18878,
+          -0.06860097780826352,
+          0.009643418552066674
+        ],
+        "max": [
+          0.19922,
+          -0.058160977808263514,
+          0.01992481149351413
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.06338097780826352,
+        0.014784115022790402
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterRear/ball-3",
+      "name": "Ball 3",
+      "parentId": "gb-asm:counter/bearing-counterRear",
+      "role": "spin:cage:counterRear",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterRear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.003993908086339399,
+        0.022650578319280783,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.0770060919136606,
+        0.022650578319280783,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.18878,
+          -0.0822260919136606,
+          0.017509881848557056
+        ],
+        "max": [
+          0.19922,
+          -0.0717860919136606,
+          0.02779127479000451
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.0770060919136606,
+        0.022650578319280783
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterRear/ball-4",
+      "name": "Ball 4",
+      "parentId": "gb-asm:counter/bearing-counterRear",
+      "role": "spin:cage:counterRear",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterRear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.011499999999999995,
+        0.01991858428704209,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.0925,
+        0.01991858428704209,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.18878,
+          -0.09772,
+          0.014777887816318364
+        ],
+        "max": [
+          0.19922,
+          -0.08728,
+          0.02505928075776582
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.0925,
+        0.01991858428704209
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterRear/ball-5",
+      "name": "Ball 5",
+      "parentId": "gb-asm:counter/bearing-counterRear",
+      "role": "spin:cage:counterRear",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterRear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.02161293027807589,
+        0.007866463296490385,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.10261293027807589,
+        0.007866463296490385,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.18878,
+          -0.10783293027807589,
+          0.0027257668257666574
+        ],
+        "max": [
+          0.19922,
+          -0.09739293027807588,
+          0.013007159767214112
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.10261293027807589,
+        0.007866463296490385
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterRear/ball-6",
+      "name": "Ball 6",
+      "parentId": "gb-asm:counter/bearing-counterRear",
+      "role": "spin:cage:counterRear",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterRear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.021612930278075895,
+        -0.00786646329649038,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.1026129302780759,
+        -0.00786646329649038,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.18878,
+          -0.1078329302780759,
+          -0.013007159767214107
+        ],
+        "max": [
+          0.19922,
+          -0.0973929302780759,
+          -0.002725766825766653
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.1026129302780759,
+        -0.00786646329649038
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterRear/ball-7",
+      "name": "Ball 7",
+      "parentId": "gb-asm:counter/bearing-counterRear",
+      "role": "spin:cage:counterRear",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterRear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.01150000000000001,
+        -0.019918584287042084,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.09250000000000001,
+        -0.019918584287042084,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.18878,
+          -0.09772000000000002,
+          -0.02505928075776581
+        ],
+        "max": [
+          0.19922,
+          -0.08728000000000001,
+          -0.014777887816318357
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.09250000000000001,
+        -0.019918584287042084
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterRear/ball-8",
+      "name": "Ball 8",
+      "parentId": "gb-asm:counter/bearing-counterRear",
+      "role": "spin:cage:counterRear",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterRear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.00399390808633939,
+        -0.022650578319280787,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.07700609191366062,
+        -0.022650578319280787,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.18878,
+          -0.08222609191366062,
+          -0.027791274790004514
+        ],
+        "max": [
+          0.19922,
+          -0.07178609191366062,
+          -0.01750988184855706
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.07700609191366062,
+        -0.022650578319280787
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:counter/bearing-counterRear/ball-9",
+      "name": "Ball 9",
+      "parentId": "gb-asm:counter/bearing-counterRear",
+      "role": "spin:cage:counterRear",
+      "group": "counter-bearing:balls",
+      "motionOwner": "model",
+      "definitionId": "gb-def:ball-counterRear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.01761902219173649,
+        -0.01478411502279041,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.06338097780826352,
+        -0.01478411502279041,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.005220000000000001,
+          -0.005220000000000001,
+          -0.0051406964707237275
+        ],
+        "max": [
+          0.005220000000000001,
+          0.005220000000000001,
+          0.005140696470723727
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.18878,
+          -0.06860097780826352,
+          -0.01992481149351414
+        ],
+        "max": [
+          0.19922,
+          -0.058160977808263514,
+          -0.009643418552066685
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.06338097780826352,
+        -0.014784115022790412
+      ],
+      "triangleCount": 324
+    },
+    {
+      "id": "gb:idler/shaft",
+      "name": "Reverse idler shaft",
+      "parentId": "gb-asm:idler",
+      "role": "static",
+      "group": "idler",
+      "motionOwner": "static",
+      "definitionId": "gb-def:idler/shaft",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.097,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.097,
+        -0.059166666666666666,
+        0.046090189363416106,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.023,
+          -0.01,
+          -0.01
+        ],
+        "max": [
+          0.023,
+          0.01,
+          0.01
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.07400000000000001,
+          -0.06916666666666667,
+          0.036090189363416104
+        ],
+        "max": [
+          0.12,
+          -0.049166666666666664,
+          0.05609018936341611
+        ]
+      },
+      "worldCenter": [
+        0.097,
+        -0.059166666666666666,
+        0.046090189363416106
+      ],
+      "triangleCount": 192
+    },
+    {
+      "id": "gb:idler/gear",
+      "name": "Reverse idler gear",
+      "parentId": "gb-asm:idler",
+      "role": "spin:idler",
+      "group": "idler",
+      "motionOwner": "model",
+      "definitionId": "gb-def:idler/gear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.097,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.097,
+        -0.059166666666666666,
+        0.046090189363416106,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.009,
+          -0.02994334389477484,
+          -0.0299634858230115
+        ],
+        "max": [
+          0.009,
+          0.02994334389477484,
+          0.0299634858230115
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.08800000000000001,
+          -0.08911001056144151,
+          0.016126703540404606
+        ],
+        "max": [
+          0.106,
+          -0.029223322771891828,
+          0.07605367518642761
+        ]
+      },
+      "worldCenter": [
+        0.097,
+        -0.059166666666666666,
+        0.046090189363416106
+      ],
+      "triangleCount": 2952
+    },
+    {
+      "id": "gb:idler/needle",
+      "name": "Reverse idler needle bearing",
+      "parentId": "gb-asm:idler",
+      "role": "needle:idler",
+      "group": "idler",
+      "motionOwner": "model",
+      "definitionId": "gb-def:idler/needle",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.097,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.097,
+        -0.059166666666666666,
+        0.046090189363416106,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.008,
+          -0.0123,
+          -0.0123
+        ],
+        "max": [
+          0.008,
+          0.0123,
+          0.0123
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.089,
+          -0.07146666666666666,
+          0.03379018936341611
+        ],
+        "max": [
+          0.10500000000000001,
+          -0.04686666666666667,
+          0.058390189363416105
+        ]
+      },
+      "worldCenter": [
+        0.097,
+        -0.059166666666666666,
+        0.046090189363416106
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:shift/rail-s34",
+      "name": "3–4 shift rail",
+      "parentId": "gb-asm:shift",
+      "role": "rail:s34",
+      "group": "shift",
+      "motionOwner": "model",
+      "definitionId": "gb-def:shift/rail-s34",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.033999999999999996,
+        0.078,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.033999999999999996,
+        0.078,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.146,
+          -0.0055,
+          -0.0055
+        ],
+        "max": [
+          0.146,
+          0.0055,
+          0.0055
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.11199999999999999,
+          0.0725,
+          -0.0055
+        ],
+        "max": [
+          0.18,
+          0.0835,
+          0.0055
+        ]
+      },
+      "worldCenter": [
+        0.034,
+        0.078,
+        0
+      ],
+      "triangleCount": 192
+    },
+    {
+      "id": "gb:shift/fork-s34",
+      "name": "3–4 shift fork",
+      "parentId": "gb-asm:shift",
+      "role": "fork:s34",
+      "group": "shift",
+      "motionOwner": "model",
+      "definitionId": "gb-def:shift/fork-s34",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.055999999999999994,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.055999999999999994,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.009,
+          0.014664853682402272,
+          -0.04304961988424087
+        ],
+        "max": [
+          0.009,
+          0.0885,
+          0.04304961988424087
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.06499999999999999,
+          0.014664853682402272,
+          -0.04304961988424087
+        ],
+        "max": [
+          -0.04699999999999999,
+          0.0885,
+          0.04304961988424087
+        ]
+      },
+      "worldCenter": [
+        -0.055999999999999994,
+        0.05158242684120114,
+        0
+      ],
+      "triangleCount": 592
+    },
+    {
+      "id": "gb:shift/rail-s12",
+      "name": "1–2 shift rail",
+      "parentId": "gb-asm:shift",
+      "role": "rail:s12",
+      "group": "shift",
+      "motionOwner": "model",
+      "definitionId": "gb-def:shift/rail-s12",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.033999999999999996,
+        0.078,
+        -0.026,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.033999999999999996,
+        0.078,
+        -0.026,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.146,
+          -0.0055,
+          -0.0055
+        ],
+        "max": [
+          0.146,
+          0.0055,
+          0.0055
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.11199999999999999,
+          0.0725,
+          -0.0315
+        ],
+        "max": [
+          0.18,
+          0.0835,
+          -0.020499999999999997
+        ]
+      },
+      "worldCenter": [
+        0.034,
+        0.078,
+        -0.026
+      ],
+      "triangleCount": 192
+    },
+    {
+      "id": "gb:shift/fork-s12",
+      "name": "1–2 shift fork",
+      "parentId": "gb-asm:shift",
+      "role": "fork:s12",
+      "group": "shift",
+      "motionOwner": "model",
+      "definitionId": "gb-def:shift/fork-s12",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.009,
+          0.01635532672936507,
+          -0.04667485103238748
+        ],
+        "max": [
+          0.009,
+          0.0885,
+          0.04667485103238748
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.028999999999999998,
+          0.01635532672936507,
+          -0.04667485103238748
+        ],
+        "max": [
+          0.047,
+          0.0885,
+          0.04667485103238748
+        ]
+      },
+      "worldCenter": [
+        0.038,
+        0.052427663364682534,
+        0
+      ],
+      "triangleCount": 592
+    },
+    {
+      "id": "gb:shift/rail-s5r",
+      "name": "5–R shift rail",
+      "parentId": "gb-asm:shift",
+      "role": "rail:s5r",
+      "group": "shift",
+      "motionOwner": "model",
+      "definitionId": "gb-def:shift/rail-s5r",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.033999999999999996,
+        0.078,
+        0.026,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.033999999999999996,
+        0.078,
+        0.026,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.146,
+          -0.0055,
+          -0.0055
+        ],
+        "max": [
+          0.146,
+          0.0055,
+          0.0055
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.11199999999999999,
+          0.0725,
+          0.020499999999999997
+        ],
+        "max": [
+          0.18,
+          0.0835,
+          0.0315
+        ]
+      },
+      "worldCenter": [
+        0.034,
+        0.078,
+        0.026
+      ],
+      "triangleCount": 192
+    },
+    {
+      "id": "gb:shift/fork-s5r",
+      "name": "5–R shift fork",
+      "parentId": "gb-asm:shift",
+      "role": "fork:s5r",
+      "group": "shift",
+      "motionOwner": "model",
+      "definitionId": "gb-def:shift/fork-s5r",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.13,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.13,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.009,
+          0.012974380635439473,
+          -0.03942438873609427
+        ],
+        "max": [
+          0.009,
+          0.0885,
+          0.03942438873609427
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.12100000000000001,
+          0.012974380635439473,
+          -0.03942438873609427
+        ],
+        "max": [
+          0.139,
+          0.0885,
+          0.03942438873609427
+        ]
+      },
+      "worldCenter": [
+        0.13,
+        0.050737190317719734,
+        0
+      ],
+      "triangleCount": 592
+    },
+    {
+      "id": "gb:case/main-case",
+      "name": "Main case",
+      "parentId": "gb-asm:case",
+      "role": "static",
+      "group": "case:shell",
+      "motionOwner": "static",
+      "definitionId": "gb-def:case/main-case",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.033999999999999996,
+        -0.0405,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.033999999999999996,
+        -0.0405,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.15,
+          -0.13049999999999998,
+          -0.08999999999999998
+        ],
+        "max": [
+          0.15,
+          0.13049999999999998,
+          0.08999999999999998
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.11599999999999999,
+          -0.17099999999999999,
+          -0.08999999999999998
+        ],
+        "max": [
+          0.184,
+          0.08999999999999997,
+          0.08999999999999998
+        ]
+      },
+      "worldCenter": [
+        0.034,
+        -0.04050000000000001,
+        0
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "gb:case/front-plate",
+      "name": "Front plate",
+      "parentId": "gb-asm:case",
+      "role": "static",
+      "group": "case:front-plate",
+      "motionOwner": "static",
+      "definitionId": "gb-def:end-plate",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.0405,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.0405,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.010000000000000002,
+          -0.14249999999999996,
+          -0.10199999999999998
+        ],
+        "max": [
+          0.010000000000000002,
+          0.14249999999999996,
+          0.10199999999999998
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.136,
+          -0.18299999999999997,
+          -0.10199999999999998
+        ],
+        "max": [
+          -0.11599999999999999,
+          0.10199999999999995,
+          0.10199999999999998
+        ]
+      },
+      "worldCenter": [
+        -0.126,
+        -0.04050000000000001,
+        0
+      ],
+      "triangleCount": 380
+    },
+    {
+      "id": "gb:case/rear-plate",
+      "name": "Rear plate",
+      "parentId": "gb-asm:case",
+      "role": "static",
+      "group": "case:rear-plate",
+      "motionOwner": "static",
+      "definitionId": "gb-def:end-plate",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.0405,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.0405,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.010000000000000002,
+          -0.14249999999999996,
+          -0.10199999999999998
+        ],
+        "max": [
+          0.010000000000000002,
+          0.14249999999999996,
+          0.10199999999999998
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.184,
+          -0.18299999999999997,
+          -0.10199999999999998
+        ],
+        "max": [
+          0.20400000000000001,
+          0.10199999999999995,
+          0.10199999999999998
+        ]
+      },
+      "worldCenter": [
+        0.194,
+        -0.04050000000000001,
+        0
+      ],
+      "triangleCount": 380
+    },
+    {
+      "id": "gb:case/bell-housing",
+      "name": "Bell housing",
+      "parentId": "gb-asm:case",
+      "role": "static",
+      "group": "case:bell",
+      "motionOwner": "static",
+      "definitionId": "gb-def:case/bell-housing",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.136,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.136,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.11399999999999999,
+          -0.165,
+          -0.165
+        ],
+        "max": [
+          0,
+          0.165,
+          0.165
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.25,
+          -0.165,
+          -0.165
+        ],
+        "max": [
+          -0.136,
+          0.165,
+          0.165
+        ]
+      },
+      "worldCenter": [
+        -0.193,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:case/rear-extension",
+      "name": "Rear extension",
+      "parentId": "gb-asm:case",
+      "role": "static",
+      "group": "case:extension",
+      "motionOwner": "static",
+      "definitionId": "gb-def:case/rear-extension",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.204,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.204,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          0,
+          -0.052,
+          -0.052
+        ],
+        "max": [
+          0.088,
+          0.052,
+          0.052
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.204,
+          -0.052,
+          -0.052
+        ],
+        "max": [
+          0.292,
+          0.052,
+          0.052
+        ]
+      },
+      "worldCenter": [
+        0.248,
+        0,
+        0
+      ],
+      "triangleCount": 384
+    },
+    {
+      "id": "gb:case/top-cover",
+      "name": "Top cover",
+      "parentId": "gb-asm:case",
+      "role": "static",
+      "group": "case:cover",
+      "motionOwner": "static",
+      "definitionId": "gb-def:case/top-cover",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.037000000000000005,
+        0.09,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.037000000000000005,
+        0.09,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.123,
+          -0.003,
+          -0.05
+        ],
+        "max": [
+          0.123,
+          0.007,
+          0.05
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.086,
+          0.087,
+          -0.05
+        ],
+        "max": [
+          0.16,
+          0.097,
+          0.05
+        ]
+      },
+      "worldCenter": [
+        0.037000000000000005,
+        0.092,
+        0
+      ],
+      "triangleCount": 12
+    },
+    {
+      "id": "gb:case/shift-lever",
+      "name": "Shift lever",
+      "parentId": "gb-asm:case",
+      "role": "lever",
+      "group": "case:cover",
+      "motionOwner": "model",
+      "definitionId": "gb-def:case/shift-lever",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0.097,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0.097,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.016,
+          0,
+          -0.016
+        ],
+        "max": [
+          0.016,
+          0.1265,
+          0.016
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.022,
+          0.097,
+          -0.016
+        ],
+        "max": [
+          0.054,
+          0.2235,
+          0.016
+        ]
+      },
+      "worldCenter": [
+        0.038,
+        0.16025,
+        0
+      ],
+      "triangleCount": 612
+    },
+    {
+      "id": "gb:case/fasteners/front-bolt-1",
+      "name": "Front bolt 1",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-front",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        0.09599999999999997,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        0.09599999999999997,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          0,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0.0055,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.116,
+          0.09019999999999997,
+          -0.0058
+        ],
+        "max": [
+          -0.1105,
+          0.10179999999999997,
+          0.0058
+        ]
+      },
+      "worldCenter": [
+        -0.11325,
+        0.09599999999999997,
+        0
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/rear-bolt-1",
+      "name": "Rear bolt 1",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        0.09599999999999997,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        0.09599999999999997,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1785,
+          0.09019999999999997,
+          -0.0058
+        ],
+        "max": [
+          0.184,
+          0.10179999999999997,
+          0.0058
+        ]
+      },
+      "worldCenter": [
+        0.18125,
+        0.09599999999999997,
+        0
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/front-bolt-2",
+      "name": "Front bolt 2",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-front",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        0.06124751236074134,
+        0.07392389484882972,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        0.06124751236074134,
+        0.07392389484882972,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          0,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0.0055,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.116,
+          0.05544751236074134,
+          0.06812389484882972
+        ],
+        "max": [
+          -0.1105,
+          0.06704751236074133,
+          0.07972389484882972
+        ]
+      },
+      "worldCenter": [
+        -0.11325,
+        0.06124751236074133,
+        0.07392389484882972
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/rear-bolt-2",
+      "name": "Rear bolt 2",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        0.06124751236074134,
+        0.07392389484882972,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        0.06124751236074134,
+        0.07392389484882972,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1785,
+          0.05544751236074134,
+          0.06812389484882972
+        ],
+        "max": [
+          0.184,
+          0.06704751236074133,
+          0.07972389484882972
+        ]
+      },
+      "worldCenter": [
+        0.18125,
+        0.06124751236074133,
+        0.07392389484882972
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/front-bolt-3",
+      "name": "Front bolt 3",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-front",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.009307709161640993,
+        0.09599999999999999,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.009307709161640993,
+        0.09599999999999999,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          0,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0.0055,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.116,
+          -0.015107709161640993,
+          0.09019999999999999
+        ],
+        "max": [
+          -0.1105,
+          -0.0035077091616409935,
+          0.10179999999999999
+        ]
+      },
+      "worldCenter": [
+        -0.11325,
+        -0.009307709161640993,
+        0.09599999999999999
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/rear-bolt-3",
+      "name": "Rear bolt 3",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.009307709161640993,
+        0.09599999999999999,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.009307709161640993,
+        0.09599999999999999,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1785,
+          -0.015107709161640993,
+          0.09019999999999999
+        ],
+        "max": [
+          0.184,
+          -0.0035077091616409935,
+          0.10179999999999999
+        ]
+      },
+      "worldCenter": [
+        0.18125,
+        -0.009307709161640993,
+        0.09599999999999999
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/front-bolt-4",
+      "name": "Front bolt 4",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-front",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.07169229083835899,
+        0.09599999999999999,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.07169229083835899,
+        0.09599999999999999,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          0,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0.0055,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.116,
+          -0.07749229083835898,
+          0.09019999999999999
+        ],
+        "max": [
+          -0.1105,
+          -0.06589229083835899,
+          0.10179999999999999
+        ]
+      },
+      "worldCenter": [
+        -0.11325,
+        -0.07169229083835899,
+        0.09599999999999999
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/rear-bolt-4",
+      "name": "Rear bolt 4",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.07169229083835899,
+        0.09599999999999999,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.07169229083835899,
+        0.09599999999999999,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1785,
+          -0.07749229083835898,
+          0.09019999999999999
+        ],
+        "max": [
+          0.184,
+          -0.06589229083835899,
+          0.10179999999999999
+        ]
+      },
+      "worldCenter": [
+        0.18125,
+        -0.07169229083835899,
+        0.09599999999999999
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/front-bolt-5",
+      "name": "Front bolt 5",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-front",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.14224751236074132,
+        0.07392389484882973,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.14224751236074132,
+        0.07392389484882973,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          0,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0.0055,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.116,
+          -0.14804751236074132,
+          0.06812389484882973
+        ],
+        "max": [
+          -0.1105,
+          -0.13644751236074132,
+          0.07972389484882973
+        ]
+      },
+      "worldCenter": [
+        -0.11325,
+        -0.14224751236074132,
+        0.07392389484882973
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/rear-bolt-5",
+      "name": "Rear bolt 5",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.14224751236074132,
+        0.07392389484882973,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.14224751236074132,
+        0.07392389484882973,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1785,
+          -0.14804751236074132,
+          0.06812389484882973
+        ],
+        "max": [
+          0.184,
+          -0.13644751236074132,
+          0.07972389484882973
+        ]
+      },
+      "worldCenter": [
+        0.18125,
+        -0.14224751236074132,
+        0.07392389484882973
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/front-bolt-6",
+      "name": "Front bolt 6",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-front",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.177,
+        1.6716428808361368e-17,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.177,
+        1.6716428808361368e-17,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          0,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0.0055,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.116,
+          -0.1828,
+          -0.005799999999999983
+        ],
+        "max": [
+          -0.1105,
+          -0.1712,
+          0.005800000000000016
+        ]
+      },
+      "worldCenter": [
+        -0.11325,
+        -0.177,
+        1.6479873021779667e-17
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/rear-bolt-6",
+      "name": "Rear bolt 6",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.177,
+        1.6716428808361368e-17,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.177,
+        1.6716428808361368e-17,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1785,
+          -0.1828,
+          -0.005799999999999983
+        ],
+        "max": [
+          0.184,
+          -0.1712,
+          0.005800000000000016
+        ]
+      },
+      "worldCenter": [
+        0.18125,
+        -0.177,
+        1.6479873021779667e-17
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/front-bolt-7",
+      "name": "Front bolt 7",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-front",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.14224751236074135,
+        -0.07392389484882972,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.14224751236074135,
+        -0.07392389484882972,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          0,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0.0055,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.116,
+          -0.14804751236074135,
+          -0.07972389484882972
+        ],
+        "max": [
+          -0.1105,
+          -0.13644751236074135,
+          -0.06812389484882972
+        ]
+      },
+      "worldCenter": [
+        -0.11325,
+        -0.14224751236074135,
+        -0.07392389484882972
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/rear-bolt-7",
+      "name": "Rear bolt 7",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.14224751236074135,
+        -0.07392389484882972,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.14224751236074135,
+        -0.07392389484882972,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1785,
+          -0.14804751236074135,
+          -0.07972389484882972
+        ],
+        "max": [
+          0.184,
+          -0.13644751236074135,
+          -0.06812389484882972
+        ]
+      },
+      "worldCenter": [
+        0.18125,
+        -0.14224751236074135,
+        -0.07392389484882972
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/front-bolt-8",
+      "name": "Front bolt 8",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-front",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.07169229083835901,
+        -0.09599999999999999,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.07169229083835901,
+        -0.09599999999999999,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          0,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0.0055,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.116,
+          -0.07749229083835901,
+          -0.10179999999999999
+        ],
+        "max": [
+          -0.1105,
+          -0.06589229083835901,
+          -0.09019999999999999
+        ]
+      },
+      "worldCenter": [
+        -0.11325,
+        -0.07169229083835901,
+        -0.09599999999999999
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/rear-bolt-8",
+      "name": "Rear bolt 8",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.07169229083835901,
+        -0.09599999999999999,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.07169229083835901,
+        -0.09599999999999999,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1785,
+          -0.07749229083835901,
+          -0.10179999999999999
+        ],
+        "max": [
+          0.184,
+          -0.06589229083835901,
+          -0.09019999999999999
+        ]
+      },
+      "worldCenter": [
+        0.18125,
+        -0.07169229083835901,
+        -0.09599999999999999
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/front-bolt-9",
+      "name": "Front bolt 9",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-front",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.00930770916164102,
+        -0.09599999999999999,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        -0.00930770916164102,
+        -0.09599999999999999,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          0,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0.0055,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.116,
+          -0.01510770916164102,
+          -0.10179999999999999
+        ],
+        "max": [
+          -0.1105,
+          -0.0035077091616410212,
+          -0.09019999999999999
+        ]
+      },
+      "worldCenter": [
+        -0.11325,
+        -0.00930770916164102,
+        -0.09599999999999999
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/rear-bolt-9",
+      "name": "Rear bolt 9",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.00930770916164102,
+        -0.09599999999999999,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        -0.00930770916164102,
+        -0.09599999999999999,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1785,
+          -0.01510770916164102,
+          -0.10179999999999999
+        ],
+        "max": [
+          0.184,
+          -0.0035077091616410212,
+          -0.09019999999999999
+        ]
+      },
+      "worldCenter": [
+        0.18125,
+        -0.00930770916164102,
+        -0.09599999999999999
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/front-bolt-10",
+      "name": "Front bolt 10",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-front",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        0.061247512360741295,
+        -0.07392389484882972,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.116,
+        0.061247512360741295,
+        -0.07392389484882972,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          0,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0.0055,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.116,
+          0.055447512360741295,
+          -0.07972389484882972
+        ],
+        "max": [
+          -0.1105,
+          0.0670475123607413,
+          -0.06812389484882972
+        ]
+      },
+      "worldCenter": [
+        -0.11325,
+        0.0612475123607413,
+        -0.07392389484882972
+      ],
+      "triangleCount": 212
+    },
+    {
+      "id": "gb:case/fasteners/rear-bolt-10",
+      "name": "Rear bolt 10",
+      "parentId": "gb-asm:case/fasteners",
+      "role": "static",
+      "group": "case:bolts",
+      "motionOwner": "static",
+      "definitionId": "gb-def:bolt-rear",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        0.061247512360741295,
+        -0.07392389484882972,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.184,
+        0.061247512360741295,
+        -0.07392389484882972,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0058,
+          -0.0058
+        ],
+        "max": [
+          0,
+          0.0058,
+          0.0058
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.1785,
+          0.055447512360741295,
+          -0.07972389484882972
+        ],
+        "max": [
+          0.184,
+          0.0670475123607413,
+          -0.06812389484882972
+        ]
+      },
+      "worldCenter": [
+        0.18125,
+        0.0612475123607413,
+        -0.07392389484882972
+      ],
+      "triangleCount": 212
+    }
+  ],
+  "assemblies": [
+    {
+      "id": "gb-asm:gearbox",
+      "name": "Five-speed teaching gearbox",
+      "parentId": null,
+      "children": [
+        "gb-asm:input",
+        "gb-asm:main",
+        "gb-asm:counter",
+        "gb-asm:idler",
+        "gb-asm:shift",
+        "gb-asm:case"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:input",
+      "name": "Input shaft assembly",
+      "parentId": "gb-asm:gearbox",
+      "children": [
+        "gb-asm:input/bearing-input",
+        "gb:input/shaft"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:input/bearing-input",
+      "name": "input ball bearing",
+      "parentId": "gb-asm:input",
+      "children": [
+        "gb:input/bearing-input/inner",
+        "gb:input/bearing-input/outer",
+        "gb:input/bearing-input/ball-1",
+        "gb:input/bearing-input/ball-2",
+        "gb:input/bearing-input/ball-3",
+        "gb:input/bearing-input/ball-4",
+        "gb:input/bearing-input/ball-5",
+        "gb:input/bearing-input/ball-6",
+        "gb:input/bearing-input/ball-7",
+        "gb:input/bearing-input/ball-8",
+        "gb:input/bearing-input/ball-9"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:main",
+      "name": "Mainshaft assembly",
+      "parentId": "gb-asm:gearbox",
+      "children": [
+        "gb-asm:main/synchro-s34",
+        "gb-asm:main/synchro-s12",
+        "gb-asm:main/synchro-s5r",
+        "gb-asm:main/bearing-rear",
+        "gb:main/shaft",
+        "gb:main/gear-3",
+        "gb:main/needle-3",
+        "gb:main/gear-2",
+        "gb:main/needle-2",
+        "gb:main/gear-1",
+        "gb:main/needle-1",
+        "gb:main/gear-r",
+        "gb:main/needle-r",
+        "gb:main/gear-5",
+        "gb:main/needle-5",
+        "gb:main/washer-23",
+        "gb:main/washer-1r",
+        "gb:main/output-flange"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:main/synchro-s34",
+      "name": "3–4 synchronizer",
+      "parentId": "gb-asm:main",
+      "children": [
+        "gb:main/synchro-s34/hub",
+        "gb:main/synchro-s34/sleeve",
+        "gb:main/synchro-s34/ring-front",
+        "gb:main/synchro-s34/ring-rear",
+        "gb:main/synchro-s34/key-1",
+        "gb:main/synchro-s34/key-2",
+        "gb:main/synchro-s34/key-3"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.055999999999999994,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.055999999999999994,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:main/synchro-s12",
+      "name": "1–2 synchronizer",
+      "parentId": "gb-asm:main",
+      "children": [
+        "gb:main/synchro-s12/hub",
+        "gb:main/synchro-s12/sleeve",
+        "gb:main/synchro-s12/ring-front",
+        "gb:main/synchro-s12/ring-rear",
+        "gb:main/synchro-s12/key-1",
+        "gb:main/synchro-s12/key-2",
+        "gb:main/synchro-s12/key-3"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.038,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:main/synchro-s5r",
+      "name": "5–R synchronizer",
+      "parentId": "gb-asm:main",
+      "children": [
+        "gb:main/synchro-s5r/hub",
+        "gb:main/synchro-s5r/sleeve",
+        "gb:main/synchro-s5r/ring-front",
+        "gb:main/synchro-s5r/ring-rear",
+        "gb:main/synchro-s5r/key-1",
+        "gb:main/synchro-s5r/key-2",
+        "gb:main/synchro-s5r/key-3"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.13,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.13,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:main/bearing-rear",
+      "name": "rear ball bearing",
+      "parentId": "gb-asm:main",
+      "children": [
+        "gb:main/bearing-rear/inner",
+        "gb:main/bearing-rear/outer",
+        "gb:main/bearing-rear/ball-1",
+        "gb:main/bearing-rear/ball-2",
+        "gb:main/bearing-rear/ball-3",
+        "gb:main/bearing-rear/ball-4",
+        "gb:main/bearing-rear/ball-5",
+        "gb:main/bearing-rear/ball-6",
+        "gb:main/bearing-rear/ball-7",
+        "gb:main/bearing-rear/ball-8",
+        "gb:main/bearing-rear/ball-9",
+        "gb:main/bearing-rear/ball-10"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:counter",
+      "name": "Countershaft assembly",
+      "parentId": "gb-asm:gearbox",
+      "children": [
+        "gb-asm:counter/bearing-counterFront",
+        "gb-asm:counter/bearing-counterRear",
+        "gb:counter/shaft",
+        "gb:counter/gear-drive",
+        "gb:counter/gear-3",
+        "gb:counter/gear-2",
+        "gb:counter/gear-1",
+        "gb:counter/gear-r",
+        "gb:counter/gear-5"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.081,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.081,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:counter/bearing-counterFront",
+      "name": "counterFront ball bearing",
+      "parentId": "gb-asm:counter",
+      "children": [
+        "gb:counter/bearing-counterFront/inner",
+        "gb:counter/bearing-counterFront/outer",
+        "gb:counter/bearing-counterFront/ball-1",
+        "gb:counter/bearing-counterFront/ball-2",
+        "gb:counter/bearing-counterFront/ball-3",
+        "gb:counter/bearing-counterFront/ball-4",
+        "gb:counter/bearing-counterFront/ball-5",
+        "gb:counter/bearing-counterFront/ball-6",
+        "gb:counter/bearing-counterFront/ball-7",
+        "gb:counter/bearing-counterFront/ball-8",
+        "gb:counter/bearing-counterFront/ball-9"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.126,
+        -0.081,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:counter/bearing-counterRear",
+      "name": "counterRear ball bearing",
+      "parentId": "gb-asm:counter",
+      "children": [
+        "gb:counter/bearing-counterRear/inner",
+        "gb:counter/bearing-counterRear/outer",
+        "gb:counter/bearing-counterRear/ball-1",
+        "gb:counter/bearing-counterRear/ball-2",
+        "gb:counter/bearing-counterRear/ball-3",
+        "gb:counter/bearing-counterRear/ball-4",
+        "gb:counter/bearing-counterRear/ball-5",
+        "gb:counter/bearing-counterRear/ball-6",
+        "gb:counter/bearing-counterRear/ball-7",
+        "gb:counter/bearing-counterRear/ball-8",
+        "gb:counter/bearing-counterRear/ball-9"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.194,
+        -0.081,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:idler",
+      "name": "Reverse idler assembly",
+      "parentId": "gb-asm:gearbox",
+      "children": [
+        "gb:idler/shaft",
+        "gb:idler/gear",
+        "gb:idler/needle"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.059166666666666666,
+        0.046090189363416106,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.059166666666666666,
+        0.046090189363416106,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:shift",
+      "name": "Shift mechanism",
+      "parentId": "gb-asm:gearbox",
+      "children": [
+        "gb:shift/rail-s34",
+        "gb:shift/fork-s34",
+        "gb:shift/rail-s12",
+        "gb:shift/fork-s12",
+        "gb:shift/rail-s5r",
+        "gb:shift/fork-s5r"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:case",
+      "name": "Gearbox case",
+      "parentId": "gb-asm:gearbox",
+      "children": [
+        "gb-asm:case/fasteners",
+        "gb:case/main-case",
+        "gb:case/front-plate",
+        "gb:case/rear-plate",
+        "gb:case/bell-housing",
+        "gb:case/rear-extension",
+        "gb:case/top-cover",
+        "gb:case/shift-lever"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "gb-asm:case/fasteners",
+      "name": "Case bolts",
+      "parentId": "gb-asm:case",
+      "children": [
+        "gb:case/fasteners/front-bolt-1",
+        "gb:case/fasteners/rear-bolt-1",
+        "gb:case/fasteners/front-bolt-2",
+        "gb:case/fasteners/rear-bolt-2",
+        "gb:case/fasteners/front-bolt-3",
+        "gb:case/fasteners/rear-bolt-3",
+        "gb:case/fasteners/front-bolt-4",
+        "gb:case/fasteners/rear-bolt-4",
+        "gb:case/fasteners/front-bolt-5",
+        "gb:case/fasteners/rear-bolt-5",
+        "gb:case/fasteners/front-bolt-6",
+        "gb:case/fasteners/rear-bolt-6",
+        "gb:case/fasteners/front-bolt-7",
+        "gb:case/fasteners/rear-bolt-7",
+        "gb:case/fasteners/front-bolt-8",
+        "gb:case/fasteners/rear-bolt-8",
+        "gb:case/fasteners/front-bolt-9",
+        "gb:case/fasteners/rear-bolt-9",
+        "gb:case/fasteners/front-bolt-10",
+        "gb:case/fasteners/rear-bolt-10"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "boundsMethod": "Exact vertex bounds of each authored definition translated by its occurrence; assemblies are pure translations.",
+  "limitations": [
+    "Original teaching model with authored dimensions; not a production gearbox or engineering CAD.",
+    "Straight-cut spur gears of one module for legibility; production gearboxes typically use helical forward gears.",
+    "Gear speeds follow ideal rigid tooth ratios. No load, friction, backlash, efficiency or contact stress is computed.",
+    "Synchronizer speed matching and dog alignment are authored on the timeline, not simulated friction or indexing.",
+    "Ball bearings are idealized pure rolling; needle bearings are plain display sleeves. Seals, oil, the clutch and the shift interlock are omitted."
+  ]
+}

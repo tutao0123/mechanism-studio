@@ -1,0 +1,1112 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "A Gearbox, Revealed",
+  "edition": "gearbox-gentle-v1",
+  "authorship": "Original Mechanism Studio composition and code synthesis. No samples, recordings or narration.",
+  "originalScoreLicense": "MIT",
+  "narration": false,
+  "geometryRevision": "gearbox-4babbc47aa4c-display-1",
+  "storyRevision": "gearbox-story-1",
+  "bpm": 96,
+  "feltBpm": 48,
+  "totalBeats": 64,
+  "bars": 16,
+  "meter": [
+    4,
+    4
+  ],
+  "sampleRate": 44100,
+  "channels": 2,
+  "bitsPerSample": 16,
+  "frames": 1764000,
+  "durationSeconds": 40,
+  "deterministicSeed": 1195530289,
+  "musicalFeel": "Soft sustained chords in F, warm half-time bass and sparse felt keys; quieter while the synchronizer is read.",
+  "timing": "One seekable PCM transport; seconds = beat * 60 / 96. Engagement ticks bind the story drive schedule.",
+  "mix": {
+    "musicTargetSamplePeakDbfs": -10,
+    "finalCeilingDbfs": -8,
+    "percussion": false,
+    "effects": "Synthesized editorial cues, not recorded or simulated gear, clutch or synchronizer sounds."
+  },
+  "effects": {
+    "kind": "editorial",
+    "clock": "Baked into the same PCM buffer. No wall-clock timers.",
+    "actionCues": [
+      {
+        "id": "case-open",
+        "cueRole": "motion",
+        "beat": 5.4,
+        "seconds": 3.375,
+        "binding": {
+          "partGroup": "case",
+          "phase": "lift"
+        },
+        "audible": true,
+        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+      },
+      {
+        "id": "explode-out",
+        "cueRole": "motion",
+        "beat": 13,
+        "seconds": 8.125,
+        "binding": {
+          "cohort": "axial",
+          "phase": "separate"
+        },
+        "audible": true,
+        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+      },
+      {
+        "id": "explode-seated",
+        "cueRole": "seating",
+        "beat": 22,
+        "seconds": 13.75,
+        "binding": {
+          "cohort": "shift",
+          "phase": "return-complete"
+        },
+        "audible": true,
+        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+      },
+      {
+        "id": "engage-1",
+        "cueRole": "engagement",
+        "beat": 23.4,
+        "seconds": 14.625,
+        "binding": {
+          "shift": "N→1",
+          "synchro": "s12"
+        },
+        "audible": true,
+        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+      },
+      {
+        "id": "engage-2",
+        "cueRole": "engagement",
+        "beat": 28.080000000000002,
+        "seconds": 17.55,
+        "binding": {
+          "shift": "1→2",
+          "synchro": "s12"
+        },
+        "audible": true,
+        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+      },
+      {
+        "id": "engage-3",
+        "cueRole": "engagement",
+        "beat": 33.080000000000005,
+        "seconds": 20.675000000000004,
+        "binding": {
+          "shift": "2→3",
+          "synchro": "s34"
+        },
+        "audible": true,
+        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+      },
+      {
+        "id": "engage-4",
+        "cueRole": "engagement",
+        "beat": 39.8,
+        "seconds": 24.875,
+        "binding": {
+          "shift": "3→4",
+          "synchro": "s34"
+        },
+        "audible": true,
+        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+      },
+      {
+        "id": "engage-5",
+        "cueRole": "engagement",
+        "beat": 45.580000000000005,
+        "seconds": 28.4875,
+        "binding": {
+          "shift": "4→5",
+          "synchro": "s5r"
+        },
+        "audible": true,
+        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+      },
+      {
+        "id": "case-closed",
+        "cueRole": "completion",
+        "beat": 57.6,
+        "seconds": 36,
+        "binding": {
+          "partGroup": "case",
+          "phase": "restored"
+        },
+        "audible": true,
+        "geometryRevision": "gearbox-4babbc47aa4c-display-1"
+      }
+    ]
+  },
+  "cues": [
+    {
+      "id": "whole",
+      "firstBeat": 0,
+      "lastBeat": 5,
+      "startSeconds": 0,
+      "endSeconds": 3.125
+    },
+    {
+      "id": "open",
+      "firstBeat": 5,
+      "lastBeat": 12,
+      "startSeconds": 3.125,
+      "endSeconds": 7.5
+    },
+    {
+      "id": "explode",
+      "firstBeat": 12,
+      "lastBeat": 22,
+      "startSeconds": 7.5,
+      "endSeconds": 13.75
+    },
+    {
+      "id": "low",
+      "firstBeat": 22,
+      "lastBeat": 32,
+      "startSeconds": 13.75,
+      "endSeconds": 20
+    },
+    {
+      "id": "sync",
+      "firstBeat": 32,
+      "lastBeat": 44,
+      "startSeconds": 20,
+      "endSeconds": 27.5
+    },
+    {
+      "id": "over",
+      "firstBeat": 44,
+      "lastBeat": 54,
+      "startSeconds": 27.5,
+      "endSeconds": 33.75
+    },
+    {
+      "id": "close",
+      "firstBeat": 54,
+      "lastBeat": 64,
+      "startSeconds": 33.75,
+      "endSeconds": 40
+    }
+  ],
+  "harmony": [
+    {
+      "firstBeat": 0,
+      "lastBeat": 8,
+      "symbol": "Fmaj9",
+      "notes": [
+        53,
+        60,
+        64,
+        67
+      ],
+      "bass": 41
+    },
+    {
+      "firstBeat": 8,
+      "lastBeat": 16,
+      "symbol": "Dm11",
+      "notes": [
+        50,
+        57,
+        60,
+        67
+      ],
+      "bass": 38
+    },
+    {
+      "firstBeat": 16,
+      "lastBeat": 24,
+      "symbol": "Bbmaj9",
+      "notes": [
+        46,
+        57,
+        60,
+        65
+      ],
+      "bass": 34
+    },
+    {
+      "firstBeat": 24,
+      "lastBeat": 32,
+      "symbol": "C6/9",
+      "notes": [
+        48,
+        55,
+        57,
+        62
+      ],
+      "bass": 36
+    },
+    {
+      "firstBeat": 32,
+      "lastBeat": 40,
+      "symbol": "Am7",
+      "notes": [
+        45,
+        55,
+        60,
+        64
+      ],
+      "bass": 33
+    },
+    {
+      "firstBeat": 40,
+      "lastBeat": 48,
+      "symbol": "Bbmaj9",
+      "notes": [
+        46,
+        57,
+        60,
+        65
+      ],
+      "bass": 34
+    },
+    {
+      "firstBeat": 48,
+      "lastBeat": 56,
+      "symbol": "Gm9/C",
+      "notes": [
+        48,
+        57,
+        58,
+        65
+      ],
+      "bass": 36
+    },
+    {
+      "firstBeat": 56,
+      "lastBeat": 64,
+      "symbol": "Fmaj9",
+      "notes": [
+        53,
+        60,
+        64,
+        67
+      ],
+      "bass": 41
+    }
+  ],
+  "events": [
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": -0.6,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 53,
+      "pan": -0.54,
+      "seed": 2227944562
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": -0.6,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 60,
+      "pan": -0.18,
+      "seed": 2616270832
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": -0.6,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 64,
+      "pan": 0.18,
+      "seed": 3118669109
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": -0.6,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 67,
+      "pan": 0.54,
+      "seed": 2465444499
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 0,
+      "durationBeats": 3.6,
+      "gain": 0.05,
+      "midi": 41,
+      "pan": 0,
+      "seed": 1888049219
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 0,
+      "durationBeats": 3,
+      "gain": 0.058,
+      "midi": 72,
+      "pan": -0.2,
+      "seed": 345851480
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 2.5,
+      "durationBeats": 3,
+      "gain": 0.045,
+      "midi": 76,
+      "pan": 0.2,
+      "seed": 915486257
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 4,
+      "durationBeats": 2.6,
+      "gain": 0.027,
+      "midi": 53,
+      "pan": 0.04,
+      "seed": 733955331
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 5,
+      "durationBeats": 3,
+      "gain": 0.044,
+      "midi": 77,
+      "pan": -0.2,
+      "seed": 448314680
+    },
+    {
+      "instrument": "swell",
+      "role": "editorial-cue",
+      "id": "case-open",
+      "beat": 5.4,
+      "gainDb": -27,
+      "pan": 0,
+      "seed": 2462975080
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 7.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 50,
+      "pan": -0.54,
+      "seed": 2699769322
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 7.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 57,
+      "pan": -0.18,
+      "seed": 210824895
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 7.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 60,
+      "pan": 0.18,
+      "seed": 945040099
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 7.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 67,
+      "pan": 0.54,
+      "seed": 471234655
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 7.5,
+      "durationBeats": 3,
+      "gain": 0.032,
+      "midi": 74,
+      "pan": 0.2,
+      "seed": 2934762869
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 8,
+      "durationBeats": 3.6,
+      "gain": 0.05,
+      "midi": 38,
+      "pan": 0,
+      "seed": 2958568524
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 9,
+      "durationBeats": 3,
+      "gain": 0.045,
+      "midi": 72,
+      "pan": -0.2,
+      "seed": 1527033398
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 12,
+      "durationBeats": 2.6,
+      "gain": 0.027,
+      "midi": 50,
+      "pan": 0.04,
+      "seed": 267059716
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 12,
+      "durationBeats": 3,
+      "gain": 0.042,
+      "midi": 69,
+      "pan": -0.2,
+      "seed": 377947029
+    },
+    {
+      "instrument": "swell",
+      "role": "editorial-cue",
+      "id": "explode-out",
+      "beat": 13,
+      "gainDb": -28,
+      "pan": 0,
+      "seed": 438477895
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 15.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 46,
+      "pan": -0.54,
+      "seed": 2597924815
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 15.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 57,
+      "pan": -0.18,
+      "seed": 1531803744
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 15.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 60,
+      "pan": 0.18,
+      "seed": 2087021152
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 15.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 65,
+      "pan": 0.54,
+      "seed": 4094524500
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 15.5,
+      "durationBeats": 3,
+      "gain": 0.04,
+      "midi": 72,
+      "pan": 0.2,
+      "seed": 675456363
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 16,
+      "durationBeats": 3.6,
+      "gain": 0.05,
+      "midi": 34,
+      "pan": 0,
+      "seed": 729400149
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 18,
+      "durationBeats": 3,
+      "gain": 0.038,
+      "midi": 77,
+      "pan": 0.2,
+      "seed": 3775690874
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 20,
+      "durationBeats": 2.6,
+      "gain": 0.027,
+      "midi": 46,
+      "pan": 0.04,
+      "seed": 1903317310
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 21,
+      "durationBeats": 3,
+      "gain": 0.03,
+      "midi": 74,
+      "pan": -0.2,
+      "seed": 2925969465
+    },
+    {
+      "instrument": "tick",
+      "role": "editorial-cue",
+      "id": "explode-seated",
+      "beat": 22,
+      "gainDb": -30,
+      "pan": 0,
+      "seed": 2614878396
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 23.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 48,
+      "pan": -0.54,
+      "seed": 1373650484
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 23.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 55,
+      "pan": -0.18,
+      "seed": 2465206757
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 23.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 57,
+      "pan": 0.18,
+      "seed": 2304747903
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 23.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 62,
+      "pan": 0.54,
+      "seed": 4053623126
+    },
+    {
+      "instrument": "tick",
+      "role": "editorial-cue",
+      "id": "engage-1",
+      "beat": 23.4,
+      "gainDb": -31,
+      "pan": 0,
+      "seed": 508188730
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 24,
+      "durationBeats": 3.6,
+      "gain": 0.05,
+      "midi": 36,
+      "pan": 0,
+      "seed": 3946995211
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 24,
+      "durationBeats": 3,
+      "gain": 0.034,
+      "midi": 72,
+      "pan": -0.2,
+      "seed": 3126254153
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 27,
+      "durationBeats": 3,
+      "gain": 0.03,
+      "midi": 76,
+      "pan": 0.2,
+      "seed": 1122693732
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 28,
+      "durationBeats": 2.6,
+      "gain": 0.027,
+      "midi": 48,
+      "pan": 0.04,
+      "seed": 2968668140
+    },
+    {
+      "instrument": "tick",
+      "role": "editorial-cue",
+      "id": "engage-2",
+      "beat": 28.080000000000002,
+      "gainDb": -31,
+      "pan": 0,
+      "seed": 4243538236
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 30,
+      "durationBeats": 3,
+      "gain": 0.026,
+      "midi": 79,
+      "pan": 0.2,
+      "seed": 2288900853
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 31.4,
+      "durationBeats": 10,
+      "gain": 0.011,
+      "midi": 45,
+      "pan": -0.54,
+      "seed": 4194100905
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 31.4,
+      "durationBeats": 10,
+      "gain": 0.011,
+      "midi": 55,
+      "pan": -0.18,
+      "seed": 3223000061
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 31.4,
+      "durationBeats": 10,
+      "gain": 0.011,
+      "midi": 60,
+      "pan": 0.18,
+      "seed": 4009024331
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 31.4,
+      "durationBeats": 10,
+      "gain": 0.011,
+      "midi": 64,
+      "pan": 0.54,
+      "seed": 3325120961
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 32,
+      "durationBeats": 3.6,
+      "gain": 0.038,
+      "midi": 33,
+      "pan": 0,
+      "seed": 1831182085
+    },
+    {
+      "instrument": "tick",
+      "role": "editorial-cue",
+      "id": "engage-3",
+      "beat": 33.080000000000005,
+      "gainDb": -31,
+      "pan": 0,
+      "seed": 2379579512
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 34,
+      "durationBeats": 4,
+      "gain": 0.022,
+      "midi": 76,
+      "pan": 0.2,
+      "seed": 1431531150
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 39.4,
+      "durationBeats": 10,
+      "gain": 0.011,
+      "midi": 46,
+      "pan": -0.54,
+      "seed": 107166947
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 39.4,
+      "durationBeats": 10,
+      "gain": 0.011,
+      "midi": 57,
+      "pan": -0.18,
+      "seed": 1577979770
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 39.4,
+      "durationBeats": 10,
+      "gain": 0.011,
+      "midi": 60,
+      "pan": 0.18,
+      "seed": 1673867754
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 39.4,
+      "durationBeats": 10,
+      "gain": 0.011,
+      "midi": 65,
+      "pan": 0.54,
+      "seed": 2063487478
+    },
+    {
+      "instrument": "tick",
+      "role": "editorial-cue",
+      "id": "engage-4",
+      "beat": 39.8,
+      "gainDb": -27,
+      "pan": 0,
+      "seed": 2257415187
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 40,
+      "durationBeats": 3.6,
+      "gain": 0.038,
+      "midi": 34,
+      "pan": 0,
+      "seed": 2833111926
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 40,
+      "durationBeats": 4,
+      "gain": 0.022,
+      "midi": 72,
+      "pan": -0.2,
+      "seed": 684772109
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 44.5,
+      "durationBeats": 3,
+      "gain": 0.036,
+      "midi": 74,
+      "pan": -0.2,
+      "seed": 127101205
+    },
+    {
+      "instrument": "tick",
+      "role": "editorial-cue",
+      "id": "engage-5",
+      "beat": 45.580000000000005,
+      "gainDb": -31,
+      "pan": 0,
+      "seed": 1257294834
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 47,
+      "durationBeats": 3,
+      "gain": 0.034,
+      "midi": 77,
+      "pan": 0.2,
+      "seed": 1015158157
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 47.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 48,
+      "pan": -0.54,
+      "seed": 1708484461
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 47.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 57,
+      "pan": -0.18,
+      "seed": 3995123121
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 47.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 58,
+      "pan": 0.18,
+      "seed": 3410407000
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 47.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 65,
+      "pan": 0.54,
+      "seed": 3476923134
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 48,
+      "durationBeats": 3.6,
+      "gain": 0.05,
+      "midi": 36,
+      "pan": 0,
+      "seed": 388863629
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 50,
+      "durationBeats": 3,
+      "gain": 0.03,
+      "midi": 81,
+      "pan": 0.2,
+      "seed": 3092166774
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 52,
+      "durationBeats": 2.6,
+      "gain": 0.027,
+      "midi": 48,
+      "pan": 0.04,
+      "seed": 444369519
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 53,
+      "durationBeats": 3,
+      "gain": 0.028,
+      "midi": 77,
+      "pan": -0.2,
+      "seed": 2270008630
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 55.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 53,
+      "pan": -0.54,
+      "seed": 3983225544
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 55.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 60,
+      "pan": -0.18,
+      "seed": 3984112975
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 55.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 64,
+      "pan": 0.18,
+      "seed": 2693449496
+    },
+    {
+      "instrument": "pad",
+      "role": "music",
+      "beat": 55.4,
+      "durationBeats": 10,
+      "gain": 0.014,
+      "midi": 67,
+      "pan": 0.54,
+      "seed": 4116381324
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 56,
+      "durationBeats": 3.6,
+      "gain": 0.05,
+      "midi": 41,
+      "pan": 0,
+      "seed": 4226446023
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 56,
+      "durationBeats": 3,
+      "gain": 0.044,
+      "midi": 72,
+      "pan": -0.2,
+      "seed": 2290521985
+    },
+    {
+      "instrument": "chime",
+      "role": "editorial-cue",
+      "id": "case-closed",
+      "beat": 57.6,
+      "gainDb": -29,
+      "pan": 0,
+      "seed": 576636083
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 58.5,
+      "durationBeats": 3,
+      "gain": 0.034,
+      "midi": 76,
+      "pan": 0.2,
+      "seed": 346664344
+    },
+    {
+      "instrument": "bass",
+      "role": "music",
+      "beat": 60,
+      "durationBeats": 2.6,
+      "gain": 0.027,
+      "midi": 53,
+      "pan": 0.04,
+      "seed": 64367152
+    },
+    {
+      "instrument": "key",
+      "role": "music",
+      "beat": 61,
+      "durationBeats": 3,
+      "gain": 0.026,
+      "midi": 77,
+      "pan": -0.2,
+      "seed": 38354835
+    }
+  ],
+  "file": "gearbox-loop.wav",
+  "byteLength": 7056044,
+  "sha256": "f0c968d9940e62e7ea17457770847d938938e1f58c919e3a85b282db4cac1efd",
+  "analysis": {
+    "sampleRate": 44100,
+    "frames": 1764000,
+    "durationSeconds": 40,
+    "peak": 0.31622776601683794,
+    "peakDbfs": -10,
+    "rmsDbfs": -24.454008983059833,
+    "clippedSamples": 0,
+    "masterScale": 1,
+    "loopBoundary": {
+      "maximumStep": 0.0005615494966423598,
+      "maximumInteriorStep": 0.020191431267714777,
+      "ratioToMaximumInteriorStep": 0.02781127742738342
+    },
+    "sections": [
+      {
+        "id": "whole",
+        "firstBeat": 0,
+        "lastBeat": 5,
+        "rmsDbfs": -22.569420905221843
+      },
+      {
+        "id": "open",
+        "firstBeat": 5,
+        "lastBeat": 12,
+        "rmsDbfs": -24.11547316613371
+      },
+      {
+        "id": "explode",
+        "firstBeat": 12,
+        "lastBeat": 22,
+        "rmsDbfs": -23.099777475233697
+      },
+      {
+        "id": "low",
+        "firstBeat": 22,
+        "lastBeat": 32,
+        "rmsDbfs": -24.860768855015635
+      },
+      {
+        "id": "sync",
+        "firstBeat": 32,
+        "lastBeat": 44,
+        "rmsDbfs": -27.27029718433297
+      },
+      {
+        "id": "over",
+        "firstBeat": 44,
+        "lastBeat": 54,
+        "rmsDbfs": -24.320359935203268
+      },
+      {
+        "id": "close",
+        "firstBeat": 54,
+        "lastBeat": 64,
+        "rmsDbfs": -24.739320042637022
+      }
+    ],
+    "listeningReviewed": false,
+    "listeningReview": "Objective waveform checks only; subjective listening requires a separate review."
+  }
+}
