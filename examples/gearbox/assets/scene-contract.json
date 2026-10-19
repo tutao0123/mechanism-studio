@@ -1,0 +1,4113 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "teaching-gearbox-5r",
+  "assetRevision": "gearbox-93d9bd770540-display-1",
+  "units": {
+    "source": "authored metres and radians",
+    "asset": "m",
+    "angle": "rad"
+  },
+  "coordinateMap": "glTF metres, right-handed, +Y up; shafts along +X from the engine side (−X) to the output (+X)",
+  "identity": "part_id is gb:<assembly path>/<part>; assembly_id is gb-asm:<path>. Repeated occurrences share a gb-def mesh definition.",
+  "limitations": [
+    "Original teaching model with authored dimensions; not a production gearbox or engineering CAD.",
+    "Straight-cut spur gears of one module for legibility; production gearboxes typically use helical forward gears.",
+    "Gear speeds follow ideal rigid tooth ratios. No load, friction, backlash, efficiency or contact stress is computed.",
+    "Synchronizer speed matching and dog alignment are authored on the timeline, not simulated friction or indexing.",
+    "Ball bearings are idealized pure rolling; needle bearings are plain display sleeves. Seals, oil, the clutch and the shift interlock are omitted."
+  ],
+  "parts": [
+    {
+      "part_id": "gb:input/shaft",
+      "parent_id": "gb-asm:input",
+      "label": "Input shaft",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.09,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:input",
+      "definitionId": "gb-def:input/shaft"
+    },
+    {
+      "part_id": "gb:input/bearing-input/inner",
+      "parent_id": "gb-asm:input/bearing-input",
+      "label": "Inner race",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:inner:input",
+      "definitionId": "gb-def:race-inner-input"
+    },
+    {
+      "part_id": "gb:input/bearing-input/outer",
+      "parent_id": "gb-asm:input/bearing-input",
+      "label": "Outer race",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:race-outer-input"
+    },
+    {
+      "part_id": "gb:input/bearing-input/ball-1",
+      "parent_id": "gb-asm:input/bearing-input",
+      "label": "Ball 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.024,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:input",
+      "definitionId": "gb-def:ball-input"
+    },
+    {
+      "part_id": "gb:input/bearing-input/ball-2",
+      "parent_id": "gb-asm:input/bearing-input",
+      "label": "Ball 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.018385066634855472,
+          0.015426902632476942,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:input",
+      "definitionId": "gb-def:ball-input"
+    },
+    {
+      "part_id": "gb:input/bearing-input/ball-3",
+      "parent_id": "gb-asm:input/bearing-input",
+      "label": "Ball 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.00416755626400633,
+          0.023635386072292992,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:input",
+      "definitionId": "gb-def:ball-input"
+    },
+    {
+      "part_id": "gb:input/bearing-input/ball-4",
+      "parent_id": "gb-asm:input/bearing-input",
+      "label": "Ball 4",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.011999999999999995,
+          0.02078460969082653,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:input",
+      "definitionId": "gb-def:ball-input"
+    },
+    {
+      "part_id": "gb:input/bearing-input/ball-5",
+      "parent_id": "gb-asm:input/bearing-input",
+      "label": "Ball 5",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.0225526228988618,
+          0.008208483439816052,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:input",
+      "definitionId": "gb-def:ball-input"
+    },
+    {
+      "part_id": "gb:input/bearing-input/ball-6",
+      "parent_id": "gb-asm:input/bearing-input",
+      "label": "Ball 6",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.022552622898861802,
+          -0.008208483439816047,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:input",
+      "definitionId": "gb-def:ball-input"
+    },
+    {
+      "part_id": "gb:input/bearing-input/ball-7",
+      "parent_id": "gb-asm:input/bearing-input",
+      "label": "Ball 7",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.01200000000000001,
+          -0.020784609690826523,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:input",
+      "definitionId": "gb-def:ball-input"
+    },
+    {
+      "part_id": "gb:input/bearing-input/ball-8",
+      "parent_id": "gb-asm:input/bearing-input",
+      "label": "Ball 8",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.00416755626400632,
+          -0.023635386072292996,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:input",
+      "definitionId": "gb-def:ball-input"
+    },
+    {
+      "part_id": "gb:input/bearing-input/ball-9",
+      "parent_id": "gb-asm:input/bearing-input",
+      "label": "Ball 9",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.01838506663485547,
+          -0.01542690263247695,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:input",
+      "definitionId": "gb-def:ball-input"
+    },
+    {
+      "part_id": "gb:main/shaft",
+      "parent_id": "gb-asm:main",
+      "label": "Mainshaft",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.038,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:output",
+      "definitionId": "gb-def:main/shaft"
+    },
+    {
+      "part_id": "gb:main/gear-3",
+      "parent_id": "gb-asm:main",
+      "label": "3rd gear",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.022,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:main3",
+      "definitionId": "gb-def:main/gear-3"
+    },
+    {
+      "part_id": "gb:main/needle-3",
+      "parent_id": "gb-asm:main",
+      "label": "3rd gear needle bearing",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.022,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "needle:main3",
+      "definitionId": "gb-def:main/needle-3"
+    },
+    {
+      "part_id": "gb:main/gear-2",
+      "parent_id": "gb-asm:main",
+      "label": "2nd gear",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.004,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:main2",
+      "definitionId": "gb-def:main/gear-2"
+    },
+    {
+      "part_id": "gb:main/needle-2",
+      "parent_id": "gb-asm:main",
+      "label": "2nd gear needle bearing",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.004,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "needle:main2",
+      "definitionId": "gb-def:main/needle-2"
+    },
+    {
+      "part_id": "gb:main/gear-1",
+      "parent_id": "gb-asm:main",
+      "label": "1st gear",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.072,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:main1",
+      "definitionId": "gb-def:main/gear-1"
+    },
+    {
+      "part_id": "gb:main/needle-1",
+      "parent_id": "gb-asm:main",
+      "label": "1st gear needle bearing",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.072,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "needle:main1",
+      "definitionId": "gb-def:main/needle-1"
+    },
+    {
+      "part_id": "gb:main/gear-r",
+      "parent_id": "gb-asm:main",
+      "label": "Reverse gear",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.097,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:mainR",
+      "definitionId": "gb-def:main/gear-r"
+    },
+    {
+      "part_id": "gb:main/needle-r",
+      "parent_id": "gb-asm:main",
+      "label": "Reverse gear needle bearing",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.097,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "needle:mainR",
+      "definitionId": "gb-def:main/needle-r"
+    },
+    {
+      "part_id": "gb:main/gear-5",
+      "parent_id": "gb-asm:main",
+      "label": "5th gear",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.16299999999999998,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:main5",
+      "definitionId": "gb-def:main/gear-5"
+    },
+    {
+      "part_id": "gb:main/needle-5",
+      "parent_id": "gb-asm:main",
+      "label": "5th gear needle bearing",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.16299999999999998,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "needle:main5",
+      "definitionId": "gb-def:main/needle-5"
+    },
+    {
+      "part_id": "gb:main/washer-23",
+      "parent_id": "gb-asm:main",
+      "label": "Thrust washer",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.009000000000000001,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:output",
+      "definitionId": "gb-def:thrust-washer"
+    },
+    {
+      "part_id": "gb:main/washer-1r",
+      "parent_id": "gb-asm:main",
+      "label": "Thrust washer",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.08499999999999999,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:output",
+      "definitionId": "gb-def:thrust-washer"
+    },
+    {
+      "part_id": "gb:main/synchro-s34/hub",
+      "parent_id": "gb-asm:main/synchro-s34",
+      "label": "Synchronizer hub",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:output",
+      "definitionId": "gb-def:hub-s34"
+    },
+    {
+      "part_id": "gb:main/synchro-s34/sleeve",
+      "parent_id": "gb-asm:main/synchro-s34",
+      "label": "Synchronizer sleeve",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "sleeve:s34",
+      "definitionId": "gb-def:sleeve-s34"
+    },
+    {
+      "part_id": "gb:main/synchro-s34/ring-front",
+      "parent_id": "gb-asm:main/synchro-s34",
+      "label": "Blocker ring (front)",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "ring:s34:-1",
+      "definitionId": "gb-def:ring-s34"
+    },
+    {
+      "part_id": "gb:main/synchro-s34/ring-rear",
+      "parent_id": "gb-asm:main/synchro-s34",
+      "label": "Blocker ring (rear)",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.014,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "ring:s34:1",
+      "definitionId": "gb-def:ring-s34"
+    },
+    {
+      "part_id": "gb:main/synchro-s34/key-1",
+      "parent_id": "gb-asm:main/synchro-s34",
+      "label": "Synchronizer key 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "key:s34",
+      "definitionId": "gb-def:key-s34-1"
+    },
+    {
+      "part_id": "gb:main/synchro-s34/key-2",
+      "parent_id": "gb-asm:main/synchro-s34",
+      "label": "Synchronizer key 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "key:s34",
+      "definitionId": "gb-def:key-s34-2"
+    },
+    {
+      "part_id": "gb:main/synchro-s34/key-3",
+      "parent_id": "gb-asm:main/synchro-s34",
+      "label": "Synchronizer key 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "key:s34",
+      "definitionId": "gb-def:key-s34-3"
+    },
+    {
+      "part_id": "gb:main/synchro-s12/hub",
+      "parent_id": "gb-asm:main/synchro-s12",
+      "label": "Synchronizer hub",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:output",
+      "definitionId": "gb-def:hub-s12"
+    },
+    {
+      "part_id": "gb:main/synchro-s12/sleeve",
+      "parent_id": "gb-asm:main/synchro-s12",
+      "label": "Synchronizer sleeve",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "sleeve:s12",
+      "definitionId": "gb-def:sleeve-s12"
+    },
+    {
+      "part_id": "gb:main/synchro-s12/ring-front",
+      "parent_id": "gb-asm:main/synchro-s12",
+      "label": "Blocker ring (front)",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "ring:s12:-1",
+      "definitionId": "gb-def:ring-s12"
+    },
+    {
+      "part_id": "gb:main/synchro-s12/ring-rear",
+      "parent_id": "gb-asm:main/synchro-s12",
+      "label": "Blocker ring (rear)",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.014,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "ring:s12:1",
+      "definitionId": "gb-def:ring-s12"
+    },
+    {
+      "part_id": "gb:main/synchro-s12/key-1",
+      "parent_id": "gb-asm:main/synchro-s12",
+      "label": "Synchronizer key 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "key:s12",
+      "definitionId": "gb-def:key-s12-1"
+    },
+    {
+      "part_id": "gb:main/synchro-s12/key-2",
+      "parent_id": "gb-asm:main/synchro-s12",
+      "label": "Synchronizer key 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "key:s12",
+      "definitionId": "gb-def:key-s12-2"
+    },
+    {
+      "part_id": "gb:main/synchro-s12/key-3",
+      "parent_id": "gb-asm:main/synchro-s12",
+      "label": "Synchronizer key 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "key:s12",
+      "definitionId": "gb-def:key-s12-3"
+    },
+    {
+      "part_id": "gb:main/synchro-s5r/hub",
+      "parent_id": "gb-asm:main/synchro-s5r",
+      "label": "Synchronizer hub",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:output",
+      "definitionId": "gb-def:hub-s5r"
+    },
+    {
+      "part_id": "gb:main/synchro-s5r/sleeve",
+      "parent_id": "gb-asm:main/synchro-s5r",
+      "label": "Synchronizer sleeve",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "sleeve:s5r",
+      "definitionId": "gb-def:sleeve-s5r"
+    },
+    {
+      "part_id": "gb:main/synchro-s5r/ring-front",
+      "parent_id": "gb-asm:main/synchro-s5r",
+      "label": "Blocker ring (front)",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "ring:s5r:-1",
+      "definitionId": "gb-def:ring-s5r"
+    },
+    {
+      "part_id": "gb:main/synchro-s5r/ring-rear",
+      "parent_id": "gb-asm:main/synchro-s5r",
+      "label": "Blocker ring (rear)",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.014,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "ring:s5r:1",
+      "definitionId": "gb-def:ring-s5r"
+    },
+    {
+      "part_id": "gb:main/synchro-s5r/key-1",
+      "parent_id": "gb-asm:main/synchro-s5r",
+      "label": "Synchronizer key 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "key:s5r",
+      "definitionId": "gb-def:key-s5r-1"
+    },
+    {
+      "part_id": "gb:main/synchro-s5r/key-2",
+      "parent_id": "gb-asm:main/synchro-s5r",
+      "label": "Synchronizer key 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "key:s5r",
+      "definitionId": "gb-def:key-s5r-2"
+    },
+    {
+      "part_id": "gb:main/synchro-s5r/key-3",
+      "parent_id": "gb-asm:main/synchro-s5r",
+      "label": "Synchronizer key 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "key:s5r",
+      "definitionId": "gb-def:key-s5r-3"
+    },
+    {
+      "part_id": "gb:main/output-flange",
+      "parent_id": "gb-asm:main",
+      "label": "Output flange",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.302,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:output",
+      "definitionId": "gb-def:main/output-flange"
+    },
+    {
+      "part_id": "gb:main/bearing-rear/inner",
+      "parent_id": "gb-asm:main/bearing-rear",
+      "label": "Inner race",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:inner:rear",
+      "definitionId": "gb-def:race-inner-rear"
+    },
+    {
+      "part_id": "gb:main/bearing-rear/outer",
+      "parent_id": "gb-asm:main/bearing-rear",
+      "label": "Outer race",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:race-outer-rear"
+    },
+    {
+      "part_id": "gb:main/bearing-rear/ball-1",
+      "parent_id": "gb-asm:main/bearing-rear",
+      "label": "Ball 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.026,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:rear",
+      "definitionId": "gb-def:ball-rear"
+    },
+    {
+      "part_id": "gb:main/bearing-rear/ball-2",
+      "parent_id": "gb-asm:main/bearing-rear",
+      "label": "Ball 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.021034441853748632,
+          0.0152824165596043,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:rear",
+      "definitionId": "gb-def:ball-rear"
+    },
+    {
+      "part_id": "gb:main/bearing-rear/ball-3",
+      "parent_id": "gb-asm:main/bearing-rear",
+      "label": "Ball 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.008034441853748634,
+          0.02472746942367399,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:rear",
+      "definitionId": "gb-def:ball-rear"
+    },
+    {
+      "part_id": "gb:main/bearing-rear/ball-4",
+      "parent_id": "gb-asm:main/bearing-rear",
+      "label": "Ball 4",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.00803444185374863,
+          0.024727469423673994,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:rear",
+      "definitionId": "gb-def:ball-rear"
+    },
+    {
+      "part_id": "gb:main/bearing-rear/ball-5",
+      "parent_id": "gb-asm:main/bearing-rear",
+      "label": "Ball 5",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.02103444185374863,
+          0.015282416559604304,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:rear",
+      "definitionId": "gb-def:ball-rear"
+    },
+    {
+      "part_id": "gb:main/bearing-rear/ball-6",
+      "parent_id": "gb-asm:main/bearing-rear",
+      "label": "Ball 6",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.026,
+          3.1840816777831182e-18,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:rear",
+      "definitionId": "gb-def:ball-rear"
+    },
+    {
+      "part_id": "gb:main/bearing-rear/ball-7",
+      "parent_id": "gb-asm:main/bearing-rear",
+      "label": "Ball 7",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.021034441853748632,
+          -0.015282416559604299,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:rear",
+      "definitionId": "gb-def:ball-rear"
+    },
+    {
+      "part_id": "gb:main/bearing-rear/ball-8",
+      "parent_id": "gb-asm:main/bearing-rear",
+      "label": "Ball 8",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.008034441853748636,
+          -0.02472746942367399,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:rear",
+      "definitionId": "gb-def:ball-rear"
+    },
+    {
+      "part_id": "gb:main/bearing-rear/ball-9",
+      "parent_id": "gb-asm:main/bearing-rear",
+      "label": "Ball 9",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.008034441853748627,
+          -0.024727469423673994,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:rear",
+      "definitionId": "gb-def:ball-rear"
+    },
+    {
+      "part_id": "gb:main/bearing-rear/ball-10",
+      "parent_id": "gb-asm:main/bearing-rear",
+      "label": "Ball 10",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.02103444185374863,
+          -0.015282416559604307,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:rear",
+      "definitionId": "gb-def:ball-rear"
+    },
+    {
+      "part_id": "gb:counter/shaft",
+      "parent_id": "gb-asm:counter",
+      "label": "Countershaft",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.03399999999999999,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:counter",
+      "definitionId": "gb-def:counter/shaft"
+    },
+    {
+      "part_id": "gb:counter/gear-drive",
+      "parent_id": "gb-asm:counter",
+      "label": "Countershaft drive gear",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.09,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:counter",
+      "definitionId": "gb-def:counter/gear-drive"
+    },
+    {
+      "part_id": "gb:counter/gear-3",
+      "parent_id": "gb-asm:counter",
+      "label": "Countershaft 3rd gear",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.022,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:counter",
+      "definitionId": "gb-def:counter/gear-3"
+    },
+    {
+      "part_id": "gb:counter/gear-2",
+      "parent_id": "gb-asm:counter",
+      "label": "Countershaft 2nd gear",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.004,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:counter",
+      "definitionId": "gb-def:counter/gear-2"
+    },
+    {
+      "part_id": "gb:counter/gear-1",
+      "parent_id": "gb-asm:counter",
+      "label": "Countershaft 1st gear",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.072,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:counter",
+      "definitionId": "gb-def:counter/gear-1"
+    },
+    {
+      "part_id": "gb:counter/gear-r",
+      "parent_id": "gb-asm:counter",
+      "label": "Countershaft reverse gear",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.097,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:counter",
+      "definitionId": "gb-def:counter/gear-r"
+    },
+    {
+      "part_id": "gb:counter/gear-5",
+      "parent_id": "gb-asm:counter",
+      "label": "Countershaft 5th gear",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.16299999999999998,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:counter",
+      "definitionId": "gb-def:counter/gear-5"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterFront/inner",
+      "parent_id": "gb-asm:counter/bearing-counterFront",
+      "label": "Inner race",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:inner:counterFront",
+      "definitionId": "gb-def:race-inner-counterFront"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterFront/outer",
+      "parent_id": "gb-asm:counter/bearing-counterFront",
+      "label": "Outer race",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:race-outer-counterFront"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterFront/ball-1",
+      "parent_id": "gb-asm:counter/bearing-counterFront",
+      "label": "Ball 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.023,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterFront",
+      "definitionId": "gb-def:ball-counterFront"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterFront/ball-2",
+      "parent_id": "gb-asm:counter/bearing-counterFront",
+      "label": "Ball 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.017619022191736493,
+          0.014784115022790402,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterFront",
+      "definitionId": "gb-def:ball-counterFront"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterFront/ball-3",
+      "parent_id": "gb-asm:counter/bearing-counterFront",
+      "label": "Ball 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.003993908086339399,
+          0.022650578319280783,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterFront",
+      "definitionId": "gb-def:ball-counterFront"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterFront/ball-4",
+      "parent_id": "gb-asm:counter/bearing-counterFront",
+      "label": "Ball 4",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.011499999999999995,
+          0.01991858428704209,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterFront",
+      "definitionId": "gb-def:ball-counterFront"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterFront/ball-5",
+      "parent_id": "gb-asm:counter/bearing-counterFront",
+      "label": "Ball 5",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.02161293027807589,
+          0.007866463296490385,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterFront",
+      "definitionId": "gb-def:ball-counterFront"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterFront/ball-6",
+      "parent_id": "gb-asm:counter/bearing-counterFront",
+      "label": "Ball 6",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.021612930278075895,
+          -0.00786646329649038,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterFront",
+      "definitionId": "gb-def:ball-counterFront"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterFront/ball-7",
+      "parent_id": "gb-asm:counter/bearing-counterFront",
+      "label": "Ball 7",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.01150000000000001,
+          -0.019918584287042084,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterFront",
+      "definitionId": "gb-def:ball-counterFront"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterFront/ball-8",
+      "parent_id": "gb-asm:counter/bearing-counterFront",
+      "label": "Ball 8",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.00399390808633939,
+          -0.022650578319280787,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterFront",
+      "definitionId": "gb-def:ball-counterFront"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterFront/ball-9",
+      "parent_id": "gb-asm:counter/bearing-counterFront",
+      "label": "Ball 9",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.01761902219173649,
+          -0.01478411502279041,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterFront",
+      "definitionId": "gb-def:ball-counterFront"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterRear/inner",
+      "parent_id": "gb-asm:counter/bearing-counterRear",
+      "label": "Inner race",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:inner:counterRear",
+      "definitionId": "gb-def:race-inner-counterRear"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterRear/outer",
+      "parent_id": "gb-asm:counter/bearing-counterRear",
+      "label": "Outer race",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:race-outer-counterRear"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterRear/ball-1",
+      "parent_id": "gb-asm:counter/bearing-counterRear",
+      "label": "Ball 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.023,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterRear",
+      "definitionId": "gb-def:ball-counterRear"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterRear/ball-2",
+      "parent_id": "gb-asm:counter/bearing-counterRear",
+      "label": "Ball 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.017619022191736493,
+          0.014784115022790402,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterRear",
+      "definitionId": "gb-def:ball-counterRear"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterRear/ball-3",
+      "parent_id": "gb-asm:counter/bearing-counterRear",
+      "label": "Ball 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.003993908086339399,
+          0.022650578319280783,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterRear",
+      "definitionId": "gb-def:ball-counterRear"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterRear/ball-4",
+      "parent_id": "gb-asm:counter/bearing-counterRear",
+      "label": "Ball 4",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.011499999999999995,
+          0.01991858428704209,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterRear",
+      "definitionId": "gb-def:ball-counterRear"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterRear/ball-5",
+      "parent_id": "gb-asm:counter/bearing-counterRear",
+      "label": "Ball 5",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.02161293027807589,
+          0.007866463296490385,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterRear",
+      "definitionId": "gb-def:ball-counterRear"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterRear/ball-6",
+      "parent_id": "gb-asm:counter/bearing-counterRear",
+      "label": "Ball 6",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.021612930278075895,
+          -0.00786646329649038,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterRear",
+      "definitionId": "gb-def:ball-counterRear"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterRear/ball-7",
+      "parent_id": "gb-asm:counter/bearing-counterRear",
+      "label": "Ball 7",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.01150000000000001,
+          -0.019918584287042084,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterRear",
+      "definitionId": "gb-def:ball-counterRear"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterRear/ball-8",
+      "parent_id": "gb-asm:counter/bearing-counterRear",
+      "label": "Ball 8",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.00399390808633939,
+          -0.022650578319280787,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterRear",
+      "definitionId": "gb-def:ball-counterRear"
+    },
+    {
+      "part_id": "gb:counter/bearing-counterRear/ball-9",
+      "parent_id": "gb-asm:counter/bearing-counterRear",
+      "label": "Ball 9",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.01761902219173649,
+          -0.01478411502279041,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:cage:counterRear",
+      "definitionId": "gb-def:ball-counterRear"
+    },
+    {
+      "part_id": "gb:idler/shaft",
+      "parent_id": "gb-asm:idler",
+      "label": "Reverse idler shaft",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.097,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:idler/shaft"
+    },
+    {
+      "part_id": "gb:idler/gear",
+      "parent_id": "gb-asm:idler",
+      "label": "Reverse idler gear",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.097,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "spin:idler",
+      "definitionId": "gb-def:idler/gear"
+    },
+    {
+      "part_id": "gb:idler/needle",
+      "parent_id": "gb-asm:idler",
+      "label": "Reverse idler needle bearing",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.097,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "needle:idler",
+      "definitionId": "gb-def:idler/needle"
+    },
+    {
+      "part_id": "gb:shift/rail-s34",
+      "parent_id": "gb-asm:shift",
+      "label": "3–4 shift rail",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.033999999999999996,
+          0.078,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "rail:s34",
+      "definitionId": "gb-def:shift/rail-s34"
+    },
+    {
+      "part_id": "gb:shift/fork-s34",
+      "parent_id": "gb-asm:shift",
+      "label": "3–4 shift fork",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.055999999999999994,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "fork:s34",
+      "definitionId": "gb-def:shift/fork-s34"
+    },
+    {
+      "part_id": "gb:shift/rail-s12",
+      "parent_id": "gb-asm:shift",
+      "label": "1–2 shift rail",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.033999999999999996,
+          0.078,
+          -0.026,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "rail:s12",
+      "definitionId": "gb-def:shift/rail-s12"
+    },
+    {
+      "part_id": "gb:shift/fork-s12",
+      "parent_id": "gb-asm:shift",
+      "label": "1–2 shift fork",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.038,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "fork:s12",
+      "definitionId": "gb-def:shift/fork-s12"
+    },
+    {
+      "part_id": "gb:shift/rail-s5r",
+      "parent_id": "gb-asm:shift",
+      "label": "5–R shift rail",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.033999999999999996,
+          0.078,
+          0.026,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "rail:s5r",
+      "definitionId": "gb-def:shift/rail-s5r"
+    },
+    {
+      "part_id": "gb:shift/fork-s5r",
+      "parent_id": "gb-asm:shift",
+      "label": "5–R shift fork",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.13,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "fork:s5r",
+      "definitionId": "gb-def:shift/fork-s5r"
+    },
+    {
+      "part_id": "gb:case/main-case",
+      "parent_id": "gb-asm:case",
+      "label": "Main case",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.033999999999999996,
+          -0.0405,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:case/main-case"
+    },
+    {
+      "part_id": "gb:case/front-plate",
+      "parent_id": "gb-asm:case",
+      "label": "Front plate",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.126,
+          -0.0405,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:end-plate"
+    },
+    {
+      "part_id": "gb:case/rear-plate",
+      "parent_id": "gb-asm:case",
+      "label": "Rear plate",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.194,
+          -0.0405,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:end-plate"
+    },
+    {
+      "part_id": "gb:case/bell-housing",
+      "parent_id": "gb-asm:case",
+      "label": "Bell housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.136,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:case/bell-housing"
+    },
+    {
+      "part_id": "gb:case/rear-extension",
+      "parent_id": "gb-asm:case",
+      "label": "Rear extension",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.204,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:case/rear-extension"
+    },
+    {
+      "part_id": "gb:case/top-cover",
+      "parent_id": "gb-asm:case",
+      "label": "Top cover",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.037000000000000005,
+          0.09,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:case/top-cover"
+    },
+    {
+      "part_id": "gb:case/shift-lever",
+      "parent_id": "gb-asm:case",
+      "label": "Shift lever",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.038,
+          0.097,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "lever",
+      "definitionId": "gb-def:case/shift-lever"
+    },
+    {
+      "part_id": "gb:case/fasteners/front-bolt-1",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Front bolt 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.116,
+          0.09599999999999997,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-front"
+    },
+    {
+      "part_id": "gb:case/fasteners/rear-bolt-1",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Rear bolt 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.184,
+          0.09599999999999997,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-rear"
+    },
+    {
+      "part_id": "gb:case/fasteners/front-bolt-2",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Front bolt 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.116,
+          0.06124751236074134,
+          0.07392389484882972,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-front"
+    },
+    {
+      "part_id": "gb:case/fasteners/rear-bolt-2",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Rear bolt 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.184,
+          0.06124751236074134,
+          0.07392389484882972,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-rear"
+    },
+    {
+      "part_id": "gb:case/fasteners/front-bolt-3",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Front bolt 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.116,
+          -0.009307709161640993,
+          0.09599999999999999,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-front"
+    },
+    {
+      "part_id": "gb:case/fasteners/rear-bolt-3",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Rear bolt 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.184,
+          -0.009307709161640993,
+          0.09599999999999999,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-rear"
+    },
+    {
+      "part_id": "gb:case/fasteners/front-bolt-4",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Front bolt 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.116,
+          -0.07169229083835899,
+          0.09599999999999999,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-front"
+    },
+    {
+      "part_id": "gb:case/fasteners/rear-bolt-4",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Rear bolt 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.184,
+          -0.07169229083835899,
+          0.09599999999999999,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-rear"
+    },
+    {
+      "part_id": "gb:case/fasteners/front-bolt-5",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Front bolt 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.116,
+          -0.14224751236074132,
+          0.07392389484882973,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-front"
+    },
+    {
+      "part_id": "gb:case/fasteners/rear-bolt-5",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Rear bolt 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.184,
+          -0.14224751236074132,
+          0.07392389484882973,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-rear"
+    },
+    {
+      "part_id": "gb:case/fasteners/front-bolt-6",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Front bolt 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.116,
+          -0.177,
+          1.6716428808361368e-17,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-front"
+    },
+    {
+      "part_id": "gb:case/fasteners/rear-bolt-6",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Rear bolt 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.184,
+          -0.177,
+          1.6716428808361368e-17,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-rear"
+    },
+    {
+      "part_id": "gb:case/fasteners/front-bolt-7",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Front bolt 7",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.116,
+          -0.14224751236074135,
+          -0.07392389484882972,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-front"
+    },
+    {
+      "part_id": "gb:case/fasteners/rear-bolt-7",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Rear bolt 7",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.184,
+          -0.14224751236074135,
+          -0.07392389484882972,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-rear"
+    },
+    {
+      "part_id": "gb:case/fasteners/front-bolt-8",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Front bolt 8",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.116,
+          -0.07169229083835901,
+          -0.09599999999999999,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-front"
+    },
+    {
+      "part_id": "gb:case/fasteners/rear-bolt-8",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Rear bolt 8",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.184,
+          -0.07169229083835901,
+          -0.09599999999999999,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-rear"
+    },
+    {
+      "part_id": "gb:case/fasteners/front-bolt-9",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Front bolt 9",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.116,
+          -0.00930770916164102,
+          -0.09599999999999999,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-front"
+    },
+    {
+      "part_id": "gb:case/fasteners/rear-bolt-9",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Rear bolt 9",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.184,
+          -0.00930770916164102,
+          -0.09599999999999999,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-rear"
+    },
+    {
+      "part_id": "gb:case/fasteners/front-bolt-10",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Front bolt 10",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.116,
+          0.061247512360741295,
+          -0.07392389484882972,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-front"
+    },
+    {
+      "part_id": "gb:case/fasteners/rear-bolt-10",
+      "parent_id": "gb-asm:case/fasteners",
+      "label": "Rear bolt 10",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.184,
+          0.061247512360741295,
+          -0.07392389484882972,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "role": "static",
+      "definitionId": "gb-def:bolt-rear"
+    }
+  ]
+}

@@ -27,7 +27,10 @@ export function inspectReleaseFile(name, bytes, { mode = '100644' } = {}) {
   // and inspect it as text. This does not allow arbitrary new binary formats.
   const reviewedBearingSource = name === 'examples/wolf-actuator/tour/research-v2/bearing-generator.scad';
   const isText = reviewedBearingSource || textExtensions.has(extension) || /(?:^|\/)(?:LICENSE(?:\.[^/]*)?|NOTICE|\.gitignore|\.gitattributes|\.npmrc|\.env\.example)$/.test(name);
-  if (!isText && !binaryExtensions.has(extension)) fail('unreviewed file type; review its purpose before adding it to the release policy');
+  // Animated GIFs are reviewed only as README previews in docs/media, where
+  // GitHub renders them inline; MP4 deliveries stay local (blocked above).
+  const readmeAnimation = extension === '.gif' && name.startsWith('docs/media/');
+  if (!isText && !binaryExtensions.has(extension) && !readmeAnimation) fail('unreviewed file type; review its purpose before adding it to the release policy');
   // Scan all bytes, including GLB metadata and uncompressed binary strings, for
   // high-confidence key formats and paths. This is not a binary-format parser.
   const content = bytes.toString('utf8');

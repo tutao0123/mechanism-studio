@@ -93,7 +93,9 @@ Focused checks: `node --test shared/voice/*.test.mjs`. The new speech API uses f
 
 Recompute from the same timeline on pause/seek/restart; never accumulate tint. Accent is an explanation aid, not physical material or simulation data.
 
-Focused checks: `node --test shared/appearance/tests/color-accents.test.mjs`.
+`line-art-style.mjs` holds the shared white line-art preset: `LINE_ART_LINE_STYLE`, `createLineArtFill()` (fresh per-occurrence fill with polygon offset) and `addLineArtLighting(scene)`. New examples use it rather than per-page light tuning; existing pages, including the study shell, are migrated deliberately.
+
+Focused checks: `node --test shared/appearance/tests/*.test.mjs`.
 
 ### 7. Study — music-driven assembly presentation
 
@@ -105,7 +107,9 @@ Optional hooks add source-backed workingPoses, visibility detailIds, authored ap
 
 API: `play()`, `pause()`, `seek(seconds)`, `snapshot()` and viewer/index/framing access. Native audio currentTime is the live music clock; explicit capture mode freezes it and accepts monotonically increasing frame times. Retained labels require stationary named targets. The actual score BPM/duration/byte length/hash must agree.
 
-Focused checks: `node --test shared/study/tests/runtime-delivery.test.mjs`, plus the actual adapter's tests and browser loop.
+Preview: the isolated study servers share `shared/study/preview-server.mjs`; its `STUDY_RUNTIME_FILES` is the one list of shared runtime files they serve. `tests/preview-pages.test.mjs` walks every served page's static dependency graph and fails on a refused, missing or unused entry.
+
+Focused checks: `node --test shared/study/tests/runtime-delivery.test.mjs tests/preview-pages.test.mjs`, plus the actual adapter's tests and browser loop.
 
 ## Application and toolchains
 

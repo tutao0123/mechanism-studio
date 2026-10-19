@@ -49,6 +49,8 @@ Base colors must not consume process meanings: airflow/fuel/combustion have thei
 
 [shared/appearance](../../../../../shared/appearance/README.md) provides deterministic color accents and an occurrence-safe mesh material layer. sampleColorAccents returns a complete neutral/accent map; disabling cues restores neutral immediately. createMeshColorLayer clones owned solid materials, preserves selected/replaced materials and can use a canApply policy. It does not change geometry, visibility or source transforms.
 
+For the default white line art, start from [line-art-style.mjs](../../../../../shared/appearance/line-art-style.mjs): `LINE_ART_LINE_STYLE`, `createLineArtFill()` and `addLineArtLighting(scene)` carry the shared fill, edge and light tokens, and appearance plans should record its `LINE_ART_STYLE_REVISION`. Override a value only for a stated reason; existing pages are migrated deliberately, not in bulk.
+
 The [shaft-bearing page](../../../../../examples/shaft-bearing/app.mjs) shows instance selection and feature edges. Blender and web adapters each implement the intention; record actual parameters and differences. Missing textures/UV/environment resources fall back to a declared neutral style and a specific limitation, without downloading unrelated replacements.
 
 ## Acceptance and failure handoff

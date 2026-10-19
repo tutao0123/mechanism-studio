@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "stage": "bound",
+  "geometryRevision": "gearbox-93d9bd770540-display-1",
+  "planRevision": "gearbox-story-2",
+  "bpm": 96,
+  "beats": 64,
+  "seconds": 40,
+  "clock": "One seekable PCM transport, or the same explicit visual time while paused/silent.",
+  "chapters": [
+    {
+      "id": "whole",
+      "firstBeat": 0,
+      "lastBeat": 5,
+      "title": "A five-speed gearbox.",
+      "copy": "Three shafts, thirteen gears, three synchronizers. One lever chooses the path.",
+      "labels": [
+        [
+          "gb:case/shift-lever",
+          "Shift lever"
+        ]
+      ]
+    },
+    {
+      "id": "open",
+      "firstBeat": 5,
+      "lastBeat": 12,
+      "title": "Lift the case.",
+      "copy": "The input shaft drives a countershaft below it; the mainshaft carries the output.",
+      "labels": [
+        [
+          "gb:input/shaft",
+          "Input shaft"
+        ],
+        [
+          "gb:counter/shaft",
+          "Countershaft"
+        ]
+      ]
+    },
+    {
+      "id": "explode",
+      "firstBeat": 12,
+      "lastBeat": 22,
+      "title": "Gears that spin free.",
+      "copy": "Mainshaft gears turn on needle bearings until a synchronizer locks one of them to the shaft.",
+      "labels": [
+        [
+          "gb:main/synchro-s12/sleeve",
+          "Synchronizer"
+        ],
+        [
+          "gb:idler/gear",
+          "Reverse idler"
+        ]
+      ]
+    },
+    {
+      "id": "low",
+      "firstBeat": 22,
+      "lastBeat": 32,
+      "title": "First, then second.",
+      "copy": "Power crosses to the countershaft and back up through one gear pair: 3.70 : 1, then 2.13 : 1.",
+      "labels": [
+        [
+          "gb:main/gear-1",
+          "1st gear"
+        ],
+        [
+          "gb:main/gear-2",
+          "2nd gear"
+        ]
+      ]
+    },
+    {
+      "id": "sync",
+      "firstBeat": 32,
+      "lastBeat": 44,
+      "title": "Matching speeds.",
+      "copy": "A blocker ring brings the gear to shaft speed; then the sleeve slides over its dog teeth. Fourth is direct.",
+      "labels": [
+        [
+          "gb:main/synchro-s34/sleeve",
+          "Sleeve"
+        ],
+        [
+          "gb:main/synchro-s34/ring-front",
+          "Blocker ring"
+        ]
+      ]
+    },
+    {
+      "id": "over",
+      "firstBeat": 44,
+      "lastBeat": 54,
+      "title": "Fifth: overdrive.",
+      "copy": "0.78 : 1 — the mainshaft now turns faster than the input shaft.",
+      "labels": [
+        [
+          "gb:main/gear-5",
+          "5th gear"
+        ]
+      ]
+    },
+    {
+      "id": "close",
+      "firstBeat": 54,
+      "lastBeat": 64,
+      "title": "Whole again.",
+      "copy": "An original teaching model: ideal tooth ratios, no loads, friction or wear.",
+      "labels": []
+    }
+  ],
+  "driveSchedule": [
+    {
+      "type": "hold",
+      "t0": 0,
+      "t1": 14.0625
+    },
+    {
+      "type": "shift",
+      "from": "N",
+      "to": "1",
+      "t0": 14.0625,
+      "t1": 14.6875
+    },
+    {
+      "type": "drive",
+      "gear": "1",
+      "engine": [
+        0,
+        0.25
+      ],
+      "t0": 14.6875,
+      "t1": 16.875
+    },
+    {
+      "type": "shift",
+      "from": "1",
+      "to": "2",
+      "t0": 16.875,
+      "t1": 17.625
+    },
+    {
+      "type": "drive",
+      "gear": "2",
+      "engine": [
+        0.14358108108108109,
+        0.25
+      ],
+      "t0": 17.625,
+      "t1": 20
+    },
+    {
+      "type": "shift",
+      "from": "2",
+      "to": "3",
+      "t0": 20,
+      "t1": 20.750000000000004
+    },
+    {
+      "type": "drive",
+      "gear": "3",
+      "engine": [
+        0.15999999999999998,
+        0.2
+      ],
+      "t0": 20.750000000000004,
+      "t1": 23.75
+    },
+    {
+      "type": "shift",
+      "from": "3",
+      "to": "4",
+      "t0": 23.75,
+      "t1": 25
+    },
+    {
+      "type": "drive",
+      "gear": "4",
+      "engine": [
+        0.1470588235294118,
+        0.2
+      ],
+      "t0": 25,
+      "t1": 27.8125
+    },
+    {
+      "type": "shift",
+      "from": "4",
+      "to": "5",
+      "t0": 27.8125,
+      "t1": 28.5625
+    },
+    {
+      "type": "drive",
+      "gear": "5",
+      "engine": [
+        0.15621621621621623,
+        0.16
+      ],
+      "t0": 28.5625,
+      "t1": 31.25
+    },
+    {
+      "type": "shift",
+      "from": "5",
+      "to": "N",
+      "t0": 31.25,
+      "t1": 31.75
+    },
+    {
+      "type": "coast",
+      "t0": 31.75,
+      "t1": 33.4375
+    },
+    {
+      "type": "hold",
+      "t0": 33.4375,
+      "t1": 40
+    }
+  ],
+  "alignments": [
+    {
+      "to": "1",
+      "time": 14.53125,
+      "multiplier": 0.2702702702702703,
+      "inputAdjustment": 0,
+      "residual": 0
+    },
+    {
+      "to": "2",
+      "time": 17.4375,
+      "multiplier": 0.47058823529411764,
+      "inputAdjustment": 0.08041928829613902,
+      "residual": 9.164891068280667e-13
+    },
+    {
+      "to": "3",
+      "time": 20.562500000000004,
+      "multiplier": 0.7352941176470589,
+      "inputAdjustment": -0.17472190426033288,
+      "residual": 3.0877522760874854e-12
+    },
+    {
+      "to": "4",
+      "time": 24.6875,
+      "multiplier": 1,
+      "inputAdjustment": -0.2624632511155574,
+      "residual": 8.615330671091215e-13
+    },
+    {
+      "to": "5",
+      "time": 28.375,
+      "multiplier": 1.2802768166089966,
+      "inputAdjustment": -0.15371429621104843,
+      "residual": 4.810374321095878e-12
+    }
+  ],
+  "shiftPhases": {
+    "release": [
+      0,
+      0.3
+    ],
+    "approach": [
+      0.3,
+      0.45
+    ],
+    "sync": [
+      0.45,
+      0.75
+    ],
+    "engage": [
+      0.75,
+      1
+    ]
+  }
+}

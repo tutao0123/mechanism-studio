@@ -4,12 +4,13 @@ Choose an example by the evidence it can demonstrate: a teaching model, a source
 
 **These are implemented examples, not empty plans.** The maintained lock lives
 in `prototype-3d/`, and both SO-ARM robot cuts live in `EXAMPLE_ROBOT/`; neither
-is a missing child of this directory. The ten implemented experiences and exact
+is a missing child of this directory. The eleven implemented experiences and exact
 public/local distinctions are listed in the [status audit](../docs/examples-status.md).
 `lock-comparison/` is an explicitly [historical artifact](lock-comparison/README.md).
 
 ## Visual entry points
 
+<a href="gearbox/README.md"><img src="../docs/media/gearbox-readme.gif" alt="Original five-speed teaching gearbox separating and driving through its gears" width="480"></a>
 <a href="humanoid/README.md"><img src="../docs/media/humanoid-g1-preview.jpg" alt="Unitree G1 source-body exploded presentation" width="480"></a>
 <a href="../EXAMPLE_ROBOT/kinetic/README.md"><img src="../docs/media/so-arm102-kinetic.jpg" alt="SO-ARM 102 kinetic cut with source robot credit" width="480"></a>
 <a href="inline-four/README.md"><img src="../docs/media/inline-four-preview.jpg" alt="Inline-four engine with ignition cues" width="480"></a>
@@ -35,6 +36,7 @@ these pages; use a local server below to load models and play music.
 
 | Example | Server command | Local route | Included experience |
 | --- | --- | --- | --- |
+| Five-speed gearbox | `node examples/gearbox/serve.mjs` | `http://127.0.0.1:4183/?clean=1` | 40-second original teaching model: case off, explosion to synchronizer keys and bearing balls, power path through 1st–5th, synchronizer close-up, restoration |
 | Unitree G1 humanoid | `node examples/humanoid/serve.mjs` | `http://127.0.0.1:4182/?clean=1` | 35.555556-second body-level explosion/reassembly, close reading views, original score and sparse CC0 effects |
 | Five-pin lock | `npm run preview` | `http://127.0.0.1:4179/prototype-3d/?palette=line-light` | Key profiles, insertion and turning, shear-line view, camera presets and display explosion |
 | Inline-four | `npm run preview` | `http://127.0.0.1:4179/examples/inline-four/` | Crank-slider motion, valve timing, port spray, ignition and exhaust cues |
@@ -51,12 +53,12 @@ these pages; use a local server below to load models and play music.
 | WOLF motor detail edition | Same WOLF server | `http://127.0.0.1:4181/detail/?clean=1` | Another 34.285714-second edition: 245-leaf actuator → actual 86-leaf motor → source components → restoration |
 | WOLF bearing detail edition | Same WOLF server | `http://127.0.0.1:4181/bearing/?clean=1` | 34.285714 seconds: actual 70-leaf bearing A → one original Part 1 close-up → restoration; generic source names retained |
 
-The root server handles the studio and original mechanisms; SO-ARM, humanoid and WOLF studies use their own explicit read-only route allowlists. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
+The root server handles the studio and original mechanisms; SO-ARM, humanoid, WOLF and gearbox studies use their own explicit read-only route allowlists, sharing one declared study runtime list (`shared/study/preview-server.mjs`) that `tests/preview-pages.test.mjs` checks against every served page. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
 
 The WOLF [complete v4 tour](wolf-actuator/tour-v4/README.md),
 [motor detail cut](wolf-actuator/detail/README.md) and
 [bearing detail cut](wolf-actuator/bearing/README.md) are editions of the
-same sourced actuator, so the inventory remains **ten experiences**. Its motor
+same sourced actuator, so the inventory remains **eleven experiences**. Its motor
 contains 40 source-named `magnet`, 40 unspecified `cc` and six explicitly named
 hardware leaves. The generic `cc` label is not asserted to mean copper winding
 or another inferred function. All geometry comes from WOLF's retained source;
@@ -78,6 +80,8 @@ On a fresh clone, generate the shared score for v2, v3 and v4 before music playb
 node examples/wolf-actuator/tour-v2/audio/build.mjs
 node examples/wolf-actuator/serve.mjs
 ```
+
+The gearbox score is generated the same way: `node examples/gearbox/audio/build.mjs`.
 
 The WOLF server defaults to **4181**. A `PORT` override changes the local URL;
 follow the address printed by the server. The shared long WAV and exported

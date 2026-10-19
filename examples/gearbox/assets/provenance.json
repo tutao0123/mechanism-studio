@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "original-teaching-model",
+  "title": "Five-speed teaching gearbox",
+  "author": "Mechanism Studio",
+  "license": "MIT",
+  "revision": "gearbox-spec-1+gearbox-kinematics-2",
+  "generator": "examples/gearbox/build-gearbox.mjs",
+  "inputs": [
+    "examples/gearbox/spec.mjs",
+    "examples/gearbox/kinematics.mjs",
+    "examples/gearbox/geometry.mjs"
+  ],
+  "note": "Authored from first principles for teaching. No third-party CAD, mesh or drawing is used."
+}

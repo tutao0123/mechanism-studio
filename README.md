@@ -4,11 +4,15 @@
 
 Mechanism Studio is a project-local AI authoring skill and a working browser toolkit for mechanical explanation. It connects source-aware part identities, independent motion and display layers, exploded views, guided cameras, close annotations and synchronized sound. The default presentation is white surfaces with fine dark edges and restrained colour cues.
 
-**Status: working research prototype, version 0.4.0.** Ten implemented experiences range from simplified teaching mechanisms to real STEP assemblies and source-backed robot descriptions. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
+**Status: working research prototype, version 0.4.0.** Eleven implemented experiences range from simplified teaching mechanisms to real STEP assemblies and source-backed robot descriptions. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
 
 **Latest: [WOLF complete teardown, v4](examples/wolf-actuator/tour-v4/README.md).** One 245-leaf assembly moves from the whole actuator into gear-pair, magnet and bearing close-ups, then fully reassembles. Its 85.7-second tour demonstrates the new [Mating Close-up module](.agents/skills/mechanism-studio/references/modules/mating-closeup.md); a portable [delivery record](examples/wolf-actuator/tour-v4/delivery.json) makes the source and output fingerprints inspectable. [Run it locally](#try-it-locally).
 
 [Watch the complete WOLF film on X](https://x.com/tutao0123/status/2111833346468938203). WOLF source and adapted visuals: Anthrobotics and contributors, CC BY-SA 4.0; original score: Mechanism Studio.
+
+![Original five-speed teaching gearbox: the case lifts, shafts and synchronizers separate, and the power path moves through first and second gear](docs/media/gearbox-readme.gif)
+
+*[A gearbox, revealed](examples/gearbox/README.md): an original five-speed teaching gearbox with 124 parts in 15 nested assemblies, six power paths and a synchronizer close-up. This 17-second excerpt shows the case lifting off, the explosion and the torque path through 1st and 2nd; the full 40-second loop with music runs locally. Exact tooth ratios, slowed for reading; original MIT model and score, not a production design.*
 
 ![Unitree G1 source bodies separated in the English humanoid showcase](docs/media/humanoid-g1-preview.jpg)
 
@@ -62,6 +66,7 @@ for the 85.733-second encoded delivery and its recorded verification.
 
 | Example | What to explore | Scope |
 | --- | --- | --- |
+| [Five-speed gearbox](examples/gearbox/README.md) | Case, three shafts, 13 gears and three synchronizers; drive through 1st–5th with the active power path highlighted and a synchronizer close-up; 40 seconds | Original teaching model, 124 parts / 15 assemblies; exact tooth ratios, no load, friction or clutch simulation |
 | [Unitree G1 humanoid](examples/humanoid/README.md) | Full-body expansion, close shoulder/wrist and knee/ankle views, restoration, music and action cues; 35.56 seconds | 30 MJCF body identities, 35 source visual occurrences, 29 retained joint declarations; static source pose, no per-screw internals |
 | [SO-ARM 102 kinetic cut](EXAMPLE_ROBOT/kinetic/README.md) | Source-backed jaw and arm movement, cascading explosion, two readable details, musical reassembly; 25.7 seconds | Five revolute and two prismatic URDF joints; eight merged link meshes |
 | [SO-ARM 102 assembly study](EXAMPLE_ROBOT/README.md) | Near-part names, restrained colour changes, original music; 34.3 seconds | Link-level visual separation; no per-fastener identity |

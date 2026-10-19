@@ -1,0 +1,807 @@
+{
+  "schemaVersion": 1,
+  "stage": "bound",
+  "geometryRevision": "gearbox-93d9bd770540-display-1",
+  "planRevision": "gearbox-story-2",
+  "units": "m",
+  "space": "world editorial translation",
+  "cohorts": {
+    "shift": {
+      "out": 12,
+      "back": 20.6,
+      "beats": 1.4
+    },
+    "counter": {
+      "out": 12.4,
+      "back": 20.2,
+      "beats": 1.4
+    },
+    "idler": {
+      "out": 12.8,
+      "back": 19.8,
+      "beats": 1.4
+    },
+    "axial": {
+      "out": 13,
+      "back": 19.4,
+      "beats": 1.5
+    },
+    "inner": {
+      "out": 14.2,
+      "back": 18.8,
+      "beats": 1
+    }
+  },
+  "caseTiming": {
+    "open": [
+      5.4,
+      8
+    ],
+    "close": [
+      54.2,
+      57.6
+    ]
+  },
+  "maximumOffsets": {
+    "gb:input/shaft": [
+      -0.09040000000000001,
+      0,
+      0
+    ],
+    "gb:input/bearing-input/inner": [
+      -0.14020000000000002,
+      0,
+      0
+    ],
+    "gb:input/bearing-input/outer": [
+      -0.14020000000000002,
+      0,
+      0
+    ],
+    "gb:input/bearing-input/ball-1": [
+      -0.14020000000000002,
+      0.007,
+      0
+    ],
+    "gb:input/bearing-input/ball-2": [
+      -0.14020000000000002,
+      0.005362311101832847,
+      0.004499513267805776
+    ],
+    "gb:input/bearing-input/ball-3": [
+      -0.14020000000000002,
+      0.0012155372436685131,
+      0.006893654271085457
+    ],
+    "gb:input/bearing-input/ball-4": [
+      -0.14020000000000002,
+      -0.0034999999999999983,
+      0.006062177826491071
+    ],
+    "gb:input/bearing-input/ball-5": [
+      -0.14020000000000002,
+      -0.006577848345501359,
+      0.0023941410032796823
+    ],
+    "gb:input/bearing-input/ball-6": [
+      -0.14020000000000002,
+      -0.006577848345501359,
+      -0.00239414100327968
+    ],
+    "gb:input/bearing-input/ball-7": [
+      -0.14020000000000002,
+      -0.003500000000000004,
+      -0.00606217782649107
+    ],
+    "gb:input/bearing-input/ball-8": [
+      -0.14020000000000002,
+      0.0012155372436685099,
+      -0.006893654271085457
+    ],
+    "gb:input/bearing-input/ball-9": [
+      -0.14020000000000002,
+      0.005362311101832846,
+      -0.004499513267805777
+    ],
+    "gb:main/shaft": [
+      0,
+      0,
+      0
+    ],
+    "gb:main/gear-3": [
+      -0.033,
+      0,
+      0
+    ],
+    "gb:main/needle-3": [
+      0,
+      0,
+      0
+    ],
+    "gb:main/gear-2": [
+      -0.0187,
+      0,
+      0
+    ],
+    "gb:main/needle-2": [
+      0,
+      0,
+      0
+    ],
+    "gb:main/gear-1": [
+      0.018699999999999998,
+      0,
+      0
+    ],
+    "gb:main/needle-1": [
+      0,
+      0,
+      0
+    ],
+    "gb:main/gear-r": [
+      0.03245000000000001,
+      0,
+      0
+    ],
+    "gb:main/needle-r": [
+      0,
+      0,
+      0
+    ],
+    "gb:main/gear-5": [
+      0.06874999999999999,
+      0,
+      0
+    ],
+    "gb:main/needle-5": [
+      0,
+      0,
+      0
+    ],
+    "gb:main/washer-23": [
+      -0.02585,
+      0,
+      0
+    ],
+    "gb:main/washer-1r": [
+      0.025849999999999998,
+      0,
+      0
+    ],
+    "gb:main/synchro-s34/hub": [
+      -0.0517,
+      0,
+      0
+    ],
+    "gb:main/synchro-s34/sleeve": [
+      -0.0517,
+      0.055,
+      0
+    ],
+    "gb:main/synchro-s34/ring-front": [
+      -0.0637,
+      0,
+      0
+    ],
+    "gb:main/synchro-s34/ring-rear": [
+      -0.0397,
+      0,
+      0
+    ],
+    "gb:main/synchro-s34/key-1": [
+      -0.0517,
+      0.012124355652982142,
+      0.007
+    ],
+    "gb:main/synchro-s34/key-2": [
+      -0.0517,
+      -0.012124355652982139,
+      0.0070000000000000045
+    ],
+    "gb:main/synchro-s34/key-3": [
+      -0.0517,
+      -2.5717355398919518e-18,
+      -0.014
+    ],
+    "gb:main/synchro-s12/hub": [
+      0,
+      0,
+      0
+    ],
+    "gb:main/synchro-s12/sleeve": [
+      0,
+      0.055,
+      0
+    ],
+    "gb:main/synchro-s12/ring-front": [
+      -0.012,
+      0,
+      0
+    ],
+    "gb:main/synchro-s12/ring-rear": [
+      0.012,
+      0,
+      0
+    ],
+    "gb:main/synchro-s12/key-1": [
+      0,
+      0.012124355652982142,
+      0.006999999999999998
+    ],
+    "gb:main/synchro-s12/key-2": [
+      0,
+      -0.01212435565298214,
+      0.007000000000000006
+    ],
+    "gb:main/synchro-s12/key-3": [
+      0,
+      -2.5338657514267965e-18,
+      -0.014
+    ],
+    "gb:main/synchro-s5r/hub": [
+      0.050600000000000006,
+      0,
+      0
+    ],
+    "gb:main/synchro-s5r/sleeve": [
+      0.050600000000000006,
+      0.055,
+      0
+    ],
+    "gb:main/synchro-s5r/ring-front": [
+      0.03860000000000001,
+      0,
+      0
+    ],
+    "gb:main/synchro-s5r/ring-rear": [
+      0.0626,
+      0,
+      0
+    ],
+    "gb:main/synchro-s5r/key-1": [
+      0.050600000000000006,
+      0.012124355652982142,
+      0.006999999999999999
+    ],
+    "gb:main/synchro-s5r/key-2": [
+      0.050600000000000006,
+      -0.01212435565298214,
+      0.0070000000000000045
+    ],
+    "gb:main/synchro-s5r/key-3": [
+      0.050600000000000006,
+      -2.622692080310508e-18,
+      -0.014
+    ],
+    "gb:main/output-flange": [
+      0.14520000000000002,
+      0,
+      0
+    ],
+    "gb:main/bearing-rear/inner": [
+      0.1158,
+      0,
+      0
+    ],
+    "gb:main/bearing-rear/outer": [
+      0.1158,
+      0,
+      0
+    ],
+    "gb:main/bearing-rear/ball-1": [
+      0.1158,
+      0.007,
+      0
+    ],
+    "gb:main/bearing-rear/ball-2": [
+      0.1158,
+      0.005663118960624632,
+      0.004114496766047311
+    ],
+    "gb:main/bearing-rear/ball-3": [
+      0.1158,
+      0.0021631189606246327,
+      0.006657395614066076
+    ],
+    "gb:main/bearing-rear/ball-4": [
+      0.1158,
+      -0.0021631189606246314,
+      0.006657395614066076
+    ],
+    "gb:main/bearing-rear/ball-5": [
+      0.1158,
+      -0.005663118960624632,
+      0.004114496766047314
+    ],
+    "gb:main/bearing-rear/ball-6": [
+      0.1158,
+      -0.007,
+      8.572527594031473e-19
+    ],
+    "gb:main/bearing-rear/ball-7": [
+      0.1158,
+      -0.005663118960624633,
+      -0.004114496766047312
+    ],
+    "gb:main/bearing-rear/ball-8": [
+      0.1158,
+      -0.002163118960624633,
+      -0.006657395614066076
+    ],
+    "gb:main/bearing-rear/ball-9": [
+      0.1158,
+      0.0021631189606246305,
+      -0.006657395614066076
+    ],
+    "gb:main/bearing-rear/ball-10": [
+      0.1158,
+      0.00566311896062463,
+      -0.004114496766047314
+    ],
+    "gb:counter/shaft": [
+      0,
+      -0.075,
+      0
+    ],
+    "gb:counter/gear-drive": [
+      0,
+      -0.075,
+      0
+    ],
+    "gb:counter/gear-3": [
+      0,
+      -0.075,
+      0
+    ],
+    "gb:counter/gear-2": [
+      0,
+      -0.075,
+      0
+    ],
+    "gb:counter/gear-1": [
+      0,
+      -0.075,
+      0
+    ],
+    "gb:counter/gear-r": [
+      0,
+      -0.075,
+      0
+    ],
+    "gb:counter/gear-5": [
+      0,
+      -0.075,
+      0
+    ],
+    "gb:counter/bearing-counterFront/inner": [
+      -0.045,
+      -0.075,
+      0
+    ],
+    "gb:counter/bearing-counterFront/outer": [
+      -0.045,
+      -0.075,
+      0
+    ],
+    "gb:counter/bearing-counterFront/ball-1": [
+      -0.045,
+      -0.06799999999999999,
+      0
+    ],
+    "gb:counter/bearing-counterFront/ball-2": [
+      -0.045,
+      -0.06963768889816715,
+      0.004499513267805777
+    ],
+    "gb:counter/bearing-counterFront/ball-3": [
+      -0.045,
+      -0.07378446275633148,
+      0.006893654271085457
+    ],
+    "gb:counter/bearing-counterFront/ball-4": [
+      -0.045,
+      -0.0785,
+      0.006062177826491071
+    ],
+    "gb:counter/bearing-counterFront/ball-5": [
+      -0.045,
+      -0.08157784834550136,
+      0.002394141003279683
+    ],
+    "gb:counter/bearing-counterFront/ball-6": [
+      -0.045,
+      -0.08157784834550136,
+      -0.0023941410032796806
+    ],
+    "gb:counter/bearing-counterFront/ball-7": [
+      -0.045,
+      -0.0785,
+      -0.00606217782649107
+    ],
+    "gb:counter/bearing-counterFront/ball-8": [
+      -0.045,
+      -0.07378446275633149,
+      -0.006893654271085457
+    ],
+    "gb:counter/bearing-counterFront/ball-9": [
+      -0.045,
+      -0.06963768889816715,
+      -0.004499513267805778
+    ],
+    "gb:counter/bearing-counterRear/inner": [
+      0.045,
+      -0.075,
+      0
+    ],
+    "gb:counter/bearing-counterRear/outer": [
+      0.045,
+      -0.075,
+      0
+    ],
+    "gb:counter/bearing-counterRear/ball-1": [
+      0.045,
+      -0.06799999999999999,
+      0
+    ],
+    "gb:counter/bearing-counterRear/ball-2": [
+      0.045,
+      -0.06963768889816715,
+      0.004499513267805777
+    ],
+    "gb:counter/bearing-counterRear/ball-3": [
+      0.045,
+      -0.07378446275633148,
+      0.006893654271085457
+    ],
+    "gb:counter/bearing-counterRear/ball-4": [
+      0.045,
+      -0.0785,
+      0.006062177826491071
+    ],
+    "gb:counter/bearing-counterRear/ball-5": [
+      0.045,
+      -0.08157784834550136,
+      0.002394141003279683
+    ],
+    "gb:counter/bearing-counterRear/ball-6": [
+      0.045,
+      -0.08157784834550136,
+      -0.0023941410032796806
+    ],
+    "gb:counter/bearing-counterRear/ball-7": [
+      0.045,
+      -0.0785,
+      -0.00606217782649107
+    ],
+    "gb:counter/bearing-counterRear/ball-8": [
+      0.045,
+      -0.07378446275633149,
+      -0.006893654271085457
+    ],
+    "gb:counter/bearing-counterRear/ball-9": [
+      0.045,
+      -0.06963768889816715,
+      -0.004499513267805778
+    ],
+    "gb:idler/shaft": [
+      0,
+      -0.015,
+      0.07
+    ],
+    "gb:idler/gear": [
+      0,
+      -0.015,
+      0.07
+    ],
+    "gb:idler/needle": [
+      0,
+      -0.015,
+      0.07
+    ],
+    "gb:shift/rail-s34": [
+      0,
+      0.11,
+      0
+    ],
+    "gb:shift/fork-s34": [
+      0,
+      0.11,
+      0
+    ],
+    "gb:shift/rail-s12": [
+      0,
+      0.11,
+      0
+    ],
+    "gb:shift/fork-s12": [
+      0,
+      0.11,
+      0
+    ],
+    "gb:shift/rail-s5r": [
+      0,
+      0.11,
+      0
+    ],
+    "gb:shift/fork-s5r": [
+      0,
+      0.11,
+      0
+    ],
+    "gb:case/main-case": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/front-plate": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/rear-plate": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/bell-housing": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/rear-extension": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/top-cover": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/shift-lever": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-1": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-1": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-2": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-2": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-3": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-3": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-4": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-4": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-5": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-5": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-6": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-6": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-7": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-7": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-8": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-8": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-9": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-9": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-10": [
+      0,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-10": [
+      0,
+      0,
+      0
+    ]
+  },
+  "caseLift": {
+    "gb:case/main-case": [
+      0,
+      0.055,
+      0
+    ],
+    "gb:case/front-plate": [
+      -0.035,
+      0,
+      0
+    ],
+    "gb:case/rear-plate": [
+      0.035,
+      0,
+      0
+    ],
+    "gb:case/bell-housing": [
+      -0.035,
+      0,
+      0
+    ],
+    "gb:case/rear-extension": [
+      0.035,
+      0,
+      0
+    ],
+    "gb:case/top-cover": [
+      0,
+      0.075,
+      0
+    ],
+    "gb:case/shift-lever": [
+      0,
+      0.075,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-1": [
+      -0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-1": [
+      0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-2": [
+      -0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-2": [
+      0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-3": [
+      -0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-3": [
+      0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-4": [
+      -0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-4": [
+      0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-5": [
+      -0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-5": [
+      0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-6": [
+      -0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-6": [
+      0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-7": [
+      -0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-7": [
+      0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-8": [
+      -0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-8": [
+      0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-9": [
+      -0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-9": [
+      0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/front-bolt-10": [
+      -0.035,
+      0,
+      0
+    ],
+    "gb:case/fasteners/rear-bolt-10": [
+      0.035,
+      0,
+      0
+    ]
+  },
+  "adapter": "../story.mjs:localDisplayOffsets",
+  "restoration": "All display offsets are zero at the loop boundary. Assembly rest matrices remain immutable.",
+  "limitations": "No disassembly order, collision checking, press fits or circlip removal is claimed."
+}

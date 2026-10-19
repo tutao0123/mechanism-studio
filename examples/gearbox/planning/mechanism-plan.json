@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "stage": "bound",
+  "geometryRevision": "gearbox-93d9bd770540-display-1",
+  "planRevision": "gearbox-story-2",
+  "kinematicsRevision": "gearbox-kinematics-2",
+  "teeth": {
+    "input": 20,
+    "counterDrive": 34,
+    "counter1": 17,
+    "main1": 37,
+    "counter2": 24,
+    "main2": 30,
+    "counter3": 30,
+    "main3": 24,
+    "counter5": 37,
+    "main5": 17,
+    "counterR": 16,
+    "idler": 18,
+    "mainR": 32
+  },
+  "centreDistance": 0.081,
+  "ratios": {
+    "1": 3.6999999999999997,
+    "2": 2.125,
+    "3": 1.3599999999999999,
+    "4": 1,
+    "5": 0.7810810810810811,
+    "R": -3.4
+  },
+  "inputMultipliers": {
+    "input": 1,
+    "counter": -0.5882352941176471,
+    "main1": 0.2702702702702703,
+    "main2": 0.47058823529411764,
+    "main3": 0.7352941176470589,
+    "main5": 1.2802768166089966,
+    "idler": 0.5228758169934641,
+    "mainR": -0.29411764705882354
+  },
+  "powerPaths": {
+    "1": [
+      "gb:input/shaft",
+      "gb:main/synchro-s12/hub",
+      "gb:main/synchro-s12/sleeve",
+      "gb:main/shaft",
+      "gb:main/output-flange",
+      "gb:counter/gear-drive",
+      "gb:counter/shaft",
+      "gb:counter/gear-1",
+      "gb:main/gear-1"
+    ],
+    "2": [
+      "gb:input/shaft",
+      "gb:main/synchro-s12/hub",
+      "gb:main/synchro-s12/sleeve",
+      "gb:main/shaft",
+      "gb:main/output-flange",
+      "gb:counter/gear-drive",
+      "gb:counter/shaft",
+      "gb:counter/gear-2",
+      "gb:main/gear-2"
+    ],
+    "3": [
+      "gb:input/shaft",
+      "gb:main/synchro-s34/hub",
+      "gb:main/synchro-s34/sleeve",
+      "gb:main/shaft",
+      "gb:main/output-flange",
+      "gb:counter/gear-drive",
+      "gb:counter/shaft",
+      "gb:counter/gear-3",
+      "gb:main/gear-3"
+    ],
+    "4": [
+      "gb:input/shaft",
+      "gb:main/synchro-s34/hub",
+      "gb:main/synchro-s34/sleeve",
+      "gb:main/shaft",
+      "gb:main/output-flange"
+    ],
+    "5": [
+      "gb:input/shaft",
+      "gb:main/synchro-s5r/hub",
+      "gb:main/synchro-s5r/sleeve",
+      "gb:main/shaft",
+      "gb:main/output-flange",
+      "gb:counter/gear-drive",
+      "gb:counter/shaft",
+      "gb:counter/gear-5",
+      "gb:main/gear-5"
+    ],
+    "R": [
+      "gb:input/shaft",
+      "gb:main/synchro-s5r/hub",
+      "gb:main/synchro-s5r/sleeve",
+      "gb:main/shaft",
+      "gb:main/output-flange",
+      "gb:counter/gear-drive",
+      "gb:counter/shaft",
+      "gb:counter/gear-r",
+      "gb:main/gear-r",
+      "gb:idler/gear"
+    ]
+  },
+  "model": "Every input-train angle is an exact tooth ratio of the input angle; the output angle follows the engaged gear. Angles are integrated once on a fixed 1200 Hz grid from authored speeds, never per frame.",
+  "synchronizer": "During a shift the input speed blends to the new gear speed (synchronizer action) and a solved speed adjustment aligns sleeve and dog teeth before engagement."
+}

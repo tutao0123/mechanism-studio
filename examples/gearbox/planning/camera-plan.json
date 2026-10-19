@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "stage": "bound",
+  "geometryRevision": "gearbox-93d9bd770540-display-1",
+  "planRevision": "gearbox-story-2",
+  "cameraRevision": "gearbox-framing-1",
+  "boundsMethod": "Actual part AABB unions at rest and at every display-offset endpoint; sliding sleeves, rings, keys, rails and forks reserve one travel. Presentation evidence, not a collision certificate.",
+  "envelopes": {
+    "whole": {
+      "min": [
+        -0.27,
+        -0.18299999999999997,
+        -0.165
+      ],
+      "max": [
+        0.314,
+        0.2235,
+        0.165
+      ]
+    },
+    "opening": {
+      "min": [
+        -0.28500000000000003,
+        -0.18299999999999997,
+        -0.165
+      ],
+      "max": [
+        0.32699999999999996,
+        0.2985,
+        0.165
+      ]
+    },
+    "internals": {
+      "min": [
+        -0.27,
+        -0.13937017693849119,
+        -0.058482899654566815
+      ],
+      "max": [
+        0.314,
+        0.0885,
+        0.07605367518642761
+      ]
+    },
+    "exploded": {
+      "min": [
+        -0.36040000000000005,
+        -0.2143701769384912,
+        -0.058482899654566815
+      ],
+      "max": [
+        0.45620000000000005,
+        0.1985,
+        0.14605367518642762
+      ]
+    },
+    "detail": {
+      "min": [
+        -0.10800000000000001,
+        -0.057,
+        -0.05
+      ],
+      "max": [
+        -0.004,
+        0.09,
+        0.05
+      ]
+    }
+  },
+  "transitionSeconds": 0.8,
+  "loop": "Whole and close chapters share one rest envelope and direction.",
+  "adapter": "../framing.mjs"
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "stage": "bound",
+  "geometryRevision": "gearbox-93d9bd770540-display-1",
+  "planRevision": "gearbox-story-2",
+  "base": "White surfaces with fine dark feature edges and atlas serif typography.",
+  "color": "Restrained pale blue for the parts carrying torque in the engaged gear, plus any part being named.",
+  "contextFade": {
+    "fadeIn": [
+      32,
+      33.4
+    ],
+    "fadeOut": [
+      43,
+      44.4
+    ],
+    "context": 0.2,
+    "ids": [
+      "gb:input/shaft",
+      "gb:main/shaft",
+      "gb:main/gear-3",
+      "gb:main/needle-3",
+      "gb:counter/gear-drive",
+      "gb:counter/gear-3",
+      "gb:shift/fork-s34",
+      "gb:shift/rail-s34",
+      "gb:main/synchro-s34/hub",
+      "gb:main/synchro-s34/sleeve",
+      "gb:main/synchro-s34/ring-front",
+      "gb:main/synchro-s34/ring-rear",
+      "gb:main/synchro-s34/key-1",
+      "gb:main/synchro-s34/key-2",
+      "gb:main/synchro-s34/key-3"
+    ]
+  },
+  "owner": "Shared reversible mesh-colour and visibility layers; the case fades with its edges.",
+  "adapter": "../story.mjs:appearanceCues, presentationOpacity"
+}
