@@ -7,8 +7,8 @@ known-answer fixtures and source-bound evidence, beyond attractive display motio
 | Area | Current evidence | Next acceptance criterion |
 | --- | --- | --- |
 | Teaching and shared runtime | Lock, inline-four, turbofan and quadruped; seven shared runtime libraries | Keep mechanism-specific invariants when adding an example |
-| Source assembly identity | Galileo 2 XCAF definitions/usages/local-world placements and tree ↔ mesh selection | Broader publicly licensed source fixtures without weakening identity checks |
-| Import coverage | KFL08 historical trial, Galileo 2 and WOLF source packages; verified metre/mm contexts within the documented subset | Explicit format/unit/topology failure fixtures and repeatable results |
+| Source assembly identity | WOLF XCAF definitions/usages/local-world placements, audited against the source; the tree ↔ mesh inspector page left with the GPL Galileo example | A permissively licensed inspector example; broader source fixtures without weakening identity checks |
+| Import coverage | KFL08 historical trial and WOLF source packages; verified metre/mm contexts within the documented subset | Explicit format/unit/topology failure fixtures and repeatable results |
 | Source-backed kinematics | SO-ARM URDF axis/limits and opposed-jaw mimic in the kinetic adapter | A reusable joint schema with independent known-answer FK and limit tests |
 | Exact B-rep measurement | Not implemented in the viewer | Source face/edge references, distance/angle/volume algorithms, units and error bounds |
 | Assembly constraints | STEP placements retained; mate recovery/solving not implemented | Explicit fixed/revolute/prismatic references, degrees of freedom, limits and failed states |
@@ -22,12 +22,11 @@ known-answer fixtures and source-bound evidence, beyond attractive display motio
 Some name-based associations exist; anonymous fragments have no exact leaf map.
 It remains a historical limited importer trial, not the generic identity path.
 
-[Galileo 2](../examples/shaft-bearing/README.md) uses XCAF to retain 69 definitions,
-146 source usage relations and 147 root-inclusive occurrences: 126 parts and
-21 assemblies. Repeated screws have separate placements and tree/model selection
-shares the same occurrence identity. Fine/coarse import graphs and matrices agree;
-six faces needed recorded meshing retries. Byte-identical source identity is not
-a promise of cross-version feature identity after a new STEP export.
+The GPL-3.0 Galileo 2 example, which demonstrated XCAF identity with a linked
+source-tree inspector, was removed on 2026-10-20 to keep included models under
+permissive licenses; it remains in Git history. WOLF now carries the real-source
+XCAF audit. Byte-identical source identity is not a promise of cross-version
+feature identity after a new STEP export.
 
 [WOLF](../examples/wolf-actuator/README.md) retains 184 definitions, 252 usages and
 245 leaf occurrences from a native-metre source. Its 69 source-triangulated

@@ -50,9 +50,9 @@ test('process-layer source is served without exposing tests or provider configur
   for (const path of ['/shared/animation/effects.mjs','/examples/inline-four/process.mjs','/examples/inline-four/effects.mjs','/examples/turbofan/process.mjs','/examples/turbofan/effects.mjs']) assert.equal((await fetch(base + path)).status,200,path);
   assert.equal((await fetch(base + '/shared/animation/tests/animation.test.mjs')).status,403);
 });
-test('source assembly inspector serves public identities and assets while local CAD tools stay private', async () => {
-  for (const path of ['/shared/cad/assembly.mjs', '/shared/cad/README.md', '/examples/shaft-bearing/', '/examples/shaft-bearing/app.mjs', '/examples/shaft-bearing/style.css', '/examples/shaft-bearing/README.md', '/examples/shaft-bearing/assets/assembly-manifest.json', '/examples/shaft-bearing/assets/import-report.json', '/examples/shaft-bearing/assets/scene-contract.json', '/examples/shaft-bearing/assets/assembly.glb', '/examples/shaft-bearing/source/assembly.step', '/examples/shaft-bearing/source/LICENSE.md', '/examples/shaft-bearing/source/NOTICE.md', '/examples/shaft-bearing/source/provenance.json']) assert.equal((await fetch(base + path, { method: 'HEAD' })).status, 200, path);
-  for (const path of ['/shared/cad/assembly.test.mjs', '/tools/cad/import-xcaf.py', '/.tools/cad-python/Scripts/python.exe', '/output/cad-research/shaft-bearing-fine.json', '/examples/shaft-bearing/tests/asset.test.mjs']) assert.equal((await fetch(base + path)).status, 403, path);
+test('shared CAD inspection module stays public while local CAD tools stay private', async () => {
+  for (const path of ['/shared/cad/assembly.mjs', '/shared/cad/README.md']) assert.equal((await fetch(base + path)).status, 200, path);
+  for (const path of ['/shared/cad/assembly.test.mjs', '/tools/cad/import-xcaf.py', '/.tools/cad-python/Scripts/python.exe', '/output/cad-research/wolf-fine.json', '/examples/shaft-bearing/', '/examples/wolf-actuator/source/assembly.step']) assert.equal((await fetch(base + path)).status, 403, path);
 });
 test('English showcases serve optional local narration and required adapters while keeping tools private', async t => {
   assert.equal((await fetch(base + '/showcase/presentation.mjs')).status, 200);

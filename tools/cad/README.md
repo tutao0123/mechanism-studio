@@ -89,10 +89,7 @@ npm run import:cad -- --example examples/<name> --from-cache
 
 Both caches must match the retained source hash, pinned importer version and
 expected tessellation settings. This option does not create missing caches or
-borrow another model's cache. `npm run import:shaft-bearing -- --from-cache`
-preserves the Galileo compatibility wrapper and its older
-`output/cad-research/shaft-bearing-{fine,coarse}.json` layout. That wrapper's
-cache is separate from the generic command's cache. `npm run import:step`
+borrow another model's cache. `npm run import:step`
 remains the earlier KFL08 fragment-based experiment.
 
 ## Generated files and publication failure
@@ -142,7 +139,7 @@ independently recompute native STEP placements, execute B-rep measurement,
 prove geometric precision or validate licensing rights. A complete license
 record is evidence retained for a separate publication decision.
 
-The Galileo package and an isolated real KFL08 import exercise this reusable
+The WOLF package and an isolated real KFL08 import exercise this reusable
 path. The latter retained 30 definitions and 30 expanded occurrences with a
 verified evidence report; its optional local record is
 `output/cad-research/generic-real-trial.json`. That trial does not upgrade the

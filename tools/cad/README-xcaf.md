@@ -22,8 +22,8 @@ On Windows, run this from the project root using an existing `uv` executable:
 ```powershell
 ./tools/cad/setup-xcaf.ps1
 & ./.tools/cad-python/Scripts/python.exe tools/cad/import-xcaf.py `
-  --source examples/shaft-bearing/source/assembly.step `
-  --output output/cad-research/shaft-bearing-fine.json
+  --source examples/wolf-actuator/source/assembly.step `
+  --output output/cad-research/wolf-actuator-fine.json
 ```
 
 The setup script installs fixed package versions in `.tools/cad-python` and

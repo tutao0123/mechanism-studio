@@ -256,21 +256,9 @@ test('non-file publication target is rejected before any owned asset is replaced
   await assert.rejects(access(join(f.root, '.cache')));
 });
 
-test('real retained Galileo cache rebuild keeps existing GLB and manifest bytes unchanged without publication', async t => {
-  let fine;
-  try { fine = JSON.parse(await readFile(join(projectRoot, 'output/cad-research/shaft-bearing-fine.json'), 'utf8')); }
-  catch (error) { if (error.code === 'ENOENT') { t.skip('Ignored optional local XCAF cache is absent; use a real import to reproduce it.'); return; } throw error; }
-  const provenance = JSON.parse(await readFile(join(projectRoot, 'examples/shaft-bearing/source/provenance.json'), 'utf8'));
-  const result = buildXcafDisplay(fine, provenance);
-  const existingGlb = await readFile(join(projectRoot, 'examples/shaft-bearing/assets/assembly.glb'));
-  const existingManifest = await readFile(join(projectRoot, 'examples/shaft-bearing/assets/assembly-manifest.json'), 'utf8');
-  assert.equal(sha256(result.glb), sha256(existingGlb));
-  assert.equal(JSON.stringify(result.manifest, null, 2) + '\n', existingManifest);
-});
-
 test('CLI requires an explicit example and rejects unknown options before starting CAD', () => {
   const result = spawnSync(process.execPath, ['tools/cad/import-assembly.mjs', '--from-cache'], { cwd: projectRoot, encoding: 'utf8' });
   assert.equal(result.status, 1); assert.match(result.stderr, /--example/);
-  const unknown = spawnSync(process.execPath, ['tools/cad/import-assembly.mjs', '--example', 'examples/shaft-bearing', '--global'], { cwd: projectRoot, encoding: 'utf8' });
+  const unknown = spawnSync(process.execPath, ['tools/cad/import-assembly.mjs', '--example', 'examples/wolf-actuator', '--global'], { cwd: projectRoot, encoding: 'utf8' });
   assert.equal(unknown.status, 1); assert.match(unknown.stderr, /Usage/);
 });

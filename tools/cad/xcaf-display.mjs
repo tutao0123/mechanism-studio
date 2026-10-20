@@ -5,7 +5,7 @@ import { boundsOf, readGlb } from '../../shared/assets/glb.mjs';
 import { writeGlb } from '../../shared/assets/write-glb.mjs';
 import { validateSceneContract } from '../../shared/assets/contract.mjs';
 
-export function buildXcafDisplay(data, provenance, { mechanismId = 'step-shaft-bearing', sourceFile = 'source/assembly.step' } = {}) {
+export function buildXcafDisplay(data, provenance, { mechanismId = 'step-example', sourceFile = 'source/assembly.step' } = {}) {
   if (data.schema !== 'mechanism-studio-xcaf-1' || data.roots.length !== 1) throw new Error('This display requires one self-contained XCAF assembly root.');
   if (data.sourceSHA256 !== provenance.sourceSHA256) throw new Error('XCAF input and retained source provenance disagree.');
   const names = data.units?.sourceLengthNames;

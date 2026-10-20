@@ -115,7 +115,6 @@ for the 85.733-second encoded delivery and its recorded verification.
 | [SO-ARM 102 kinetic cut](EXAMPLE_ROBOT/kinetic/README.md) | Source-backed jaw and arm movement, cascading explosion, two readable details, musical reassembly; 25.7 seconds | Five revolute and two prismatic URDF joints; eight merged link meshes |
 | [SO-ARM 102 assembly study](EXAMPLE_ROBOT/README.md) | Near-part names, restrained colour changes, original music; 34.3 seconds | Link-level visual separation; no per-fastener identity |
 | [WOLF actuator: complete v4 tour](examples/wolf-actuator/tour-v4/README.md) | Whole 245-leaf actuator → source-bound tooth pairing and spin/orbit cues → magnet and roller close-ups → full reassembly; 85.714 seconds | Ideal source-based gear/bearing kinematics; phase highlights are explanatory, not solved contact. CAD-derived −31.5:1 differs from upstream 34:1; older whole/motor/bearing cuts remain |
-| [Galileo 2 source inspector](examples/shaft-bearing/README.md) | Shaft, bearing holder, repeated screws; source tree and mesh selection, hide/isolate/restore | 69 definitions, 146 source usage relations, 147 occurrences including the root |
 | [KFL08 bearing assembly](examples/step-assembly/README.md) | Retained STEP, import reports, display fragments and restoration | Historical importer trial: 22 source leaf instances versus 35 display fragments; incomplete identity mapping |
 | [Five-pin lock](prototype-3d/README.md) | Key comparison, shear line, insertion, turning and explosion | Authored teaching geometry; ideal pin-stack alignment |
 | [Inline-four engine](examples/inline-four/README.md) | Crank, rods, pistons, valve timing, intake spray, ignition and exhaust | Prescribed kinematics and explanatory process effects |
@@ -210,10 +209,10 @@ Additional commands:
 npm run verify:audio
 
 # Audit the retained source and derived display assets.
-npm run audit:cad -- --example examples/shaft-bearing
+npm run audit:cad -- --example examples/wolf-actuator
 
 # Optional CAD rebuilding requires the documented project-local OCCT runtime.
-npm run import:cad -- --example examples/shaft-bearing
+npm run import:cad -- --example examples/wolf-actuator
 
 # Verify the v4 source/evidence fingerprints without requiring local exports.
 npm run check:delivery -- --manifest examples/wolf-actuator/tour-v4/delivery.json
@@ -233,7 +232,7 @@ Next milestones are source-bound B-rep measurement with known-answer fixtures; e
 
 ## License, sources and contributions
 
-**Original Mechanism Studio code, skill instructions and documentation are MIT-licensed**; see [LICENSE](LICENSE). Third-party code and model assets retain their own licenses. Allegro and Robotiq model data and derived visuals retain their model-specific BSD-2-Clause notices; Unitree G1 retains BSD-3-Clause and Kenney effects retain CC0. SO-ARM 102 is CC BY 4.0, KFL08 is CC BY 3.0, WOLF is CC BY-SA 4.0, and Galileo 2 source and geometry derivatives are GPL v3. The repository's MIT license does not replace those terms.
+**Original Mechanism Studio code, skill instructions and documentation are MIT-licensed**; see [LICENSE](LICENSE). Third-party code and model assets retain their own licenses. Allegro and Robotiq model data and derived visuals retain their model-specific BSD-2-Clause notices; Unitree G1 retains BSD-3-Clause and Kenney effects retain CC0. SO-ARM 102 is CC BY 4.0, KFL08 is CC BY 3.0 and WOLF is CC BY-SA 4.0. No GPL model is included. The repository's MIT license does not replace those terms.
 
 Read [licensing and the file-scope map](docs/licensing.md) and [third-party notices](THIRD_PARTY_NOTICES.md) before redistributing example assets or recordings. The project began with workflow ideas adapted from Anatomy; that history and the retained MIT notice are recorded in [origins](docs/origins.md). Upstream model authors are credited separately from Mechanism Studio's implementation.
 

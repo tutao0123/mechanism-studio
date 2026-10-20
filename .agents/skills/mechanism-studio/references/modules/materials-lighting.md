@@ -53,7 +53,7 @@ Base colors must not consume process meanings: airflow/fuel/combustion have thei
 
 For the default white line art, start from [line-art-style.mjs](../../../../../shared/appearance/line-art-style.mjs): `LINE_ART_LINE_STYLE`, `createLineArtFill()` and `addLineArtLighting(scene)` carry the shared fill, edge and light tokens, and appearance plans should record its `LINE_ART_STYLE_REVISION`. Override a value only for a stated reason; existing pages are migrated deliberately, not in bulk.
 
-The [shaft-bearing page](../../../../../examples/shaft-bearing/app.mjs) shows instance selection and feature edges. Blender and web adapters each implement the intention; record actual parameters and differences. Missing textures/UV/environment resources fall back to a declared neutral style and a specific limitation, without downloading unrelated replacements.
+The [WOLF studies](../../../../../examples/wolf-actuator/README.md) show feature edges on a real STEP assembly. Blender and web adapters each implement the intention; record actual parameters and differences. Missing textures/UV/environment resources fall back to a declared neutral style and a specific limitation, without downloading unrelated replacements.
 
 ## Acceptance and failure handoff
 

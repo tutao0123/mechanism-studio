@@ -30,7 +30,7 @@ The [input brief](input-brief.md) and [module handoffs](module-orchestration.md)
 - [Turbofan](../../../../examples/turbofan/README.md): authored two-spool teaching motion and qualitative process regions.
 - [Quadruped](../../../../examples/quadruped/README.md): fixed-body geometric gait, foot trajectory, analytic IK and FK checks; not dynamic balance.
 - [KFL08 STEP](../../../../examples/step-assembly/README.md): retained source, grouping/fragment mapping and display separation; limited legacy identity.
-- [Galileo 2 inspection](../../../../examples/shaft-bearing/README.md): XCAF definitions/repeated occurrences, actual local/world/tree, linked selection/hide/isolate/reassembly and mixed assemblies with owned geometry.
+- [WOLF source audit](../../../../examples/wolf-actuator/README.md): XCAF definitions/repeated occurrences and actual local/world placements, checked by `npm run audit:cad`. The linked tree inspector page left with the GPL Galileo example (Git history before 2026-10-20).
 - [SO-ARM 102 study](../../../../EXAMPLE_ROBOT/README.md): sourced URDF link identity, music clock, grouped explosion, near sequential labels and scene-group fades. Eight merged links are not per-screw/native STEP solids.
 - [SO-ARM kinetic cut](../../../../EXAMPLE_ROBOT/kinetic/README.md): explicit 25.714-second variant using five revolute/two prismatic source-backed joints, opposed jaws, zero-pose gate before explosion, deliberate detail/whole cuts and original score; original study retained.
 - [WOLF actuator](../../../../examples/wolf-actuator/README.md): source-native-metre AP242 with analytic and source-triangulated geometry, actual occurrences, shared study and authored separation. Source triangles are not recovered analytic solids.

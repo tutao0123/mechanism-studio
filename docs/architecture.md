@@ -91,9 +91,8 @@ See [release packaging](release-audit.md) and [licensing](licensing.md).
 
 ## CAD evidence and limits
 
-KFL08 preserves the first import's incomplete source/display mapping. Galileo 2
-uses XCAF for exact retained definition/occurrence mapping, with recorded
-single-face meshing retries. WOLF extends the specimens to native-metre AP242
+KFL08 preserves the first import's incomplete source/display mapping. WOLF uses
+XCAF for exact retained definition/occurrence mapping with native-metre AP242
 input and explicitly source-triangulated bearing definitions. Their imports and
 evidence limits are separate; success on these samples is not arbitrary STEP
 coverage. The root audit CLI cross-checks retained bytes, source metadata,

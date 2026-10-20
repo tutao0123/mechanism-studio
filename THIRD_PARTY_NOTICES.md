@@ -15,7 +15,6 @@ was checked on 2026-10-18.
 | Kenney Interface Sounds / Calinou WAV packaging | Five unchanged WAVs in `examples/humanoid/audio/sfx/`; quiet authored uses in `humanoid-loop.wav` | CC0-1.0; source/license/hash records accompany the files |
 | Robonine SO-ARM 102 | Selected upstream documentation, simulation URDF/Xacro/STL/metadata under `EXAMPLE_ROBOT/source/`; derived `EXAMPLE_ROBOT/assets/` geometry/identity data and robot renders, including the README image | CC BY 4.0 |
 | hasecilu KFL08 | `examples/step-assembly/source/kfl08.step` and derived `assets/` | CC BY 3.0 |
-| JaredC01 / Galileo 2 contributors | `examples/shaft-bearing/source/assembly.step`, original editable `Galileo 2 Extruder.f3d` and derived `assets/` | GPL-3.0-only |
 | Anthrobotics / WOLF contributors | Upstream files in `examples/wolf-actuator/source/`, derived `assets/` and adapted WOLF visual presentations/renders | CC BY-SA 4.0 |
 
 Original reusable software, original lesson text and separately code-synthesized
@@ -223,21 +222,6 @@ See [retained notice](examples/step-assembly/source/LICENSE.md) and
 The source STEP is byte-identical. Changes are tessellation, fragment recentering
 and millimetre/Z-up to metre/Y-up display conversion. The source and derived
 model retain the creator/source/license attribution; they are not MIT assets.
-
-## Galileo 2 Extruder
-
-**JaredC01 and Galileo 2 contributors**, revision
-`98f8a37944d7277cd37231776400553cc402219f`.
-The original STEP and editable Fusion source accompany the display derivative
-in [examples/shaft-bearing/source/](examples/shaft-bearing/source/NOTICE.md),
-with the complete unchanged [GPL version 3 text](examples/shaft-bearing/source/LICENSE.md)
-and [pinned hashes](examples/shaft-bearing/source/provenance.json).
-No additional or-later permission is inferred: these source/derived model assets
-are **GPL-3.0-only**, separate from the MIT viewer/importer code. Conversion
-scripts preserve source identities/placements while changing display format and
-coordinates. Preserve accompanying editable source, conversion source, notices
-and license when redistributing derivatives. The browser does not edit native
-Fusion files or recover assembly mates.
 
 ## WOLF V1.2 actuator
 
