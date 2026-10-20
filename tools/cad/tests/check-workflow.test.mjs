@@ -8,13 +8,13 @@ import { sha256 } from '../../../shared/assets/glb.mjs';
 
 test('read-only CAD check reports actual capabilities and preserves the included source/assets', async () => {
   const paths = ['source/assembly.step', 'assets/assembly.glb', 'assets/assembly-manifest.json', 'assets/import-report.json'];
-  const hashes = await Promise.all(paths.map(async path => sha256(await readFile(join(projectRoot, 'examples/shaft-bearing', path)))));
-  const report = await checkCadExample({ example: 'examples/shaft-bearing' });
+  const hashes = await Promise.all(paths.map(async path => sha256(await readFile(join(projectRoot, 'examples/wolf-actuator', path)))));
+  const report = await checkCadExample({ example: 'examples/wolf-actuator' });
   assert.equal(report.status, 'limited'); assert.equal(report.capabilities.sourceIdentity.status, 'supported');
   assert.equal(report.capabilities.placementConsistency.status, 'supported'); assert.equal(report.capabilities.mates.status, 'unsupported');
   const result = await writeCadAuditReport(report, { output: 'output/cad-check/test-readonly.json' });
   assert.deepEqual(JSON.parse(await readFile(result, 'utf8')), report);
-  assert.deepEqual(await Promise.all(paths.map(async path => sha256(await readFile(join(projectRoot, 'examples/shaft-bearing', path))))), hashes);
+  assert.deepEqual(await Promise.all(paths.map(async path => sha256(await readFile(join(projectRoot, 'examples/wolf-actuator', path))))), hashes);
 });
 
 test('failed source preflight is a structured failure and cannot replace existing display assets', async () => {
@@ -30,7 +30,7 @@ test('failed source preflight is a structured failure and cannot replace existin
 
 test('CAD report output cannot target source/assets or escape the project', async () => {
   const report = { status: 'limited', checks: [] };
-  for (const output of ['examples/shaft-bearing/assets/import-report.json', '../outside.json', 'output/../../outside.json', join(projectRoot, 'output/absolute.json')]) await assert.rejects(writeCadAuditReport(report, { output }), /under output/);
+  for (const output of ['examples/wolf-actuator/assets/import-report.json', '../outside.json', 'output/../../outside.json', join(projectRoot, 'output/absolute.json')]) await assert.rejects(writeCadAuditReport(report, { output }), /under output/);
   const directory = join(projectRoot, '.test-output/cad-report-output'); await mkdir(directory, { recursive: true });
   const invalid = await checkCadExample({ example: relative(projectRoot, directory) });
   assert.equal(invalid.status, 'failed'); assert.match(invalid.findings[0].message, /examples/);

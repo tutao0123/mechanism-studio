@@ -72,3 +72,10 @@ shared-server compatibility checks for this publication.
 ## License
 
 Original adaptation code, authored presentation and synthesized music: repository MIT license. Retained and adapted Robotiq/Menagerie model assets: **BSD-2-Clause**, copyright 2013 ROS-Industrial. Keep [the full source license](source/LICENSE) and attribution with redistributed assets. This example is an independent visualization and implies no endorsement by Robotiq, ROS-Industrial or Google DeepMind.
+
+## Upstream files fetched on demand
+
+The upstream STL meshes in `source/assets/` are not stored in Git. `npm run fetch:sources`
+downloads them from the pinned upstream commit recorded in `source/provenance.json` and
+accepts them only if the SHA-256 matches; `npm test` does this first. The pinned
+list is [`scripts/upstream-sources.json`](../../scripts/upstream-sources.json).

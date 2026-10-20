@@ -15,7 +15,6 @@ in this documentation directory.
 | `gearbox-editions.jpg` | Same gearbox study in the default and blueprint editions, Mechanism Studio | Project MIT; capture source in `examples/gearbox/`. Blueprint style idea from lemo-opuscar (MIT); no third-party pixels |
 | `so-arm102-kinetic.jpg` | SO-ARM 102, Robonine | CC BY 4.0; source and change notice below |
 | `kfl08-preview.jpg` | KFL08, hasecilu / FreeCAD community library | CC BY 3.0; source and change notice below |
-| `shaft-bearing-preview.jpg` | Galileo 2, JaredC01 and contributors | Retains source-derived GPL-3.0-only notice; source and conversion materials below |
 | `wolf-preview.jpg` | WOLF V1.2, Anthrobotics and contributors | CC BY-SA 4.0; source and change notice below |
 | `wolf-motor-detail.jpg` | WOLF V1.2 motor subassembly, Anthrobotics and contributors | Same CC BY-SA 4.0 terms; actual source components, separate from G1 |
 | `humanoid-g1-preview.jpg` | Unitree G1, Unitree Robotics / MuJoCo Menagerie contributors | BSD-3-Clause; model-specific notice and full terms below |
@@ -78,22 +77,6 @@ Mechanism Studio imported/tessellated the retained STEP, authored grouped
 display separation, line rendering and a local viewer. The historical import's
 incomplete identity mapping remains documented; a render does not remedy it.
 Keep author/source/license credit and this change notice when sharing the image.
-
-## Galileo 2
-
-`shaft-bearing-preview.jpg` depicts **Galileo 2 by JaredC01 and contributors**,
-at [revision 98f8a37](https://github.com/JaredC01/Galileo2/tree/98f8a37944d7277cd37231776400553cc402219f).
-The retained source and source-derived material use **GPL-3.0-only**; retain the
-[full license](../../examples/shaft-bearing/source/LICENSE.md),
-[source notice](../../examples/shaft-bearing/source/NOTICE.md) and
-[provenance](../../examples/shaft-bearing/source/provenance.json).
-Original native Fusion and STEP files, conversion code and derived GLB are
-included in the example package rather than being represented only by an image.
-Mechanism Studio adds XCAF occurrence import, linked selection, neutral line
-rendering and display explosion. This image's geometry is excluded from the
-repository-level MIT grant. Redistribution of model derivatives must keep the
-corresponding source and applicable GPL notices; the independent reusable
-viewer/software remains under its own MIT terms.
 
 ## WOLF
 

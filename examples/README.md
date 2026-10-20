@@ -18,7 +18,6 @@ public/local distinctions are listed in the [status audit](../docs/examples-stat
 <a href="inline-four/README.md"><img src="../docs/media/inline-four-preview.jpg" alt="Inline-four engine with ignition cues" width="480"></a>
 <a href="turbofan/README.md"><img src="../docs/media/turbofan-preview.jpg" alt="Two-spool turbofan teaching model" width="480"></a>
 <a href="quadruped/README.md"><img src="../docs/media/quadruped-preview.jpg" alt="Original small quadruped teaching model" width="480"></a>
-<a href="shaft-bearing/README.md"><img src="../docs/media/shaft-bearing-preview.jpg" alt="Galileo 2 source assembly inspector" width="480"></a>
 <a href="wolf-actuator/README.md"><img src="../docs/media/wolf-preview.jpg" alt="WOLF STEP-derived assembly study" width="480"></a>
 <a href="step-assembly/README.md"><img src="../docs/media/kfl08-preview.jpg" alt="KFL08 historical STEP import in the actual viewer" width="480"></a>
 
@@ -28,8 +27,8 @@ public/local distinctions are listed in the [status audit](../docs/examples-stat
 [Quadruped](quadruped/README.md) ·
 [Original lock preview](../prototype-3d/assets/lock-preview.png).
 Preview licenses are listed in [media notices](../docs/media/LICENSE.md): G1
-retains BSD-3-Clause, Allegro and Robotiq BSD-2-Clause, SO-ARM CC BY 4.0,
-Galileo GPL v3 and WOLF CC BY-SA 4.0;
+retains BSD-3-Clause, Allegro and Robotiq BSD-2-Clause, SO-ARM CC BY 4.0
+and WOLF CC BY-SA 4.0;
 original teaching-model previews use the project's MIT terms.
 Videos are generated local deliveries, not missing source assets: captured
 frames and MP4 exports are intentionally excluded from Git. GitHub does not run
@@ -49,7 +48,6 @@ these pages; use a local server below to load models and play music.
 | Small quadruped | `npm run preview` | `http://127.0.0.1:4179/examples/quadruped/` | Leg controls, FK/IK, limits, foot path, diagonal gait and explosion |
 | English story pages | `npm run preview` | `http://127.0.0.1:4179/showcase/?story=quadruped&clean=1` | Timed camera, captions and near-part labels; short/full quadruped editions |
 | KFL08 STEP trial | `npm run preview` | `http://127.0.0.1:4179/examples/step-assembly/` | Historical import with explicit identity-mapping limits |
-| Galileo 2 inspector | `npm run preview` | `http://127.0.0.1:4179/examples/shaft-bearing/` | Source tree, repeated occurrences, mesh selection, hide/isolate and restoration |
 | SO-ARM 102 assembly study | `node EXAMPLE_ROBOT/serve.mjs` | `http://127.0.0.1:4180/?clean=1` | 34.285714-second music-driven exploded view and restoration |
 | SO-ARM 102 kinetic cut | `node EXAMPLE_ROBOT/serve.mjs` | `http://127.0.0.1:4180/kinetic/?clean=1` | 25.714286-second source-backed joint motion and assembly edit |
 | WOLF actuator | `node examples/wolf-actuator/serve.mjs` | `http://127.0.0.1:4181/?clean=1` | 34.285714-second real STEP-derived whole-assembly music study |
@@ -103,8 +101,10 @@ the interactive page.
 
 ## What a fresh clone includes
 
-Build the two new robot soundtracks before music playback. Their original
-synthesis code and score metadata are retained; the generated WAVs stay local.
+Build the soundtracks before music playback: `npm run build:audio` renders every
+study score once and checks it against its recorded hash. Original synthesis
+code and score metadata are retained; the generated WAVs stay local. To build
+only the two robot soundtracks:
 
 ```sh
 node tools/audio/build-study-score.mjs --example examples/allegro-hand
@@ -112,14 +112,15 @@ node tools/audio/build-study-score.mjs --example examples/robotiq-gripper
 ```
 
 Their visual assets are included, so these viewing commands need no Python.
-Optional regeneration from retained MJCF/STL uses the
+Optional regeneration from the retained MJCF and pinned STL meshes (`npm run fetch:sources`
+downloads the meshes) uses the
 [pinned robot importer](../tools/robot/README.md) and Python 3's standard library;
 it is separate from launching a page or generating its score.
 
 - GLB display geometry, scene contracts, models, lessons, source/provenance records and implementation adapters.
-- Deterministic original-music synthesis source and the bundled WAVs for the robot, humanoid and earlier WOLF studies. The longer shared WOLF v2/v3/v4 WAV is excluded and built with the command above. The humanoid additionally retains five separately licensed Kenney CC0 effects and their provenance. Click **Play with music** to enable audio; the media clock controls motion, camera, labels and effects together.
+- Deterministic original-music synthesis source and score metadata for every study. No generated score WAV is in Git; `npm run build:audio` builds them all. The humanoid additionally retains five separately licensed Kenney CC0 effects and their provenance. Click **Play with music** to enable audio; the media clock controls motion, camera, labels and effects together.
 - Blender Python builders for the original teaching models. Local `.blend` exports remain on the author's machine because their binary metadata embeds machine-specific paths; rebuild them if needed.
-- Original third-party CAD/URDF files with licenses. Galileo also retains its upstream native Fusion source. These assets are separately licensed from the MIT runtime.
+- Third-party model descriptions (MJCF, URDF/Xacro) with their licenses, notices and provenance. The upstream STEP, STL and PDF files are not in Git: `npm run fetch:sources` downloads each from its pinned upstream commit and verifies its SHA-256. These assets are separately licensed from the MIT runtime.
 
 Provider-generated Doubao MP3s are deliberately not in the public source release: the reviewed material did not establish a downstream MIT sublicensing grant. This is not a claim that using Doubao output is prohibited. Silent visuals, captions and the code-music studies remain usable. Lesson scripts/manifests and opt-in generation commands remain for users with their own service account and rights; see [voice setup](../shared/voice/README.md) and [licensing](../docs/licensing.md). Old example notes that describe delivered local narration or Blender files record the development workspace, not a promise that those ignored files are in a fresh clone.
 
@@ -137,7 +138,6 @@ Read the mechanism's model and README before using its diagrams as engineering e
 | [Robotiq 2F-85 v4](robotiq-gripper/README.md) | ROS-Industrial / Robotiq model via MuJoCo Menagerie; retained hinge axes, limits and loop-closure constraints | Model-specific BSD-2-Clause; analytic linkage visualization on the authored free-space branch, not a dynamics or gripping-force model |
 | [Unitree G1](humanoid/README.md) | Unitree Robotics / Menagerie MJCF; 30 source bodies, 35 visual occurrences, 29 hinge declarations, 393,270 triangles | BSD-3-Clause at model-directory scope. Static zero-joint source pose; merged link visuals, no individual screws or actuator internals. |
 | [KFL08](step-assembly/README.md) | FreeCAD-library model by hasecilu; 22 leaf instances and 7 subassembly instances | CC BY 3.0. Historical display has 35 fragments; only partial source mapping. |
-| [Galileo 2](shaft-bearing/README.md) | JaredC01 and contributors; OCCT XCAF retains 69 definitions, 146 usages and 147 root-inclusive occurrences | GPL v3 for CAD source and derivatives. Includes original STEP, preferred native Fusion source and license. Six faces required recorded meshing retries. |
 | [WOLF](wolf-actuator/README.md) | Anthrobotics V1.2 STEP; 184 definitions, 252 usages, 245 leaf occurrences | CC BY-SA 4.0 for the model and adapted visual presentation. Includes source-triangulated bearing geometry; not all geometry is analytic. |
 | [SO-ARM 102](../EXAMPLE_ROBOT/README.md) | Robonine simulation URDF and STL meshes; 8 links, 7 joints, 62,064 triangles | CC BY 4.0 under the upstream file-level map. Selected simulation files only; hardware elsewhere has different terms. |
 
@@ -150,7 +150,6 @@ The robot kinetic adapter reads five revolute and two prismatic joints, includin
 ```sh
 npm test
 npm run release:check
-npm run audit:cad -- --example examples/shaft-bearing
 npm run audit:cad -- --example examples/wolf-actuator
 npm run check:delivery -- --manifest examples/wolf-actuator/tour-v4/delivery.json
 ```
@@ -165,7 +164,7 @@ does not independently validate a mechanical claim or a recorded review.
 
 Use [CAD import setup](../tools/cad/README.md) and [XCAF setup](../tools/cad/README-xcaf.md) before rebuilding engineering derivatives. The root `npm run import:cad -- --example examples/<name>` command requires a supported source package and project-local OCCT backend; it does not generate a new viewer page or recover joints.
 
-Music rebuild commands are `node EXAMPLE_ROBOT/audio/build.mjs`, `node EXAMPLE_ROBOT/kinetic/audio/build.mjs`, and `node examples/wolf-actuator/audio/build.mjs`. The retained v1 WOLF tour uses `node examples/wolf-actuator/tour/audio/build.mjs`; v2, v3 and v4 share `node examples/wolf-actuator/tour-v2/audio/build.mjs`. Rebuilding visual assets may require the example's documented Python/Blender environment. Recording is separate from viewing: deterministic capture plus [video encoding](../tools/video/README.md) can produce an MP4, while captured frames, exports and browser review screenshots remain local ignored outputs.
+`npm run build:audio` runs every music build below and verifies each recorded hash. Individual music rebuild commands are `node EXAMPLE_ROBOT/audio/build.mjs`, `node EXAMPLE_ROBOT/kinetic/audio/build.mjs`, and `node examples/wolf-actuator/audio/build.mjs`. The retained v1 WOLF tour uses `node examples/wolf-actuator/tour/audio/build.mjs`; v2, v3 and v4 share `node examples/wolf-actuator/tour-v2/audio/build.mjs`. Rebuilding visual assets may require the example's documented Python/Blender environment. Recording is separate from viewing: deterministic capture plus [video encoding](../tools/video/README.md) can produce an MP4, while captured frames, exports and browser review screenshots remain local ignored outputs.
 
 The humanoid rebuilds with `node examples/humanoid/build-humanoid.mjs` (Node and
 Python 3 standard library) and `node examples/humanoid/audio/build.mjs` (Node,

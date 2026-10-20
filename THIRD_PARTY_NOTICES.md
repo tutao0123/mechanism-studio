@@ -11,12 +11,11 @@ was checked on 2026-10-18.
 
 | Source | Included material | License |
 | --- | --- | --- |
-| Unitree Robotics / MuJoCo Menagerie Unitree G1 | Unmodified `examples/humanoid/source/unitree_g1/` XML/STL/license/notes; derived `assets/` geometry/identity data and G1 visual renders, including `docs/media/humanoid-g1-preview.jpg` | BSD-3-Clause, **model-directory** license, copyright 2016–2023 Unitree Robotics; not the Menagerie repository's general Apache license |
+| Unitree Robotics / MuJoCo Menagerie Unitree G1 | Unmodified `examples/humanoid/source/unitree_g1/` XML/license/notes, with STL meshes fetched from the pinned upstream commit; derived `assets/` geometry/identity data and G1 visual renders, including `docs/media/humanoid-g1-preview.jpg` | BSD-3-Clause, **model-directory** license, copyright 2016–2023 Unitree Robotics; not the Menagerie repository's general Apache license |
 | Kenney Interface Sounds / Calinou WAV packaging | Five unchanged WAVs in `examples/humanoid/audio/sfx/`; quiet authored uses in `humanoid-loop.wav` | CC0-1.0; source/license/hash records accompany the files |
-| Robonine SO-ARM 102 | Selected upstream documentation, simulation URDF/Xacro/STL/metadata under `EXAMPLE_ROBOT/source/`; derived `EXAMPLE_ROBOT/assets/` geometry/identity data and robot renders, including the README image | CC BY 4.0 |
-| hasecilu KFL08 | `examples/step-assembly/source/kfl08.step` and derived `assets/` | CC BY 3.0 |
-| JaredC01 / Galileo 2 contributors | `examples/shaft-bearing/source/assembly.step`, original editable `Galileo 2 Extruder.f3d` and derived `assets/` | GPL-3.0-only |
-| Anthrobotics / WOLF contributors | Upstream files in `examples/wolf-actuator/source/`, derived `assets/` and adapted WOLF visual presentations/renders | CC BY-SA 4.0 |
+| Robonine SO-ARM 102 | Selected upstream documentation, simulation URDF/Xacro/metadata under `EXAMPLE_ROBOT/source/`, with STL meshes fetched from the pinned upstream commit; derived `EXAMPLE_ROBOT/assets/` geometry/identity data and robot renders, including the README image | CC BY 4.0 |
+| hasecilu KFL08 | `examples/step-assembly/source/kfl08.step` (fetched from the pinned upstream commit) and derived `assets/` | CC BY 3.0 |
+| Anthrobotics / WOLF contributors | Upstream license and README in `examples/wolf-actuator/source/` (the STEP and assembly guide are fetched from the pinned upstream commit), derived `assets/` and adapted WOLF visual presentations/renders | CC BY-SA 4.0 |
 
 Original reusable software, original lesson text and separately code-synthesized
 music remain MIT. License notices for source geometry continue to apply when
@@ -224,30 +223,17 @@ The source STEP is byte-identical. Changes are tessellation, fragment recenterin
 and millimetre/Z-up to metre/Y-up display conversion. The source and derived
 model retain the creator/source/license attribution; they are not MIT assets.
 
-## Galileo 2 Extruder
-
-**JaredC01 and Galileo 2 contributors**, revision
-`98f8a37944d7277cd37231776400553cc402219f`.
-The original STEP and editable Fusion source accompany the display derivative
-in [examples/shaft-bearing/source/](examples/shaft-bearing/source/NOTICE.md),
-with the complete unchanged [GPL version 3 text](examples/shaft-bearing/source/LICENSE.md)
-and [pinned hashes](examples/shaft-bearing/source/provenance.json).
-No additional or-later permission is inferred: these source/derived model assets
-are **GPL-3.0-only**, separate from the MIT viewer/importer code. Conversion
-scripts preserve source identities/placements while changing display format and
-coordinates. Preserve accompanying editable source, conversion source, notices
-and license when redistributing derivatives. The browser does not edit native
-Fusion files or recover assembly mates.
-
 ## WOLF V1.2 actuator
 
 **Anthrobotics and WOLF actuator contributors**, revision
 `776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea`.
-Original STEP, upstream README, assembly guide and the complete
+The upstream README and the complete
 [CC BY-SA 4.0 license](examples/wolf-actuator/source/LICENSE) are retained with
 [provenance](examples/wolf-actuator/source/provenance.json) and
 [change/attribution notice](examples/wolf-actuator/source/NOTICE.md).
-Retain upstream acknowledgement of **Robin Fröjd's RFX gearbox**.
+Retain upstream acknowledgement of **Robin Fröjd's RFX gearbox**. The original STEP
+and assembly guide are not redistributed here; `npm run fetch:sources` downloads them from
+the pinned upstream commit and verifies their SHA-256.
 
 Mechanism Studio creates the triangulated display derivative with original
 assembly identity/placements, plus authored explosion, camera, annotation and
@@ -269,7 +255,8 @@ locally. [docs/licensing.md](docs/licensing.md#optional-doubao-narration) record
 the scope/evidence; recipients must confirm their own account/voice/service
 rights before generating or redistributing narration. No credentials or account
 configuration is published. Code-synthesized music is original MIT work;
-some longer generated WAV editions are rebuilt locally from their included scripts.
+its generated WAVs are not in Git and are rebuilt locally from the included
+scripts with `npm run build:audio`.
 
 ## WOLF modular-bearing motion evidence
 

@@ -13,11 +13,10 @@ license grant over every CAD model, recording or dependency in the repository.
 | Anatomy workflow lineage | Mechanism-first explanation, one model for motion and readouts, staged verification and rendered-view review informed early skill text | MIT, Ryan; [full notice](../THIRD_PARTY_NOTICES.md#anatomy). No sibling checkout, Anatomy drawing kit or runtime is needed. |
 | Allegro right hand | `examples/allegro-hand/source/`, source-derived `assets/`, screenshots and animation | Model-specific BSD-2-Clause, SimLab. [Full license](../examples/allegro-hand/source/LICENSE) and [pinned provenance](../examples/allegro-hand/source/provenance.json). Retain copyright, conditions and disclaimer with binary/visual redistribution. |
 | Robotiq 2F-85 v4 | `examples/robotiq-gripper/source/`, source-derived `assets/`, screenshots and animation | Model-specific BSD-2-Clause, ROS-Industrial. [Full license](../examples/robotiq-gripper/source/LICENSE) and [pinned provenance](../examples/robotiq-gripper/source/provenance.json); not the Menagerie repository-wide license. |
-| Unitree G1 visual description | `examples/humanoid/source/unitree_g1/` retained XML, STL, LICENSE, README and changelog; source-derived `assets/` data and G1 screenshots/animations, including `docs/media/humanoid-g1-preview.jpg` | BSD-3-Clause, Unitree Robotics, under the **individual model directory's** license. [Full notice](../examples/humanoid/source/unitree_g1/LICENSE), [pinned provenance](../examples/humanoid/source/provenance.json), [conversion and limits](../examples/humanoid/source/README.md). The Menagerie repository's general Apache license is not substituted. |
-| SO-ARM 102 | `EXAMPLE_ROBOT/source/` selected upstream documentation, URDF/Xacro, STL meshes and metadata; `EXAMPLE_ROBOT/assets/` source-derived geometry/identity data; screenshots or recordings depicting that geometry, including `docs/media/so-arm102-kinetic.jpg` | CC BY 4.0, Robonine; [license map](../EXAMPLE_ROBOT/source/LICENSING.md), [full license](../EXAMPLE_ROBOT/source/DOCS-LICENSE.txt), [hashes and changes](../EXAMPLE_ROBOT/source/provenance.json). The upstream hardware license is retained as contextual evidence, but hardware-design directories were not imported. |
-| KFL08 | `examples/step-assembly/source/kfl08.step` and source-derived `examples/step-assembly/assets/` | CC BY 3.0, hasecilu; [full license](../examples/step-assembly/source/CC-BY-3.0.txt), [notice](../examples/step-assembly/source/LICENSE.md), [provenance](../examples/step-assembly/source/provenance.json). |
-| Galileo 2 Extruder | `examples/shaft-bearing/source/assembly.step`, `Galileo 2 Extruder.f3d` and source-derived `examples/shaft-bearing/assets/` | GPL-3.0-only, JaredC01 and Galileo 2 contributors; [full license](../examples/shaft-bearing/source/LICENSE.md), [source notice](../examples/shaft-bearing/source/NOTICE.md), [hashes](../examples/shaft-bearing/source/provenance.json). |
-| WOLF V1.2 | Upstream files in `examples/wolf-actuator/source/`, source-derived `examples/wolf-actuator/assets/`, and adapted WOLF visual presentations/renders | CC BY-SA 4.0, Anthrobotics and contributors; [full license](../examples/wolf-actuator/source/LICENSE), [notice](../examples/wolf-actuator/source/NOTICE.md), [hashes](../examples/wolf-actuator/source/provenance.json). Keep the upstream acknowledgement of Robin Fröjd's RFX gearbox. |
+| Unitree G1 visual description | `examples/humanoid/source/unitree_g1/` retained XML, LICENSE, README and changelog, with STL meshes fetched from the pinned upstream commit; source-derived `assets/` data and G1 screenshots/animations, including `docs/media/humanoid-g1-preview.jpg` | BSD-3-Clause, Unitree Robotics, under the **individual model directory's** license. [Full notice](../examples/humanoid/source/unitree_g1/LICENSE), [pinned provenance](../examples/humanoid/source/provenance.json), [conversion and limits](../examples/humanoid/source/README.md). The Menagerie repository's general Apache license is not substituted. |
+| SO-ARM 102 | `EXAMPLE_ROBOT/source/` selected upstream documentation, URDF/Xacro and metadata, with STL meshes fetched from the pinned upstream commit; `EXAMPLE_ROBOT/assets/` source-derived geometry/identity data; screenshots or recordings depicting that geometry, including `docs/media/so-arm102-kinetic.jpg` | CC BY 4.0, Robonine; [license map](../EXAMPLE_ROBOT/source/LICENSING.md), [full license](../EXAMPLE_ROBOT/source/DOCS-LICENSE.txt), [hashes and changes](../EXAMPLE_ROBOT/source/provenance.json). The upstream hardware license is retained as contextual evidence, but hardware-design directories were not imported. |
+| KFL08 | `examples/step-assembly/source/kfl08.step` (fetched from the pinned upstream commit) and source-derived `examples/step-assembly/assets/` | CC BY 3.0, hasecilu; [full license](../examples/step-assembly/source/CC-BY-3.0.txt), [notice](../examples/step-assembly/source/LICENSE.md), [provenance](../examples/step-assembly/source/provenance.json). |
+| WOLF V1.2 | Upstream license and README in `examples/wolf-actuator/source/` (STEP and assembly guide fetched from the pinned upstream commit), source-derived `examples/wolf-actuator/assets/`, and adapted WOLF visual presentations/renders | CC BY-SA 4.0, Anthrobotics and contributors; [full license](../examples/wolf-actuator/source/LICENSE), [notice](../examples/wolf-actuator/source/NOTICE.md), [hashes](../examples/wolf-actuator/source/provenance.json). Keep the upstream acknowledgement of Robin Fröjd's RFX gearbox. |
 | Original music | Code synthesis source, score JSON and original composition under `EXAMPLE_ROBOT/audio/`, `EXAMPLE_ROBOT/kinetic/audio/`, `examples/wolf-actuator/audio/` and `examples/humanoid/audio/` | MIT for original composition/code. The first three scores use no third-party samples; the humanoid's derived WAV includes the separately retained CC0 effects below. A combined WOLF visual export still carries the model/presentation's CC BY-SA 4.0 obligations. |
 | Kenney Interface Sounds | Five unchanged WAV files and source license in `examples/humanoid/audio/sfx/`, with authored low-level cues in `humanoid-loop.wav` | CC0-1.0. [Upstream notice](../examples/humanoid/audio/sfx/LICENSE.Kenney.txt), [per-file origins/hashes](../examples/humanoid/audio/sfx/provenance.json) and [processing guide](../examples/humanoid/audio/README.md). Not original project recordings. |
 | Optional narration | Speech-service-generated recordings, including retained local Doubao MP3s; lesson text, generation scripts and technical manifests are distinct | Provider-generated output is not automatically relicensed as MIT. See [narration policy](#optional-narration). |
@@ -42,13 +41,16 @@ For KFL08, preserve hasecilu's attribution, the upstream source and CC BY 3.0
 link. Display conversion includes tessellation, per-fragment recentering and
 millimetre/Z-up to metre/Y-up mapping; the source STEP stays byte-identical.
 
-For Galileo 2, preserve GPL version 3 and the source/derivative distinction.
-The editable native Fusion file accompanies the original STEP and display GLB,
-with pinned hashes and the conversion scripts, so redistribution is not based
-only on an external download promise. A new binary/model release must continue
-to include the corresponding source and any changed conversion source. No
-claim is made that the browser edits Fusion files or that STEP alone is the
-preferred editable source.
+The Galileo 2 example (GPL-3.0-only) was removed on 2026-10-20 to keep every
+included model under a permissive or attribution license; it remains in Git
+history together with its complete source and license. New models with a
+copyleft license that requires shipping corresponding source are not accepted.
+
+Upstream STEP, STL and PDF files are referenced rather than redistributed:
+`scripts/upstream-sources.json` pins each to an upstream commit URL and SHA-256,
+and `npm run fetch:sources` downloads and verifies them. Every included model
+license allows this. Attribution, license texts, notices, model descriptions
+and provenance stay in each example's `source/` folder.
 
 For WOLF, preserve creator credit, source/license links, the RFX acknowledgement
 and a description of changes. Adapted model assets and the WOLF visual
@@ -141,16 +143,13 @@ Licenses were checked against primary upstream sources on **2026-10-18**:
 
 - [SO-ARM 102 file-level licensing at the imported revision](https://github.com/roboninecom/SO-ARM-102/blob/e871f738c97f43de230cb04d340797da6a68c4b9/LICENSING.md): all `simulation/` files are CC BY 4.0, distinct from fabrication geometry.
 - [WOLF LICENSE at the imported revision](https://github.com/Anthrobotics/wolf-actuator/blob/776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea/LICENSE) and [README](https://github.com/Anthrobotics/wolf-actuator/blob/776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea/README.md).
-- [Galileo 2 LICENSE](https://github.com/JaredC01/Galileo2/blob/98f8a37944d7277cd37231776400553cc402219f/LICENSE) and [native Fusion source](https://github.com/JaredC01/Galileo2/blob/98f8a37944d7277cd37231776400553cc402219f/galileo2_extruder/cad/Galileo%202%20Extruder.f3d).
 - [FreeCAD community library README license](https://github.com/FreeCAD/FreeCAD-library/blob/f5ca01cdcaa2f69b9295a6382719c2d90628780c/README.md#license) and [KFL08 author commit](https://github.com/FreeCAD/FreeCAD-library/commit/14aa0d4947577e296b04a7977c24b37327cd5b8d).
 - [Anatomy license](https://github.com/wheresryan22/anatomy/blob/main/LICENSE), [MCP SDK v1.26.0 license](https://github.com/modelcontextprotocol/python-sdk/blob/v1.26.0/LICENSE) and [occt-import-js 0.0.23 license](https://github.com/kovacsv/occt-import-js/blob/0.0.23/LICENSE.md); the installed Three.js license is retained in the notices.
 - [G1 model-specific BSD-3-Clause license](https://github.com/google-deepmind/mujoco_menagerie/blob/71f066ad0be9cd271f7ed58c030243ef157af9f4/unitree_g1/LICENSE) and [model README](https://github.com/google-deepmind/mujoco_menagerie/blob/71f066ad0be9cd271f7ed58c030243ef157af9f4/unitree_g1/README.md); 39 retained upstream file hashes/blob IDs are recorded locally.
 - [Kenney Interface Sounds CC0 pack](https://kenney.nl/assets/interface-sounds), [pinned Calinou packaging](https://github.com/Calinou/kenney-interface-sounds/tree/4596a49eaf5a533948d49a47467f606bcdea70ff) and [retained original license](../examples/humanoid/audio/sfx/LICENSE.Kenney.txt).
 
 All 21 retained SO-ARM upstream files passed their pinned hash verifier. Original
-KFL08, Galileo 2 and WOLF STEP hashes match `source/provenance.json`; the newly
-included native Fusion source is 21,384,519 bytes, SHA-256
-`ef025f1a9fbdd07e1e94c694ca10db54951fe96173266244baabcd595b9d9377`.
+KFL08 and WOLF STEP hashes match `source/provenance.json`.
 This records the inspected release, not an automated license guarantee for
 future additions. New model/media contributions must declare source, version,
 license, attribution, changes and any redistribution restrictions before release.

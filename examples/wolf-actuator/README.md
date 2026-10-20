@@ -107,8 +107,9 @@ node examples/wolf-actuator/serve.mjs
 
 Open `http://127.0.0.1:4181/?clean=1`, then click **Play with music**. The isolated,
 read-only server exposes only explicit viewing assets and shared runtime files.
-The public repository includes the source STEP, derived GLB, plans and music;
-the commands above rebuild the audio/plans when needed. No CAD installation is
+The public repository includes the derived GLB, plans and source provenance;
+`npm run fetch:sources` downloads the source STEP and manual from the pinned upstream commit,
+and the commands above rebuild the audio/plans when needed. No CAD installation is
 required to view the included assets. See the [example catalog](../README.md).
 Use `?capture=1` with a 1920×1080 browser viewport for the shared continuous
 capture API; mux `audio/wolf-loop.wav` against that same time arrangement.

@@ -4,9 +4,9 @@ import { readFile, realpath, lstat, mkdir, writeFile } from 'node:fs/promises';
 import { resolve, relative, sep, isAbsolute, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-// Retained robot sources/GLBs plus the cinematic edition's reproducible PCM score.
-// Allow the additional 4.4 MiB track while retaining the individual-file ceiling.
-export const releaseLimits = Object.freeze({ fileBytes: 95 * 1024 * 1024, totalBytes: 328 * 1024 * 1024 });
+// Generated study scores are rebuilt with `npm run build:audio`, not shipped,
+// which keeps the retained robot sources and GLBs inside the original budget.
+export const releaseLimits = Object.freeze({ fileBytes: 95 * 1024 * 1024, totalBytes: 300 * 1024 * 1024 });
 const slash = name => name.split(sep).join('/');
 const inside = (root, name) => { const part = relative(root, name); return part !== '' && !isAbsolute(part) && part !== '..' && !part.startsWith(`..${sep}`); };
 const placeholder = value => !value || /^(?:your[_-]|replace[_-]|example(?:[_-]|$)|<[^>]*>|\$\{|process\.env\.|config\.|undefined$|null$)/i.test(value);

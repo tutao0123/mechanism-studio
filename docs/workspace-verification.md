@@ -67,6 +67,8 @@ No viewer, geometry, existing lesson/audio or browser behavior changed in this i
 
 ## Real STEP occurrence inspection · 2026-10-16
 
+> The GPL-3.0 Galileo 2 example recorded here was removed on 2026-10-20 to keep included models under permissive licenses. This entry is a historical record; the files remain in Git history.
+
 The second external CAD example retains the complete original Galileo 2 STEP at commit `98f8a37944d7277cd37231776400553cc402219f`, source SHA-256 `d3a699b72a8cbdf7fc3acc70078870df141efb0a62991f8fa0bebd3ee56405bf`, its GPL v3 license and upstream manual references. This is a compact real extruder assembly with carriage/PCB context, rather than an authored bearing fixture. Carrier is the documented shaft, with a front bearing holder and genuinely repeated M3 fastener definitions.
 
 OCCT XCAF maps all 146 source usage relations exactly: 69 definitions, 147 occurrences including root, 126 parts and 21 assemblies. One source assembly also owns geometry; its anonymous OCCT geometry component is folded into its real source owner without inventing a source occurrence. The GLB contains 127 semantic geometry owners, 49 reused mesh definitions and 235,938 placed triangles. The six faces omitted by nominal fine meshing were recovered with individually recorded retry settings; no imported faces remain unmeshed. Those settings do not certify geometric accuracy.

@@ -28,11 +28,11 @@ export function isPublicPath(path) {
   if (/^showcase\/voice\/(?:inline-four|turbofan|quadruped|quadruped-short)\/assets\/audio\/[\w-]+\.mp3$/.test(path)) return true;
   if (/^shared\/(?:viewer|voice|assets|animation)\/[\w-]+\.(?:mjs|md|css)$/.test(path)) return true;
   if (/^shared\/cad\/(?:assembly\.mjs|README\.md)$/.test(path)) return true;
-  if (/^examples\/(?:inline-four|turbofan|quadruped|step-assembly|shaft-bearing)\/(?:index\.html|style\.css|app\.mjs|model\.mjs|process\.mjs|effects\.mjs|spec\.json|README\.md|design\.md)$/.test(path)) return true;
-  if (/^examples\/(?:inline-four|turbofan|quadruped|step-assembly|shaft-bearing)\/assets\/[\w-]+\.(?:glb|blend|json|png|jpe?g)$/.test(path)) return true;
+  if (/^examples\/(?:inline-four|turbofan|quadruped|step-assembly)\/(?:index\.html|style\.css|app\.mjs|model\.mjs|process\.mjs|effects\.mjs|spec\.json|README\.md|design\.md)$/.test(path)) return true;
+  if (/^examples\/(?:inline-four|turbofan|quadruped|step-assembly)\/assets\/[\w-]+\.(?:glb|blend|json|png|jpe?g)$/.test(path)) return true;
   if (/^examples\/(?:inline-four|turbofan|quadruped|step-assembly)\/assets\/audio\/[\w-]+\.mp3$/.test(path)) return true;
   if (/^examples\/(?:inline-four|turbofan|quadruped|step-assembly)\/voice\/(?:lesson|audio-manifest)\.json$/.test(path)) return true;
-  if (/^examples\/(?:step-assembly|shaft-bearing)\/source\/[\w-]+\.(?:step|stp|json|md|txt)$/.test(path)) return true;
+  if (/^examples\/step-assembly\/source\/[\w-]+\.(?:step|stp|json|md|txt)$/.test(path)) return true;
   if (/^prototype-3d\/(?:index\.html|style\.css|app\.mjs|controller\.mjs|line-art\.mjs|palettes\.mjs|README\.md)$/.test(path)) return true;
   if (/^prototype-3d\/(?:voice|blender)\/README\.md$/.test(path)) return true;
   if (/^prototype-3d\/voice\/(?:lesson|audio-manifest)\.json$/.test(path)) return true;

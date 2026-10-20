@@ -32,7 +32,7 @@ From the Mechanism Studio root:
 
 ```sh
 npm ci
-node examples/gearbox/cinematic/audio/build.mjs
+node examples/gearbox/cinematic/audio/build.mjs   # or npm run build:audio for every score
 node examples/gearbox/serve.mjs
 ```
 

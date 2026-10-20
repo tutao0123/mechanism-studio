@@ -184,8 +184,8 @@ test('CAD audit limits documented effective recovery and rejects contradictory r
   report = inspectCadEvidence(input); assert.equal(report.status, 'failed'); assert.match(check(report, 'mesh-face-evidence').message, /successful retained recovery attempt/);
 });
 
-test('CAD audit validates the real retained Galileo assembly with disclosed per-face recovery', async () => {
-  const root = new URL('../../examples/shaft-bearing/', import.meta.url), readJson = async path => JSON.parse(await readFile(new URL(path, root), 'utf8'));
+test('CAD audit validates the real retained WOLF assembly with disclosed per-face recovery', async () => {
+  const root = new URL('../../examples/wolf-actuator/', import.meta.url), readJson = async path => JSON.parse(await readFile(new URL(path, root), 'utf8'));
   const [sourceBytes, glbBytes, provenance, manifest, contract, importReport] = await Promise.all([readFile(new URL('source/assembly.step', root)), readFile(new URL('assets/assembly.glb', root)), readJson('source/provenance.json'), readJson('assets/assembly-manifest.json'), readJson('assets/scene-contract.json'), readJson('assets/import-report.json')]);
   const report = inspectCadEvidence({ sourceBytes, glbBytes, provenance, manifest, contract, importReport, sourceMetadata: extractStepMetadata(sourceBytes.toString('utf8')) });
   assert.equal(report.status, 'limited', JSON.stringify(report.findings));

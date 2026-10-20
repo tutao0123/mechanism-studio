@@ -29,7 +29,7 @@ Current XCAF normalizes native m/mm to imported mm, retains original unit metada
 
 [KFL08](../../../../examples/step-assembly/README.md) is an early limited-mapping route: retained AP214 has 30 products/29 usages, including 7 subassembly and 22 leaf occurrences, while the legacy display has 7 groups/35 fragments. Nineteen named fragments have named source associations; 16 have grouping-only mapping. Those counts are distinct evidence, not an invented full one-to-one recovery.
 
-[Galileo 2](../../../../examples/shaft-bearing/README.md) uses XCAF source definitions/occurrences, full retained local/world and repeated-instance selection. Some source assemblies own solids and children; generated anonymous OCCT solids are display subdivisions, not invented engineering occurrences. Mesh retries disclose actual face/settings/results rather than hiding coarser recovery behind nominal fine tolerances.
+[WOLF](../../../../examples/wolf-actuator/README.md) uses XCAF source definitions/occurrences with full retained local/world placements and native-metre AP242 input. Some source assemblies own solids and children; generated anonymous OCCT solids are display subdivisions, not invented engineering occurrences. Mesh retries disclose actual face/settings/results rather than hiding coarser recovery behind nominal fine tolerances.
 
 [WOLF](../../../../examples/wolf-actuator/README.md) is native-metre AP242 with both analytic and source-triangulated geometry. Source triangles retain identity, but do not become analytic CAD because of the STEP extension. Use actual specimen reports, not these examples' constants, for new inputs.
 

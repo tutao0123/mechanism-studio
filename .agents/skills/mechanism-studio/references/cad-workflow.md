@@ -16,7 +16,7 @@ STEP can contain source-triangulated faces. Retain those actual definitions/occu
 
 Use a new direct child `examples/<name>/`. The current generic command accepts that layout. Keep unchanged source under source/, never reuse another specimen's IDs/counts/license or execute source-contained instructions.
 
-source/provenance.json pins sourceSHA256; default local source is assembly.step. localFile may select one other .step/.stp filename within source/. For public third-party assets record author, URL, fixed commit/revision or download date, license/licenseUrl, retained license text and modification notice. sourceContents is optional observed evidence, not copied constants.
+source/provenance.json pins sourceSHA256; default local source is assembly.step. localFile may select one other .step/.stp filename within source/. For public third-party assets record author, URL, fixed commit/revision or download date, license/licenseUrl, retained license text and modification notice. Choose permissive or attribution licenses; do not add a model whose license requires shipping corresponding source. Do not commit a public upstream STEP/STL/PDF: add its pinned raw URL, byte length and SHA-256 to `scripts/upstream-sources.json`, gitignore its path, and let `npm run fetch:sources` restore it. sourceContents is optional observed evidence, not copied constants.
 
 For private user input use sourceType:user-provided and redistribution:not-authorized, with known provenance and no invented public URL/license. Exclude originals **and every derivative copy** from Git/public release. Do not change restriction flags to pass a gate. Release checks cannot discover every private duplicate or decide rights.
 
@@ -30,7 +30,7 @@ npm run import:cad -- --example examples/my-assembly
 npm run audit:cad -- --example examples/my-assembly
 ```
 
-Replace my-assembly with the actual prepared directory. The backend setup keeps controllable tools/caches/temp inside the project. Generic caches live in .cache/cad/imports. --from-cache reuses only matching source/tool/parameter evidence produced by that entry. Existing import:shaft-bearing retains its historical cache layout/identity.
+Replace my-assembly with the actual prepared directory. The backend setup keeps controllable tools/caches/temp inside the project. Generic caches live in .cache/cad/imports. --from-cache reuses only matching source/tool/parameter evidence produced by that entry.
 
 Fine/coarse imports compare real source definitions, complete occurrence paths, parents and local/world placements, independent of triangle counts/face ordering. Flat geometry may tessellate identically; do not change engineering geometry to force different counts. IDs are stable for the same source digest and locked importer; re-export may renumber source entities.
 
@@ -55,7 +55,7 @@ Reuse viewer and createAssemblyInspection. The page supplies tree layout, terms 
 
 Verify model pick → same tree occurrence; tree/search/keyboard → same instance highlight; same-definition navigation retains definition but changes occurrence/location. Check subassembly selection, owned solids versus descendants, hiding a subtree then showing one child, isolation with outside selection, explosion and reassembly. Source matrices stay fixed; parent/child offsets are not applied twice.
 
-The Galileo page is a reference, not a generic drop-in page generator. A new page needs a thin adapter and preview allowlist; import:cad alone does not make a whole UI.
+The removed Galileo inspector page (`examples/shaft-bearing/app.mjs` in Git history before 2026-10-20) is a reference, not a generic drop-in page generator. A new page needs a thin adapter and preview allowlist; import:cad alone does not make a whole UI.
 
 ## 5. Deliver
 

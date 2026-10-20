@@ -76,3 +76,10 @@ Representative screenshots are kept under ignored `output/`. Audio checks record
 duration, peak/headroom, clipping and cyclic boundary continuity, without claiming
 a subjective listening review. The separate WOLF example has a local MP4 delivery;
 neither example automatically grants social-posting or remote-publishing authority.
+
+## Upstream files fetched on demand
+
+The upstream STL meshes in `source/simulation/` are not stored in Git. `npm run fetch:sources`
+downloads them from the pinned upstream commit recorded in `source/provenance.json` and
+accepts them only if the SHA-256 matches; `npm test` does this first. The pinned
+list is [`scripts/upstream-sources.json`](../scripts/upstream-sources.json).

@@ -23,3 +23,10 @@ grasp-force, torque or collision validation.
 
 Original Mechanism Studio code, story and music remain under the root MIT
 license. This notice does not relicense the third-party model.
+
+## Upstream files fetched on demand
+
+The upstream STL meshes are not stored in Git. `npm run fetch:sources`
+downloads them from the pinned upstream commit recorded in `provenance.json` and
+accepts them only if the SHA-256 matches; `npm test` does this first. The pinned
+list is [`scripts/upstream-sources.json`](../../../scripts/upstream-sources.json).

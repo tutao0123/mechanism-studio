@@ -9,7 +9,7 @@ Reuse [the runtime map](runtime-modules.md). Current assets/reports determine co
 | Turbofan | Two-spool structure/speeds and region observation | Authored teaching model and qualitative process, not performance simulation |
 | Quadruped | Foot path → analytic IK → FK, limits/diagonal phase | Fixed-body 8DOF; no balance/contact dynamics/hardware control |
 | KFL08 | Retained STEP/terms, import, limited identity and display derivative | Fragment count/rest/explosion are not native engineering semantics |
-| Galileo 2 | XCAF definitions/occurrences, real parents/matrices, repeat screws, owned assembly solids, linked selection and mesh-recovery reports | No mates/exact measurement/removal proof; same-source stable identity is not permanent cross-revision identity |
+| Galileo 2 (removed 2026-10-20; Git history) | XCAF definitions/occurrences, real parents/matrices, repeat screws, owned assembly solids, linked selection and mesh-recovery reports | No mates/exact measurement/removal proof; same-source stable identity is not permanent cross-revision identity |
 | SO-ARM 102 | Sourced link identity, music-led separation, near retained names and group fade | Eight merged links, not individually editable fasteners/native CAD |
 | Kinetic robot | Actual URDF joint origins/axes/mimic, working-pose gate and deliberate macro/whole cuts | Kinematics/editorial presentation, no collision/dynamics/hardware-safe path certification |
 | WOLF | Native-metre source, repeated definitions/occurrences and analytic/source-triangulated distinction | Display separation; source triangles remain nonanalytic |
