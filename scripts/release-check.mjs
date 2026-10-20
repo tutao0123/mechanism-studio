@@ -25,10 +25,7 @@ export function inspectReleaseFile(name, bytes, { mode = '100644' } = {}) {
   if (mode === '120000' || mode === '160000') fail('symbolic link or submodule is not allowed in the release list');
   if (bytes.length > releaseLimits.fileBytes) fail('file exceeds the 95 MiB release budget');
   const extension = extname(name).toLowerCase();
-  // Reviewed, pinned Anthrobotics research source; retain its CC BY-SA header
-  // and inspect it as text. This does not allow arbitrary new binary formats.
-  const reviewedBearingSource = name === 'examples/wolf-actuator/tour/research-v2/bearing-generator.scad';
-  const isText = reviewedBearingSource || textExtensions.has(extension) || /(?:^|\/)(?:LICENSE(?:\.[^/]*)?|NOTICE|\.gitignore|\.gitattributes|\.npmrc|\.env\.example)$/.test(name);
+  const isText = textExtensions.has(extension) || /(?:^|\/)(?:LICENSE(?:\.[^/]*)?|NOTICE|\.gitignore|\.gitattributes|\.npmrc|\.env\.example)$/.test(name);
   // Animated GIFs are reviewed only as README previews in docs/media, where
   // GitHub renders them inline; MP4 deliveries stay local (blocked above).
   const readmeAnimation = extension === '.gif' && name.startsWith('docs/media/');

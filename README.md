@@ -4,7 +4,7 @@
 
 Mechanism Studio is a project-local AI authoring skill and a working browser toolkit for mechanical explanation. It connects source-aware part identities, independent motion and display layers, exploded views, guided cameras, close annotations and synchronized sound. The default presentation is white surfaces with fine dark edges and restrained colour cues.
 
-**Status: working research prototype, version 0.4.0.** Thirteen implemented experiences range from simplified teaching mechanisms to real STEP assemblies and source-backed robot descriptions. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
+**Status: working research prototype, version 0.4.0.** Ten implemented experiences range from simplified teaching mechanisms to source-backed robot descriptions. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
 
 **New robot studies:** [Allegro dexterous hand](examples/allegro-hand/README.md)
 and [Robotiq 2F-85 gripper](examples/robotiq-gripper/README.md). Each has a
@@ -20,9 +20,7 @@ MuJoCo Menagerie. Source and adapted geometry retain their model-specific
 [BSD-2-Clause notices](THIRD_PARTY_NOTICES.md). The [integration report](docs/robot-studies-release.md)
 covers their compatibility with the shared study server after the latest upstream sync.*
 
-**Latest: [WOLF complete teardown, v4](examples/wolf-actuator/tour-v4/README.md).** One 245-leaf assembly moves from the whole actuator into gear-pair, magnet and bearing close-ups, then fully reassembles. Its 85.7-second tour demonstrates the new [Mating Close-up module](.agents/skills/mechanism-studio/references/modules/mating-closeup.md); a portable [delivery record](examples/wolf-actuator/tour-v4/delivery.json) makes the source and output fingerprints inspectable. [Run it locally](#try-it-locally).
-
-[Watch the complete WOLF film on X](https://x.com/tutao0123/status/2111833346468938203). WOLF source and adapted visuals: Anthrobotics and contributors, CC BY-SA 4.0; original score: Mechanism Studio.
+**Latest: [A gearbox, revealed](examples/gearbox/README.md).** The original five-speed teaching gearbox below has three editions on one local server: the default 40-second white atlas (`/`), an opt-in blueprint (`/blueprint/`) and an optional 24-second [cinematic edition](examples/gearbox/cinematic/README.md) (`/cinematic/`). [Run it locally](#try-it-locally).
 
 ![Original five-speed teaching gearbox: the case lifts, shafts and synchronizers separate, and the power path moves through first and second gear](docs/media/gearbox-readme.gif)
 
@@ -30,7 +28,7 @@ covers their compatibility with the shared study server after the latest upstrea
 
 ![The same gearbox moment in the default white atlas edition and the blueprint edition, with indexed spec labels and a measured dimension](docs/media/gearbox-editions.jpg)
 
-*The same moment in two editions: the default white atlas (top) and an opt-in [blueprint](examples/gearbox/README.md#two-editions) (bottom), drawn white-on-blue with centre lines on the shaft axes; the full blueprint page adds a title block and one stamp. Labels carry an index and a spec line computed from the model, and dimensions appear only while their parts are assembled. The style ideas come from the [lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) library (MIT) and are implemented independently.*
+*The same moment in two editions: the default white atlas (top) and an opt-in [blueprint](examples/gearbox/README.md#40-second-editions) (bottom), drawn white-on-blue with centre lines on the shaft axes; the full blueprint page adds a title block and one stamp. Labels carry an index and a spec line computed from the model, and dimensions appear only while their parts are assembled. The style ideas come from the [lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) library (MIT) and are implemented independently.*
 
 ![Unitree G1 source bodies separated in the English humanoid showcase](docs/media/humanoid-g1-preview.jpg)
 
@@ -52,7 +50,7 @@ npm run build:audio   # once: renders every original study score and checks its 
 npm run preview
 ```
 
-Open **http://127.0.0.1:4179/**. The included viewing assets run locally with no Blender installation, MCP connection or speech credentials. Dependencies are served from the local installation. Upstream CAD, mesh and manual files are not stored in Git: `npm run fetch:sources` downloads each from its pinned upstream commit and checks its SHA-256. Only tests, the CAD audit and model rebuilds need them. Study music is not stored in Git: `npm run build:audio` synthesizes all of it in seconds, and without it every study plays silently. The per-study score commands below rebuild a single score.
+Open **http://127.0.0.1:4179/**. The included viewing assets run locally with no Blender installation, MCP connection or speech credentials. Dependencies are served from the local installation. Upstream robot mesh files are not stored in Git: `npm run fetch:sources` downloads each from its pinned upstream commit and checks its SHA-256. Only tests and model rebuilds need them. Study music is not stored in Git: `npm run build:audio` synthesizes all of it in seconds, and without it every study plays silently. The per-study score commands below rebuild a single score.
 
 For the new dexterous-hand study, generate its local score and start its server:
 
@@ -90,19 +88,20 @@ For the new humanoid, run `node examples/humanoid/serve.mjs` and open
 reverse-order reassembly, gentle original music and sparse CC0 effects. The
 source rest pose is preserved; no gait or dynamic balancing is simulated.
 
-For the latest WOLF actuator tour, build its shared score once on a fresh clone:
+For the gearbox, build its two scores once on a fresh clone:
 
 ```sh
-node examples/wolf-actuator/tour-v2/audio/build.mjs
-node examples/wolf-actuator/serve.mjs
+node examples/gearbox/audio/build.mjs
+node examples/gearbox/cinematic/audio/build.mjs
+node examples/gearbox/serve.mjs
 ```
 
-Open **http://127.0.0.1:4181/tour-v4/** for the 85.714-second whole-to-detail
-tour: gear pairing and spin/orbit cues, magnet and bearing close-ups, then full
-reassembly. The WOLF server defaults to port 4181; use its printed URL if `PORT`
-is overridden. The score is generated locally from deterministic source; the
-long WAV and recorded MP4 are excluded from Git. See the [v4 guide](examples/wolf-actuator/tour-v4/README.md)
-for the 85.733-second encoded delivery and its recorded verification.
+Open **http://127.0.0.1:4183/?clean=1** for the 40-second atlas study,
+**http://127.0.0.1:4183/blueprint/?clean=1** for the blueprint edition or
+**http://127.0.0.1:4183/cinematic/** for the 24-second cinematic edition. The
+scores are generated locally from deterministic source; WAVs and rendered MP4s
+are excluded from Git. See the [gearbox guide](examples/gearbox/README.md) for
+rebuild commands, evidence and limits.
 
 ## Examples
 
@@ -114,8 +113,6 @@ for the 85.733-second encoded delivery and its recorded verification.
 | [Unitree G1 humanoid](examples/humanoid/README.md) | Full-body expansion, close shoulder/wrist and knee/ankle views, restoration, music and action cues; 35.56 seconds | 30 MJCF body identities, 35 source visual occurrences, 29 retained joint declarations; static source pose, no per-screw internals |
 | [SO-ARM 102 kinetic cut](EXAMPLE_ROBOT/kinetic/README.md) | Source-backed jaw and arm movement, cascading explosion, two readable details, musical reassembly; 25.7 seconds | Five revolute and two prismatic URDF joints; eight merged link meshes |
 | [SO-ARM 102 assembly study](EXAMPLE_ROBOT/README.md) | Near-part names, restrained colour changes, original music; 34.3 seconds | Link-level visual separation; no per-fastener identity |
-| [WOLF actuator: complete v4 tour](examples/wolf-actuator/tour-v4/README.md) | Whole 245-leaf actuator → source-bound tooth pairing and spin/orbit cues → magnet and roller close-ups → full reassembly; 85.714 seconds | Ideal source-based gear/bearing kinematics; phase highlights are explanatory, not solved contact. CAD-derived −31.5:1 differs from upstream 34:1; older whole/motor/bearing cuts remain |
-| [KFL08 bearing assembly](examples/step-assembly/README.md) | Retained STEP, import reports, display fragments and restoration | Historical importer trial: 22 source leaf instances versus 35 display fragments; incomplete identity mapping |
 | [Five-pin lock](prototype-3d/README.md) | Key comparison, shear line, insertion, turning and explosion | Authored teaching geometry; ideal pin-stack alignment |
 | [Inline-four engine](examples/inline-four/README.md) | Crank, rods, pistons, valve timing, intake spray, ignition and exhaust | Prescribed kinematics and explanatory process effects |
 | [Two-spool turbofan](examples/turbofan/README.md) | Independent shafts, rotor/stator groups, core/bypass flow and combustion cues | Prescribed spool speeds; no thrust or thermodynamic solution |
@@ -160,16 +157,6 @@ show body/link structure; it cannot reveal unmodeled screws or actuator internal
 Deeper component examples need their own sufficiently detailed source and clear
 provenance rather than invented internals attributed to an existing robot.
 
-The [WOLF v4 tour](examples/wolf-actuator/tour-v4/README.md) demonstrates deeper
-source evidence within one assembly and one music clock. Its paired-tooth
-highlights follow retained source geometry, and short arcs distinguish gear
-spin from the planet center's orbit. It preserves the existing camera and music
-from the earlier full tour. The [motor detail edition](examples/wolf-actuator/detail/README.md)
-and other older cuts remain available on the same server. These are editions of
-the existing WOLF example, not additional independently modeled assemblies or
-representations of Unitree G1's actuator design. They provide no general CAD
-mate/contact solver or validated force model.
-
 ## How it is built
 
 ```text
@@ -182,7 +169,7 @@ shared/voice/                    Optional speech API; existing lesson identity a
 shared/appearance/               Deterministic colour cues and independent material ownership
 shared/study/                    Music transport, annotations, camera direction and capture
 EXAMPLE_ROBOT/                   Source-based robot studies and kinetic adapter
-examples/                       Teaching mechanisms and real CAD specimens
+examples/                       Teaching mechanisms and source-based robot studies
 prototype-3d/                    Original 3D lock and compatibility entry points
 showcase/                        Retained English visual/narration tour adapters
 tools/                          CAD import, video encoding and restricted Blender MCP bridge
@@ -191,7 +178,7 @@ docs/                           Architecture, module guide, provenance and roadm
 
 Mechanism adapters own working poses and readouts. The viewer applies observation changes on a separate display layer, preserving source identities and rest transforms. Models, cameras, captions and music use one explicit time arrangement. Same-scene part names accumulate near settled parts, use short leaders and fade out together on a scene change.
 
-Original teaching assets include Blender Python builders and GLB exports. Local `.blend` exports are excluded because they embed machine-specific paths; regenerate them with the builders when needed. STEP examples retain original source and per-asset notices. The optional Blender MCP bridge has only four lock-specific operations; it is not a general CAD backend and is not connected automatically. Details: [architecture](docs/architecture.md), [module APIs](docs/modules.md), [CAD tools](tools/cad/README.md).
+Original teaching assets include Blender Python builders and GLB exports. Local `.blend` exports are excluded because they embed machine-specific paths; regenerate them with the builders when needed. Third-party examples retain their source records and per-asset notices. The optional Blender MCP bridge has only four lock-specific operations; it is not a general CAD backend and is not connected automatically. Details: [architecture](docs/architecture.md), [module APIs](docs/modules.md), [CAD tools](tools/cad/README.md).
 
 ## Verify and rebuild
 
@@ -200,7 +187,7 @@ npm test
 npm run release:check
 ```
 
-Tests exercise mechanical invariants, source mapping, motion ownership, real GLB data, framing, label layout, audio identity and preview routing. Optional local Blender/MP3 delivery, FFmpeg integration and ignored XCAF-cache checks explain their skips when the required local material is absent. CI checks a clean checkout rather than relying on a local Blender or CAD installation.
+Tests exercise mechanical invariants, source mapping, motion ownership, real GLB data, framing, label layout, audio identity and preview routing. Optional local Blender/MP3 delivery and FFmpeg integration checks explain their skips when the required local material is absent. CI checks a clean checkout rather than relying on a local Blender or CAD installation.
 
 Additional commands:
 
@@ -208,24 +195,24 @@ Additional commands:
 # Requires locally regenerated narration and FFmpeg/FFprobe; no service call.
 npm run verify:audio
 
-# Download the pinned upstream CAD/mesh/manual files (npm test does this first).
+# Download the pinned upstream robot meshes (npm test does this first).
 npm run fetch:sources
 
-# Audit the retained source and derived display assets.
-npm run audit:cad -- --example examples/wolf-actuator
+# Import and audit a STEP package you prepared in examples/<name>/
+# (source/assembly.step and source/provenance.json). Importing requires the
+# documented project-local OCCT runtime; no real STEP example is included.
+npm run import:cad -- --example examples/<name>
+npm run audit:cad -- --example examples/<name>
 
-# Optional CAD rebuilding requires the documented project-local OCCT runtime.
-npm run import:cad -- --example examples/wolf-actuator
-
-# Verify the v4 source/evidence fingerprints without requiring local exports.
-npm run check:delivery -- --manifest examples/wolf-actuator/tour-v4/delivery.json
+# Verify a delivery record's source/evidence fingerprints without requiring local exports.
+npm run check:delivery -- --manifest examples/allegro-hand/delivery.json
 ```
 
-The [delivery checker](.agents/skills/mechanism-studio/references/delivery-evidence.md) detects changed recorded files and distinguishes missing local exports from missing repository assets. Add `--require-local` to require the authoring-machine film and raw reports. A fresh clone can verify bundled inputs while reporting ignored local evidence as unavailable. A `delivery-drift.json` beside a record documents reviewed later changes to its inputs, each with its old and new hash and evidence; anything undocumented still fails. File integrity does not establish engineering correctness, confirm a review happened, or prove publication; the record keeps those claims separate.
+The [delivery checker](.agents/skills/mechanism-studio/references/delivery-evidence.md) detects changed recorded files and distinguishes missing local exports from missing repository assets. Add `--require-local` to require the authoring machine's local media and raw reports. A fresh clone can verify bundled inputs while reporting ignored local evidence as unavailable. A `delivery-drift.json` beside a record documents reviewed later changes to its inputs, each with its old and new hash and evidence; anything undocumented still fails. File integrity does not establish engineering correctness, confirm a review happened, or prove publication; the record keeps those claims separate.
 
 See [XCAF setup](tools/cad/README-xcaf.md), [video encoding](tools/video/README.md) and [voice generation](shared/voice/README.md). Viewing examples never requires speech keys. New optional narration uses a provider-neutral Node/CLI interface with an explicit speech-capable model, matching voice and trusted endpoint; OpenRouter uses its dedicated speech API. Existing Doubao lessons are retained without compulsory migration. No credentials or generated narration are bundled, and preview/tests do not make paid calls.
 
-The scores use original synthesis code. The humanoid adds five unchanged **Kenney CC0** effects, mixed quietly against specific separation, focus and seating events; previous robot/WOLF scores retain their original synthesis. [Sound-library research](docs/sound-libraries.md) records included and unbundled options and their different licenses. Music and effects follow the same seekable animation clock. The npm package remains marked private to prevent accidental npm publication; this does not restrict cloning or using the GitHub repository.
+The scores use original synthesis code. The humanoid adds five unchanged **Kenney CC0** effects, mixed quietly against specific separation, focus and seating events; previous robot scores retain their original synthesis. [Sound-library research](docs/sound-libraries.md) records included and unbundled options and their different licenses. Music and effects follow the same seekable animation clock. The npm package remains marked private to prevent accidental npm publication; this does not restrict cloning or using the GitHub repository.
 
 ## Current limits and next work
 
@@ -235,7 +222,7 @@ Next milestones are source-bound B-rep measurement with known-answer fixtures; e
 
 ## License, sources and contributions
 
-**Original Mechanism Studio code, skill instructions and documentation are MIT-licensed**; see [LICENSE](LICENSE). Third-party code and model assets retain their own licenses. Allegro and Robotiq model data and derived visuals retain their model-specific BSD-2-Clause notices; Unitree G1 retains BSD-3-Clause and Kenney effects retain CC0. SO-ARM 102 is CC BY 4.0, KFL08 is CC BY 3.0 and WOLF is CC BY-SA 4.0. No GPL model is included. The repository's MIT license does not replace those terms.
+**Original Mechanism Studio code, skill instructions and documentation are MIT-licensed**; see [LICENSE](LICENSE). Third-party code and model assets retain their own licenses. Allegro and Robotiq model data and derived visuals retain their model-specific BSD-2-Clause notices; Unitree G1 retains BSD-3-Clause and Kenney effects retain CC0. SO-ARM 102 is CC BY 4.0. No GPL model is included. The repository's MIT license does not replace those terms.
 
 Read [licensing and the file-scope map](docs/licensing.md) and [third-party notices](THIRD_PARTY_NOTICES.md) before redistributing example assets or recordings. The project began with workflow ideas adapted from Anatomy; that history and the retained MIT notice are recorded in [origins](docs/origins.md). Upstream model authors are credited separately from Mechanism Studio's implementation.
 

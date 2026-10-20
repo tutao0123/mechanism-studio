@@ -76,42 +76,23 @@ affected input/report/output fingerprints through [delivery evidence](delivery-e
 
 A sourced STEP explosion targets actual occurrences without changing placement. A text-designed gearbox uses authored dimensions and IDs. A requested 12-second image showcase honors that duration and discloses unknown internals. None adds automatic reconstruction, mate solving, or collision checking.
 
-## Worked handoff: WOLF sun and one planet
+## Worked handoff: gearbox records
 
-The [v4 plan](../../../../examples/wolf-actuator/tour-v4/plan.json) and
-[delivery record](../../../../examples/wolf-actuator/tour-v4/delivery.json) bind a
-real example of these contracts. The observation question is: **how does the
-selected planet spin about its own axis while its center orbits the sun?**
+The [gearbox](../../../../examples/gearbox/README.md) keeps these shared records in
+`examples/gearbox/planning/`: `brief`, `mechanism-plan`, `explosion-plan`,
+`camera-plan`, `appearance-plan`, `annotation-plan` and `timeline`. Each declares
+stage `bound` and the same `geometryRevision`. `planning/build-plans.mjs`
+regenerates them from the example adapters (`kinematics.mjs`, `story.mjs`,
+`framing.mjs`, `annotations.mjs`), which own what the page executes. They are an
+authored teaching model's handoffs, not native CAD identity.
 
-Shared binding for this example:
-
-```json
-{
-  "geometryRevision": "wolf-b352183e1bd0-2793c41488d0-xcaf-1",
-  "sunOccurrence": "occ-b352183e1bd0-root-953098-767",
-  "planetOccurrence": "occ-b352183e1bd0-root-953098-774",
-  "axisSpace": "world",
-  "axis": [0, -1, 0],
-  "distanceUnit": "metre",
-  "timeDomain": "seconds derived from the existing 112 BPM, 160-beat story"
-}
-```
-
-These IDs belong to this source revision; other assemblies resolve their own.
-This snippet is an explanatory handoff, not an executable JSON schema.
-
-| Owner | Consumes → returns | Concrete implementation / required recovery |
-| --- | --- | --- |
-| Mechanism adapter | Source tooth-count evidence and input phase → sun spin, planet spin and orbit | `tour-v2/gearing.mjs` and `kinematics.mjs`; owns the signed motion, independent of display offsets |
-| Assembly & Explode | Existing groups and pose ownership → retained whole-to-detail separation | Reuse the existing tour offsets; the selected meshing pair remains in its supported relationship, with no extra extraction or scaling |
-| Mating Close-up | Actual pair, measured axial tooth phase and adapter state → tooth-region weights and signed spin/orbit marks | `tour-v4/tooth-phase.mjs` and `direction-cues.mjs`; fade in at beats 28–29, out at 35–36, hide at rest and follow reversal |
-| Camera Direction | Actual pair, inherited motion envelope and display context → retained approach/detail/return poses | `tour-v3/framing.mjs`; world Y=0.004 m is an ideal pitch-region observation anchor, not a solved contact point |
-| Materials & Lighting | Current appearance/selection and cue weights → occurrence-owned vertex colors and neutral rotation arcs | `tour-v4/pair-layer.mjs`; preserve source mesh coordinates and restore neutral colors when disabled or outside the passage |
-| Orchestrator | All adapters and existing score → one integrated story and scoped evidence | `tour-v4/app.mjs` supplies `createPresentationLayer`; the shared study calls it on the common clock before drawing |
-
-`validated` here is scoped to the retained source binding, phase/direction cues,
-inherited kinematics and the recorded delivery checks. The measured CAD ratio
-and upstream specification still disagree; tooth contact, stress and collision
-response remain uncomputed. Those limits travel with the handoff, even after
-the video is exported. A new camera or tooth mask invalidates the affected
-evidence rather than inheriting this example's status by copying its plan.
+Its synchronizer close-up (the 3–4 sleeve and blocker ring, beats 32–44) is the
+nearest retained example of close-up motion bound to tooth phase: the mechanism
+adapter solves a small speed adjustment so sleeve and dog teeth align before each
+engagement, and the timeline records those alignments. It has no
+`mating-closeup-plan` and does not implement the full
+[Mating Close-up](modules/mating-closeup.md) contract. The earlier reference
+implementation of that contract, the WOLF actuator's tour-v4 sun–planet handoff
+(`examples/wolf-actuator/tour-v4/`, including `pair-layer.mjs`, `tooth-phase.mjs`
+and `direction-cues.mjs`), was removed on 2026-10-20 and remains in Git history
+(last present at commit `10f724f`).

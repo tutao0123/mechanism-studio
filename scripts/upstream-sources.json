@@ -372,24 +372,6 @@
       "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/62ab00f2bc44f6f20c1c9b7a13f3fb1dd41a4e35/robotiq_2f85_v4/assets/tongue.stl",
       "bytes": 383384,
       "sha256": "2bd5df8a2132542703d40d94be36a990bbc3eabe070283232871147081348d52"
-    },
-    {
-      "path": "examples/step-assembly/source/kfl08.step",
-      "url": "https://raw.githubusercontent.com/FreeCAD/FreeCAD-library/f5ca01cdcaa2f69b9295a6382719c2d90628780c/Mechanical%20Parts/Mountings/KFL08/KFL08.step",
-      "bytes": 1187725,
-      "sha256": "938d5e7e596d5e9586e7b2d7cef89da3003d3cf734dbfa5ab39f6e790319c090"
-    },
-    {
-      "path": "examples/wolf-actuator/source/WOLF-Assembly-Guide-V1.1.pdf",
-      "url": "https://raw.githubusercontent.com/Anthrobotics/wolf-actuator/776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea/WOLF%20Actuator%20Assembly%20and%20Usage%20Guide%20%5BV1.1%5D.pdf",
-      "bytes": 8303311,
-      "sha256": "fb1aea34edd40510d8bb681856b0035ac25a1c5782fff4e04d53003e41ffe58a"
-    },
-    {
-      "path": "examples/wolf-actuator/source/assembly.step",
-      "url": "https://raw.githubusercontent.com/Anthrobotics/wolf-actuator/776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea/CAD/wolf-actuator-assembly.step",
-      "bytes": 88565658,
-      "sha256": "b352183e1bd0d55c403a6f406c3b2886a3b1b374b47cf32bcb69d4277d252e35"
     }
   ]
 }

@@ -14,14 +14,11 @@ was checked on 2026-10-18.
 | Unitree Robotics / MuJoCo Menagerie Unitree G1 | Unmodified `examples/humanoid/source/unitree_g1/` XML/license/notes, with STL meshes fetched from the pinned upstream commit; derived `assets/` geometry/identity data and G1 visual renders, including `docs/media/humanoid-g1-preview.jpg` | BSD-3-Clause, **model-directory** license, copyright 2016–2023 Unitree Robotics; not the Menagerie repository's general Apache license |
 | Kenney Interface Sounds / Calinou WAV packaging | Five unchanged WAVs in `examples/humanoid/audio/sfx/`; quiet authored uses in `humanoid-loop.wav` | CC0-1.0; source/license/hash records accompany the files |
 | Robonine SO-ARM 102 | Selected upstream documentation, simulation URDF/Xacro/metadata under `EXAMPLE_ROBOT/source/`, with STL meshes fetched from the pinned upstream commit; derived `EXAMPLE_ROBOT/assets/` geometry/identity data and robot renders, including the README image | CC BY 4.0 |
-| hasecilu KFL08 | `examples/step-assembly/source/kfl08.step` (fetched from the pinned upstream commit) and derived `assets/` | CC BY 3.0 |
-| Anthrobotics / WOLF contributors | Upstream license and README in `examples/wolf-actuator/source/` (the STEP and assembly guide are fetched from the pinned upstream commit), derived `assets/` and adapted WOLF visual presentations/renders | CC BY-SA 4.0 |
 
 Original reusable software, original lesson text and separately code-synthesized
 music remain MIT. License notices for source geometry continue to apply when
-that geometry appears in a screenshot, animation or exported video. The WOLF
-visual derivative uses CC BY-SA 4.0, even when its independent music and runtime
-are also available under MIT. Source authors do not endorse this project.
+that geometry appears in a screenshot, animation or exported video. Source
+authors do not endorse this project.
 
 ## Unitree G1 visual source and derivatives
 
@@ -158,19 +155,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-## occt-import-js and Open CASCADE
-
-[occt-import-js 0.0.23](https://github.com/kovacsv/occt-import-js/tree/0.0.23)
-is locked by npm and licensed
-[LGPL-2.1](https://github.com/kovacsv/occt-import-js/blob/0.0.23/LICENSE.md).
-The unmodified library/WASM is used by local STEP display-import tools.
-It is installed by npm, not vendored in this Git source release. Viewer pages
-load prebuilt GLB rather than embedding the OCCT WASM. Preserve upstream license
-and corresponding-source/relinking rights if distributing a modified or bundled
-library; a source repository license does not replace those obligations.
-Underlying [Open CASCADE Technology](https://dev.opencascade.org/resources/licensing)
-has its own LGPL/exception licensing; the package's pinned sources and build
-instructions remain the authority for its dependencies.
+## Open CASCADE XCAF runtime
 
 The optional native XCAF workflow installs `cadquery-ocp==7.8.1.1.post1`
 ([OCP](https://github.com/CadQuery/OCP), Apache-2.0), its Open CASCADE dependencies,
@@ -178,7 +163,9 @@ and `vtk==9.3.1` ([VTK BSD license](https://vtk.org/about/#license)) under ignor
 `.tools/cad-python`. No wheel, DLL, installed runtime or modified upstream code
 is packaged. See `tools/cad/requirements-xcaf.txt` and
 `tools/cad/README-xcaf.md`. Installing a runtime is distinct from licensing
-the project-written import adapter.
+the project-written import adapter. Underlying
+[Open CASCADE Technology](https://dev.opencascade.org/resources/licensing)
+has its own LGPL/exception licensing.
 
 ## Blender
 
@@ -211,37 +198,6 @@ Musopen recording or other upstream soundtrack is redistributed. Upstream NOTICE
 contains broader design/music lineage for the original repository; retaining it
 does not mean that its preview soundtrack is used here.
 
-## KFL08
-
-**KFL08 by hasecilu**, from
-[FreeCAD-library revision f5ca01c](https://github.com/FreeCAD/FreeCAD-library/tree/f5ca01cdcaa2f69b9295a6382719c2d90628780c/Mechanical%20Parts/Mountings/KFL08).
-The [pinned README](https://github.com/FreeCAD/FreeCAD-library/blob/f5ca01cdcaa2f69b9295a6382719c2d90628780c/README.md#license)
-assigns all part assets CC BY 3.0 with attribution to their respective authors.
-See [retained notice](examples/step-assembly/source/LICENSE.md) and
-[provenance](examples/step-assembly/source/provenance.json).
-The source STEP is byte-identical. Changes are tessellation, fragment recentering
-and millimetre/Z-up to metre/Y-up display conversion. The source and derived
-model retain the creator/source/license attribution; they are not MIT assets.
-
-## WOLF V1.2 actuator
-
-**Anthrobotics and WOLF actuator contributors**, revision
-`776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea`.
-The upstream README and the complete
-[CC BY-SA 4.0 license](examples/wolf-actuator/source/LICENSE) are retained with
-[provenance](examples/wolf-actuator/source/provenance.json) and
-[change/attribution notice](examples/wolf-actuator/source/NOTICE.md).
-Retain upstream acknowledgement of **Robin Fröjd's RFX gearbox**. The original STEP
-and assembly guide are not redistributed here; `npm run fetch:sources` downloads them from
-the pinned upstream commit and verifies their SHA-256.
-
-Mechanism Studio creates the triangulated display derivative with original
-assembly identity/placements, plus authored explosion, camera, annotation and
-colour presentation. The original source, adapted model assets and WOLF visual
-presentation/renders retain **CC BY-SA 4.0**. Independently reusable runtime and
-original synthesized music remain MIT. No source-author endorsement or verified
-physical dismantling sequence is implied.
-
 ## Optional Doubao / Volcengine narration
 
 Generated narration is service output, distinct from original MIT lesson text
@@ -257,17 +213,6 @@ rights before generating or redistributing narration. No credentials or account
 configuration is published. Code-synthesized music is original MIT work;
 its generated WAVs are not in Git and are rebuilt locally from the included
 scripts with `npm run build:audio`.
-
-## WOLF modular-bearing motion evidence
-
-`examples/wolf-actuator/tour/research-v2/bearing-generator.scad` and
-`bearing-UPSTREAM-README.md` retain the Anthrobotics modular-bearing project’s
-CC BY-SA 4.0 terms, pinned at revision
-`2b63192188d81eea663c04e5a2b98c44d60186f2`. Source URLs and hashes are recorded in
-`bearing-source.json`; the corresponding license is retained in
-`examples/wolf-actuator/source/LICENSE`. Source-derived geometric observations
-and rendered WOLF media retain CC BY-SA 4.0; original motion adapters, analysis
-code and music remain MIT. See the motion tour’s evidence notes for assumptions.
 
 ## Allegro and Robotiq source robot descriptions
 
@@ -296,8 +241,7 @@ SOLIDWORKS, Creo, Fusion, VS Code and GitHub names identify appearance reference
 They do not imply affiliation, bundled commercial software or native file
 compatibility. Official screenshots, CAD manuals/reference render captures used
 only for private appearance research are excluded; original reference URLs and
-written observations may remain. Separately licensed open source assembly
-manuals explicitly listed above are retained with their source licenses.
+written observations may remain.
 
 ### Design ideas from lemo-opuscar
 

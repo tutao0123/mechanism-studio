@@ -21,11 +21,12 @@ For text/image work, an authored teaching model can supply explicitly assumed in
 ## Current examples and their limits
 
 - The Unitree G1 example retains thirty MJCF bodies. Its source-body explosion explains the body chains; it is not an internal actuator teardown. To deepen it, first locate component-level source data that actually belongs to the chosen G1 component, or present a separate, clearly identified actuator study.
-- WOLF retains **245 actual imported STEP leaf occurrences**, with nested bearing/motor assemblies, twelve named planets and two internal rings. It is a stronger starting point for a sourced local component study. Some bearing definitions are source-triangulated and some names remain generic, including `Part N`; those facts do not become exact analytic solids or identified hardware through rendering. The upstream BOM lists fasteners, but their listing alone does not establish a matching modeled occurrence. Audit the actual source bindings before promising screw-level disassembly.
+- The original five-speed gearbox is an authored teaching model: 124 parts in 15 nested assemblies, three levels deep (gearbox → mainshaft → synchronizer → hub, sleeve, rings, keys). Its internals are an explicitly assumed teaching design with declared dimensions, not source evidence about any production gearbox.
+- No STEP assembly is currently included. For a sourced component study, supply a licensed STEP package with nested subassemblies and audit its actual source bindings before promising screw-level disassembly. A BOM listing of fasteners alone does not establish a matching modeled occurrence. Source-triangulated definitions and generic names such as `Part N` do not become exact analytic solids or identified hardware through rendering.
 
-For a WOLF bearing study, the retained scene index contains two separately placed bearing assemblies, A and B. Each contains **70 source leaf occurrences**: one explicitly named `outer-ring-A` or `outer-ring-B`, plus **69 generically named `Part N`** beneath its `bearing-complete` child. Choose one actual assembly path and carry all nested identities; repeated names across A/B do not identify the same occurrence. “70 source components” describes the supplied hierarchy, not a certified bill of manufactured parts.
+When a source contains separately placed copies of one subassembly, such as two bearings, choose one actual assembly path and carry all nested identities; repeated names across copies do not identify the same occurrence. A count of source leaf occurrences describes the supplied hierarchy, not a certified bill of manufactured parts.
 
-Do not rename those 69 generic leaves as balls, rollers, cages, seals or inner races merely because a close-up resembles one. A fine breakdown may show their real shapes and source names, and may focus on one existing occurrence, while its precise function remains unknown. Keep the authored observation offsets distinct from a physically feasible bearing disassembly. Do not add missing fasteners or replace source geometry with a cleaner idealized bearing unless a separately identified teaching model is explicitly requested.
+Do not rename generic leaves as balls, rollers, cages, seals or inner races merely because a close-up resembles one. A fine breakdown may show their real shapes and source names, and may focus on one existing occurrence, while its precise function remains unknown. Keep the authored observation offsets distinct from a physically feasible bearing disassembly. Do not add missing fasteners or replace source geometry with a cleaner idealized bearing unless a separately identified teaching model is explicitly requested.
 
 Reuse the existing [source-aware CAD workflow](cad-workflow.md) and asset/license notices. A second model or internal assembly needs its own source revision, permitted redistribution and clear relationship to the first; the project MIT license does not replace its terms.
 
@@ -46,7 +47,7 @@ For nested movement, form the intended displayed world offset for each target, s
 
 ## Useful requests and acceptance checks
 
-“Use the retained WOLF source occurrences to explain one bearing subassembly. Show it in the actuator first, then separate only the children that actually exist, retain source names where identification is unknown, and restore both levels.”
+“Use the supplied STEP source occurrences to explain one bearing subassembly. Show it in the whole assembly first, then separate only the children that actually exist, retain source names where identification is unknown, and restore both levels.”
 
 “Make a G1 shoulder component study at the finest depth supported by the supplied source. Inventory what geometry is available; keep unsupported internals unknown. If component CAD is supplied, bind it with its own provenance before animating it.”
 

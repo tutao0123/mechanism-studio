@@ -38,9 +38,6 @@ shots/
 # Upstream CAD, mesh and manual files. `npm run fetch:sources` downloads each
 # from its pinned upstream commit (scripts/upstream-sources.json) and checks its
 # SHA-256. Licenses, notices, model descriptions and provenance stay in Git.
-examples/wolf-actuator/source/*.step
-examples/wolf-actuator/source/*.pdf
-examples/step-assembly/source/*.step
 EXAMPLE_ROBOT/source/**/*.[sS][tT][lL]
 examples/humanoid/source/**/*.[sS][tT][lL]
 examples/allegro-hand/source/**/*.[sS][tT][lL]
@@ -55,11 +52,6 @@ examples/gearbox/audio/gearbox-loop.wav
 examples/gearbox/cinematic/audio/gearbox-cinematic-loop.wav
 examples/humanoid/audio/humanoid-loop.wav
 examples/robotiq-gripper/audio/showcase-loop.wav
-examples/wolf-actuator/audio/wolf-loop.wav
-examples/wolf-actuator/bearing/audio/bearing-loop.wav
-examples/wolf-actuator/detail/audio/motor-loop.wav
-examples/wolf-actuator/tour/audio/tour-loop.wav
-examples/wolf-actuator/tour-v2/audio/tour-loop.wav
 # Per-machine editor state, credential material and Python environments.
 .vscode/
 .idea/

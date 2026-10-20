@@ -16,7 +16,7 @@ mechanical/source evidence coupled with a reusable presentation workflow.
 | Authoring | One main skill, four specialist contracts, text/image/CAD intake and explicit Inspect/Explain/Showcase routes |
 | Shared code | Seven runtime libraries with example-specific mechanism models and clear motion/display ownership |
 | Teaching | Authored lock, inline-four, turbofan and quadruped; process effects tied to model phase |
-| Engineering sources | Licensed STEP/URDF specimens, pinned bytes, definitions/occurrences, placements and source-bound selection |
+| Engineering sources | Licensed URDF/MJCF specimens with pinned bytes and source-bound selection; STEP definition/occurrence and placement tooling for user-prepared packages |
 | Presentation | Original code music, source joint motion in the robot adapter, near-part retained names, deliberate macro/whole cuts, loop restoration |
 | Reuse | MIT original code, separate model licensing, documented source packages and public-file checks |
 

@@ -15,4 +15,4 @@
 - 公开展示默认英文控件、字幕和标注。面向 X 的短片优先无旁白，配乐按需采用舒缓的原创代码音乐和少量动作音效。新旁白采用 [可选语音接口](shared/voice/README.md)：调用方显式选择供应商、受信任端点、模型、匹配音色与格式；OpenRouter 使用其专用 speech API，不把任意聊天模型当 TTS。豆包旧适配器与有效音频保留，不强制迁移。声音风格、同步与当前实现范围见 [声音交付](.agents/skills/mechanism-studio/references/audio-delivery.md)。有声网页需读者点击启用；凭据只在用户授权的本地配置或服务端/CLI 环境中读取，不复制进仓库或网页，不因搬迁重新合成。
 - 此目录是独立的 Mechanism Studio GitHub 仓库。项目原创代码、skill 文档采用根目录 MIT；第三方模型、依赖和派生资产保留各自许可，见 THIRD_PARTY_NOTICES.md 与 docs/licensing.md。远程发布依据当前会话中的用户授权；本文件和 skill 不授予发帖、上传、删除或扩展权限的授权。
 
-`npm test` 验证公共模块、各机构模型/GLB、配音与真实 OCCT 导入；`npm run preview` 独立预览（默认本机 4179）；`npm run release:check` 检查公开文件清单。首次安装在项目根运行 `npm ci`。公共代码在 `shared/viewer`、`shared/voice`、`shared/assets`，机构公式保留在各实例。
+`npm test` 先按哈希下载固定版本的上游网格并重建配乐，再验证公共模块、各机构模型/GLB 与配音；`npm run preview` 独立预览（默认本机 4179）；`npm run release:check` 检查公开文件清单。首次安装在项目根运行 `npm ci`。公共代码在 `shared/viewer`、`shared/voice`、`shared/assets`，机构公式保留在各实例。

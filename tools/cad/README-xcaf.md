@@ -22,8 +22,8 @@ On Windows, run this from the project root using an existing `uv` executable:
 ```powershell
 ./tools/cad/setup-xcaf.ps1
 & ./.tools/cad-python/Scripts/python.exe tools/cad/import-xcaf.py `
-  --source examples/wolf-actuator/source/assembly.step `
-  --output output/cad-research/wolf-actuator-fine.json
+  --source examples/<name>/source/assembly.step `
+  --output output/cad-research/<name>-fine.json
 ```
 
 The setup script installs fixed package versions in `.tools/cad-python` and
@@ -111,8 +111,7 @@ The read-only evidence audit checks the retained AP214/AP242
 identity check does not establish full AP242 protocol conformance or recover
 native mates, PMI, tolerances or placement entities independently of OCCT.
 
-The WOLF V1.2 native-metre AP242 specimen includes analytic gear/housing bodies
-and 69 source-triangulated bearing definitions reused by 138 occurrences. Its
+A source can mix analytic bodies with source-triangulated definitions. Its
 display can retain every source identity while its audit is explicitly
 `limited` for analytic geometry coverage. `sourceGeometryRepresentations`, face
 digests, nullable analytic bounds and source-triangulation counts travel with

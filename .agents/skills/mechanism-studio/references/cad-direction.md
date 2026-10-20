@@ -25,13 +25,13 @@ Baked vertex placement is not proof that engineering local placement was exposed
 
 Current XCAF normalizes native m/mm to imported mm, retains original unit metadata and converts display once to m/+Y. Manifest *MatrixSource uses the declared imported coordinates. Do not rewrite source unit labels or scale normalized metre-source coordinates again. Mixed spatial units/inches are not enabled.
 
-## Existing specimen boundaries
+## Specimen boundaries
 
-[KFL08](../../../../examples/step-assembly/README.md) is an early limited-mapping route: retained AP214 has 30 products/29 usages, including 7 subassembly and 22 leaf occurrences, while the legacy display has 7 groups/35 fragments. Nineteen named fragments have named source associations; 16 have grouping-only mapping. Those counts are distinct evidence, not an invented full one-to-one recovery.
+No real STEP specimen is currently retained in this repository; the CAD import and audit tests use synthetic fixtures. For a supplied package, report its own evidence:
 
-[WOLF](../../../../examples/wolf-actuator/README.md) uses XCAF source definitions/occurrences with full retained local/world placements and native-metre AP242 input. Some source assemblies own solids and children; generated anonymous OCCT solids are display subdivisions, not invented engineering occurrences. Mesh retries disclose actual face/settings/results rather than hiding coarser recovery behind nominal fine tolerances.
-
-[WOLF](../../../../examples/wolf-actuator/README.md) is native-metre AP242 with both analytic and source-triangulated geometry. Source triangles retain identity, but do not become analytic CAD because of the STEP extension. Use actual specimen reports, not these examples' constants, for new inputs.
+- Source products/usages, subassembly and leaf occurrences stay distinct from display groups/fragments. Named source associations, grouping-only mapping and missing mappings are separate evidence, not an invented one-to-one recovery.
+- XCAF source definitions/occurrences carry full retained local/world placements. A source assembly may own solids as well as children; generated anonymous OCCT solids are display subdivisions, not invented engineering occurrences. Mesh retries disclose actual face/settings/results rather than hiding coarser recovery behind nominal fine tolerances.
+- STEP may mix analytic and source-triangulated geometry. Source triangles retain identity, but do not become analytic CAD because of the STEP extension. Use the actual specimen's reports, not constants from earlier examples, for new inputs.
 
 Source NAUO/component references establish current XCAF identity. Different tessellation densities should preserve identity, parents and placement for the same source. Source re-export can renumber entities; no permanent cross-revision identity is promised. Tessellation tolerance is not independently proven per-face error, closed-solid validity or engineering measurement.
 

@@ -83,17 +83,6 @@ test('source package preflight supports a local filename and geometry mm despite
   await assert.rejects(access(join(f.root, '.cache')));
 });
 
-test('real retained KFL08 mm assembly accepts explicitly named unitless 2D surface parameter contexts', async t => {
-  const sourceBytes = await readFile(join(projectRoot, 'examples/step-assembly/source/kfl08.step'));
-  const provenance = JSON.parse(await readFile(join(projectRoot, 'examples/step-assembly/source/provenance.json'), 'utf8'));
-  const f = await fixture(t, { step: sourceBytes, provenance: { ...provenance, localFile: 'assembly.step' } });
-  const result = await readCadSourcePackage(f);
-  assert.deepEqual(result.sourceBytes, sourceBytes); assert.equal(result.provenance.sourceSHA256, provenance.sourceSHA256);
-  assert.equal(result.preflight.productDefinitionCount, 30); assert.equal(result.preflight.sourceNauoCount, 29);
-  assert.ok(result.preflight.geometryContextCount > 0); assert.ok(result.preflight.unassignedSurfaceParameterContextCount > 0);
-  await assert.rejects(access(join(f.root, '.cache')));
-});
-
 test('surface parameter exception does not allow unassigned 3D or unnamed 2D geometry contexts', async t => {
   for (const declaration of [
     'GEOMETRIC_REPRESENTATION_CONTEXT(3) PARAMETRIC_REPRESENTATION_CONTEXT()',
@@ -259,6 +248,6 @@ test('non-file publication target is rejected before any owned asset is replaced
 test('CLI requires an explicit example and rejects unknown options before starting CAD', () => {
   const result = spawnSync(process.execPath, ['tools/cad/import-assembly.mjs', '--from-cache'], { cwd: projectRoot, encoding: 'utf8' });
   assert.equal(result.status, 1); assert.match(result.stderr, /--example/);
-  const unknown = spawnSync(process.execPath, ['tools/cad/import-assembly.mjs', '--example', 'examples/wolf-actuator', '--global'], { cwd: projectRoot, encoding: 'utf8' });
+  const unknown = spawnSync(process.execPath, ['tools/cad/import-assembly.mjs', '--example', 'examples/my-assembly', '--global'], { cwd: projectRoot, encoding: 'utf8' });
   assert.equal(unknown.status, 1); assert.match(unknown.stderr, /Usage/);
 });

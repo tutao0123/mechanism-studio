@@ -22,8 +22,8 @@ when asked about publication; historical receipt files are historical evidence.
 ## Freeze the material that was checked
 
 For a substantial media handoff, keep a project-relative `delivery.json` beside
-the example. The [WOLF v4 record](../../../../examples/wolf-actuator/tour-v4/delivery.json)
-is a complete worked instance. Record:
+the example. The [Allegro hand record](../../../../examples/allegro-hand/delivery.json)
+is a worked instance, with a `delivery-drift.json` beside it. Record:
 
 - `schemaVersion: 1`, an `id`, and `route` (`Inspect`, `Explain` or `Showcase`).
 - `files`: each declared path's SHA-256 and byte length, `role` (`input`,
@@ -103,8 +103,8 @@ where artifacts are suspected. State the reviewed coverage and remaining limits.
 From the repository root:
 
 ```powershell
-npm run check:delivery -- --manifest examples/wolf-actuator/tour-v4/delivery.json
-npm run check:delivery -- --manifest examples/wolf-actuator/tour-v4/delivery.json --require-local
+npm run check:delivery -- --manifest examples/allegro-hand/delivery.json
+npm run check:delivery -- --manifest examples/allegro-hand/delivery.json --require-local
 ```
 
 The [read-only helper](../../../../scripts/check-delivery.mjs) checks the manifest,

@@ -74,8 +74,8 @@ timeline, identities, framing and asset paths to `shared/study`.
 
 Representative screenshots are kept under ignored `output/`. Audio checks record
 duration, peak/headroom, clipping and cyclic boundary continuity, without claiming
-a subjective listening review. The separate WOLF example has a local MP4 delivery;
-neither example automatically grants social-posting or remote-publishing authority.
+a subjective listening review. A local delivery does not automatically grant
+social-posting or remote-publishing authority.
 
 ## Upstream files fetched on demand
 

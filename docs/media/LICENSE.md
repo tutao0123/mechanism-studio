@@ -14,9 +14,6 @@ in this documentation directory.
 | `gearbox-readme.gif` | Original five-speed teaching gearbox, Mechanism Studio | Project MIT; model, score and capture source in `examples/gearbox/` |
 | `gearbox-editions.jpg` | Same gearbox study in the default and blueprint editions, Mechanism Studio | Project MIT; capture source in `examples/gearbox/`. Blueprint style idea from lemo-opuscar (MIT); no third-party pixels |
 | `so-arm102-kinetic.jpg` | SO-ARM 102, Robonine | CC BY 4.0; source and change notice below |
-| `kfl08-preview.jpg` | KFL08, hasecilu / FreeCAD community library | CC BY 3.0; source and change notice below |
-| `wolf-preview.jpg` | WOLF V1.2, Anthrobotics and contributors | CC BY-SA 4.0; source and change notice below |
-| `wolf-motor-detail.jpg` | WOLF V1.2 motor subassembly, Anthrobotics and contributors | Same CC BY-SA 4.0 terms; actual source components, separate from G1 |
 | `humanoid-g1-preview.jpg` | Unitree G1, Unitree Robotics / MuJoCo Menagerie contributors | BSD-3-Clause; model-specific notice and full terms below |
 | `allegro-hand-preview.png` | Allegro Hand V3, SimLab / Wonik Robotics / MuJoCo Menagerie contributors | Model-specific BSD-2-Clause; retained source license and change notice below |
 | `robotiq-gripper-preview.png` | Robotiq 2F-85 v4, ROS-Industrial / Robotiq / MuJoCo Menagerie contributors | Model-specific BSD-2-Clause; retained source license and change notice below |
@@ -63,38 +60,6 @@ joint/display poses, camera framing and English annotations. Keep creator,
 source/license credit and this change notice when redistributing the image.
 No source-author endorsement is implied. This asset is excluded from the
 repository-level MIT grant; original documentation text remains MIT.
-
-## KFL08
-
-`kfl08-preview.jpg` depicts the KFL08 flange-bearing source by **hasecilu**,
-retained from the
-[FreeCAD library at revision f5ca01c](https://github.com/FreeCAD/FreeCAD-library/tree/f5ca01cdcaa2f69b9295a6382719c2d90628780c).
-The image retains [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), with
-[source provenance](../../examples/step-assembly/source/provenance.json),
-[retained license](../../examples/step-assembly/source/CC-BY-3.0.txt) and
-[author notice](../../examples/step-assembly/source/LICENSE.md).
-Mechanism Studio imported/tessellated the retained STEP, authored grouped
-display separation, line rendering and a local viewer. The historical import's
-incomplete identity mapping remains documented; a render does not remedy it.
-Keep author/source/license credit and this change notice when sharing the image.
-
-## WOLF
-
-`wolf-preview.jpg` and `wolf-motor-detail.jpg` depict **WOLF V1.2 by Anthrobotics and contributors**,
-at [revision 776a565](https://github.com/Anthrobotics/wolf-actuator/tree/776a5654bf2e6fdefbad1ce0f4d88dcaaf1e6dea).
-The model and adapted visual presentation retain
-[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), with the
-[full license](../../examples/wolf-actuator/source/LICENSE),
-[source notice](../../examples/wolf-actuator/source/NOTICE.md) and
-[provenance](../../examples/wolf-actuator/source/provenance.json).
-Keep the upstream acknowledgement of Robin Fröjd's RFX gearbox. Mechanism Studio
-adds source-mapped display conversion, editorial separation, line materials,
-camera, annotations and sound. Keep creator/source/license credit and a change
-notice; redistribute the adapted visual under CC BY-SA 4.0, not MIT.
-The detail image depicts the real source motor subassembly and its retained
-component names; it is not a representation of Unitree G1 hardware, nor does it
-assign a function to generically named `cc` components. The same source license
-and change notice cover both WOLF editions.
 
 ## Unitree G1
 
