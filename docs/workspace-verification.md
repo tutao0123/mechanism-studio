@@ -2,6 +2,8 @@
 
 ## WOLF CAD study, colour cues and video · 2026-10-17
 
+> The WOLF actuator example recorded here was removed on 2026-10-20 to keep the repository small. This entry is a historical record; the files remain in Git history (last present at commit `10f724f`).
+
 The music assembly page now uses `shared/study`; `shared/appearance` owns
 deterministic pale-blue occurrence cues and independent material copies. The
 SO-ARM page is a thin adapter and its old source/audio remain intact. The WOLF
@@ -31,7 +33,7 @@ The visible, focused browser completed all six chapters against the native music
 clock with a sampled maximum 0.0531-second audio/last-drawn-state difference.
 Reduced motion starts paused; the 390×844 CSS-pixel view retains a short readable
 gear name. Crowded whole/return/resolve shots omit names. Current evidence and
-publication status are in [WOLF verification](../examples/wolf-actuator/verification.json)
+publication status are in WOLF verification (`examples/wolf-actuator/verification.json`)
 and [robot integration verification](../EXAMPLE_ROBOT/verification-color-study.json).
 
 All work stays within Mechanism Studio. GitHub publication was not performed;
@@ -52,6 +54,8 @@ An independent forward trial produced three concept plans in ignored `.test-outp
 No runtime code, existing model, source CAD, lesson, sound, UI style or dependency changed, so model/audio rebuilding and full browser visual checks were not repeated. Changes and controllable verification output remain inside Mechanism Studio; no global skill, permission or external service was changed.
 
 ## Reusable skill and CAD evidence workflow · 2026-10-17
+
+> The KFL08 example used in the generic-import trial below was removed on 2026-10-20; it remains in Git history (last present at commit `10f724f`).
 
 The project-local skill now routes work to Inspect, Explain or Showcase according to the requested result. Real STEP inspection can complete without an invented motion model, lesson or soundtrack. The entrypoint links focused CAD and audio runbooks rather than duplicating implementation APIs. X short clips use the current no-narration preference, with code-synthesized music when requested; explicit narration still uses Doubao. Existing public playback supports silence and narration, without a shared music generator/player or video exporter. White line art, serif typography, camera and annotation rules remain unchanged.
 
@@ -131,6 +135,8 @@ Local screenshots and browser observations are saved under ignored `output/showc
 
 ## Archived v0.3 verification
 
+> 2026-10-20：本节记录的 KFL08 STEP 示例与 occt-import-js 依赖已移除，仍保存在 Git 历史中（最后见于提交 `10f724f`）。
+
 日期：2026-10-14，版本 0.3.0。本记录覆盖模块提取、过程动画、教学机构、配音和 STEP 显示派生；不代表工程 CAD 精度认证。
 
 ## 自动检查与干净安装
@@ -163,7 +169,7 @@ STEP 页面验证真实 GLB 的 35 个显示身份，点选出现来源 PRODUCT/
 
 KFL08 源 SHA-256 为 `938d5e7e596d5e9586e7b2d7cef89da3003d3cf734dbfa5ab39f6e790319c090`。源有 30 PRODUCT、29 使用关系，其中 7 子装配与 22 叶实例。显示派生有 35 片段；19 个具名关联源定义/使用关系，16 个匿名仅保留分组。源与显示统计区分，缺项明示。
 
-真实 OCCT 毫米/米校准、两档网格化、GLB 几何与源摘要检查通过。正式 22,942 三角形；粗版 8,820，Z 边界内缩约 0.04611 mm。导入器烘焙 placement，未暴露完整工程局部变换；精确实体测量、配合、工程剖切、接触及参数回写未实现。详情见 [STEP 说明](../examples/step-assembly/README.md)。
+真实 OCCT 毫米/米校准、两档网格化、GLB 几何与源摘要检查通过。正式 22,942 三角形；粗版 8,820，Z 边界内缩约 0.04611 mm。导入器烘焙 placement，未暴露完整工程局部变换；精确实体测量、配合、工程剖切、接触及参数回写未实现。详情见 STEP 说明（`examples/step-assembly/README.md`）。
 
 ## skill 与仓库边界
 

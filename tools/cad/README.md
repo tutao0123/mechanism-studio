@@ -89,8 +89,7 @@ npm run import:cad -- --example examples/<name> --from-cache
 
 Both caches must match the retained source hash, pinned importer version and
 expected tessellation settings. This option does not create missing caches or
-borrow another model's cache. `npm run import:step`
-remains the earlier KFL08 fragment-based experiment.
+borrow another model's cache.
 
 ## Generated files and publication failure
 
@@ -139,11 +138,8 @@ independently recompute native STEP placements, execute B-rep measurement,
 prove geometric precision or validate licensing rights. A complete license
 record is evidence retained for a separate publication decision.
 
-The WOLF package and an isolated real KFL08 import exercise this reusable
-path. The latter retained 30 definitions and 30 expanded occurrences with a
-verified evidence report; its optional local record is
-`output/cad-research/generic-real-trial.json`. That trial does not upgrade the
-older KFL08 webpage's fragment mapping or imply general STEP support.
+No real STEP package is currently retained in this repository, so no included
+example exercises this path end to end; prepare one as described above.
 
 ## Integrate and maintain
 
@@ -163,6 +159,6 @@ the in-memory audit is documented in `shared/cad`.
 Run `node --test tools/cad/tests/import-workflow.test.mjs` for orchestration
 regressions, `node --test shared/cad/audit.test.mjs` for evidence checks, and
 `npm test` for the project suite. Synthetic test fixtures test contracts and
-failure handling; they do not count as additional real CAD specimens.
+failure handling; they do not count as real CAD specimens.
 `npm run release:check` checks the current local release candidate and does not
 publish files or choose a license for private CAD.

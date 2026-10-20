@@ -7,7 +7,7 @@ upload files or publish posts. Node.js 20.10+ and FFmpeg/FFprobe on PATH are req
 Run from the Mechanism Studio root:
 
 ```powershell
-node tools/video/export.mjs --frames examples/wolf-actuator/output/frames --audio examples/wolf-actuator/audio/wolf-loop.wav --out examples/wolf-actuator/output/wolf-34s.mp4 --fps 30 --frame-count 1029 --width 1920 --height 1080 --title "Mechanism Studio — WOLF actuator"
+node tools/video/export.mjs --frames examples/gearbox/output/frames --audio examples/gearbox/audio/gearbox-loop.wav --out examples/gearbox/output/gearbox-40s.mp4 --fps 30 --frame-count 1200 --width 1920 --height 1080 --title "Mechanism Studio — gearbox"
 ```
 
 Use the actual example and audio paths. Frames must start at `00000.jpg` (five

@@ -37,9 +37,9 @@ Use this sequence when useful: **show the repeated set → identify one real occ
 5. Settle both the selected part and camera before its near-outline name appears. Use the existing short-leader, retained-name/group-fade rules. Name the actual component; preserve generic source names where function is unknown. A count such as “40 magnets” describes the verified set, not one enlarged object made to look like the whole set.
 6. Fade the close-up name before the target departs. Restore the selected occurrence to its current group position before the group returns, then restore every authored observation offset at the loop boundary. Verify no duplicate remains and final source/rest correspondence is unchanged.
 
-For example, a WOLF source occurrence named `magnet` can illustrate one of its repeated magnets. A generic `cc` occurrence must keep that uncertainty; the close-up does not establish that it is a winding or copper part.
+For example, a source occurrence named `magnet` can illustrate one of its repeated magnets. A generically named occurrence such as `cc` must keep that uncertainty; the close-up does not establish that it is a winding or copper part.
 
-The same sequence applies to a sourced bearing assembly or one of its actual child occurrences. Carry its nested source path into the focus plan rather than selecting by a shared `Part N` name. The supplied WOLF bearing leaves do not, by their names alone, identify rollers, balls or a cage; use the source name and preserve that uncertainty. A source-backed close-up can explain shape and placement without inventing function or adding idealized geometry.
+The same sequence applies to a sourced bearing assembly or one of its actual child occurrences. Carry its nested source path into the focus plan rather than selecting by a shared `Part N` name. Generically named bearing leaves do not, by their names alone, identify rollers, balls or a cage; use the source name and preserve that uncertainty. A source-backed close-up can explain shape and placement without inventing function or adding idealized geometry.
 
 ## Coordinate sound and reading
 

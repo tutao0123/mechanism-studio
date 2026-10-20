@@ -10,7 +10,7 @@ External references, mixed spatial units, inches/unknown contexts, multiple root
 
 OCCT imports both native m/mm geometry and matrices into **mm**. localMatrixMm/worldMatrixMm and historical manifest *MatrixSource refer to those imported mm coordinates. Display applies `0.001*[x,z,-y]` exactly once. Native-metre packages preserve originalLengthUnit:m and coordinateNormalization with originalToImportedScale:1000 and imported matrix/geometry units:mm; contract distinguishes source:m, imported:mm, asset:m. Original STEP bytes, spatial declarations, FileUnits and provenance remain unchanged. Do not scale normalized coordinates twice.
 
-STEP can contain source-triangulated faces. Retain those actual definitions/occurrences, source vertex/index digests and nullable analytic bounds; mark source-triangulated or partial analytic coverage. The WOLF specimen includes analytic gears/housing and source-triangulated bearings. Identity may be complete while analytic geometry capability remains limited. Nonempty unsupported objects with neither analytic surfaces nor retained triangles fail; never drop them or fabricate surfaces.
+STEP can contain source-triangulated faces. Retain those actual definitions/occurrences, source vertex/index digests and nullable analytic bounds; mark source-triangulated or partial analytic coverage. One assembly may mix analytic parts with source-triangulated ones. Identity may be complete while analytic geometry capability remains limited. Nonempty unsupported objects with neither analytic surfaces nor retained triangles fail; never drop them or fabricate surfaces.
 
 ## 1. Retain source and provenance
 

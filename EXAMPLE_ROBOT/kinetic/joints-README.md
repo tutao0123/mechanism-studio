@@ -1,6 +1,6 @@
 # Source-backed robot joint poses
 
-`joints.mjs` drives the eight retained SO-ARM 102 source links using the seven joints in Robonine's original URDF: five revolute joints and two prismatic jaws. The second jaw follows the source mimic relation `clamp2 = -clamp1`. This working rig is specific to this retained model; it does not infer joints for STEP files or animate the WOLF gear train.
+`joints.mjs` drives the eight retained SO-ARM 102 source links using the seven joints in Robonine's original URDF: five revolute joints and two prismatic jaws. The second jaw follows the source mimic relation `clamp2 = -clamp1`. This working rig is specific to this retained model; it does not infer joints for STEP files or other models.
 
 The native URDF is retained at `../source/simulation/urdf/so_arm_102.urdf`, upstream commit `e871f738c97f43de230cb04d340797da6a68c4b9`, SHA-256 `d52437d3f901077d084492d81b4037952273a76d0a229bf7cf7de7ac5836da4f`. The rig checks its parsed source metadata, exact axes, joint origins, limits, mimic relation, source identities, and original rest matrices. Tests also hash the actual retained URDF bytes and compare its joint elements directly with the input metadata. Geometry and original GLB source nodes remain unchanged.
 

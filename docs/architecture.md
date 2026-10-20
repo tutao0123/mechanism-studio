@@ -91,12 +91,13 @@ See [release packaging](release-audit.md) and [licensing](licensing.md).
 
 ## CAD evidence and limits
 
-KFL08 preserves the first import's incomplete source/display mapping. WOLF uses
-XCAF for exact retained definition/occurrence mapping with native-metre AP242
-input and explicitly source-triangulated bearing definitions. Their imports and
-evidence limits are separate; success on these samples is not arbitrary STEP
-coverage. The root audit CLI cross-checks retained bytes, source metadata,
-placements, reports and real GLB geometry without independently solving joints.
+No real STEP example is currently retained; the CAD tools are tested with
+synthetic fixtures. For a user-prepared package, XCAF retains exact
+definition/occurrence mapping for native metre or millimetre input and marks
+source-triangulated definitions explicitly; success on one package is not
+arbitrary STEP coverage. The root audit CLI cross-checks retained bytes, source
+metadata, placements, reports and real GLB geometry without independently
+solving joints.
 
 Exact solid measurement, mate solving, collision-free disassembly and parametric
 feature editing are not implemented. Read [CAD roadmap](cad-roadmap.md) and

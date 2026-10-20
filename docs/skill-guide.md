@@ -130,15 +130,15 @@ Use focused commands from [the module catalog](modules.md) while editing. Passin
 
 The shared study's explicit `?capture=1` path supports deterministic sequential frames; `tools/video/export.mjs` encodes captured JPEGs and a verified timeline-matched track. It does not capture a browser or publish online. Full export procedure and failure limits are in [the video tool](../tools/video/README.md).
 
-Substantial deliveries can retain a [delivery manifest](../.agents/skills/mechanism-studio/references/delivery-evidence.md) with exact input, evidence and output fingerprints. WOLF v4 is the worked example:
+Substantial deliveries can retain a [delivery manifest](../.agents/skills/mechanism-studio/references/delivery-evidence.md) with exact input, evidence and output fingerprints. The Allegro hand record is a worked example:
 
 ```powershell
-npm run check:delivery -- --manifest examples/wolf-actuator/tour-v4/delivery.json
+npm run check:delivery -- --manifest examples/allegro-hand/delivery.json
 # On the authoring machine, also require ignored media and review files:
-npm run check:delivery -- --manifest examples/wolf-actuator/tour-v4/delivery.json --require-local
+npm run check:delivery -- --manifest examples/allegro-hand/delivery.json --require-local
 ```
 
-Default mode permits missing files explicitly marked local, so an absent MP4 does not make a fresh checkout an unfinished model. Present files must match their recorded bytes and hashes; repository files must exist. The report distinguishes byte integrity, declared check results and evidence availability. It neither runs the declared reviews nor proves engineering validity. Updating a changed file's digest requires reviewing and rechecking its dependents, not simply refreshing the record. The [worked module handoff](../.agents/skills/mechanism-studio/references/module-orchestration.md#worked-handoff-wolf-sun-and-one-planet) shows the actual WOLF pair and adapter ownership.
+Default mode permits missing files explicitly marked local, so an absent MP4 does not make a fresh checkout an unfinished model. Present files must match their recorded bytes and hashes; repository files must exist. The report distinguishes byte integrity, declared check results and evidence availability. It neither runs the declared reviews nor proves engineering validity. Updating a changed file's digest requires reviewing and rechecking its dependents, not simply refreshing the record. The [worked module handoff](../.agents/skills/mechanism-studio/references/module-orchestration.md#worked-handoff-gearbox-records) shows the gearbox records and adapter ownership.
 
 Keep implementation, validation, export and remote publication separate in completion messages. Verify the current remote commit and relevant paths when asked what reached GitHub; posting a video to X does not update the source repository.
 
