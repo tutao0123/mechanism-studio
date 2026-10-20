@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "id": "study-styles-1-robot-studies-pixels",
+  "purpose": "Evidence that the shared study shell change (opt-in appearance option, spec labels and drafting hooks) leaves the Allegro and Robotiq studies, recorded against the earlier shell, rendering byte-identically.",
+  "baseCommit": "7092b41eec0c3570d51d109383130a0970ab8ef9",
+  "shellInputs": {
+    "shared/study/study.mjs": {
+      "recordedSha256": "9fb1f306e11f862854dc1469ed5b6b86a41a19517ce69ddb1d21e72650e3c04f",
+      "currentSha256": "fa3dd0f2756bfc21d09dfb48d81a81ba6e62fe1f1c64b44280544b91a6997c4b"
+    }
+  },
+  "method": {
+    "browser": "Chromium (Playwright-driven, local tooling not shipped), --use-gl=swiftshader, 1920x1080, deviceScaleFactor 1",
+    "query": "?clean=1&capture=1",
+    "comparison": "Same working tree and preview servers; only shared/study/study.mjs swapped between the recorded version (from commit bf55be6) and the current one. PNG bytes and snapshot().annotations names compared.",
+    "transitionFrames": "capture.start() then capture.frame(t) at 15%, 50% and 85% of the loop",
+    "settledFrames": "seek(t) at (i + 0.5) / 12 of the loop, 400 ms wait, then screenshot"
+  },
+  "result": {
+    "pages": 2,
+    "frames": 30,
+    "framesWithLabels": 7,
+    "identical": true,
+    "labelNamesIdentical": true
+  },
+  "limits": [
+    "Software (swiftshader) rendering only.",
+    "Sampled frames, not every frame of each loop."
+  ],
+  "frames": [
+    {
+      "page": "allegro",
+      "mode": "transition",
+      "seconds": 5.33,
+      "labels": [],
+      "sha256": "d9952e47abe8ed4dd8fcebcc86c4c237d7efd5d9377191a0486d4fcc739254d6"
+    },
+    {
+      "page": "allegro",
+      "mode": "transition",
+      "seconds": 17.78,
+      "labels": [
+        "Palm"
+      ],
+      "sha256": "233754d3108437e861414be79116b6fdcf37b5e35c3626539c94651e589a3e71"
+    },
+    {
+      "page": "allegro",
+      "mode": "transition",
+      "seconds": 30.22,
+      "labels": [],
+      "sha256": "9f1ee9e89577e76048e8890bf1916c57b83c9117ac2e6b4348e2d8bee88cff8e"
+    },
+    {
+      "page": "allegro",
+      "mode": "settled",
+      "seconds": 1.48,
+      "labels": [],
+      "sha256": "b2f47ac0478f69618496f047c5c91868604eee4c0253934c06360b99fe895009"
+    },
+    {
+      "page": "allegro",
+      "mode": "settled",
+      "seconds": 4.44,
+      "labels": [],
+      "sha256": "f4a8bcc0223ed634b497f817ed027f3cbd6aa352a909324c5ead5fde3524bd0b"
+    },
+    {
+      "page": "allegro",
+      "mode": "settled",
+      "seconds": 7.41,
+      "labels": [],
+      "sha256": "e022519a42cc9dad4a5c6ce5f9340283f7af987fe5d2ae0e0a432341c7ec5136"
+    },
+    {
+      "page": "allegro",
+      "mode": "settled",
+      "seconds": 10.37,
+      "labels": [],
+      "sha256": "c07491ff79812f4ac30037fb2ef951c0de1a505b5f882d5f3fdbcffdddd0ffbc"
+    },
+    {
+      "page": "allegro",
+      "mode": "settled",
+      "seconds": 13.33,
+      "labels": [],
+      "sha256": "6d5f4c573e003679f37cd9f1c56ad422bdfe8d641e3a807b099031d11057b4e8"
+    },
+    {
+      "page": "allegro",
+      "mode": "settled",
+      "seconds": 16.3,
+      "labels": [],
+      "sha256": "626e878549f4e2fcbd46b6befdd7c63e233cc8169a4beea8f7dae9491f474f6e"
+    },
+    {
+      "page": "allegro",
+      "mode": "settled",
+      "seconds": 19.26,
+      "labels": [],
+      "sha256": "d420d8335baeef36ed3dbcb7b0fcdfaae08a047ced5a37fc0ed331574e32f6fa"
+    },
+    {
+      "page": "allegro",
+      "mode": "settled",
+      "seconds": 22.22,
+      "labels": [
+        "Base joint"
+      ],
+      "sha256": "900a351a10ccf422dbea96a0b7cd68ba559a74923d22ef7ff3f4b4a71bfd7c2b"
+    },
+    {
+      "page": "allegro",
+      "mode": "settled",
+      "seconds": 25.19,
+      "labels": [
+        "Base joint",
+        "Flexion link"
+      ],
+      "sha256": "6372159acf1dfda330184e15e280815a823eb1848981a5b68d871e942bb249d1"
+    },
+    {
+      "page": "allegro",
+      "mode": "settled",
+      "seconds": 28.15,
+      "labels": [],
+      "sha256": "2a3aefd3a9f0a9e9abb5718585698ac1007c2e4b6c90682df6abcea404152550"
+    },
+    {
+      "page": "allegro",
+      "mode": "settled",
+      "seconds": 31.11,
+      "labels": [],
+      "sha256": "797c23e02eb15fa3fc3e9498b25c74e23971d9190c9965cbdedcafc53dd163c0"
+    },
+    {
+      "page": "allegro",
+      "mode": "settled",
+      "seconds": 34.07,
+      "labels": [
+        "Allegro Hand V3"
+      ],
+      "sha256": "f491974e86c7df5975cf213f11e2b1d28270e2f4ea4185781a4d1a70abb112ae"
+    },
+    {
+      "page": "robotiq",
+      "mode": "transition",
+      "seconds": 5.33,
+      "labels": [],
+      "sha256": "d0cc4a04bf16a0e61364dff33efcddedc8a019ac5e43201e63af76c9e07781d8"
+    },
+    {
+      "page": "robotiq",
+      "mode": "transition",
+      "seconds": 17.78,
+      "labels": [
+        "Driver link",
+        "Follower link"
+      ],
+      "sha256": "3e757c9a40e5ac526821cad15f6a8ec602e668d1d594310d544e2a257cea2bac"
+    },
+    {
+      "page": "robotiq",
+      "mode": "transition",
+      "seconds": 30.22,
+      "labels": [],
+      "sha256": "a432803cdf910ec6001f397390cc9e3fe0d806fa82cbf5be528f6445b4003305"
+    },
+    {
+      "page": "robotiq",
+      "mode": "settled",
+      "seconds": 1.48,
+      "labels": [],
+      "sha256": "a2cd3b4a9efb289e11217a639310894b3fb3573c3eb9ead9f954adee08877c3b"
+    },
+    {
+      "page": "robotiq",
+      "mode": "settled",
+      "seconds": 4.44,
+      "labels": [],
+      "sha256": "9156426033c24621b543adad8da56e8e14a801d802a6bf0282ee6c400fcdf594"
+    },
+    {
+      "page": "robotiq",
+      "mode": "settled",
+      "seconds": 7.41,
+      "labels": [],
+      "sha256": "d7bcf5b68f78640c05bc8ad4a75172fefabe2ea553d6630a7a4f9b707597ff19"
+    },
+    {
+      "page": "robotiq",
+      "mode": "settled",
+      "seconds": 10.37,
+      "labels": [],
+      "sha256": "9a608b36ae7469176f40e54355fb39fd93fddd18d9d1d61bfdb6f4dd9931f2ce"
+    },
+    {
+      "page": "robotiq",
+      "mode": "settled",
+      "seconds": 13.33,
+      "labels": [],
+      "sha256": "cf3b842e91923df05a86641fe8d20637cdb162b7593d96adbbefe8b8dd9dbc45"
+    },
+    {
+      "page": "robotiq",
+      "mode": "settled",
+      "seconds": 16.3,
+      "labels": [
+        "Driver link",
+        "Follower link"
+      ],
+      "sha256": "3e757c9a40e5ac526821cad15f6a8ec602e668d1d594310d544e2a257cea2bac"
+    },
+    {
+      "page": "robotiq",
+      "mode": "settled",
+      "seconds": 19.26,
+      "labels": [
+        "Driver link",
+        "Follower link"
+      ],
+      "sha256": "3e757c9a40e5ac526821cad15f6a8ec602e668d1d594310d544e2a257cea2bac"
+    },
+    {
+      "page": "robotiq",
+      "mode": "settled",
+      "seconds": 22.22,
+      "labels": [],
+      "sha256": "f19dd60665af029a5c09893ae0c3ef97d741a0a7e012ffe109238ab520829834"
+    },
+    {
+      "page": "robotiq",
+      "mode": "settled",
+      "seconds": 25.19,
+      "labels": [],
+      "sha256": "11cbe83fffbd7c5bfeb5eca8c312db00a1315b454ffdc212d25287b6c9234547"
+    },
+    {
+      "page": "robotiq",
+      "mode": "settled",
+      "seconds": 28.15,
+      "labels": [],
+      "sha256": "ce0defa4fc0addbf110364acf6074cb5df0ce07cac1ddfd3435eadbe4d5a084b"
+    },
+    {
+      "page": "robotiq",
+      "mode": "settled",
+      "seconds": 31.11,
+      "labels": [],
+      "sha256": "8f2c42bee696cb2e1361e91e8763c90873e1b973e5a94304b776fd06708a470a"
+    },
+    {
+      "page": "robotiq",
+      "mode": "settled",
+      "seconds": 34.07,
+      "labels": [],
+      "sha256": "cb484b770ff06e5e71480f6b8c8294e77a00ea485c297144388eb4ab18151d8b"
+    }
+  ]
+}

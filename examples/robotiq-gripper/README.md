@@ -64,8 +64,10 @@ Checks cover retained-source hashes/constraints, 751 closed-loop poses and sourc
 The deliverable here is a live looping example and reproducible generated score. A captured MP4, encoded-video downscale review, X post and GitHub publication are separate deliverables; their existence is not implied by the live page.
 
 The [18 October validation notes](validation.md) and [delivery fingerprints](delivery.json)
-record the original local review against the pre-sync runtime. They are
-historical evidence, not a current-checkout integrity claim. The
+record the original local review against the pre-sync runtime. Later changes to
+its inputs are listed, with reasons and evidence, in
+[`delivery-drift.json`](delivery-drift.json), so `npm run check:delivery` passes
+while any undocumented change still fails. The
 [19 October integration report](../../docs/robot-studies-release.md) records the
 shared-server compatibility checks for this publication.
 

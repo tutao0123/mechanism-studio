@@ -49,7 +49,7 @@ test('healthy delivery preserves declared outcomes and separates integrity from 
   const before = await readFile(resolve(f.root, 'delivery.json'), 'utf8');
   const report = await checkDelivery(f.root, 'delivery.json', { requireLocal: true });
   assert.equal(report.ok, true);
-  assert.deepEqual(report.summary, { files: 3, verified: 3, unavailable: 0, failed: 0 });
+  assert.deepEqual(report.summary, { files: 3, verified: 3, documented: 0, unavailable: 0, failed: 0 });
   assert.equal(report.checks[0].declaredStatus, 'limited');
   assert.equal(report.checks[0].evidenceAvailability, 'verified');
   assert.equal(report.checks[1].declaredStatus, 'not-run');
@@ -203,4 +203,68 @@ test('non-file targets and non-directory ancestors fail safely', async t => {
   f.manifest.files[2].path = 'input.step/child.mp4';
   await f.save();
   assert.equal((await checkDelivery(f.root, 'delivery.json')).files[2].status, 'unsafe');
+});
+
+async function driftFixture(t, { kind = 'runtime', withEvidence = true } = {}) {
+  const f = await fixture(t);
+  const manifestBytes = await readFile(resolve(f.root, 'delivery.json'));
+  const changed = 'Original CAD bytes, later documented\n', evidence = '{"pixels":"identical"}\n';
+  await writeFile(resolve(f.root, 'input.step'), changed);
+  await writeFile(resolve(f.root, 'pixels.json'), evidence);
+  const declared = f.manifest.files[0];
+  const drift = {
+    schemaVersion: 1, manifest: 'delivery.json', manifestSha256: sha256(manifestBytes),
+    changes: [{ path: 'input.step', recorded: { bytes: declared.bytes, sha256: declared.sha256 }, current: { bytes: Buffer.byteLength(changed), sha256: sha256(changed) },
+      kind, reason: 'Reviewed change after the recorded delivery.', evidence: withEvidence ? [{ path: 'pixels.json', sha256: sha256(evidence) }] : [] }],
+  };
+  const saveDrift = () => writeFile(resolve(f.root, 'delivery-drift.json'), `${JSON.stringify(drift)}\n`);
+  await saveDrift();
+  return { ...f, drift, saveDrift };
+}
+
+test('a drift record documents an exact later change without rewriting the delivery record', async t => {
+  const f = await driftFixture(t);
+  const before = await readFile(resolve(f.root, 'delivery.json'), 'utf8');
+  const report = await checkDelivery(f.root, 'delivery.json');
+  assert.equal(report.ok, true, JSON.stringify(report.validationErrors));
+  assert.deepEqual(report.summary, { files: 3, verified: 2, documented: 1, unavailable: 0, failed: 0 });
+  assert.equal(report.files[0].status, 'documented'); assert.equal(report.files[0].drift.kind, 'runtime');
+  assert.deepEqual(report.drift, { path: 'delivery-drift.json', changes: 1 });
+  assert.equal(await readFile(resolve(f.root, 'delivery.json'), 'utf8'), before);
+  const raw = await checkDelivery(f.root, 'delivery.json', { ignoreDrift: true });
+  assert.equal(raw.ok, false); assert.equal(raw.files[0].status, 'changed');
+});
+
+test('documented drift fails on any further change, stale entry, rebound record or changed evidence', async t => {
+  const f = await driftFixture(t);
+  await writeFile(resolve(f.root, 'input.step'), 'changed again\n');
+  let report = await checkDelivery(f.root, 'delivery.json');
+  assert.equal(report.ok, false); assert.equal(report.files[0].status, 'changed'); assert.match(report.files[0].message, /again/);
+  await writeFile(resolve(f.root, 'input.step'), 'Original CAD bytes\n');
+  report = await checkDelivery(f.root, 'delivery.json');
+  assert.equal(report.ok, false); assert.match(report.validationErrors.join('\n'), /stale/);
+  await writeFile(resolve(f.root, 'input.step'), 'Original CAD bytes, later documented\n');
+  await writeFile(resolve(f.root, 'pixels.json'), '{"pixels":"edited"}\n');
+  report = await checkDelivery(f.root, 'delivery.json');
+  assert.equal(report.ok, false); assert.match(report.validationErrors.join('\n'), /evidence pixels\.json is missing or changed/);
+  await writeFile(resolve(f.root, 'pixels.json'), '{"pixels":"identical"}\n');
+  f.manifest.limitations.push('A later edit to the record itself.'); await f.save();
+  report = await checkDelivery(f.root, 'delivery.json');
+  assert.equal(report.ok, false); assert.match(report.validationErrors.join('\n'), /manifestSha256/);
+});
+
+test('drift cannot excuse changed evidence or artifacts, or a runtime change without evidence', async t => {
+  const f = await driftFixture(t, { withEvidence: false });
+  let report = await checkDelivery(f.root, 'delivery.json');
+  assert.equal(report.ok, false); assert.match(report.validationErrors.join('\n'), /runtime change needs evidence/);
+  f.drift.changes[0].kind = 'documentation'; await f.saveDrift();
+  assert.equal((await checkDelivery(f.root, 'delivery.json')).ok, true);
+  const review = f.manifest.files[1];
+  f.drift.changes.push({ path: 'review.json', recorded: { bytes: review.bytes, sha256: review.sha256 }, current: { bytes: 1, sha256: '0'.repeat(64) }, kind: 'documentation', reason: 'No.', evidence: [] });
+  await f.saveDrift();
+  report = await checkDelivery(f.root, 'delivery.json');
+  assert.equal(report.ok, false); assert.match(report.validationErrors.join('\n'), /must be a repository input/);
+  f.drift.changes.pop(); f.drift.changes[0].recorded.sha256 = 'f'.repeat(64); await f.saveDrift();
+  report = await checkDelivery(f.root, 'delivery.json');
+  assert.match(report.validationErrors.join('\n'), /recorded must equal the declared/);
 });

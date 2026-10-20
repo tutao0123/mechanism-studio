@@ -29,8 +29,13 @@ authoring review. Desktop and narrow-screen inspection, playback and the
 original runtime fingerprints belong to that version. After the upstream
 style/spec-label refactor and this server/documentation integration, several
 fingerprints intentionally differ. Running the delivery checker on those
-historical records therefore does not verify the current package. Their
-digests and review dates are not rewritten merely to turn the checker green.
+historical records reports those files as changed. Their digests and review
+dates are not rewritten. Instead, each example's `delivery-drift.json` lists
+every later change with its old and new hash, kind, reason and evidence: the
+documentation and server/test refactors, the npm script additions (dependencies
+unchanged) and the shared study shell, whose before/after frames are
+byte-identical for both studies ([pixel record](../shared/study/evidence/robot-studies-shell-pixels.json)).
+With those records `npm run check:delivery` passes, and any further change fails.
 
 The source geometry, mechanical adapters, story, camera plans and original
 music are unchanged by this integration. The current automated suite verifies
