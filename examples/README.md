@@ -112,14 +112,15 @@ node tools/audio/build-study-score.mjs --example examples/robotiq-gripper
 ```
 
 Their visual assets are included, so these viewing commands need no Python.
-Optional regeneration from retained MJCF/STL uses the
+Optional regeneration from the retained MJCF and pinned STL meshes (`npm run fetch:sources`
+downloads the meshes) uses the
 [pinned robot importer](../tools/robot/README.md) and Python 3's standard library;
 it is separate from launching a page or generating its score.
 
 - GLB display geometry, scene contracts, models, lessons, source/provenance records and implementation adapters.
 - Deterministic original-music synthesis source and score metadata for every study. No generated score WAV is in Git; `npm run build:audio` builds them all. The humanoid additionally retains five separately licensed Kenney CC0 effects and their provenance. Click **Play with music** to enable audio; the media clock controls motion, camera, labels and effects together.
 - Blender Python builders for the original teaching models. Local `.blend` exports remain on the author's machine because their binary metadata embeds machine-specific paths; rebuild them if needed.
-- Original third-party CAD/URDF files with licenses. These assets are separately licensed from the MIT runtime.
+- Third-party model descriptions (MJCF, URDF/Xacro) with their licenses, notices and provenance. The upstream STEP, STL and PDF files are not in Git: `npm run fetch:sources` downloads each from its pinned upstream commit and verifies its SHA-256. These assets are separately licensed from the MIT runtime.
 
 Provider-generated Doubao MP3s are deliberately not in the public source release: the reviewed material did not establish a downstream MIT sublicensing grant. This is not a claim that using Doubao output is prohibited. Silent visuals, captions and the code-music studies remain usable. Lesson scripts/manifests and opt-in generation commands remain for users with their own service account and rights; see [voice setup](../shared/voice/README.md) and [licensing](../docs/licensing.md). Old example notes that describe delivered local narration or Blender files record the development workspace, not a promise that those ignored files are in a fresh clone.
 

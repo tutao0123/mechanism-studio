@@ -13,3 +13,6 @@
 The upstream README states that all parts in the repository are licensed under CC BY 3.0 and must be attributed to their respective authors, identified in commit history. This is the licensing evidence for the retained STEP, not the code license of FreeCAD or the importer. The repository describes itself as community-maintained rather than part of the FreeCAD project.
 
 The STEP file here is byte-identical to the retained version. Mechanism Studio produced the GLB display derivative by triangulation, per-fragment recentering, and a millimetre/Z-up to metre/Y-up coordinate conversion. Neither the model author nor FreeCAD is represented as endorsing this derivative or tool.
+
+The upstream `kfl08.step` is not stored in Git. `npm run fetch:sources` downloads
+it from the pinned upstream commit in `provenance.json` and checks its SHA-256.

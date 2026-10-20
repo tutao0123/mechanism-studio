@@ -9,9 +9,11 @@ check does not relicense an asset or replace that source review.
 
 The public tree includes source code, the project-local skill, its module
 references, tests, editable procedural builders and inputs, runtime GLB assets,
-original music synthesis code with score hashes, and licensed upstream CAD/URDF/MJCF source with
-its provenance. Original source files are retained where a third-party license
-requires them. Dependencies are installed from the lockfile with `npm ci`;
+original music synthesis code with score hashes, and licensed upstream model
+descriptions (URDF/MJCF) with their licenses and provenance. Upstream STEP, STL
+and PDF files are referenced by pinned commit URL and SHA-256 in
+`scripts/upstream-sources.json` and downloaded with `npm run fetch:sources`; every included
+model license permits that, and none requires shipping corresponding source. Dependencies are installed from the lockfile with `npm ci`;
 machine-specific runtimes and downloaded checkouts are not vendored.
 
 The following stay local and are ignored without deleting them:
@@ -64,8 +66,8 @@ credential values are never printed or saved. The gate checks:
 - Reviewed file types and repository size budgets: **95 MiB per file** and
   **300 MiB total**, below GitHub's individual file limit. Generated study
   score WAVs are not shipped: `npm run build:audio` rebuilds each one and checks
-  it against the byte length and SHA-256 in its `music-score.json`. The large WOLF STEP is
-  intentionally retained together with its source license and provenance.
+  it against the byte length and SHA-256 in its `music-score.json`. Upstream
+  CAD, mesh and manual files are fetched, not shipped.
 
 Tests exercise redacted findings, forced private entries, unsafe `.env.example`
 content, ignored files, staged/working-copy divergence, optional complete media

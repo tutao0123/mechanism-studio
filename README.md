@@ -52,7 +52,7 @@ npm run build:audio   # once: renders every original study score and checks its 
 npm run preview
 ```
 
-Open **http://127.0.0.1:4179/**. The included viewing assets run locally with no Blender installation, MCP connection or speech credentials. Dependencies are served from the local installation. A first clone includes substantial CAD source files for provenance and reproducibility. Study music is not stored in Git: `npm run build:audio` synthesizes all of it in seconds, and without it every study plays silently. The per-study score commands below rebuild a single score.
+Open **http://127.0.0.1:4179/**. The included viewing assets run locally with no Blender installation, MCP connection or speech credentials. Dependencies are served from the local installation. Upstream CAD, mesh and manual files are not stored in Git: `npm run fetch:sources` downloads each from its pinned upstream commit and checks its SHA-256. Only tests, the CAD audit and model rebuilds need them. Study music is not stored in Git: `npm run build:audio` synthesizes all of it in seconds, and without it every study plays silently. The per-study score commands below rebuild a single score.
 
 For the new dexterous-hand study, generate its local score and start its server:
 
@@ -207,6 +207,9 @@ Additional commands:
 ```sh
 # Requires locally regenerated narration and FFmpeg/FFprobe; no service call.
 npm run verify:audio
+
+# Download the pinned upstream CAD/mesh/manual files (npm test does this first).
+npm run fetch:sources
 
 # Audit the retained source and derived display assets.
 npm run audit:cad -- --example examples/wolf-actuator

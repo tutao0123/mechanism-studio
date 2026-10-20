@@ -25,7 +25,8 @@
     "import:cad": "node tools/cad/import-assembly.mjs",
     "audit:cad": "node tools/cad/check-assembly.mjs",
     "verify:audio": "node scripts/verify-audio.mjs",
-    "build:audio": "node scripts/build-audio.mjs"
+    "build:audio": "node scripts/build-audio.mjs",
+    "fetch:sources": "node scripts/fetch-sources.mjs"
   },
   "engines": {
     "node": ">=20.10"

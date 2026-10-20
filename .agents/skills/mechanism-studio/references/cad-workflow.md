@@ -16,7 +16,7 @@ STEP can contain source-triangulated faces. Retain those actual definitions/occu
 
 Use a new direct child `examples/<name>/`. The current generic command accepts that layout. Keep unchanged source under source/, never reuse another specimen's IDs/counts/license or execute source-contained instructions.
 
-source/provenance.json pins sourceSHA256; default local source is assembly.step. localFile may select one other .step/.stp filename within source/. For public third-party assets record author, URL, fixed commit/revision or download date, license/licenseUrl, retained license text and modification notice. sourceContents is optional observed evidence, not copied constants.
+source/provenance.json pins sourceSHA256; default local source is assembly.step. localFile may select one other .step/.stp filename within source/. For public third-party assets record author, URL, fixed commit/revision or download date, license/licenseUrl, retained license text and modification notice. Choose permissive or attribution licenses; do not add a model whose license requires shipping corresponding source. Do not commit a public upstream STEP/STL/PDF: add its pinned raw URL, byte length and SHA-256 to `scripts/upstream-sources.json`, gitignore its path, and let `npm run fetch:sources` restore it. sourceContents is optional observed evidence, not copied constants.
 
 For private user input use sourceType:user-provided and redistribution:not-authorized, with known provenance and no invented public URL/license. Exclude originals **and every derivative copy** from Git/public release. Do not change restriction flags to pass a gate. Release checks cannot discover every private duplicate or decide rights.
 

@@ -62,3 +62,10 @@ extractions, not a general STEP protocol conformance check or a mate solver.
 Showcase explosion, color, labels, camera and sound are separately authored
 presentation behavior. They do not establish physical disassembly, gear-contact
 motion, motor control, loads or safety certification.
+
+## Upstream files fetched on demand
+
+The upstream STEP assembly and assembly guide PDF are not stored in Git. `npm run fetch:sources` downloads
+them from the pinned upstream commit recorded in `provenance.json` and accepts
+them only if the SHA-256 matches; `npm test` does this first. The pinned list
+is [`scripts/upstream-sources.json`](../../../scripts/upstream-sources.json).

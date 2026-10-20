@@ -35,6 +35,16 @@ shots/
 *.mp4
 *.webm
 *.mov
+# Upstream CAD, mesh and manual files. `npm run fetch:sources` downloads each
+# from its pinned upstream commit (scripts/upstream-sources.json) and checks its
+# SHA-256. Licenses, notices, model descriptions and provenance stay in Git.
+examples/wolf-actuator/source/*.step
+examples/wolf-actuator/source/*.pdf
+examples/step-assembly/source/*.step
+EXAMPLE_ROBOT/source/**/*.[sS][tT][lL]
+examples/humanoid/source/**/*.[sS][tT][lL]
+examples/allegro-hand/source/**/*.[sS][tT][lL]
+examples/robotiq-gripper/source/**/*.[sS][tT][lL]
 # Code-synthesized study scores. `npm run build:audio` rebuilds each one and
 # checks it against the byte length and SHA-256 kept in its music-score.json.
 EXAMPLE_ROBOT/audio/robot-loop.wav

@@ -32,6 +32,7 @@ post is implied by this example's existence.
 To regenerate the included visual assets from the pinned MJCF and STL bytes:
 
 ```sh
+npm run fetch:sources   # downloads the pinned STL meshes
 node tools/robot/build-mjcf.mjs --example examples/allegro-hand
 ```
 

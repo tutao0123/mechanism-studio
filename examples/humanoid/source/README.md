@@ -85,3 +85,10 @@ serviceability.
 This is a source-backed **MJCF visual assembly**. It is not a native STEP or
 parametric CAD assembly; per-screw identity, B-rep geometry, collision-checked
 disassembly, balance, control and dynamics validation are outside its scope.
+
+## Upstream files fetched on demand
+
+The upstream STL meshes are not stored in Git. `npm run fetch:sources` downloads
+them from the pinned upstream commit recorded in `provenance.json` and accepts
+them only if the SHA-256 matches; `npm test` does this first. The pinned list
+is [`scripts/upstream-sources.json`](../../../scripts/upstream-sources.json).

@@ -21,5 +21,10 @@ jobs:
           node-version: ${{ matrix.node }}
           cache: npm
       - run: npm ci --ignore-scripts
+      # Upstream CAD/mesh files are fetched by hash; reuse verified downloads.
+      - uses: actions/cache@v4
+        with:
+          path: .cache/sources
+          key: upstream-sources-${{ hashFiles('scripts/upstream-sources.json') }}
       - run: npm test
       - run: npm run release:check
