@@ -162,10 +162,12 @@ The [delivery record](delivery.json) is kept as captured. Since then the shared
 study shell `shared/study/study.mjs` has gained an opt-in appearance option,
 spec labels and drafting hooks (study styles revision `study-styles-1`). Its
 digest therefore no longer matches the record
-(`9fb1f306…c04f` at capture, `fa3dd0f2…7c4b` now), and `npm run check:delivery`
-reports that one file as failed by design. The record is not re-hashed to make
-it pass. This edition passes no `appearance` option, so it renders with the
-default `atlas` style, whose values are those the shell used before.
+(`9fb1f306…c04f` at capture, `fa3dd0f2…7c4b` now). The record is not re-hashed.
+Instead, [`delivery-drift.json`](delivery-drift.json) documents that exact
+change with its reason and evidence, and `npm run check:delivery` reports the
+file as *documented* rather than failed; any further change still fails. This
+edition passes no `appearance` option, so it renders with the default `atlas`
+style, whose values are those the shell used before.
 
 The [pixel-identity record](../../../shared/study/evidence/default-style-pixels.json)
 compares deterministic Chromium frames from before and after the change on six

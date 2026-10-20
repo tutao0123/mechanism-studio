@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "manifest": "examples/robotiq-gripper/delivery.json",
+  "manifestSha256": "2ae04cfed99e58125028fceb6ee0ae7ed1668d49e56ffb80e63b75ab557ebb7a",
+  "changes": [
+    {
+      "path": "examples/robotiq-gripper/README.md",
+      "recorded": {
+        "bytes": 5555,
+        "sha256": "db235e610b58917dd54cf9bb13dc8d9204e4261d39198973e997f273066197e7"
+      },
+      "current": {
+        "bytes": 6918,
+        "sha256": "173f3f67ff7fe23751fd914b0a9b593a499c13dd6cf1397d77b4f64d3e63ede6"
+      },
+      "kind": "documentation",
+      "reason": "README revised after the recorded review: integration notes, score build and source fetch instructions, and this delivery note. Not loaded by the page.",
+      "evidence": []
+    },
+    {
+      "path": "examples/robotiq-gripper/serve.mjs",
+      "recorded": {
+        "bytes": 5039,
+        "sha256": "bfe23bcdc4a415e390de2ddbe7b48836d94685e9b18559b61572e5b5d22459b8"
+      },
+      "current": {
+        "bytes": 1826,
+        "sha256": "941c878a0d337cb90de6985b5b3aec2fea7aad4a25f494ec063d7456d50a8f7b"
+      },
+      "kind": "tooling",
+      "reason": "Preview server moved to the shared study preview runtime: example routes stay explicit and the shared runtime files are declared once in shared/study/preview-server.mjs. The server and page dependency-graph tests (tests/preview-pages.test.mjs) cover every served route.",
+      "evidence": []
+    },
+    {
+      "path": "package.json",
+      "recorded": {
+        "bytes": 1246,
+        "sha256": "802e449c611e7ceced833d4e0c84d4e5347ab9fc1e4896c291ebf7043f24e221"
+      },
+      "current": {
+        "bytes": 1281,
+        "sha256": "4a6dd5c52f990f3f6592ef62a4a70580ad657d1629269ddcf661f90c3168206f"
+      },
+      "kind": "tooling",
+      "reason": "npm scripts changed: build:audio and fetch:sources added, import:shaft-bearing removed with the GPL example. Dependencies, engines and the test command are unchanged.",
+      "evidence": []
+    },
+    {
+      "path": "shared/appearance/README.md",
+      "recorded": {
+        "bytes": 1710,
+        "sha256": "edbfa0564781d09a6022e0445c4fec3cd9131bd078f46629d9cfe5bfc4826b38"
+      },
+      "current": {
+        "bytes": 3989,
+        "sha256": "8c606ba5525055548237c42ccbf58146063100a5abc66243dab68eba86dd5c7c"
+      },
+      "kind": "documentation",
+      "reason": "Documentation of shared modules extended after the recorded review (study styles, spec labels, drafting, direct frames, local score builds). Not loaded by any page.",
+      "evidence": []
+    },
+    {
+      "path": "shared/study/README.md",
+      "recorded": {
+        "bytes": 9097,
+        "sha256": "2f3085de11f286d83d35095f62a626980568140209e77b1beff35caa04b0a87e"
+      },
+      "current": {
+        "bytes": 14207,
+        "sha256": "47a8b5c546c11885717dfb83eb655d33b2c182d7236f75bd1b2ef7c967f8fd29"
+      },
+      "kind": "documentation",
+      "reason": "Documentation of shared modules extended after the recorded review (study styles, spec labels, drafting, direct frames, local score builds). Not loaded by any page.",
+      "evidence": []
+    },
+    {
+      "path": "shared/study/study.mjs",
+      "recorded": {
+        "bytes": 23303,
+        "sha256": "9fb1f306e11f862854dc1469ed5b6b86a41a19517ce69ddb1d21e72650e3c04f"
+      },
+      "current": {
+        "bytes": 23290,
+        "sha256": "fa3dd0f2756bfc21d09dfb48d81a81ba6e62fe1f1c64b44280544b91a6997c4b"
+      },
+      "kind": "runtime",
+      "reason": "Shared study shell gained an opt-in appearance option, spec labels and drafting hooks (study-styles-1). This page passes no appearance option; its sampled frames and label names are byte-identical under the recorded and current shell.",
+      "evidence": [
+        {
+          "path": "shared/study/evidence/robot-studies-shell-pixels.json",
+          "sha256": "5aa12c082bfc6d7286c90fe9c0e4a209e6aefbb75053acb093b7f736cc887197"
+        }
+      ]
+    },
+    {
+      "path": "shared/study/tests/runtime-delivery.test.mjs",
+      "recorded": {
+        "bytes": 1483,
+        "sha256": "731e92b72e46c84d3c87ffebe65297265f0804da746a696e37d8cdc30a558de7"
+      },
+      "current": {
+        "bytes": 2168,
+        "sha256": "4b7d0df391c5e9fc302f9133254ad98bdeeeae12a6b2cb0b324ba3b92d7948a1"
+      },
+      "kind": "test",
+      "reason": "Runtime delivery test updated for the shared runtime file list. Not loaded by the page.",
+      "evidence": []
+    },
+    {
+      "path": "shared/viewer/README.md",
+      "recorded": {
+        "bytes": 3081,
+        "sha256": "17a9c539393ffd5916338e93b4f49ce0d71f48e1bf862357ab59adfc51aebecb"
+      },
+      "current": {
+        "bytes": 4362,
+        "sha256": "d0a4352b9777cb7c02be284fcea76ecfaad8413b07ec19f9a285a84f86460c0a"
+      },
+      "kind": "documentation",
+      "reason": "Documentation of shared modules extended after the recorded review (study styles, spec labels, drafting, direct frames, local score builds). Not loaded by any page.",
+      "evidence": []
+    },
+    {
+      "path": "tools/audio/README.md",
+      "recorded": {
+        "bytes": 1321,
+        "sha256": "ce70a7e86d455d573fcc680c8af3dc876410c8707306aad5f6d8a59aacbc0ffc"
+      },
+      "current": {
+        "bytes": 1384,
+        "sha256": "ad19d67f41292b4aec0cba78696caa7223c1c0edb1adfd3014bc6e08c7a6e4ae"
+      },
+      "kind": "documentation",
+      "reason": "Documentation of shared modules extended after the recorded review (study styles, spec labels, drafting, direct frames, local score builds). Not loaded by any page.",
+      "evidence": []
+    }
+  ]
+}

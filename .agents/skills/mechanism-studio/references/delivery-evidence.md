@@ -148,6 +148,20 @@ Delivery-only edits to a plan may follow capture if that plan is not consumed
 by the renderer. Record the old/new hash and the reason; retain the historical
 capture record. Do not silently rewrite the original measurement history.
 
+### Documenting later changes
+
+Record a reviewed change to a repository **input** in a `delivery-drift.json`
+beside the manifest, not by editing the manifest. The drift file names the
+manifest and binds to its exact bytes (`manifestSha256`). Each change gives the
+path, the `recorded` and `current` `{ bytes, sha256 }`, a `kind` (`documentation`,
+`test`, `tooling` or `runtime`), a reason, and `evidence` as `{ path, sha256 }`
+files in the repository. A `runtime` change needs evidence that the delivery is
+unaffected, such as a before/after pixel comparison of its frames. The checker
+reports a matching file as `documented`. It fails on a file that changed again,
+a stale entry, a rebound manifest, or missing or changed evidence. Evidence and
+artifacts cannot be excused this way: if they change, issue a new delivery
+record. `--ignore-drift` shows the raw comparison.
+
 ## Report completion clearly
 
 Return the working page, relevant local output and reproduction/check command.

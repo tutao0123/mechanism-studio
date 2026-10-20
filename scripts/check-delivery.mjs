@@ -74,6 +74,43 @@ function validate(manifest) {
   return errors;
 }
 
+/* A drift record documents reviewed changes to repository inputs made after a
+ * delivery was recorded, without rewriting the historical record. It sits beside
+ * the manifest and is bound to its exact bytes. A changed file counts as
+ * documented only when its current bytes equal the declared ones. */
+export const DRIFT_FILE = 'delivery-drift.json';
+const DRIFT_KINDS = new Set(['documentation', 'test', 'tooling', 'runtime']);
+const HEX64 = /^[a-f\d]{64}$/;
+const digestPair = value => plain(value) && Number.isSafeInteger(value.bytes) && value.bytes >= 0 && typeof value.sha256 === 'string' && HEX64.test(value.sha256);
+
+function validateDrift(drift, manifest, manifestPath, manifestSha256) {
+  if (!plain(drift)) return ['Drift record must be a JSON object.'];
+  const errors = [];
+  if (drift.schemaVersion !== 1) errors.push('schemaVersion must be 1.');
+  if (drift.manifest !== manifestPath) errors.push('manifest must name the delivery record it documents.');
+  if (drift.manifestSha256 !== manifestSha256) errors.push('manifestSha256 must equal the SHA-256 of the delivery record bytes.');
+  if (!Array.isArray(drift.changes) || !drift.changes.length) errors.push('changes must be a nonempty array.');
+  const declared = new Map(manifest.files.map(file => [file.path, file])), seen = new Set();
+  for (const [index, change] of (Array.isArray(drift.changes) ? drift.changes : []).entries()) {
+    const label = `changes[${index}]`;
+    if (!plain(change)) { errors.push(`${label} must be an object.`); continue; }
+    const file = declared.get(change.path);
+    if (!file) errors.push(`${label}.path must be a file declared by the delivery record.`);
+    else {
+      if (file.storage !== 'repository' || file.role !== 'input') errors.push(`${label}.path must be a repository input; changed evidence or artifacts need a new delivery record.`);
+      if (!digestPair(change.recorded) || change.recorded.bytes !== file.bytes || change.recorded.sha256 !== file.sha256.toLowerCase()) errors.push(`${label}.recorded must equal the declared bytes and SHA-256.`);
+    }
+    if (seen.has(change.path)) errors.push(`${label}.path duplicates another change.`);
+    seen.add(change.path);
+    if (!digestPair(change.current)) errors.push(`${label}.current must declare bytes and a lowercase SHA-256.`);
+    if (!DRIFT_KINDS.has(change.kind)) errors.push(`${label}.kind must be documentation, test, tooling or runtime.`);
+    if (!nonempty(change.reason)) errors.push(`${label}.reason must be a nonempty string.`);
+    if (!Array.isArray(change.evidence) || change.evidence.some(item => !plain(item) || pathError(item.path) || typeof item.sha256 !== 'string' || !HEX64.test(item.sha256))) errors.push(`${label}.evidence must list { path, sha256 } entries.`);
+    else if (change.kind === 'runtime' && !change.evidence.length) errors.push(`${label}: a runtime change needs evidence that the delivery is unaffected.`);
+  }
+  return errors;
+}
+
 class UnsafePath extends Error {}
 
 async function checkedPath(root, path) {
@@ -118,13 +155,13 @@ async function digest(root, filePath, checked) {
 }
 
 /** No writes, downloads, external commands, or automatic digest updates. */
-export async function checkDelivery(root, manifestPath, { requireLocal = false } = {}) {
+export async function checkDelivery(root, manifestPath, { requireLocal = false, ignoreDrift = false } = {}) {
   const report = {
     schemaVersion: 1, manifest: manifestPath, id: null, route: null, requireLocal: Boolean(requireLocal), ok: false,
-    validationErrors: [], files: [], checks: [], limitations: [],
+    validationErrors: [], drift: null, files: [], checks: [], limitations: [],
     scope: 'File integrity and declared evidence availability only. This does not verify engineering correctness, UI/media quality, licensing completeness, or publication.',
   };
-  let manifest;
+  let manifest, manifestSha256;
   try {
     const lexicalRoot = resolve(root);
     const rootInfo = await lstat(lexicalRoot);
@@ -133,13 +170,33 @@ export async function checkDelivery(root, manifestPath, { requireLocal = false }
     if (relative(root, lexicalRoot) !== '') throw new UnsafePath('Project root must not have symlink or junction ancestors.');
     const target = await checkedPath(root, manifestPath);
     if (!target) throw new Error('Manifest is missing.');
-    manifest = JSON.parse(await readFile(target.path, 'utf8'));
+    const manifestBytes = await readFile(target.path);
+    manifestSha256 = createHash('sha256').update(manifestBytes).digest('hex');
+    manifest = JSON.parse(manifestBytes.toString('utf8'));
     report.validationErrors = validate(manifest);
   } catch (error) {
     report.validationErrors.push(error.message);
     return report;
   }
   if (report.validationErrors.length) return report;
+  let drift = new Map();
+  if (!ignoreDrift) {
+    const driftPath = manifestPath.includes('/') ? manifestPath.replace(/[^/]*$/, DRIFT_FILE) : DRIFT_FILE;
+    try {
+      const checked = await checkedPath(root, driftPath);
+      if (checked) {
+        const record = JSON.parse(await readFile(checked.path, 'utf8'));
+        const errors = validateDrift(record, manifest, manifestPath, manifestSha256);
+        for (const change of errors.length ? [] : record.changes) for (const item of change.evidence) {
+          const evidence = await checkedPath(root, item.path);
+          if (!evidence || (await digest(root, item.path, evidence)).sha256 !== item.sha256) errors.push(`evidence ${item.path} is missing or changed.`);
+        }
+        if (errors.length) { report.validationErrors.push(...errors.map(error => `${driftPath}: ${error}`)); return report; }
+        drift = new Map(record.changes.map(change => [change.path, change]));
+        report.drift = { path: driftPath, changes: record.changes.length };
+      }
+    } catch (error) { report.validationErrors.push(`${driftPath}: ${error.message}`); return report; }
+  }
   report.id = manifest.id;
   report.route = manifest.route;
   report.limitations = [...manifest.limitations];
@@ -155,6 +212,13 @@ export async function checkDelivery(root, manifestPath, { requireLocal = false }
         entry.actual = await digest(root, file.path, checked);
         entry.status = entry.actual.bytes === entry.expected.bytes && entry.actual.sha256 === entry.expected.sha256 ? 'verified' : 'changed';
         if (entry.status === 'changed') entry.message = 'Bytes or SHA-256 differ from the declared delivery; digests were not updated.';
+        const change = drift.get(file.path);
+        if (change && entry.status === 'changed') {
+          if (entry.actual.bytes === change.current.bytes && entry.actual.sha256 === change.current.sha256) {
+            entry.status = 'documented'; entry.message = 'Changed after the delivery was recorded; the drift record documents this exact change.';
+            entry.drift = { kind: change.kind, reason: change.reason, evidence: change.evidence.map(item => item.path) };
+          } else entry.message = 'Changed again after the documented drift; digests were not updated.';
+        } else if (change && entry.status === 'verified') report.validationErrors.push(`${file.path}: drift entry is stale; the file matches the delivery record again.`);
       }
     } catch (error) { entry.status = error instanceof UnsafePath ? 'unsafe' : 'error'; entry.message = error.message; }
     report.files.push(entry);
@@ -167,38 +231,41 @@ export async function checkDelivery(root, manifestPath, { requireLocal = false }
         : evidence.some(file => file.status === 'unavailable') ? 'unavailable' : 'verified';
     return { id: check.id, declaredStatus: check.status, summary: check.summary, evidence, evidenceAvailability };
   });
-  report.ok = report.files.every(file => file.status === 'verified' || (file.status === 'unavailable' && !requireLocal));
+  const accepted = file => ['verified', 'documented'].includes(file.status) || (file.status === 'unavailable' && !requireLocal);
+  report.ok = !report.validationErrors.length && report.files.every(accepted);
   report.summary = {
     files: report.files.length,
     verified: report.files.filter(file => file.status === 'verified').length,
+    documented: report.files.filter(file => file.status === 'documented').length,
     unavailable: report.files.filter(file => file.status === 'unavailable').length,
-    failed: report.files.filter(file => file.status !== 'verified' && !(file.status === 'unavailable' && !requireLocal)).length,
+    failed: report.files.filter(file => !accepted(file)).length,
   };
   return report;
 }
 
 async function main(args) {
   if (args.length === 1 && ['--help', '-h'].includes(args[0])) {
-    console.log('Usage: node scripts/check-delivery.mjs --manifest <project-relative.json> [--require-local]\nRead-only integrity check; local-only files may be unavailable unless --require-local is set.');
+    console.log('Usage: node scripts/check-delivery.mjs --manifest <project-relative.json> [--require-local] [--ignore-drift]\nRead-only integrity check; local-only files may be unavailable unless --require-local is set.\nA delivery-drift.json beside the manifest documents reviewed later changes; --ignore-drift reports them as changed.');
     return;
   }
-  let manifestPath, requireLocal = false;
+  let manifestPath, requireLocal = false, ignoreDrift = false;
   for (let index = 0; index < args.length; index++) {
     const arg = args[index];
     if (arg === '--manifest' && manifestPath === undefined && args[index + 1] && !args[index + 1].startsWith('--')) manifestPath = args[++index];
     else if (arg === '--require-local' && !requireLocal) requireLocal = true;
+    else if (arg === '--ignore-drift' && !ignoreDrift) ignoreDrift = true;
     else throw new Error(`Unexpected or incomplete argument: ${arg}`);
   }
   if (!manifestPath) throw new Error('Missing --manifest <project-relative.json>.');
   const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-  const report = await checkDelivery(root, manifestPath, { requireLocal });
+  const report = await checkDelivery(root, manifestPath, { requireLocal, ignoreDrift });
   console.log(JSON.stringify(report, null, 2));
   if (!report.ok) process.exitCode = 1;
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   main(process.argv.slice(2)).catch(error => {
-    console.error(`${error.message}\nUsage: node scripts/check-delivery.mjs --manifest <project-relative.json> [--require-local]`);
+    console.error(`${error.message}\nUsage: node scripts/check-delivery.mjs --manifest <project-relative.json> [--require-local] [--ignore-drift]`);
     process.exitCode = 1;
   });
 }
