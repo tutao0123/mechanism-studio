@@ -63,8 +63,8 @@ node examples/wolf-actuator/tour-v2/audio/build.mjs
 node examples/wolf-actuator/serve.mjs
 ```
 
-The long WAV is excluded from Git; its deterministic source and score are
-retained. The server defaults to port **4181**; use its printed address when
+Like every generated score WAV, it is excluded from Git (`npm run build:audio`
+builds them all); its deterministic source and score are retained. The server defaults to port **4181**; use its printed address when
 `PORT` is overridden. The earlier [v3 tooth-interface edition](../examples/wolf-actuator/tour-v3/README.md)
 at [`/tour-v3/`](http://127.0.0.1:4181/tour-v3/) remains available with the same
 85.71-second timeline and original close-up camera, without the v4 pair cues.
@@ -140,8 +140,8 @@ uses its documented dedicated server, not a root-server `/examples/` route.
 - **Generated delivery files are intentionally absent.** MP4s, captured frames,
   machine-specific `.blend` exports and provider-generated MP3s stay ignored.
   Model GLBs, source builders, music synthesis code, lessons, provenance and
-  tests are retained. Earlier code-music WAVs are bundled; the longer WOLF
-  v2/v3/v4 WAV must be built with the command above. Missing optional media is
+  tests are retained. Code-music WAVs are not bundled: `npm run build:audio`
+  renders every study score once and checks its recorded hash. Missing optional media is
   different from a missing model.
 - **GitHub does not execute the pages.** A repository folder is source browsing.
   Clone and run the documented local server to load Three.js, models and audio.

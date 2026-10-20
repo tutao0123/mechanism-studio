@@ -9,7 +9,7 @@ check does not relicense an asset or replace that source review.
 
 The public tree includes source code, the project-local skill, its module
 references, tests, editable procedural builders and inputs, runtime GLB assets,
-selected original code-generated WAV music, and licensed upstream CAD/URDF/MJCF source with
+original music synthesis code with score hashes, and licensed upstream CAD/URDF/MJCF source with
 its provenance. Original source files are retained where a third-party license
 requires them. Dependencies are installed from the lockfile with `npm ci`;
 machine-specific runtimes and downloaded checkouts are not vendored.
@@ -26,9 +26,9 @@ The following stay local and are ignored without deleting them:
 - Provider-generated MP3 narration. The release retains lesson text, manifests,
   measured timing and synthesis scripts, but does not assume the provider's
   output and voice rights can be sublicensed under MIT. Existing local audio is
-  preserved. Selected original code-generated WAV music remains included;
-  WOLF's long score and the gearbox, Allegro and Robotiq scores are rebuilt
-  locally from their retained synthesis code and hash manifests.
+  preserved. Original code-generated score WAVs are rebuilt locally from their
+  retained synthesis code and hash manifests with `npm run build:audio`; only
+  the five Kenney CC0 effects are kept as WAV files.
 
 The lock preview PNG received metadata-only cleanup: ancillary EXIF/text chunks
 were removed while the compressed `IDAT` image data and 1400 × 1000 dimensions
@@ -62,7 +62,9 @@ credential values are never printed or saved. The gate checks:
 - CAD provenance that explicitly forbids redistribution or lacks permission
   for a user-provided source.
 - Reviewed file types and repository size budgets: **95 MiB per file** and
-  **328 MiB total** (the two retained robot models raised the budget to 320 MiB; the separate cinematic edition adds a reproducible 4.4 MiB PCM score), below GitHub's individual file limit. The large WOLF STEP is
+  **300 MiB total**, below GitHub's individual file limit. Generated study
+  score WAVs are not shipped: `npm run build:audio` rebuilds each one and checks
+  it against the byte length and SHA-256 in its `music-score.json`. The large WOLF STEP is
   intentionally retained together with its source license and provenance.
 
 Tests exercise redacted findings, forced private entries, unsafe `.env.example`

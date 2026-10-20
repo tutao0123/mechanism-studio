@@ -48,10 +48,11 @@ Requires **Node.js 20.10+**, npm and a browser supporting WebGL 2.
 git clone https://github.com/tutao0123/mechanism-studio.git
 cd mechanism-studio
 npm ci
+npm run build:audio   # once: renders every original study score and checks its recorded hash
 npm run preview
 ```
 
-Open **http://127.0.0.1:4179/**. The included viewing assets run locally with no Blender installation, MCP connection or speech credentials. Dependencies are served from the local installation. A first clone includes substantial CAD source files for provenance and reproducibility.
+Open **http://127.0.0.1:4179/**. The included viewing assets run locally with no Blender installation, MCP connection or speech credentials. Dependencies are served from the local installation. A first clone includes substantial CAD source files for provenance and reproducibility. Study music is not stored in Git: `npm run build:audio` synthesizes all of it in seconds, and without it every study plays silently. The per-study score commands below rebuild a single score.
 
 For the new dexterous-hand study, generate its local score and start its server:
 

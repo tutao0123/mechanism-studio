@@ -14,7 +14,8 @@ Each example exposes `createMusicStory(index, sourceAssembly)`, its beat clock,
 story revision and `MUSIC_EVENTS`. Each cue has an ID, beat, kind, level and actual
 part IDs. The score checks those bindings and bakes every cue into the same PCM
 clock; browser music is driven by native playback time. The WAV is generated
-locally and ignored by Git; the score metadata, hash and synthesis code are kept.
+locally and ignored by Git (`npm run build:audio` builds it with every other
+study score); the score metadata, hash and synthesis code are kept.
 
 White-line studies retain quiet pads, felt-like keys, warm bass and sparse air or
 wood-like accents. The effects explain editorial release/return/detail events;

@@ -17,6 +17,11 @@ async function collect(directory) {
   return found;
 }
 const tests = ['model.test.mjs', ...await collect('shared'), ...await collect('tests'), ...await collect('examples'), ...await collect('EXAMPLE_ROBOT/tests'), ...await collect('EXAMPLE_ROBOT/kinetic/tests'), ...await collect('prototype-3d/tests'), ...await collect('prototype-3d/voice'), ...await collect('showcase'), ...await collect('tools/cad/tests'), ...await collect('tools/robot/tests'), ...await collect('tools/video')].sort();
+// Synthesized scores are not kept in Git. Build any that are missing first, and
+// prove each reproduces the bytes recorded in its music-score.json.
+const audio = spawnSync(process.execPath, ['scripts/build-audio.mjs'], { cwd: root, stdio: 'inherit' });
+if (audio.error) throw audio.error;
+if (audio.status) { process.exitCode = audio.status; throw new Error('Study scores did not reproduce their recorded bytes; see above.'); }
 const result = spawnSync(process.execPath, ['--test', ...tests], { cwd: root, stdio: 'inherit' });
 if (result.error) throw result.error;
 process.exitCode = result.status || 0;

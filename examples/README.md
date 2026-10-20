@@ -103,8 +103,10 @@ the interactive page.
 
 ## What a fresh clone includes
 
-Build the two new robot soundtracks before music playback. Their original
-synthesis code and score metadata are retained; the generated WAVs stay local.
+Build the soundtracks before music playback: `npm run build:audio` renders every
+study score once and checks it against its recorded hash. Original synthesis
+code and score metadata are retained; the generated WAVs stay local. To build
+only the two robot soundtracks:
 
 ```sh
 node tools/audio/build-study-score.mjs --example examples/allegro-hand
@@ -117,7 +119,7 @@ Optional regeneration from retained MJCF/STL uses the
 it is separate from launching a page or generating its score.
 
 - GLB display geometry, scene contracts, models, lessons, source/provenance records and implementation adapters.
-- Deterministic original-music synthesis source and the bundled WAVs for the robot, humanoid and earlier WOLF studies. The longer shared WOLF v2/v3/v4 WAV is excluded and built with the command above. The humanoid additionally retains five separately licensed Kenney CC0 effects and their provenance. Click **Play with music** to enable audio; the media clock controls motion, camera, labels and effects together.
+- Deterministic original-music synthesis source and score metadata for every study. No generated score WAV is in Git; `npm run build:audio` builds them all. The humanoid additionally retains five separately licensed Kenney CC0 effects and their provenance. Click **Play with music** to enable audio; the media clock controls motion, camera, labels and effects together.
 - Blender Python builders for the original teaching models. Local `.blend` exports remain on the author's machine because their binary metadata embeds machine-specific paths; rebuild them if needed.
 - Original third-party CAD/URDF files with licenses. Galileo also retains its upstream native Fusion source. These assets are separately licensed from the MIT runtime.
 
@@ -165,7 +167,7 @@ does not independently validate a mechanical claim or a recorded review.
 
 Use [CAD import setup](../tools/cad/README.md) and [XCAF setup](../tools/cad/README-xcaf.md) before rebuilding engineering derivatives. The root `npm run import:cad -- --example examples/<name>` command requires a supported source package and project-local OCCT backend; it does not generate a new viewer page or recover joints.
 
-Music rebuild commands are `node EXAMPLE_ROBOT/audio/build.mjs`, `node EXAMPLE_ROBOT/kinetic/audio/build.mjs`, and `node examples/wolf-actuator/audio/build.mjs`. The retained v1 WOLF tour uses `node examples/wolf-actuator/tour/audio/build.mjs`; v2, v3 and v4 share `node examples/wolf-actuator/tour-v2/audio/build.mjs`. Rebuilding visual assets may require the example's documented Python/Blender environment. Recording is separate from viewing: deterministic capture plus [video encoding](../tools/video/README.md) can produce an MP4, while captured frames, exports and browser review screenshots remain local ignored outputs.
+`npm run build:audio` runs every music build below and verifies each recorded hash. Individual music rebuild commands are `node EXAMPLE_ROBOT/audio/build.mjs`, `node EXAMPLE_ROBOT/kinetic/audio/build.mjs`, and `node examples/wolf-actuator/audio/build.mjs`. The retained v1 WOLF tour uses `node examples/wolf-actuator/tour/audio/build.mjs`; v2, v3 and v4 share `node examples/wolf-actuator/tour-v2/audio/build.mjs`. Rebuilding visual assets may require the example's documented Python/Blender environment. Recording is separate from viewing: deterministic capture plus [video encoding](../tools/video/README.md) can produce an MP4, while captured frames, exports and browser review screenshots remain local ignored outputs.
 
 The humanoid rebuilds with `node examples/humanoid/build-humanoid.mjs` (Node and
 Python 3 standard library) and `node examples/humanoid/audio/build.mjs` (Node,

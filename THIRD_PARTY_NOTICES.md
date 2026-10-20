@@ -269,7 +269,8 @@ locally. [docs/licensing.md](docs/licensing.md#optional-doubao-narration) record
 the scope/evidence; recipients must confirm their own account/voice/service
 rights before generating or redistributing narration. No credentials or account
 configuration is published. Code-synthesized music is original MIT work;
-some longer generated WAV editions are rebuilt locally from their included scripts.
+its generated WAVs are not in Git and are rebuilt locally from the included
+scripts with `npm run build:audio`.
 
 ## WOLF modular-bearing motion evidence
 

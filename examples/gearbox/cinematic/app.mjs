@@ -55,7 +55,7 @@ async function init(){
 const ready=init().catch(error=>{status(error.message);console.error(error);throw error;});
 async function play(){await ready;rendering=false;music=true;audio.currentTime=time;await audio.play();playing=true;last=0;status('Playing with the original cinematic score.');}
 function pause(){playing=false;audio.pause();music=false;last=0;}
-document.getElementById('play').onclick=()=>play().catch(error=>status(`Audio could not start: ${error.message}`));
+document.getElementById('play').onclick=()=>play().catch(error=>status(audio.error?'The score is not built yet. Run npm run build:audio, then reload.':`Audio could not start: ${error.message}`));
 document.getElementById('pause').onclick=pause;
 document.getElementById('restart').onclick=async()=>{pause();await ready;compose(0);};
 document.getElementById('seek').oninput=async event=>{pause();await ready;compose(Number(event.target.value)%DURATION);};

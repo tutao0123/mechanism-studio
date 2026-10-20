@@ -1,4 +1,5 @@
 import { mkdir, writeFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createScore, renderScore, encodeWav, analyzeAudio, sha256 } from './synth.mjs';
 
@@ -16,7 +17,7 @@ export async function buildMusic() {
   return metadata;
 }
 
-if (process.argv[1] && fileURLToPath(import.meta.url) === fileURLToPath(new URL(`file:///${process.argv[1].replaceAll('\\', '/')}`))) {
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const result = await buildMusic();
   console.log(JSON.stringify({ file: result.file, durationSeconds: result.durationSeconds, bpm: result.bpm, bars: result.bars, sha256: result.sha256, analysis: result.analysis }, null, 2));
 }
