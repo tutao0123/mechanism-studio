@@ -19,7 +19,6 @@ import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const studyScore = example => ['tools/audio/build-study-score.mjs', '--example', example];
-// Order matters: the WOLF score reuses the robot score's PCM bytes.
 export const SCORES = Object.freeze([
   { metadata: 'EXAMPLE_ROBOT/audio/music-score.json', build: ['EXAMPLE_ROBOT/audio/build.mjs'] },
   { metadata: 'EXAMPLE_ROBOT/audio/editions/assembly-return-v1/music-score.json', build: ['EXAMPLE_ROBOT/audio/editions/assembly-return-v1/build.mjs'] },
@@ -29,11 +28,6 @@ export const SCORES = Object.freeze([
   { metadata: 'examples/gearbox/cinematic/audio/music-score.json', build: ['examples/gearbox/cinematic/audio/build.mjs'] },
   { metadata: 'examples/humanoid/audio/music-score.json', build: ['examples/humanoid/audio/build.mjs'] },
   { metadata: 'examples/robotiq-gripper/audio/music-score.json', build: studyScore('examples/robotiq-gripper') },
-  { metadata: 'examples/wolf-actuator/audio/music-score.json', build: ['examples/wolf-actuator/audio/build.mjs'] },
-  { metadata: 'examples/wolf-actuator/bearing/music-score.json', build: ['examples/wolf-actuator/bearing/audio/build.mjs'] },
-  { metadata: 'examples/wolf-actuator/detail/music-score.json', build: ['examples/wolf-actuator/detail/audio/build.mjs'] },
-  { metadata: 'examples/wolf-actuator/tour/music-score.json', build: ['examples/wolf-actuator/tour/audio/build.mjs'] },
-  { metadata: 'examples/wolf-actuator/tour-v2/music-score.json', build: ['examples/wolf-actuator/tour-v2/audio/build.mjs'] },
 ].map(Object.freeze));
 
 const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');

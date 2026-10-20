@@ -195,7 +195,7 @@ export async function exportVideo(options) {
   return report;
 }
 
-export const help = `Usage: node tools/video/export.mjs --frames <project-relative-folder> --audio <project-relative-audio> --out <project-relative-output/clip.mp4> --fps 30 --frame-count 1029 --width 1920 --height 1080 --title "Mechanism Studio — WOLF actuator" [--overwrite]
+export const help = `Usage: node tools/video/export.mjs --frames <project-relative-folder> --audio <project-relative-audio> --out <project-relative-output/clip.mp4> --fps 30 --frame-count 1029 --width 1920 --height 1080 --title "Mechanism Studio — gearbox" [--overwrite]
 Frames: 00000.jpg…01028.jpg, or six-digit names, starting at zero. Existing outputs are preserved unless --overwrite is supplied.
 The audio must already match the frame duration within one frame. No playback-rate change is applied.
 Requires local ffmpeg and ffprobe on PATH. All inputs/outputs and cache remain inside Mechanism Studio.`;

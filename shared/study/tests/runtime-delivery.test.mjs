@@ -4,7 +4,6 @@ import { once } from 'node:events';
 import { STUDY_RUNTIME_FILES } from '../preview-server.mjs';
 import { createRobotServer, publicFile } from '../../../EXAMPLE_ROBOT/serve.mjs';
 import { createHumanoidServer } from '../../../examples/humanoid/serve.mjs';
-import { createWolfServer } from '../../../examples/wolf-actuator/serve.mjs';
 import { createGearboxServer } from '../../../examples/gearbox/serve.mjs';
 import { createHandServer } from '../../../examples/allegro-hand/serve.mjs';
 import { createGripperServer } from '../../../examples/robotiq-gripper/serve.mjs';
@@ -16,7 +15,7 @@ async function withServer(create, run) {
 }
 
 test('every isolated study preview serves the declared shared runtime with its content type', async () => {
-  for (const create of [createRobotServer, createHumanoidServer, createWolfServer, createGearboxServer, createHandServer, createGripperServer]) {
+  for (const create of [createRobotServer, createHumanoidServer, createGearboxServer, createHandServer, createGripperServer]) {
     await withServer(create, async base => {
       for (const path of STUDY_RUNTIME_FILES) {
         const response = await fetch(`${base}/${path}`);

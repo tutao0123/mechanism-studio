@@ -183,19 +183,3 @@ test('CAD audit limits documented effective recovery and rejects contradictory r
   editGlb(input, json => { json.meshes.find(m => m.extras.definition_id === 'def-3').extras.faceTriangleRanges = structuredClone(definition.geometry.faceTriangleRanges); });
   report = inspectCadEvidence(input); assert.equal(report.status, 'failed'); assert.match(check(report, 'mesh-face-evidence').message, /successful retained recovery attempt/);
 });
-
-test('CAD audit validates the real retained WOLF assembly with disclosed per-face recovery', async () => {
-  const root = new URL('../../examples/wolf-actuator/', import.meta.url), readJson = async path => JSON.parse(await readFile(new URL(path, root), 'utf8'));
-  const [sourceBytes, glbBytes, provenance, manifest, contract, importReport] = await Promise.all([readFile(new URL('source/assembly.step', root)), readFile(new URL('assets/assembly.glb', root)), readJson('source/provenance.json'), readJson('assets/assembly-manifest.json'), readJson('assets/scene-contract.json'), readJson('assets/import-report.json')]);
-  const report = inspectCadEvidence({ sourceBytes, glbBytes, provenance, manifest, contract, importReport, sourceMetadata: extractStepMetadata(sourceBytes.toString('utf8')) });
-  assert.equal(report.status, 'limited', JSON.stringify(report.findings));
-  assert.equal(report.capabilities.sourceIdentity.status, 'supported'); assert.equal(report.capabilities.placementConsistency.status, 'supported');
-  assert.equal(report.summary.recoveredFaces, importReport.meshWarnings.length); assert.equal(report.summary.definitions, manifest.definitions.length);
-});
-
-test('legacy KFL08 fragment display is not promoted to source occurrence identity', async () => {
-  const root = new URL('../../examples/step-assembly/', import.meta.url), readJson = async path => JSON.parse(await readFile(new URL(path, root), 'utf8'));
-  const [sourceBytes, glbBytes, provenance, contract, importReport] = await Promise.all([readFile(new URL('source/kfl08.step', root)), readFile(new URL('assets/assembly.glb', root)), readJson('source/provenance.json'), readJson('assets/scene-contract.json'), readJson('assets/import-report.json')]);
-  const report = inspectCadEvidence({ sourceBytes, glbBytes, provenance, contract, importReport });
-  assert.equal(report.status, 'limited', JSON.stringify(report.findings)); assert.equal(report.capabilities.sourceIdentity.status, 'limited'); assert.equal(report.capabilities.placementConsistency.status, 'limited');
-});

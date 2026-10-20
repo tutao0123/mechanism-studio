@@ -26,8 +26,6 @@ test('upstream payloads are pinned, ignored by Git and never tracked', () => {
 
 test('every pinned hash matches the example’s own provenance record', async () => {
   const recorded = new Map();
-  for (const file of (await readJson('examples/wolf-actuator/source/download-records.json')).files) recorded.set(`examples/wolf-actuator/source/${file.local}`, file.sha256);
-  recorded.set('examples/step-assembly/source/kfl08.step', (await readJson('examples/step-assembly/source/provenance.json')).sourceSHA256);
   for (const dir of ['EXAMPLE_ROBOT', 'examples/humanoid', 'examples/allegro-hand', 'examples/robotiq-gripper']) {
     for (const file of (await readJson(`${dir}/source/provenance.json`)).files) recorded.set(`${dir}/source/${file.localFile}`, file.sha256);
   }

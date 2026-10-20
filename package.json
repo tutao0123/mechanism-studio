@@ -21,7 +21,6 @@
     "export:spec": "node prototype-3d/export-spec.mjs",
     "release:check": "node scripts/release-check.mjs",
     "check:delivery": "node scripts/check-delivery.mjs",
-    "import:step": "node tools/cad/import-kfl08.mjs",
     "import:cad": "node tools/cad/import-assembly.mjs",
     "audit:cad": "node tools/cad/check-assembly.mjs",
     "verify:audio": "node scripts/verify-audio.mjs",
@@ -32,7 +31,6 @@
     "node": ">=20.10"
   },
   "dependencies": {
-    "occt-import-js": "0.0.23",
     "three": "0.186.1"
   }
 }

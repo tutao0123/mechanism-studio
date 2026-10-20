@@ -16,7 +16,7 @@ const base = `http://127.0.0.1:${server.address().port}`;
 test.after(() => new Promise(resolve => server.close(resolve)));
 
 test('standalone preview serves the model and GLB without a parent workspace', async () => {
-  for (const path of ['/model.mjs', '/THIRD_PARTY_NOTICES.md', '/docs/cad-roadmap.md', '/prototype-3d/index.html', '/prototype-3d/assets/lock.glb', '/node_modules/three/build/three.module.js', '/shared/viewer/viewer.mjs', '/shared/viewer/example.css', '/shared/voice/player.mjs', '/shared/assets/contract.mjs', '/examples/inline-four/index.html', '/examples/inline-four/app.mjs', '/examples/inline-four/assets/inline-four.glb', '/examples/inline-four/voice/audio-manifest.json', '/examples/turbofan/index.html', '/examples/turbofan/assets/turbofan.glb', '/examples/quadruped/index.html', '/examples/quadruped/assets/quadruped.glb', '/examples/step-assembly/index.html', '/examples/step-assembly/assets/assembly.glb', '/examples/step-assembly/source/kfl08.step']) {
+  for (const path of ['/model.mjs', '/THIRD_PARTY_NOTICES.md', '/docs/cad-roadmap.md', '/prototype-3d/index.html', '/prototype-3d/assets/lock.glb', '/node_modules/three/build/three.module.js', '/shared/viewer/viewer.mjs', '/shared/viewer/example.css', '/shared/voice/player.mjs', '/shared/assets/contract.mjs', '/examples/inline-four/index.html', '/examples/inline-four/app.mjs', '/examples/inline-four/assets/inline-four.glb', '/examples/inline-four/voice/audio-manifest.json', '/examples/turbofan/index.html', '/examples/turbofan/assets/turbofan.glb', '/examples/quadruped/index.html', '/examples/quadruped/assets/quadruped.glb']) {
     assert.equal((await fetch(base + path)).status, 200, path);
   }
   const document = await fetch(base + '/document?path=docs/cad-roadmap.md');
@@ -39,7 +39,7 @@ test('preview rejects tools, sibling projects, configuration and arbitrary voice
 });
 test('gallery exposes implemented studies, credit-safe previews and the honest historical lock entry', async () => {
   const gallery = await (await fetch(base + '/')).text();
-  for (const route of ['http://127.0.0.1:4180/?clean=1', 'http://127.0.0.1:4180/kinetic/?clean=1', 'http://127.0.0.1:4181/?clean=1', 'docs/examples-status.md']) assert.ok(gallery.includes(route), route);
+  for (const route of ['http://127.0.0.1:4180/?clean=1', 'http://127.0.0.1:4180/kinetic/?clean=1', 'http://127.0.0.1:4183/?clean=1', 'docs/examples-status.md']) assert.ok(gallery.includes(route), route);
   assert.equal((await fetch(base + '/docs/media/so-arm102-kinetic.jpg')).status, 200);
   assert.equal((await fetch(base + '/document?path=examples/README.md')).status, 200);
   const legacy = await fetch(base + '/examples/lock-comparison/');
@@ -52,7 +52,7 @@ test('process-layer source is served without exposing tests or provider configur
 });
 test('shared CAD inspection module stays public while local CAD tools stay private', async () => {
   for (const path of ['/shared/cad/assembly.mjs', '/shared/cad/README.md']) assert.equal((await fetch(base + path)).status, 200, path);
-  for (const path of ['/shared/cad/assembly.test.mjs', '/tools/cad/import-xcaf.py', '/.tools/cad-python/Scripts/python.exe', '/output/cad-research/wolf-fine.json', '/examples/shaft-bearing/', '/examples/wolf-actuator/source/assembly.step']) assert.equal((await fetch(base + path)).status, 403, path);
+  for (const path of ['/shared/cad/assembly.test.mjs', '/tools/cad/import-xcaf.py', '/.tools/cad-python/Scripts/python.exe', '/examples/shaft-bearing/', '/examples/step-assembly/', '/examples/wolf-actuator/']) assert.equal((await fetch(base + path)).status, 403, path);
 });
 test('English showcases serve optional local narration and required adapters while keeping tools private', async t => {
   assert.equal((await fetch(base + '/showcase/presentation.mjs')).status, 200);

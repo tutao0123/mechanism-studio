@@ -13,5 +13,5 @@
   "availableDepth": "30 source bodies, 35 visual mesh occurrences",
   "engineeringEvidence": "Source hierarchy, rest transforms and 29 hinge definitions; the free base is retained as source evidence.",
   "presentation": "Zero joint pose with authored observation translations. No gait, balance, actuator internals, hidden screws or service sequence.",
-  "distinction": "A separate WOLF component study uses its own real CAD internals; it must not be described as G1 hardware."
+  "distinction": "Other studies use their own source or authored models; none of their internals may be described as G1 hardware."
 }
