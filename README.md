@@ -28,7 +28,7 @@ covers their compatibility with the shared study server after the latest upstrea
 
 ![The same gearbox moment in the default white atlas edition and the blueprint edition, with indexed spec labels and a measured dimension](docs/media/gearbox-editions.jpg)
 
-*The same moment in two editions: the default white atlas (top) and an opt-in [blueprint](examples/gearbox/README.md#two-editions) (bottom), drawn white-on-blue with centre lines on the shaft axes; the full blueprint page adds a title block and one stamp. Labels carry an index and a spec line computed from the model, and dimensions appear only while their parts are assembled. The style ideas come from the [lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) library (MIT) and are implemented independently.*
+*The same moment in two editions: the default white atlas (top) and an opt-in [blueprint](examples/gearbox/README.md#40-second-editions) (bottom), drawn white-on-blue with centre lines on the shaft axes; the full blueprint page adds a title block and one stamp. Labels carry an index and a spec line computed from the model, and dimensions appear only while their parts are assembled. The style ideas come from the [lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) library (MIT) and are implemented independently.*
 
 ![Unitree G1 source bodies separated in the English humanoid showcase](docs/media/humanoid-g1-preview.jpg)
 

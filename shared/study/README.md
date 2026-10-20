@@ -202,7 +202,8 @@ and line stability separately from this static-region check.
 
 Each isolated study example (`EXAMPLE_ROBOT`, `examples/humanoid`,
 `examples/gearbox`, `examples/allegro-hand`, `examples/robotiq-gripper`) keeps
-its own read-only `serve.mjs` with page-specific routes. The shared runtime every study page loads is declared once in
+its own read-only `serve.mjs` with page-specific routes. The shared runtime
+every study page loads is declared once in
 `STUDY_RUNTIME_FILES` in `preview-server.mjs`, together with the common
 GET/HEAD/range file server. When the shell imports a new shared file, add it to
 that list once; do not add `/shared/...` rules to an example server.

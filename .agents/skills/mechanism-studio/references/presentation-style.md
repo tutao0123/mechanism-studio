@@ -80,7 +80,7 @@ These grammar elements may be used in either style when they explain something:
 - **Dimensions.** Draw a dimension on the object with extension lines and slanted ticks, between real points. Show it only while every part it measures sits at its assembled rest; a dimension of a displaced state is false.
 - **Wave lift.** Within one repeated set, parts may lift one after another, ordered by their geometry, with a small total spread, and return in reverse order. Each part moves along its own real offset; never copy or scale parts.
 
-These ideas come from the MIT-licensed [lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) style library and are implemented independently. Copy none of its code, films or assets. Credit it where a page or README describes the style. The [gearbox example](../../../../examples/gearbox/README.md#two-editions) is the reference implementation.
+These ideas come from the MIT-licensed [lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) style library and are implemented independently. Copy none of its code, films or assets. Credit it where a page or README describes the style. The [gearbox example](../../../../examples/gearbox/README.md#40-second-editions) is the reference implementation.
 
 ## Acceptance
 
