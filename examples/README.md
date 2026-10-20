@@ -35,7 +35,7 @@ these pages; use a local server below to load models and play music.
 
 | Example | Server command | Local route | Included experience |
 | --- | --- | --- | --- |
-| Five-speed gearbox | `node examples/gearbox/serve.mjs` | `http://127.0.0.1:4183/?clean=1`, blueprint edition `/blueprint/?clean=1` | 40-second original teaching model: case off, explosion to synchronizer keys and bearing balls, power path through 1st–5th, synchronizer close-up, restoration. Spec labels and measured dimensions; the blueprint edition is the same study drawn white-on-blue |
+| Five-speed gearbox | `node examples/gearbox/serve.mjs` | `http://127.0.0.1:4183/?clean=1`, blueprint edition `/blueprint/?clean=1`, 24-second cinematic edition `/cinematic/` | 40-second original teaching model: case off, explosion to synchronizer keys and bearing balls, power path through 1st–5th, synchronizer close-up, restoration. Spec labels and measured dimensions; the blueprint edition is the same study drawn white-on-blue |
 | Allegro dexterous hand | `node examples/allegro-hand/serve.mjs` | `http://127.0.0.1:4185/?clean=1` | 35.56-second articulated finger/ thumb study, source-link expansion, local view and restoration |
 | Robotiq 2F-85 gripper | `node examples/robotiq-gripper/serve.mjs` | `http://127.0.0.1:4186/?clean=1` | 35.56-second jaw motion, four-bar closure, link-level explosion and reassembly |
 | Unitree G1 humanoid | `node examples/humanoid/serve.mjs` | `http://127.0.0.1:4182/?clean=1` | 35.555556-second body-level explosion/reassembly, close reading views, original score and sparse CC0 effects |

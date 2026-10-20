@@ -9,7 +9,7 @@ license grant over every CAD model, recording or dependency in the repository.
 
 | Material | Scope | License and retained evidence |
 | --- | --- | --- |
-| Mechanism Studio | Original `.agents/skills/mechanism-studio/` workflows, scripts, shared runtime, example adapters, lesson text and procedural lock/inline-four/turbofan/quadruped geometry | MIT; [project license](../LICENSE). Existing upstream notices remain applicable to adapted workflow material. |
+| Mechanism Studio | Original `.agents/skills/mechanism-studio/` workflows, scripts, shared runtime, example adapters, lesson text and procedural lock/inline-four/turbofan/quadruped/five-speed gearbox geometry | MIT; [project license](../LICENSE). Existing upstream notices remain applicable to adapted workflow material. |
 | Anatomy workflow lineage | Mechanism-first explanation, one model for motion and readouts, staged verification and rendered-view review informed early skill text | MIT, Ryan; [full notice](../THIRD_PARTY_NOTICES.md#anatomy). No sibling checkout, Anatomy drawing kit or runtime is needed. |
 | Allegro right hand | `examples/allegro-hand/source/`, source-derived `assets/`, screenshots and animation | Model-specific BSD-2-Clause, SimLab. [Full license](../examples/allegro-hand/source/LICENSE) and [pinned provenance](../examples/allegro-hand/source/provenance.json). Retain copyright, conditions and disclaimer with binary/visual redistribution. |
 | Robotiq 2F-85 v4 | `examples/robotiq-gripper/source/`, source-derived `assets/`, screenshots and animation | Model-specific BSD-2-Clause, ROS-Industrial. [Full license](../examples/robotiq-gripper/source/LICENSE) and [pinned provenance](../examples/robotiq-gripper/source/provenance.json); not the Menagerie repository-wide license. |
