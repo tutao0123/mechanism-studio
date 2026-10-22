@@ -10,7 +10,7 @@ export function publicFile(path) {
   if (!isSafeUrlPath(path)) return null;
   if (path === '/' || path === '/index.html') return resolve(exampleRoot, 'index.html');
   if (path === '/review.html') return resolve(exampleRoot, 'review.html');
-  if (/^\/(?:app\.mjs|story\.mjs|framing\.mjs|annotations\.mjs|kinematics\.mjs|README\.md)$/.test(path)) return resolve(exampleRoot, path.slice(1));
+  if (/^\/(?:app\.mjs|example\.mjs|presentation\.mjs|presentation-data\.mjs|story\.mjs|framing\.mjs|annotations\.mjs|kinematics\.mjs|README\.md)$/.test(path)) return resolve(exampleRoot, path.slice(1));
   if (/^\/assets\/(?:assembly\.glb|scene-contract\.json|source-assembly\.json|scene-index\.json|build-report\.json)$/.test(path)) return resolve(exampleRoot, path.slice(1));
   if (/^\/audio\/(?:showcase-loop\.wav|music-score\.json)$/.test(path)) return resolve(exampleRoot, path.slice(1));
   if (/^\/planning\/[a-z-]+\.json$/.test(path)) return resolve(exampleRoot, path.slice(1));

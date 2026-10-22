@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>More than gears · Film review</title>
+<style>
+body{margin:0;background:white;color:#252525;font:16px/1.5 Georgia,serif}
+main{max-width:1280px;margin:auto}h1,p,nav{margin:14px 18px}h1{font-size:28px;font-weight:normal}
+video{display:block;width:100%;height:auto}nav{display:flex;gap:8px;flex-wrap:wrap}
+button{font:inherit;padding:6px 10px;border:1px solid #ccc;background:white;color:inherit}
+</style></head><body><main>
+<h1>More than gears.</h1>
+<p>36 seconds · 1920 × 1080 · 30 fps · Original synthesized music</p>
+<nav aria-label="Playback and review width">
+<button id="play">Play full loop</button><button id="pause">Pause</button>
+<button data-width="390">390 px</button><button data-width="640">640 px</button><button data-width="1280">1280 px</button>
+</nav>
+<video playsinline controls preload="auto" loop src="/output/planetary-80parts-bearing-36s.mp4"></video>
+<nav aria-label="Review moments">
+<button data-time="0">Assembled</button><button data-time="12.4">Expanded</button><button data-time="17.8">Gear mesh</button>
+<button data-time="23.8">Bearing internals</button><button data-time="26.4">Ball spin and cage orbit</button><button data-time="35.8">Reassembled</button>
+</nav>
+<p id="review-status" aria-live="polite">Original teaching model · Ideal kinematics · MIT · Mechanism Studio</p>
+<p><a href="/?clean=1">Explore the interactive model</a></p>
+</main><script>
+const film=document.querySelector('video');
+document.querySelector('#play').addEventListener('click',()=>{film.currentTime=0;film.play();});
+document.querySelector('#pause').addEventListener('click',()=>film.pause());
+document.querySelectorAll('[data-width]').forEach(button=>button.addEventListener('click',()=>{document.querySelector('main').style.maxWidth=`${button.dataset.width}px`;}));
+document.querySelectorAll('[data-time]').forEach(button=>button.addEventListener('click',()=>{film.pause();film.currentTime=Number(button.dataset.time);}));
+film.addEventListener('timeupdate',()=>{document.querySelector('#review-status').textContent=`${film.currentTime.toFixed(1)} / ${film.duration.toFixed(1)} s · Original teaching model · Ideal kinematics · MIT`;});
+</script></body></html>

@@ -1,8 +1,8 @@
 # What is actually in the examples?
 
-Audit date: **2026-10-19**. This inventory describes retained source files and
-implemented entry points, not every local development export. There are **ten
-implemented experiences**, including the gearbox, Allegro hand and Robotiq gripper. The English Showcase
+Inventory updated: **2026-10-23**, for **v0.4.1-alpha.1 (public alpha)**. This inventory describes retained source files and
+implemented entry points, not every local development export. There are **eleven
+implemented experiences across ten models**, including the planetary set, gearbox, Allegro hand and Robotiq gripper. The English Showcase
 offers further cuts of the same engine, turbofan and quadruped models; those
 are not three more independently modeled assemblies.
 
@@ -11,13 +11,26 @@ are not three more independently modeled assemblies.
 Run commands from the repository root after `npm ci`. The root server and the
 specialized study servers use separate, read-only route allowlists.
 
+For a first run, build the planetary score with
+`node examples/planetary-gears/audio/build.mjs`, start
+`node examples/planetary-gears/serve.mjs`, and open
+[the 36-second study](http://127.0.0.1:4193/?clean=1). Included GLB previews and
+score synthesis need Node.js 20.10+ and a WebGL 2 browser. The full test suite
+also needs Python 3 and a first pinned source download; video encoding needs
+FFmpeg/FFprobe. These additional tools are not needed just to view the examples.
+
 The [19 October robot integration report](robot-studies-release.md) records the
 Allegro and Robotiq compatibility checks after the upstream shared-runtime sync.
 Their 18 October validation notes and delivery manifests remain historical
 records of earlier inputs; they do not certify the current runtime or an MP4.
+Checking those historical media fingerprints against this alpha intentionally
+reports current runtime drift. Reviewed non-runtime changes are recorded in each
+`delivery-drift.json`; changed rendering/runtime inputs still fail the strict
+check. Current numerical tests do not replace a new export and visual/audio review.
 
 | Experience | Actual location / implementation | Open after starting the server | Current boundary |
 | --- | --- | --- | --- |
+| Planetary reducer: More than gears | `examples/planetary-gears/`: original 24 / 24 / 72 involute model, 80 occurrences, 29 definitions, ideal gear/bearing adapter, nine-chapter executable plan and original score | `node examples/planetary-gears/audio/build.mjs`; `node examples/planetary-gears/serve.mjs` → [36 s study](http://127.0.0.1:4193/?clean=1) | Fixed-ring ideal 4:1 reduction; original 21 parts plus 59 enclosure/support parts. Plain planet bushings and two detailed shaft bearings with ideal ball/cage rolling; no contact/load solver, production CAD or service-procedure claim |
 | Five-speed gearbox | `examples/gearbox/`: original authored spec, exact-ratio kinematics, 124-part GLB in 15 nested assemblies, deterministic story/score, plans and tests | `node examples/gearbox/serve.mjs` → [40 s study](http://127.0.0.1:4183/?clean=1), [blueprint edition](http://127.0.0.1:4183/blueprint/?clean=1), [24 s cinematic edition](http://127.0.0.1:4183/cinematic/) | Original teaching model; ideal rigid tooth ratios and authored synchronizer timing; no load, friction, clutch or contact simulation |
 | Allegro dexterous hand | `examples/allegro-hand/`: pinned MJCF/STL, source-body GLB, joint adapter, story and source-bound music | Build score below; `node examples/allegro-hand/serve.mjs` → [35.56 s hand](http://127.0.0.1:4185/?clean=1) | Sixteen hinges; motion stays in source limits, valid neutral pose differs from XML zero reference; no tendon/force model or fastener internals |
 | Robotiq 2F-85 gripper | `examples/robotiq-gripper/`: pinned source meshes, six-hinge linkage model, source connect constraints and story | Build score below; `node examples/robotiq-gripper/serve.mjs` → [35.56 s gripper](http://127.0.0.1:4186/?clean=1) | Analytic closed linkage on an authored free-space branch; no object-contact, force or hardware-control validation |
@@ -29,12 +42,18 @@ records of earlier inputs; they do not certify the current runtime or an MP4.
 | SO-ARM 102 assembly study | `EXAMPLE_ROBOT/`: URDF/STL source, GLB, group plans, score and runtime adapter | `node EXAMPLE_ROBOT/serve.mjs` → [34.3 s study](http://127.0.0.1:4180/?clean=1) | Eight merged source links, grouped observation explosion, not per-screw disassembly |
 | SO-ARM 102 kinetic cut | `EXAMPLE_ROBOT/kinetic/`: source-joint adapter, own timeline/score/tests; the whole robot tree has 88 tracked files | Same robot server → [25.7 s kinetic cut](http://127.0.0.1:4180/kinetic/?clean=1) | Source-backed joints and opposed jaws, no hardware-safe control/dynamics claim |
 
-The file counts above are a fixed audit snapshot of Git-tracked files and
+The legacy file counts above remain the 19 October audit snapshot of Git-tracked files and
 exclude dependencies, caches and ignored local outputs. They measure package
 contents, not completeness or quality. Source licenses differ: read the
 [example guide](../examples/README.md) and [third-party notices](../THIRD_PARTY_NOTICES.md).
 
 ## Why some folders can look unfinished on GitHub
+
+The new [planetary study](../examples/planetary-gears/README.md) includes its
+original builder, exported geometry, provenance, executable presentation and
+score source. Rebuild its local WAV with
+`node examples/planetary-gears/audio/build.mjs`. Automated geometry, kinematic
+and music checks do not imply an exported MP4 or public post.
 
 The new Allegro and Robotiq music loops are local deterministic outputs. Build
 them with `node tools/audio/build-study-score.mjs --example examples/allegro-hand`

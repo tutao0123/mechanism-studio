@@ -1,6 +1,6 @@
 # Camera Direction
 
-Called by [the orchestrator](../module-orchestration.md) for authored views, tours or framing fixes. A camera-plan is a handoff record, not an implemented generic JSON loader or automatic CAD cinematography service. Read [visual style](../presentation-style.md); tours also use [pacing](../presentation-pacing.md), [motion choreography](../motion-choreography.md) and [transport](../presentation-tour.md).
+Called by [the orchestrator](../module-orchestration.md) for authored views, tours or framing fixes. A camera-plan is a handoff record. The [executable presentation subset](../executable-presentation.md) runs fixed-envelope orthographic shots; broader paths and CAD-specific framing need adapters. Read [visual style](../presentation-style.md); tours also use [pacing](../presentation-pacing.md), [motion choreography](../motion-choreography.md) and [transport](../presentation-tour.md).
 
 ## Responsibility and inputs
 
@@ -40,10 +40,11 @@ Record stage and revisions for geometry, explosion, mechanics/processes, timelin
 
 For a single-part close-up, record the same occurrence's set/context, observation position, camera approach, settled read and pullback intervals. Magnify through framing, without mesh scaling or source changes. A fixed authored target/scale path can follow the known extraction; it must not chase changing live bounds or carry moving labels through the approach.
 
-Specify first frame, continuous transitions, pause, explicit seek, loop, exploration return, resize and reduced-motion behavior. Attach actual range checks, sampled camera poses, representative screenshots, unresolved targets and limits. Inspect may deliver static presets without chapters. A plan without an adapter remains an unimplemented plan.
+Specify first frame, continuous transitions, pause, explicit seek, loop, exploration return, resize and reduced-motion behavior. Attach actual range checks, sampled camera poses, representative screenshots, unresolved targets and limits. Inspect may deliver static presets without chapters. A handoff needs a supported compiled presentation or explicit adapter before it executes.
 
 ## Existing runtime
 
+- [Presentation compiler](../executable-presentation.md): binds declared orthographic shots to chapters and fixed envelopes. It checks the supported data; the author supplies bounds for real motion/offset ranges and reviews the result.
 - [createCameraDirector](../../../../../showcase/camera-director.mjs): `createCameraDirector({ duration })` returns sample/reset/snapshot. `sample({ chapterKey, localTime, pose, cut })` interpolates actual to planned pose; `reset(actualPose)` supports exploration return. It owns no clock, geometry, DOM or audio.
 - [Camera envelopes](../../../../../showcase/adapters/camera-envelope.mjs): the current helper handles its declared X-axis rotations and bounded translations; it is not a universal multi-joint solver.
 - [Quadruped framing](../../../../../showcase/adapters/quadruped-framing.mjs) handles that model's own Z-axis pitching/ranges. A new topology needs corresponding math and validation.

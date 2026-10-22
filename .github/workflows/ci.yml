@@ -20,6 +20,10 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: npm
+      # MJCF parser tests use the Python standard library; previewing does not.
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
       - run: npm ci --ignore-scripts
       # Upstream CAD/mesh files are fetched by hash; reuse verified downloads.
       - uses: actions/cache@v4

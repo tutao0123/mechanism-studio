@@ -27,6 +27,7 @@ export const SCORES = Object.freeze([
   { metadata: 'examples/gearbox/audio/music-score.json', build: ['examples/gearbox/audio/build.mjs'] },
   { metadata: 'examples/gearbox/cinematic/audio/music-score.json', build: ['examples/gearbox/cinematic/audio/build.mjs'] },
   { metadata: 'examples/humanoid/audio/music-score.json', build: ['examples/humanoid/audio/build.mjs'] },
+  { metadata: 'examples/planetary-gears/audio/music-score.json', build: ['examples/planetary-gears/audio/build.mjs'] },
   { metadata: 'examples/robotiq-gripper/audio/music-score.json', build: studyScore('examples/robotiq-gripper') },
 ].map(Object.freeze));
 

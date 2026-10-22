@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "planetary-24-24-72",
+  "geometryRevision": "planetary-24-24-72-v3-93f0e1eaae9e",
+  "sourceHash": "93f0e1eaae9eec36e15dd29957a149399f1931c342493fa6de491c098ed799aa",
+  "glbSHA256": "dc228b548e9c35f66c79cb761154bda956b1bfbaf69b6157595ea0f611f55822",
+  "glbBytes": 6305768,
+  "partCount": 80,
+  "assemblyCount": 1,
+  "definitionCount": 29,
+  "movingPartCount": 44,
+  "triangleCount": 204236,
+  "uniqueTriangleCount": 116478,
+  "assetBoundsMeters": {
+    "min": [
+      -0.09600000083446503,
+      -0.09600000083446503,
+      -0.038
+    ],
+    "max": [
+      0.09600000083446503,
+      0.09600000083446503,
+      0.038000000000000006
+    ]
+  },
+  "gearSpec": {
+    "sunTeeth": 24,
+    "planetTeeth": 24,
+    "ringTeeth": 72,
+    "module": 0.002,
+    "pressureAngle": 0.3490658503988659,
+    "orbitRadius": 0.048,
+    "planetCount": 3,
+    "sunPhase": 0,
+    "planetPhase": 0.1308996938995747,
+    "ringGapPhase": 0.04363323129985824
+  },
+  "housingSpec": {
+    "inner": 0.0852,
+    "outer": 0.096,
+    "halfLength": 0.02,
+    "boltCircle": 0.0905,
+    "boltBore": 0.0017,
+    "plateZ": 0.024,
+    "plateWidth": 0.006,
+    "gasketZ": 0.0205,
+    "gasketWidth": 0.001,
+    "fastenerZ": 0.028,
+    "sealZ": 0.033,
+    "clipZ": 0.029
+  },
+  "supportBearingSpec": {
+    "front": {
+      "z": 0.024,
+      "bore": 0.00605,
+      "outer": 0.016,
+      "width": 0.007,
+      "pitch": 0.011,
+      "ballRadius": 0.0021,
+      "balls": 10,
+      "grooveClearance": 0.00006,
+      "innerShoulder": 0.0098,
+      "outerShoulder": 0.0122,
+      "sealOuter": 0.012
+    },
+    "rear": {
+      "z": -0.024,
+      "bore": 0.00805,
+      "outer": 0.02,
+      "width": 0.007,
+      "pitch": 0.014,
+      "ballRadius": 0.0025,
+      "balls": 10,
+      "grooveClearance": 0.00006,
+      "innerShoulder": 0.0125,
+      "outerShoulder": 0.0155,
+      "sealOuter": 0.016
+    }
+  },
+  "fixedRingReduction": 4,
+  "supportBearingRollingKinematics": "Ideal no-slip, zero contact angle; shaft-driven inner rings and fixed outer rings.",
+  "supportBearingContactDynamics": false,
+  "checks": {
+    "sceneContract": "passed"
+  },
+  "limitations": [
+    "Original parametric teaching geometry; not sourced production CAD or a manufacturing drawing.",
+    "Standard involute spur profiles with small display backlash; root joins are simplified and no strength or manufacturing tolerance claim is made.",
+    "The three planet journals retain their original plain bushings. Two additional shaft support bearings expose separate races, cages and ten balls each.",
+    "Support bearings use ideal zero-contact-angle, no-slip kinematics with fixed outer races. Cage orbit and absolute ball spin follow the corresponding shaft; load, slip, elastic deformation and cage dynamics are not simulated.",
+    "Raceway curvature includes 60 micrometres of conformity relief away from the nominal equatorial contacts. This tessellated teaching model is not a tolerance or contact-pressure calculation.",
+    "Four sun turns close the gear train but not each bearing occurrence phase. Rolling internals are hidden at the editorial loop reset; their ratios are never altered to force closure.",
+    "Pin bores, screw sockets, housing passages, grooved races and seal profiles are modeled; helical threads, fits, lubrication and seal deformation are not solved.",
+    "The ring/housing restraint, bearing seating, carrier/output and sun/input rigid connections are authored teaching assumptions; the housing has no independently verified production mounting design.",
+    "Mesh-phase and speed checks are geometric/kinematic evidence, not a contact, load, friction or collision solver."
+  ]
+}

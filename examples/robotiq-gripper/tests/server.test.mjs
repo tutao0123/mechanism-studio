@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createGripperServer,publicFile} from '../serve.mjs';
 test('preview allowlist exposes the adapter, source notice and generated asset while excluding private inputs',()=>{
- for(const p of ['/','/app.mjs','/kinematics.mjs','/assets/assembly.glb','/source/LICENSE','/audio/showcase-loop.wav'])assert.ok(publicFile(p),p);
+ for(const p of ['/','/app.mjs','/example.mjs','/presentation.mjs','/presentation-data.mjs','/kinematics.mjs','/assets/assembly.glb','/source/LICENSE','/audio/showcase-loop.wav'])assert.ok(publicFile(p),p);
  for(const p of ['/source/assets/base.stl','/.env','/output/server.log','/source/../README.md','/source\\provenance.json','/package.json'])assert.equal(publicFile(p),null,p);
 });
 test('HTTP asset ranges and local transport methods work without exposing private output',async()=>{

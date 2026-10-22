@@ -1,4 +1,4 @@
-import {BPM,CHAPTERS} from './story.mjs';
+import {BPM,CHAPTERS} from './presentation-data.mjs';
 export const CUE_WINDOWS=Object.fromEntries(CHAPTERS.map(c=>[c.id,c.labels.map((_,i)=>[1.05+i*1.2,(c.lastBeat-c.firstBeat)*60/BPM])]));
 export function annotationCues(state,{paused=false,cameraSettled=true}={}){
  if(!cameraSettled)return[];

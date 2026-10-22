@@ -1,0 +1,2680 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "planetary-24-24-72",
+  "assetRevision": "planetary-24-24-72-v3-93f0e1eaae9e",
+  "units": {
+    "source": "authored metres and radians",
+    "asset": "m",
+    "angle": "rad"
+  },
+  "coordinateMap": "Right-handed glTF metres, +Y up; all gear axes are +Z, gear plane XY. Viewed from +Z, positive rotation is counter-clockwise.",
+  "identity": "Stable pg:<part> occurrence IDs; repeated planets, bushings, rolling elements and fasteners share pg-def geometry. All 80 source occurrences belong to one authored assembly.",
+  "limitations": [
+    "Original parametric teaching geometry; not sourced production CAD or a manufacturing drawing.",
+    "Standard involute spur profiles with small display backlash; root joins are simplified and no strength or manufacturing tolerance claim is made.",
+    "The three planet journals retain their original plain bushings. Two additional shaft support bearings expose separate races, cages and ten balls each.",
+    "Support bearings use ideal zero-contact-angle, no-slip kinematics with fixed outer races. Cage orbit and absolute ball spin follow the corresponding shaft; load, slip, elastic deformation and cage dynamics are not simulated.",
+    "Raceway curvature includes 60 micrometres of conformity relief away from the nominal equatorial contacts. This tessellated teaching model is not a tolerance or contact-pressure calculation.",
+    "Four sun turns close the gear train but not each bearing occurrence phase. Rolling internals are hidden at the editorial loop reset; their ratios are never altered to force closure.",
+    "Pin bores, screw sockets, housing passages, grooved races and seal profiles are modeled; helical threads, fits, lubrication and seal deformation are not solved.",
+    "The ring/housing restraint, bearing seating, carrier/output and sun/input rigid connections are authored teaching assumptions; the housing has no independently verified production mounting design.",
+    "Mesh-phase and speed checks are geometric/kinematic evidence, not a contact, load, friction or collision solver."
+  ],
+  "parts": [
+    {
+      "part_id": "pg:sun",
+      "parent_id": "pg-asm:planetary",
+      "label": "Sun gear · 24 teeth",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:sun",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "pg:ring",
+      "parent_id": "pg-asm:planetary",
+      "label": "Fixed ring · 72 internal teeth",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:ring",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:planet-1",
+      "parent_id": "pg-asm:planetary",
+      "label": "Planet 1 · 24 teeth",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.048,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:planet",
+      "motionRole": "planet",
+      "planetIndex": 0
+    },
+    {
+      "part_id": "pg:planet-2",
+      "parent_id": "pg-asm:planetary",
+      "label": "Planet 2 · 24 teeth",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.02399999999999999,
+          0.04156921938165306,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:planet",
+      "motionRole": "planet",
+      "planetIndex": 1
+    },
+    {
+      "part_id": "pg:planet-3",
+      "parent_id": "pg-asm:planetary",
+      "label": "Planet 3 · 24 teeth",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.02400000000000002,
+          -0.04156921938165305,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:planet",
+      "motionRole": "planet",
+      "planetIndex": 2
+    },
+    {
+      "part_id": "pg:carrier-rear",
+      "parent_id": "pg-asm:planetary",
+      "label": "Rear carrier spider",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.012,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:carrier",
+      "motionRole": "carrier"
+    },
+    {
+      "part_id": "pg:carrier-front",
+      "parent_id": "pg-asm:planetary",
+      "label": "Front carrier spider",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.012,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:carrier",
+      "motionRole": "carrier"
+    },
+    {
+      "part_id": "pg:pin-1",
+      "parent_id": "pg-asm:planetary",
+      "label": "Planet pin 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.048,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:pin",
+      "motionRole": "carrier",
+      "planetIndex": 0
+    },
+    {
+      "part_id": "pg:pin-2",
+      "parent_id": "pg-asm:planetary",
+      "label": "Planet pin 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.02399999999999999,
+          0.04156921938165306,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:pin",
+      "motionRole": "carrier",
+      "planetIndex": 1
+    },
+    {
+      "part_id": "pg:pin-3",
+      "parent_id": "pg-asm:planetary",
+      "label": "Planet pin 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.02400000000000002,
+          -0.04156921938165305,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:pin",
+      "motionRole": "carrier",
+      "planetIndex": 2
+    },
+    {
+      "part_id": "pg:bearing-1",
+      "parent_id": "pg-asm:planetary",
+      "label": "Journal bushing 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.048,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:bearing",
+      "motionRole": "planet",
+      "planetIndex": 0
+    },
+    {
+      "part_id": "pg:bearing-2",
+      "parent_id": "pg-asm:planetary",
+      "label": "Journal bushing 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.02399999999999999,
+          0.04156921938165306,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:bearing",
+      "motionRole": "planet",
+      "planetIndex": 1
+    },
+    {
+      "part_id": "pg:bearing-3",
+      "parent_id": "pg-asm:planetary",
+      "label": "Journal bushing 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.02400000000000002,
+          -0.04156921938165305,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:bearing",
+      "motionRole": "planet",
+      "planetIndex": 2
+    },
+    {
+      "part_id": "pg:washer-1",
+      "parent_id": "pg-asm:planetary",
+      "label": "Thrust washer 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.048,
+          0,
+          0.0152,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:washer",
+      "motionRole": "carrier",
+      "planetIndex": 0
+    },
+    {
+      "part_id": "pg:washer-2",
+      "parent_id": "pg-asm:planetary",
+      "label": "Thrust washer 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.02399999999999999,
+          0.04156921938165306,
+          0.0152,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:washer",
+      "motionRole": "carrier",
+      "planetIndex": 1
+    },
+    {
+      "part_id": "pg:washer-3",
+      "parent_id": "pg-asm:planetary",
+      "label": "Thrust washer 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.02400000000000002,
+          -0.04156921938165305,
+          0.0152,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:washer",
+      "motionRole": "carrier",
+      "planetIndex": 2
+    },
+    {
+      "part_id": "pg:screw-1",
+      "parent_id": "pg-asm:planetary",
+      "label": "Socket screw 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.048,
+          0,
+          0.016,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:screw",
+      "motionRole": "carrier",
+      "planetIndex": 0
+    },
+    {
+      "part_id": "pg:screw-2",
+      "parent_id": "pg-asm:planetary",
+      "label": "Socket screw 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.02399999999999999,
+          0.04156921938165306,
+          0.016,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:screw",
+      "motionRole": "carrier",
+      "planetIndex": 1
+    },
+    {
+      "part_id": "pg:screw-3",
+      "parent_id": "pg-asm:planetary",
+      "label": "Socket screw 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.02400000000000002,
+          -0.04156921938165305,
+          0.016,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:screw",
+      "motionRole": "carrier",
+      "planetIndex": 2
+    },
+    {
+      "part_id": "pg:input-shaft",
+      "parent_id": "pg-asm:planetary",
+      "label": "Input shaft",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.021,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:input-shaft",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "pg:output-hub",
+      "parent_id": "pg-asm:planetary",
+      "label": "Carrier output hub",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:output-hub",
+      "motionRole": "carrier"
+    },
+    {
+      "part_id": "pg:housing",
+      "parent_id": "pg-asm:planetary",
+      "label": "Gear housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:endplate-front",
+      "parent_id": "pg-asm:planetary",
+      "label": "Front endplate",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:endplate-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:gasket-front",
+      "parent_id": "pg-asm:planetary",
+      "label": "Front housing gasket",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0205,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:gasket",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-bolt-front-1",
+      "parent_id": "pg-asm:planetary",
+      "label": "front housing screw 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0783752990424917,
+          0.04524999999999999,
+          0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-bolt-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-bolt-front-2",
+      "parent_id": "pg-asm:planetary",
+      "label": "front housing screw 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          5.541526766141773e-18,
+          0.0905,
+          0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-bolt-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-bolt-front-3",
+      "parent_id": "pg-asm:planetary",
+      "label": "front housing screw 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0783752990424917,
+          0.04524999999999999,
+          0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-bolt-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-bolt-front-4",
+      "parent_id": "pg-asm:planetary",
+      "label": "front housing screw 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.07837529904249171,
+          -0.04524999999999997,
+          0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-bolt-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-bolt-front-5",
+      "parent_id": "pg-asm:planetary",
+      "label": "front housing screw 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.6624580298425317e-17,
+          -0.0905,
+          0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-bolt-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-bolt-front-6",
+      "parent_id": "pg-asm:planetary",
+      "label": "front housing screw 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.07837529904249167,
+          -0.04525000000000004,
+          0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-bolt-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-washer-front-1",
+      "parent_id": "pg-asm:planetary",
+      "label": "front housing washer 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0783752990424917,
+          0.04524999999999999,
+          0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-washer-front-2",
+      "parent_id": "pg-asm:planetary",
+      "label": "front housing washer 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          5.541526766141773e-18,
+          0.0905,
+          0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-washer-front-3",
+      "parent_id": "pg-asm:planetary",
+      "label": "front housing washer 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0783752990424917,
+          0.04524999999999999,
+          0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-washer-front-4",
+      "parent_id": "pg-asm:planetary",
+      "label": "front housing washer 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.07837529904249171,
+          -0.04524999999999997,
+          0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-washer-front-5",
+      "parent_id": "pg-asm:planetary",
+      "label": "front housing washer 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.6624580298425317e-17,
+          -0.0905,
+          0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-washer-front-6",
+      "parent_id": "pg-asm:planetary",
+      "label": "front housing washer 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.07837529904249167,
+          -0.04525000000000004,
+          0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:shaft-seal-front",
+      "parent_id": "pg-asm:planetary",
+      "label": "Input shaft seal",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.033,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:shaft-seal-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:support-bearing-front-inner",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing inner race",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-inner",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "pg:support-bearing-front-outer",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing outer race",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-outer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:support-bearing-front-cage",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing cage",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-cage",
+      "motionRole": "bearing-cage"
+    },
+    {
+      "part_id": "pg:support-bearing-front-ball-1",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing ball 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.011,
+          0,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-front-ball-2",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing ball 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.008899186938124422,
+          0.0064656377752172044,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-front-ball-3",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing ball 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0033991869381244217,
+          0.010461621679246687,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-front-ball-4",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing ball 4",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0033991869381244204,
+          0.01046162167924669,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-front-ball-5",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing ball 5",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.00889918693812442,
+          0.006465637775217205,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-front-ball-6",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing ball 6",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.011,
+          1.3471114790620884e-18,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-front-ball-7",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing ball 7",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.008899186938124422,
+          -0.006465637775217203,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-front-ball-8",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing ball 8",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.003399186938124423,
+          -0.010461621679246687,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-front-ball-9",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing ball 9",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0033991869381244195,
+          -0.01046162167924669,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-front-ball-10",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing ball 10",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.00889918693812442,
+          -0.006465637775217206,
+          0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:bearing-clip-front",
+      "parent_id": "pg-asm:planetary",
+      "label": "front bearing retaining clip",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.029,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:bearing-clip-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:endplate-rear",
+      "parent_id": "pg-asm:planetary",
+      "label": "Rear endplate",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:endplate-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:gasket-rear",
+      "parent_id": "pg-asm:planetary",
+      "label": "Rear housing gasket",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.0205,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:gasket",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-bolt-rear-1",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear housing screw 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0783752990424917,
+          0.04524999999999999,
+          -0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-bolt-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-bolt-rear-2",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear housing screw 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          5.541526766141773e-18,
+          0.0905,
+          -0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-bolt-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-bolt-rear-3",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear housing screw 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0783752990424917,
+          0.04524999999999999,
+          -0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-bolt-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-bolt-rear-4",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear housing screw 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.07837529904249171,
+          -0.04524999999999997,
+          -0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-bolt-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-bolt-rear-5",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear housing screw 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.6624580298425317e-17,
+          -0.0905,
+          -0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-bolt-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-bolt-rear-6",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear housing screw 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.07837529904249167,
+          -0.04525000000000004,
+          -0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-bolt-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-washer-rear-1",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear housing washer 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0783752990424917,
+          0.04524999999999999,
+          -0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-washer-rear-2",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear housing washer 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          5.541526766141773e-18,
+          0.0905,
+          -0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-washer-rear-3",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear housing washer 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0783752990424917,
+          0.04524999999999999,
+          -0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-washer-rear-4",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear housing washer 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.07837529904249171,
+          -0.04524999999999997,
+          -0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-washer-rear-5",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear housing washer 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.6624580298425317e-17,
+          -0.0905,
+          -0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:housing-washer-rear-6",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear housing washer 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.07837529904249167,
+          -0.04525000000000004,
+          -0.028,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:shaft-seal-rear",
+      "parent_id": "pg-asm:planetary",
+      "label": "Output shaft seal",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.033,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:shaft-seal-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-inner",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing inner race",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-inner",
+      "motionRole": "carrier"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-outer",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing outer race",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-outer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-cage",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing cage",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-cage",
+      "motionRole": "bearing-cage"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-ball-1",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing ball 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.014,
+          0,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-ball-2",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing ball 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.011326237921249264,
+          0.008228993532094624,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-ball-3",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing ball 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0043262379212492645,
+          0.01331479122813215,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-ball-4",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing ball 4",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.004326237921249263,
+          0.013314791228132151,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-ball-5",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing ball 5",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.011326237921249264,
+          0.008228993532094626,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-ball-6",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing ball 6",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014,
+          1.7145055188062945e-18,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-ball-7",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing ball 7",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.011326237921249264,
+          -0.008228993532094622,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-ball-8",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing ball 8",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.004326237921249266,
+          -0.01331479122813215,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-ball-9",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing ball 9",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.004326237921249261,
+          -0.013314791228132151,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:support-bearing-rear-ball-10",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing ball 10",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.011326237921249264,
+          -0.008228993532094627,
+          -0.024,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "pg:bearing-clip-rear",
+      "parent_id": "pg-asm:planetary",
+      "label": "rear bearing retaining clip",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.029,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "pg-def:bearing-clip-rear",
+      "motionRole": "fixed"
+    }
+  ]
+}

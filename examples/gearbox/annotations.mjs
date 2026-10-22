@@ -1,4 +1,4 @@
-import { BPM, CHAPTERS } from './story.mjs';
+import { BPM, CHAPTERS } from './presentation-data.mjs';
 export const NAME_FADE_SECONDS = .18;
 export const SCENE_FADE_SECONDS = .32;
 export const ANNOTATION_REVISION = 'gearbox-annotations-1';

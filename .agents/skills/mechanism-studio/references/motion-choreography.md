@@ -6,7 +6,7 @@ Use this reference when a timed assembly study feels static, uniform or disconne
 
 Start from actual occurrence IDs, source parents/rest transforms, geometry revision, the [available assembly depth](assembly-depth.md), intended observation and delivery duration. Read the proposed explosion paths, camera envelopes, visibility/appearance ownership and actual score events together.
 
-For each passage record the relationship to show, participating occurrences, context that must remain recognizable, movement/read intervals, transition into the next passage and restoration. These may extend the existing timeline and per-module plans; no new file/schema is mandatory. A written plan has no effect until the example adapter implements it.
+For each passage record the relationship to show, participating occurrences, context that must remain recognizable, movement/read intervals, transition into the next passage and restoration. These may extend the existing timeline and per-module handoffs. Use the [executable presentation subset](executable-presentation.md) when its display-offset, shot, label and appearance channels fit; use example adapters for broader behavior. Handoff notes alone do not execute.
 
 ## Shape the movement
 

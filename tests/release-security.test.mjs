@@ -39,6 +39,20 @@ test('credential scanning covers examples, binary metadata, literal assignments 
   assert.ok(inspect('config.mjs', "const config = {apiKey: 'mock-test-key'};").length);
 });
 
+test('WAV release policy retains reviewed source samples while blocking generated and unreviewed audio', async () => {
+  for (const name of ['examples/wolf-actuator/tour-v2/audio/tour-loop.wav', 'examples/planetary-gears/audio/planetary-loop.wav', 'examples/humanoid/audio/humanoid-loop.wav', 'examples/humanoid/audio/sfx/unreviewed.wav', 'music.WAV']) {
+    assert.ok(inspect(name, 'RIFF').some(failure => /generated or unreviewed WAV/.test(failure)), name);
+  }
+  const sourceRoot = 'examples/humanoid/audio/sfx';
+  const provenance = JSON.parse(await readFile(join(projectRoot, sourceRoot, 'provenance.json'), 'utf8'));
+  assert.equal(provenance.license, 'CC0-1.0');
+  assert.equal(provenance.files.length, 5);
+  for (const source of provenance.files) {
+    const name = `${sourceRoot}/${source.file}`;
+    assert.deepEqual(inspectReleaseFile(name, await readFile(join(projectRoot, name))), [], name);
+  }
+});
+
 test('personal paths and unauthorized user CAD provenance are blocked without echoing values', () => {
   const privatePath = ['F:', 'secrets', 'speech.env'].join('/');
   const personalPath = ['C:', 'Users', 'private-person', 'Downloads', 'capture.png'].join('/');
@@ -56,9 +70,12 @@ test('candidate audit respects Git ignores, while staged audit scans exact index
   await mkdir(root, { recursive: true });
   const git = args => execFileSync('git', args, { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
   git(['init', '--quiet', '--initial-branch=main']);
-  await writeFile(join(root, '.gitignore'), 'output/\n.env\n');
+  await writeFile(join(root, '.gitignore'), await readFile(join(projectRoot, '.gitignore')));
   await writeFile(join(root, 'README.md'), 'Safe staged text.\n');
   await writeFile(join(root, '.env'), 'not included in candidates');
+  const localScore = 'examples/wolf-actuator/tour-v2/audio/tour-loop.wav';
+  await mkdir(join(root, 'examples/wolf-actuator/tour-v2/audio'), { recursive: true });
+  await writeFile(join(root, localScore), 'RIFF local generated score fixture');
   git(['add', '.gitignore', 'README.md']);
   const candidate = await checkRelease(root);
   assert.equal(candidate.checksPassed, true);
@@ -77,4 +94,7 @@ test('candidate audit respects Git ignores, while staged audit scans exact index
   assert.ok(!(await readFile(join(root, 'output/release-check.json'), 'utf8')).includes('not-a-real-credential'));
   git(['add', '--force', '.env']);
   assert.ok((await checkRelease(root, { staged: true })).failures.some(failure => /^\.env:/.test(failure)));
+  git(['add', '--force', localScore]);
+  assert.ok((await checkRelease(root, { staged: true })).failures.some(failure => failure.startsWith(`${localScore}: generated or unreviewed WAV`)));
+  assert.equal(await readFile(join(root, localScore), 'utf8'), 'RIFF local generated score fixture', 'release audit must preserve local generated music');
 });

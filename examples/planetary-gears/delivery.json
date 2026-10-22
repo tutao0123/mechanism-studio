@@ -1,0 +1,627 @@
+{
+  "schemaVersion": 1,
+  "id": "planetary-gears-80parts-bearing-rolling-film-v3",
+  "route": "Showcase",
+  "state": {
+    "implemented": true,
+    "checked": true,
+    "exported": true,
+    "published": false
+  },
+  "reviewStatus": "Objective checks and sampled visual review passed within stated scopes; continuous visual playback and subjective audio review remain limited or unperformed.",
+  "identity": {
+    "geometryRevision": "planetary-24-24-72-v3-93f0e1eaae9e",
+    "planRevision": "planetary-atlas-80parts-rolling-36s-3",
+    "partCount": 80,
+    "audioSha256": "04f5806626904907590d648b1f91bafe8cd136ef7214aba9927792a1120a824e"
+  },
+  "timeline": {
+    "bpm": 100,
+    "beats": 60,
+    "durationSeconds": 36
+  },
+  "capture": {
+    "method": "direct-webgl-svg-text-composition",
+    "compositorRevision": "study-direct-frame-1",
+    "dimensions": {
+      "width": 1920,
+      "height": 1080
+    },
+    "fps": 30,
+    "frameCount": 1080,
+    "frameTimes": "frameIndex / 30 for indexes 0 through 1079",
+    "fixedSameOriginIframe": true,
+    "outputJPEGQuality": 0.94,
+    "fonts": {
+      "declaredSerif": "Georgia, Times New Roman, serif",
+      "declaredSans": "Segoe UI, Arial, sans-serif",
+      "fontsReadyAwaitedByCompositor": true
+    },
+    "includedLayers": [
+      "WebGL mechanism and orientation ink",
+      "styled SVG labels and short leaders",
+      "measured HTML title, chapter copy and source credit"
+    ],
+    "sourceFrameSequenceSha256": "e1e722cc895e7c1b273f8ef2330b858f804329aac694d5debef54546d6648d6b",
+    "rendererSampling": "Capture mode config caps renderer pixel ratio at 1 and preserves drawing buffer; actual renderer ratio and backing dimensions during frame generation were not retained."
+  },
+  "output": {
+    "path": "examples/planetary-gears/output/planetary-80parts-bearing-36s.mp4",
+    "bytes": 6412366,
+    "sha256": "54017f3bc86086d0a8765d7c902b9bf0698e030c649017098526b6dc67f419fe",
+    "video": "H.264 High/4.2, yuv420p, BT.709, faststart",
+    "audio": "AAC-LC stereo, 48 kHz; original synthesized score, no narration",
+    "durationSeconds": 36,
+    "integratedLoudnessLUFS": -20,
+    "truePeakDBTP": -7.81
+  },
+  "checks": [
+    {
+      "id": "focused-mechanics-presentation-export-tests",
+      "status": "passed",
+      "summary": "56 focused tests passed, zero failures/skips: planetary geometry, ideal gear/bearing kinematics, presentation, audio/cues, direct compositor contracts and served page dependency graphs.",
+      "evidence": [
+        "examples/planetary-gears/output/film-v3/export-focused-tests.log"
+      ]
+    },
+    {
+      "id": "model-build",
+      "status": "passed",
+      "summary": "Generated original 80-part teaching assembly with stable identities; build report binds current GLB and geometry revision. This is authored geometry, not an imported manufacturing assembly.",
+      "evidence": [
+        "examples/planetary-gears/assets/build-report.json",
+        "examples/planetary-gears/planning/mechanics-evidence.md"
+      ]
+    },
+    {
+      "id": "source-static-landmark",
+      "status": "passed",
+      "summary": "All 1080 generated frames passed fixed-title region check at 1920x1080; reference region x0,y0,width1920,height150, maximum allowed MAE1; no flagged frames.",
+      "evidence": [
+        "examples/planetary-gears/output/film-v3/render-summary.json",
+        "examples/planetary-gears/output/film-v3/static-region-source.json"
+      ]
+    },
+    {
+      "id": "encoded-static-landmark",
+      "status": "passed",
+      "summary": "All 1080 decoded delivery frames passed the encoded static-title region check; no scale/crop flags.",
+      "evidence": [
+        "examples/planetary-gears/output/film-v3/static-region-encoded.json"
+      ]
+    },
+    {
+      "id": "source-temporal-diagnostics",
+      "status": "passed",
+      "summary": "All1080 JPEG frames decode with contiguous numbering. No exact repeats inside four active drive intervals; stationary duplicate runs are confined to reading/settled periods. This is numerical continuity evidence, not a complete perceptual flicker review.",
+      "evidence": [
+        "examples/planetary-gears/output/film-v3/temporal-review.json"
+      ]
+    },
+    {
+      "id": "export-encoding",
+      "status": "passed",
+      "summary": "36-second1920x1080 30fps MP4 encoded and fully decoded; no black intervals; faststart and36s audio timing verified. Final measured audio -20LUFS and -7.81dBTP. No audio respeed.",
+      "evidence": [
+        "examples/planetary-gears/output/planetary-80parts-bearing-36s-verification.json"
+      ]
+    },
+    {
+      "id": "sampled-visual-review",
+      "status": "limited",
+      "summary": "Twelve source keyframes reviewed with complete titles/captions/credits and contained geometry.640px encoded bearing view reviewed; retained player overlay obscures bottomcaption. Playback was started and advanced; a full continuous visual review is not claimed.",
+      "evidence": [
+        "examples/planetary-gears/output/film-v3/source-keyframes.jpg",
+        "examples/planetary-gears/output/film-v3/temporal-review.json",
+        "examples/planetary-gears/output/film-v3/encoded-review-640.png",
+        "examples/planetary-gears/output/film-v3/review-summary.json"
+      ]
+    },
+    {
+      "id": "subjective-soundtrack-listening",
+      "status": "not-run",
+      "summary": "Objective waveform/encoded-loudness checks passed, but no subjective listening review is claimed.",
+      "evidence": []
+    },
+    {
+      "id": "remote-publication",
+      "status": "not-run",
+      "summary": "X upload not confirmed; no post URL or GitHub push claimed for this delivery.",
+      "evidence": []
+    }
+  ],
+  "limitations": [
+    "Original parametric teaching model and ideal kinematics; no manufacturing CAD, tolerance, strength, loaded contact, bearing-life or dynamics certification.",
+    "Bearing rolling follows ideal zero-contact-angle no-slip relations; slip, friction, elastic deformation, cage forces and loads are not solved.",
+    "Display separation is authored and not collision-checked service disassembly.",
+    "Four sun turns close the gear train but do not close individual bearing phases; the editorial loop reset occurs beneath the closed housing.",
+    "All-frame landmark and temporal diagnostics do not establish absence of every motion/line artifact; full continuous encoded viewing and subjective audio listening are unconfirmed.",
+    "640px retained screenshot has native playback controls over the bottomcaption; it confirms bearing framing, not complete small-screen caption legibility.",
+    "Actual frame-generation WebGL backing dimensions and renderer ratio measurements were not retained.",
+    "Generated WAV, MP4 and private review reports/screenshots are local ignored outputs. Repository storage declarations do not mean files have been committed or pushed."
+  ],
+  "reproduction": {
+    "model": "node examples/planetary-gears/build-planetary.mjs",
+    "audio": "node examples/planetary-gears/audio/build.mjs",
+    "preview": "node examples/planetary-gears/serve.mjs",
+    "directFrames": "Open /render.html, await planetaryFilm.ready, call start, then sequential frame(index/30) for1080frames and stop. Save JPEG data URLs as00000.jpg through01079.jpg under output/film-v3/frames.",
+    "encode": "node tools/video/export.mjs --frames examples/planetary-gears/output/film-v3/frames --audio examples/planetary-gears/audio/planetary-loop.wav --out examples/planetary-gears/output/planetary-80parts-bearing-36s.mp4 --fps 30 --frame-count 1080 --width 1920 --height 1080",
+    "integrity": "npm run check:delivery -- --manifest examples/planetary-gears/delivery.json --require-local"
+  },
+  "publication": {
+    "published": false,
+    "url": null,
+    "sourcePushVerified": false
+  },
+  "files": [
+    {
+      "path": "examples/planetary-gears/app.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 218,
+      "sha256": "c64b9367476e4d368018d222b583e2a787ca6d88d1be22247d169d94b7e58d49"
+    },
+    {
+      "path": "examples/planetary-gears/assets/assembly.glb",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 6305768,
+      "sha256": "dc228b548e9c35f66c79cb761154bda956b1bfbaf69b6157595ea0f611f55822"
+    },
+    {
+      "path": "examples/planetary-gears/assets/build-report.json",
+      "role": "evidence",
+      "storage": "repository",
+      "bytes": 3688,
+      "sha256": "d5159b46f8c867a65d2a65be13023e4c5f4ef3092c691c7fd5a783850ace4e46"
+    },
+    {
+      "path": "examples/planetary-gears/assets/provenance.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3315,
+      "sha256": "77feb82a204ea91a5f84feb0ce18c53aee3c6094eedb05c0a499625f866c4086"
+    },
+    {
+      "path": "examples/planetary-gears/assets/scene-contract.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 49837,
+      "sha256": "10bd4433f98ec969bda2deb97366d4ea2aba2df8fa120d9033116dc11bfc7087"
+    },
+    {
+      "path": "examples/planetary-gears/assets/scene-index.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 125814,
+      "sha256": "81208b065f98b78bc26f5514b46ae2d51fc3f881fca9db8e0778a08cb929b251"
+    },
+    {
+      "path": "examples/planetary-gears/audio/build.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2395,
+      "sha256": "702f61d51fef7b04f192adbf14c68156974bcaa09b59acebe09f23bc02ff249b"
+    },
+    {
+      "path": "examples/planetary-gears/audio/music-score.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 15767,
+      "sha256": "0e77505886bba7e19d76aabcd3ae8e793e7e43b256e4e4fd7939173695a5271f"
+    },
+    {
+      "path": "examples/planetary-gears/audio/planetary-loop.wav",
+      "role": "input",
+      "storage": "local",
+      "bytes": 6350444,
+      "sha256": "04f5806626904907590d648b1f91bafe8cd136ef7214aba9927792a1120a824e"
+    },
+    {
+      "path": "examples/planetary-gears/audio/synth.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 8464,
+      "sha256": "4e6927b106e1c34b8fbd43309d350f021e78da45f6f0d063b74bb40742e28c96"
+    },
+    {
+      "path": "examples/planetary-gears/bearing-cues.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3025,
+      "sha256": "037037a321b7bb3233267b2c8dd59b792755bb78e3e9ef6b10dd61eb6ff5483b"
+    },
+    {
+      "path": "examples/planetary-gears/bearing-kinematics.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3224,
+      "sha256": "b382380ab917423f93bca30967928326655117de38e530fd583268d6e86a72bf"
+    },
+    {
+      "path": "examples/planetary-gears/build-planetary.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 7252,
+      "sha256": "505fd3061ae3e5ccf04bf9f293dd60f18244384b04720e8813dba652d3110064"
+    },
+    {
+      "path": "examples/planetary-gears/choreography.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3251,
+      "sha256": "069569ee2ca7836eb5b198bd868baaaefbfb41dfc817c00998c520207277bf68"
+    },
+    {
+      "path": "examples/planetary-gears/example.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1369,
+      "sha256": "fc23a1902ae6a6c24f67e7a5beee66e57c28a971c12d209db9af7623c3e6e51a"
+    },
+    {
+      "path": "examples/planetary-gears/geometry.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 15102,
+      "sha256": "c4dc881835d41ed03175c63a8a20d68c6b4f71765c74a9092cd880b531c5714c"
+    },
+    {
+      "path": "examples/planetary-gears/index.html",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 726,
+      "sha256": "89f443798ce65710fce80f38be8c6d34cc6efe56d727fc2c88ca5fcec69e0469"
+    },
+    {
+      "path": "examples/planetary-gears/kinematics.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 9908,
+      "sha256": "fd6df21106ef89c4eb55da6033b1961a941c3911a765c37056f847b4799ca0f6"
+    },
+    {
+      "path": "examples/planetary-gears/output/film-v3/encoded-review-640.png",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 46459,
+      "sha256": "84274d88e0c99310be87efe40bd4d49ed024a91d7f53278b45aa93ce100b1f6f"
+    },
+    {
+      "path": "examples/planetary-gears/output/film-v3/export-focused-tests.log",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 6083,
+      "sha256": "9b1852574e03391e5ce7872b9a8e89062b19b2a2c07c80bc1bee96c3f7d1e60c"
+    },
+    {
+      "path": "examples/planetary-gears/output/film-v3/render-summary.json",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 349,
+      "sha256": "d359bcafa8caa6e42fc322149114b9afab315e0092453778b02bee770b1f85f7"
+    },
+    {
+      "path": "examples/planetary-gears/output/film-v3/review-summary.json",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 1568,
+      "sha256": "27606ad004cbc6df31c425e8e4bafae48e4c3023709a786b98b71769e8fc6fb1"
+    },
+    {
+      "path": "examples/planetary-gears/output/film-v3/source-keyframes.jpg",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 143149,
+      "sha256": "0d92755ad857f1f2e4426c71f5498c608a39deab078b7dafdea47954007a7ccf"
+    },
+    {
+      "path": "examples/planetary-gears/output/film-v3/static-region-encoded.json",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 85003,
+      "sha256": "8aabf3c4ec5aadd21c0978485da54266b24e669c21623d5a427a16cb54ca7869"
+    },
+    {
+      "path": "examples/planetary-gears/output/film-v3/static-region-source.json",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 68018,
+      "sha256": "4c0d6368fceddd9ea8261da8ff2980745083b2f63c1efa40c808617815b80f29"
+    },
+    {
+      "path": "examples/planetary-gears/output/film-v3/temporal-review.json",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 264089,
+      "sha256": "05e2446b4d91e2b2599232a9b7ec8bffab8828d7dacc668e45751f80c4044608"
+    },
+    {
+      "path": "examples/planetary-gears/output/planetary-80parts-bearing-36s-contact-sheet.jpg",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 132068,
+      "sha256": "d9dce93197acf1abc2ddb50ddff27876400cd3a36522cce34d9af80a530f93af"
+    },
+    {
+      "path": "examples/planetary-gears/output/planetary-80parts-bearing-36s-verification.json",
+      "role": "evidence",
+      "storage": "local",
+      "bytes": 7469,
+      "sha256": "010a9e1cf516f756f97bd60f03c682b4a0597bdaf3bb97ddbf7f59bbf410dba2"
+    },
+    {
+      "path": "examples/planetary-gears/output/planetary-80parts-bearing-36s.mp4",
+      "role": "artifact",
+      "storage": "local",
+      "bytes": 6412366,
+      "sha256": "54017f3bc86086d0a8765d7c902b9bf0698e030c649017098526b6dc67f419fe"
+    },
+    {
+      "path": "examples/planetary-gears/planning/mechanics-evidence.md",
+      "role": "evidence",
+      "storage": "repository",
+      "bytes": 15846,
+      "sha256": "7364f0e457dadfe0e9f521877d5522bcf28737db42664a247907a099c14dbf19"
+    },
+    {
+      "path": "examples/planetary-gears/presentation.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 10741,
+      "sha256": "fa8ddcc0fa485784d37af6d6ff4367b87d40502bc37f85308655c9fe10343e4f"
+    },
+    {
+      "path": "examples/planetary-gears/render.html",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1064,
+      "sha256": "6f6f357551b62ee9ec14f021a5c72e42607fd3ad5daf413249d71f99fc452dfd"
+    },
+    {
+      "path": "examples/planetary-gears/render.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2081,
+      "sha256": "6023971b3cc6ff7c21b2690fe707ee407d17b416ee8de796b1ea8a900aa7ea70"
+    },
+    {
+      "path": "examples/planetary-gears/review.html",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2316,
+      "sha256": "bf7ae8ce71f19eecc7df3ad775b97607f0ee1a70e6c75a2d5b4466e4163de71b"
+    },
+    {
+      "path": "examples/planetary-gears/serve.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1517,
+      "sha256": "a5080278ecae0ef02ecaa076272721a8e0d850af52977a0857aed9a28054e9a1"
+    },
+    {
+      "path": "examples/planetary-gears/spec.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 7396,
+      "sha256": "aaf9b98c2ddb65121a13a4b93fc5dfcc2f7754d1cb265c49f6ef8225c7001b86"
+    },
+    {
+      "path": "LICENSE",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1062,
+      "sha256": "3cf77132446067096cce48cb1b38cc65d4e32cce8e0fdcc8b298f4daed005305"
+    },
+    {
+      "path": "package-lock.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 611,
+      "sha256": "2e30f601ac2dfd1792716ba7beae08e52ab13e00774fc8b4fcf60cf023056b60"
+    },
+    {
+      "path": "package.json",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1195,
+      "sha256": "cb152ea2686c2e3637576958fe814cefa3c6c6f94c42d9ac33a1f6332a81d0d9"
+    },
+    {
+      "path": "scripts/check-delivery.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 17319,
+      "sha256": "257b4c9ceeb0fdcbfb87e0f5e320b60c82aae61c2558676ecd3b26c5ec41a5bd"
+    },
+    {
+      "path": "shared/appearance/color-accents.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1963,
+      "sha256": "ed92ef9949836160ac97ad35b6d8e8a8f55391bcaef53e5ddfdf1bef9cd46cc4"
+    },
+    {
+      "path": "shared/appearance/mesh-color-layer.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3877,
+      "sha256": "366d2f260c3c74d5c07bd81063b889db4271ead205432c2f7d0931925f564b0b"
+    },
+    {
+      "path": "shared/appearance/styles.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3778,
+      "sha256": "d39d92d91c47ac863ac67706938153c12617de776cb8702c07f52a9bff8a0b97"
+    },
+    {
+      "path": "shared/assets/contract.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4333,
+      "sha256": "4a86e0a36f5892f83037bb5a06a9b734ee3094187eabd4b7b430ce35780d08c5"
+    },
+    {
+      "path": "shared/assets/glb.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4823,
+      "sha256": "726c6ca7663fa8b1d2250e41a1501a9e2a422721f559fab5c06b9741d61015cc"
+    },
+    {
+      "path": "shared/assets/write-glb.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2261,
+      "sha256": "735b71008cf26da21e07307d556de81067902048c8a96ff69c6732f3a92d7ff5"
+    },
+    {
+      "path": "shared/study/blueprint.css",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 2560,
+      "sha256": "b19b7a30bdd6917de101ce777362a831487aa5081f2ee3266a5bb319241e2e1d"
+    },
+    {
+      "path": "shared/study/direct-frame.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 18201,
+      "sha256": "2de705acbd9e342d2a159eda6a6e4b0b289f6f29a5341588c2567118c9c0f466"
+    },
+    {
+      "path": "shared/study/drafting.css",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1182,
+      "sha256": "ec5220d9372fe072c2b933e033e7c3a64cf7cb222182e7cf9cb616ac06fe015c"
+    },
+    {
+      "path": "shared/study/example-contract.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4214,
+      "sha256": "d025de719aab850bef843e0f14af9c79d7e919877c7e0c86d5e203dec817e32f"
+    },
+    {
+      "path": "shared/study/example.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 1708,
+      "sha256": "f257ddc43e2507b98a470813f0fd0002a0e6058d694e16eb38feed5fb4772cd7"
+    },
+    {
+      "path": "shared/study/plan.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 18498,
+      "sha256": "7ef4e054666d12876a381b7bbbb3190ebf902477c2280fa7fe0cc3eb4b440fb7"
+    },
+    {
+      "path": "shared/study/preview-server.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 5478,
+      "sha256": "910d57a7fe7cb88dbed832ed0a4019440d0aa27b75ac5473acda3acfae37c55a"
+    },
+    {
+      "path": "shared/study/shell.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3663,
+      "sha256": "3e15966c7aed96fa202e3bb66a9bed1fec6d5d504e7fd1bae955791a026d1b88"
+    },
+    {
+      "path": "shared/study/study.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 24559,
+      "sha256": "c05325e87dccabbfc52054cdd67878e15af458149e051cd973db15c8d9bd2fb9"
+    },
+    {
+      "path": "shared/study/style.css",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 9279,
+      "sha256": "92df24f7525e4f40e1b678df3b59704a3124a4430528ecba73648bbdd4d8f2d1"
+    },
+    {
+      "path": "shared/viewer/annotation-layout.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3730,
+      "sha256": "5294525824f9c5fbb458b1db41987de8c23ce922fa7df8927832c3fb07104baa"
+    },
+    {
+      "path": "shared/viewer/drafting.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 5127,
+      "sha256": "fb70b21c913590270eb2e6f4083eae8cf0568db85324352b5c67e604639ddc12"
+    },
+    {
+      "path": "shared/viewer/line-art.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 12494,
+      "sha256": "c6b8b61de789c30b3ee2e5dfa248ce2b3937c41fa5d54ec3c653acbca7711914"
+    },
+    {
+      "path": "shared/viewer/scene.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 5554,
+      "sha256": "92c8744606ce811e9495555190b30384c63084790f419b803075448fb79a96de"
+    },
+    {
+      "path": "shared/viewer/spec-label.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 3087,
+      "sha256": "27dbff2591d67e84dd32040a53e7f9ff9fa6b5676bce64e24814710e656c28e8"
+    },
+    {
+      "path": "shared/viewer/viewer.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 7936,
+      "sha256": "73d514d6c2a1d8ca8b4bc754560ec27e8de1cacf82703ae55f9a88f34b33bd11"
+    },
+    {
+      "path": "showcase/camera-director.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 4504,
+      "sha256": "02c4bd2fce2c5f7e43253932e948cbead20606b08029e5a4142928b441d1d2d8"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 14671,
+      "sha256": "6901e4b74a2602c1d7a03cc648e219a1cd2a543302292ae838c05e2481196a34"
+    },
+    {
+      "path": "tools/audio/study-score.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 7668,
+      "sha256": "a9a6872d4dcf908fbf7a637cac87743e4875cfcdfd1cb037d491f9b2d739e976"
+    },
+    {
+      "path": "tools/video/check-static-region.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 11895,
+      "sha256": "13a7d00553238116759ffec7882b2c7417ea74b9f9eba608d6987f70ea7daf33"
+    },
+    {
+      "path": "tools/video/export.mjs",
+      "role": "input",
+      "storage": "repository",
+      "bytes": 18343,
+      "sha256": "73476523b785a294de37fbc70bab4227e99e96c564a2a8c503342407c0123333"
+    }
+  ]
+}

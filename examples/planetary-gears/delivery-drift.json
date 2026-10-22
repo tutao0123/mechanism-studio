@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "manifest": "examples/planetary-gears/delivery.json",
+  "manifestSha256": "4ee03ca6a1581d6b3b8416a29df6562a45a0060b5e0320442e649f792472f4dd",
+  "changes": [
+    {
+      "path": "package.json",
+      "recorded": {
+        "bytes": 1195,
+        "sha256": "cb152ea2686c2e3637576958fe814cefa3c6c6f94c42d9ac33a1f6332a81d0d9"
+      },
+      "current": {
+        "bytes": 1203,
+        "sha256": "a98cff6bedee6b5fc54a44da8c46da2efc9a208f0ed7262703e0cec2f35fa000"
+      },
+      "kind": "tooling",
+      "reason": "Alpha release version metadata changes from 0.4.0 to 0.4.1-alpha.1. No scripts, dependency versions, rendering code, geometry, motion, timing or media bytes are changed by this metadata update.",
+      "evidence": []
+    },
+    {
+      "path": "package-lock.json",
+      "recorded": {
+        "bytes": 611,
+        "sha256": "2e30f601ac2dfd1792716ba7beae08e52ab13e00774fc8b4fcf60cf023056b60"
+      },
+      "current": {
+        "bytes": 627,
+        "sha256": "acd8aade985a341218949de0bb225a68ea3c38657bc0488797ddd5a1b6f514a3"
+      },
+      "kind": "tooling",
+      "reason": "Alpha release version metadata changes from 0.4.0 to 0.4.1-alpha.1. No scripts, dependency versions, rendering code, geometry, motion, timing or media bytes are changed by this metadata update.",
+      "evidence": []
+    }
+  ]
+}

@@ -4,7 +4,13 @@
 
 Mechanism Studio is a project-local AI authoring skill and a working browser toolkit for mechanical explanation. It connects source-aware part identities, independent motion and display layers, exploded views, guided cameras, close annotations and synchronized sound. The default presentation is white surfaces with fine dark edges and restrained colour cues.
 
-**Status: working research prototype, version 0.4.0.** Ten implemented experiences range from simplified teaching mechanisms to source-backed robot descriptions. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
+**Status: public alpha, v0.4.1-alpha.1.** This working research prototype is ready for experimentation and feedback; its APIs and authoring workflow may change. Eleven implemented experiences across ten models range from simplified teaching mechanisms to source-backed robot descriptions. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
+
+**New: [More than gears](examples/planetary-gears/README.md).** An original 80-part planetary reducer with 24 / 24 / 72 teeth, a fixed ring and ideal 4:1 reduction. Its 36-second Atlas loop opens the enclosure, separates the transmission, follows one working gear pair, takes apart a 13-component shaft bearing, then seats its races and demonstrates coupled ball/cage motion before reassembly. The original code-generated music is retained. The model and presentation are reproducible from local source; bearing motion is prescribed ideal rolling, not a contact or load simulation.
+
+![The original eighty-part planetary reducer during its Atlas exploded-view sequence](docs/media/planetary-gears-preview.jpg)
+
+*Read the [Alpha release notes](docs/releases/v0.4.1-alpha.1.md) for the included workflow, requirements and known limits.*
 
 **New robot studies:** [Allegro dexterous hand](examples/allegro-hand/README.md)
 and [Robotiq 2F-85 gripper](examples/robotiq-gripper/README.md). Each has a
@@ -20,7 +26,7 @@ MuJoCo Menagerie. Source and adapted geometry retain their model-specific
 [BSD-2-Clause notices](THIRD_PARTY_NOTICES.md). The [integration report](docs/robot-studies-release.md)
 covers their compatibility with the shared study server after the latest upstream sync.*
 
-**Latest: [A gearbox, revealed](examples/gearbox/README.md).** The original five-speed teaching gearbox below has three editions on one local server: the default 40-second white atlas (`/`), an opt-in blueprint (`/blueprint/`) and an optional 24-second [cinematic edition](examples/gearbox/cinematic/README.md) (`/cinematic/`). [Run it locally](#try-it-locally).
+**Gearbox editions: [A gearbox, revealed](examples/gearbox/README.md).** The original five-speed teaching gearbox below has three editions on one local server: the default 40-second white atlas (`/`), an opt-in blueprint (`/blueprint/`) and an optional 24-second [cinematic edition](examples/gearbox/cinematic/README.md) (`/cinematic/`). [Run it locally](#try-it-locally).
 
 ![Original five-speed teaching gearbox: the case lifts, shafts and synchronizers separate, and the power path moves through first and second gear](docs/media/gearbox-readme.gif)
 
@@ -40,17 +46,33 @@ covers their compatibility with the shared study server after the latest upstrea
 
 ## Try it locally
 
-Requires **Node.js 20.10+**, npm and a browser supporting WebGL 2.
+Start with the original planetary reducer. Viewing and generating its music require **Node.js 20.10+**, npm and a browser supporting WebGL 2.
 
 ```sh
 git clone https://github.com/tutao0123/mechanism-studio.git
 cd mechanism-studio
 npm ci
+node examples/planetary-gears/audio/build.mjs
+node examples/planetary-gears/serve.mjs
+```
+
+Open **http://127.0.0.1:4193/?clean=1** and click **Play with music** for the 36-second loop. It includes the 80-part explosion, gear-pair and bearing close-ups, and reassembly. This first example needs no Python, Blender, CAD download or speech account.
+
+To browse all examples, stop that server or open another terminal in the repository:
+
+```sh
 npm run build:audio   # once: renders every original study score and checks its recorded hash
 npm run preview
 ```
 
-Open **http://127.0.0.1:4179/**. The included viewing assets run locally with no Blender installation, MCP connection or speech credentials. Dependencies are served from the local installation. Upstream robot mesh files are not stored in Git: `npm run fetch:sources` downloads each from its pinned upstream commit and checks its SHA-256. Only tests and model rebuilds need them. Study music is not stored in Git: `npm run build:audio` synthesizes all of it in seconds, and without it every study plays silently. The per-study score commands below rebuild a single score.
+The gallery opens at **http://127.0.0.1:4179/**. Its cards give the dedicated server commands where needed. The included viewing assets run locally with no Blender installation, MCP connection or speech credentials. Dependencies are served from the local installation. Upstream robot mesh files are not stored in Git: `npm run fetch:sources` downloads each from its pinned upstream commit and checks its SHA-256. Only tests and model rebuilds need them. Study music is not stored in Git: `npm run build:audio` synthesizes all of it locally, and without it every study plays silently. The per-study score commands below rebuild a single score.
+
+| Task | Requirements beyond the checkout |
+| --- | --- |
+| View included examples and synthesize original scores | Node.js 20.10+, npm, WebGL 2 browser |
+| Run the full `npm test` suite | Node.js, Git, **Python 3** (`python` on Windows, `python3` elsewhere, or `MECHANISM_PYTHON`) and network access for the first pinned source download |
+| Encode video and run optional media integration checks | **FFmpeg and FFprobe** on PATH, plus generated frames/audio |
+| Rebuild native CAD or Blender assets | The separately documented project-local OCCT or Blender runtime; not needed for viewing |
 
 For the new dexterous-hand study, generate its local score and start its server:
 
@@ -103,10 +125,22 @@ scores are generated locally from deterministic source; WAVs and rendered MP4s
 are excluded from Git. See the [gearbox guide](examples/gearbox/README.md) for
 rebuild commands, evidence and limits.
 
+For the original planetary set:
+
+```sh
+node examples/planetary-gears/audio/build.mjs
+node examples/planetary-gears/serve.mjs
+```
+
+Open **http://127.0.0.1:4193/?clean=1** for the 36-second loop. The included
+model needs no external CAD download; the [planetary guide](examples/planetary-gears/README.md)
+also documents geometry rebuilding, component identities and ideal-motion limits.
+
 ## Examples
 
 | Example | What to explore | Scope |
 | --- | --- | --- |
+| [Planetary reducer](examples/planetary-gears/README.md) | 80-part enclosure/transmission explosion, working gear-pair close-up, 13-part bearing teardown and seated rolling detail, complete reassembly; 36 seconds | Original 24 / 24 / 72 teaching model; ideal 4:1 reduction and shaft-coupled bearing kinematics; plain planet bushings, no contact/load solver |
 | [Five-speed gearbox](examples/gearbox/README.md) | Case, three shafts, 13 gears and three synchronizers; drive through 1st–5th with the active power path highlighted and a synchronizer close-up; 40 seconds | Original teaching model, 124 parts / 15 assemblies; exact tooth ratios, no load, friction or clutch simulation |
 | [Allegro dexterous hand](examples/allegro-hand/README.md) | Finger curl, thumb opposition, source finger-chain separation and restoration; 35.56 seconds | Sixteen declared hinges; valid neutral pose and source limits, no tendon/contact simulation or invented internal parts |
 | [Robotiq 2F-85 gripper](examples/robotiq-gripper/README.md) | Coordinated jaws, local four-bar linkage, exploded links and reassembly; 35.56 seconds | Analytic closure of the pinned source linkage; authored free-space path, no object-contact or force solution |
@@ -139,7 +173,7 @@ There is **one discoverable skill** coordinating four specialist authoring modul
 | [Materials and lighting](.agents/skills/mechanism-studio/references/modules/materials-lighting.md) | Neutral line art, readable surfaces, restrained colour cues and owned appearance layers | An appearance plan with reversible source-ID bindings |
 | [Mating close-up](.agents/skills/mechanism-studio/references/modules/mating-closeup.md) | Source-bound component relationships, local phase highlights and spin/orbit direction | A close-up plan with evidence, cue meaning and camera/appearance handoffs |
 
-These are documented modules within the main skill, rather than separately installed autonomous skills. Their plan files are authoring handoffs; current pages execute explicit JavaScript adapters. A generic JSON plan engine is not implemented.
+These are documented modules within the main skill, rather than separately installed autonomous skills. The [executable presentation plan](.agents/skills/mechanism-studio/references/executable-presentation.md) now runs a defined subset: display offsets, fixed-envelope orthographic shots, near-part labels and accents/opacity on one clock. Gearbox and Robotiq expose reusable `presentation.mjs` adapters. The broader authoring handoffs remain guidance; mechanics, cinematic paths and specialized effects keep their explicit adapters.
 
 See the **[skill user guide](docs/skill-guide.md)** for invocation, the full workflow and practical prompts, and the **[module catalog](docs/modules.md)** for inputs, outputs, dependencies, invariants and limits. Supporting references cover text/image/CAD intake, engineering evidence, process effects, captions, audio and delivery.
 
@@ -167,7 +201,7 @@ shared/cad/                      Source definitions/occurrences, placements and 
 shared/animation/                Clock-free process display primitives
 shared/voice/                    Optional speech API; existing lesson identity and verified playback
 shared/appearance/               Deterministic colour cues and independent material ownership
-shared/study/                    Music transport, annotations, camera direction and capture
+shared/study/                    Presentation plans, example bootstrap, music transport and capture
 EXAMPLE_ROBOT/                   Source-based robot studies and kinetic adapter
 examples/                       Teaching mechanisms and source-based robot studies
 prototype-3d/                    Original 3D lock and compatibility entry points
@@ -181,6 +215,8 @@ Mechanism adapters own working poses and readouts. The viewer applies observatio
 Original teaching assets include Blender Python builders and GLB exports. Local `.blend` exports are excluded because they embed machine-specific paths; regenerate them with the builders when needed. Third-party examples retain their source records and per-asset notices. The optional Blender MCP bridge has only four lock-specific operations; it is not a general CAD backend and is not connected automatically. Details: [architecture](docs/architecture.md), [module APIs](docs/modules.md), [CAD tools](tools/cad/README.md).
 
 ## Verify and rebuild
+
+The full suite uses Python 3 for the retained MJCF parser tests. Install or select it before running `npm test`; a Node-only setup can still preview all included GLBs and build their scores. The first test run downloads pinned source meshes and verifies their hashes. Optional FFmpeg integration checks skip when FFmpeg/FFprobe are unavailable; native CAD and Blender rebuilds use their own setup instructions.
 
 ```sh
 npm test
@@ -206,7 +242,14 @@ npm run audit:cad -- --example examples/<name>
 
 # Verify a delivery record's source/evidence fingerprints without requiring local exports.
 npm run check:delivery -- --manifest examples/allegro-hand/delivery.json
+
+# Check a registered executable presentation and save numerical evidence.
+node tools/study/check-presentation.mjs --example gearbox --output output/presentation-checks/gearbox.json
+node tools/study/check-presentation.mjs --example robotiq-gripper --output output/presentation-checks/robotiq-gripper.json
+node tools/study/check-presentation.mjs --example planetary-gears --output output/presentation-checks/planetary-gears.json
 ```
+
+The presentation reports check the supported runtime numerically and leave browser/video review explicitly pending. Start another study from [the reusable example template](templates/study/README.md); a plan still needs actual geometry, identity, bounds and any mechanism adapter.
 
 The [delivery checker](.agents/skills/mechanism-studio/references/delivery-evidence.md) detects changed recorded files and distinguishes missing local exports from missing repository assets. Add `--require-local` to require the authoring machine's local media and raw reports. A fresh clone can verify bundled inputs while reporting ignored local evidence as unavailable. A `delivery-drift.json` beside a record documents reviewed later changes to its inputs, each with its old and new hash and evidence; anything undocumented still fails. File integrity does not establish engineering correctness, confirm a review happened, or prove publication; the record keeps those claims separate.
 

@@ -1,5 +1,103 @@
 # Assembly study shell
 
+New studies can start from [the reusable example template](../../templates/study/README.md)
+and `startStudyExample(definition)` in `example.mjs`. The optional plan compiler
+provides a shared executable presentation subset; mechanism formulas, source
+identity and parent-aware transform conversion remain in the example.
+
+## Executable presentation plan
+
+`compilePresentationPlan(plan, index)` from `plan.mjs` compiles plain JSON data
+with `schemaVersion: 'mechanism-presentation-1'`. It has no DOM, Three.js, network
+or clock dependency. The index must supply a matching nonempty
+`geometryRevision` and a nonempty `parts` array with unique, nonempty `id` values.
+The example's real index also supplies the bounds and source transforms used by
+its framing and display adapters. The compiler does not derive those fields.
+All top-level fields below are required; `?` marks optional nested fields.
+
+| Plan field | Supported data and meaning |
+| --- | --- |
+| `id`, `geometryRevision`, `bpm`, `durationSeconds` | Plan identity, exact index revision and positive common-clock timing |
+| `chapters` | Ordered, contiguous `{ id, firstBeat, lastBeat, title, copy, labels }` records covering the full duration. `labels` contains at most two unique `[partId, text]` pairs; text may also be a spec label `{ index, name, spec? }` |
+| `channels` | Authored keys mapped to `{ rise: [start, end], fall: [start, end], cutoff? }` in absolute seconds. Quintic rise/fall produce a weight in `[0, 1]`; cutoff resets it to zero |
+| `offsets` | `{ channel, vectors: { [partId]: [x, y, z] } }` entries. World display translations use the example's normalized display units; repeated entries add. Unmentioned parts receive zero |
+| `annotations` | `{ windows, fadeInSeconds, fadeOutSeconds }`. `windows` maps every chapter ID to one chapter-local seconds interval per label, in reveal order |
+| `cameras` | Every chapter maps to `{ bounds: { min, max }, direction, fillX, fillY, minHalfHeight, up?, distance?, narrow? }`. `direction` points from the bounds centre toward the camera. Optional `narrow` is `{ belowAspect, fillX, fillY }`. Fitting uses this fixed world envelope and the requested aspect, never live moving bounds |
+| `appearance` | `{ labelWeight, accents?, opacity? }`. Accent entries are `{ channel, ids, weight }`; opacity entries are `{ channel, ids, minimum }`. Values lie in `[0, 1]`; repeated accents take the maximum, opacity takes the minimum |
+
+Unknown fields, unknown IDs/channels/chapters, stale geometry revisions,
+nonfinite values, unsupported JSON values and incomplete chapter coverage throw
+before sampling. Compilation copies and freezes the plan; it does not mutate the
+input or scene index. Revision matching checks the supplied identity, so authors
+must derive that revision from the actual geometry inputs.
+
+The returned object contains `plan`, `BPM`, `DURATION`, `CHAPTERS`,
+`normalizeTime(seconds)`, `stateAt(seconds)`, `annotations`, `framing`,
+`appearanceCues(state, labelCues)` and `presentationOpacity(state, id)`, plus
+normalized `cameraUp` when the plan explicitly declares a common up basis.
+`stateAt` returns `time`, `beat`, `chapter`, `chapterIndex`, `localTime`,
+`progress` and a complete `offsetsWorld` map. Time wraps at the duration,
+including negative seeks. Sampling is absolute and does not accumulate state.
+
+`annotations` supplies `CUE_WINDOWS` and
+`annotationCues(state, { paused, cameraSettled })`; unsettled cameras suppress
+cues, and paused cues use full opacity inside their windows. `framing` supplies
+`cameraFor(chapterId, aspect, localTime)` and `annotationCameraFor` with stable
+position/target/orthographic half-height for each shot. The study shell handles
+near-part placement, camera transitions and transport. It supports one common
+camera-up basis across a presentation; keep custom shot `up` values consistent.
+
+This schema samples presentation data only. It does not validate a claimed
+physical removal path, reconstruct CAD, solve joints/contact, infer correct
+envelopes, place a pixel-perfect label or execute the full Cinematic profile.
+Older `planning/*-plan.json` handoffs are separate records.
+
+## Shared example bootstrap
+
+Await `startStudyExample(definition)` from `example.mjs`. It validates the definition,
+creates the shared shell, loads index and provenance once, calls
+`createPresentation(index)` and starts the study. A definition supplies its
+`id`, UI/credit copy, actual `indexUrl`, `sourceUrl`, `assetUrl`, `contractUrl`,
+`scoreUrl`, `audioUrl` and presentation factory. The template shows the complete
+definition rather than requiring another copied page bootstrap.
+
+The factory returns `{ plan, timeline, annotations, framing }`, with the needed
+existing study hooks such as `workingPoses`, `appearanceCues`,
+`presentationOpacity`, `labelObstacleIds`, `labelObstacleBounds`, `detailIds`, `cameraCuts` and `rig`.
+Use the compiler's timeline functions and add `localDisplayOffsets` to convert
+the sampled world intentions into real display-parent residuals. Keep mechanical
+motion in `workingPoses`; any source-specific additions to timeline state remain
+explicit adapter code. The [gearbox](../../examples/gearbox/presentation.mjs) and
+[Robotiq](../../examples/robotiq-gripper/presentation.mjs) factories show this
+split with real model inputs.
+
+The bootstrap exposes `window.mechanismStudy`; optional `globalName` preserves
+an example's existing global alias. The study API supplies `play`, `pause`,
+`seek`, `reset`, `snapshot` and `ready`, with `capture` only for the explicit
+capture query. Omit `appearance` to keep Atlas; choosing a plan does not migrate
+other examples or enable a cinematic renderer.
+
+Check a registered example from the project root:
+
+```sh
+node tools/study/check-presentation.mjs --example gearbox --output output/presentation-checks/gearbox.json
+node tools/study/check-presentation.mjs --example robotiq-gripper --output output/presentation-checks/robotiq-gripper.json
+```
+
+The report records `schemaVersion`, `example`, `geometryRevision`, `inputHashes`,
+`samples`, `checks`, `manualReview` and `status`. It checks finite offsets/poses,
+seek determinism, display reassembly and exact loop reset, cue ranges, unchanged
+source/index records, score timing metadata and projection of declared camera
+boxes at landscape, square and portrait aspects. Box projection does not prove
+moving geometry containment; score metadata does not verify the audio file.
+`status: 'automated-passed'` remains separate from
+`manualReview.status: 'pending'`. The checker does not open a browser, export
+video or establish that visual checks happened. See the
+[skill workflow](../../.agents/skills/mechanism-studio/references/executable-presentation.md)
+for authoring and evidence boundaries.
+
+## Lower-level study configuration
+
 `createAssemblyStudy(config)` in `study.mjs` owns a page's audio transport, shared
 viewer, stable camera director, near-part annotation placement, restrained colour
 cues and rendering clock. It does not import an example or supply its mechanics.
@@ -67,6 +165,14 @@ Required configuration:
   context below 0.5 is excluded from label obstacles. `labelObstacleIds(state)`
   can explicitly restrict obstacles for an authored detail, without changing
   target anchors. Check contrast and actual overlap in the delivered viewport.
+- `labelObstacleBounds(state)`: optional `Map<partId, { min, max }>` of world-space
+  obstacle bounds, already including working poses and display offsets. Used
+  when the near-label layout is prepared; missing IDs keep the legacy endpoint
+  sweep. The adapter must cover the entire retained-label interval, or prove
+  those obstacles stationary throughout it. This handles a component opening
+  and closing inside one chapter, whose endpoints alone miss its open extent.
+  The planetary bearing study supplies settled current bounds and checks its
+  reading holds. It does not change real-mesh label anchors or part visibility.
 - `appearance`: optional style ID or style object from
   `shared/appearance/styles.mjs`. Omission and `'atlas'` keep the shell's existing
   background, lights, solid fill, feature lines and accent colours value for value;
@@ -92,7 +198,7 @@ Required configuration:
   and `playingStatus`. Credit text supports newlines and is never parsed as HTML.
   Provenance uses `sourceUrl`/`url` and `revision`/`commit` fallbacks.
 
-The returned API exposes `seek(seconds)`, `play()`, `pause()`, `snapshot()` and
+The returned API exposes `seek(seconds)`, `play()`, `pause()`, `reset()`, `snapshot()` and
 `viewer`, `framing`, `index` getters. `.ready` resolves after the model and music
 attempts finish, returning the API on successful model initialization or `null`
 when initialization fails. Inspect `snapshot().ready` and `.musicReady` separately.

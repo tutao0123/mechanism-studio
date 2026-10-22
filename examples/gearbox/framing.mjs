@@ -7,10 +7,8 @@ import { LAYOUT, CENTRE_DISTANCE } from './spec.mjs';
  * continuous. Rotation about a shaft axis keeps each part inside its own
  * cylindrical bounds, which the axis-aligned boxes already cover. */
 export const CAMERA_REVISION = 'gearbox-framing-1';
-const UP = new Vector3(0, 1, 0);
-const corners = b => [b.min.x, b.max.x].flatMap(x => [b.min.y, b.max.y].flatMap(y => [b.min.z, b.max.z].map(z => new Vector3(x, y, z))));
 
-export function createGearboxFraming(index, story) {
+export function createGearboxCameraPlan(index, story) {
   const rest = new Map(index.parts.map(part => [part.id, new Box3(new Vector3(...part.worldBounds.min), new Vector3(...part.worldBounds.max))]));
   // Synchronizer sleeves, rails and forks also slide by one travel along X.
   const sliding = id => /\/(sleeve|ring-front|ring-rear|key-\d)$|shift\/(rail|fork)-/.test(id);
@@ -46,19 +44,17 @@ export function createGearboxFraming(index, story) {
     ['over', { bounds: envelopes.internals, direction, fill: .84 }],
     ['close', { bounds: envelopes.whole, direction, fill: .92 }],
   ]);
-  const cameraFor = (chapterId, aspect, localTime = 0) => {
-    if (!(aspect > 0) || !Number.isFinite(aspect) || !Number.isFinite(localTime) || localTime < 0) throw new Error('Positive aspect and finite local time required.');
-    const plan = plans.get(chapterId);
-    if (!plan) throw new Error(`Unknown gearbox chapter: ${chapterId}`);
-    const target = plan.bounds.getCenter(new Vector3()), d = plan.direction;
-    const right = new Vector3().crossVectors(UP, d).normalize(), up = new Vector3().crossVectors(d, right).normalize();
-    let x = 0, y = 0;
-    for (const vertex of corners(plan.bounds)) { vertex.sub(target); x = Math.max(x, Math.abs(vertex.dot(right))); y = Math.max(y, Math.abs(vertex.dot(up))); }
-    const halfHeight = Math.max(y / plan.fill, x / (aspect * plan.fill), .01);
-    const distance = Math.max(plan.bounds.getSize(new Vector3()).length() * 2, halfHeight * 3, 1);
-    return { position: target.clone().addScaledVector(d, distance).toArray(), target: target.toArray(), halfHeight };
-  };
+  const cameras = Object.fromEntries([...plans].map(([id, plan]) => [id, {
+    bounds: { min: plan.bounds.min.toArray(), max: plan.bounds.max.toArray() },
+    direction: plan.direction.toArray(), fillX: plan.fill, fillY: plan.fill, minHalfHeight: .01,
+  }]));
   return { geometryRevision: index.geometryRevision, cameraRevision: CAMERA_REVISION,
     boundsMethod: 'Actual part AABB unions at rest and at every display-offset endpoint; sliding sleeves, rings, keys, rails and forks reserve one travel. Presentation evidence, not a collision certificate.',
-    envelopes, cameraFor };
+    envelopes, cameras };
+}
+
+/** Existing callers use the same compiled camera executor as the study. */
+export function createGearboxFraming(index, story) {
+  if (story.geometryRevision !== index.geometryRevision || !story.framing) throw new Error('Compiled gearbox presentation required.');
+  return story.framing;
 }

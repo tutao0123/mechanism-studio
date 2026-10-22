@@ -37,9 +37,9 @@ Use [module orchestration](references/module-orchestration.md) to share real IDs
 | [Materials & Lighting](references/modules/materials-lighting.md) | Base appearance, edges, lighting, source-aware textures and selection-safe overrides |
 | [Mating Close-up](references/modules/mating-closeup.md) | Source-bound component pairs, local phase cues and spin/orbit explanations; handoffs to camera and appearance |
 
-These are four internal authoring contracts within **one skill**. They are not separately installed autonomous skills, MCP tools, or a generic JSON-plan executor. Adapt their outputs to [existing runtime APIs](references/runtime-modules.md); distinguish `concept`, `bound`, and `validated` work.
+These are four internal authoring contracts within **one skill**, not separately installed autonomous skills or MCP tools. For supported study presentation, use the [executable presentation plan](references/executable-presentation.md): `mechanism-presentation-1` runs display offsets, fixed-envelope orthographic shots, near-part labels and accents/opacity on one absolute clock. The broader handoff records remain authoring guidance; mechanics and unsupported effects need explicit [runtime adapters](references/runtime-modules.md). Distinguish `concept`, `bound`, and `validated` work.
 
-For continuous dismantling, reassembly or a close-up of one repeated component, coordinate these contracts through [motion choreography](references/motion-choreography.md). This cross-module layer owns the shared editorial rhythm and context; example adapters implement it.
+For continuous dismantling, reassembly or a close-up of one repeated component, coordinate these contracts through [motion choreography](references/motion-choreography.md). This cross-module layer owns the shared editorial rhythm and context; the supported plan channels and example adapters implement it.
 
 For a close-up that explains how components interact, select Mating Close-up: bind actual occurrences and supported relative motion before adding tooth/region highlights or direction arcs. Keep phase cues distinct from contact simulation, spin distinct from orbit, and cues on the existing common clock.
 
@@ -59,6 +59,8 @@ For a close-up that explains how components interact, select Mating Close-up: bi
 ## Deliver evidence
 
 Choose the relevant layers in [teaching and validation](references/teaching-and-validation.md). Check source/identity, model invariants, actual transformed geometry, controls and recovery, relevant time/audio paths, and real desktop/narrow-screen views. Automated checks, generated files and actual browser usability are separate evidence. State unexecuted checks and remaining limits plainly.
+
+For a plan-backed study, run the [presentation checker](references/executable-presentation.md#check-the-plan-and-the-delivery). Its numerical report leaves browser and video review pending; it does not promote a bound plan to visually validated work.
 
 Return a working entry point, relevant source/assets/provenance, reproduction commands and validation results. Use the [runtime map](references/runtime-modules.md) for component commands. Do not represent display explosion as collision-checked disassembly, tessellation as exact measurement, or source-based kinematics as a dynamics solver.
 

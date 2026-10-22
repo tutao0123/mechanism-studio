@@ -56,6 +56,16 @@ only difference is `appearance: 'blueprint'` in `blueprint/app.mjs`, which the
 blueprint the solids are unlit and filled with the sheet colour, so they hide
 the lines behind them. The power-path accent is a deeper blue.
 
+[`example.mjs`](example.mjs) supplies both editions to the shared study
+bootstrap. [`presentation.mjs`](presentation.mjs) binds a serializable
+`mechanism-presentation-1` plan to the scene index and compiles its explosion
+channels, occurrence wave, label windows, camera envelopes and opacity cues.
+The live plan is available at `window.mechanismStudy.presentation.plan`.
+`story.mjs` and `kinematics.mjs` continue to own the mechanical schedule, poses
+and torque path; the existing `planning/*.json` files remain authoring handoffs.
+`createGearboxPresentation(index, { plan })` also accepts an edited serialized
+plan with the same geometry revision.
+
 ### Annotation grammar
 
 - **Spec labels.** Each name has a two-digit index, in order of appearance,
@@ -165,6 +175,10 @@ makes a test fail.
   - the case is hidden inside
   - the accent follows the real power path (4th bypasses the countershaft)
   - the score is the delivered file and its cues sit on real engagements
+  - 1,783 sampled states and 42 camera views match frozen pre-migration
+    fingerprints; plan edits change the actual display, labels and framing
+  - reverse seeks, paused inspection and exact chapter/loop boundaries use the
+    same compiled plan in both editions
 - **Drafting:** every drawn number and spec line comes from the spec, scene
   index or GLB; dimensions appear only over assembled parts; the stamp only
   in 4th; nothing is drawn at the loop seam; each wave set has distinct ranks.

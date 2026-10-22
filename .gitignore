@@ -51,7 +51,11 @@ examples/allegro-hand/audio/showcase-loop.wav
 examples/gearbox/audio/gearbox-loop.wav
 examples/gearbox/cinematic/audio/gearbox-cinematic-loop.wav
 examples/humanoid/audio/humanoid-loop.wav
+examples/planetary-gears/audio/planetary-loop.wav
 examples/robotiq-gripper/audio/showcase-loop.wav
+# Retired WOLF examples may leave locally generated scores behind. Preserve
+# those local files without adding them back to a source release.
+examples/wolf-actuator/**/audio/*.wav
 # Per-machine editor state, credential material and Python environments.
 .vscode/
 .idea/

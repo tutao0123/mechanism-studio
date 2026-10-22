@@ -1,6 +1,6 @@
 # Module orchestration and handoffs
 
-Mechanism Studio is the single skill entry point. The four specialist modules are authoring contracts, loaded only when relevant. They do not create new autonomous skills, tools, services, or plan-loading APIs.
+Mechanism Studio is the single skill entry point. The four specialist modules are authoring contracts, loaded only when relevant. The [executable presentation subset](executable-presentation.md) implements common study channels within the existing runtime; it does not turn these contracts into autonomous skills or services.
 
 ## Responsibility boundaries
 
@@ -18,11 +18,11 @@ Start with the [input brief](input-brief.md). Text, images and CAD offer differe
 
 Select presentation style separately from route and pace. White fine-line Atlas remains the default; an explicitly requested [Cinematic profile](presentation-cinematic.md) coordinates camera, appearance, typography and sound through these same owners. Record its separate entry/timeline/output and preserve existing editions. It does not add an autonomous module or a generic renderer flag.
 
-[Motion choreography](motion-choreography.md) is the orchestrator's coordination layer across these owners. It aligns component-specific tempo, context fades, real-occurrence close-ups, reading holds and action-linked sound. It is not an additional contract or executable runtime; the existing example adapters own the implementation.
+[Motion choreography](motion-choreography.md) is the orchestrator's coordination layer across these owners. It aligns component-specific tempo, context fades, real-occurrence close-ups, reading holds and action-linked sound. It is not an additional contract: the supported executable plan channels and example adapters implement the result.
 
 ## Shared authoring records
 
-These names are **handoff conventions**, not a generic runtime schema. Save them in an example's `planning/` when persistent coordination is useful; equivalent notes suffice for a small edit. Existing examples have concrete JSON records, but a new JSON file does not execute itself.
+These names are **handoff conventions**, separate from the `mechanism-presentation-1` runtime schema. Save them in an example's `planning/` when persistent coordination is useful; equivalent notes suffice for a small edit. To execute the supported subset, bind a presentation plan to its real index and pass it to `compilePresentationPlan(plan, index)`; an older handoff JSON is not loaded automatically.
 
 | Record | Required meaning |
 | --- | --- |
@@ -54,7 +54,7 @@ These stages differ from CAD audit statuses `verified / limited / failed`. A con
 3. With geometry ready, explosion and appearance may proceed independently; camera direction may draft candidate views. For timed work agree on the movement/read rhythm and continuity together. A repeated-part close-up names its actual occurrence, extraction/return interval and retained context before either offset or camera planning. Inspect remains free observation unless a tour is requested.
    For an interaction close-up, establish the actual pair and supported mechanical adapter before assigning cues. Mating Close-up defines their meaning and phase; camera frames the relation and appearance renders it. An ideal pitch-region anchor is not a measured contact point.
 4. Finalize camera envelopes after explosion and mechanical/process ranges are known, including context still visible during fades and intermediate single-part extraction. Appearance that changes geometry or silhouette returns to the geometry step.
-5. Integrate through [existing runtimes](runtime-modules.md). One selected clock drives captions, mechanics, offsets, camera plans and actual audio.
+5. Integrate through [existing runtimes](runtime-modules.md). Use [executable presentation](executable-presentation.md) for supported channels and explicit adapters for remaining work. One selected clock drives captions, mechanics, offsets, camera plans and actual audio.
 6. Verify the combined result, including motion/hold diagnostics and a whole-loop visual review. Keep valid existing assets and longer versions; reorganizing modules does not require rebuilding or resynthesizing them.
 
 Resolve conflicts in this order: source/model correctness, the observable relationship and interaction, then appearance. Fix obstructive lights in appearance, cropping in camera, and crowded separation in explosion. Another module must not silently move parts.
@@ -83,8 +83,10 @@ The [gearbox](../../../../examples/gearbox/README.md) keeps these shared records
 `camera-plan`, `appearance-plan`, `annotation-plan` and `timeline`. Each declares
 stage `bound` and the same `geometryRevision`. `planning/build-plans.mjs`
 regenerates them from the example adapters (`kinematics.mjs`, `story.mjs`,
-`framing.mjs`, `annotations.mjs`), which own what the page executes. They are an
-authored teaching model's handoffs, not native CAD identity.
+`framing.mjs`, `annotations.mjs`). Its `presentation.mjs` is the runtime integration
+for the supported presentation plan, with kinematics kept in the mechanism adapter.
+The `planning/` records remain an authored teaching model's handoffs, not native
+CAD identity or automatically loaded presentation JSON.
 
 Its synchronizer close-up (the 3–4 sleeve and blocker ring, beats 32–44) is the
 nearest retained example of close-up motion bound to tooth phase: the mechanism

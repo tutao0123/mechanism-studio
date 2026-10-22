@@ -1,0 +1,17 @@
+{
+  "description": "Frozen outputs from the pre-migration runtime, quantized to 1e-8. Exact cue/chapter boundaries have separate explicit tests.",
+  "sourceCommit": "97ec2775e94056bd269fa6e2c2cb6bb77620243e",
+  "sampleCount": 1794,
+  "progress": [
+    "drivers",
+    "springs",
+    "followers"
+  ],
+  "hashes": {
+    "presentation": "1e000c4ee7cacf5c2fcb681102ed79043f70c4a650969a91cdf17a3cf1965108",
+    "mechanics": "21876d27307a7bbc6b8ee9a21ab0de96fe227e9143eaa907f8a74aa4c3e9c572",
+    "annotations": "afeee864322f4998b7727f0481c98cd44b394b5f15ef8a05749403a70e5dda48",
+    "appearance": "2d7c9f46726bb48f466b364d7863bea87078a8c4946ddba2f2803323263ed256",
+    "cameras": "c622f4b32b3080f84b426f8370a8fa34ac2ba0f77ea16abb28f61e29b6476654"
+  }
+}

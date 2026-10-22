@@ -1,6 +1,6 @@
 # Assembly & Explode
 
-An internal [authoring contract](../module-orchestration.md), not a separate skill, plan loader or disassembly solver. The viewer implements linear display explosion; grouping and staged choreography require an example adapter.
+An internal [authoring contract](../module-orchestration.md), not a separate skill or disassembly solver. The viewer implements linear display explosion; the [executable presentation subset](../executable-presentation.md) samples declared world-offset tracks. Source-specific grouping, parent conversion and broader choreography remain adapter responsibilities.
 
 ## Responsibility
 
@@ -38,7 +38,7 @@ Record `stage` (concept/bound/validated), `geometryRevision`, `planRevision`, me
 - For a repeated-part close-up, the one actual occurrence ID, its current group context, extraction/return display path and unchanged source/rest/mesh scale. Supply intermediate envelopes to camera direction; no duplicated or enlarged substitute geometry.
 - Actual identity, transform, restoration and frame checks, plus unverified collision/engineering meaning.
 
-A definition shared by repeated screws does not make them one part. Visual groups do not rewrite the assembly tree. Geometry changes require rebinding. Offset/group/range changes update planRevision and invalidate affected camera envelopes and anchors. These dependencies are author-managed; there is no automatic dependency executor.
+A definition shared by repeated screws does not make them one part. Visual groups do not rewrite the assembly tree. Geometry changes require rebinding. Offset/group/range changes update planRevision and invalidate affected camera envelopes and anchors. The presentation compiler checks its declared geometry revision and bindings; recomputing affected bounds and broader handoff dependencies remains author-managed.
 
 ## Transform rules
 
@@ -54,7 +54,7 @@ The [XCAF display adapter](../../../../../tools/cad/xcaf-display.mjs) converts r
 
 ## Runtime integration
 
-Use [the viewer API](../../../../../shared/viewer/README.md):
+For a plan-backed study, first use [the presentation compiler](../executable-presentation.md) to sample complete world offsets on the common clock, then retain the source-aware conversion to display-parent residuals. The lower-level viewer API remains available:
 
 ```js
 await viewer.ready;

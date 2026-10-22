@@ -2,8 +2,9 @@
 
 Mechanism Studio has three layers: a project-local authoring skill, reusable
 runtime libraries, and example-specific models/adapters. The skill plans work;
-JavaScript and optional Python/Blender tools implement it. The skill is not a
-background service or a generic JSON-plan execution engine.
+JavaScript and optional Python/Blender tools implement it. The shared study runtime
+executes the defined `mechanism-presentation-1` subset; broader authoring handoffs
+and mechanical models still need example adapters. The skill is not a background service.
 
 ```mermaid
 flowchart LR
@@ -12,8 +13,11 @@ flowchart LR
   C[Retained STEP / URDF or authored geometry] --> A[Source index + GLB + scene contract]
   A --> V[Shared viewer]
   M[Example motion / process adapter] --> V
-  E --> D[Explicit example adapters]
-  D --> T[One presentation timeline]
+  E --> P[Supported presentation plan]
+  E --> D[Specialized example adapters]
+  A --> P
+  P --> T[One presentation timeline]
+  D --> T
   T --> V
   T --> L[Near-part labels + sound]
   A --> Q[Source and asset evidence checks]
@@ -45,12 +49,15 @@ select an authoring route, not new runtime URL parameters.
 | [animation](../shared/animation/README.md) | Flow/event display primitives driven by a caller's phase/time | An independent clock or combustion/fluid solver |
 | [voice](../shared/voice/README.md) | Lesson identity, explicit Doubao generation, manifests and checked playback | Mechanism decisions or speech-service rights |
 | [appearance](../shared/appearance/README.md) | Source-ID-bound colour cues and independent owned material layers | Geometry/source mutation or physical material simulation |
-| [study](../shared/study/README.md) | Music transport, stable shot transitions, near-part annotations, capture update path | Generic music composition, source joint inference |
+| [study](../shared/study/README.md) | Executable presentation subset, example bootstrap, music transport, stable shot transitions, near-part annotations, capture update path | Mechanical formulas, generic music composition, source joint inference, arbitrary Cinematic profiles |
 
 The retained `showcase/` shell handles the earlier English story adapters. The
 music studies use `shared/study/`; the newer robot kinetic adapter supplies source
 joints and a separate score. These are maintained implementations, not one
-universal presentation configuration.
+universal presentation configuration. New plan-backed studies use
+`compilePresentationPlan(plan, index)` and `startStudyExample(definition)`;
+[the plan reference](../.agents/skills/mechanism-studio/references/executable-presentation.md)
+separates compiled display channels from example-owned motion and evidence.
 
 ## Identity, coordinates and motion
 

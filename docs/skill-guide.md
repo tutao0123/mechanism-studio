@@ -2,19 +2,25 @@
 
 Mechanism Studio is a project-local authoring skill backed by a runnable JavaScript toolkit. It helps an AI coding agent prepare inspectable mechanical scenes and short stories while preserving the difference between source engineering data, teaching models and presentation effects.
 
+**v0.4.1-alpha.1 is a public alpha.** Use it to experiment with the documented examples and authoring contracts; interfaces may change, and general CAD constraints, collision-free removal planning and image-to-CAD reconstruction are not implemented.
+
 There is **one discoverable skill** at [SKILL.md](../.agents/skills/mechanism-studio/SKILL.md), with **four specialist authoring contracts** for explosion, camera direction, appearance and mating close-ups. They work with seven reusable shared libraries, the Showcase application and local tooling. They are not a collection of independently installed autonomous agents. See the [module catalog](modules.md) for each responsibility and interface.
 
 ## Run locally
 
-From the repository root, use Node.js 20.10 or newer:
+From the repository root, use Node.js 20.10 or newer, npm and a WebGL 2 browser. Start with the original planetary example:
 
 ```powershell
 npm ci
-npm test
-npm run preview
+node examples/planetary-gears/audio/build.mjs
+node examples/planetary-gears/serve.mjs
 ```
 
-The standard preview is local-only at `http://127.0.0.1:4179/`. Existing built viewing assets do not require Blender, Python, an MCP connection or a speech account. Generated Doubao MP3s and local `.blend` exports are excluded from public Git packaging; the included text/manifests/CLI support optional speech regeneration, and Blender Python builders can recreate teaching assets. Fresh public checkouts retain silent/text tours and the original code-music examples. Follow the specific example/tool README when rebuilding.
+Open `http://127.0.0.1:4193/?clean=1` and click **Play with music**. This 36-second study demonstrates the shared explosion, camera, appearance and mating-close-up workflow with original geometry. No external CAD download is needed.
+
+For the gallery, stop that server or open another terminal and run `npm run build:audio`, then `npm run preview`. The standard preview is local-only at `http://127.0.0.1:4179/`; cards identify examples with their own server. Existing built viewing assets do not require Blender, Python, an MCP connection or a speech account. Generated Doubao MP3s and local `.blend` exports are excluded from public Git packaging; the included text/manifests/CLI support optional speech regeneration, and Blender Python builders can recreate teaching assets. Fresh public checkouts retain silent/text tours and the original code-music examples. Follow the specific example/tool README when rebuilding.
+
+The **full test suite additionally requires Python 3** for MJCF parsing: `python` on Windows, `python3` elsewhere, or the `MECHANISM_PYTHON` environment variable. Its first run downloads digest-pinned source meshes. FFmpeg/FFprobe are needed for video encoding and optional media integration checks; native STEP import and Blender rebuilding have separate project-local runtime setup. None is a prerequisite for the first viewing example.
 
 The robot has its own preview:
 
@@ -79,11 +85,25 @@ The [input brief](../.agents/skills/mechanism-studio/references/input-brief.md) 
 1. Define the reader's question, inputs, permitted public use, route and requested output.
 2. Reuse or prepare geometry and a real scene contract/index. Preserve source bytes, units, provenance, actual parents, stable IDs and known mapping limits.
 3. Invoke only needed specialist contracts. Explosion and appearance may proceed in parallel after geometry exists; final camera envelopes depend on finalized motion and separation ranges.
-4. Adapt plans to implemented runtime APIs. Plans use shared IDs/revisions and one time domain; they are not automatically executed JSON.
+4. Use the [executable presentation plan](../.agents/skills/mechanism-studio/references/executable-presentation.md) for the supported study channels, or adapt broader handoffs to the relevant runtime APIs. Both share actual IDs/revisions and one time domain; old handoff JSON is not an executable schema.
 5. Inspect the resulting model and page. Check actual transformations, rest restoration, controls, pause/seek/loop behavior, relevant audio and narrow-screen readability.
 6. Deliver the working entry, sources, assumptions, reproducible commands and actual evidence. Preserve prior valid versions.
 
 Handoff stages are `concept` (intent), `bound` (actual asset adapter) and `validated` (claimed checks run). These differ from CAD audit's `verified / limited / failed`. Read [orchestration](../.agents/skills/mechanism-studio/references/module-orchestration.md) for dependencies and invalidation.
+
+## Build a plan-backed study
+
+Start from [the study example template](../templates/study/README.md). Keep geometry, source evidence and mechanical formulas in the example; use `startStudyExample(definition)` for the shared page bootstrap. A `mechanism-presentation-1` plan binds the supported display-offset, orthographic-shot, near-label and accent/opacity channels to the same revision and absolute clock. Use the [gearbox adapter](../examples/gearbox/presentation.mjs) or [Robotiq adapter](../examples/robotiq-gripper/presentation.mjs) as a real integration reference. These examples retain their own kinematics.
+
+The [executable-plan reference](../.agents/skills/mechanism-studio/references/executable-presentation.md) defines the supported subset, index requirements and validation boundary. It does not automatically execute the older per-module planning records, reconstruct CAD, solve dynamics or implement an arbitrary Cinematic profile.
+
+```powershell
+node tools/study/check-presentation.mjs --example gearbox --output output/presentation-checks/gearbox.json
+node tools/study/check-presentation.mjs --example robotiq-gripper --output output/presentation-checks/robotiq-gripper.json
+node tools/study/check-presentation.mjs --example planetary-gears --output output/presentation-checks/planetary-gears.json
+```
+
+These commands write numerical reports. Browser layout, continuous playback and delivered video review remain explicit pending work until actually performed; a report does not certify visual quality.
 
 ## Presentation defaults
 
@@ -120,6 +140,8 @@ Unsupported units, external references, ambiguous identity or failed meshing are
 Read the [CAD workflow](../.agents/skills/mechanism-studio/references/cad-workflow.md), [CAD boundaries](../.agents/skills/mechanism-studio/references/cad-direction.md) and [tool README](../tools/cad/README.md).
 
 ## Tests, export and publication
+
+With Python 3 available for the parser tests, run:
 
 ```powershell
 npm test

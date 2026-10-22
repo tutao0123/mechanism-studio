@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Planetary reducer · Direct film renderer</title>
+<style>
+body{margin:48px;background:white;color:#252525;font:18px/1.6 Georgia,serif}h1{font-weight:normal}
+#engine{position:fixed;left:-12000px;top:0;width:1920px;height:1080px;border:0;pointer-events:none}
+p{max-width:680px}progress{width:480px;max-width:100%}
+</style></head><body>
+<h1>Eighty parts, composed frame by frame.</h1>
+<p>The mechanism, labels and atlas typography are composed directly into fixed 1920 × 1080 images. The original 36-second timeline and synthesized music are preserved.</p>
+<progress id="progress" value="0" max="1080"></progress><p id="status" role="status">Preparing the engine…</p>
+<p><a href="/review.html">Open the encoded film review</a></p>
+<iframe id="engine" title="Offscreen mechanical rendering engine" src="/?clean=1&amp;capture=1" width="1920" height="1080"></iframe>
+<script type="module" src="./render.mjs"></script></body></html>

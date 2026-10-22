@@ -1,6 +1,6 @@
 # Documentation media
 
-These are reviewed Mechanism Studio browser renders, not official CAD product
+These are reviewed Mechanism Studio example renders, not official CAD product
 screenshots. Original documentation text is MIT. Depicted third-party geometry
 retains its own terms; the image filenames do not inherit MIT merely by living
 in this documentation directory.
@@ -13,6 +13,7 @@ in this documentation directory.
 | `quadruped-preview.jpg` | Original eight-DoF teaching model, TuTao | Project MIT; source in `examples/quadruped/` |
 | `gearbox-readme.gif` | Original five-speed teaching gearbox, Mechanism Studio | Project MIT; model, score and capture source in `examples/gearbox/` |
 | `gearbox-editions.jpg` | Same gearbox study in the default and blueprint editions, Mechanism Studio | Project MIT; capture source in `examples/gearbox/`. Blueprint style idea from lemo-opuscar (MIT); no third-party pixels |
+| `planetary-gears-preview.jpg` | Original 80-part planetary reducer teaching model, Mechanism Studio / TuTao | Project MIT; model and direct frame composition in `examples/planetary-gears/`. Resized from frame 00372 at 12.4 s of the 36 s Atlas study; no third-party geometry |
 | `so-arm102-kinetic.jpg` | SO-ARM 102, Robonine | CC BY 4.0; source and change notice below |
 | `humanoid-g1-preview.jpg` | Unitree G1, Unitree Robotics / MuJoCo Menagerie contributors | BSD-3-Clause; model-specific notice and full terms below |
 | `allegro-hand-preview.png` | Allegro Hand V3, SimLab / Wonik Robotics / MuJoCo Menagerie contributors | Model-specific BSD-2-Clause; retained source license and change notice below |

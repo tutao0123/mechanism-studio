@@ -91,8 +91,10 @@ separate checks; see the delivery notes produced for the current run.
 
 The [18 October validation notes](validation.md) and [delivery fingerprints](delivery.json)
 are a historical record of the original local review against the pre-sync
-runtime. Later changes to its inputs are listed, with reasons and evidence, in
-[`delivery-drift.json`](delivery-drift.json), so `npm run check:delivery` passes
-while any undocumented change still fails. The [19 October integration report](../../docs/robot-studies-release.md)
-records the shared-server compatibility checks for this publication. Viewing,
-media export and public posting remain separate delivery states.
+runtime. [`delivery-drift.json`](delivery-drift.json) records reviewed
+non-runtime changes, while the strict historical media fingerprint check
+intentionally reports changed runtime inputs in the current alpha. Passing
+current numerical tests does not certify a new export or visual/audio review.
+The [19 October integration report](../../docs/robot-studies-release.md) records
+the shared-server checks at that date. Viewing, media export and public posting
+remain separate delivery states.

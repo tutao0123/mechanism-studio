@@ -1,0 +1,6821 @@
+{
+  "schemaVersion": "1.0.0",
+  "geometryRevision": "planetary-24-24-72-v3-93f0e1eaae9e",
+  "units": "m",
+  "coordinateBasis": "Right-handed glTF metres, +Y up; all gear axes are +Z, gear plane XY. Viewed from +Z, positive rotation is counter-clockwise.",
+  "rootId": "pg-asm:planetary",
+  "source": {
+    "title": "Three-planet reduction · 24 / 24 / 72",
+    "author": "Mechanism Studio",
+    "license": "MIT",
+    "specRevision": "planetary-24-24-72-v3"
+  },
+  "asset": {
+    "file": "assets/assembly.glb",
+    "sha256": "dc228b548e9c35f66c79cb761154bda956b1bfbaf69b6157595ea0f611f55822",
+    "assembledWorldBounds": {
+      "min": [
+        -0.09600000083446503,
+        -0.09600000083446503,
+        -0.038
+      ],
+      "max": [
+        0.09600000083446503,
+        0.09600000083446503,
+        0.038000000000000006
+      ]
+    }
+  },
+  "gearSpec": {
+    "sunTeeth": 24,
+    "planetTeeth": 24,
+    "ringTeeth": 72,
+    "module": 0.002,
+    "pressureAngle": 0.3490658503988659,
+    "orbitRadius": 0.048,
+    "planetCount": 3,
+    "sunPhase": 0,
+    "planetPhase": 0.1308996938995747,
+    "ringGapPhase": 0.04363323129985824
+  },
+  "housingSpec": {
+    "inner": 0.0852,
+    "outer": 0.096,
+    "halfLength": 0.02,
+    "boltCircle": 0.0905,
+    "boltBore": 0.0017,
+    "plateZ": 0.024,
+    "plateWidth": 0.006,
+    "gasketZ": 0.0205,
+    "gasketWidth": 0.001,
+    "fastenerZ": 0.028,
+    "sealZ": 0.033,
+    "clipZ": 0.029
+  },
+  "supportBearingSpec": {
+    "front": {
+      "z": 0.024,
+      "bore": 0.00605,
+      "outer": 0.016,
+      "width": 0.007,
+      "pitch": 0.011,
+      "ballRadius": 0.0021,
+      "balls": 10,
+      "grooveClearance": 0.00006,
+      "innerShoulder": 0.0098,
+      "outerShoulder": 0.0122,
+      "sealOuter": 0.012
+    },
+    "rear": {
+      "z": -0.024,
+      "bore": 0.00805,
+      "outer": 0.02,
+      "width": 0.007,
+      "pitch": 0.014,
+      "ballRadius": 0.0025,
+      "balls": 10,
+      "grooveClearance": 0.00006,
+      "innerShoulder": 0.0125,
+      "outerShoulder": 0.0155,
+      "sealOuter": 0.016
+    }
+  },
+  "parts": [
+    {
+      "id": "pg:sun",
+      "name": "Sun gear · 24 teeth",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "motionRole": "sun",
+      "group": "gears",
+      "definitionId": "pg-def:sun",
+      "parentId": "pg-asm:planetary",
+      "motionOwner": "model",
+      "role": "sun",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.026000000536441803,
+          -0.026000000536441803,
+          -0.0075
+        ],
+        "max": [
+          0.026000000536441803,
+          0.026000000536441803,
+          0.0075
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.026000000536441803,
+          -0.026000000536441803,
+          -0.0075
+        ],
+        "max": [
+          0.026000000536441803,
+          0.026000000536441803,
+          0.0075
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        0
+      ],
+      "triangleCount": 4800
+    },
+    {
+      "id": "pg:ring",
+      "name": "Fixed ring · 72 internal teeth",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "motionRole": "fixed",
+      "group": "ring",
+      "definitionId": "pg-def:ring",
+      "parentId": "pg-asm:planetary",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0846,
+          -0.0846,
+          -0.009
+        ],
+        "max": [
+          0.0846,
+          0.0846,
+          0.009
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0846,
+          -0.0846,
+          -0.009
+        ],
+        "max": [
+          0.0846,
+          0.0846,
+          0.009
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        0
+      ],
+      "triangleCount": 11544
+    },
+    {
+      "id": "pg:planet-1",
+      "name": "Planet 1 · 24 teeth",
+      "translation": [
+        0.048,
+        0,
+        0
+      ],
+      "motionRole": "planet",
+      "group": "planets",
+      "definitionId": "pg-def:planet",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 0,
+      "motionOwner": "model",
+      "role": "planet",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.048,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.048,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.025856683030724525,
+          -0.025856683030724525,
+          -0.0067
+        ],
+        "max": [
+          0.025856683030724525,
+          0.025856683030724525,
+          0.0067
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.022143316969275476,
+          -0.025856683030724525,
+          -0.0067
+        ],
+        "max": [
+          0.07385668303072453,
+          0.025856683030724525,
+          0.0067
+        ]
+      },
+      "worldCenter": [
+        0.048,
+        0,
+        0
+      ],
+      "triangleCount": 4800
+    },
+    {
+      "id": "pg:planet-2",
+      "name": "Planet 2 · 24 teeth",
+      "translation": [
+        -0.02399999999999999,
+        0.04156921938165306,
+        0
+      ],
+      "motionRole": "planet",
+      "group": "planets",
+      "definitionId": "pg-def:planet",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 1,
+      "motionOwner": "model",
+      "role": "planet",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02399999999999999,
+        0.04156921938165306,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02399999999999999,
+        0.04156921938165306,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.025856683030724525,
+          -0.025856683030724525,
+          -0.0067
+        ],
+        "max": [
+          0.025856683030724525,
+          0.025856683030724525,
+          0.0067
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.04985668303072452,
+          0.015712536350928535,
+          -0.0067
+        ],
+        "max": [
+          0.0018566830307245354,
+          0.06742590241237759,
+          0.0067
+        ]
+      },
+      "worldCenter": [
+        -0.023999999999999994,
+        0.04156921938165306,
+        0
+      ],
+      "triangleCount": 4800
+    },
+    {
+      "id": "pg:planet-3",
+      "name": "Planet 3 · 24 teeth",
+      "translation": [
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0
+      ],
+      "motionRole": "planet",
+      "group": "planets",
+      "definitionId": "pg-def:planet",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 2,
+      "motionOwner": "model",
+      "role": "planet",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.025856683030724525,
+          -0.025856683030724525,
+          -0.0067
+        ],
+        "max": [
+          0.025856683030724525,
+          0.025856683030724525,
+          0.0067
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.04985668303072455,
+          -0.06742590241237757,
+          -0.0067
+        ],
+        "max": [
+          0.0018566830307245041,
+          -0.01571253635092852,
+          0.0067
+        ]
+      },
+      "worldCenter": [
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0
+      ],
+      "triangleCount": 4800
+    },
+    {
+      "id": "pg:carrier-rear",
+      "name": "Rear carrier spider",
+      "translation": [
+        0,
+        0,
+        -0.012
+      ],
+      "motionRole": "carrier",
+      "group": "carrier",
+      "definitionId": "pg-def:carrier",
+      "parentId": "pg-asm:planetary",
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.012,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.012,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.03280024230480194,
+          -0.05036851391196251,
+          -0.0020000000142492355
+        ],
+        "max": [
+          0.056800127029418945,
+          0.05036851391196251,
+          0.002000000001117587
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.03280024230480194,
+          -0.05036851391196251,
+          -0.014000000014249236
+        ],
+        "max": [
+          0.056800127029418945,
+          0.05036851391196251,
+          -0.009999999998882413
+        ]
+      },
+      "worldCenter": [
+        0.011999942362308502,
+        0,
+        -0.012000000006565825
+      ],
+      "triangleCount": 11990
+    },
+    {
+      "id": "pg:carrier-front",
+      "name": "Front carrier spider",
+      "translation": [
+        0,
+        0,
+        0.012
+      ],
+      "motionRole": "carrier",
+      "group": "carrier",
+      "definitionId": "pg-def:carrier",
+      "parentId": "pg-asm:planetary",
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.012,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.012,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.03280024230480194,
+          -0.05036851391196251,
+          -0.0020000000142492355
+        ],
+        "max": [
+          0.056800127029418945,
+          0.05036851391196251,
+          0.002000000001117587
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.03280024230480194,
+          -0.05036851391196251,
+          0.009999999985750765
+        ],
+        "max": [
+          0.056800127029418945,
+          0.05036851391196251,
+          0.014000000001117587
+        ]
+      },
+      "worldCenter": [
+        0.011999942362308502,
+        0,
+        0.011999999993434176
+      ],
+      "triangleCount": 11990
+    },
+    {
+      "id": "pg:pin-1",
+      "name": "Planet pin 1",
+      "translation": [
+        0.048,
+        0,
+        0
+      ],
+      "motionRole": "carrier",
+      "group": "pins",
+      "definitionId": "pg-def:pin",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 0,
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.048,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.048,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0039,
+          -0.0039,
+          -0.014
+        ],
+        "max": [
+          0.0039,
+          0.0039,
+          0.014
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.0441,
+          -0.0039,
+          -0.014
+        ],
+        "max": [
+          0.0519,
+          0.0039,
+          0.014
+        ]
+      },
+      "worldCenter": [
+        0.048,
+        0,
+        0
+      ],
+      "triangleCount": 1152
+    },
+    {
+      "id": "pg:pin-2",
+      "name": "Planet pin 2",
+      "translation": [
+        -0.02399999999999999,
+        0.04156921938165306,
+        0
+      ],
+      "motionRole": "carrier",
+      "group": "pins",
+      "definitionId": "pg-def:pin",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 1,
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02399999999999999,
+        0.04156921938165306,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02399999999999999,
+        0.04156921938165306,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0039,
+          -0.0039,
+          -0.014
+        ],
+        "max": [
+          0.0039,
+          0.0039,
+          0.014
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.02789999999999999,
+          0.03766921938165306,
+          -0.014
+        ],
+        "max": [
+          -0.02009999999999999,
+          0.04546921938165306,
+          0.014
+        ]
+      },
+      "worldCenter": [
+        -0.02399999999999999,
+        0.04156921938165306,
+        0
+      ],
+      "triangleCount": 1152
+    },
+    {
+      "id": "pg:pin-3",
+      "name": "Planet pin 3",
+      "translation": [
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0
+      ],
+      "motionRole": "carrier",
+      "group": "pins",
+      "definitionId": "pg-def:pin",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 2,
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0039,
+          -0.0039,
+          -0.014
+        ],
+        "max": [
+          0.0039,
+          0.0039,
+          0.014
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.027900000000000022,
+          -0.04546921938165305,
+          -0.014
+        ],
+        "max": [
+          -0.02010000000000002,
+          -0.037669219381653046,
+          0.014
+        ]
+      },
+      "worldCenter": [
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0
+      ],
+      "triangleCount": 1152
+    },
+    {
+      "id": "pg:bearing-1",
+      "name": "Journal bushing 1",
+      "translation": [
+        0.048,
+        0,
+        0
+      ],
+      "motionRole": "planet",
+      "group": "bearings",
+      "definitionId": "pg-def:bearing",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 0,
+      "motionOwner": "model",
+      "role": "planet",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.048,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.048,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0055,
+          -0.0062
+        ],
+        "max": [
+          0.0055,
+          0.0055,
+          0.0062
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.0425,
+          -0.0055,
+          -0.0062
+        ],
+        "max": [
+          0.0535,
+          0.0055,
+          0.0062
+        ]
+      },
+      "worldCenter": [
+        0.048,
+        0,
+        0
+      ],
+      "triangleCount": 1152
+    },
+    {
+      "id": "pg:bearing-2",
+      "name": "Journal bushing 2",
+      "translation": [
+        -0.02399999999999999,
+        0.04156921938165306,
+        0
+      ],
+      "motionRole": "planet",
+      "group": "bearings",
+      "definitionId": "pg-def:bearing",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 1,
+      "motionOwner": "model",
+      "role": "planet",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02399999999999999,
+        0.04156921938165306,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02399999999999999,
+        0.04156921938165306,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0055,
+          -0.0062
+        ],
+        "max": [
+          0.0055,
+          0.0055,
+          0.0062
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.02949999999999999,
+          0.03606921938165306,
+          -0.0062
+        ],
+        "max": [
+          -0.01849999999999999,
+          0.04706921938165306,
+          0.0062
+        ]
+      },
+      "worldCenter": [
+        -0.02399999999999999,
+        0.04156921938165306,
+        0
+      ],
+      "triangleCount": 1152
+    },
+    {
+      "id": "pg:bearing-3",
+      "name": "Journal bushing 3",
+      "translation": [
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0
+      ],
+      "motionRole": "planet",
+      "group": "bearings",
+      "definitionId": "pg-def:bearing",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 2,
+      "motionOwner": "model",
+      "role": "planet",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0055,
+          -0.0055,
+          -0.0062
+        ],
+        "max": [
+          0.0055,
+          0.0055,
+          0.0062
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.02950000000000002,
+          -0.047069219381653045,
+          -0.0062
+        ],
+        "max": [
+          -0.018500000000000023,
+          -0.03606921938165305,
+          0.0062
+        ]
+      },
+      "worldCenter": [
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0
+      ],
+      "triangleCount": 1152
+    },
+    {
+      "id": "pg:washer-1",
+      "name": "Thrust washer 1",
+      "translation": [
+        0.048,
+        0,
+        0.0152
+      ],
+      "motionRole": "carrier",
+      "group": "washers",
+      "definitionId": "pg-def:washer",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 0,
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.048,
+        0,
+        0.0152,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.048,
+        0,
+        0.0152,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.006,
+          -0.006,
+          -0.0007
+        ],
+        "max": [
+          0.006,
+          0.006,
+          0.0007
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.042,
+          -0.006,
+          0.0145
+        ],
+        "max": [
+          0.054,
+          0.006,
+          0.0159
+        ]
+      },
+      "worldCenter": [
+        0.048,
+        0,
+        0.015200000000000002
+      ],
+      "triangleCount": 1152
+    },
+    {
+      "id": "pg:washer-2",
+      "name": "Thrust washer 2",
+      "translation": [
+        -0.02399999999999999,
+        0.04156921938165306,
+        0.0152
+      ],
+      "motionRole": "carrier",
+      "group": "washers",
+      "definitionId": "pg-def:washer",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 1,
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02399999999999999,
+        0.04156921938165306,
+        0.0152,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02399999999999999,
+        0.04156921938165306,
+        0.0152,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.006,
+          -0.006,
+          -0.0007
+        ],
+        "max": [
+          0.006,
+          0.006,
+          0.0007
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.029999999999999992,
+          0.03556921938165306,
+          0.0145
+        ],
+        "max": [
+          -0.017999999999999988,
+          0.04756921938165306,
+          0.0159
+        ]
+      },
+      "worldCenter": [
+        -0.02399999999999999,
+        0.04156921938165306,
+        0.015200000000000002
+      ],
+      "triangleCount": 1152
+    },
+    {
+      "id": "pg:washer-3",
+      "name": "Thrust washer 3",
+      "translation": [
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0.0152
+      ],
+      "motionRole": "carrier",
+      "group": "washers",
+      "definitionId": "pg-def:washer",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 2,
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0.0152,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0.0152,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.006,
+          -0.006,
+          -0.0007
+        ],
+        "max": [
+          0.006,
+          0.006,
+          0.0007
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.03000000000000002,
+          -0.047569219381653045,
+          0.0145
+        ],
+        "max": [
+          -0.018000000000000023,
+          -0.03556921938165305,
+          0.0159
+        ]
+      },
+      "worldCenter": [
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0.015200000000000002
+      ],
+      "triangleCount": 1152
+    },
+    {
+      "id": "pg:screw-1",
+      "name": "Socket screw 1",
+      "translation": [
+        0.048,
+        0,
+        0.016
+      ],
+      "motionRole": "carrier",
+      "group": "screws",
+      "definitionId": "pg-def:screw",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 0,
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.048,
+        0,
+        0.016,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.048,
+        0,
+        0.016,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.005
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0026000000320374967
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.04499999997392297,
+          -0.003000000026077032,
+          0.011
+        ],
+        "max": [
+          0.05100000002607703,
+          0.003000000026077032,
+          0.018600000032037496
+        ]
+      },
+      "worldCenter": [
+        0.048,
+        0,
+        0.014800000016018748
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:screw-2",
+      "name": "Socket screw 2",
+      "translation": [
+        -0.02399999999999999,
+        0.04156921938165306,
+        0.016
+      ],
+      "motionRole": "carrier",
+      "group": "screws",
+      "definitionId": "pg-def:screw",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 1,
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02399999999999999,
+        0.04156921938165306,
+        0.016,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02399999999999999,
+        0.04156921938165306,
+        0.016,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.005
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0026000000320374967
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.027000000026077022,
+          0.03856921935557603,
+          0.011
+        ],
+        "max": [
+          -0.020999999973922958,
+          0.04456921940773009,
+          0.018600000032037496
+        ]
+      },
+      "worldCenter": [
+        -0.02399999999999999,
+        0.04156921938165306,
+        0.014800000016018748
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:screw-3",
+      "name": "Socket screw 3",
+      "translation": [
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0.016
+      ],
+      "motionRole": "carrier",
+      "group": "screws",
+      "definitionId": "pg-def:screw",
+      "parentId": "pg-asm:planetary",
+      "planetIndex": 2,
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0.016,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0.016,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.005
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0026000000320374967
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.027000000026077053,
+          -0.04456921940773008,
+          0.011
+        ],
+        "max": [
+          -0.02099999997392299,
+          -0.038569219355576015,
+          0.018600000032037496
+        ]
+      },
+      "worldCenter": [
+        -0.02400000000000002,
+        -0.04156921938165305,
+        0.014800000016018748
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:input-shaft",
+      "name": "Input shaft",
+      "translation": [
+        0,
+        0,
+        0.021
+      ],
+      "motionRole": "sun",
+      "group": "input",
+      "definitionId": "pg-def:input-shaft",
+      "parentId": "pg-asm:planetary",
+      "motionOwner": "model",
+      "role": "sun",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.021,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.021,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.006,
+          -0.006,
+          -0.027
+        ],
+        "max": [
+          0.006,
+          0.006,
+          0.017
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.006,
+          -0.006,
+          -0.005999999999999998
+        ],
+        "max": [
+          0.006,
+          0.006,
+          0.038000000000000006
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        0.016000000000000004
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:output-hub",
+      "name": "Carrier output hub",
+      "translation": [
+        0,
+        0,
+        -0.024
+      ],
+      "motionRole": "carrier",
+      "group": "output",
+      "definitionId": "pg-def:output-hub",
+      "parentId": "pg-asm:planetary",
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.012,
+          -0.012,
+          -0.014
+        ],
+        "max": [
+          0.012,
+          0.012,
+          0.014
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.012,
+          -0.012,
+          -0.038
+        ],
+        "max": [
+          0.012,
+          0.012,
+          -0.01
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        -0.024
+      ],
+      "triangleCount": 1728
+    },
+    {
+      "id": "pg:housing",
+      "name": "Gear housing",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "motionRole": "fixed",
+      "group": "housing",
+      "definitionId": "pg-def:housing",
+      "parentId": "pg-asm:planetary",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.09600000083446503,
+          -0.09600000083446503,
+          -0.02
+        ],
+        "max": [
+          0.09600000083446503,
+          0.09600000083446503,
+          0.019999999105930328
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.09600000083446503,
+          -0.09600000083446503,
+          -0.02
+        ],
+        "max": [
+          0.09600000083446503,
+          0.09600000083446503,
+          0.019999999105930328
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        -4.470348362317633e-10
+      ],
+      "triangleCount": 2712
+    },
+    {
+      "id": "pg:endplate-front",
+      "name": "Front endplate",
+      "translation": [
+        0,
+        0,
+        0.024
+      ],
+      "motionRole": "fixed",
+      "group": "endplates",
+      "definitionId": "pg-def:endplate-front",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.09600000083446503,
+          -0.09600000083446503,
+          -0.003
+        ],
+        "max": [
+          0.09600000083446503,
+          0.09600000083446503,
+          0.0115
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.09600000083446503,
+          -0.09600000083446503,
+          0.021
+        ],
+        "max": [
+          0.09600000083446503,
+          0.09600000083446503,
+          0.035500000000000004
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        0.028250000000000004
+      ],
+      "triangleCount": 5272
+    },
+    {
+      "id": "pg:gasket-front",
+      "name": "Front housing gasket",
+      "translation": [
+        0,
+        0,
+        0.0205
+      ],
+      "motionRole": "fixed",
+      "group": "gaskets",
+      "definitionId": "pg-def:gasket",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.0205,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.0205,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.09584999829530716,
+          -0.09584999829530716,
+          -0.0005
+        ],
+        "max": [
+          0.09584999829530716,
+          0.09584999829530716,
+          0.0005000000474974513
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.09584999829530716,
+          -0.09584999829530716,
+          0.02
+        ],
+        "max": [
+          0.09584999829530716,
+          0.09584999829530716,
+          0.02100000004749745
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        0.020500000023748726
+      ],
+      "triangleCount": 2712
+    },
+    {
+      "id": "pg:housing-bolt-front-1",
+      "name": "front housing screw 1",
+      "translation": [
+        0.0783752990424917,
+        0.04524999999999999,
+        0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-bolts",
+      "definitionId": "pg-def:housing-bolt-front",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0783752990424917,
+        0.04524999999999999,
+        0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0783752990424917,
+        0.04524999999999999,
+        0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.0155
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0031000000320374962
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.07537529901641467,
+          0.04224999997392296,
+          0.0125
+        ],
+        "max": [
+          0.08137529906856873,
+          0.048250000026077024,
+          0.031100000032037497
+        ]
+      },
+      "worldCenter": [
+        0.0783752990424917,
+        0.04524999999999999,
+        0.02180000001601875
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:housing-bolt-front-2",
+      "name": "front housing screw 2",
+      "translation": [
+        5.541526766141773e-18,
+        0.0905,
+        0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-bolts",
+      "definitionId": "pg-def:housing-bolt-front",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        5.541526766141773e-18,
+        0.0905,
+        0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        5.541526766141773e-18,
+        0.0905,
+        0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.0155
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0031000000320374962
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0030000000260770265,
+          0.08749999997392297,
+          0.0125
+        ],
+        "max": [
+          0.0030000000260770377,
+          0.09350000002607703,
+          0.031100000032037497
+        ]
+      },
+      "worldCenter": [
+        5.637851296924623e-18,
+        0.0905,
+        0.02180000001601875
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:housing-bolt-front-3",
+      "name": "front housing screw 3",
+      "translation": [
+        -0.0783752990424917,
+        0.04524999999999999,
+        0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-bolts",
+      "definitionId": "pg-def:housing-bolt-front",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.0783752990424917,
+        0.04524999999999999,
+        0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.0783752990424917,
+        0.04524999999999999,
+        0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.0155
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0031000000320374962
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.08137529906856873,
+          0.04224999997392296,
+          0.0125
+        ],
+        "max": [
+          -0.07537529901641467,
+          0.048250000026077024,
+          0.031100000032037497
+        ]
+      },
+      "worldCenter": [
+        -0.0783752990424917,
+        0.04524999999999999,
+        0.02180000001601875
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:housing-bolt-front-4",
+      "name": "front housing screw 4",
+      "translation": [
+        -0.07837529904249171,
+        -0.04524999999999997,
+        0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-bolts",
+      "definitionId": "pg-def:housing-bolt-front",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.07837529904249171,
+        -0.04524999999999997,
+        0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.07837529904249171,
+        -0.04524999999999997,
+        0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.0155
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0031000000320374962
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.08137529906856875,
+          -0.048250000026077,
+          0.0125
+        ],
+        "max": [
+          -0.07537529901641468,
+          -0.04224999997392294,
+          0.031100000032037497
+        ]
+      },
+      "worldCenter": [
+        -0.07837529904249171,
+        -0.04524999999999997,
+        0.02180000001601875
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:housing-bolt-front-5",
+      "name": "front housing screw 5",
+      "translation": [
+        -1.6624580298425317e-17,
+        -0.0905,
+        0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-bolts",
+      "definitionId": "pg-def:housing-bolt-front",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -1.6624580298425317e-17,
+        -0.0905,
+        0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -1.6624580298425317e-17,
+        -0.0905,
+        0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.0155
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0031000000320374962
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0030000000260770486,
+          -0.09350000002607703,
+          0.0125
+        ],
+        "max": [
+          0.0030000000260770156,
+          -0.08749999997392297,
+          0.031100000032037497
+        ]
+      },
+      "worldCenter": [
+        -1.6479873021779667e-17,
+        -0.0905,
+        0.02180000001601875
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:housing-bolt-front-6",
+      "name": "front housing screw 6",
+      "translation": [
+        0.07837529904249167,
+        -0.04525000000000004,
+        0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-bolts",
+      "definitionId": "pg-def:housing-bolt-front",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.07837529904249167,
+        -0.04525000000000004,
+        0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.07837529904249167,
+        -0.04525000000000004,
+        0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.0155
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0031000000320374962
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.07537529901641464,
+          -0.04825000002607707,
+          0.0125
+        ],
+        "max": [
+          0.0813752990685687,
+          -0.04224999997392301,
+          0.031100000032037497
+        ]
+      },
+      "worldCenter": [
+        0.07837529904249167,
+        -0.04525000000000004,
+        0.02180000001601875
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:housing-washer-front-1",
+      "name": "front housing washer 1",
+      "translation": [
+        0.0783752990424917,
+        0.04524999999999999,
+        0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-washers",
+      "definitionId": "pg-def:housing-washer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0783752990424917,
+        0.04524999999999999,
+        0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0783752990424917,
+        0.04524999999999999,
+        0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0034,
+          -0.0034,
+          -0.0005
+        ],
+        "max": [
+          0.0034,
+          0.0034,
+          0.0005
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.0749752990424917,
+          0.04184999999999999,
+          0.0275
+        ],
+        "max": [
+          0.0817752990424917,
+          0.04864999999999999,
+          0.0285
+        ]
+      },
+      "worldCenter": [
+        0.0783752990424917,
+        0.04524999999999999,
+        0.028
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:housing-washer-front-2",
+      "name": "front housing washer 2",
+      "translation": [
+        5.541526766141773e-18,
+        0.0905,
+        0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-washers",
+      "definitionId": "pg-def:housing-washer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        5.541526766141773e-18,
+        0.0905,
+        0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        5.541526766141773e-18,
+        0.0905,
+        0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0034,
+          -0.0034,
+          -0.0005
+        ],
+        "max": [
+          0.0034,
+          0.0034,
+          0.0005
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.003399999999999994,
+          0.0871,
+          0.0275
+        ],
+        "max": [
+          0.0034000000000000054,
+          0.0939,
+          0.0285
+        ]
+      },
+      "worldCenter": [
+        5.637851296924623e-18,
+        0.0905,
+        0.028
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:housing-washer-front-3",
+      "name": "front housing washer 3",
+      "translation": [
+        -0.0783752990424917,
+        0.04524999999999999,
+        0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-washers",
+      "definitionId": "pg-def:housing-washer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.0783752990424917,
+        0.04524999999999999,
+        0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.0783752990424917,
+        0.04524999999999999,
+        0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0034,
+          -0.0034,
+          -0.0005
+        ],
+        "max": [
+          0.0034,
+          0.0034,
+          0.0005
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0817752990424917,
+          0.04184999999999999,
+          0.0275
+        ],
+        "max": [
+          -0.0749752990424917,
+          0.04864999999999999,
+          0.0285
+        ]
+      },
+      "worldCenter": [
+        -0.0783752990424917,
+        0.04524999999999999,
+        0.028
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:housing-washer-front-4",
+      "name": "front housing washer 4",
+      "translation": [
+        -0.07837529904249171,
+        -0.04524999999999997,
+        0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-washers",
+      "definitionId": "pg-def:housing-washer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.07837529904249171,
+        -0.04524999999999997,
+        0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.07837529904249171,
+        -0.04524999999999997,
+        0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0034,
+          -0.0034,
+          -0.0005
+        ],
+        "max": [
+          0.0034,
+          0.0034,
+          0.0005
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.08177529904249171,
+          -0.04864999999999997,
+          0.0275
+        ],
+        "max": [
+          -0.07497529904249171,
+          -0.04184999999999997,
+          0.0285
+        ]
+      },
+      "worldCenter": [
+        -0.07837529904249171,
+        -0.04524999999999997,
+        0.028
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:housing-washer-front-5",
+      "name": "front housing washer 5",
+      "translation": [
+        -1.6624580298425317e-17,
+        -0.0905,
+        0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-washers",
+      "definitionId": "pg-def:housing-washer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -1.6624580298425317e-17,
+        -0.0905,
+        0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -1.6624580298425317e-17,
+        -0.0905,
+        0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0034,
+          -0.0034,
+          -0.0005
+        ],
+        "max": [
+          0.0034,
+          0.0034,
+          0.0005
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0034000000000000163,
+          -0.0939,
+          0.0275
+        ],
+        "max": [
+          0.0033999999999999833,
+          -0.0871,
+          0.0285
+        ]
+      },
+      "worldCenter": [
+        -1.6479873021779667e-17,
+        -0.0905,
+        0.028
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:housing-washer-front-6",
+      "name": "front housing washer 6",
+      "translation": [
+        0.07837529904249167,
+        -0.04525000000000004,
+        0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-washers",
+      "definitionId": "pg-def:housing-washer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.07837529904249167,
+        -0.04525000000000004,
+        0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.07837529904249167,
+        -0.04525000000000004,
+        0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0034,
+          -0.0034,
+          -0.0005
+        ],
+        "max": [
+          0.0034,
+          0.0034,
+          0.0005
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.07497529904249167,
+          -0.04865000000000004,
+          0.0275
+        ],
+        "max": [
+          0.08177529904249167,
+          -0.04185000000000004,
+          0.0285
+        ]
+      },
+      "worldCenter": [
+        0.07837529904249167,
+        -0.04525000000000004,
+        0.028
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:shaft-seal-front",
+      "name": "Input shaft seal",
+      "translation": [
+        0,
+        0,
+        0.033
+      ],
+      "motionRole": "fixed",
+      "group": "seals",
+      "definitionId": "pg-def:shaft-seal-front",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.033,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.033,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.012,
+          -0.012,
+          -0.002
+        ],
+        "max": [
+          0.012,
+          0.012,
+          0.002
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.012,
+          -0.012,
+          0.031
+        ],
+        "max": [
+          0.012,
+          0.012,
+          0.035
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        0.033
+      ],
+      "triangleCount": 2560
+    },
+    {
+      "id": "pg:support-bearing-front-inner",
+      "name": "front bearing inner race",
+      "translation": [
+        0,
+        0,
+        0.024
+      ],
+      "motionRole": "sun",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-inner",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "inner",
+      "motionOwner": "model",
+      "role": "sun",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0098,
+          -0.0098,
+          -0.0035
+        ],
+        "max": [
+          0.0098,
+          0.0098,
+          0.0035
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0098,
+          -0.0098,
+          0.0205
+        ],
+        "max": [
+          0.0098,
+          0.0098,
+          0.0275
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        0.024
+      ],
+      "triangleCount": 10496
+    },
+    {
+      "id": "pg:support-bearing-front-outer",
+      "name": "front bearing outer race",
+      "translation": [
+        0,
+        0,
+        0.024
+      ],
+      "motionRole": "fixed",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-outer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "outer",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.016,
+          -0.016,
+          -0.0035
+        ],
+        "max": [
+          0.016,
+          0.016,
+          0.0035
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.016,
+          -0.016,
+          0.0205
+        ],
+        "max": [
+          0.016,
+          0.016,
+          0.0275
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        0.024
+      ],
+      "triangleCount": 10496
+    },
+    {
+      "id": "pg:support-bearing-front-cage",
+      "name": "front bearing cage",
+      "translation": [
+        0,
+        0,
+        0.024
+      ],
+      "motionRole": "bearing-cage",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-cage",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "cage",
+      "motionOwner": "model",
+      "role": "bearing-cage",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.01145,
+          -0.01145,
+          -0.00245
+        ],
+        "max": [
+          0.01145,
+          0.01145,
+          0.00245
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.01145,
+          -0.01145,
+          0.02155
+        ],
+        "max": [
+          0.01145,
+          0.01145,
+          0.02645
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        0.024
+      ],
+      "triangleCount": 2496
+    },
+    {
+      "id": "pg:support-bearing-front-ball-1",
+      "name": "front bearing ball 1",
+      "translation": [
+        0.011,
+        0,
+        0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "ball",
+      "ballIndex": 0,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.011,
+        0,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.011,
+        0,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0021,
+          -0.0021,
+          -0.0021
+        ],
+        "max": [
+          0.0021,
+          0.0021,
+          0.0021
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.0089,
+          -0.0021,
+          0.0219
+        ],
+        "max": [
+          0.013099999999999999,
+          0.0021,
+          0.0261
+        ]
+      },
+      "worldCenter": [
+        0.011,
+        0,
+        0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-front-ball-2",
+      "name": "front bearing ball 2",
+      "translation": [
+        0.008899186938124422,
+        0.0064656377752172044,
+        0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "ball",
+      "ballIndex": 1,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.008899186938124422,
+        0.0064656377752172044,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.008899186938124422,
+        0.0064656377752172044,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0021,
+          -0.0021,
+          -0.0021
+        ],
+        "max": [
+          0.0021,
+          0.0021,
+          0.0021
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.006799186938124422,
+          0.004365637775217205,
+          0.0219
+        ],
+        "max": [
+          0.010999186938124421,
+          0.008565637775217204,
+          0.0261
+        ]
+      },
+      "worldCenter": [
+        0.008899186938124422,
+        0.0064656377752172044,
+        0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-front-ball-3",
+      "name": "front bearing ball 3",
+      "translation": [
+        0.0033991869381244217,
+        0.010461621679246687,
+        0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "ball",
+      "ballIndex": 2,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0033991869381244217,
+        0.010461621679246687,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0033991869381244217,
+        0.010461621679246687,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0021,
+          -0.0021,
+          -0.0021
+        ],
+        "max": [
+          0.0021,
+          0.0021,
+          0.0021
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.0012991869381244218,
+          0.008361621679246688,
+          0.0219
+        ],
+        "max": [
+          0.0054991869381244216,
+          0.012561621679246687,
+          0.0261
+        ]
+      },
+      "worldCenter": [
+        0.0033991869381244217,
+        0.010461621679246687,
+        0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-front-ball-4",
+      "name": "front bearing ball 4",
+      "translation": [
+        -0.0033991869381244204,
+        0.01046162167924669,
+        0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "ball",
+      "ballIndex": 3,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.0033991869381244204,
+        0.01046162167924669,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.0033991869381244204,
+        0.01046162167924669,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0021,
+          -0.0021,
+          -0.0021
+        ],
+        "max": [
+          0.0021,
+          0.0021,
+          0.0021
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.00549918693812442,
+          0.00836162167924669,
+          0.0219
+        ],
+        "max": [
+          -0.0012991869381244205,
+          0.012561621679246689,
+          0.0261
+        ]
+      },
+      "worldCenter": [
+        -0.0033991869381244204,
+        0.01046162167924669,
+        0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-front-ball-5",
+      "name": "front bearing ball 5",
+      "translation": [
+        -0.00889918693812442,
+        0.006465637775217205,
+        0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "ball",
+      "ballIndex": 4,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.00889918693812442,
+        0.006465637775217205,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.00889918693812442,
+        0.006465637775217205,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0021,
+          -0.0021,
+          -0.0021
+        ],
+        "max": [
+          0.0021,
+          0.0021,
+          0.0021
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.01099918693812442,
+          0.004365637775217205,
+          0.0219
+        ],
+        "max": [
+          -0.006799186938124421,
+          0.008565637775217206,
+          0.0261
+        ]
+      },
+      "worldCenter": [
+        -0.00889918693812442,
+        0.006465637775217205,
+        0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-front-ball-6",
+      "name": "front bearing ball 6",
+      "translation": [
+        -0.011,
+        1.3471114790620884e-18,
+        0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "ball",
+      "ballIndex": 5,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.011,
+        1.3471114790620884e-18,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.011,
+        1.3471114790620884e-18,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0021,
+          -0.0021,
+          -0.0021
+        ],
+        "max": [
+          0.0021,
+          0.0021,
+          0.0021
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.013099999999999999,
+          -0.0020999999999999986,
+          0.0219
+        ],
+        "max": [
+          -0.0089,
+          0.002100000000000001,
+          0.0261
+        ]
+      },
+      "worldCenter": [
+        -0.011,
+        1.3010426069826053e-18,
+        0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-front-ball-7",
+      "name": "front bearing ball 7",
+      "translation": [
+        -0.008899186938124422,
+        -0.006465637775217203,
+        0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "ball",
+      "ballIndex": 6,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.008899186938124422,
+        -0.006465637775217203,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.008899186938124422,
+        -0.006465637775217203,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0021,
+          -0.0021,
+          -0.0021
+        ],
+        "max": [
+          0.0021,
+          0.0021,
+          0.0021
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.010999186938124421,
+          -0.008565637775217202,
+          0.0219
+        ],
+        "max": [
+          -0.006799186938124422,
+          -0.004365637775217203,
+          0.0261
+        ]
+      },
+      "worldCenter": [
+        -0.008899186938124422,
+        -0.006465637775217203,
+        0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-front-ball-8",
+      "name": "front bearing ball 8",
+      "translation": [
+        -0.003399186938124423,
+        -0.010461621679246687,
+        0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "ball",
+      "ballIndex": 7,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.003399186938124423,
+        -0.010461621679246687,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.003399186938124423,
+        -0.010461621679246687,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0021,
+          -0.0021,
+          -0.0021
+        ],
+        "max": [
+          0.0021,
+          0.0021,
+          0.0021
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.005499186938124423,
+          -0.012561621679246687,
+          0.0219
+        ],
+        "max": [
+          -0.0012991869381244231,
+          -0.008361621679246688,
+          0.0261
+        ]
+      },
+      "worldCenter": [
+        -0.003399186938124423,
+        -0.010461621679246687,
+        0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-front-ball-9",
+      "name": "front bearing ball 9",
+      "translation": [
+        0.0033991869381244195,
+        -0.01046162167924669,
+        0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "ball",
+      "ballIndex": 8,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0033991869381244195,
+        -0.01046162167924669,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0033991869381244195,
+        -0.01046162167924669,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0021,
+          -0.0021,
+          -0.0021
+        ],
+        "max": [
+          0.0021,
+          0.0021,
+          0.0021
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.0012991869381244196,
+          -0.012561621679246689,
+          0.0219
+        ],
+        "max": [
+          0.00549918693812442,
+          -0.00836162167924669,
+          0.0261
+        ]
+      },
+      "worldCenter": [
+        0.0033991869381244195,
+        -0.01046162167924669,
+        0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-front-ball-10",
+      "name": "front bearing ball 10",
+      "translation": [
+        0.00889918693812442,
+        -0.006465637775217206,
+        0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-front",
+      "definitionId": "pg-def:support-bearing-front-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "bearingElement": "ball",
+      "ballIndex": 9,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.00889918693812442,
+        -0.006465637775217206,
+        0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.00889918693812442,
+        -0.006465637775217206,
+        0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0021,
+          -0.0021,
+          -0.0021
+        ],
+        "max": [
+          0.0021,
+          0.0021,
+          0.0021
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.006799186938124421,
+          -0.008565637775217206,
+          0.0219
+        ],
+        "max": [
+          0.01099918693812442,
+          -0.004365637775217207,
+          0.0261
+        ]
+      },
+      "worldCenter": [
+        0.00889918693812442,
+        -0.006465637775217206,
+        0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:bearing-clip-front",
+      "name": "front bearing retaining clip",
+      "translation": [
+        0,
+        0,
+        0.029
+      ],
+      "motionRole": "fixed",
+      "group": "bearing-clips",
+      "definitionId": "pg-def:bearing-clip-front",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "front",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.029,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.029,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.01640000008046627,
+          -0.016397133469581604,
+          -0.0004
+        ],
+        "max": [
+          0.016004718840122223,
+          0.016397133469581604,
+          0.0003999999797903001
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.01640000008046627,
+          -0.016397133469581604,
+          0.0286
+        ],
+        "max": [
+          0.016004718840122223,
+          0.016397133469581604,
+          0.0293999999797903
+        ]
+      },
+      "worldCenter": [
+        -0.00019764062017202377,
+        0,
+        0.02899999998989515
+      ],
+      "triangleCount": 1028
+    },
+    {
+      "id": "pg:endplate-rear",
+      "name": "Rear endplate",
+      "translation": [
+        0,
+        0,
+        -0.024
+      ],
+      "motionRole": "fixed",
+      "group": "endplates",
+      "definitionId": "pg-def:endplate-rear",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.09600000083446503,
+          -0.09600000083446503,
+          -0.0115
+        ],
+        "max": [
+          0.09600000083446503,
+          0.09600000083446503,
+          0.003
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.09600000083446503,
+          -0.09600000083446503,
+          -0.035500000000000004
+        ],
+        "max": [
+          0.09600000083446503,
+          0.09600000083446503,
+          -0.021
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        -0.028250000000000004
+      ],
+      "triangleCount": 5272
+    },
+    {
+      "id": "pg:gasket-rear",
+      "name": "Rear housing gasket",
+      "translation": [
+        0,
+        0,
+        -0.0205
+      ],
+      "motionRole": "fixed",
+      "group": "gaskets",
+      "definitionId": "pg-def:gasket",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.0205,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.0205,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.09584999829530716,
+          -0.09584999829530716,
+          -0.0005
+        ],
+        "max": [
+          0.09584999829530716,
+          0.09584999829530716,
+          0.0005000000474974513
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.09584999829530716,
+          -0.09584999829530716,
+          -0.021
+        ],
+        "max": [
+          0.09584999829530716,
+          0.09584999829530716,
+          -0.01999999995250255
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        -0.020499999976251276
+      ],
+      "triangleCount": 2712
+    },
+    {
+      "id": "pg:housing-bolt-rear-1",
+      "name": "rear housing screw 1",
+      "translation": [
+        0.0783752990424917,
+        0.04524999999999999,
+        -0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-bolts",
+      "definitionId": "pg-def:housing-bolt-rear",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0783752990424917,
+        0.04524999999999999,
+        -0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0783752990424917,
+        0.04524999999999999,
+        -0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.0031000000320374962
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0155
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.07537529901641467,
+          0.04224999997392296,
+          -0.031100000032037497
+        ],
+        "max": [
+          0.08137529906856873,
+          0.048250000026077024,
+          -0.0125
+        ]
+      },
+      "worldCenter": [
+        0.0783752990424917,
+        0.04524999999999999,
+        -0.02180000001601875
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:housing-bolt-rear-2",
+      "name": "rear housing screw 2",
+      "translation": [
+        5.541526766141773e-18,
+        0.0905,
+        -0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-bolts",
+      "definitionId": "pg-def:housing-bolt-rear",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        5.541526766141773e-18,
+        0.0905,
+        -0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        5.541526766141773e-18,
+        0.0905,
+        -0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.0031000000320374962
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0155
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0030000000260770265,
+          0.08749999997392297,
+          -0.031100000032037497
+        ],
+        "max": [
+          0.0030000000260770377,
+          0.09350000002607703,
+          -0.0125
+        ]
+      },
+      "worldCenter": [
+        5.637851296924623e-18,
+        0.0905,
+        -0.02180000001601875
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:housing-bolt-rear-3",
+      "name": "rear housing screw 3",
+      "translation": [
+        -0.0783752990424917,
+        0.04524999999999999,
+        -0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-bolts",
+      "definitionId": "pg-def:housing-bolt-rear",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.0783752990424917,
+        0.04524999999999999,
+        -0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.0783752990424917,
+        0.04524999999999999,
+        -0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.0031000000320374962
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0155
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.08137529906856873,
+          0.04224999997392296,
+          -0.031100000032037497
+        ],
+        "max": [
+          -0.07537529901641467,
+          0.048250000026077024,
+          -0.0125
+        ]
+      },
+      "worldCenter": [
+        -0.0783752990424917,
+        0.04524999999999999,
+        -0.02180000001601875
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:housing-bolt-rear-4",
+      "name": "rear housing screw 4",
+      "translation": [
+        -0.07837529904249171,
+        -0.04524999999999997,
+        -0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-bolts",
+      "definitionId": "pg-def:housing-bolt-rear",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.07837529904249171,
+        -0.04524999999999997,
+        -0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.07837529904249171,
+        -0.04524999999999997,
+        -0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.0031000000320374962
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0155
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.08137529906856875,
+          -0.048250000026077,
+          -0.031100000032037497
+        ],
+        "max": [
+          -0.07537529901641468,
+          -0.04224999997392294,
+          -0.0125
+        ]
+      },
+      "worldCenter": [
+        -0.07837529904249171,
+        -0.04524999999999997,
+        -0.02180000001601875
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:housing-bolt-rear-5",
+      "name": "rear housing screw 5",
+      "translation": [
+        -1.6624580298425317e-17,
+        -0.0905,
+        -0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-bolts",
+      "definitionId": "pg-def:housing-bolt-rear",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -1.6624580298425317e-17,
+        -0.0905,
+        -0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -1.6624580298425317e-17,
+        -0.0905,
+        -0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.0031000000320374962
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0155
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0030000000260770486,
+          -0.09350000002607703,
+          -0.031100000032037497
+        ],
+        "max": [
+          0.0030000000260770156,
+          -0.08749999997392297,
+          -0.0125
+        ]
+      },
+      "worldCenter": [
+        -1.6479873021779667e-17,
+        -0.0905,
+        -0.02180000001601875
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:housing-bolt-rear-6",
+      "name": "rear housing screw 6",
+      "translation": [
+        0.07837529904249167,
+        -0.04525000000000004,
+        -0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-bolts",
+      "definitionId": "pg-def:housing-bolt-rear",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.07837529904249167,
+        -0.04525000000000004,
+        -0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.07837529904249167,
+        -0.04525000000000004,
+        -0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.003000000026077032,
+          -0.003000000026077032,
+          -0.0031000000320374962
+        ],
+        "max": [
+          0.003000000026077032,
+          0.003000000026077032,
+          0.0155
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.07537529901641464,
+          -0.04825000002607707,
+          -0.031100000032037497
+        ],
+        "max": [
+          0.0813752990685687,
+          -0.04224999997392301,
+          -0.0125
+        ]
+      },
+      "worldCenter": [
+        0.07837529904249167,
+        -0.04525000000000004,
+        -0.02180000001601875
+      ],
+      "triangleCount": 696
+    },
+    {
+      "id": "pg:housing-washer-rear-1",
+      "name": "rear housing washer 1",
+      "translation": [
+        0.0783752990424917,
+        0.04524999999999999,
+        -0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-washers",
+      "definitionId": "pg-def:housing-washer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0783752990424917,
+        0.04524999999999999,
+        -0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0783752990424917,
+        0.04524999999999999,
+        -0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0034,
+          -0.0034,
+          -0.0005
+        ],
+        "max": [
+          0.0034,
+          0.0034,
+          0.0005
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.0749752990424917,
+          0.04184999999999999,
+          -0.0285
+        ],
+        "max": [
+          0.0817752990424917,
+          0.04864999999999999,
+          -0.0275
+        ]
+      },
+      "worldCenter": [
+        0.0783752990424917,
+        0.04524999999999999,
+        -0.028
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:housing-washer-rear-2",
+      "name": "rear housing washer 2",
+      "translation": [
+        5.541526766141773e-18,
+        0.0905,
+        -0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-washers",
+      "definitionId": "pg-def:housing-washer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        5.541526766141773e-18,
+        0.0905,
+        -0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        5.541526766141773e-18,
+        0.0905,
+        -0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0034,
+          -0.0034,
+          -0.0005
+        ],
+        "max": [
+          0.0034,
+          0.0034,
+          0.0005
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.003399999999999994,
+          0.0871,
+          -0.0285
+        ],
+        "max": [
+          0.0034000000000000054,
+          0.0939,
+          -0.0275
+        ]
+      },
+      "worldCenter": [
+        5.637851296924623e-18,
+        0.0905,
+        -0.028
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:housing-washer-rear-3",
+      "name": "rear housing washer 3",
+      "translation": [
+        -0.0783752990424917,
+        0.04524999999999999,
+        -0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-washers",
+      "definitionId": "pg-def:housing-washer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.0783752990424917,
+        0.04524999999999999,
+        -0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.0783752990424917,
+        0.04524999999999999,
+        -0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0034,
+          -0.0034,
+          -0.0005
+        ],
+        "max": [
+          0.0034,
+          0.0034,
+          0.0005
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0817752990424917,
+          0.04184999999999999,
+          -0.0285
+        ],
+        "max": [
+          -0.0749752990424917,
+          0.04864999999999999,
+          -0.0275
+        ]
+      },
+      "worldCenter": [
+        -0.0783752990424917,
+        0.04524999999999999,
+        -0.028
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:housing-washer-rear-4",
+      "name": "rear housing washer 4",
+      "translation": [
+        -0.07837529904249171,
+        -0.04524999999999997,
+        -0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-washers",
+      "definitionId": "pg-def:housing-washer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.07837529904249171,
+        -0.04524999999999997,
+        -0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.07837529904249171,
+        -0.04524999999999997,
+        -0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0034,
+          -0.0034,
+          -0.0005
+        ],
+        "max": [
+          0.0034,
+          0.0034,
+          0.0005
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.08177529904249171,
+          -0.04864999999999997,
+          -0.0285
+        ],
+        "max": [
+          -0.07497529904249171,
+          -0.04184999999999997,
+          -0.0275
+        ]
+      },
+      "worldCenter": [
+        -0.07837529904249171,
+        -0.04524999999999997,
+        -0.028
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:housing-washer-rear-5",
+      "name": "rear housing washer 5",
+      "translation": [
+        -1.6624580298425317e-17,
+        -0.0905,
+        -0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-washers",
+      "definitionId": "pg-def:housing-washer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -1.6624580298425317e-17,
+        -0.0905,
+        -0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -1.6624580298425317e-17,
+        -0.0905,
+        -0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0034,
+          -0.0034,
+          -0.0005
+        ],
+        "max": [
+          0.0034,
+          0.0034,
+          0.0005
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0034000000000000163,
+          -0.0939,
+          -0.0285
+        ],
+        "max": [
+          0.0033999999999999833,
+          -0.0871,
+          -0.0275
+        ]
+      },
+      "worldCenter": [
+        -1.6479873021779667e-17,
+        -0.0905,
+        -0.028
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:housing-washer-rear-6",
+      "name": "rear housing washer 6",
+      "translation": [
+        0.07837529904249167,
+        -0.04525000000000004,
+        -0.028
+      ],
+      "motionRole": "fixed",
+      "group": "housing-washers",
+      "definitionId": "pg-def:housing-washer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.07837529904249167,
+        -0.04525000000000004,
+        -0.028,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.07837529904249167,
+        -0.04525000000000004,
+        -0.028,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0034,
+          -0.0034,
+          -0.0005
+        ],
+        "max": [
+          0.0034,
+          0.0034,
+          0.0005
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.07497529904249167,
+          -0.04865000000000004,
+          -0.0285
+        ],
+        "max": [
+          0.08177529904249167,
+          -0.04185000000000004,
+          -0.0275
+        ]
+      },
+      "worldCenter": [
+        0.07837529904249167,
+        -0.04525000000000004,
+        -0.028
+      ],
+      "triangleCount": 768
+    },
+    {
+      "id": "pg:shaft-seal-rear",
+      "name": "Output shaft seal",
+      "translation": [
+        0,
+        0,
+        -0.033
+      ],
+      "motionRole": "fixed",
+      "group": "seals",
+      "definitionId": "pg-def:shaft-seal-rear",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.033,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.033,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.016,
+          -0.016,
+          -0.002
+        ],
+        "max": [
+          0.016,
+          0.016,
+          0.002
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.016,
+          -0.016,
+          -0.035
+        ],
+        "max": [
+          0.016,
+          0.016,
+          -0.031
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        -0.033
+      ],
+      "triangleCount": 2560
+    },
+    {
+      "id": "pg:support-bearing-rear-inner",
+      "name": "rear bearing inner race",
+      "translation": [
+        0,
+        0,
+        -0.024
+      ],
+      "motionRole": "carrier",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-inner",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "inner",
+      "motionOwner": "model",
+      "role": "carrier",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0125,
+          -0.0125,
+          -0.0035
+        ],
+        "max": [
+          0.0125,
+          0.0125,
+          0.0035
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0125,
+          -0.0125,
+          -0.0275
+        ],
+        "max": [
+          0.0125,
+          0.0125,
+          -0.0205
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        -0.024
+      ],
+      "triangleCount": 10496
+    },
+    {
+      "id": "pg:support-bearing-rear-outer",
+      "name": "rear bearing outer race",
+      "translation": [
+        0,
+        0,
+        -0.024
+      ],
+      "motionRole": "fixed",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-outer",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "outer",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.02,
+          -0.02,
+          -0.0035
+        ],
+        "max": [
+          0.02,
+          0.02,
+          0.0035
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.02,
+          -0.02,
+          -0.0275
+        ],
+        "max": [
+          0.02,
+          0.02,
+          -0.0205
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        -0.024
+      ],
+      "triangleCount": 10496
+    },
+    {
+      "id": "pg:support-bearing-rear-cage",
+      "name": "rear bearing cage",
+      "translation": [
+        0,
+        0,
+        -0.024
+      ],
+      "motionRole": "bearing-cage",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-cage",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "cage",
+      "motionOwner": "model",
+      "role": "bearing-cage",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.014450000000000001,
+          -0.014450000000000001,
+          -0.00285
+        ],
+        "max": [
+          0.014450000000000001,
+          0.014450000000000001,
+          0.00285
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.014450000000000001,
+          -0.014450000000000001,
+          -0.02685
+        ],
+        "max": [
+          0.014450000000000001,
+          0.014450000000000001,
+          -0.021150000000000002
+        ]
+      },
+      "worldCenter": [
+        0,
+        0,
+        -0.024
+      ],
+      "triangleCount": 2496
+    },
+    {
+      "id": "pg:support-bearing-rear-ball-1",
+      "name": "rear bearing ball 1",
+      "translation": [
+        0.014,
+        0,
+        -0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "ball",
+      "ballIndex": 0,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.014,
+        0,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.014,
+        0,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.0025,
+          -0.0025
+        ],
+        "max": [
+          0.0025,
+          0.0025,
+          0.0025
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.0115,
+          -0.0025,
+          -0.0265
+        ],
+        "max": [
+          0.0165,
+          0.0025,
+          -0.021500000000000002
+        ]
+      },
+      "worldCenter": [
+        0.014,
+        0,
+        -0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-rear-ball-2",
+      "name": "rear bearing ball 2",
+      "translation": [
+        0.011326237921249264,
+        0.008228993532094624,
+        -0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "ball",
+      "ballIndex": 1,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.011326237921249264,
+        0.008228993532094624,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.011326237921249264,
+        0.008228993532094624,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.0025,
+          -0.0025
+        ],
+        "max": [
+          0.0025,
+          0.0025,
+          0.0025
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.008826237921249263,
+          0.0057289935320946235,
+          -0.0265
+        ],
+        "max": [
+          0.013826237921249264,
+          0.010728993532094624,
+          -0.021500000000000002
+        ]
+      },
+      "worldCenter": [
+        0.011326237921249264,
+        0.008228993532094624,
+        -0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-rear-ball-3",
+      "name": "rear bearing ball 3",
+      "translation": [
+        0.0043262379212492645,
+        0.01331479122813215,
+        -0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "ball",
+      "ballIndex": 2,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0043262379212492645,
+        0.01331479122813215,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0043262379212492645,
+        0.01331479122813215,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.0025,
+          -0.0025
+        ],
+        "max": [
+          0.0025,
+          0.0025,
+          0.0025
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.0018262379212492645,
+          0.01081479122813215,
+          -0.0265
+        ],
+        "max": [
+          0.006826237921249265,
+          0.01581479122813215,
+          -0.021500000000000002
+        ]
+      },
+      "worldCenter": [
+        0.0043262379212492645,
+        0.01331479122813215,
+        -0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-rear-ball-4",
+      "name": "rear bearing ball 4",
+      "translation": [
+        -0.004326237921249263,
+        0.013314791228132151,
+        -0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "ball",
+      "ballIndex": 3,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.004326237921249263,
+        0.013314791228132151,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.004326237921249263,
+        0.013314791228132151,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.0025,
+          -0.0025
+        ],
+        "max": [
+          0.0025,
+          0.0025,
+          0.0025
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.006826237921249263,
+          0.010814791228132151,
+          -0.0265
+        ],
+        "max": [
+          -0.0018262379212492627,
+          0.01581479122813215,
+          -0.021500000000000002
+        ]
+      },
+      "worldCenter": [
+        -0.004326237921249263,
+        0.013314791228132151,
+        -0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-rear-ball-5",
+      "name": "rear bearing ball 5",
+      "translation": [
+        -0.011326237921249264,
+        0.008228993532094626,
+        -0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "ball",
+      "ballIndex": 4,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.011326237921249264,
+        0.008228993532094626,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.011326237921249264,
+        0.008228993532094626,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.0025,
+          -0.0025
+        ],
+        "max": [
+          0.0025,
+          0.0025,
+          0.0025
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.013826237921249264,
+          0.005728993532094625,
+          -0.0265
+        ],
+        "max": [
+          -0.008826237921249263,
+          0.010728993532094626,
+          -0.021500000000000002
+        ]
+      },
+      "worldCenter": [
+        -0.011326237921249264,
+        0.008228993532094626,
+        -0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-rear-ball-6",
+      "name": "rear bearing ball 6",
+      "translation": [
+        -0.014,
+        1.7145055188062945e-18,
+        -0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "ball",
+      "ballIndex": 5,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.014,
+        1.7145055188062945e-18,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.014,
+        1.7145055188062945e-18,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.0025,
+          -0.0025
+        ],
+        "max": [
+          0.0025,
+          0.0025,
+          0.0025
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.0165,
+          -0.0024999999999999983,
+          -0.0265
+        ],
+        "max": [
+          -0.0115,
+          0.002500000000000002,
+          -0.021500000000000002
+        ]
+      },
+      "worldCenter": [
+        -0.014,
+        1.734723475976807e-18,
+        -0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-rear-ball-7",
+      "name": "rear bearing ball 7",
+      "translation": [
+        -0.011326237921249264,
+        -0.008228993532094622,
+        -0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "ball",
+      "ballIndex": 6,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.011326237921249264,
+        -0.008228993532094622,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.011326237921249264,
+        -0.008228993532094622,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.0025,
+          -0.0025
+        ],
+        "max": [
+          0.0025,
+          0.0025,
+          0.0025
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.013826237921249264,
+          -0.010728993532094623,
+          -0.0265
+        ],
+        "max": [
+          -0.008826237921249263,
+          -0.005728993532094622,
+          -0.021500000000000002
+        ]
+      },
+      "worldCenter": [
+        -0.011326237921249264,
+        -0.008228993532094622,
+        -0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-rear-ball-8",
+      "name": "rear bearing ball 8",
+      "translation": [
+        -0.004326237921249266,
+        -0.01331479122813215,
+        -0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "ball",
+      "ballIndex": 7,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.004326237921249266,
+        -0.01331479122813215,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.004326237921249266,
+        -0.01331479122813215,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.0025,
+          -0.0025
+        ],
+        "max": [
+          0.0025,
+          0.0025,
+          0.0025
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.006826237921249267,
+          -0.01581479122813215,
+          -0.0265
+        ],
+        "max": [
+          -0.0018262379212492662,
+          -0.01081479122813215,
+          -0.021500000000000002
+        ]
+      },
+      "worldCenter": [
+        -0.004326237921249266,
+        -0.01331479122813215,
+        -0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-rear-ball-9",
+      "name": "rear bearing ball 9",
+      "translation": [
+        0.004326237921249261,
+        -0.013314791228132151,
+        -0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "ball",
+      "ballIndex": 8,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.004326237921249261,
+        -0.013314791228132151,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.004326237921249261,
+        -0.013314791228132151,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.0025,
+          -0.0025
+        ],
+        "max": [
+          0.0025,
+          0.0025,
+          0.0025
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.001826237921249261,
+          -0.01581479122813215,
+          -0.0265
+        ],
+        "max": [
+          0.0068262379212492615,
+          -0.010814791228132151,
+          -0.021500000000000002
+        ]
+      },
+      "worldCenter": [
+        0.004326237921249261,
+        -0.013314791228132151,
+        -0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:support-bearing-rear-ball-10",
+      "name": "rear bearing ball 10",
+      "translation": [
+        0.011326237921249264,
+        -0.008228993532094627,
+        -0.024
+      ],
+      "motionRole": "bearing-ball",
+      "group": "support-bearing-rear",
+      "definitionId": "pg-def:support-bearing-rear-ball",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "bearingElement": "ball",
+      "ballIndex": 9,
+      "motionOwner": "model",
+      "role": "bearing-ball",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.011326237921249264,
+        -0.008228993532094627,
+        -0.024,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.011326237921249264,
+        -0.008228993532094627,
+        -0.024,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.0025,
+          -0.0025,
+          -0.0025
+        ],
+        "max": [
+          0.0025,
+          0.0025,
+          0.0025
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          0.008826237921249263,
+          -0.010728993532094628,
+          -0.0265
+        ],
+        "max": [
+          0.013826237921249264,
+          -0.005728993532094627,
+          -0.021500000000000002
+        ]
+      },
+      "worldCenter": [
+        0.011326237921249264,
+        -0.008228993532094627,
+        -0.024
+      ],
+      "triangleCount": 2208
+    },
+    {
+      "id": "pg:bearing-clip-rear",
+      "name": "rear bearing retaining clip",
+      "translation": [
+        0,
+        0,
+        -0.029
+      ],
+      "motionRole": "fixed",
+      "group": "bearing-clips",
+      "definitionId": "pg-def:bearing-clip-rear",
+      "parentId": "pg-asm:planetary",
+      "supportSide": "rear",
+      "motionOwner": "static",
+      "role": "fixed",
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.029,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.029,
+        1
+      ],
+      "localBounds": {
+        "min": [
+          -0.020400000736117363,
+          -0.020396433770656586,
+          -0.0003999999797903001
+        ],
+        "max": [
+          0.019908307120203972,
+          0.020396433770656586,
+          0.0004
+        ]
+      },
+      "worldBounds": {
+        "min": [
+          -0.020400000736117363,
+          -0.020396433770656586,
+          -0.0293999999797903
+        ],
+        "max": [
+          0.019908307120203972,
+          0.020396433770656586,
+          -0.0286
+        ]
+      },
+      "worldCenter": [
+        -0.00024584680795669556,
+        0,
+        -0.02899999998989515
+      ],
+      "triangleCount": 1028
+    }
+  ],
+  "assemblies": [
+    {
+      "id": "pg-asm:planetary",
+      "name": "Three-planet reduction assembly",
+      "parentId": null,
+      "children": [
+        "pg:sun",
+        "pg:ring",
+        "pg:planet-1",
+        "pg:planet-2",
+        "pg:planet-3",
+        "pg:carrier-rear",
+        "pg:carrier-front",
+        "pg:pin-1",
+        "pg:pin-2",
+        "pg:pin-3",
+        "pg:bearing-1",
+        "pg:bearing-2",
+        "pg:bearing-3",
+        "pg:washer-1",
+        "pg:washer-2",
+        "pg:washer-3",
+        "pg:screw-1",
+        "pg:screw-2",
+        "pg:screw-3",
+        "pg:input-shaft",
+        "pg:output-hub",
+        "pg:housing",
+        "pg:endplate-front",
+        "pg:gasket-front",
+        "pg:housing-bolt-front-1",
+        "pg:housing-bolt-front-2",
+        "pg:housing-bolt-front-3",
+        "pg:housing-bolt-front-4",
+        "pg:housing-bolt-front-5",
+        "pg:housing-bolt-front-6",
+        "pg:housing-washer-front-1",
+        "pg:housing-washer-front-2",
+        "pg:housing-washer-front-3",
+        "pg:housing-washer-front-4",
+        "pg:housing-washer-front-5",
+        "pg:housing-washer-front-6",
+        "pg:shaft-seal-front",
+        "pg:support-bearing-front-inner",
+        "pg:support-bearing-front-outer",
+        "pg:support-bearing-front-cage",
+        "pg:support-bearing-front-ball-1",
+        "pg:support-bearing-front-ball-2",
+        "pg:support-bearing-front-ball-3",
+        "pg:support-bearing-front-ball-4",
+        "pg:support-bearing-front-ball-5",
+        "pg:support-bearing-front-ball-6",
+        "pg:support-bearing-front-ball-7",
+        "pg:support-bearing-front-ball-8",
+        "pg:support-bearing-front-ball-9",
+        "pg:support-bearing-front-ball-10",
+        "pg:bearing-clip-front",
+        "pg:endplate-rear",
+        "pg:gasket-rear",
+        "pg:housing-bolt-rear-1",
+        "pg:housing-bolt-rear-2",
+        "pg:housing-bolt-rear-3",
+        "pg:housing-bolt-rear-4",
+        "pg:housing-bolt-rear-5",
+        "pg:housing-bolt-rear-6",
+        "pg:housing-washer-rear-1",
+        "pg:housing-washer-rear-2",
+        "pg:housing-washer-rear-3",
+        "pg:housing-washer-rear-4",
+        "pg:housing-washer-rear-5",
+        "pg:housing-washer-rear-6",
+        "pg:shaft-seal-rear",
+        "pg:support-bearing-rear-inner",
+        "pg:support-bearing-rear-outer",
+        "pg:support-bearing-rear-cage",
+        "pg:support-bearing-rear-ball-1",
+        "pg:support-bearing-rear-ball-2",
+        "pg:support-bearing-rear-ball-3",
+        "pg:support-bearing-rear-ball-4",
+        "pg:support-bearing-rear-ball-5",
+        "pg:support-bearing-rear-ball-6",
+        "pg:support-bearing-rear-ball-7",
+        "pg:support-bearing-rear-ball-8",
+        "pg:support-bearing-rear-ball-9",
+        "pg:support-bearing-rear-ball-10",
+        "pg:bearing-clip-rear"
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "boundsMethod": "Exact authored definition vertex bounds plus occurrence translation; no rest rotation or scale.",
+  "limitations": [
+    "Original parametric teaching geometry; not sourced production CAD or a manufacturing drawing.",
+    "Standard involute spur profiles with small display backlash; root joins are simplified and no strength or manufacturing tolerance claim is made.",
+    "The three planet journals retain their original plain bushings. Two additional shaft support bearings expose separate races, cages and ten balls each.",
+    "Support bearings use ideal zero-contact-angle, no-slip kinematics with fixed outer races. Cage orbit and absolute ball spin follow the corresponding shaft; load, slip, elastic deformation and cage dynamics are not simulated.",
+    "Raceway curvature includes 60 micrometres of conformity relief away from the nominal equatorial contacts. This tessellated teaching model is not a tolerance or contact-pressure calculation.",
+    "Four sun turns close the gear train but not each bearing occurrence phase. Rolling internals are hidden at the editorial loop reset; their ratios are never altered to force closure.",
+    "Pin bores, screw sockets, housing passages, grooved races and seal profiles are modeled; helical threads, fits, lubrication and seal deformation are not solved.",
+    "The ring/housing restraint, bearing seating, carrier/output and sun/input rigid connections are authored teaching assumptions; the housing has no independently verified production mounting design.",
+    "Mesh-phase and speed checks are geometric/kinematic evidence, not a contact, load, friction or collision solver."
+  ]
+}

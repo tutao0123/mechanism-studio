@@ -2,7 +2,7 @@
 
 The [public module catalog](../../../../docs/modules.md) explains responsibilities, inputs/outputs, limits and focused checks. This map points authoring tasks to their existing implementation. Exact API parameters belong in component READMEs/source, not a second copied interface manual.
 
-The [input brief](input-brief.md) and [module handoffs](module-orchestration.md) coordinate text/image/CAD tasks. Plans need actual adapters; there is no general plan loader or automatic image reconstruction API.
+The [input brief](input-brief.md) and [module handoffs](module-orchestration.md) coordinate text/image/CAD tasks. The [executable presentation subset](executable-presentation.md) runs supported study channels; mechanics and broader handoffs need actual adapters. There is no automatic image reconstruction API.
 
 | Work | Reuse | Example-owned content |
 | --- | --- | --- |
@@ -12,6 +12,8 @@ The [input brief](input-brief.md) and [module handoffs](module-orchestration.md)
 | Fill/edges/lights/textures | [appearance contract](modules/materials-lighting.md), viewer/Blender adapter | Real part roles, licensed resources, parameters and restoration |
 | Reversible chapter color accents | [shared/appearance](../../../../shared/appearance/README.md) | Same-clock actual part cues |
 | Music-led assembly study, near labels, capture transport | [shared/study](../../../../shared/study/README.md) | Thin timeline/index/framing/annotation/offset/score adapter |
+| Executable display-offset, orthographic-shot, label and accent/opacity plan | [plan compiler and bootstrap](../../../../shared/study/README.md), [example template](../../../../templates/study/README.md) | `mechanism-presentation-1` data, real revision/IDs/bounds, mechanism and source-specific adapters |
+| Numerical presentation report | [presentation checker](../../../../tools/study/check-presentation.mjs) | Registered example inputs, project-local report; browser/video review remains pending |
 | Pinned Allegro / Robotiq MJCF visual import | [tools/robot](../../../../tools/robot/README.md) | Retained model hashes, source body hierarchy and per-example kinematics; this importer only supports the two pinned sources |
 | Original robot-study score and action accents | [tools/audio](../../../../tools/audio/README.md) | Actual part IDs and story events; reproducible local WAV, no service calls |
 | Captured frames + verified track → MP4 | [tools/video](../../../../tools/video/README.md) | Actual input paths/counts and reviewed output; the tool does not capture or publish |
@@ -32,9 +34,9 @@ The [input brief](input-brief.md) and [module handoffs](module-orchestration.md)
 - STEP work: no real STEP example is retained. The [CAD workflow](cad-workflow.md) imports and audits a user-prepared package (XCAF definitions/repeated occurrences and actual local/world placements, checked by `npm run audit:cad`); its tests use synthetic fixtures. The linked tree/model inspector page left with the GPL Galileo example (Git history before 2026-10-20).
 - [SO-ARM 102 study](../../../../EXAMPLE_ROBOT/README.md): sourced URDF link identity, music clock, grouped explosion, near sequential labels and scene-group fades. Eight merged links are not per-screw/native STEP solids.
 - [SO-ARM kinetic cut](../../../../EXAMPLE_ROBOT/kinetic/README.md): explicit 25.714-second variant using five revolute/two prismatic source-backed joints, opposed jaws, zero-pose gate before explosion, deliberate detail/whole cuts and original score; original study retained.
-- [Gearbox](../../../../examples/gearbox/README.md): original 124-part teaching model in 15 nested assemblies, exact tooth-ratio kinematics, power-path accents and a synchronizer close-up with solved dog-tooth alignment; atlas, blueprint and cinematic editions of one model. Authored internals, not source CAD.
+- [Gearbox](../../../../examples/gearbox/README.md): original 124-part teaching model in 15 nested assemblies, exact tooth-ratio kinematics, power-path accents and a synchronizer close-up with solved dog-tooth alignment; atlas, blueprint and cinematic editions of one model. Its `presentation.mjs` demonstrates the executable study subset; the cinematic adapter remains separate. Authored internals, not source CAD.
 - [Allegro hand](../../../../examples/allegro-hand/README.md): source-axis finger gestures, valid neutral thumb pose, parent-aware link explosion and one original finger close-up; source references stay immutable.
-- [Robotiq gripper](../../../../examples/robotiq-gripper/README.md): analytic four-bar closure, equal driver angles, source-link separation and reassembly. No contact adaptation or hidden actuator internals.
+- [Robotiq gripper](../../../../examples/robotiq-gripper/README.md): analytic four-bar closure, equal driver angles, source-link separation and reassembly, with a `presentation.mjs` adapter for the executable study subset. No contact adaptation or hidden actuator internals.
 
 Use actual current reports, not this map's prose, for counts and hashes. Do not turn an example's axes, IDs, formulas, steps or tool paths into universal constraints.
 

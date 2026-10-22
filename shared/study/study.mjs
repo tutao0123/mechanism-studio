@@ -99,6 +99,10 @@ function prepareLabels(state, width, height, viewportBox) {
   const chapterStart = state.chapter.firstBeat * 60 / BPM, chapterEnd = state.chapter.lastBeat * 60 / BPM;
   const endpoints = [stateAt(chapterStart), stateAt(chapterEnd - 1e-6)];
   const obstacleIds = config.labelObstacleIds?.(state);
+  // Opt-in adapters can provide settled world-space obstacle bounds including
+  // working poses and interior display extrema. Chapter endpoints alone miss
+  // a local component that opens and closes within the same chapter.
+  const obstacleBounds = config.labelObstacleBounds?.(state);
   const credit = document.querySelector('.asset-credit').getBoundingClientRect();
   for (const [i, [id, text]] of state.chapter.labels.entries()) {
     const reference = stateAt(chapterStart + CUE_WINDOWS[state.chapter.id][i][0] + .001);
@@ -117,11 +121,16 @@ function prepareLabels(state, width, height, viewportBox) {
       } else {
         if (obstacleIds ? !obstacleIds.includes(meshId) : config.presentationOpacity && config.presentationOpacity(reference, meshId) < .5) continue;
         const part = partRecords.get(meshId), projected = [];
-        // Every other link follows an authored linear segment. Reserve its full
-        // chapter sweep so retained names are not covered by a later movement.
-        for (const endpoint of endpoints) {
-          const delta = endpoint.offsetsWorld[meshId];
-          for (const x of [part.worldBounds.min[0], part.worldBounds.max[0]]) for (const y of [part.worldBounds.min[1], part.worldBounds.max[1]]) for (const z of [part.worldBounds.min[2], part.worldBounds.max[2]]) projected.push(project([x + delta[0], y + delta[1], z + delta[2]]));
+        const actual = obstacleBounds?.get(meshId);
+        if (actual) {
+          for (const x of [actual.min[0], actual.max[0]]) for (const y of [actual.min[1], actual.max[1]]) for (const z of [actual.min[2], actual.max[2]]) projected.push(project([x, y, z]));
+        } else {
+          // Legacy studies use endpoint sweeps for authored linear segments.
+          // Interior extrema or working rotations need the explicit hook above.
+          for (const endpoint of endpoints) {
+            const delta = endpoint.offsetsWorld[meshId];
+            for (const x of [part.worldBounds.min[0], part.worldBounds.max[0]]) for (const y of [part.worldBounds.min[1], part.worldBounds.max[1]]) for (const z of [part.worldBounds.min[2], part.worldBounds.max[2]]) projected.push(project([x + delta[0], y + delta[1], z + delta[2]]));
+          }
         }
         const xs = projected.map(p => p.x), ys = projected.map(p => p.y);
         obstacles.push({ x: Math.min(...xs), y: Math.min(...ys), width: Math.max(...xs) - Math.min(...xs), height: Math.max(...ys) - Math.min(...ys) });
@@ -240,7 +249,7 @@ reduced.addEventListener('change', event => { if (event.matches && ready && !cap
 
 async function init() {
   transport();
-  [index, source] = await Promise.all([readJson(config.indexUrl), readJson(config.sourceUrl)]);
+  [index, source] = await Promise.all([config.indexData ?? readJson(config.indexUrl), config.sourceData ?? readJson(config.sourceUrl)]);
   partRecords = new Map(index.parts.map(part => [part.id, part])); partIds = [...partRecords.keys()];
   if (partIds.length !== index.parts.length) throw new Error('Scene-index part identities must be unique.');
   $('robot-title').textContent = config.title; document.title = config.documentTitle || config.title + ' · Mechanism Studio';
@@ -283,8 +292,10 @@ async function init() {
 }
 // Local inspection API, used for deterministic visual verification and capture.
 const api = {
-  seek(seconds) { pause(); seek(seconds); applyFrame({ forceCut: true }); },
-  play: playMusic, pause,
+  seek(seconds) { if (!ready) throw new Error('Wait for study.ready before seeking.'); if (!Number.isFinite(seconds)) throw new TypeError('Seek time must be finite.'); pause(); seek(seconds); applyFrame({ forceCut: true }); },
+  play({ music = true } = {}) { if (!ready || capturing) return; if (music && musicReady) return playMusic(); audio.pause(); musicClock = false; return resume(); },
+  pause() { if (ready) pause(); },
+  reset() { if (!ready) throw new Error('Wait for study.ready before resetting.'); if (capturing) throw new Error('Stop capture before resetting.'); pause(); loops = 0; seek(0); director.reset(); lastChapter = -1; annotationKey = null; annotationLayouts = []; applyFrame({ forceCut: true }); return api.snapshot(); },
   snapshot() { const state = stateAt(time); return { ready, style: style.id, playing, musicReady, musicClock, muted, capturing, colorCues, colorAccentRevision: COLOR_ACCENT_REVISION, appearance: Object.fromEntries(colorAssignments), audioEdition: score?.edition, audioSha256: score?.sha256, feltBpm: score?.feltBpm, time, audioTime: audio.currentTime, duration: DURATION, loops, chapter: state.chapter.id, progress: state.progress, offsetsWorld: state.offsetsWorld, camera: viewer && currentPose(), annotations: annotationSnapshots, geometryRevision: index?.geometryRevision, sourceRevision: source?.revision || source?.commit, parts: viewer?.parts.size }; },
   get viewer() { return viewer; }, get framing() { return framing; }, get index() { return index; },
 };

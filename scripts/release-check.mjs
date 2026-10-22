@@ -14,6 +14,10 @@ const testDummy = (name, value) => /(?:\.test\.mjs|\/self_test\.py)$/.test(name)
 const credentialKey = '(?:(?:[A-Z][A-Z0-9_]*_)?(?:API_KEY|ACCESS_KEY|APP_ID|ACCESS_TOKEN|AUTH_TOKEN|SECRET|PASSWORD|TOKEN)|apiKey|appId|accessKey|accessToken|authToken|clientSecret|password)';
 const textExtensions = new Set(['.md', '.mjs', '.js', '.py', '.ps1', '.json', '.toml', '.html', '.txt', '.yaml', '.yml', '.css', '.xml', '.urdf', '.xacro', '.step', '.stp', '.in', '.lock', '.svg']);
 const binaryExtensions = new Set(['.glb', '.blend', '.f3d', '.stl', '.wav', '.mp3', '.png', '.jpg', '.jpeg', '.webp', '.pdf', '.ico']);
+// Only these reviewed source samples ship as WAV. Generated scores are rebuilt
+// locally; new source audio needs explicit provenance and release-policy review.
+const retainedWavFiles = new Set(['click_003', 'confirmation_001', 'maximize_003', 'minimize_003', 'tick_002']
+  .map(name => `examples/humanoid/audio/sfx/${name}.wav`));
 
 /** Findings contain paths and rule names only. Credential values are never returned. */
 export function inspectReleaseFile(name, bytes, { mode = '100644' } = {}) {
@@ -25,6 +29,7 @@ export function inspectReleaseFile(name, bytes, { mode = '100644' } = {}) {
   if (mode === '120000' || mode === '160000') fail('symbolic link or submodule is not allowed in the release list');
   if (bytes.length > releaseLimits.fileBytes) fail('file exceeds the 95 MiB release budget');
   const extension = extname(name).toLowerCase();
+  if (extension === '.wav' && !retainedWavFiles.has(name)) fail('generated or unreviewed WAV delivery; only the retained licensed source samples may ship');
   const isText = textExtensions.has(extension) || /(?:^|\/)(?:LICENSE(?:\.[^/]*)?|NOTICE|\.gitignore|\.gitattributes|\.npmrc|\.env\.example)$/.test(name);
   // Animated GIFs are reviewed only as README previews in docs/media, where
   // GitHub renders them inline; MP4 deliveries stay local (blocked above).

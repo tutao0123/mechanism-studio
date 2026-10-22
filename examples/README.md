@@ -2,9 +2,18 @@
 
 Choose an example by the evidence it can demonstrate: a teaching model, a source-based robot study, or a short presentation. All commands below run from the Mechanism Studio repository root after `npm ci`.
 
+This catalog accompanies **v0.4.1-alpha.1, a public alpha**. Start with the original planetary reducer, which needs no external model download:
+
+```sh
+node examples/planetary-gears/audio/build.mjs
+node examples/planetary-gears/serve.mjs
+```
+
+Open **http://127.0.0.1:4193/?clean=1** and click **Play with music**. Node.js 20.10+, npm and a WebGL 2 browser are sufficient for included visual examples and original score synthesis. The full test suite also requires Python 3; video encoding requires FFmpeg/FFprobe, and optional native geometry rebuilding uses the relevant example's documented tools.
+
 **These are implemented examples, not empty plans.** The maintained lock lives
 in `prototype-3d/`, and both SO-ARM robot cuts live in `EXAMPLE_ROBOT/`; neither
-is a missing child of this directory. The ten implemented experiences and exact
+is a missing child of this directory. The eleven implemented experiences across ten models and exact
 public/local distinctions are listed in the [status audit](../docs/examples-status.md).
 `lock-comparison/` is an explicitly [historical artifact](lock-comparison/README.md).
 
@@ -19,6 +28,7 @@ public/local distinctions are listed in the [status audit](../docs/examples-stat
 <a href="turbofan/README.md"><img src="../docs/media/turbofan-preview.jpg" alt="Two-spool turbofan teaching model" width="480"></a>
 <a href="quadruped/README.md"><img src="../docs/media/quadruped-preview.jpg" alt="Original small quadruped teaching model" width="480"></a>
 
+[Planetary gear set](planetary-gears/README.md) ·
 [Gearbox](gearbox/README.md) ·
 [G1 humanoid](humanoid/README.md) ·
 [SO-ARM kinetic cut](../EXAMPLE_ROBOT/kinetic/README.md) ·
@@ -35,6 +45,7 @@ these pages; use a local server below to load models and play music.
 
 | Example | Server command | Local route | Included experience |
 | --- | --- | --- | --- |
+| Planetary reducer: More than gears | `node examples/planetary-gears/serve.mjs` | `http://127.0.0.1:4193/?clean=1` | 36-second original 80-part study: enclosure/transmission separation, ideal 4:1 gear motion, sun/planet close-up, 13-component bearing teardown, seated ball/cage motion and reassembly |
 | Five-speed gearbox | `node examples/gearbox/serve.mjs` | `http://127.0.0.1:4183/?clean=1`, blueprint edition `/blueprint/?clean=1`, 24-second cinematic edition `/cinematic/` | 40-second original teaching model: case off, explosion to synchronizer keys and bearing balls, power path through 1st–5th, synchronizer close-up, restoration. Spec labels and measured dimensions; the blueprint edition is the same study drawn white-on-blue |
 | Allegro dexterous hand | `node examples/allegro-hand/serve.mjs` | `http://127.0.0.1:4185/?clean=1` | 35.56-second articulated finger/ thumb study, source-link expansion, local view and restoration |
 | Robotiq 2F-85 gripper | `node examples/robotiq-gripper/serve.mjs` | `http://127.0.0.1:4186/?clean=1` | 35.56-second jaw motion, four-bar closure, link-level explosion and reassembly |
@@ -47,7 +58,7 @@ these pages; use a local server below to load models and play music.
 | SO-ARM 102 assembly study | `node EXAMPLE_ROBOT/serve.mjs` | `http://127.0.0.1:4180/?clean=1` | 34.285714-second music-driven exploded view and restoration |
 | SO-ARM 102 kinetic cut | `node EXAMPLE_ROBOT/serve.mjs` | `http://127.0.0.1:4180/kinetic/?clean=1` | 25.714286-second source-backed joint motion and assembly edit |
 
-The root server handles the studio and original mechanisms; SO-ARM, humanoid, gearbox, Allegro and Robotiq studies use their own explicit read-only route allowlists, sharing one declared study runtime list (`shared/study/preview-server.mjs`) that `tests/preview-pages.test.mjs` checks against every served page. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
+The root server handles the studio and original mechanisms; SO-ARM, humanoid, gearbox, Allegro, Robotiq and planetary studies use their own explicit read-only route allowlists, sharing one declared study runtime list (`shared/study/preview-server.mjs`) that `tests/preview-pages.test.mjs` checks against every served page. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
 
 The Allegro and Robotiq pages require their dedicated servers; their root-gallery
 cards expose the launch commands instead of a root `/examples/` route. The
@@ -59,6 +70,7 @@ inputs, rather than certifying the current checkout or an exported video.
 Generate the gearbox score with `node examples/gearbox/audio/build.mjs`; its
 optional cinematic edition at `/cinematic/` uses
 `node examples/gearbox/cinematic/audio/build.mjs`.
+Generate the planetary score with `node examples/planetary-gears/audio/build.mjs`.
 
 Each study server prints its local address; a `PORT` override changes the URL.
 Generated score WAVs and exported videos are excluded from Git; the synthesis
@@ -92,6 +104,17 @@ Provider-generated Doubao MP3s are deliberately not in the public source release
 
 ## Teaching models
 
+The [planetary set](planetary-gears/README.md) and [five-speed gearbox](gearbox/README.md)
+have original parameterized Node.js builders, included GLBs and ideal tooth-ratio
+motion. The planetary reducer has 80 independently identified components using
+29 geometry definitions: the original 21 transmission parts plus 59 enclosure,
+fastening, sealing and shaft-support parts. It retains plain planet bushings
+and adds two 13-component ball bearings. Their ideal rolling kinematics follow
+the input/output shafts; one bearing is dismantled, seated and driven in close-up.
+No bearing contact, slip or load is solved. Its 36-second presentation, authored geometry and music are MIT; no Blender or
+third-party mesh download is needed to rebuild it. Authored separation remains
+a display choice, not a validated maintenance procedure.
+
 The [lock](../prototype-3d/README.md), [inline-four](inline-four/README.md), [turbofan](turbofan/README.md) and [quadruped](quadruped/README.md) have authored geometry, explicit dimensions/assumptions and a model-owned working state. Their source code, builders and GLB exports are under the project's MIT license. Blender 4.5 LTS is the documented build environment; it is not needed for viewing.
 
 Read the mechanism's model and README before using its diagrams as engineering evidence. The lock has ideal pin-stack alignment; the engine uses prescribed kinematics and process cues; the turbofan does not solve a thermodynamic cycle; the quadruped has no balance/contact-force solver. Their explosion controls are observation states, separate from working motion.
@@ -110,6 +133,12 @@ Each source folder retains the pinned upstream revision, source links, hashes an
 The robot kinetic adapter reads five revolute and two prismatic joints, including the opposed-jaw mimic relation. It resets working poses before display explosion. This is source-backed kinematics, not validated motor control, collision checking or per-screw disassembly. It provides no general CAD mate, contact or dynamics solver.
 
 ## Reproduction and checks
+
+Before running the full suite, make Python 3 available as `python` on Windows,
+`python3` elsewhere, or through `MECHANISM_PYTHON`. Tests use it for the MJCF
+parser even when using the included GLBs. The first test run also fetches pinned
+source meshes; viewing does not require this download or Python. FFmpeg-dependent
+integration checks skip explicitly when the tools are absent.
 
 ```sh
 npm test

@@ -1,22 +1,65 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { access, readFile } from 'node:fs/promises';
+import { access, mkdir, readFile, readdir, realpath, writeFile } from 'node:fs/promises';
+import { randomUUID } from 'node:crypto';
+import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SCORES, withoutDiagnostics, scoreWavPath } from '../scripts/build-audio.mjs';
 
-const root = fileURLToPath(new URL('../', import.meta.url));
-const git = (...args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' });
+const root = resolve(fileURLToPath(new URL('../', import.meta.url)));
+const gitAt = (cwd, ...args) => execFileSync('git', args, { cwd, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
 
-test('every committed score is registered once and its WAV is rebuilt, never tracked', async () => {
-  const tracked = git('ls-files', '-z', '*music-score.json').split('\0').filter(Boolean).sort();
-  assert.deepEqual(SCORES.map(score => score.metadata).sort(), tracked, 'registry matches the committed score metadata');
+async function ownsGitWorktree() {
+  try {
+    const top = gitAt(root, 'rev-parse', '--show-toplevel').trim();
+    return await realpath(top) === await realpath(root);
+  } catch { return false; }
+}
+
+// A GitHub source archive has no index. It may also be extracted below a
+// different repository, whose ignore rules must not decide this test's inputs.
+async function archiveScoreMetadata(ignoreRoot) {
+  const excluded = new Set(['node_modules', 'output', 'dist', 'shots', 'source', 'assets', 'validation']);
+  const found = [];
+  async function visit(directory) {
+    let entries;
+    try { entries = await readdir(join(root, directory), { withFileTypes: true }); }
+    catch (error) { if (error.code === 'ENOENT') return; throw error; }
+    for (const entry of entries) {
+      if (entry.name.startsWith('.') || excluded.has(entry.name) || entry.isSymbolicLink()) continue;
+      const path = `${directory}/${entry.name}`;
+      if (entry.isDirectory()) await visit(path);
+      else if (entry.isFile() && entry.name === 'music-score.json') found.push(path);
+    }
+  }
+  for (const directory of ['EXAMPLE_ROBOT', 'examples', 'prototype-3d', 'showcase']) await visit(directory);
+  return found.filter(path => {
+    try { gitAt(ignoreRoot, 'check-ignore', '--no-index', '--quiet', '--', path); return false; }
+    catch (error) { if (error.status === 1) return true; throw error; }
+  }).sort();
+}
+
+test('every public source score is registered once and its generated WAV stays excluded', async t => {
+  const worktree = await ownsGitWorktree();
+  let ignoreRoot = root;
+  if (!worktree) {
+    ignoreRoot = join(root, 'output', `audio-ignore-${randomUUID()}`);
+    await mkdir(ignoreRoot, { recursive: true });
+    gitAt(ignoreRoot, 'init', '--quiet', '--initial-branch=main');
+    await writeFile(join(ignoreRoot, '.gitignore'), await readFile(join(root, '.gitignore')));
+    t.diagnostic('Source archive: registry and ignore checks use public source folders and an isolated copy of this project\'s .gitignore, not an ancestor Git index.');
+  }
+  const metadata = worktree
+    ? gitAt(root, 'ls-files', '--cached', '--others', '--exclude-standard', '-z', '*music-score.json').split('\0').filter(Boolean).sort()
+    : await archiveScoreMetadata(ignoreRoot);
+  assert.deepEqual(SCORES.map(score => score.metadata).sort(), metadata, 'registry matches all public score metadata');
   const wavs = [];
   for (const score of SCORES) {
     await access(new URL(score.build[0], new URL('../', import.meta.url)));
     const wav = scoreWavPath(score.metadata, JSON.parse(await readFile(new URL(score.metadata, new URL('../', import.meta.url)), 'utf8')));
-    assert.equal(git('ls-files', '--', wav), '', `${wav} must not be tracked`);
-    assert.match(git('check-ignore', '--no-index', '--', wav), /\.wav\n$/, `${wav} must be ignored`);
+    if (worktree) assert.equal(gitAt(root, 'ls-files', '--', wav), '', `${wav} must not be tracked`);
+    assert.match(gitAt(ignoreRoot, 'check-ignore', '--no-index', '--', wav), /\.wav\r?\n$/, `${wav} must be ignored by this project's rules`);
     wavs.push(wav);
   }
   assert.equal(new Set(wavs).size, wavs.length, 'one WAV per score');

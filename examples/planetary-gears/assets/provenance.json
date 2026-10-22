@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "original-parametric-teaching-model",
+  "title": "Three-planet reduction · 24 / 24 / 72",
+  "author": "Mechanism Studio",
+  "license": "MIT",
+  "specRevision": "planetary-24-24-72-v3",
+  "revision": "planetary-24-24-72-v3-93f0e1eaae9e",
+  "generator": "examples/planetary-gears/build-planetary.mjs",
+  "inputFingerprints": [
+    {
+      "file": "examples/planetary-gears/spec.mjs",
+      "sha256": "aaf9b98c2ddb65121a13a4b93fc5dfcc2f7754d1cb265c49f6ef8225c7001b86"
+    },
+    {
+      "file": "examples/planetary-gears/geometry.mjs",
+      "sha256": "c4dc881835d41ed03175c63a8a20d68c6b4f71765c74a9092cd880b531c5714c"
+    },
+    {
+      "file": "examples/planetary-gears/build-planetary.mjs",
+      "sha256": "505fd3061ae3e5ccf04bf9f293dd60f18244384b04720e8813dba652d3110064"
+    }
+  ],
+  "sourceHash": "93f0e1eaae9eec36e15dd29957a149399f1931c342493fa6de491c098ed799aa",
+  "note": "Built from the authored tooth counts, dimensional assumptions and involute formulas in this example. No external robot, commercial CAD or third-party mesh is used.",
+  "revisionNotes": [
+    "v2 adds 59 independently identified housing, sealing, fastening and shaft-support parts while retaining all original IDs and rest transforms.",
+    "v2 shortens the existing output-hub flange by 1 mm to remove its authored overlap with the rear carrier face; shaft/bore dimensions and rest placement are unchanged.",
+    "v3 assigns cages and balls to the mechanical adapter and shifts raceway curvature centres to the nominal zero-contact-angle contact radii; all 80 IDs and source rest placements are retained."
+  ],
+  "scope": "The displayed meshes are not exact CAD B-reps. All fits and rigid connections are explicitly authored teaching assumptions.",
+  "limitations": [
+    "Original parametric teaching geometry; not sourced production CAD or a manufacturing drawing.",
+    "Standard involute spur profiles with small display backlash; root joins are simplified and no strength or manufacturing tolerance claim is made.",
+    "The three planet journals retain their original plain bushings. Two additional shaft support bearings expose separate races, cages and ten balls each.",
+    "Support bearings use ideal zero-contact-angle, no-slip kinematics with fixed outer races. Cage orbit and absolute ball spin follow the corresponding shaft; load, slip, elastic deformation and cage dynamics are not simulated.",
+    "Raceway curvature includes 60 micrometres of conformity relief away from the nominal equatorial contacts. This tessellated teaching model is not a tolerance or contact-pressure calculation.",
+    "Four sun turns close the gear train but not each bearing occurrence phase. Rolling internals are hidden at the editorial loop reset; their ratios are never altered to force closure.",
+    "Pin bores, screw sockets, housing passages, grooved races and seal profiles are modeled; helical threads, fits, lubrication and seal deformation are not solved.",
+    "The ring/housing restraint, bearing seating, carrier/output and sun/input rigid connections are authored teaching assumptions; the housing has no independently verified production mounting design.",
+    "Mesh-phase and speed checks are geometric/kinematic evidence, not a contact, load, friction or collision solver."
+  ]
+}

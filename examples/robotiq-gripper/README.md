@@ -51,6 +51,15 @@ This is a source-based rigid **kinematic inspection**, not a contact, force, ada
 
 [The example plan](planning/module-plan.json) assigns responsibilities to Assembly & Explode, Camera Direction, Materials & Lighting and Mating Close-up. The mechanism adapter owns working angles. The other modules share real `mjcf:<body>` IDs and the common clock.
 
+[`example.mjs`](example.mjs) supplies the study configuration to the shared
+bootstrap. [`presentation.mjs`](presentation.mjs) compiles the actual
+`mechanism-presentation-1` plan: source-body display translations, fixed camera
+envelopes, label windows and label accents all execute from that data. The live
+immutable plan is available at `window.mechanismStudy.presentation.plan`, and
+`createGripperPresentation(index, { plan })` accepts an edited serialized plan
+bound to the same geometry revision. The driver pulses stay in `story.mjs` and
+the source linkage solution stays in `kinematics.mjs`.
+
 The detail shot retains the original right-side source occurrences and uses camera magnification, not duplicated or scaled parts. Its two names appear one at a time after settling, remain beside their parts, and fade together at the next scene. The static detail is intentionally an exploded structure view; the assembled opening and closing shots carry the working-motion evidence.
 
 ## Verify and delivery scope
@@ -61,15 +70,23 @@ node --test examples/robotiq-gripper/tests/*.test.mjs
 
 Checks cover retained-source hashes/constraints, 751 closed-loop poses and source limits, actual nested transform composition, complete reset, separation only at zero pose, mobile/desktop framing envelopes, label timing and the local HTTP allowlist. They do not establish visual reading quality or acoustic listening quality; those require a separate real browser/media review.
 
+Executable-plan tests also compare 1,794 sampled states and 36 camera views
+against frozen pre-migration fingerprints, exercise plan edits through the
+actual adapter, and check reverse seeks, paused inspection and exact chapter
+boundaries. At an exact boundary the next chapter starts deterministically;
+floating-point modulo rounding no longer retains the preceding chapter for
+that single sample.
+
 The deliverable here is a live looping example and reproducible generated score. A captured MP4, encoded-video downscale review, X post and GitHub publication are separate deliverables; their existence is not implied by the live page.
 
 The [18 October validation notes](validation.md) and [delivery fingerprints](delivery.json)
-record the original local review against the pre-sync runtime. Later changes to
-its inputs are listed, with reasons and evidence, in
-[`delivery-drift.json`](delivery-drift.json), so `npm run check:delivery` passes
-while any undocumented change still fails. The
-[19 October integration report](../../docs/robot-studies-release.md) records the
-shared-server compatibility checks for this publication.
+record the original local review against the pre-sync runtime.
+[`delivery-drift.json`](delivery-drift.json) records reviewed non-runtime
+changes, while the strict historical media fingerprint check intentionally
+reports changed runtime inputs in the current alpha. Passing current numerical
+tests does not certify a new export or visual/audio review. The
+[19 October integration report](../../docs/robot-studies-release.md) records
+the shared-server checks at that date; it does not certify current media delivery.
 
 ## License
 

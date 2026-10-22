@@ -29,8 +29,11 @@ and colour meaning. Camera direction uses the resulting motion/visibility
 envelopes, then annotation timing reserves settled reading time. Changes in
 geometry or displacement invalidate dependent framing/placement evidence.
 
-The brief, scene index and plans are documented handoffs. Explicit runtime
-adapters implement them. Current plan JSON is not automatically executable, and
+The brief and per-module plans remain documented handoffs. The
+[executable presentation subset](../.agents/skills/mechanism-studio/references/executable-presentation.md)
+binds display offsets, orthographic shots, labels and accents/opacity to the real
+scene index and common clock. Explicit adapters implement mechanics and other
+presentation behavior. Older handoff JSON is not automatically executable, and
 the skill does not install or invoke autonomous specialist agents by itself.
 
 ## Validate the delivered experience

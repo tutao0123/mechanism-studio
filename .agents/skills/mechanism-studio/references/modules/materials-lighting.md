@@ -45,7 +45,7 @@ Base colors must not consume process meanings: airflow/fuel/combustion have thei
 
 ## Existing runtime
 
-[createMechanismViewer](../../../../../shared/viewer/README.md) accepts configureMesh and lineStyle; viewer.lineArt.setStyle updates lines. There is no general appearance-plan JSON loader.
+[createMechanismViewer](../../../../../shared/viewer/README.md) accepts configureMesh and lineStyle; viewer.lineArt.setStyle updates lines. The [executable presentation subset](../executable-presentation.md) samples bound accents and opacity; the broader appearance-plan's lights, PBR settings, textures and specialized effects still need adapters.
 
 [Line art](../../../../../shared/viewer/line-art.mjs) currently expects individual static Mesh objects and an orthographic camera. Parent motion/nonuniform scale are supported; this does not imply skinned, InstancedMesh or arbitrary perspective support. lineArtSmooth is an explicit visual treatment, not permission to erase real structural edges.
 

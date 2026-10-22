@@ -6,7 +6,7 @@ Start with [the skill guide](skill-guide.md) for installation/use and [SKILL.md]
 
 ## Specialist authoring contracts
 
-These contracts define responsibilities and handoffs; an example adapter must implement them. A JSON plan file is not an executable module.
+These contracts define responsibilities and handoffs. The shared study runtime executes a [defined presentation subset](../.agents/skills/mechanism-studio/references/executable-presentation.md); broader behaviors still require an example adapter. The older per-module JSON records remain handoffs, separate from the executable `mechanism-presentation-1` schema.
 
 | Contract | Preconditions and inputs | Output | Boundaries and handoff |
 | --- | --- | --- | --- |
@@ -17,7 +17,7 @@ These contracts define responsibilities and handoffs; an example adapter must im
 
 All four return `stage`, input revisions, actual checks, assumptions and limits. `concept` means design only; `bound` means real asset integration; `validated` means claimed checks were run. They share [orchestration records](../.agents/skills/mechanism-studio/references/module-orchestration.md): brief, scene-index, timeline and per-module plans.
 
-[Motion choreography](../.agents/skills/mechanism-studio/references/motion-choreography.md) coordinates these contracts through the orchestrator. It covers component-specific tempo, modest source-aware staggering, continuous context fades, reading holds and event-linked sound. A single-part close-up extracts one existing occurrence, magnifies with the camera, then returns it; it does not duplicate the part or scale its mesh. A mating close-up retains the supported component relationship and explains its relative motion. This is authoring guidance implemented by each example adapter, not an additional installed skill, library or generic plan executor. Movement/hold diagnostics support review without a universal pass/fail percentage or physics claim.
+[Motion choreography](../.agents/skills/mechanism-studio/references/motion-choreography.md) coordinates these contracts through the orchestrator. It covers component-specific tempo, modest source-aware staggering, continuous context fades, reading holds and event-linked sound. A single-part close-up extracts one existing occurrence, magnifies with the camera, then returns it; it does not duplicate the part or scale its mesh. A mating close-up retains the supported component relationship and explains its relative motion. This remains authoring guidance: supported plan channels and example adapters implement the result. Movement/hold diagnostics support review without a universal pass/fail percentage or physics claim.
 
 ## Shared libraries: implemented code
 
@@ -105,9 +105,21 @@ Focused checks: `node --test shared/appearance/tests/*.test.mjs`.
 
 `createStudyShell()` builds the common DOM; `createAssemblyStudy(config)` combines viewer, music transport, stable camera director, near labels and reversible color cues. Inputs are a real scene index/GLB/contract/provenance, score/audio hashes and an example adapter for timeline, annotations, framing and display offsets.
 
+`compilePresentationPlan(plan, index)` implements `mechanism-presentation-1` as data with validated identity, geometry revision, channels and chapters. Its supported channels sample world display offsets, fixed-envelope orthographic shots, near-part label windows and accents/opacity from absolute time. `startStudyExample(definition)` supplies a reusable study bootstrap; [the template](../templates/study/README.md) and real [gearbox](../examples/gearbox/presentation.mjs) / [Robotiq](../examples/robotiq-gripper/presentation.mjs) adapters show integration.
+
+| Presentation concern | Executable subset | Still example-owned |
+| --- | --- | --- |
+| Explosion | Bound display-offset tracks sampled on the common clock | Mechanical poses, source-specific parent conversion, removal feasibility |
+| Camera | Fixed-envelope orthographic shots | Conservative bounds from real geometry/motion, specialized or perspective film paths |
+| Annotations | Bound near-part labels and timing | Editorial text, actual readability review, specialized overlays |
+| Appearance | Absolute accent and opacity values | Lighting/PBR/textures, source-specific effects and selection integration |
+| Mating close-up | May combine the supported channels around a real pair | Pair evidence, mechanical phase/direction semantics and specialized cue rendering |
+
+The compiler does not load arbitrary older handoff records or infer physics, CAD geometry, joints or a complete cinematic treatment. The [presentation checker](../.agents/skills/mechanism-studio/references/executable-presentation.md#check-the-plan-and-the-delivery) emits numerical evidence and leaves browser/video review pending.
+
 Optional hooks add source-backed workingPoses, visibility detailIds, authored appearanceCues, cameraUp, transition duration, deliberate cameraCuts and an `appearance` style; omitting it keeps the default rendering byte-identical ([evidence](../shared/study/evidence/default-style-pixels.json)). Labels may be spec labels (`shared/viewer/spec-label.mjs`: index, name, one spec line computed from data). `shared/viewer/drafting.mjs` provides centre lines, dimension lines and an SVG number/stamp overlay for an example's presentation layer. The adapter owns mechanics/joint limits and motion/explosion gates; the shell infers none. `.ready` and snapshot().ready/musicReady distinguish model success from music availability.
 
-API: `play()`, `pause()`, `seek(seconds)`, `snapshot()` and viewer/index/framing access. Native audio currentTime is the live music clock; explicit capture mode freezes it and accepts monotonically increasing frame times. Retained labels require stationary named targets. The actual score BPM/duration/byte length/hash must agree.
+API: `play()`, `pause()`, `seek(seconds)`, `reset()`, `snapshot()` and viewer/index/framing access. Native audio currentTime is the live music clock; explicit capture mode freezes it and accepts monotonically increasing frame times. Retained labels require stationary named targets. The actual score BPM/duration/byte length/hash must agree.
 
 Preview: the isolated study servers share `shared/study/preview-server.mjs`; its `STUDY_RUNTIME_FILES` is the one list of shared runtime files they serve. `tests/preview-pages.test.mjs` walks every served page's static dependency graph and fails on a refused, missing or unused entry.
 
@@ -120,6 +132,7 @@ Focused checks: `node --test shared/study/tests/runtime-delivery.test.mjs tests/
 | [Showcase](../showcase/README.md) | Registered mechanism adapter, valid lesson/manifest, measured chapter durations → English silent/narrated tour with planned camera, captions and process | `npm run preview`, then `/showcase/?story=quadruped&mode=showcase&clean=1`. Existing app's narration path is separate from study music; not every old annotation has the new near-label implementation |
 | [CAD import](../tools/cad/README.md) and [XCAF backend](../tools/cad/README-xcaf.md) | Digest-pinned self-contained source and terms → actual two-setting XCAF graphs, GLB, contract, manifest/report; read-only audit report | Project-local `./tools/cad/setup-xcaf.ps1`; `npm run import:cad -- --example examples/my-assembly`; `npm run audit:cad -- --example examples/my-assembly`. One root, uniform explicit m/mm, exact source usage mapping; unsupported external refs/units/missing identities fail |
 | [Video export](../tools/video/README.md) | Sequential captured JPEGs, verified timeline-matched track, declared fps/count/size → H.264/AAC MP4, contact sheet and objective report | `node tools/video/export.mjs --help`. FFmpeg/FFprobe required; output project-local under output, audio mismatch ≤1 frame, at most 1920×1080 total pixels, clip ≤140 seconds. No browser capture/upload/publication |
+| [Presentation check](../tools/study/check-presentation.mjs) | Registered example presentation and its real index → numerical report with manual browser/video review pending | `node tools/study/check-presentation.mjs --example gearbox --output output/presentation-checks/gearbox.json`; also supports `robotiq-gripper` and `planetary-gears`. See [executable presentation](../.agents/skills/mechanism-studio/references/executable-presentation.md) for scope |
 | [Blender lock MCP](../tools/blender-mcp/README.md) | Project-scoped lock operation → lock assets/status through its four-operation allowlist | Optional and not auto-connected; see its setup/CLI. It is not a general Blender or CAD API, and is not required to view existing demos |
 
 The [runtime map](../.agents/skills/mechanism-studio/references/runtime-modules.md) links actual examples. Library READMEs and source are authoritative for exact API parameters; this catalog explains ownership and integration.
@@ -135,6 +148,7 @@ The [runtime map](../.agents/skills/mechanism-studio/references/runtime-modules.
 | [Assembly depth](../.agents/skills/mechanism-studio/references/assembly-depth.md) | Whole → sourced assembly → actual child occurrences; requested/available depth, generic source-name limits, nested bearing detail without invented internals |
 | [Pacing](../.agents/skills/mechanism-studio/references/presentation-pacing.md) | 30–40s default, purposeful movement/read intervals, sequential names, same-scene retention/group fade |
 | [Motion choreography](../.agents/skills/mechanism-studio/references/motion-choreography.md) | Cross-module movement/context/sound coordination, real-occurrence extraction and camera close-up, motion/hold review without fixed thresholds |
+| [Executable presentation](../.agents/skills/mechanism-studio/references/executable-presentation.md) | Bind the supported plan schema to real geometry, use the shared example bootstrap and run numerical checks; identify remaining adapters and manual review |
 | [Tour transport](../.agents/skills/mechanism-studio/references/presentation-tour.md) | One clock, pause/seek/loop/exploration/reduced-motion and fallback |
 | [Audio delivery](../.agents/skills/mechanism-studio/references/audio-delivery.md) | Silence/music/optional provider-neutral speech selection, synchronized editorial effects and actual media review |
 | [Process animation](../.agents/skills/mechanism-studio/references/process-animation.md) | Phase-driven qualitative flow/spark/combustion, regions and unsupported physics |

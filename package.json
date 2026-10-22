@@ -1,6 +1,6 @@
 {
   "name": "mechanism-studio",
-  "version": "0.4.0",
+  "version": "0.4.1-alpha.1",
   "private": true,
   "description": "Project-local mechanical authoring skill with source-aware CAD inspection, exploded views and synchronized visual stories",
   "license": "MIT",

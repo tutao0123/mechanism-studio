@@ -1,28 +1,13 @@
-/** Showcase timeline for the teaching gearbox: 40 seconds, 64 beats at 96 BPM.
- * Structure → explosion → power path through the gears → synchronizer close-up
- * → overdrive → whole again. Every pose, offset, fade and accent is a pure
- * function of loop time; the drive angles come from kinematics.createDrive. */
-import { LAYOUT, SYNCHROS, BEARINGS, AXES, GEARS, SLEEVE_TRAVEL, RING_GAP } from './spec.mjs';
-import { createDrive, memberAngles, leverAngles, smooth } from './kinematics.mjs';
-import { LABELS } from './labels.mjs';
-
-export const BPM = 96;
-export const TOTAL_BEATS = 64;
-export const DURATION = TOTAL_BEATS * 60 / BPM;
-export const PLAN_REVISION = 'gearbox-story-3';
-const beat = value => value * 60 / BPM;
-const freeze = Object.freeze;
-
-export const CHAPTERS = freeze([
-  { id: 'whole', firstBeat: 0, lastBeat: 5, title: 'A five-speed gearbox.', copy: 'Three shafts, thirteen gears, three synchronizers. One lever chooses the path.', labels: [['gb:case/shift-lever', LABELS.lever]] },
-  { id: 'open', firstBeat: 5, lastBeat: 12, title: 'Lift the case.', copy: 'The input shaft drives a countershaft below it; the mainshaft carries the output.', labels: [['gb:input/shaft', LABELS.input], ['gb:counter/shaft', LABELS.counter]] },
-  { id: 'explode', firstBeat: 12, lastBeat: 22, title: 'Gears that spin free.', copy: 'Mainshaft gears turn on needle bearings until a synchronizer locks one of them to the shaft.', labels: [['gb:main/synchro-s12/sleeve', LABELS.synchro], ['gb:idler/gear', LABELS.idler]] },
-  { id: 'low', firstBeat: 22, lastBeat: 32, title: 'First, then second.', copy: 'Power crosses to the countershaft and back up through one gear pair: 3.70 : 1, then 2.13 : 1.', labels: [['gb:main/gear-1', LABELS.first], ['gb:main/gear-2', LABELS.second]] },
-  { id: 'sync', firstBeat: 32, lastBeat: 44, title: 'Matching speeds.', copy: 'A blocker ring brings the gear to shaft speed; then the sleeve slides over its dog teeth. Fourth is direct.', labels: [['gb:main/synchro-s34/sleeve', LABELS.sleeve], ['gb:main/synchro-s34/ring-front', LABELS.ring]] },
-  { id: 'over', firstBeat: 44, lastBeat: 54, title: 'Fifth: overdrive.', copy: '0.78 : 1 — the mainshaft now turns faster than the input shaft.', labels: [['gb:main/gear-5', LABELS.fifth]] },
-  { id: 'close', firstBeat: 54, lastBeat: 64, title: 'Whole again.', copy: 'An original teaching model: ideal tooth ratios, no loads, friction or wear.', labels: [] },
-].map(chapter => freeze({ ...chapter, labels: freeze(chapter.labels.map(freeze)) })));
-
+/** Mechanical schedule and absolute model poses. Presentation offsets, labels,
+ * opacity and cameras are executed by the shared compiled presentation plan. */
+import { SYNCHROS, BEARINGS, AXES, GEARS, SLEEVE_TRAVEL, RING_GAP } from './spec.mjs';
+import { createDrive, memberAngles, leverAngles } from './kinematics.mjs';
+import { BPM, DURATION, normalizeTime } from './presentation-data.mjs';
+import { createGearboxPresentation } from './presentation.mjs';
+export { BPM, TOTAL_BEATS, DURATION, CHAPTERS, PLAN_REVISION, CASE_TIMING, FOCUS, COHORTS, WAVE, normalizeTime } from './presentation-data.mjs';
+const beat = value => value * 60 / BPM, freeze = Object.freeze;
+const add = (a, b) => a.map((v, i) => v + b[i]);
+const scale = (a, k) => a.map(v => v * k);
 /** Contiguous drive schedule in beats; createDrive works in seconds. Speeds
  * are deliberately slow so teeth read in a 15 fps README GIF: steady motion
  * passes at most VISIBLE_TOOTH_RATE teeth per second (≈0.37 pitch per frame).
@@ -48,76 +33,6 @@ const SCHEDULE_BEATS = [
   { type: 'hold', t0: 53.5, t1: 64 },
 ];
 export const SCHEDULE = freeze(SCHEDULE_BEATS.map(segment => freeze({ ...segment, t0: beat(segment.t0), t1: beat(segment.t1) })));
-
-/** Case opening/closing, close-up context fade and explosion cohorts, in beats. */
-export const CASE_TIMING = freeze({ open: freeze([5.4, 8]), close: freeze([54.2, 57.6]) });
-export const FOCUS = freeze({ fadeIn: freeze([32, 33.4]), fadeOut: freeze([43, 44.4]), context: .2,
-  ids: freeze(['gb:input/shaft', 'gb:main/shaft', 'gb:main/gear-3', 'gb:main/needle-3', 'gb:counter/gear-drive', 'gb:counter/gear-3',
-    'gb:shift/fork-s34', 'gb:shift/rail-s34', ...['hub', 'sleeve', 'ring-front', 'ring-rear', 'key-1', 'key-2', 'key-3'].map(name => `gb:main/synchro-s34/${name}`)]) });
-export const COHORTS = freeze({
-  shift: freeze({ out: 12.0, back: 20.6, beats: 1.4 }),
-  counter: freeze({ out: 12.4, back: 20.2, beats: 1.4 }),
-  idler: freeze({ out: 12.8, back: 19.8, beats: 1.4 }),
-  axial: freeze({ out: 13.0, back: 19.4, beats: 1.5 }),
-  inner: freeze({ out: 14.2, back: 18.8, beats: 1.0 }),
-});
-const AXIAL_SPREAD = .55, PIVOT_X = LAYOUT.s12.centre;
-/** Repeated parts (bearing balls, synchronizer keys) lift in a wave across
- * their set, ordered by distance from one corner, and return in reverse order
- * a little quicker. `span` is the beat offset between first and last;
- * `returnBeats` is the return duration of each part. */
-export const WAVE = Object.freeze({ span: .6, returnBeats: .8, corner: Object.freeze([0, 1, 1]) });
-
-const normalize = v => { const l = Math.hypot(...v) || 1; return v.map(x => x / l); };
-const add = (a, b) => a.map((v, i) => v + b[i]);
-const scale = (a, k) => a.map(v => v * k);
-
-export function normalizeTime(seconds) {
-  if (!Number.isFinite(seconds)) throw new TypeError('Finite timeline seconds required.');
-  let time = seconds % DURATION; if (time < 0) time += DURATION;
-  return time < 1e-10 || DURATION - time < 1e-10 ? 0 : time;
-}
-
-/** World display offsets at full explosion, split by cohort, for one part. */
-function explodeVectors(part, assemblies) {
-  const id = part.id, group = part.group ?? '', none = [0, 0, 0], result = { shift: none, counter: none, idler: none, axial: none, inner: none };
-  const parent = assemblies.get(part.parentId), origin = parent ? [parent.worldMatrix[12], parent.worldMatrix[13], parent.worldMatrix[14]] : [0, 0, 0];
-  const axial = x => [AXIAL_SPREAD * (x - PIVOT_X), 0, 0];
-  if (group === 'shift') result.shift = [0, .11, 0];
-  if (group.startsWith('counter')) result.counter = [0, -.075, 0];
-  if (group === 'counter-bearing' || group === 'counter-bearing:balls') result.inner = [origin[0] < 0 ? -.045 : .045, 0, 0];
-  if (group === 'idler') result.idler = [0, -.015, .07];
-  if (group === 'input') result.axial = add(axial(part.worldMatrix[12]), [-.02, 0, 0]);
-  if (group.startsWith('input-bearing')) result.axial = add(axial(origin[0]), [-.05, 0, 0]);
-  if (group.startsWith('gear:') && !id.includes('/needle-')) result.axial = axial(part.worldMatrix[12]);
-  if (group.startsWith('washer:') || group === 'output') result.axial = axial(part.worldMatrix[12]);
-  if (group.startsWith('rear-bearing')) result.axial = add(axial(origin[0]), [.03, 0, 0]);
-  if (group.startsWith('synchro:')) {
-    result.axial = axial(origin[0]);
-    if (group.endsWith(':sleeve')) result.inner = [0, .055, 0];
-    if (group.endsWith(':ring-1')) result.inner = [-.012, 0, 0];
-    if (group.endsWith(':ring1')) result.inner = [.012, 0, 0];
-    if (group.endsWith(':keys')) {
-      const [, y0, z0] = part.worldCenter, radial = normalize([0, y0 - origin[1], z0 - origin[2]]);
-      result.inner = scale(radial, .014);
-    }
-  }
-  if (group.endsWith(':balls')) {
-    const radial = normalize([0, part.worldMatrix[13] - origin[1], part.worldMatrix[14] - origin[2]]);
-    result.inner = add(result.inner, scale(radial, .007));
-  }
-  return result;
-}
-function caseVector(part) {
-  const group = part.group ?? '';
-  if (!group.startsWith('case:')) return null;
-  if (group === 'case:shell') return [0, .055, 0];
-  if (group === 'case:cover') return [0, .075, 0];
-  if (group === 'case:front-plate' || group === 'case:bell') return [-.035, 0, 0];
-  if (group === 'case:rear-plate' || group === 'case:extension') return [.035, 0, 0];
-  if (group === 'case:bolts') return [part.worldCenter[0] < 0 ? -.035 : .035, 0, 0];
-  throw new Error(`Unplanned case group: ${group}`);
-}
 
 const rotationX = angle => [Math.sin(angle / 2), 0, 0, Math.cos(angle / 2)];
 /** Quaternion [x,y,z,w] for a lever tilt: lateral about X, fore/aft about Z. */
@@ -156,53 +71,15 @@ export function localDisplayOffsets(index, offsetsWorld, Matrix4, Vector3) {
   return result;
 }
 
-export function createGearboxStory(index) {
+export function createGearboxMechanics(index) {
   if (index?.units !== 'm' || !Array.isArray(index.parts) || !Array.isArray(index.assemblies)) throw new Error('A gearbox scene index in metres is required.');
-  const parts = new Map(index.parts.map(part => [part.id, part])), assemblies = new Map(index.assemblies.map(a => [a.id, a]));
-  for (const chapter of CHAPTERS) for (const [id] of chapter.labels) if (!parts.has(id)) throw new Error(`Label target missing: ${id}`);
+  const parts = new Map(index.parts.map(part => [part.id, part]));
   for (const gear of Object.keys(GEARS)) for (const id of powerPathIds(gear)) if (!parts.has(id)) throw new Error(`Power path part missing: ${id}`);
   const drive = createDrive(SCHEDULE, DURATION);
-  const explode = new Map(index.parts.map(part => [part.id, explodeVectors(part, assemblies)]));
-  const caseParts = new Map(index.parts.map(part => [part.id, caseVector(part)]).filter(([, v]) => v));
   const moving = index.parts.filter(part => part.role !== 'static').map(part => {
     const [kind, ...rest] = part.role.split(':');
     return { id: part.id, kind, key: rest.join(':'), pivot: [part.localMatrix[12], part.localMatrix[13], part.localMatrix[14]] };
   });
-  const cohortProgress = (b, cohort) => smooth((b - cohort.out) / cohort.beats) * (1 - smooth((b - cohort.back) / cohort.beats));
-  // Wave rank of each repeated part within its own set (same parent assembly).
-  const waveDelay = new Map(), sets = new Map();
-  for (const part of index.parts) if (/:(balls|keys)$/.test(part.group ?? '')) { const list = sets.get(part.parentId) ?? []; list.push(part); sets.set(part.parentId, list); }
-  for (const [parentId, list] of sets) {
-    const origin = assemblies.get(parentId).worldMatrix.slice(12, 15), reach = part => -part.worldCenter.reduce((sum, v, i) => sum + (v - origin[i]) * WAVE.corner[i], 0);
-    [...list].sort((a, b) => reach(a) - reach(b) || a.id.localeCompare(b.id)).forEach((part, rank, all) => waveDelay.set(part.id, all.length > 1 ? WAVE.span * rank / (all.length - 1) : 0));
-  }
-  const innerProgress = (b, id) => {
-    const delay = waveDelay.get(id) ?? 0, cohort = COHORTS.inner;
-    if (!waveDelay.has(id)) return cohortProgress(b, cohort);
-    return smooth((b - cohort.out - delay) / cohort.beats) * (1 - smooth((b - cohort.back - (WAVE.span - delay)) / WAVE.returnBeats));
-  };
-  const caseOpen = b => smooth((b - CASE_TIMING.open[0]) / (CASE_TIMING.open[1] - CASE_TIMING.open[0])) * (1 - smooth((b - CASE_TIMING.close[0]) / (CASE_TIMING.close[1] - CASE_TIMING.close[0])));
-
-  function stateAt(seconds) {
-    let time = normalizeTime(seconds), b = time * BPM / 60;
-    if (Math.abs(b - Math.round(b)) < 1e-10) { b = Math.round(b); time = beat(b); }
-    const chapterIndex = Math.max(0, CHAPTERS.findIndex(chapter => b >= chapter.firstBeat && b < chapter.lastBeat)), chapter = CHAPTERS[chapterIndex];
-    const progress = Object.fromEntries(Object.entries(COHORTS).map(([name, cohort]) => [name, cohortProgress(b, cohort)]));
-    progress.case = caseOpen(b);
-    // The case lifts only while opening; it returns by fading in at rest, so the
-    // closing and opening views share one envelope across the loop seam.
-    progress.caseLift = b < 30 ? progress.case : 0;
-    progress.focus = smooth((b - FOCUS.fadeIn[0]) / (FOCUS.fadeIn[1] - FOCUS.fadeIn[0])) * (1 - smooth((b - FOCUS.fadeOut[0]) / (FOCUS.fadeOut[1] - FOCUS.fadeOut[0])));
-    const offsetsWorld = {};
-    for (const part of index.parts) {
-      const vectors = explode.get(part.id), lift = caseParts.get(part.id);
-      let offset = [0, 0, 0];
-      for (const name of Object.keys(COHORTS)) offset = add(offset, scale(vectors[name], name === 'inner' ? innerProgress(b, part.id) : progress[name]));
-      if (lift) offset = add(offset, scale(lift, progress.caseLift));
-      offsetsWorld[part.id] = offset;
-    }
-    return { time, beat: b, chapter, chapterIndex, localTime: time - beat(chapter.firstBeat), progress, offsetsWorld, drive: drive.stateAt(time) };
-  }
 
   /** Absolute model-wrapper poses for every moving part (parent frame). */
   function workingPoses(state) {
@@ -229,26 +106,11 @@ export function createGearboxStory(index) {
     return poses;
   }
 
-  /** Accent the parts carrying torque, plus any named part being read. */
-  function appearanceCues(state, labels) {
-    const cues = labels.map(label => ({ id: label.id, weight: label.opacity }));
-    for (const { gear, weight } of state.drive.path) for (const id of powerPathIds(gear)) cues.push({ id, weight: .6 * weight });
-    return cues;
-  }
-  const focus = new Set(FOCUS.ids);
-  for (const id of focus) if (!parts.has(id)) throw new Error(`Focus part missing: ${id}`);
-  const presentationOpacity = (state, id) => {
-    if (caseParts.has(id)) return Math.max(0, Math.min(1, 1 - state.progress.case));
-    return focus.has(id) ? 1 : 1 - (1 - FOCUS.context) * state.progress.focus;
-  };
-
-  // Inside the packed gear cluster every nearby spot overlaps a neighbour, so
-  // dense chapters only keep names off each other's targets; the white text
-  // halo keeps them legible over line art. Open chapters use every solid.
-  const DENSE = new Set(['low', 'sync', 'over']);
-  const labelObstacleIds = state => DENSE.has(state.chapter.id) ? state.chapter.labels.map(([id]) => id)
-    : index.parts.filter(part => presentationOpacity(state, part.id) >= .5).map(part => part.id);
-  return { BPM, TOTAL_BEATS, DURATION, PLAN_REVISION, CHAPTERS, SCHEDULE, COHORTS, CASE_TIMING, FOCUS, WAVE, waveDelay, normalizeTime, stateAt, localDisplayOffsets,
-    workingPoses, appearanceCues, presentationOpacity, labelObstacleIds, drive, explode, caseParts, powerPathIds,
+  const powerCues = state => state.drive.path.flatMap(({ gear, weight }) => powerPathIds(gear).map(id => ({ id, weight: .6 * weight })));
+  return { SCHEDULE, drive, workingPoses, powerCues, powerPathIds, localDisplayOffsets,
+    stateAt: seconds => ({ drive: drive.stateAt(normalizeTime(seconds)) }),
     geometryRevision: index.geometryRevision, sleeveTravel: SLEEVE_TRAVEL, bearings: BEARINGS, synchros: SYNCHROS, axes: AXES };
 }
+
+/** Compatibility entry point used by the score and the separate cinematic clock. */
+export function createGearboxStory(index) { return createGearboxPresentation(index).timeline; }
