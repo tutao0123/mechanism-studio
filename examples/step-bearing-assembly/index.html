@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff"><meta name="description" content="Inspect a real open-source robot assembly: source STEP identities, repeated screws, bearings and linked tree selection.">
+<title>Inside the source assembly · Mechanism Studio</title>
+<link rel="stylesheet" href="/shared/cad/inspector.css">
+<script type="importmap">{"imports":{"three":"/vendor/three/build/three.module.js","three/addons/":"/vendor/three/examples/jsm/"}}</script>
+</head><body>
+<header class="cad-header"><div><p class="cad-eyebrow">Mechanism Studio / Source assembly inspection</p><h1>Inside the source assembly</h1><p id="source-summary" class="cad-muted">Original STEP placements. Distinct occurrences. One linked view.</p></div><nav aria-label="Example resources"><a href="./README.md">Example notes</a><a href="./source/provenance.json">Source record</a><a href="./source/LICENSE.txt">Source license</a></nav></header>
+<main class="cad-layout">
+<aside class="cad-tree-panel" aria-labelledby="tree-heading"><h2 id="tree-heading" class="cad-panel-title">Assembly tree</h2><label for="part-search">Find a source name, definition or ID</label><input id="part-search" type="search" placeholder="Try bearing or screw" autocomplete="off"><div id="assembly-tree" class="cad-tree"></div><p class="cad-muted">The hierarchy is retained from STEP. Instance numbers distinguish repeated definitions.</p></aside>
+<section class="cad-stage-panel" aria-label="3D assembly"><div class="cad-stage-top"><p id="assembly-status" role="status" aria-live="polite">Loading source assembly…</p><div class="cad-views" aria-label="Engineering views"><button type="button" data-view="overview">Iso</button><button type="button" data-view="front">Front</button><button type="button" data-view="top">Top</button></div></div><div id="viewport" class="cad-viewport" role="img" aria-label="Interactive 3D assembly. Use the assembly tree for keyboard selection."><div id="loading" class="cad-loading">Reading source identities and geometry…</div></div>
+<div class="cad-toolbar" role="group" aria-label="Observation controls"><button id="fit" type="button">Fit visible</button><button id="hide" type="button" disabled>Hide selection</button><button id="isolate" type="button" disabled>Isolate</button><button id="clear-isolation" type="button" disabled>Clear isolation</button><button id="reset" type="button">Reset view</button></div>
+<div class="cad-explode"><label for="explode">Separate for inspection</label><input id="explode" type="range" min="0" max="100" value="0" aria-label="Display separation"><p>Display offsets only. Source placements are unchanged; this is not a collision-checked disassembly path.</p></div></section>
+<aside class="cad-details-panel" aria-label="Selected occurrence"><div id="part-details"></div></aside>
+</main>
+<footer class="cad-footer"><p id="source-credit">Source attribution loading…</p><p>STEP establishes assembly identity and placement. This inspector does not infer mates, bearing internals, operating motion or exact dimensions from display meshes. Drag to orbit; scroll to zoom; right-drag to pan.</p></footer>
+<script type="module" src="./app.mjs"></script>
+</body></html>

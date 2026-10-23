@@ -138,8 +138,15 @@ independently recompute native STEP placements, execute B-rep measurement,
 prove geometric precision or validate licensing rights. A complete license
 record is evidence retained for a separate publication decision.
 
-No real STEP package is currently retained in this repository, so no included
-example exercises this path end to end; prepare one as described above.
+The [Open-source Leader Arm](../../examples/step-bearing-assembly/README.md)
+exercises this path with a real Apache-2.0 AP242 assembly. Its unchanged STEP
+is restored by `npm run fetch:sources`; the derived display package, provenance
+and license are retained in Git. Run
+`npm run audit:cad -- --example examples/step-bearing-assembly` to check its
+22 definitions, one root plus 99 parts and shared-definition placements.
+The specimen has native metre units and analytic geometry, with no missing or
+recovered display faces in the retained import. These results apply to its
+fixed source and importer, not all AP242 files.
 
 ## Integrate and maintain
 
@@ -147,6 +154,11 @@ Importing assets does not generate a complete webpage. Reuse
 [shared/cad](../../shared/cad/README.md) for source/observation state and
 [shared/viewer](../../shared/viewer/README.md) for rendering. A new example still
 needs a thin page adapter, labels, tree layout and a scoped preview route.
+`mountAssemblyInspector()` supplies the linked UI binding; the Leader Arm
+adapter and server are working references. The [Studio entry](../studio/README.md)
+opens it with `npm run studio -- preview step-bearing-assembly`, normally at
+`http://127.0.0.1:4194/`. Register a different source explicitly after integrating
+its page; the importer does not infer a preview route or animated export.
 Verify model/tree selection, repeated-instance switching, hidden children,
 isolation, explosion/reset and narrow layouts in the browser. Display explosion
 is not a collision-verified disassembly sequence.

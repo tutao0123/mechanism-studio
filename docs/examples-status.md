@@ -1,8 +1,7 @@
 # What is actually in the examples?
 
-Inventory updated: **2026-10-23**, for **v0.4.1-alpha.1 (public alpha)**. This inventory describes retained source files and
-implemented entry points, not every local development export. There are **eleven
-implemented experiences across ten models**, including the planetary set, gearbox, Allegro hand and Robotiq gripper. The English Showcase
+Inventory updated: **2026-10-23**, for the current **`main` branch** after the tagged **v0.4.1-alpha.1 public alpha**. This inventory describes retained source files and
+implemented entry points, not every local development export. Additions since that tag include the original robot joint, unified local generation/preview/export and an optional real STEP inspector. Original teaching models are the default starting point; source-based specimens remain available for inspecting existing devices. The English Showcase
 offers further cuts of the same engine, turbofan and quadruped models; those
 are not three more independently modeled assemblies.
 
@@ -11,10 +10,10 @@ are not three more independently modeled assemblies.
 Run commands from the repository root after `npm ci`. The root server and the
 specialized study servers use separate, read-only route allowlists.
 
-For a first run, build the planetary score with
-`node examples/planetary-gears/audio/build.mjs`, start
-`node examples/planetary-gears/serve.mjs`, and open
-[the 36-second study](http://127.0.0.1:4193/?clean=1). Included GLB previews and
+For a first run, rebuild the original assembly and score with
+`npm run studio -- generate robot-joint`, start
+`npm run studio -- preview robot-joint`, and open
+[the 36-second study](http://127.0.0.1:4198/). Included GLB previews and
 score synthesis need Node.js 20.10+ and a WebGL 2 browser. The full test suite
 also needs Python 3 and a first pinned source download; video encoding needs
 FFmpeg/FFprobe. These additional tools are not needed just to view the examples.
@@ -30,8 +29,10 @@ check. Current numerical tests do not replace a new export and visual/audio revi
 
 | Experience | Actual location / implementation | Open after starting the server | Current boundary |
 | --- | --- | --- | --- |
+| Original robot joint | `examples/robot-joint/`: local spec/builder, 129 occurrences, 44 definitions, five subassemblies plus root, authored motor/reducer/support geometry, original score and frame adapter | `npm run studio -- preview robot-joint` → [36 s study](http://127.0.0.1:4198/) | Original parametric teaching model; motor/gear/bearing close-ups and grouped chooser/model selection. Ideal 4:1 ratio and rolling; no electromagnetic, thermal, load or manufacturing verification |
 | Planetary reducer: More than gears | `examples/planetary-gears/`: original 24 / 24 / 72 involute model, 80 occurrences, 29 definitions, ideal gear/bearing adapter, nine-chapter executable plan and original score | `node examples/planetary-gears/audio/build.mjs`; `node examples/planetary-gears/serve.mjs` → [36 s study](http://127.0.0.1:4193/?clean=1) | Fixed-ring ideal 4:1 reduction; original 21 parts plus 59 enclosure/support parts. Plain planet bushings and two detailed shaft bearings with ideal ball/cage rolling; no contact/load solver, production CAD or service-procedure claim |
 | Five-speed gearbox | `examples/gearbox/`: original authored spec, exact-ratio kinematics, 124-part GLB in 15 nested assemblies, deterministic story/score, plans and tests | `node examples/gearbox/serve.mjs` → [40 s study](http://127.0.0.1:4183/?clean=1), [blueprint edition](http://127.0.0.1:4183/blueprint/?clean=1), [24 s cinematic edition](http://127.0.0.1:4183/cinematic/) | Original teaching model; ideal rigid tooth ratios and authored synchronizer timing; no load, friction, clutch or contact simulation |
+| Leader Arm STEP inspector, optional source route | `examples/step-bearing-assembly/`: pinned Apache-2.0 AP242, 22 definitions, 100 nodes (root + 99 parts), GLB, source/display/evidence manifests and reusable inspector | `npm run studio -- preview step-bearing-assembly` → [Inspect](http://127.0.0.1:4194/) | Actual flat source tree, six bearings and 43 repeated screws. No inferred joints, bearing internals, precise mesh measurement or collision-checked disassembly |
 | Allegro dexterous hand | `examples/allegro-hand/`: pinned MJCF/STL, source-body GLB, joint adapter, story and source-bound music | Build score below; `node examples/allegro-hand/serve.mjs` → [35.56 s hand](http://127.0.0.1:4185/?clean=1) | Sixteen hinges; motion stays in source limits, valid neutral pose differs from XML zero reference; no tendon/force model or fastener internals |
 | Robotiq 2F-85 gripper | `examples/robotiq-gripper/`: pinned source meshes, six-hinge linkage model, source connect constraints and story | Build score below; `node examples/robotiq-gripper/serve.mjs` → [35.56 s gripper](http://127.0.0.1:4186/?clean=1) | Analytic closed linkage on an authored free-space branch; no object-contact, force or hardware-control validation |
 | Unitree G1 humanoid | `examples/humanoid/`: retained complete 29-DoF model visual source, 30 source-body identities, GLB, deterministic story/score and tests | `node examples/humanoid/serve.mjs` → [35.56 s study](http://127.0.0.1:4182/?clean=1) | Static source-pose/link-level separation; no per-screw or actuator internals, native CAD or dynamics claim |
@@ -48,6 +49,21 @@ contents, not completeness or quality. Source licenses differ: read the
 [example guide](../examples/README.md) and [third-party notices](../THIRD_PARTY_NOTICES.md).
 
 ## Why some folders can look unfinished on GitHub
+
+The [unified Studio entry](../tools/studio/README.md) lists local generation recipes,
+preview pages and supported direct-frame export adapters. Original generation uses
+local authored code; it does not download a mechanical model. Calibration review starts a local browser
+job; completed frames and checked MP4s stay in ignored `output/studio/` folders.
+The STEP inspector is deliberately silent and preview-only. Its included
+display assets run without the native CAD toolchain; the original STEP can be
+restored through the digest-pinned source downloader for rebuilding and audits.
+
+The [robot-joint recipe](../examples/robot-joint/README.md) generates its motor,
+reducer, detailed bearings, flange and repeated fasteners locally. Its source,
+GLB and 36-second Atlas page are implemented, and a [36-second video has been published on X](https://x.com/tutao0123/status/2113647451538419915).
+The MP4 and raw export/review reports stay in ignored local output directories.
+Publication does not certify engineering correctness, and a later rebuild needs
+its own export and review; asset reports alone are not evidence of audiovisual acceptance.
 
 The new [planetary study](../examples/planetary-gears/README.md) includes its
 original builder, exported geometry, provenance, executable presentation and

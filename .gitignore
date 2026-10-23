@@ -42,6 +42,8 @@ EXAMPLE_ROBOT/source/**/*.[sS][tT][lL]
 examples/humanoid/source/**/*.[sS][tT][lL]
 examples/allegro-hand/source/**/*.[sS][tT][lL]
 examples/robotiq-gripper/source/**/*.[sS][tT][lL]
+# Licensed real STEP sample restored by the pinned upstream fetch manifest.
+examples/step-bearing-assembly/source/assembly.step
 # Code-synthesized study scores. `npm run build:audio` rebuilds each one and
 # checks it against the byte length and SHA-256 kept in its music-score.json.
 EXAMPLE_ROBOT/audio/robot-loop.wav
@@ -52,6 +54,7 @@ examples/gearbox/audio/gearbox-loop.wav
 examples/gearbox/cinematic/audio/gearbox-cinematic-loop.wav
 examples/humanoid/audio/humanoid-loop.wav
 examples/planetary-gears/audio/planetary-loop.wav
+examples/robot-joint/audio/joint-loop.wav
 examples/robotiq-gripper/audio/showcase-loop.wav
 # Retired WOLF examples may leave locally generated scores behind. Preserve
 # those local files without adding them back to a source release.

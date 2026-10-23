@@ -1,6 +1,6 @@
 # Input brief: text, images and CAD
 
-Read this when sources are mixed or ready geometry is absent. Establish evidence before assigning [modules](module-orchestration.md). The project has no automatic image-to-engineering-assembly service.
+Read this when sources are mixed or ready geometry is absent. For text/image demonstrations, use [original generation](original-generation.md) by default: the agent authors geometry from a design brief, without asking the user to obtain a model. Establish evidence before assigning [modules](module-orchestration.md). Supplied CAD or a request to reproduce a specific device selects the source-based route; the project has no automatic image-to-engineering-assembly service.
 
 | Input | Useful evidence | Remains unconfirmed |
 | --- | --- | --- |
@@ -28,6 +28,7 @@ Use `planning/brief.json` or equivalent notes when multiple modules need it. A s
 | `route`, `requestedModules` | Inspect, Explain or Showcase, and modules actually needed |
 | `inputs` | IDs, types, roles, evidence location, terms and permitted public use |
 | `modelBasis` | `native-cad`, `authored-teaching`, `image-reconstruction` or `mixed`; distinguish parts when mixed |
+| `geometryRoute` | `generate` for an original design; `provided` for supplied geometry; `import` for an explicitly requested external assembly. This is an authoring note, not a runtime API |
 | `facts` | Value/judgment, evidence location, `provided / observed / assumed / unknown` |
 | `unresolved` | Missing evidence, impact, reversible defaults or required engineering information |
 | `presentation` | Language, style, duration, viewport and sound overrides |
@@ -36,8 +37,8 @@ Use `planning/brief.json` or equivalent notes when multiple modules need it. A s
 
 ## Continue or request missing evidence
 
-For visual reconstruction, concepts and teaching models, choose reversible details and label them. Start with a reviewable rough model and part list. For exact fit, measurement, assembly verification or manufacturing, request missing scale, views or engineering data; rendering cannot supply those facts. Continue independent brief/visible-structure work.
+For concepts and teaching models, choose reversible dimensions, layout and connection assumptions, then build a reviewable original assembly and part list. An image can inform its appearance and arrangement without requiring a faithful reconstruction; record that choice as `authored-teaching`. Use `image-reconstruction` when the user actually requests reconstruction, retaining unknown hidden geometry. For exact fit, measurement, assembly verification or manufacturing, request missing scale, views or engineering data; rendering cannot supply those facts. Continue independent brief/visible-structure work.
 
-With no geometry, explosion may return candidate groups, camera a storyboard and appearance a visual direction at `concept` stage. Bind after actual geometry and identity checks. Use valid CAD directly rather than reconstructing a screenshot. Reuse geometry for viewpoint/material edits.
+With no geometry, explosion may return candidate groups, camera a storyboard and appearance a visual direction at `concept` stage. Continue into the original builder when a working demonstration is requested; a storyboard alone is not the completed result. Bind after actual geometry and identity checks. Use supplied valid CAD directly rather than reconstructing a screenshot. Reuse geometry for viewpoint/material edits.
 
 Example: a requested 12-second photo-based bearing-housing explosion uses 12 seconds; visible screw positions are observed, unknown shaft diameter stays unknown, and an illustrative diameter is separately assumed. Unseen balls, rings and rear screws are not source parts. Authored IDs are not STEP occurrences.

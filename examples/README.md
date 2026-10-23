@@ -1,24 +1,25 @@
 # Example guide
 
-Choose an example by the evidence it can demonstrate: a teaching model, a source-based robot study, or a short presentation. All commands below run from the Mechanism Studio repository root after `npm ci`.
+Start with an original procedural model, then choose its presentation. The agent can author a new assembly from a description or reference image; source-based robots and the STEP inspector remain available when existing device geometry is the task. All commands below run from the Mechanism Studio repository root after `npm ci`.
 
-This catalog accompanies **v0.4.1-alpha.1, a public alpha**. Start with the original planetary reducer, which needs no external model download:
+This catalog describes the current `main` branch, including additions after **v0.4.1-alpha.1**, the latest tagged public alpha. Start with the original robot joint, which needs no external model download:
 
 ```sh
-node examples/planetary-gears/audio/build.mjs
-node examples/planetary-gears/serve.mjs
+npm run studio -- generate robot-joint
+npm run studio -- preview robot-joint
 ```
 
-Open **http://127.0.0.1:4193/?clean=1** and click **Play with music**. Node.js 20.10+, npm and a WebGL 2 browser are sufficient for included visual examples and original score synthesis. The full test suite also requires Python 3; video encoding requires FFmpeg/FFprobe, and optional native geometry rebuilding uses the relevant example's documented tools.
+Open **http://127.0.0.1:4198/** and click **Play with music** for the 36-second English Atlas story. The locally authored motor, reducer, bearings, flange and repeated fasteners remain distinct parts; pause and select through the grouped chooser or model. Node.js 20.10+, npm and a WebGL 2 browser are sufficient for this original recipe and score. The full test suite also requires Python 3; video encoding requires FFmpeg/FFprobe, and optional native geometry rebuilding uses the relevant example's documented tools.
 
 **These are implemented examples, not empty plans.** The maintained lock lives
 in `prototype-3d/`, and both SO-ARM robot cuts live in `EXAMPLE_ROBOT/`; neither
-is a missing child of this directory. The eleven implemented experiences across ten models and exact
+is a missing child of this directory. The implemented experiences and exact
 public/local distinctions are listed in the [status audit](../docs/examples-status.md).
 `lock-comparison/` is an explicitly [historical artifact](lock-comparison/README.md).
 
 ## Visual entry points
 
+<a href="robot-joint/README.md"><img src="../docs/media/robot-joint-preview.png" alt="Original 129-part robot joint with motor, planetary reducer, bearings and fasteners separated" width="480"></a>
 <a href="gearbox/README.md"><img src="../docs/media/gearbox-readme.gif" alt="Original five-speed teaching gearbox separating and driving through its gears" width="480"></a>
 <a href="allegro-hand/README.md"><img src="../docs/media/allegro-hand-preview.png" alt="Allegro source finger chains separated around the palm" width="480"></a>
 <a href="robotiq-gripper/README.md"><img src="../docs/media/robotiq-gripper-preview.png" alt="Robotiq source four-bar link groups in an exploded view" width="480"></a>
@@ -28,6 +29,7 @@ public/local distinctions are listed in the [status audit](../docs/examples-stat
 <a href="turbofan/README.md"><img src="../docs/media/turbofan-preview.jpg" alt="Two-spool turbofan teaching model" width="480"></a>
 <a href="quadruped/README.md"><img src="../docs/media/quadruped-preview.jpg" alt="Original small quadruped teaching model" width="480"></a>
 
+[Original robot joint](robot-joint/README.md) ([36-second published video](https://x.com/tutao0123/status/2113647451538419915)) ·
 [Planetary gear set](planetary-gears/README.md) ·
 [Gearbox](gearbox/README.md) ·
 [G1 humanoid](humanoid/README.md) ·
@@ -43,10 +45,24 @@ these pages; use a local server below to load models and play music.
 
 ## Viewing routes
 
+Use `npm run studio -- list` for the registered recipes and pages, then
+`npm run studio -- preview <id>`. The command selects the existing read-only
+server and builds the selected original score. For the optional real STEP inspector use
+`npm run studio -- preview step-bearing-assembly` → **http://127.0.0.1:4194/**.
+Its unchanged Apache-2.0 source has 99 parts, six bearings and 43 repeated screws;
+the flat source hierarchy, definitions and placements remain intact.
+
+`npm run studio -- export robot-joint --port 4199` opens the browser-assisted export
+workbench. Run `studio list` to distinguish film adapters from preview-only
+entries. See the [unified entry guide](../tools/studio/README.md)
+for fixed formats, calibration, frame checks, outputs and remaining manual review.
+
 | Example | Server command | Local route | Included experience |
 | --- | --- | --- | --- |
+| [Original robot joint](robot-joint/README.md) | `npm run studio -- preview robot-joint` | `http://127.0.0.1:4198/` | 36-second English Atlas loop: 129 locally authored parts, motor/gear/bearing close-ups, grouped chooser ↔ model selection, reassembly and synthesized music |
 | Planetary reducer: More than gears | `node examples/planetary-gears/serve.mjs` | `http://127.0.0.1:4193/?clean=1` | 36-second original 80-part study: enclosure/transmission separation, ideal 4:1 gear motion, sun/planet close-up, 13-component bearing teardown, seated ball/cage motion and reassembly |
 | Five-speed gearbox | `node examples/gearbox/serve.mjs` | `http://127.0.0.1:4183/?clean=1`, blueprint edition `/blueprint/?clean=1`, 24-second cinematic edition `/cinematic/` | 40-second original teaching model: case off, explosion to synchronizer keys and bearing balls, power path through 1st–5th, synchronizer close-up, restoration. Spec labels and measured dimensions; the blueprint edition is the same study drawn white-on-blue |
+| [Leader Arm STEP inspector](step-bearing-assembly/README.md), optional | `npm run studio -- preview step-bearing-assembly` | `http://127.0.0.1:4194/` | Original assembly tree, occurrence selection in tree/model, repeated-instance navigation, hide/isolate/restore; silent Inspect mode |
 | Allegro dexterous hand | `node examples/allegro-hand/serve.mjs` | `http://127.0.0.1:4185/?clean=1` | 35.56-second articulated finger/ thumb study, source-link expansion, local view and restoration |
 | Robotiq 2F-85 gripper | `node examples/robotiq-gripper/serve.mjs` | `http://127.0.0.1:4186/?clean=1` | 35.56-second jaw motion, four-bar closure, link-level explosion and reassembly |
 | Unitree G1 humanoid | `node examples/humanoid/serve.mjs` | `http://127.0.0.1:4182/?clean=1` | 35.555556-second body-level explosion/reassembly, close reading views, original score and sparse CC0 effects |
@@ -58,7 +74,7 @@ these pages; use a local server below to load models and play music.
 | SO-ARM 102 assembly study | `node EXAMPLE_ROBOT/serve.mjs` | `http://127.0.0.1:4180/?clean=1` | 34.285714-second music-driven exploded view and restoration |
 | SO-ARM 102 kinetic cut | `node EXAMPLE_ROBOT/serve.mjs` | `http://127.0.0.1:4180/kinetic/?clean=1` | 25.714286-second source-backed joint motion and assembly edit |
 
-The root server handles the studio and original mechanisms; SO-ARM, humanoid, gearbox, Allegro, Robotiq and planetary studies use their own explicit read-only route allowlists, sharing one declared study runtime list (`shared/study/preview-server.mjs`) that `tests/preview-pages.test.mjs` checks against every served page. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
+The root server handles the gallery, lock, engine, turbofan and quadruped. Robot joint, STEP inspector, SO-ARM, humanoid, gearbox, Allegro, Robotiq and planetary studies use dedicated servers with explicit read-only route allowlists. The mechanical film studies share one declared runtime list (`shared/study/preview-server.mjs`) that `tests/preview-pages.test.mjs` checks against their served pages. `clean=1` removes surrounding presentation chrome where that page supports it. It does not change source credit or engineering claims. Do not infer other URL options from an authoring mode name.
 
 The Allegro and Robotiq pages require their dedicated servers; their root-gallery
 cards expose the launch commands instead of a root `/examples/` route. The
@@ -97,12 +113,16 @@ it is separate from launching a page or generating its score.
 
 - GLB display geometry, scene contracts, models, lessons, source/provenance records and implementation adapters.
 - Deterministic original-music synthesis source and score metadata for every study. No generated score WAV is in Git; `npm run build:audio` builds them all. The humanoid additionally retains five separately licensed Kenney CC0 effects and their provenance. Click **Play with music** to enable audio; the media clock controls motion, camera, labels and effects together.
-- Blender Python builders for the original teaching models. Local `.blend` exports remain on the author's machine because their binary metadata embeds machine-specific paths; rebuild them if needed.
+- Local Node.js builders for the original robot joint, planetary reducer and gearbox; Blender Python builders for the earlier teaching mechanisms. Local `.blend` exports remain on the author's machine because their binary metadata embeds machine-specific paths; rebuild them if needed.
 - Third-party model descriptions (MJCF, URDF/Xacro) with their licenses, notices and provenance. The upstream STL meshes are not in Git: `npm run fetch:sources` downloads each from its pinned upstream commit and verifies its SHA-256. These assets are separately licensed from the MIT runtime.
 
 Provider-generated Doubao MP3s are deliberately not in the public source release: the reviewed material did not establish a downstream MIT sublicensing grant. This is not a claim that using Doubao output is prohibited. Silent visuals, captions and the code-music studies remain usable. Lesson scripts/manifests and opt-in generation commands remain for users with their own service account and rights; see [voice setup](../shared/voice/README.md) and [licensing](../docs/licensing.md). Old example notes that describe delivered local narration or Blender files record the development workspace, not a promise that those ignored files are in a fresh clone.
 
 ## Teaching models
+
+`npm run studio -- generate robot-joint`, `npm run studio -- generate planetary-gears` and `npm run studio -- generate gearbox` rebuild the named original models, identities, provenance and music locally. They do not fetch an external model. For a different description, the agent authors a specification, builder and working adapter following [original generation](../.agents/skills/mechanism-studio/references/original-generation.md); the CLI is not a generic prompt-to-CAD API.
+
+The [robot joint](robot-joint/README.md) extends the original planetary geometry at 0.6 scale with a newly authored motor, sensing representations and output flange. It has 129 occurrences, 44 geometry definitions and five subassemblies beneath its root. Its 12 winding packs and 14 magnet blocks are separate geometry; the 4:1 reducer and two detailed bearings use ideal kinematics. Its builder, Atlas story and original score are MIT. Electromagnetics, torque, heat, contact loads and manufacturing tolerances are not solved.
 
 The [planetary set](planetary-gears/README.md) and [five-speed gearbox](gearbox/README.md)
 have original parameterized Node.js builders, included GLBs and ideal tooth-ratio
@@ -165,4 +185,4 @@ before treating a source-body explosion as a deeper engineering teardown.
 
 ## Adding another example
 
-Follow the [skill guide](../docs/skill-guide.md) and [module catalog](../docs/modules.md). Begin with an input brief, provenance and real part IDs. Reuse the explosion/camera/appearance handoffs and select Mating Close-up for an evidenced component relationship. Bind plans to existing runtime adapters, test seek/reset/loop invariants, and document unsupported claims. A text prompt or image supplies a design brief; it does not prove hidden fasteners, native CAD identity or assembly constraints.
+Follow the [skill guide](../docs/skill-guide.md) and [module catalog](../docs/modules.md). Begin with an input brief, then author actual component geometry, a part list, stable definition/occurrence IDs, assembly parents and explicit mate assumptions. Use source import when the user supplies CAD or asks for an existing assembly. Reuse the explosion/camera/appearance handoffs and select Mating Close-up for an evidenced component relationship. Bind plans to working runtime adapters, test seek/reset/loop invariants, and document unsupported claims. Original teaching meshes are not validated manufacturing CAD; authored hidden parts must not be presented as facts about a photographed or imported device.

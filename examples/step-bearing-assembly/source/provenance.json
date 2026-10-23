@@ -1,0 +1,30 @@
+{
+  "title": "Open-source Leader Arm — real STEP assembly",
+  "repository": "https://github.com/Matheshwaranpitchai/open-source-leader-arm",
+  "commit": "3cf2ee41e645afe1173dda79914ffe31e174d7a6",
+  "file": "cad_files/assembly.step",
+  "originalFilename": "assembly.step",
+  "url": "https://github.com/Matheshwaranpitchai/open-source-leader-arm/blob/3cf2ee41e645afe1173dda79914ffe31e174d7a6/cad_files/assembly.step",
+  "rawUrl": "https://raw.githubusercontent.com/Matheshwaranpitchai/open-source-leader-arm/3cf2ee41e645afe1173dda79914ffe31e174d7a6/cad_files/assembly.step",
+  "author": "Matheshwaran Pitchai and Open-source Leader Arm contributors",
+  "license": "Apache-2.0",
+  "licenseUrl": "https://github.com/Matheshwaranpitchai/open-source-leader-arm/blob/3cf2ee41e645afe1173dda79914ffe31e174d7a6/LICENSE",
+  "licenseLocal": "LICENSE.txt",
+  "licenseEvidence": "The upstream repository provides the Apache License 2.0 at its root and includes this CAD file without a separate license override. The retained license is byte-identical.",
+  "sourceSHA256": "0332d1eb757d3abc3b345d5eed51ba9c53a472ea5c05a08fcfc4bf8cc9f63648",
+  "sourceByteLength": 1577215,
+  "sourceLengthUnit": "m",
+  "sourceFormat": "STEP AP242 Edition 2, self-contained Onshape export",
+  "downloadedOn": "2026-10-23",
+  "modified": false,
+  "derivatives": "Original STEP is byte-identical to the pinned upstream file. The separately identified GLB, manifest and scene contract are imported display derivatives; triangulation and coordinate normalization do not add joints or engineering validation.",
+  "assemblyManualUrl": "https://github.com/Matheshwaranpitchai/open-source-leader-arm/blob/3cf2ee41e645afe1173dda79914ffe31e174d7a6/README.md#assembly-guide",
+  "sourceNotes": [
+    "This is a real hand-operated robot leader arm, not a synthetic shaft fixture.",
+    "The source includes named 608 bearing, bearing_housing, rotor and M3x10 PH Screw products. Exact definitions and occurrence counts are supplied by the import report.",
+    "The official build instructions identify the rotor as the rotating member fitted to a bearing housing; no separate shaft identity is invented.",
+    "The source assembly hierarchy and generic Part 1 labels are retained as provided. Functional labels do not substitute for exact PRODUCT_DEFINITION and NAUO identity.",
+    "The source is natively in metres. OCCT normalizes to millimetres; display export applies the millimetre-to-metre conversion once.",
+    "STEP placements are source data, not recovered mates, verified joints, or a collision-checked dismantling sequence."
+  ]
+}

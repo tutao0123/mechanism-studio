@@ -24,12 +24,31 @@ test('upstream payloads are pinned, ignored by Git and never tracked', () => {
   assert.deepEqual(tracked, [], 'no upstream CAD, mesh or manual is committed');
 });
 
-test('every pinned hash matches the example’s own provenance record', async () => {
+test('every pinned hash and byte length matches the example’s own provenance record', async () => {
   const recorded = new Map();
-  for (const dir of ['EXAMPLE_ROBOT', 'examples/humanoid', 'examples/allegro-hand', 'examples/robotiq-gripper']) {
-    for (const file of (await readJson(`${dir}/source/provenance.json`)).files) recorded.set(`${dir}/source/${file.localFile}`, file.sha256);
+  // Every declared source participates, including newly registered examples.
+  // Robot packages retain per-file records; the generic CAD contract pins one
+  // STEP through sourceSHA256/sourceByteLength and optional localFile.
+  const directories = new Set(SOURCES.map(entry => entry.path.split('/source/')[0]));
+  for (const dir of directories) {
+    const provenance = await readJson(`${dir}/source/provenance.json`);
+    let files = provenance.files;
+    if (!Array.isArray(files)) {
+      assert.match(provenance.sourceSHA256 ?? '', /^[0-9a-f]{64}$/, `${dir}: missing source provenance`);
+      files = [{ localFile: provenance.localFile ?? 'assembly.step', sha256: provenance.sourceSHA256, bytes: provenance.sourceByteLength }];
+    }
+    for (const file of files) {
+      const path = `${dir}/source/${file.localFile}`;
+      assert.equal(recorded.has(path), false, `${path}: duplicate provenance`);
+      recorded.set(path, file);
+    }
   }
-  for (const entry of SOURCES) assert.equal(entry.sha256, recorded.get(entry.path), entry.path);
+  for (const entry of SOURCES) {
+    const file = recorded.get(entry.path);
+    assert.ok(file, `${entry.path}: missing provenance record`);
+    assert.equal(entry.sha256, file.sha256, `${entry.path}: SHA-256`);
+    assert.equal(entry.bytes, file.bytes, `${entry.path}: byte length`);
+  }
 });
 
 test('a download is kept only when it matches its pinned hash', async () => {

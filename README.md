@@ -1,16 +1,24 @@
 # Mechanism Studio
 
-**Turn mechanical assemblies into inspectable, moving visual stories.**
+**Describe a mechanism. Build its parts. Show how it works.**
 
-Mechanism Studio is a project-local AI authoring skill and a working browser toolkit for mechanical explanation. It connects source-aware part identities, independent motion and display layers, exploded views, guided cameras, close annotations and synchronized sound. The default presentation is white surfaces with fine dark edges and restrained colour cues.
+Mechanism Studio is a project-local AI authoring skill and a working browser toolkit for mechanical explanation. Give an agent a description or reference image: it authors an original parametric teaching assembly, gives each part a stable identity, then coordinates motion, exploded views, cameras, close annotations and synchronized sound. The default presentation is white surfaces with fine dark edges and restrained colour cues. A model download is not a prerequisite; importing an existing CAD assembly remains an optional route.
 
-**Status: public alpha, v0.4.1-alpha.1.** This working research prototype is ready for experimentation and feedback; its APIs and authoring workflow may change. Eleven implemented experiences across ten models range from simplified teaching mechanisms to source-backed robot descriptions. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
+**Status: public alpha.** The latest tagged release is **v0.4.1-alpha.1**; this README describes the newer `main` branch, including the original robot joint and unified generation/preview/export entry. This working research prototype is ready for experimentation and feedback; its APIs and authoring workflow may change. Examples range from original teaching mechanisms to source-backed robot descriptions and an optional real STEP inspector. Engineering constraints, collision-free disassembly and general image-to-CAD reconstruction remain future work.
+
+**Generate → preview → export:** `npm run studio -- generate robot-joint` rebuilds an original assembly and its score from local code. `preview <id>` starts its local page; `export <id>` starts the calibration-and-export workbench where supported. Run `npm run studio -- list` for the available recipes and adapters. These are named implementations; for a new description, the agent writes the corresponding specification, builder and runtime adapter. [Commands and export limits](tools/studio/README.md).
+
+**Original design: [Inside a robot joint](examples/robot-joint/README.md).** A locally generated 129-part actuator with a motor, planetary reducer, two detailed shaft bearings, output flange, enclosure and repeated fasteners. Its 36-second English white-line loop moves from the whole assembly into motor, gear-pair and bearing close-ups before full reassembly, with original code music. A grouped part chooser links to model clicks. The motor's 12 winding packs and 14 magnets are authored geometry; ideal 4:1 reduction and bearing rolling show mechanical relationships without claiming manufacturing CAD or dynamics validation.
+
+![Original robot joint with its motor, reducer, supports, enclosure and repeated fasteners separated in the English Atlas film](docs/media/robot-joint-preview.png)
+
+*At 11.8 seconds in the 36-second film. [Watch the published video](https://x.com/tutao0123/status/2113647451538419915) or [generate and run the joint](examples/robot-joint/README.md). Original geometry, presentation and code-generated score: MIT. The MP4 is a generated delivery, not a tracked repository asset.*
 
 **New: [More than gears](examples/planetary-gears/README.md).** An original 80-part planetary reducer with 24 / 24 / 72 teeth, a fixed ring and ideal 4:1 reduction. Its 36-second Atlas loop opens the enclosure, separates the transmission, follows one working gear pair, takes apart a 13-component shaft bearing, then seats its races and demonstrates coupled ball/cage motion before reassembly. The original code-generated music is retained. The model and presentation are reproducible from local source; bearing motion is prescribed ideal rolling, not a contact or load simulation.
 
 ![The original eighty-part planetary reducer during its Atlas exploded-view sequence](docs/media/planetary-gears-preview.jpg)
 
-*Read the [Alpha release notes](docs/releases/v0.4.1-alpha.1.md) for the included workflow, requirements and known limits.*
+*Read the [Alpha release notes](docs/releases/v0.4.1-alpha.1.md) for the tagged release's workflow, requirements and known limits. Newer `main` additions are described here and in the [example guide](examples/README.md).*
 
 **New robot studies:** [Allegro dexterous hand](examples/allegro-hand/README.md)
 and [Robotiq 2F-85 gripper](examples/robotiq-gripper/README.md). Each has a
@@ -46,26 +54,35 @@ covers their compatibility with the shared study server after the latest upstrea
 
 ## Try it locally
 
-Start with the original planetary reducer. Viewing and generating its music require **Node.js 20.10+**, npm and a browser supporting WebGL 2.
+Start with the original robot joint. Generating its geometry and music requires **Node.js 20.10+** and npm; viewing also needs a browser supporting WebGL 2.
 
 ```sh
 git clone https://github.com/tutao0123/mechanism-studio.git
 cd mechanism-studio
 npm ci
-node examples/planetary-gears/audio/build.mjs
-node examples/planetary-gears/serve.mjs
+npm run studio -- generate robot-joint
+npm run studio -- preview robot-joint
 ```
 
-Open **http://127.0.0.1:4193/?clean=1** and click **Play with music** for the 36-second loop. It includes the 80-part explosion, gear-pair and bearing close-ups, and reassembly. This first example needs no Python, Blender, CAD download or speech account.
+Open **http://127.0.0.1:4198/** and click **Play with music** for the 36-second loop. It includes the 129-part authored assembly, motor, gear-pair and bearing close-ups, and reassembly. Pause and use the grouped part chooser or click the model to inspect occurrences. This first example needs no Python, Blender, CAD download or speech account.
 
-To browse all examples, stop that server or open another terminal in the repository:
+To browse the gallery or optionally inspect the retained STEP sample, use another terminal in the repository:
 
 ```sh
-npm run build:audio   # once: renders every original study score and checks its recorded hash
-npm run preview
+npm run studio -- preview step-bearing-assembly  # http://127.0.0.1:4194/
+npm run studio -- preview                        # gallery, http://127.0.0.1:4179/
+npm run studio -- list                           # all IDs and export support
 ```
 
-The gallery opens at **http://127.0.0.1:4179/**. Its cards give the dedicated server commands where needed. The included viewing assets run locally with no Blender installation, MCP connection or speech credentials. Dependencies are served from the local installation. Upstream robot mesh files are not stored in Git: `npm run fetch:sources` downloads each from its pinned upstream commit and checks its SHA-256. Only tests and model rebuilds need them. Study music is not stored in Git: `npm run build:audio` synthesizes all of it locally, and without it every study plays silently. The per-study score commands below rebuild a single score.
+The gallery opens at **http://127.0.0.1:4179/**. Its cards give the dedicated server commands where needed. The original generation recipes use local source code; included viewing assets run without Blender, an MCP connection or speech credentials. Upstream robot meshes and the optional STEP source are not stored in Git: rebuilding/auditing those source-based examples, or running the complete test suite, uses `npm run fetch:sources` to retrieve digest-pinned inputs. That download is separate from original model generation. The unified preview command builds and verifies the selected original score automatically. Study WAVs are not stored in Git; `npm run build:audio` synthesizes every original score if desired. The legacy per-study commands below remain supported.
+
+To generate a checked 36-second MP4, with FFmpeg and FFprobe on PATH:
+
+```sh
+npm run studio -- export robot-joint --port 4199
+```
+
+Open the printed workbench URL, inspect its two calibration images, then choose **Generate checked MP4**. It composes frames at exact timestamps, encodes the original score and checks both source and decoded frames. Outputs and reports stay under `output/studio/`; it does not publish anything. This is browser-assisted export. `studio list` identifies exportable entries; the STEP inspector remains preview-only. Continuous playback, phone readability and listening still require review.
 
 | Task | Requirements beyond the checkout |
 | --- | --- |
@@ -140,8 +157,10 @@ also documents geometry rebuilding, component identities and ideal-motion limits
 
 | Example | What to explore | Scope |
 | --- | --- | --- |
+| [Original robot joint](examples/robot-joint/README.md) | Motor, reducer, bearing and flange structure; 129-part explosion, three local views, grouped part selection and reassembly; 36 seconds | Original local recipe; 44 definitions, root plus five subassemblies; ideal 4:1 gearing/rolling, no electromagnetic or load solver |
 | [Planetary reducer](examples/planetary-gears/README.md) | 80-part enclosure/transmission explosion, working gear-pair close-up, 13-part bearing teardown and seated rolling detail, complete reassembly; 36 seconds | Original 24 / 24 / 72 teaching model; ideal 4:1 reduction and shaft-coupled bearing kinematics; plain planet bushings, no contact/load solver |
 | [Five-speed gearbox](examples/gearbox/README.md) | Case, three shafts, 13 gears and three synchronizers; drive through 1st–5th with the active power path highlighted and a synchronizer close-up; 40 seconds | Original teaching model, 124 parts / 15 assemblies; exact tooth ratios, no load, friction or clutch simulation |
+| [Leader Arm STEP inspector](examples/step-bearing-assembly/README.md), optional import example | Source assembly tree, tree/model linked selection, 43 repeated screws, six bearing stations, hide/isolate/restore | Real AP242 source, Apache-2.0; 22 definitions / 99 part occurrences, exact source identity and placement; no inferred joints or bearing internals |
 | [Allegro dexterous hand](examples/allegro-hand/README.md) | Finger curl, thumb opposition, source finger-chain separation and restoration; 35.56 seconds | Sixteen declared hinges; valid neutral pose and source limits, no tendon/contact simulation or invented internal parts |
 | [Robotiq 2F-85 gripper](examples/robotiq-gripper/README.md) | Coordinated jaws, local four-bar linkage, exploded links and reassembly; 35.56 seconds | Analytic closure of the pinned source linkage; authored free-space path, no object-contact or force solution |
 | [Unitree G1 humanoid](examples/humanoid/README.md) | Full-body expansion, close shoulder/wrist and knee/ankle views, restoration, music and action cues; 35.56 seconds | 30 MJCF body identities, 35 source visual occurrences, 29 retained joint declarations; static source pose, no per-screw internals |
@@ -159,12 +178,15 @@ also documents geometry rebuilding, component identities and ideal-motion limits
 Open this repository as the working project. The entry point is [.agents/skills/mechanism-studio/SKILL.md](.agents/skills/mechanism-studio/SKILL.md). A compatible agent can discover it locally; otherwise ask the agent to read that file explicitly. No global skill installation is required.
 
 ```text
-Use $mechanism-studio to make a 35-second English assembly showcase
-from this robot source. Include explosion and reassembly, close part labels,
-white line art and code-generated music. Keep all work in this project.
+Use $mechanism-studio to design an original small robot joint actuator.
+Generate its motor, reducer, bearings, output flange, case and fasteners
+locally, with explicit design assumptions and separately selectable parts.
+Make a 36-second English showcase with explosion and reassembly,
+close part labels, white line art and code-generated music.
+Keep all work in this project.
 ```
 
-There is **one discoverable skill** coordinating four specialist authoring modules. They share real part IDs, a geometry revision, units, coordinate frames and one timeline:
+There is **one discoverable skill**. Its [original generation stage](.agents/skills/mechanism-studio/references/original-generation.md) prepares actual geometry, a part list and assembly identities before coordinating four specialist authoring modules. They share real part IDs, a geometry revision, units, coordinate frames and one timeline:
 
 | Module | Responsibility | Main output |
 | --- | --- | --- |
@@ -173,7 +195,7 @@ There is **one discoverable skill** coordinating four specialist authoring modul
 | [Materials and lighting](.agents/skills/mechanism-studio/references/modules/materials-lighting.md) | Neutral line art, readable surfaces, restrained colour cues and owned appearance layers | An appearance plan with reversible source-ID bindings |
 | [Mating close-up](.agents/skills/mechanism-studio/references/modules/mating-closeup.md) | Source-bound component relationships, local phase highlights and spin/orbit direction | A close-up plan with evidence, cue meaning and camera/appearance handoffs |
 
-These are documented modules within the main skill, rather than separately installed autonomous skills. The [executable presentation plan](.agents/skills/mechanism-studio/references/executable-presentation.md) now runs a defined subset: display offsets, fixed-envelope orthographic shots, near-part labels and accents/opacity on one clock. Gearbox and Robotiq expose reusable `presentation.mjs` adapters. The broader authoring handoffs remain guidance; mechanics, cinematic paths and specialized effects keep their explicit adapters.
+These are documented modules within the main skill, rather than separately installed autonomous skills. The [executable presentation plan](.agents/skills/mechanism-studio/references/executable-presentation.md) now runs a defined subset: display offsets, fixed-envelope orthographic shots, near-part labels and accents/opacity on one clock. Robot joint, planetary reducer, gearbox and Robotiq expose `presentation.mjs` adapters. The broader authoring handoffs remain guidance; mechanics, cinematic paths and specialized effects keep their explicit adapters.
 
 See the **[skill user guide](docs/skill-guide.md)** for invocation, the full workflow and practical prompts, and the **[module catalog](docs/modules.md)** for inputs, outputs, dependencies, invariants and limits. Supporting references cover text/image/CAD intake, engineering evidence, process effects, captions, audio and delivery.
 
@@ -183,7 +205,7 @@ See the **[skill user guide](docs/skill-guide.md)** for invocation, the full wor
 - **Explain:** a mechanism model, explicit simplifications, controls and a detailed lesson.
 - **Showcase:** a short public presentation, normally 30–40 seconds, with independent action timing and readable holds. The 25.7-second robot cut is an explicit shorter edit.
 
-These are workflow choices, not universal URL parameters. Text can define a teaching design; an image can supply visible observations and design cues. Neither establishes hidden CAD structure. Native CAD identities and joints require actual source evidence.
+These are workflow choices, not universal URL parameters. Text/image demonstrations default to an original authored design, with dimensions and connections recorded as teaching assumptions. An image supplies visible observations and design cues; it does not establish hidden CAD structure. Use imported source identity when the user supplies CAD or asks to reproduce a particular existing assembly.
 
 For detailed teardown requests, the [assembly-depth contract](.agents/skills/mechanism-studio/references/assembly-depth.md)
 checks requested component depth against the actual source. The G1 source can
@@ -206,13 +228,13 @@ EXAMPLE_ROBOT/                   Source-based robot studies and kinetic adapter
 examples/                       Teaching mechanisms and source-based robot studies
 prototype-3d/                    Original 3D lock and compatibility entry points
 showcase/                        Retained English visual/narration tour adapters
-tools/                          CAD import, video encoding and restricted Blender MCP bridge
+tools/                          Unified Studio entry, CAD import, video encoding and restricted Blender MCP bridge
 docs/                           Architecture, module guide, provenance and roadmap
 ```
 
 Mechanism adapters own working poses and readouts. The viewer applies observation changes on a separate display layer, preserving source identities and rest transforms. Models, cameras, captions and music use one explicit time arrangement. Same-scene part names accumulate near settled parts, use short leaders and fade out together on a scene change.
 
-Original teaching assets include Blender Python builders and GLB exports. Local `.blend` exports are excluded because they embed machine-specific paths; regenerate them with the builders when needed. Third-party examples retain their source records and per-asset notices. The optional Blender MCP bridge has only four lock-specific operations; it is not a general CAD backend and is not connected automatically. Details: [architecture](docs/architecture.md), [module APIs](docs/modules.md), [CAD tools](tools/cad/README.md).
+Original teaching assets include parameterized Node.js builders for the robot joint, planetary reducer and gearbox, plus Blender Python builders for the earlier mechanisms. GLB display geometry is included. Local `.blend` exports are excluded because they embed machine-specific paths; regenerate them with the builders when needed. Third-party examples retain their source records and per-asset notices. The optional Blender MCP bridge has only four lock-specific operations; it is not a general CAD backend and is not connected automatically. Details: [architecture](docs/architecture.md), [module APIs](docs/modules.md), [CAD tools](tools/cad/README.md).
 
 ## Verify and rebuild
 
@@ -231,12 +253,13 @@ Additional commands:
 # Requires locally regenerated narration and FFmpeg/FFprobe; no service call.
 npm run verify:audio
 
-# Download the pinned upstream robot meshes (npm test does this first).
+# Download the pinned upstream robot meshes and optional STEP source (npm test does this first).
 npm run fetch:sources
 
 # Import and audit a STEP package you prepared in examples/<name>/
 # (source/assembly.step and source/provenance.json). Importing requires the
-# documented project-local OCCT runtime; no real STEP example is included.
+# documented project-local OCCT runtime. For the included real STEP specimen,
+# follow examples/step-bearing-assembly/README.md.
 npm run import:cad -- --example examples/<name>
 npm run audit:cad -- --example examples/<name>
 
@@ -247,6 +270,7 @@ npm run check:delivery -- --manifest examples/allegro-hand/delivery.json
 node tools/study/check-presentation.mjs --example gearbox --output output/presentation-checks/gearbox.json
 node tools/study/check-presentation.mjs --example robotiq-gripper --output output/presentation-checks/robotiq-gripper.json
 node tools/study/check-presentation.mjs --example planetary-gears --output output/presentation-checks/planetary-gears.json
+node tools/study/check-presentation.mjs --example robot-joint --output output/presentation-checks/robot-joint.json
 ```
 
 The presentation reports check the supported runtime numerically and leave browser/video review explicitly pending. Start another study from [the reusable example template](templates/study/README.md); a plan still needs actual geometry, identity, bounds and any mechanism adapter.
@@ -265,7 +289,7 @@ Next milestones are source-bound B-rep measurement with known-answer fixtures; e
 
 ## License, sources and contributions
 
-**Original Mechanism Studio code, skill instructions and documentation are MIT-licensed**; see [LICENSE](LICENSE). Third-party code and model assets retain their own licenses. Allegro and Robotiq model data and derived visuals retain their model-specific BSD-2-Clause notices; Unitree G1 retains BSD-3-Clause and Kenney effects retain CC0. SO-ARM 102 is CC BY 4.0. No GPL model is included. The repository's MIT license does not replace those terms.
+**Original Mechanism Studio code, skill instructions and documentation are MIT-licensed**; see [LICENSE](LICENSE). Third-party code and model assets retain their own licenses. Allegro and Robotiq model data and derived visuals retain their model-specific BSD-2-Clause notices; Unitree G1 retains BSD-3-Clause and Kenney effects retain CC0. SO-ARM 102 is CC BY 4.0; the Leader Arm STEP specimen and its derived display assets retain Apache-2.0. No GPL model is included. The repository's MIT license does not replace those terms.
 
 Read [licensing and the file-scope map](docs/licensing.md) and [third-party notices](THIRD_PARTY_NOTICES.md) before redistributing example assets or recordings. The project began with workflow ideas adapted from Anatomy; that history and the retained MIT notice are recorded in [origins](docs/origins.md). Upstream model authors are credited separately from Mechanism Studio's implementation.
 

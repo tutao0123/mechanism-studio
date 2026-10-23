@@ -1,0 +1,811 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Joint / Connected Motion",
+  "edition": "robot-joint-quiet-motion-v1",
+  "authorship": "Original Mechanism Studio composition and editorial cues. Shared MIT code synthesizes every sample; no external samples, recordings or narration.",
+  "originalScoreLicense": "MIT",
+  "narration": false,
+  "geometryRevision": "robot-joint-24-24-72-v1-e94ee1bb50c7",
+  "storyRevision": "robot-joint-atlas-36s-1",
+  "bpm": 100,
+  "feltBpm": 50,
+  "totalBeats": 60,
+  "bars": 15,
+  "meter": [
+    4,
+    4
+  ],
+  "sampleRate": 44100,
+  "channels": 2,
+  "bitsPerSample": 16,
+  "frames": 1587600,
+  "durationSeconds": 36,
+  "deterministicSeed": 1380600881,
+  "synthesis": {
+    "module": "tools/audio/study-score.mjs",
+    "algorithm": "analytic oscillator voices, seeded filtered noise and circular stereo reflections"
+  },
+  "musicalFeel": "Gentle sustained chords, sparse rounded keys and a restrained half-time bass pulse. Gear and bearing reading windows have fewer notes; the motif returns with reassembly. No percussion bed.",
+  "timing": "One seekable PCM loop; seconds = beat * 60 / 100. Editorial cues bind final authored actions and actual part IDs.",
+  "mix": {
+    "samplePeakTargetDbfs": -10,
+    "percussion": false,
+    "readingWindowsBeats": {
+      "motor": [
+        23,
+        28
+      ],
+      "gear": [
+        33,
+        36
+      ],
+      "bearing": [
+        41,
+        44
+      ]
+    },
+    "effects": "Sparse quiet synthesized swishes and soft seating accents; these are editorial signals, not measured contact, bearing or gear sounds."
+  },
+  "harmony": [
+    {
+      "firstBeat": 0,
+      "lastBeat": 12,
+      "symbol": "Dmaj9",
+      "bass": 38,
+      "notes": [
+        50,
+        57,
+        61,
+        64
+      ]
+    },
+    {
+      "firstBeat": 12,
+      "lastBeat": 24,
+      "symbol": "Bm11",
+      "bass": 35,
+      "notes": [
+        47,
+        54,
+        57,
+        64
+      ]
+    },
+    {
+      "firstBeat": 24,
+      "lastBeat": 36,
+      "symbol": "Gmaj9",
+      "bass": 31,
+      "notes": [
+        43,
+        54,
+        57,
+        62
+      ]
+    },
+    {
+      "firstBeat": 36,
+      "lastBeat": 48,
+      "symbol": "Aadd9",
+      "bass": 33,
+      "notes": [
+        45,
+        52,
+        57,
+        59
+      ]
+    },
+    {
+      "firstBeat": 48,
+      "lastBeat": 60,
+      "symbol": "Dmaj9",
+      "bass": 38,
+      "notes": [
+        50,
+        57,
+        61,
+        64
+      ]
+    }
+  ],
+  "actionCues": [
+    {
+      "id": "release",
+      "kind": "release",
+      "beat": 6.6,
+      "partIds": [
+        "rj:motor-endcap"
+      ],
+      "level": 0.35,
+      "durationBeats": 1.5,
+      "seconds": 3.96,
+      "durationSeconds": 0.9,
+      "geometryRevision": "robot-joint-24-24-72-v1-e94ee1bb50c7"
+    },
+    {
+      "id": "motor-lift",
+      "kind": "motion",
+      "beat": 11.5,
+      "partIds": [
+        "rj:motor-rotor",
+        "rj:motor-stator"
+      ],
+      "level": 0.35,
+      "durationBeats": 2,
+      "seconds": 6.9,
+      "durationSeconds": 1.2,
+      "geometryRevision": "robot-joint-24-24-72-v1-e94ee1bb50c7"
+    },
+    {
+      "id": "drive",
+      "kind": "detail",
+      "beat": 29,
+      "partIds": [
+        "rj:motor-rotor"
+      ],
+      "level": 0.25,
+      "durationBeats": 1,
+      "seconds": 17.4,
+      "durationSeconds": 0.6,
+      "geometryRevision": "robot-joint-24-24-72-v1-e94ee1bb50c7"
+    },
+    {
+      "id": "bearing",
+      "kind": "detail",
+      "beat": 45,
+      "partIds": [
+        "rj:support-bearing-front-cage"
+      ],
+      "level": 0.2,
+      "durationBeats": 1,
+      "seconds": 27,
+      "durationSeconds": 0.6,
+      "geometryRevision": "robot-joint-24-24-72-v1-e94ee1bb50c7"
+    },
+    {
+      "id": "seat",
+      "kind": "seat",
+      "beat": 55,
+      "partIds": [
+        "rj:sun",
+        "rj:ring",
+        "rj:planet-1",
+        "rj:planet-2",
+        "rj:planet-3",
+        "rj:carrier-rear",
+        "rj:carrier-front",
+        "rj:pin-1",
+        "rj:pin-2",
+        "rj:pin-3",
+        "rj:bearing-1",
+        "rj:bearing-2",
+        "rj:bearing-3",
+        "rj:washer-1",
+        "rj:washer-2",
+        "rj:washer-3",
+        "rj:screw-1",
+        "rj:screw-2",
+        "rj:screw-3",
+        "rj:input-shaft",
+        "rj:output-hub",
+        "rj:housing",
+        "rj:endplate-front",
+        "rj:gasket-front",
+        "rj:housing-bolt-front-1",
+        "rj:housing-bolt-front-2",
+        "rj:housing-bolt-front-3",
+        "rj:housing-bolt-front-4",
+        "rj:housing-bolt-front-5",
+        "rj:housing-bolt-front-6",
+        "rj:housing-washer-front-1",
+        "rj:housing-washer-front-2",
+        "rj:housing-washer-front-3",
+        "rj:housing-washer-front-4",
+        "rj:housing-washer-front-5",
+        "rj:housing-washer-front-6",
+        "rj:shaft-seal-front",
+        "rj:support-bearing-front-inner",
+        "rj:support-bearing-front-outer",
+        "rj:support-bearing-front-cage",
+        "rj:support-bearing-front-ball-1",
+        "rj:support-bearing-front-ball-2",
+        "rj:support-bearing-front-ball-3",
+        "rj:support-bearing-front-ball-4",
+        "rj:support-bearing-front-ball-5",
+        "rj:support-bearing-front-ball-6",
+        "rj:support-bearing-front-ball-7",
+        "rj:support-bearing-front-ball-8",
+        "rj:support-bearing-front-ball-9",
+        "rj:support-bearing-front-ball-10",
+        "rj:bearing-clip-front",
+        "rj:endplate-rear",
+        "rj:gasket-rear",
+        "rj:housing-bolt-rear-1",
+        "rj:housing-bolt-rear-2",
+        "rj:housing-bolt-rear-3",
+        "rj:housing-bolt-rear-4",
+        "rj:housing-bolt-rear-5",
+        "rj:housing-bolt-rear-6",
+        "rj:housing-washer-rear-1",
+        "rj:housing-washer-rear-2",
+        "rj:housing-washer-rear-3",
+        "rj:housing-washer-rear-4",
+        "rj:housing-washer-rear-5",
+        "rj:housing-washer-rear-6",
+        "rj:shaft-seal-rear",
+        "rj:support-bearing-rear-inner",
+        "rj:support-bearing-rear-outer",
+        "rj:support-bearing-rear-cage",
+        "rj:support-bearing-rear-ball-1",
+        "rj:support-bearing-rear-ball-2",
+        "rj:support-bearing-rear-ball-3",
+        "rj:support-bearing-rear-ball-4",
+        "rj:support-bearing-rear-ball-5",
+        "rj:support-bearing-rear-ball-6",
+        "rj:support-bearing-rear-ball-7",
+        "rj:support-bearing-rear-ball-8",
+        "rj:support-bearing-rear-ball-9",
+        "rj:support-bearing-rear-ball-10",
+        "rj:bearing-clip-rear",
+        "rj:output-flange",
+        "rj:motor-adapter",
+        "rj:motor-shaft",
+        "rj:motor-rotor",
+        "rj:motor-stator",
+        "rj:motor-magnet-1",
+        "rj:motor-magnet-2",
+        "rj:motor-magnet-3",
+        "rj:motor-magnet-4",
+        "rj:motor-magnet-5",
+        "rj:motor-magnet-6",
+        "rj:motor-magnet-7",
+        "rj:motor-magnet-8",
+        "rj:motor-magnet-9",
+        "rj:motor-magnet-10",
+        "rj:motor-magnet-11",
+        "rj:motor-magnet-12",
+        "rj:motor-magnet-13",
+        "rj:motor-magnet-14",
+        "rj:motor-coil-1",
+        "rj:motor-coil-2",
+        "rj:motor-coil-3",
+        "rj:motor-coil-4",
+        "rj:motor-coil-5",
+        "rj:motor-coil-6",
+        "rj:motor-coil-7",
+        "rj:motor-coil-8",
+        "rj:motor-coil-9",
+        "rj:motor-coil-10",
+        "rj:motor-coil-11",
+        "rj:motor-coil-12",
+        "rj:motor-housing",
+        "rj:motor-endcap",
+        "rj:motor-tail-bushing",
+        "rj:motor-bolt-1",
+        "rj:motor-bolt-2",
+        "rj:motor-bolt-3",
+        "rj:motor-bolt-4",
+        "rj:motor-bolt-5",
+        "rj:motor-bolt-6",
+        "rj:motor-washer-1",
+        "rj:motor-washer-2",
+        "rj:motor-washer-3",
+        "rj:motor-washer-4",
+        "rj:motor-washer-5",
+        "rj:motor-washer-6",
+        "rj:encoder-disc",
+        "rj:encoder-board",
+        "rj:encoder-sensor"
+      ],
+      "level": 0.35,
+      "durationBeats": 0.5,
+      "seconds": 33,
+      "durationSeconds": 0.3,
+      "geometryRevision": "robot-joint-24-24-72-v1-e94ee1bb50c7"
+    }
+  ],
+  "events": [
+    {
+      "voice": "pad",
+      "beat": -1,
+      "beats": 14,
+      "gain": 0.017,
+      "midi": 50,
+      "pan": -0.48,
+      "seed": 1648384823
+    },
+    {
+      "voice": "pad",
+      "beat": -1,
+      "beats": 14,
+      "gain": 0.017,
+      "midi": 57,
+      "pan": -0.16,
+      "seed": 1308064548
+    },
+    {
+      "voice": "pad",
+      "beat": -1,
+      "beats": 14,
+      "gain": 0.017,
+      "midi": 61,
+      "pan": 0.16,
+      "seed": 4041664461
+    },
+    {
+      "voice": "pad",
+      "beat": -1,
+      "beats": 14,
+      "gain": 0.017,
+      "midi": 64,
+      "pan": 0.48,
+      "seed": 2952096130
+    },
+    {
+      "voice": "bass",
+      "beat": 0.1,
+      "beats": 4.5,
+      "gain": 0.049,
+      "midi": 38,
+      "pan": 0,
+      "seed": 1516254432
+    },
+    {
+      "voice": "felt",
+      "beat": 1,
+      "beats": 4.6,
+      "gain": 0.046,
+      "midi": 69,
+      "pan": -0.18,
+      "seed": 1623659252
+    },
+    {
+      "voice": "felt",
+      "beat": 5.5,
+      "beats": 4.2,
+      "gain": 0.032,
+      "midi": 73,
+      "pan": 0.18,
+      "seed": 3517162680
+    },
+    {
+      "voice": "bass",
+      "beat": 6,
+      "beats": 3.8,
+      "gain": 0.024,
+      "midi": 50,
+      "pan": 0.03,
+      "seed": 3279898974
+    },
+    {
+      "voice": "air",
+      "beat": 6.6,
+      "beats": 1.5,
+      "gain": 0.0119,
+      "midi": 60,
+      "pan": 0,
+      "seed": 1946881506,
+      "role": "editorial-sfx",
+      "cueId": "release"
+    },
+    {
+      "voice": "felt",
+      "beat": 9,
+      "beats": 3.8,
+      "gain": 0.024,
+      "midi": 76,
+      "pan": -0.08,
+      "seed": 61485666
+    },
+    {
+      "voice": "pad",
+      "beat": 11,
+      "beats": 14,
+      "gain": 0.017,
+      "midi": 47,
+      "pan": -0.48,
+      "seed": 4180427441
+    },
+    {
+      "voice": "pad",
+      "beat": 11,
+      "beats": 14,
+      "gain": 0.017,
+      "midi": 54,
+      "pan": -0.16,
+      "seed": 1580276620
+    },
+    {
+      "voice": "pad",
+      "beat": 11,
+      "beats": 14,
+      "gain": 0.017,
+      "midi": 57,
+      "pan": 0.16,
+      "seed": 3579052204
+    },
+    {
+      "voice": "pad",
+      "beat": 11,
+      "beats": 14,
+      "gain": 0.017,
+      "midi": 64,
+      "pan": 0.48,
+      "seed": 4252298124
+    },
+    {
+      "voice": "air",
+      "beat": 11.5,
+      "beats": 2,
+      "gain": 0.0119,
+      "midi": 60,
+      "pan": 0,
+      "seed": 2740953113,
+      "role": "editorial-sfx",
+      "cueId": "motor-lift"
+    },
+    {
+      "voice": "bass",
+      "beat": 12.1,
+      "beats": 4.5,
+      "gain": 0.049,
+      "midi": 35,
+      "pan": 0,
+      "seed": 1622026830
+    },
+    {
+      "voice": "felt",
+      "beat": 13,
+      "beats": 4.6,
+      "gain": 0.046,
+      "midi": 73,
+      "pan": -0.18,
+      "seed": 2459051492
+    },
+    {
+      "voice": "felt",
+      "beat": 17.5,
+      "beats": 4.2,
+      "gain": 0.032,
+      "midi": 69,
+      "pan": 0.18,
+      "seed": 334958739
+    },
+    {
+      "voice": "bass",
+      "beat": 18,
+      "beats": 3.8,
+      "gain": 0.024,
+      "midi": 47,
+      "pan": 0.03,
+      "seed": 420523805
+    },
+    {
+      "voice": "felt",
+      "beat": 21,
+      "beats": 3.8,
+      "gain": 0.024,
+      "midi": 66,
+      "pan": -0.08,
+      "seed": 3443786817
+    },
+    {
+      "voice": "pad",
+      "beat": 23,
+      "beats": 14,
+      "gain": 0.0115,
+      "midi": 43,
+      "pan": -0.48,
+      "seed": 4098643527
+    },
+    {
+      "voice": "pad",
+      "beat": 23,
+      "beats": 14,
+      "gain": 0.0115,
+      "midi": 54,
+      "pan": -0.16,
+      "seed": 2920655269
+    },
+    {
+      "voice": "pad",
+      "beat": 23,
+      "beats": 14,
+      "gain": 0.0115,
+      "midi": 57,
+      "pan": 0.16,
+      "seed": 2130805397
+    },
+    {
+      "voice": "pad",
+      "beat": 23,
+      "beats": 14,
+      "gain": 0.0115,
+      "midi": 62,
+      "pan": 0.48,
+      "seed": 2771624636
+    },
+    {
+      "voice": "bass",
+      "beat": 24.1,
+      "beats": 4.5,
+      "gain": 0.03,
+      "midi": 31,
+      "pan": 0,
+      "seed": 4260170702
+    },
+    {
+      "voice": "felt",
+      "beat": 25,
+      "beats": 4.6,
+      "gain": 0.023,
+      "midi": 69,
+      "pan": -0.18,
+      "seed": 3456652548
+    },
+    {
+      "voice": "air",
+      "beat": 29,
+      "beats": 1,
+      "gain": 0.0085,
+      "midi": 60,
+      "pan": 0,
+      "seed": 3167346007,
+      "role": "editorial-sfx",
+      "cueId": "drive"
+    },
+    {
+      "voice": "felt",
+      "beat": 29.5,
+      "beats": 4.2,
+      "gain": 0.017,
+      "midi": 71,
+      "pan": 0.18,
+      "seed": 1371430224
+    },
+    {
+      "voice": "pad",
+      "beat": 35,
+      "beats": 14,
+      "gain": 0.0115,
+      "midi": 45,
+      "pan": -0.48,
+      "seed": 3633715994
+    },
+    {
+      "voice": "pad",
+      "beat": 35,
+      "beats": 14,
+      "gain": 0.0115,
+      "midi": 52,
+      "pan": -0.16,
+      "seed": 1700760288
+    },
+    {
+      "voice": "pad",
+      "beat": 35,
+      "beats": 14,
+      "gain": 0.0115,
+      "midi": 57,
+      "pan": 0.16,
+      "seed": 343661761
+    },
+    {
+      "voice": "pad",
+      "beat": 35,
+      "beats": 14,
+      "gain": 0.0115,
+      "midi": 59,
+      "pan": 0.48,
+      "seed": 2476387632
+    },
+    {
+      "voice": "bass",
+      "beat": 36.1,
+      "beats": 4.5,
+      "gain": 0.03,
+      "midi": 33,
+      "pan": 0,
+      "seed": 27593710
+    },
+    {
+      "voice": "felt",
+      "beat": 37,
+      "beats": 4.6,
+      "gain": 0.023,
+      "midi": 71,
+      "pan": -0.18,
+      "seed": 3150703554
+    },
+    {
+      "voice": "felt",
+      "beat": 41.5,
+      "beats": 4.2,
+      "gain": 0.017,
+      "midi": 69,
+      "pan": 0.18,
+      "seed": 281730043
+    },
+    {
+      "voice": "bass",
+      "beat": 43.25,
+      "beats": 3.8,
+      "gain": 0.043,
+      "midi": 33,
+      "pan": 0,
+      "seed": 1486103163
+    },
+    {
+      "voice": "felt",
+      "beat": 44,
+      "beats": 3.6,
+      "gain": 0.037,
+      "midi": 71,
+      "pan": -0.12,
+      "seed": 1203678934
+    },
+    {
+      "voice": "air",
+      "beat": 45,
+      "beats": 1,
+      "gain": 0.0068000000000000005,
+      "midi": 60,
+      "pan": 0,
+      "seed": 1795990054,
+      "role": "editorial-sfx",
+      "cueId": "bearing"
+    },
+    {
+      "voice": "felt",
+      "beat": 46.5,
+      "beats": 3.5,
+      "gain": 0.028,
+      "midi": 69,
+      "pan": 0.12,
+      "seed": 3739278180
+    },
+    {
+      "voice": "pad",
+      "beat": 47,
+      "beats": 14,
+      "gain": 0.017,
+      "midi": 50,
+      "pan": -0.48,
+      "seed": 1023826433
+    },
+    {
+      "voice": "pad",
+      "beat": 47,
+      "beats": 14,
+      "gain": 0.017,
+      "midi": 57,
+      "pan": -0.16,
+      "seed": 1048978786
+    },
+    {
+      "voice": "pad",
+      "beat": 47,
+      "beats": 14,
+      "gain": 0.017,
+      "midi": 61,
+      "pan": 0.16,
+      "seed": 3211335319
+    },
+    {
+      "voice": "pad",
+      "beat": 47,
+      "beats": 14,
+      "gain": 0.017,
+      "midi": 64,
+      "pan": 0.48,
+      "seed": 718057738
+    },
+    {
+      "voice": "bass",
+      "beat": 48.1,
+      "beats": 4.5,
+      "gain": 0.049,
+      "midi": 38,
+      "pan": 0,
+      "seed": 559431932
+    },
+    {
+      "voice": "felt",
+      "beat": 49,
+      "beats": 4.6,
+      "gain": 0.046,
+      "midi": 69,
+      "pan": -0.18,
+      "seed": 3809982938
+    },
+    {
+      "voice": "felt",
+      "beat": 53.5,
+      "beats": 4.2,
+      "gain": 0.032,
+      "midi": 73,
+      "pan": 0.18,
+      "seed": 2444397132
+    },
+    {
+      "voice": "bass",
+      "beat": 54,
+      "beats": 3.8,
+      "gain": 0.024,
+      "midi": 50,
+      "pan": 0.03,
+      "seed": 29188031
+    },
+    {
+      "voice": "wood",
+      "beat": 55,
+      "beats": 0.5,
+      "gain": 0.006299999999999999,
+      "midi": 55,
+      "pan": 0,
+      "seed": 374058434,
+      "role": "editorial-sfx",
+      "cueId": "seat"
+    },
+    {
+      "voice": "felt",
+      "beat": 57,
+      "beats": 3.8,
+      "gain": 0.024,
+      "midi": 76,
+      "pan": -0.08,
+      "seed": 3751160849
+    }
+  ],
+  "listeningReviewed": false,
+  "file": "joint-loop.wav",
+  "byteLength": 6350444,
+  "sha256": "74b8830512bc66983948fb131d426415f4649086c52f1733b0f8063842cd8836",
+  "analysis": {
+    "peakDbfs": -10,
+    "rmsDbfs": -24.28211531502539,
+    "clippedSamples": 0,
+    "loopBoundaryStep": 0.0003535760020012542,
+    "listeningReviewed": false,
+    "sampleRate": 44100,
+    "frames": 1587600,
+    "durationSeconds": 36,
+    "encodedPcm": {
+      "peakDbfs": -10.000126940172311,
+      "rmsDbfs": -24.282380129122046,
+      "clippedSamples": 0,
+      "loopBoundary": {
+        "maximumStep": 0.000335693359375,
+        "maximumInteriorStep": 0.017791748046875,
+        "ratioToMaximumInteriorStep": 0.018867924528301886
+      },
+      "windows": [
+        {
+          "id": "expand",
+          "firstBeat": 14,
+          "lastBeat": 22,
+          "rmsDbfs": -22.874088985608534
+        },
+        {
+          "id": "gear-reading",
+          "firstBeat": 33,
+          "lastBeat": 36,
+          "rmsDbfs": -34.05783657223915
+        },
+        {
+          "id": "bearing-reading",
+          "firstBeat": 41,
+          "lastBeat": 44,
+          "rmsDbfs": -22.888330190208578
+        },
+        {
+          "id": "reassemble",
+          "firstBeat": 43,
+          "lastBeat": 54,
+          "rmsDbfs": -23.25494608196905
+        }
+      ]
+    },
+    "listeningReview": "Objective waveform checks only; subjective balance and full-loop listening require separate review."
+  }
+}

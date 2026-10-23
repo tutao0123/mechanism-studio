@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "robot-joint-24-24-72",
+  "geometryRevision": "robot-joint-24-24-72-v1-e94ee1bb50c7",
+  "sourceHash": "e94ee1bb50c76e9923e4ddcb98186d37ef38b789af7d06c5b2f4832c90854e92",
+  "glbSHA256": "f05c3a0585ea118c036e54d8819dd4079cce83a28cf05f5e9a2fe624b35c8264",
+  "glbBytes": 8599552,
+  "partCount": 129,
+  "assemblyCount": 6,
+  "definitionCount": 44,
+  "movingPartCount": 62,
+  "triangleCount": 256452,
+  "uniqueTriangleCount": 150074,
+  "assetBoundsMeters": {
+    "min": [
+      -0.05829999968409538,
+      -0.05829999968409538,
+      -0.030899999910593032
+    ],
+    "max": [
+      0.05829999968409538,
+      0.05829999968409538,
+      0.05819999998807907
+    ]
+  },
+  "gearSpec": {
+    "sunTeeth": 24,
+    "planetTeeth": 24,
+    "ringTeeth": 72,
+    "module": 0.0012,
+    "pressureAngle": 0.3490658503988659,
+    "orbitRadius": 0.0288,
+    "planetCount": 3,
+    "sunPhase": 0,
+    "planetPhase": 0.1308996938995747,
+    "ringGapPhase": 0.04363323129985824
+  },
+  "motorSpec": {
+    "centerZ": 0.039,
+    "length": 0.021,
+    "shaftRadius": 0.0036,
+    "rotorInner": 0.025,
+    "rotorOuter": 0.0288,
+    "magnetInner": 0.029,
+    "magnetOuter": 0.031,
+    "statorInner": 0.0318,
+    "statorYokeInner": 0.042,
+    "statorOuter": 0.048,
+    "housingInner": 0.04815,
+    "housingOuter": 0.0576,
+    "housingStartZ": 0.024,
+    "housingEndZ": 0.052,
+    "magnetCount": 14,
+    "coilCount": 12,
+    "airGap": 0.0008,
+    "endcapZ": 0.054,
+    "boltCircle": 0.0543,
+    "encoderZ": 0.0508
+  },
+  "supportBearingSpec": {
+    "front": {
+      "z": 0.0144,
+      "bore": 0.00363,
+      "outer": 0.0096,
+      "width": 0.0042,
+      "pitch": 0.0066,
+      "ballRadius": 0.00126,
+      "balls": 10,
+      "grooveClearance": 0.000036,
+      "innerShoulder": 0.00588,
+      "outerShoulder": 0.00732,
+      "sealOuter": 0.0072
+    },
+    "rear": {
+      "z": -0.0144,
+      "bore": 0.00483,
+      "outer": 0.012,
+      "width": 0.0042,
+      "pitch": 0.0084,
+      "ballRadius": 0.0015,
+      "balls": 10,
+      "grooveClearance": 0.000036,
+      "innerShoulder": 0.0075,
+      "outerShoulder": 0.0093,
+      "sealOuter": 0.0096
+    }
+  },
+  "fixedRingReduction": 4,
+  "motorElectromagneticSimulation": false,
+  "bearingContactDynamics": false,
+  "checks": {
+    "sceneContract": "passed"
+  },
+  "limitations": [
+    "Original compact joint teaching design generated locally; not a vendor model, exact CAD B-rep, manufacturing drawing or certified actuator.",
+    "The original Mechanism Studio planetary reducer geometry is reused at 0.6 scale and extended with an independently authored 12-slot / 14-pole motor, position-sensor package and robot-link flange.",
+    "A fixed 72-tooth ring, 24-tooth sun and three 24-tooth planets give an ideal 4:1 reduction; the rotor, input shaft and sun are an authored rigid connection.",
+    "Motor winding packs, pole labels and sensor components show structural intent only. Electromagnetic forces, commutation, winding circuits, control electronics, thermal performance and sensor output are not simulated.",
+    "Shaft supports use ideal zero-contact-angle, no-slip rolling kinematics with fixed outer races. Load, bearing contact pressure, slip, lubrication, fatigue, stiffness and cage dynamics are not solved.",
+    "The motor input shaft uses the reducer-side rolling support and an additional rear plain journal bushing. This is an illustrative support arrangement, without speed, load or wear rating.",
+    "Gear teeth are involute meshes with display backlash and simplified root joins. Threads, shaft coupling keys, fits and mounting preloads are simplified or assumed.",
+    "Named magnetic blocks and coil packs are genuine repeated geometry, with occurrence rotations and a positive nominal rotor-to-stator air gap; they are not borrowed commercial motor internals.",
+    "The nested assembly tree is authored for this design. Exploded paths are editorial offsets, not a collision-checked disassembly or recovered CAD constraints.",
+    "The gear train repeats after four sun turns; individual rolling-bearing ball identities need not. Cover the rolling internals during any editorial time reset."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "original-parametric-teaching-model",
+  "title": "Compact robot joint · 12-slot motor and 4:1 planetary reducer",
+  "author": "Mechanism Studio",
+  "license": "MIT",
+  "specRevision": "robot-joint-24-24-72-v1",
+  "revision": "robot-joint-24-24-72-v1-e94ee1bb50c7",
+  "generator": "examples/robot-joint/build-joint.mjs",
+  "inputFingerprints": [
+    {
+      "file": "examples/robot-joint/spec.mjs",
+      "sha256": "f4bc5e42b6e3d51a95991e31dff98a9aee5b2e9d75cf5efed96cbfc0b24cfa20"
+    },
+    {
+      "file": "examples/robot-joint/geometry.mjs",
+      "sha256": "fb10504e3c9520bfbb4dbc93e225b34b964b8f71d98e93994c8881a1d025caca"
+    },
+    {
+      "file": "examples/robot-joint/build-joint.mjs",
+      "sha256": "79b3c72df35f0e72dfc616ec235db49756258220444bb74fe50cd594d1892868"
+    },
+    {
+      "file": "examples/planetary-gears/spec.mjs",
+      "sha256": "aaf9b98c2ddb65121a13a4b93fc5dfcc2f7754d1cb265c49f6ef8225c7001b86"
+    },
+    {
+      "file": "examples/planetary-gears/geometry.mjs",
+      "sha256": "c4dc881835d41ed03175c63a8a20d68c6b4f71765c74a9092cd880b531c5714c"
+    },
+    {
+      "file": "shared/assets/write-glb.mjs",
+      "sha256": "735b71008cf26da21e07307d556de81067902048c8a96ff69c6732f3a92d7ff5"
+    }
+  ],
+  "sourceHash": "e94ee1bb50c76e9923e4ddcb98186d37ef38b789af7d06c5b2f4832c90854e92",
+  "note": "Generated from this project’s original dimensional design. Reuses its MIT planetary reducer solids at 0.6 scale and authors new motor, magnetic blocks, tooth-wrapped winding packs, motor case, sensor package and output flange. No downloaded mesh or commercial CAD is used.",
+  "scope": "Authoring assumptions and tessellated teaching meshes; not engineering-certified or manufacturing CAD.",
+  "limitations": [
+    "Original compact joint teaching design generated locally; not a vendor model, exact CAD B-rep, manufacturing drawing or certified actuator.",
+    "The original Mechanism Studio planetary reducer geometry is reused at 0.6 scale and extended with an independently authored 12-slot / 14-pole motor, position-sensor package and robot-link flange.",
+    "A fixed 72-tooth ring, 24-tooth sun and three 24-tooth planets give an ideal 4:1 reduction; the rotor, input shaft and sun are an authored rigid connection.",
+    "Motor winding packs, pole labels and sensor components show structural intent only. Electromagnetic forces, commutation, winding circuits, control electronics, thermal performance and sensor output are not simulated.",
+    "Shaft supports use ideal zero-contact-angle, no-slip rolling kinematics with fixed outer races. Load, bearing contact pressure, slip, lubrication, fatigue, stiffness and cage dynamics are not solved.",
+    "The motor input shaft uses the reducer-side rolling support and an additional rear plain journal bushing. This is an illustrative support arrangement, without speed, load or wear rating.",
+    "Gear teeth are involute meshes with display backlash and simplified root joins. Threads, shaft coupling keys, fits and mounting preloads are simplified or assumed.",
+    "Named magnetic blocks and coil packs are genuine repeated geometry, with occurrence rotations and a positive nominal rotor-to-stator air gap; they are not borrowed commercial motor internals.",
+    "The nested assembly tree is authored for this design. Exploded paths are editorial offsets, not a collision-checked disassembly or recovered CAD constraints.",
+    "The gear train repeats after four sun turns; individual rolling-bearing ball identities need not. Cover the rolling internals during any editorial time reset."
+  ]
+}

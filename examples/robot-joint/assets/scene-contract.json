@@ -1,0 +1,4298 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "robot-joint-24-24-72",
+  "assetRevision": "robot-joint-24-24-72-v1-e94ee1bb50c7",
+  "units": {
+    "source": "authored metres and radians",
+    "asset": "m",
+    "angle": "rad"
+  },
+  "coordinateMap": "Right-handed glTF metres, +Y up; motor, gear and output axes +Z. Positive rotation is counter-clockwise viewed from +Z. Motor lies behind reducer at +Z; robot-link output is at -Z.",
+  "identity": "Stable rj:<part> occurrences and shared rj-def geometry; 129 parts in five original authored subassemblies. Magnet and coil phase is preserved by source occurrence rotation.",
+  "limitations": [
+    "Original compact joint teaching design generated locally; not a vendor model, exact CAD B-rep, manufacturing drawing or certified actuator.",
+    "The original Mechanism Studio planetary reducer geometry is reused at 0.6 scale and extended with an independently authored 12-slot / 14-pole motor, position-sensor package and robot-link flange.",
+    "A fixed 72-tooth ring, 24-tooth sun and three 24-tooth planets give an ideal 4:1 reduction; the rotor, input shaft and sun are an authored rigid connection.",
+    "Motor winding packs, pole labels and sensor components show structural intent only. Electromagnetic forces, commutation, winding circuits, control electronics, thermal performance and sensor output are not simulated.",
+    "Shaft supports use ideal zero-contact-angle, no-slip rolling kinematics with fixed outer races. Load, bearing contact pressure, slip, lubrication, fatigue, stiffness and cage dynamics are not solved.",
+    "The motor input shaft uses the reducer-side rolling support and an additional rear plain journal bushing. This is an illustrative support arrangement, without speed, load or wear rating.",
+    "Gear teeth are involute meshes with display backlash and simplified root joins. Threads, shaft coupling keys, fits and mounting preloads are simplified or assumed.",
+    "Named magnetic blocks and coil packs are genuine repeated geometry, with occurrence rotations and a positive nominal rotor-to-stator air gap; they are not borrowed commercial motor internals.",
+    "The nested assembly tree is authored for this design. Exploded paths are editorial offsets, not a collision-checked disassembly or recovered CAD constraints.",
+    "The gear train repeats after four sun turns; individual rolling-bearing ball identities need not. Cover the rolling internals during any editorial time reset."
+  ],
+  "parts": [
+    {
+      "part_id": "rj:sun",
+      "parent_id": "rj-asm:reducer",
+      "label": "Motor-driven sun · 24 teeth",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:sun",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:ring",
+      "parent_id": "rj-asm:reducer",
+      "label": "Fixed ring · 72 internal teeth",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:ring",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:planet-1",
+      "parent_id": "rj-asm:reducer",
+      "label": "Planet 1 · 24 teeth",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0288,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:planet",
+      "motionRole": "planet",
+      "planetIndex": 0
+    },
+    {
+      "part_id": "rj:planet-2",
+      "parent_id": "rj-asm:reducer",
+      "label": "Planet 2 · 24 teeth",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014399999999999993,
+          0.024941531628991834,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:planet",
+      "motionRole": "planet",
+      "planetIndex": 1
+    },
+    {
+      "part_id": "rj:planet-3",
+      "parent_id": "rj-asm:reducer",
+      "label": "Planet 3 · 24 teeth",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014400000000000012,
+          -0.024941531628991827,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:planet",
+      "motionRole": "planet",
+      "planetIndex": 2
+    },
+    {
+      "part_id": "rj:carrier-rear",
+      "parent_id": "rj-asm:reducer",
+      "label": "Output carrier spider",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.0072,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:carrier",
+      "motionRole": "carrier"
+    },
+    {
+      "part_id": "rj:carrier-front",
+      "parent_id": "rj-asm:reducer",
+      "label": "Front carrier spider",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0072,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:carrier",
+      "motionRole": "carrier"
+    },
+    {
+      "part_id": "rj:pin-1",
+      "parent_id": "rj-asm:reducer",
+      "label": "Planet pin 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0288,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:pin",
+      "motionRole": "carrier",
+      "planetIndex": 0
+    },
+    {
+      "part_id": "rj:pin-2",
+      "parent_id": "rj-asm:reducer",
+      "label": "Planet pin 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014399999999999993,
+          0.024941531628991834,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:pin",
+      "motionRole": "carrier",
+      "planetIndex": 1
+    },
+    {
+      "part_id": "rj:pin-3",
+      "parent_id": "rj-asm:reducer",
+      "label": "Planet pin 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014400000000000012,
+          -0.024941531628991827,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:pin",
+      "motionRole": "carrier",
+      "planetIndex": 2
+    },
+    {
+      "part_id": "rj:bearing-1",
+      "parent_id": "rj-asm:reducer",
+      "label": "Journal bushing 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0288,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:bearing",
+      "motionRole": "planet",
+      "planetIndex": 0
+    },
+    {
+      "part_id": "rj:bearing-2",
+      "parent_id": "rj-asm:reducer",
+      "label": "Journal bushing 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014399999999999993,
+          0.024941531628991834,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:bearing",
+      "motionRole": "planet",
+      "planetIndex": 1
+    },
+    {
+      "part_id": "rj:bearing-3",
+      "parent_id": "rj-asm:reducer",
+      "label": "Journal bushing 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014400000000000012,
+          -0.024941531628991827,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:bearing",
+      "motionRole": "planet",
+      "planetIndex": 2
+    },
+    {
+      "part_id": "rj:washer-1",
+      "parent_id": "rj-asm:reducer",
+      "label": "Thrust washer 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0288,
+          0,
+          0.00912,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:washer",
+      "motionRole": "carrier",
+      "planetIndex": 0
+    },
+    {
+      "part_id": "rj:washer-2",
+      "parent_id": "rj-asm:reducer",
+      "label": "Thrust washer 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014399999999999993,
+          0.024941531628991834,
+          0.00912,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:washer",
+      "motionRole": "carrier",
+      "planetIndex": 1
+    },
+    {
+      "part_id": "rj:washer-3",
+      "parent_id": "rj-asm:reducer",
+      "label": "Thrust washer 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014400000000000012,
+          -0.024941531628991827,
+          0.00912,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:washer",
+      "motionRole": "carrier",
+      "planetIndex": 2
+    },
+    {
+      "part_id": "rj:screw-1",
+      "parent_id": "rj-asm:reducer",
+      "label": "Carrier socket screw 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0288,
+          0,
+          0.0096,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:screw",
+      "motionRole": "carrier",
+      "planetIndex": 0
+    },
+    {
+      "part_id": "rj:screw-2",
+      "parent_id": "rj-asm:reducer",
+      "label": "Carrier socket screw 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014399999999999993,
+          0.024941531628991834,
+          0.0096,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:screw",
+      "motionRole": "carrier",
+      "planetIndex": 1
+    },
+    {
+      "part_id": "rj:screw-3",
+      "parent_id": "rj-asm:reducer",
+      "label": "Carrier socket screw 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.014400000000000012,
+          -0.024941531628991827,
+          0.0096,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:screw",
+      "motionRole": "carrier",
+      "planetIndex": 2
+    },
+    {
+      "part_id": "rj:input-shaft",
+      "parent_id": "rj-asm:reducer",
+      "label": "Sun input shaft",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0126,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:input-shaft",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:output-hub",
+      "parent_id": "rj-asm:output",
+      "label": "Hollow output hub",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:output-hub",
+      "motionRole": "carrier"
+    },
+    {
+      "part_id": "rj:housing",
+      "parent_id": "rj-asm:structure",
+      "label": "Reducer housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:endplate-front",
+      "parent_id": "rj-asm:structure",
+      "label": "Motor-side endplate",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:endplate-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:gasket-front",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing gasket",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0123,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:gasket",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-bolt-front-1",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing screw 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.04702517942549502,
+          0.027149999999999997,
+          0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-bolt-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-bolt-front-2",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing screw 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          3.324916059685064e-18,
+          0.0543,
+          0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-bolt-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-bolt-front-3",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing screw 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.04702517942549502,
+          0.027149999999999997,
+          0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-bolt-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-bolt-front-4",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing screw 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.04702517942549503,
+          -0.027149999999999987,
+          0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-bolt-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-bolt-front-5",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing screw 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -9.974748179055192e-18,
+          -0.0543,
+          0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-bolt-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-bolt-front-6",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing screw 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.04702517942549501,
+          -0.027150000000000025,
+          0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-bolt-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-washer-front-1",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing washer 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.04702517942549502,
+          0.027149999999999997,
+          0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-washer-front-2",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing washer 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          3.324916059685064e-18,
+          0.0543,
+          0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-washer-front-3",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing washer 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.04702517942549502,
+          0.027149999999999997,
+          0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-washer-front-4",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing washer 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.04702517942549503,
+          -0.027149999999999987,
+          0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-washer-front-5",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing washer 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -9.974748179055192e-18,
+          -0.0543,
+          0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-washer-front-6",
+      "parent_id": "rj-asm:structure",
+      "label": "front housing washer 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.04702517942549501,
+          -0.027150000000000025,
+          0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:shaft-seal-front",
+      "parent_id": "rj-asm:structure",
+      "label": "front shaft seal",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0198,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:shaft-seal-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:support-bearing-front-inner",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing inner race",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-inner",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:support-bearing-front-outer",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing outer race",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-outer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:support-bearing-front-cage",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing cage",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-cage",
+      "motionRole": "bearing-cage"
+    },
+    {
+      "part_id": "rj:support-bearing-front-ball-1",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing ball 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0066,
+          0,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-front-ball-2",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing ball 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.005339512162874653,
+          0.0038793826651303226,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-front-ball-3",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing ball 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0020395121628746533,
+          0.006276973007548013,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-front-ball-4",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing ball 4",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0020395121628746524,
+          0.006276973007548014,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-front-ball-5",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing ball 5",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.005339512162874652,
+          0.0038793826651303234,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-front-ball-6",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing ball 6",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0066,
+          8.082668874372531e-19,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-front-ball-7",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing ball 7",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.005339512162874653,
+          -0.003879382665130322,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-front-ball-8",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing ball 8",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0020395121628746537,
+          -0.006276973007548013,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-front-ball-9",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing ball 9",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0020395121628746515,
+          -0.006276973007548014,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-front-ball-10",
+      "parent_id": "rj-asm:support",
+      "label": "front bearing ball 10",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.005339512162874652,
+          -0.0038793826651303243,
+          0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-front-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:bearing-clip-front",
+      "parent_id": "rj-asm:structure",
+      "label": "front bearing retaining clip",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0174,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:bearing-clip-front",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:endplate-rear",
+      "parent_id": "rj-asm:structure",
+      "label": "Output-side endplate",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:endplate-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:gasket-rear",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing gasket",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.0123,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:gasket",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-bolt-rear-1",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing screw 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.04702517942549502,
+          0.027149999999999997,
+          -0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-bolt-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-bolt-rear-2",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing screw 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          3.324916059685064e-18,
+          0.0543,
+          -0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-bolt-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-bolt-rear-3",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing screw 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.04702517942549502,
+          0.027149999999999997,
+          -0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-bolt-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-bolt-rear-4",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing screw 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.04702517942549503,
+          -0.027149999999999987,
+          -0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-bolt-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-bolt-rear-5",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing screw 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -9.974748179055192e-18,
+          -0.0543,
+          -0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-bolt-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-bolt-rear-6",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing screw 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.04702517942549501,
+          -0.027150000000000025,
+          -0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-bolt-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-washer-rear-1",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing washer 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.04702517942549502,
+          0.027149999999999997,
+          -0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-washer-rear-2",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing washer 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          3.324916059685064e-18,
+          0.0543,
+          -0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-washer-rear-3",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing washer 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.04702517942549502,
+          0.027149999999999997,
+          -0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-washer-rear-4",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing washer 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.04702517942549503,
+          -0.027149999999999987,
+          -0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-washer-rear-5",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing washer 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -9.974748179055192e-18,
+          -0.0543,
+          -0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:housing-washer-rear-6",
+      "parent_id": "rj-asm:structure",
+      "label": "rear housing washer 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.04702517942549501,
+          -0.027150000000000025,
+          -0.0168,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:housing-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:shaft-seal-rear",
+      "parent_id": "rj-asm:structure",
+      "label": "rear shaft seal",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.0198,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:shaft-seal-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-inner",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing inner race",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-inner",
+      "motionRole": "carrier"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-outer",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing outer race",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-outer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-cage",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing cage",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-cage",
+      "motionRole": "bearing-cage"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-ball-1",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing ball 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0084,
+          0,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-ball-2",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing ball 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0067957427527495584,
+          0.004937396119256774,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-ball-3",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing ball 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0025957427527495583,
+          0.007988874736879288,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-ball-4",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing ball 4",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0025957427527495574,
+          0.00798887473687929,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-ball-5",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing ball 5",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.006795742752749558,
+          0.004937396119256775,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-ball-6",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing ball 6",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0084,
+          1.0287033112837766e-18,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-ball-7",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing ball 7",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0067957427527495584,
+          -0.004937396119256773,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-ball-8",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing ball 8",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0025957427527495596,
+          -0.007988874736879288,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-ball-9",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing ball 9",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0025957427527495565,
+          -0.00798887473687929,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:support-bearing-rear-ball-10",
+      "parent_id": "rj-asm:support",
+      "label": "rear bearing ball 10",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.006795742752749558,
+          -0.004937396119256776,
+          -0.0144,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:support-bearing-rear-ball",
+      "motionRole": "bearing-ball"
+    },
+    {
+      "part_id": "rj:bearing-clip-rear",
+      "parent_id": "rj-asm:structure",
+      "label": "rear bearing retaining clip",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.0174,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:bearing-clip-rear",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:output-flange",
+      "parent_id": "rj-asm:output",
+      "label": "Robot-link output flange",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.0265,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:output-flange",
+      "motionRole": "carrier"
+    },
+    {
+      "part_id": "rj:motor-adapter",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor mounting spacer",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0201,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-adapter",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-shaft",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor drive shaft",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-shaft",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-rotor",
+      "parent_id": "rj-asm:motor",
+      "label": "Fourteen-pole rotor drum",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-rotor",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-stator",
+      "parent_id": "rj-asm:motor",
+      "label": "Twelve-tooth stator core",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-stator",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-magnet-1",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 1",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-2",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 2",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          0.9009688679024191,
+          0.4338837391175581,
+          0,
+          0,
+          -0.4338837391175581,
+          0.9009688679024191,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-3",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 3",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          0.6234898018587336,
+          0.7818314824680298,
+          0,
+          0,
+          -0.7818314824680298,
+          0.6234898018587336,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-4",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 4",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          0.22252093395631445,
+          0.9749279121818236,
+          0,
+          0,
+          -0.9749279121818236,
+          0.22252093395631445,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-5",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 5",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          -0.22252093395631434,
+          0.9749279121818236,
+          0,
+          0,
+          -0.9749279121818236,
+          -0.22252093395631434,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-6",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 6",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          -0.6234898018587335,
+          0.7818314824680299,
+          0,
+          0,
+          -0.7818314824680299,
+          -0.6234898018587335,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-7",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 7",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          -0.900968867902419,
+          0.43388373911755823,
+          0,
+          0,
+          -0.43388373911755823,
+          -0.900968867902419,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-8",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 8",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          -1,
+          1.2246467991473532e-16,
+          0,
+          0,
+          -1.2246467991473532e-16,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-9",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 9",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          -0.9009688679024191,
+          -0.433883739117558,
+          0,
+          0,
+          0.433883739117558,
+          -0.9009688679024191,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-10",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 10",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          -0.6234898018587337,
+          -0.7818314824680297,
+          0,
+          0,
+          0.7818314824680297,
+          -0.6234898018587337,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-11",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 11",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          -0.2225209339563146,
+          -0.9749279121818236,
+          0,
+          0,
+          0.9749279121818236,
+          -0.2225209339563146,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-12",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 12",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          0.22252093395631334,
+          -0.9749279121818238,
+          0,
+          0,
+          0.9749279121818238,
+          0.22252093395631334,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-13",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 13",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          0.6234898018587334,
+          -0.7818314824680299,
+          0,
+          0,
+          0.7818314824680299,
+          0.6234898018587334,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-magnet-14",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor magnet 14",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          0.9009688679024194,
+          -0.4338837391175575,
+          0,
+          0,
+          0.4338837391175575,
+          0.9009688679024194,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-magnet",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:motor-coil-1",
+      "parent_id": "rj-asm:motor",
+      "label": "Stator winding 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-coil",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-coil-2",
+      "parent_id": "rj-asm:motor",
+      "label": "Stator winding 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          0.8660254037844387,
+          0.49999999999999994,
+          0,
+          0,
+          -0.49999999999999994,
+          0.8660254037844387,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-coil",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-coil-3",
+      "parent_id": "rj-asm:motor",
+      "label": "Stator winding 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          0.5000000000000001,
+          0.8660254037844386,
+          0,
+          0,
+          -0.8660254037844386,
+          0.5000000000000001,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-coil",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-coil-4",
+      "parent_id": "rj-asm:motor",
+      "label": "Stator winding 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          6.123233995736766e-17,
+          1,
+          0,
+          0,
+          -1,
+          6.123233995736766e-17,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-coil",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-coil-5",
+      "parent_id": "rj-asm:motor",
+      "label": "Stator winding 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -0.4999999999999998,
+          0.8660254037844387,
+          0,
+          0,
+          -0.8660254037844387,
+          -0.4999999999999998,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-coil",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-coil-6",
+      "parent_id": "rj-asm:motor",
+      "label": "Stator winding 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -0.8660254037844387,
+          0.49999999999999994,
+          0,
+          0,
+          -0.49999999999999994,
+          -0.8660254037844387,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-coil",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-coil-7",
+      "parent_id": "rj-asm:motor",
+      "label": "Stator winding 7",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          1.2246467991473532e-16,
+          0,
+          0,
+          -1.2246467991473532e-16,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-coil",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-coil-8",
+      "parent_id": "rj-asm:motor",
+      "label": "Stator winding 8",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -0.8660254037844388,
+          -0.4999999999999997,
+          0,
+          0,
+          0.4999999999999997,
+          -0.8660254037844388,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-coil",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-coil-9",
+      "parent_id": "rj-asm:motor",
+      "label": "Stator winding 9",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -0.5000000000000004,
+          -0.8660254037844385,
+          0,
+          0,
+          0.8660254037844385,
+          -0.5000000000000004,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-coil",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-coil-10",
+      "parent_id": "rj-asm:motor",
+      "label": "Stator winding 10",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1.8369701987210297e-16,
+          -1,
+          0,
+          0,
+          1,
+          -1.8369701987210297e-16,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-coil",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-coil-11",
+      "parent_id": "rj-asm:motor",
+      "label": "Stator winding 11",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          0.5000000000000001,
+          -0.8660254037844386,
+          0,
+          0,
+          0.8660254037844386,
+          0.5000000000000001,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-coil",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-coil-12",
+      "parent_id": "rj-asm:motor",
+      "label": "Stator winding 12",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          0.8660254037844384,
+          -0.5000000000000004,
+          0,
+          0,
+          0.5000000000000004,
+          0.8660254037844384,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.039,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-coil",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-housing",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cooling sleeve",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.038,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-housing",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-endcap",
+      "parent_id": "rj-asm:motor",
+      "label": "Rear motor cap",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.054,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-endcap",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-tail-bushing",
+      "parent_id": "rj-asm:motor",
+      "label": "Rear motor journal bushing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.054,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-tail-bushing",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-bolt-1",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cap screw 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0543,
+          0,
+          0.056,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-bolt",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-bolt-2",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cap screw 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.027150000000000007,
+          0.047025179425495015,
+          0.056,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-bolt",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-bolt-3",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cap screw 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.02714999999999999,
+          0.04702517942549502,
+          0.056,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-bolt",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-bolt-4",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cap screw 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0543,
+          6.649832119370128e-18,
+          0.056,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-bolt",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-bolt-5",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cap screw 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.027150000000000025,
+          -0.04702517942549501,
+          0.056,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-bolt",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-bolt-6",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cap screw 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.027150000000000007,
+          -0.047025179425495015,
+          0.056,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-bolt",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-washer-1",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cap washer 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0543,
+          0,
+          0.056,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-washer-2",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cap washer 2",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.027150000000000007,
+          0.047025179425495015,
+          0.056,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-washer-3",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cap washer 3",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.02714999999999999,
+          0.04702517942549502,
+          0.056,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-washer-4",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cap washer 4",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.0543,
+          6.649832119370128e-18,
+          0.056,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-washer-5",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cap washer 5",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.027150000000000025,
+          -0.04702517942549501,
+          0.056,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:motor-washer-6",
+      "parent_id": "rj-asm:motor",
+      "label": "Motor cap washer 6",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.027150000000000007,
+          -0.047025179425495015,
+          0.056,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:motor-washer",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:encoder-disc",
+      "parent_id": "rj-asm:motor",
+      "label": "Rotor position target",
+      "motionOwner": "model",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0508,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:encoder-disc",
+      "motionRole": "sun"
+    },
+    {
+      "part_id": "rj:encoder-board",
+      "parent_id": "rj-asm:motor",
+      "label": "Position-sensor board",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.0521,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:encoder-board",
+      "motionRole": "fixed"
+    },
+    {
+      "part_id": "rj:encoder-sensor",
+      "parent_id": "rj-asm:motor",
+      "label": "Position-sensor package",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.007,
+          0,
+          0.05165,
+          1
+        ]
+      },
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "definitionId": "rj-def:encoder-sensor",
+      "motionRole": "fixed"
+    }
+  ]
+}

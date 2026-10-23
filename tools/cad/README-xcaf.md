@@ -125,6 +125,22 @@ is a STEP viewing/import foundation; it does not recover CAD mates, solve
 constraints, perform physical simulation, or provide an exact section or
 interference API.
 
+## Retained real specimen
+
+[Open-source Leader Arm](../../examples/step-bearing-assembly/README.md) uses
+the unmodified generic workflow with its fixed Apache-2.0 Onshape AP242 export.
+It has native metre units, 22 definitions, 99 NAUO relations, one root plus
+99 part occurrences, and 12 reused geometry definitions. Both fine and coarse
+imports preserve identity and placements; the retained import reports zero
+unmapped usages, zero unmeshed faces and zero recovered faces.
+
+Original STEP bytes are fetched by the pinned source manifest; display assets
+and terms stay in Git. Run `npm run fetch:sources`, then
+`npm run audit:cad -- --example examples/step-bearing-assembly` for the retained
+evidence audit, or `npm run import:cad -- --example examples/step-bearing-assembly`
+to rebuild using the local runtime. This case complements synthetic regression
+fixtures; it does not establish arbitrary AP242, mate or topology support.
+
 ## Technical references and licenses
 
 - [OCCT XCAF shape tool](https://dev.opencascade.org/doc/refman/html/class_x_c_a_f_doc___shape_tool.html)

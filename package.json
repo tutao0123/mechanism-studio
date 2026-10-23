@@ -15,6 +15,7 @@
   },
   "type": "module",
   "scripts": {
+    "studio": "node tools/studio/cli.mjs",
     "preview": "node serve.mjs",
     "test": "node scripts/check.mjs",
     "check": "node scripts/check.mjs",

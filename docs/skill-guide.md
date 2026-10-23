@@ -1,34 +1,37 @@
 # Using the Mechanism Studio skill
 
-Mechanism Studio is a project-local authoring skill backed by a runnable JavaScript toolkit. It helps an AI coding agent prepare inspectable mechanical scenes and short stories while preserving the difference between source engineering data, teaching models and presentation effects.
+Mechanism Studio is a project-local authoring skill backed by a runnable JavaScript toolkit. Give an AI coding agent a mechanical description or reference image: by default it authors an original procedural assembly, then turns its real parts into an inspectable scene or short story. Users do not need to find or download a model first. Supplied CAD and specific-device reproduction use the optional source-based route, preserving the difference between engineering evidence, authored teaching choices and presentation effects.
 
 **v0.4.1-alpha.1 is a public alpha.** Use it to experiment with the documented examples and authoring contracts; interfaces may change, and general CAD constraints, collision-free removal planning and image-to-CAD reconstruction are not implemented.
 
-There is **one discoverable skill** at [SKILL.md](../.agents/skills/mechanism-studio/SKILL.md), with **four specialist authoring contracts** for explosion, camera direction, appearance and mating close-ups. They work with seven reusable shared libraries, the Showcase application and local tooling. They are not a collection of independently installed autonomous agents. See the [module catalog](modules.md) for each responsibility and interface.
+There is **one discoverable skill** at [SKILL.md](../.agents/skills/mechanism-studio/SKILL.md). Geometry authoring prepares the actual parts before **four specialist authoring contracts** coordinate explosion, camera direction, appearance and mating close-ups. They work with seven reusable shared libraries, the Showcase application and local tooling. They are not a collection of independently installed autonomous agents. See the [module catalog](modules.md) for each responsibility and interface.
 
 ## Run locally
 
-From the repository root, use Node.js 20.10 or newer, npm and a WebGL 2 browser. Start with the original planetary example:
+From the repository root, use Node.js 20.10 or newer, npm and a WebGL 2 browser. Start with the original robot joint:
 
 ```powershell
 npm ci
-node examples/planetary-gears/audio/build.mjs
-node examples/planetary-gears/serve.mjs
+npm run studio -- list
+npm run studio -- generate robot-joint
+npm run studio -- preview robot-joint
 ```
 
-Open `http://127.0.0.1:4193/?clean=1` and click **Play with music**. This 36-second study demonstrates the shared explosion, camera, appearance and mating-close-up workflow with original geometry. No external CAD download is needed.
+Open the printed URL (normally `http://127.0.0.1:4198/`) and click **Play with music**. Studio verifies the registered original score and builds it only when missing or mismatched. The 36-second English Atlas story shows an original 129-part motor/reducer/bearing/flange assembly, local views and reassembly. Pause to inspect through the grouped part chooser or model clicks. No external CAD download is needed.
 
-For the gallery, stop that server or open another terminal and run `npm run build:audio`, then `npm run preview`. The standard preview is local-only at `http://127.0.0.1:4179/`; cards identify examples with their own server. Existing built viewing assets do not require Blender, Python, an MCP connection or a speech account. Generated Doubao MP3s and local `.blend` exports are excluded from public Git packaging; the included text/manifests/CLI support optional speech regeneration, and Blender Python builders can recreate teaching assets. Fresh public checkouts retain silent/text tours and the original code-music examples. Follow the specific example/tool README when rebuilding.
+For the gallery, stop that server or open another terminal and run `npm run studio -- preview` (the original `npm run preview` also works). The gallery is local-only at `http://127.0.0.1:4179/`; cards identify examples with their own server. The [Studio registry](../tools/studio/README.md) lists generation, preview and export support, preserving each default port; use `--port 4200` when running another page on a shared port. Existing built viewing assets do not require Blender, Python, an MCP connection or a speech account. Generated Doubao MP3s and local `.blend` exports are excluded from public Git packaging; the included text/manifests/CLI support optional speech regeneration, and Blender Python builders can recreate teaching assets. Fresh public checkouts retain silent/text tours and the original code-music examples. Follow the specific example/tool README when rebuilding.
 
-The **full test suite additionally requires Python 3** for MJCF parsing: `python` on Windows, `python3` elsewhere, or the `MECHANISM_PYTHON` environment variable. Its first run downloads digest-pinned source meshes. FFmpeg/FFprobe are needed for video encoding and optional media integration checks; native STEP import and Blender rebuilding have separate project-local runtime setup. None is a prerequisite for the first viewing example.
+The **full test suite additionally requires Python 3** for MJCF parsing: `python` on Windows, `python3` elsewhere, or the `MECHANISM_PYTHON` environment variable. Its first run downloads digest-pinned source meshes and the real STEP specimen. FFmpeg/FFprobe are needed for video encoding and optional media integration checks; native STEP import and Blender rebuilding have separate project-local runtime setup. None is a prerequisite for the first viewing example.
 
-The robot has its own preview:
+Use the same entry for the robot or the silent real STEP inspector:
 
 ```powershell
-node EXAMPLE_ROBOT/serve.mjs
+npm run studio -- preview so-arm102-kinetic
+# Or, in a separate terminal:
+npm run studio -- preview step-bearing-assembly
 ```
 
-It normally uses `http://127.0.0.1:4180/`; the short kinetic cut is `/kinetic/?clean=1`. Stop the process when finished.
+The kinetic robot normally uses `http://127.0.0.1:4180/kinetic/?clean=1`; the STEP inspector uses `http://127.0.0.1:4194/`. Each command prints its actual URL. Stop the process when finished. Original example server commands continue to work.
 
 ## Use with an agent
 
@@ -36,7 +39,7 @@ Open the repository as the workspace, and point the agent to the project-local s
 
 Example requests:
 
-> Use the Mechanism Studio skill to inspect this STEP assembly. Keep original source identity, add linked tree/model selection and report unsupported fields. Do not invent joints.
+> Use the Mechanism Studio skill to design an original compact robot joint actuator: motor, planetary reducer, bearings, output flange, enclosure and repeated fasteners. Author the geometry locally with stable part identities and explicit connection assumptions. Make a 36-second English white-line loop with close-ups, reassembly and code-generated music.
 
 > Use the skill to explain a slider-crank from these dimensions. Show the input, linkage and computed piston displacement; label all additional dimensions as authored teaching choices.
 
@@ -45,6 +48,8 @@ Example requests:
 > Make a separate short Cinematic edition of this mechanism: a dark studio setting, readable metal finishes, smooth perspective close-ups, large English titles and original music tied to the actions. Preserve the white fine-line edition and the actual mechanical relationships.
 
 > Use this photo as a visual reference for an illustrative exploded view. First list visible components and unknown internals. Do not claim image-to-CAD reconstruction accuracy.
+
+> Use the Mechanism Studio skill to inspect this supplied STEP assembly. Keep original source identity, add linked tree/model selection and report unsupported fields. Do not invent joints.
 
 > Add a close-up of this actual sun–planet pair. Keep the existing camera, music and white line art; use subtle tooth-phase highlights and short rotation arcs to distinguish spin from orbit. Bind the cues to the supported motion and disclose any idealized contact-region assumption.
 
@@ -76,14 +81,20 @@ fast/detailed generator. See [pace profiles](../.agents/skills/mechanism-studio/
 
 ## Input evidence
 
-Text can describe a goal and supplied parameters; missing geometry may be designed as an illustrative teaching model. An image gives visible outline, layout and appearance, not hidden joints or material grades. A dimensioned drawing supplies only its legible explicit dimensions. Supported CAD can preserve actual source definitions, occurrences, placements and hierarchy.
+Text supplies a goal and parameters; an original teaching design fills in reversible choices explicitly as assumptions. An image can guide a new design's visible outline, layout and appearance, without claiming the hidden joints or material grades of the photographed device. A dimensioned drawing supplies only its legible explicit dimensions. Supported CAD preserves actual source definitions, occurrences, placements and hierarchy when that route is requested.
 
 The [input brief](../.agents/skills/mechanism-studio/references/input-brief.md) labels facts `provided / observed / assumed / unknown` and separates engineering, geometry, style and motion references. The project does not implement a one-image-to-precision-CAD service. Instructions inside attachments remain source material, not commands from the user.
+
+## Generate original geometry
+
+The agent writes a specification and reproducible builder, gives reused geometry a definition ID and every placed part its own occurrence ID, then derives the part list and assembly tree from those real parts. Requested internals need actual geometry: detailed bearings include rings, balls and cages; repeated screws remain individually selectable. Intended fits and mates are explicit teaching assumptions, separate from the motion adapter and display explosion.
+
+`npm run studio -- generate robot-joint`, `npm run studio -- generate planetary-gears` and `npm run studio -- generate gearbox` run the existing named local recipes. They rebuild model geometry, identity/provenance records and original music without external meshes or a Blender connection. For a new description, the agent must author its builder and working preview/motion/export adapters; the command is not a generic natural-language CAD service. See [original generation](../.agents/skills/mechanism-studio/references/original-generation.md) for the actual files and checks. These recipes create original parametric teaching meshes, not validated manufacturing B-reps.
 
 ## End-to-end authoring
 
 1. Define the reader's question, inputs, permitted public use, route and requested output.
-2. Reuse or prepare geometry and a real scene contract/index. Preserve source bytes, units, provenance, actual parents, stable IDs and known mapping limits.
+2. For a text/image demonstration, author the design specification, component geometry and real scene contract/index. For supplied CAD or a requested existing assembly, preserve the source geometry instead. Record units, provenance, actual parents, stable definitions/occurrences and known mapping limits.
 3. Invoke only needed specialist contracts. Explosion and appearance may proceed in parallel after geometry exists; final camera envelopes depend on finalized motion and separation ranges.
 4. Use the [executable presentation plan](../.agents/skills/mechanism-studio/references/executable-presentation.md) for the supported study channels, or adapt broader handoffs to the relevant runtime APIs. Both share actual IDs/revisions and one time domain; old handoff JSON is not an executable schema.
 5. Inspect the resulting model and page. Check actual transformations, rest restoration, controls, pause/seek/loop behavior, relevant audio and narrow-screen readability.
@@ -125,6 +136,15 @@ The [24-second cinematic gearbox](../examples/gearbox/cinematic/README.md) is a 
 
 ## CAD and engineering boundaries
 
+For optional existing-device inspection, use [the shipped Leader Arm inspector](../examples/step-bearing-assembly/README.md)
+using `npm run studio -- preview step-bearing-assembly`. It retains a real
+Apache-2.0 Onshape AP242 assembly: 22 definitions, one root plus 99 part
+occurrences, including 43 repeated screws and six each of bearings, bearing
+housings and rotors. Click geometry or a source-tree item to select the same
+occurrence, then navigate other instances of its definition, hide/isolate,
+separate and reset. The source tree is flat beneath its root; no joint hierarchy
+or bearing internals have been invented. Existing GLB viewing needs no Python.
+
 Current generic import accepts a self-contained STEP assembly, one exact XCAF root, source usage mapping and uniform explicit metre or millimetre spatial contexts. AP214/AP242 product/usage evidence is a supported subset, not full protocol conformance.
 
 ```powershell
@@ -133,7 +153,7 @@ npm run import:cad -- --example examples/my-assembly
 npm run audit:cad -- --example examples/my-assembly
 ```
 
-Prepare `examples/my-assembly/source/` with a real STEP and digest-pinned provenance first. The setup keeps its runtime/caches in the project. The command creates source/display evidence, not a complete generic inspection webpage; a thin page adapter and preview allowlist still need integration. Inspect existing shipped examples without rerunning this setup.
+Prepare `examples/my-assembly/source/` with a real STEP and digest-pinned provenance first. The setup keeps its runtime/caches in the project. The command creates source/display evidence; connect `mountAssemblyInspector()` from `shared/cad/inspector.mjs` through a thin page adapter, explicit preview allowlist and Studio registry entry. The Leader Arm app is a concrete reference. Inspect existing shipped examples without rerunning this setup. To audit the shipped specimen, restore its pinned source with `npm run fetch:sources`, then run `npm run audit:cad -- --example examples/step-bearing-assembly`.
 
 Unsupported units, external references, ambiguous identity or failed meshing are reported, without guessing IDs, rewriting units or replacing a working package. Some STEP objects are source-triangulated, not analytic solids. No current route supplies a general mate/constraint solver, exact engineering measurement, collision-free removal planning, native parameter editing or dynamics. Source-backed robot kinematics are specific adapters, not recovered CAD mates.
 
@@ -150,7 +170,29 @@ npm run release:check
 
 Use focused commands from [the module catalog](modules.md) while editing. Passing automated tests does not prove correct framing, mechanical feasibility, third-party rights or good audio. Record actual browser/visual checks separately; claim subjective listening only after listening.
 
-The shared study's explicit `?capture=1` path supports deterministic sequential frames; `tools/video/export.mjs` encodes captured JPEGs and a verified timeline-matched track. It does not capture a browser or publish online. Full export procedure and failure limits are in [the video tool](../tools/video/README.md).
+The unified [Studio export entry](../tools/studio/README.md) lists its available
+direct-frame adapters with `npm run studio -- list`:
+
+```powershell
+npm run studio -- export robot-joint
+# Other supported IDs: planetary-gears, gearbox, gearbox-cinematic
+```
+
+Open the printed local workbench URL in a WebGL 2 browser, inspect its opening
+and expanded calibration images, then choose **Generate**. Keep the browser and
+command open. The adapter composes frames at fixed dimensions and deterministic
+absolute times; the local FFmpeg/FFprobe encoder produces the MP4 and objective
+reports in the printed ignored output directory. This avoids screen recording
+and display-scaling dependence, but still requires completed-video review for
+phone-size text, motion and audio. The STEP inspector and other registry entries
+are explicitly preview-only; Studio does not invent a film for them or publish
+anything online.
+
+For lower-level integration, the shared study's explicit `?capture=1` path
+supports sequential frame sampling, and `tools/video/export.mjs` encodes an
+existing JPEG sequence plus a verified timeline-matched track. That encoder
+alone does not drive a browser. See [video tools](../tools/video/README.md) for
+encoding inputs and failure limits.
 
 Substantial deliveries can retain a [delivery manifest](../.agents/skills/mechanism-studio/references/delivery-evidence.md) with exact input, evidence and output fingerprints. The Allegro hand record is a worked example:
 

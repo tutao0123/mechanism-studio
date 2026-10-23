@@ -2,6 +2,12 @@
   "schemaVersion": 1,
   "files": [
     {
+      "path": "examples/step-bearing-assembly/source/assembly.step",
+      "url": "https://raw.githubusercontent.com/Matheshwaranpitchai/open-source-leader-arm/3cf2ee41e645afe1173dda79914ffe31e174d7a6/cad_files/assembly.step",
+      "bytes": 1577215,
+      "sha256": "0332d1eb757d3abc3b345d5eed51ba9c53a472ea5c05a08fcfc4bf8cc9f63648"
+    },
+    {
       "path": "EXAMPLE_ROBOT/source/simulation/urdf/meshes/base_link.stl",
       "url": "https://raw.githubusercontent.com/roboninecom/SO-ARM-102/e871f738c97f43de230cb04d340797da6a68c4b9/simulation/urdf/meshes/base_link.stl",
       "bytes": 447884,

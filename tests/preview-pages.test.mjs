@@ -10,6 +10,7 @@ import * as gearbox from '../examples/gearbox/serve.mjs';
 import * as allegro from '../examples/allegro-hand/serve.mjs';
 import * as robotiq from '../examples/robotiq-gripper/serve.mjs';
 import * as planetary from '../examples/planetary-gears/serve.mjs';
+import * as joint from '../examples/robot-joint/serve.mjs';
 
 const project = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const servers = [
@@ -19,6 +20,7 @@ const servers = [
   ['examples/allegro-hand', allegro.publicFile],
   ['examples/robotiq-gripper', robotiq.publicFile],
   ['examples/planetary-gears', planetary.publicFile],
+  ['examples/robot-joint', joint.publicFile],
 ];
 // Gitignored local renders and synthesized music may be absent in a clean
 // checkout; every tracked dependency must be present and served.

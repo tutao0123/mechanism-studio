@@ -2,6 +2,14 @@
 
 For the Inspect route: preserve actual source definitions, occurrences, parents and placements, then connect observation. See [engineering boundaries](cad-direction.md), [shared/cad](../../../../shared/cad/README.md) and [XCAF tooling](../../../../tools/cad/README-xcaf.md).
 
+The [Open-source Leader Arm](../../../../examples/step-bearing-assembly/README.md)
+is the retained real specimen: a pinned Apache-2.0 AP242 STEP, 22 definitions,
+one root plus 99 source parts, including 43 placements of one screw definition.
+Run `npm run studio -- preview step-bearing-assembly` for its silent inspector.
+No Python or source download is needed to view committed display assets. Run
+`npm run fetch:sources` before its source audit/rebuild; then
+`npm run audit:cad -- --example examples/step-bearing-assembly`.
+
 ## Supported input
 
 The generic entry currently accepts self-contained STEP Part21 assemblies, uniform explicit metre or millimetre spatial contexts, one XCAF root and exact PRODUCT_DEFINITION/NAUO mapping. The retained-evidence extraction supports an AP214/AP242 product/usage subset, not full protocol compliance, PMI, mates or independent reconstruction of native placement entities.
@@ -51,14 +59,27 @@ audit:cad returns verified, limited or failed. Failed evidence exits with code 1
 
 ## 4. Connect observation
 
-Reuse viewer and createAssemblyInspection. The page supplies tree layout, terms and actual bindings. CAD part_id uses occurrence/display-owner identity. Pure assembly parents remain actual parents. Geometry-bearing assemblies may own solids and children; do not invent source parts for owned geometry.
+Reuse viewer and createAssemblyInspection. `mountAssemblyInspector()` in `shared/cad/inspector.mjs` connects inspection state to supplied tree/details/search/control elements and viewer bindings; the new Leader Arm page is a concrete thin adapter. The page supplies layout, terms and source-specific viewing presets. CAD part_id uses occurrence/display-owner identity. Pure assembly parents remain actual parents. Geometry-bearing assemblies may own solids and children; do not invent source parts for owned geometry.
 
 Verify model pick → same tree occurrence; tree/search/keyboard → same instance highlight; same-definition navigation retains definition but changes occurrence/location. Check subassembly selection, owned solids versus descendants, hiding a subtree then showing one child, isolation with outside selection, explosion and reassembly. Source matrices stay fixed; parent/child offsets are not applied twice.
 
-The removed Galileo inspector page (`examples/shaft-bearing/app.mjs` in Git history before 2026-10-20) is a reference, not a generic drop-in page generator. A new page needs a thin adapter and preview allowlist; import:cad alone does not make a whole UI.
+The Leader Arm export is flat: `Assembly 2` directly owns 99 parts. Preserve
+that source structure and generic names such as `Part 1`; do not promote an
+editorial grouping into a native subassembly. Its six bearings are each supplied
+as one part, without separately identified balls/races/cages. Reuse
+`examples/step-bearing-assembly/app.mjs` and its scoped server as integration
+references. A different source still needs a thin adapter, explicit preview
+allowlist and Studio registry entry; `import:cad` alone does not make a whole UI.
+The removed GPL Galileo page remains historical, not a dependency.
 
 ## 5. Deliver
 
 Resolve failed checks, run relevant invariants and open the actual page. Check repeated instances, selection, reset, narrow screens and visibility return. Record real UI evidence separately from automated audit.
 
 npm run release:check checks the local public candidate; it neither uploads nor chooses a private CAD license. Deliver entry/reproduction commands, actual preserved capabilities and missing ones. Static Inspect is complete when only placement exists. Measurement, manually confirmed axes/joints and fixed/revolute/prismatic relations are separate engineering work, not filled in by an animation.
+
+The unified [Studio entry](../../../../tools/studio/README.md) previews this
+inspector, but it is explicitly preview-only. Existing film exports use three
+registered browser-assisted adapters; they do not synthesize a teardown,
+camera path or music from an arbitrary STEP. Add an authored film adapter only
+after its source binding, motion assumptions, framing, time and audio are known.

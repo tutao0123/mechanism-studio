@@ -121,6 +121,24 @@ mates; this module does not establish contacts, constraints or physical motion.
 Run the focused checks with `node --test shared/cad/assembly.test.mjs`, or the
 whole project with `npm test`.
 
+## Linked inspector interface
+
+`inspector.mjs` supplies `mountAssemblyInspector()` for a page's inspection
+controller, loaded viewer and tree/details/search/control elements. It keeps
+model picks and tree selections on the same occurrence ID, navigates instances
+of one definition, and applies hide/isolate/reset and display-only separation.
+`createInspectionBinding()` checks actual viewer IDs against the manifest and
+gives repeated instances independent selection materials. Source matrices stay
+unchanged; search preserves real ancestor paths without creating fake groups.
+
+[The Leader Arm page](../../examples/step-bearing-assembly/app.mjs) is a thin
+integration reference. Its real STEP has a flat root and 99 part occurrences,
+including 43 separate placements of one screw definition. Run
+`npm run studio -- preview step-bearing-assembly` for the dedicated local
+inspector. Use `node --test examples/step-bearing-assembly/tests/inspector.test.mjs`
+for binding and identity checks; actual model picking and narrow layouts still
+need browser review.
+
 ## Retained-evidence audit
 
 `audit.mjs` inspects an already retained source/display package in memory. It
@@ -215,6 +233,9 @@ The workflow does not generate an entire interactive page, promise atomic
 multi-file reads or guarantee automatic crash recovery. A page still connects
 these modules to the shared viewer and verifies its actual interactions.
 
-Run `node --test shared/cad/audit.test.mjs` for audit regressions. They use
-synthetic fixtures; no real STEP specimen is retained, so they do not establish
-support for any particular STEP schema or assembly.
+Run `node --test shared/cad/audit.test.mjs` for synthetic audit regressions.
+The separate real specimen checks are in
+`examples/step-bearing-assembly/tests/source.test.mjs`; restore its pinned
+Apache-2.0 STEP first with `npm run fetch:sources`. Its retained source and
+display package establish results for that exact AP242 export, not arbitrary
+STEP coverage or engineering certification.

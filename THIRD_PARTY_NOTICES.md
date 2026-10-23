@@ -5,7 +5,8 @@ teaching assets are MIT-licensed, copyright 2026 TuTao; see [LICENSE](LICENSE).
 This does **not** relicense third-party designs, derived visual assets, service
 outputs or dependencies. The path-level policy and redistribution instructions
 are in [docs/licensing.md](docs/licensing.md). Primary upstream license evidence
-was checked on 2026-10-18.
+was checked on 2026-10-18; the Open-source Leader Arm addition was checked
+against its pinned upstream revision on 2026-10-23.
 
 ## Asset license map
 
@@ -14,11 +15,39 @@ was checked on 2026-10-18.
 | Unitree Robotics / MuJoCo Menagerie Unitree G1 | Unmodified `examples/humanoid/source/unitree_g1/` XML/license/notes, with STL meshes fetched from the pinned upstream commit; derived `assets/` geometry/identity data and G1 visual renders, including `docs/media/humanoid-g1-preview.jpg` | BSD-3-Clause, **model-directory** license, copyright 2016–2023 Unitree Robotics; not the Menagerie repository's general Apache license |
 | Kenney Interface Sounds / Calinou WAV packaging | Five unchanged WAVs in `examples/humanoid/audio/sfx/`; quiet authored uses in `humanoid-loop.wav` | CC0-1.0; source/license/hash records accompany the files |
 | Robonine SO-ARM 102 | Selected upstream documentation, simulation URDF/Xacro/metadata under `EXAMPLE_ROBOT/source/`, with STL meshes fetched from the pinned upstream commit; derived `EXAMPLE_ROBOT/assets/` geometry/identity data and robot renders, including the README image | CC BY 4.0 |
+| Matheshwaran Pitchai / Open-source Leader Arm | Unchanged STEP fetched into `examples/step-bearing-assembly/source/` from a pinned upstream commit; retained provenance/license/notice and source-derived GLB, manifest, scene contract and import report in `assets/` | Apache-2.0; source and derivative assets retain this license, distinct from the surrounding MIT interface |
 
 Original reusable software, original lesson text and separately code-synthesized
 music remain MIT. License notices for source geometry continue to apply when
 that geometry appears in a screenshot, animation or exported video. Source
 authors do not endorse this project.
+
+## Open-source Leader Arm STEP and derivatives
+
+Source: [Matheshwaranpitchai/open-source-leader-arm at revision 3cf2ee4](https://github.com/Matheshwaranpitchai/open-source-leader-arm/tree/3cf2ee41e645afe1173dda79914ffe31e174d7a6),
+by Matheshwaran Pitchai and contributors. The pinned repository provides the
+[Apache License 2.0](https://github.com/Matheshwaranpitchai/open-source-leader-arm/blob/3cf2ee41e645afe1173dda79914ffe31e174d7a6/LICENSE)
+and includes [`cad_files/assembly.step`](https://github.com/Matheshwaranpitchai/open-source-leader-arm/blob/3cf2ee41e645afe1173dda79914ffe31e174d7a6/cad_files/assembly.step)
+without a separate file-level license override. No upstream `NOTICE` exists at
+that revision. The exact license text, our attribution/change notice and the
+original file hash are retained in
+[the example's source package](examples/step-bearing-assembly/source/provenance.json).
+
+The unchanged STEP is downloaded by `npm run fetch:sources`; Git retains the
+derived display package instead of duplicating the upstream CAD file. Mechanism
+Studio imports its analytic surfaces with OCCT XCAF, preserves source definition
+and occurrence identities, tessellates the display mesh and converts coordinate
+basis/units for glTF. `assembly.glb`, `assembly-manifest.json`,
+`scene-contract.json` and `import-report.json` retain **Apache-2.0** under
+[the asset notice](examples/step-bearing-assembly/assets/LICENSE.md).
+Keep the [full license](examples/step-bearing-assembly/source/LICENSE.txt),
+[attribution and change notice](examples/step-bearing-assembly/source/NOTICE.md)
+with redistributed source/derivatives and accompanying visual-media material.
+
+The original inspector interface, tests and authored explanation remain MIT.
+No follower-arm simulation, firmware or upstream video is bundled. This is a
+placed CAD assembly, not a recovered joint model: conversion and rendering do
+not establish mates, exact measurement, contact or physical simulation.
 
 ## Unitree G1 visual source and derivatives
 

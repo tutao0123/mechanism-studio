@@ -7,6 +7,7 @@ import { checkedPath } from '../video/export.mjs';
 import { createGearboxPresentation } from '../../examples/gearbox/presentation.mjs';
 import { createGripperPresentation } from '../../examples/robotiq-gripper/presentation.mjs';
 import { createPlanetaryPresentation } from '../../examples/planetary-gears/presentation.mjs';
+import { createJointPresentation } from '../../examples/robot-joint/presentation.mjs';
 
 const hash = value => createHash('sha256').update(typeof value === 'string' || Buffer.isBuffer(value) ? value : JSON.stringify(value)).digest('hex');
 const ensure = (condition, message) => { if (!condition) throw new Error(message); };
@@ -15,6 +16,7 @@ const registry = {
   gearbox: { factory: createGearboxPresentation, source: 'assets/provenance.json' },
   'robotiq-gripper': { factory: createGripperPresentation, source: 'source/provenance.json' },
   'planetary-gears': { factory: createPlanetaryPresentation, source: 'assets/provenance.json' },
+  'robot-joint': { factory: createJointPresentation, source: 'assets/provenance.json' },
 };
 
 /** Numerical checks only. A passing report does not certify rendered legibility,

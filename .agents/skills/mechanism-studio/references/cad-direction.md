@@ -27,7 +27,14 @@ Current XCAF normalizes native m/mm to imported mm, retains original unit metada
 
 ## Specimen boundaries
 
-No real STEP specimen is currently retained in this repository; the CAD import and audit tests use synthetic fixtures. For a supplied package, report its own evidence:
+The [Leader Arm specimen](../../../../examples/step-bearing-assembly/README.md)
+retains a real Apache-2.0 AP242 display package and digest-pinned upstream STEP
+source. It has native metre units, 22 definitions and one root plus 99 parts,
+including 43 occurrences of one screw definition. Its source tree is flat;
+the inspector preserves that rather than inventing joint subassemblies.
+Source-based tests complement the tools' synthetic fixtures. Its successful
+import establishes the recorded result for that source and importer, not
+universal format support. For a supplied package, report its own evidence:
 
 - Source products/usages, subassembly and leaf occurrences stay distinct from display groups/fragments. Named source associations, grouping-only mapping and missing mappings are separate evidence, not an invented one-to-one recovery.
 - XCAF source definitions/occurrences carry full retained local/world placements. A source assembly may own solids as well as children; generated anonymous OCCT solids are display subdivisions, not invented engineering occurrences. Mesh retries disclose actual face/settings/results rather than hiding coarser recovery behind nominal fine tolerances.

@@ -16,7 +16,7 @@ async function collect(directory) {
   }
   return found;
 }
-const tests = ['model.test.mjs', ...await collect('shared'), ...await collect('tests'), ...await collect('examples'), ...await collect('EXAMPLE_ROBOT/tests'), ...await collect('EXAMPLE_ROBOT/kinetic/tests'), ...await collect('prototype-3d/tests'), ...await collect('prototype-3d/voice'), ...await collect('showcase'), ...await collect('tools/cad/tests'), ...await collect('tools/robot/tests'), ...await collect('tools/video')].sort();
+const tests = ['model.test.mjs', ...await collect('shared'), ...await collect('tests'), ...await collect('examples'), ...await collect('EXAMPLE_ROBOT/tests'), ...await collect('EXAMPLE_ROBOT/kinetic/tests'), ...await collect('prototype-3d/tests'), ...await collect('prototype-3d/voice'), ...await collect('showcase'), ...await collect('tools/cad/tests'), ...await collect('tools/robot/tests'), ...await collect('tools/video'), ...await collect('tools/studio')].sort();
 // Upstream CAD/mesh files are not kept in Git either; fetch any that are
 // missing from their pinned commits, verified by SHA-256.
 const sources = spawnSync(process.execPath, ['scripts/fetch-sources.mjs'], { cwd: root, stdio: 'inherit' });

@@ -1,6 +1,6 @@
 # Skill modules and runtime catalog
 
-The repository exposes **one project-local skill**, **four specialist authoring contracts** and **seven reusable `shared/` libraries**. The Showcase application and CAD/video/Blender tools are additional integration layers. The labels describe actual organization, not independently installed autonomous child skills.
+The repository exposes **one project-local skill**, **four specialist authoring contracts** and **seven reusable `shared/` libraries**. The Showcase application and Studio/CAD/video/Blender tools are additional integration layers. Studio is a command entry, not an eighth shared library or another skill. The labels describe actual organization, not independently installed autonomous child skills.
 
 Start with [the skill guide](skill-guide.md) for installation/use and [SKILL.md](../.agents/skills/mechanism-studio/SKILL.md) for task routing. Read only the detailed references relevant to a task.
 
@@ -51,9 +51,18 @@ Inputs distinguish reusable definitions from placed occurrences, preserve actual
 
 Mixed assemblies may own solids and children; retain that source classification. Repeated screws share a definition/mesh but remain separate occurrences. IDs are not names or mesh indices.
 
+`mountAssemblyInspector()` in `shared/cad/inspector.mjs` binds a real inspection
+index, viewer and page elements to source-tree/model selection, search,
+same-definition navigation, hide/isolate/reset and observation-only explosion.
+The [Leader Arm example](../examples/step-bearing-assembly/README.md) exercises
+this with 99 actual source parts and 43 occurrences of one screw definition.
+Its STEP tree is flat beneath one root; the UI preserves it rather than inventing
+joint subassemblies. Bearings remain single source parts, without invented
+internal balls or races.
+
 `inspectCadEvidence()` compares retained source/provenance, manifest, contract, GLB, importer report and optional AP214/AP242 product/usage evidence. It returns capabilities, findings and `verified / limited / failed`; these are evidence statuses, not engineering certification. No importer, mate solver, exact measurement, physics or publication-rights grant is supplied by this library.
 
-Focused checks: `node --test shared/cad/assembly.test.mjs shared/cad/audit.test.mjs`.
+Focused checks: `node --test shared/cad/assembly.test.mjs shared/cad/audit.test.mjs examples/step-bearing-assembly/tests/inspector.test.mjs`; the real specimen's source checks are in `examples/step-bearing-assembly/tests/source.test.mjs` and require `npm run fetch:sources` first.
 
 ### 4. Animation — explanatory process effects
 
@@ -129,6 +138,7 @@ Focused checks: `node --test shared/study/tests/runtime-delivery.test.mjs tests/
 
 | Component | Inputs → outputs | Commands and limits |
 | --- | --- | --- |
+| [Studio entry](../tools/studio/README.md) | Explicit registered example ID → named local construction recipe, existing preview server or supported browser-assisted export workbench | `npm run studio -- list`; `generate robot-joint`; `preview robot-joint`; `export robot-joint`. 19 preview entries, three original generation recipes and four export adapters: robot joint, planetary, Atlas gearbox and cinematic gearbox. Generation rebuilds actual geometry/identity/provenance/music; new mechanisms need authored builders. For export, open the printed WebGL browser URL, inspect calibration views and choose Generate; keep browser/command running. Uses the local video encoder, does not record the screen, infer an animation or publish |
 | [Showcase](../showcase/README.md) | Registered mechanism adapter, valid lesson/manifest, measured chapter durations → English silent/narrated tour with planned camera, captions and process | `npm run preview`, then `/showcase/?story=quadruped&mode=showcase&clean=1`. Existing app's narration path is separate from study music; not every old annotation has the new near-label implementation |
 | [CAD import](../tools/cad/README.md) and [XCAF backend](../tools/cad/README-xcaf.md) | Digest-pinned self-contained source and terms → actual two-setting XCAF graphs, GLB, contract, manifest/report; read-only audit report | Project-local `./tools/cad/setup-xcaf.ps1`; `npm run import:cad -- --example examples/my-assembly`; `npm run audit:cad -- --example examples/my-assembly`. One root, uniform explicit m/mm, exact source usage mapping; unsupported external refs/units/missing identities fail |
 | [Video export](../tools/video/README.md) | Sequential captured JPEGs, verified timeline-matched track, declared fps/count/size → H.264/AAC MP4, contact sheet and objective report | `node tools/video/export.mjs --help`. FFmpeg/FFprobe required; output project-local under output, audio mismatch ≤1 frame, at most 1920×1080 total pixels, clip ≤140 seconds. No browser capture/upload/publication |

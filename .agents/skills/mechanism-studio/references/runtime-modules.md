@@ -6,6 +6,7 @@ The [input brief](input-brief.md) and [module handoffs](module-orchestration.md)
 
 | Work | Reuse | Example-owned content |
 | --- | --- | --- |
+| Original generation, registered preview and supported direct-frame export | [Studio entry](../../../../tools/studio/README.md) | Fixed local construction recipe, server/route/audio metadata and film adapter. `npm run studio -- list`, `generate <id>`, `preview <id>`, `export <id>`; use the registry's declared capabilities rather than assuming every example supports generation or export |
 | GLB loading, stable binding, camera/orbit/picking, line art, display explosion | [shared/viewer](../../../../shared/viewer/README.md) | Mechanical equations, working-pose adapter, lessons and part descriptions |
 | Explosion groups/stages and envelope | [explosion contract](modules/assembly-explode.md), viewer display API | Real targets, coordinate-aware offsets and recovery checks |
 | Planned views, transitions and safe areas | [camera contract](modules/camera-direction.md), [director](../../../../showcase/camera-director.mjs) | Full motion/explosion bounds, targets, viewports and anchors |
@@ -20,7 +21,7 @@ The [input brief](input-brief.md) and [module handoffs](module-orchestration.md)
 | Input/report/output fingerprint handoff | [delivery evidence](delivery-evidence.md), [checker](../../../../scripts/check-delivery.mjs) | Declared paths, hashes, check scope and storage; the helper checks integrity and availability, not report truth or publication |
 | Optional provider-neutral speech API; existing Doubao lesson/digest/browser playback | [shared/voice](../../../../shared/voice/README.md) | Text, explicit speech model/voice/endpoint, media-clock binding; old lesson integration stays separate |
 | GLB/accessor/units/identity/hierarchy/rest/ownership checks | [shared/assets](../../../../shared/assets/README.md) | Mechanism length/phase/contact/mapping invariants |
-| Definition/occurrence identity, tree selection, hide/isolate | [shared/cad](../../../../shared/cad/README.md) | Actual XCAF graph/provenance/matrices and page layout |
+| Definition/occurrence identity, linked tree/model selection, repeated-instance navigation, hide/isolate | [shared/cad](../../../../shared/cad/README.md), `mountAssemblyInspector` in `shared/cad/inspector.mjs` | Actual XCAF graph/provenance/matrices, viewer bindings and page elements; source hierarchy stays unchanged |
 | New STEP import and retained-evidence audit | [CAD workflow](cad-workflow.md), [tools/cad](../../../../tools/cad/README.md) | Per-source provenance and thin page; never copied specimen constants |
 | Flow paths, pulses and explanatory process graphics | [shared/animation](../../../../shared/animation/README.md) | Pure process model, regions, phase and assumptions |
 | Narrated/silent mechanism tours | [showcase](../../../../showcase/README.md) | Story registration, mechanism/framing adapters and measured chapter timing |
@@ -31,14 +32,26 @@ The [input brief](input-brief.md) and [module handoffs](module-orchestration.md)
 - [Inline-four](../../../../examples/inline-four/README.md): one slider-crank computation drives poses/readouts and four-stroke explanations.
 - [Turbofan](../../../../examples/turbofan/README.md): authored two-spool teaching motion and qualitative process regions.
 - [Quadruped](../../../../examples/quadruped/README.md): fixed-body geometric gait, foot trajectory, analytic IK and FK checks; not dynamic balance.
-- STEP work: no real STEP example is retained. The [CAD workflow](cad-workflow.md) imports and audits a user-prepared package (XCAF definitions/repeated occurrences and actual local/world placements, checked by `npm run audit:cad`); its tests use synthetic fixtures. The linked tree/model inspector page left with the GPL Galileo example (Git history before 2026-10-20).
+- [Leader Arm STEP inspector](../../../../examples/step-bearing-assembly/README.md): a real Apache-2.0 AP242 source with one root, 99 part occurrences and 43 placements of one screw definition. `npm run studio -- preview step-bearing-assembly` opens the silent source-tree/model inspector. The actual source tree is flat; six bearings, bearing housings and rotors remain real source instances, not invented joint assemblies. `npm run fetch:sources` restores pinned source bytes for `audit:cad` and source tests; existing GLB viewing needs no CAD runtime. The [CAD workflow](cad-workflow.md) covers adding a different source.
 - [SO-ARM 102 study](../../../../EXAMPLE_ROBOT/README.md): sourced URDF link identity, music clock, grouped explosion, near sequential labels and scene-group fades. Eight merged links are not per-screw/native STEP solids.
 - [SO-ARM kinetic cut](../../../../EXAMPLE_ROBOT/kinetic/README.md): explicit 25.714-second variant using five revolute/two prismatic source-backed joints, opposed jaws, zero-pose gate before explosion, deliberate detail/whole cuts and original score; original study retained.
 - [Gearbox](../../../../examples/gearbox/README.md): original 124-part teaching model in 15 nested assemblies, exact tooth-ratio kinematics, power-path accents and a synchronizer close-up with solved dog-tooth alignment; atlas, blueprint and cinematic editions of one model. Its `presentation.mjs` demonstrates the executable study subset; the cinematic adapter remains separate. Authored internals, not source CAD.
+- [Planetary reducer](../../../../examples/planetary-gears/README.md): original 80-part teaching assembly, ideal coupled gear/bearing motion and 36-second Atlas study. It is also a supported Studio direct-frame export adapter, not an imported commercial CAD assembly.
+- [Original robot joint](../../../../examples/robot-joint/README.md): 129 authored occurrences, 44 geometry definitions and five subassemblies beneath the root. Its motor, 4:1 reducer, detailed bearings and output flange have local generation, linked part selection, a 36-second Atlas story and direct-frame export; motor motion is illustrative, with no electromagnetic or load solver.
 - [Allegro hand](../../../../examples/allegro-hand/README.md): source-axis finger gestures, valid neutral thumb pose, parent-aware link explosion and one original finger close-up; source references stay immutable.
 - [Robotiq gripper](../../../../examples/robotiq-gripper/README.md): analytic four-bar closure, equal driver angles, source-link separation and reassembly, with a `presentation.mjs` adapter for the executable study subset. No contact adaptation or hidden actuator internals.
 
 Use actual current reports, not this map's prose, for counts and hashes. Do not turn an example's axes, IDs, formulas, steps or tool paths into universal constraints.
+
+The Studio registry currently lists 19 preview IDs. The three original generation
+recipes are `robot-joint`, `planetary-gears` and `gearbox`. Unified exports support
+`robot-joint`, `planetary-gears`, `gearbox` and `gearbox-cinematic`; dimensions, duration,
+score and frame rate belong to their adapters. `export` starts a local
+browser-assisted workbench, then the user reviews calibration views and clicks
+Generate. The browser and local command must stay open; FFmpeg/FFprobe encode
+and check the result. Other entries remain preview-only. Keep completed-film
+review distinct from numerical checks; the tool neither publishes online nor
+turns a static STEP into motion.
 
 ## Integration invariants
 

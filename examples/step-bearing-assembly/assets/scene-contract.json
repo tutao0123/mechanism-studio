@@ -1,0 +1,5863 @@
+{
+  "schemaVersion": "1.0.0",
+  "mechanismId": "step-step-bearing-assembly",
+  "assetRevision": "1",
+  "units": {
+    "source": "m",
+    "imported": "mm",
+    "asset": "m",
+    "angle": "rad"
+  },
+  "sourceSHA256": "0332d1eb757d3abc3b345d5eed51ba9c53a472ea5c05a08fcfc4bf8cc9f63648",
+  "coordinateMap": "0.001*[x,z,-y]; local matrix C*M*C^-1",
+  "identity": "part_id equals occurrence_id; shared definition meshes retain separate occurrence nodes",
+  "limitations": [
+    "IDs are stable for this exact source hash and importer version; re-exported source may renumber entities.",
+    "Face indices identify imported definition topology only, not persistent native feature IDs.",
+    "No source mate recovery, constraints, physical simulation, exact section, or interference API is implemented.",
+    "Self-contained STEP files with exact NAUO mapping are accepted; external references are disabled."
+  ],
+  "parts": [
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-480",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30864",
+      "sourceKind": "part",
+      "label": "washer_round",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -3.1651018332471003e-15,
+          -2.4320823133194804e-14,
+          0,
+          -2.43208231331948e-14,
+          -1.19726469329624e-15,
+          1,
+          0,
+          -3.165101833247129e-15,
+          1,
+          1.197264693296163e-15,
+          0,
+          0.0265438970863981,
+          0.00219191386619709,
+          -0.0297788000733998,
+          1
+        ]
+      },
+      "explode": [
+        0.03270143905503354,
+        0.03456025769605303,
+        -0.11384540213732965
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:1",
+        "nauoEntity": "#480",
+        "occurrenceId": "NAUO1",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30864",
+        "definition": {
+          "productDefinitionEntity": "#30864",
+          "productEntity": "#30952",
+          "productId": "washer_round",
+          "productName": "washer_round"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.18225135862827302,
+          -0.0435602723062038,
+          -0.004
+        ],
+        "max": [
+          -0.162251358628273,
+          -0.0235602723062038,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-481",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          4.057525895207028e-15,
+          2.40571451648464e-14,
+          0,
+          4.05752589520705e-15,
+          -1,
+          -9.185697195655241e-16,
+          0,
+          2.4057145164846395e-14,
+          9.185697195656215e-16,
+          -1,
+          0,
+          0.206804949087261,
+          -0.0816080861338031,
+          0.118970620992992,
+          1
+        ]
+      },
+      "explode": [
+        0.10336237471874604,
+        -0.05954157483028455,
+        0.03155299471253272
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:2",
+        "nauoEntity": "#481",
+        "occurrenceId": "NAUO2",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-482",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.96117547738292e-15,
+          2.3786528302594004e-14,
+          0,
+          -2.3786528302594e-14,
+          -4.78724986851154e-16,
+          1,
+          0,
+          3.961175477382931e-15,
+          -1,
+          -4.787249868510599e-16,
+          0,
+          0.209773088492586,
+          -0.0790302533558819,
+          0.245010927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.04580478578157757,
+        -0.022732616606586077,
+        0.11229301339718212
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:3",
+        "nauoEntity": "#482",
+        "occurrenceId": "NAUO3",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-483",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.198795255714668,
+          -0.0586580861338029,
+          0.1109609276204,
+          1
+        ]
+      },
+      "explode": [
+        0.11952239533941769,
+        -0.020819074082335246,
+        0.022484089547503243
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:4",
+        "nauoEntity": "#483",
+        "occurrenceId": "NAUO4",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-484",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.3835100559921402e-14,
+          -1.0307312495286296e-15,
+          1,
+          0,
+          3.76826783746299e-15,
+          -1,
+          -1.03073124952854e-15,
+          0,
+          1,
+          3.768267837462965e-15,
+          2.3835100559921405e-14,
+          0,
+          0.183270255714666,
+          -0.0947580861338034,
+          0.2009609276204,
+          1
+        ]
+      },
+      "explode": [
+        0.034808239796358845,
+        -0.04912472611860078,
+        0.10770199089222822
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:5",
+        "nauoEntity": "#484",
+        "occurrenceId": "NAUO5",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-485",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30866",
+      "sourceKind": "part",
+      "label": "handle-body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.49592013723543e-14,
+          2.5322961367420732e-14,
+          -1,
+          0,
+          -1.27993239479071e-15,
+          1,
+          2.53229613674207e-14,
+          0,
+          1,
+          1.2799323947900778e-15,
+          2.4959201372354332e-14,
+          0,
+          0.168795255714671,
+          -0.021608086133802305,
+          -0.0633390723796003,
+          1
+        ]
+      },
+      "explode": [
+        -0.025196316707554692,
+        0.020445011271275258,
+        -0.11904502616484232
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:6",
+        "nauoEntity": "#485",
+        "occurrenceId": "NAUO6",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30866",
+        "definition": {
+          "productDefinitionEntity": "#30866",
+          "productEntity": "#30954",
+          "productId": "handle-body",
+          "productName": "handle-body"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.019960534568565433,
+          -0.105
+        ],
+        "max": [
+          0.02,
+          0.019960534568565436,
+          -8.67361737988404e-19
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-486",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30867",
+      "sourceKind": "part",
+      "label": "bearing_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.0575259457024e-15,
+          -2.4522051056408104e-14,
+          0,
+          -2.45220510564081e-14,
+          -1.0574779741624902e-15,
+          1,
+          0,
+          -4.057525945702426e-15,
+          1,
+          1.0574779741623904e-15,
+          0,
+          0.198795255714668,
+          -0.0629080861338029,
+          0.1109609276204,
+          1
+        ]
+      },
+      "explode": [
+        0.11233235315620288,
+        -0.04647012083198764,
+        0.02113152669232748
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:7",
+        "nauoEntity": "#486",
+        "occurrenceId": "NAUO7",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30867",
+        "definition": {
+          "productDefinitionEntity": "#30867",
+          "productEntity": "#30955",
+          "productId": "bearing_housing",
+          "productName": "bearing_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.019960534568565433,
+          -0.0135
+        ],
+        "max": [
+          0.02,
+          0.019960534568565436,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-487",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30868",
+      "sourceKind": "part",
+      "label": "washer_perpendicular_link",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.4057145164846395e-14,
+          -6.11306186954156e-16,
+          1,
+          0,
+          1,
+          4.05605813114247e-15,
+          2.40571451648464e-14,
+          0,
+          -4.056058131142485e-15,
+          1,
+          6.113061869540584e-16,
+          0,
+          0.19879525571467,
+          -0.0301080861338027,
+          0.00465732603766647,
+          1
+        ]
+      },
+      "explode": [
+        0.0423454251676885,
+        0.00971716072268956,
+        -0.11548598560412027
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:8",
+        "nauoEntity": "#487",
+        "occurrenceId": "NAUO8",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30868",
+        "definition": {
+          "productDefinitionEntity": "#30868",
+          "productEntity": "#30956",
+          "productId": "washer_perpendicular_link",
+          "productName": "washer_perpendicular_link"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.038854889642649396,
+          -0.010155709890246516,
+          -0.011
+        ],
+        "max": [
+          -0.025496398417266,
+          0.010155709890246518,
+          -0.006999999999999999
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-488",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.96117547738292e-15,
+          2.3779589408690005e-14,
+          0,
+          -2.3779589408690002e-14,
+          -6.45258435581839e-16,
+          1,
+          0,
+          3.961175477382935e-15,
+          -1,
+          -6.452584355817448e-16,
+          0,
+          0.190785562342073,
+          -0.0820177795063947,
+          0.24966092762040104,
+          1
+        ]
+      },
+      "explode": [
+        0.03113542063301648,
+        -0.02523746591518977,
+        0.11669715940108709
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:9",
+        "nauoEntity": "#488",
+        "occurrenceId": "NAUO9",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-489",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30864",
+      "sourceKind": "part",
+      "label": "washer_round",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.05752595323335e-15,
+          -2.3994695119710804e-14,
+          0,
+          -2.39946951197108e-14,
+          -1.0574779741624902e-15,
+          1,
+          0,
+          -4.0575259532333754e-15,
+          1,
+          1.0574779741623926e-15,
+          0,
+          0.0265438970863915,
+          -0.0549080861338036,
+          0.144521199926601,
+          1
+        ]
+      },
+      "explode": [
+        0.1200438820207108,
+        -0.017437953388273763,
+        0.022582189599859852
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:10",
+        "nauoEntity": "#489",
+        "occurrenceId": "NAUO10",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30864",
+        "definition": {
+          "productDefinitionEntity": "#30864",
+          "productEntity": "#30952",
+          "productId": "washer_round",
+          "productName": "washer_round"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.18225135862827302,
+          -0.0435602723062038,
+          -0.004
+        ],
+        "max": [
+          -0.162251358628273,
+          -0.0235602723062038,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-490",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.198795255714672,
+          -0.0015580861338023303,
+          -0.0633390723795995,
+          1
+        ]
+      },
+      "explode": [
+        0.032770909226276713,
+        0.033685863635697456,
+        -0.11408725264330934
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:11",
+        "nauoEntity": "#490",
+        "occurrenceId": "NAUO11",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-491",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30869",
+      "sourceKind": "part",
+      "label": "rotor",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.6918887034588493e-15,
+          -1,
+          -1.19726469329617e-15,
+          0,
+          1,
+          2.69188870345882e-15,
+          2.4313884239291e-14,
+          0,
+          -2.4313884239290998e-14,
+          -1.1972646932962356e-15,
+          1,
+          0,
+          0.198795255714671,
+          -0.0151080861338027,
+          -0.0160390723795995,
+          1
+        ]
+      },
+      "explode": [
+        0.04177513601732456,
+        0.03069373151588401,
+        -0.11197010302961599
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:12",
+        "nauoEntity": "#491",
+        "occurrenceId": "NAUO12",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30869",
+        "definition": {
+          "productDefinitionEntity": "#30869",
+          "productEntity": "#30957",
+          "productId": "rotor",
+          "productName": "rotor"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0058,
+          -0.0058,
+          -0.021
+        ],
+        "max": [
+          0.0058,
+          0.0058,
+          0.0025
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-492",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30870",
+      "sourceKind": "part",
+      "label": "link_shoulder_to_elbow",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -2.56931640812741e-15,
+          -2.4626134464966703e-14,
+          0,
+          -2.46261344649667e-14,
+          -1.0574779741625e-15,
+          1,
+          0,
+          -2.569316408127436e-15,
+          1,
+          1.0574779741624367e-15,
+          0,
+          0.343517264014497,
+          -0.0757080861338027,
+          0.0823168364314964,
+          1
+        ]
+      },
+      "explode": [
+        0.07536722385840666,
+        -0.04712434839146817,
+        0.08557831777181832
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:13",
+        "nauoEntity": "#492",
+        "occurrenceId": "NAUO13",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30870",
+        "definition": {
+          "productDefinitionEntity": "#30870",
+          "productEntity": "#30958",
+          "productId": "link_shoulder_to_elbow",
+          "productName": "link_shoulder_to_elbow"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0.12472306271028133,
+          0.00868407411533542,
+          -0.008
+        ],
+        "max": [
+          0.1647209538893747,
+          0.13860410826248018,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-493",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30871",
+      "sourceKind": "part",
+      "label": "608 bearing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.6918887034588493e-15,
+          -1,
+          -1.19726469329617e-15,
+          0,
+          1,
+          2.69188870345882e-15,
+          2.4383273178330004e-14,
+          0,
+          -2.438327317833e-14,
+          -1.1972646932962358e-15,
+          1,
+          0,
+          0.198795255714671,
+          -0.0151080861338027,
+          -0.0268390723795995,
+          1
+        ]
+      },
+      "explode": [
+        0.04136145725165213,
+        0.030372533261104583,
+        -0.11221100745212483
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:14",
+        "nauoEntity": "#493",
+        "occurrenceId": "NAUO14",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30871",
+        "definition": {
+          "productDefinitionEntity": "#30871",
+          "productEntity": "#30959",
+          "productId": "608 bearing",
+          "productName": "608 bearing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.010960372373967792,
+          -0.010990088628251496,
+          -0.0035
+        ],
+        "max": [
+          0.011,
+          0.010990088628251496,
+          0.0035
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-494",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.91357393289165e-15,
+          2.4084900740462002e-14,
+          0,
+          2.4084900740462e-14,
+          8.5328978863887e-16,
+          -1,
+          0,
+          -3.91357393289167e-15,
+          1,
+          8.532897886387757e-16,
+          0,
+          0.180795255714666,
+          -0.0585080861338029,
+          0.2192109276204,
+          1
+        ]
+      },
+      "explode": [
+        0.030137884031101517,
+        -0.008683797093708128,
+        0.11933511943372391
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:15",
+        "nauoEntity": "#494",
+        "occurrenceId": "NAUO15",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-495",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30872",
+      "sourceKind": "part",
+      "label": "Part 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.281418761232262e-15,
+          -2.36824448940345e-14,
+          0,
+          4.2814187612323e-15,
+          -1,
+          -1.60094033830434e-15,
+          0,
+          -2.3682444894034493e-14,
+          -1.6009403383044414e-15,
+          1,
+          0,
+          0.198785562342075,
+          -0.103158086133803,
+          0.20097062099299304,
+          1
+        ]
+      },
+      "explode": [
+        0.048329719152997185,
+        -0.05243572754531477,
+        0.1006941102522084
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:16",
+        "nauoEntity": "#495",
+        "occurrenceId": "NAUO16",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30872",
+        "definition": {
+          "productDefinitionEntity": "#30872",
+          "productEntity": "#30960",
+          "productId": "Part 1",
+          "productName": "Part 1"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0115,
+          -0.0033,
+          -0.0115
+        ],
+        "max": [
+          0.0115,
+          0.00005,
+          0.0115
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-496",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30871",
+      "sourceKind": "part",
+      "label": "608 bearing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.198795255714665,
+          -0.0900080861338031,
+          0.2374609276204,
+          1
+        ]
+      },
+      "explode": [
+        0.03935155149145918,
+        -0.03312433137579592,
+        0.11215527264564723
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:17",
+        "nauoEntity": "#496",
+        "occurrenceId": "NAUO17",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30871",
+        "definition": {
+          "productDefinitionEntity": "#30871",
+          "productEntity": "#30959",
+          "productId": "608 bearing",
+          "productName": "608 bearing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.010960372373967792,
+          -0.010990088628251496,
+          -0.0035
+        ],
+        "max": [
+          0.011,
+          0.010990088628251496,
+          0.0035
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-497",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          2.74289097566748e-15,
+          2.4223678618540103e-14,
+          0,
+          2.42236786185401e-14,
+          1.03010496168906e-15,
+          -1,
+          0,
+          -2.742890975667505e-15,
+          1,
+          1.0301049616889938e-15,
+          0,
+          0.198795255714671,
+          -0.0151080861338026,
+          -0.0375890723795995,
+          1
+        ]
+      },
+      "explode": [
+        0.03858574021531538,
+        0.028350364916092274,
+        -0.11371881364690085
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:18",
+        "nauoEntity": "#497",
+        "occurrenceId": "NAUO18",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-498",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30873",
+      "sourceKind": "part",
+      "label": "handle_base",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -1.2799323947900903e-15,
+          -2.4265311981962808e-14,
+          0,
+          2.4265311981962805e-14,
+          1.31972937321097e-15,
+          -1,
+          0,
+          1.279932394790122e-15,
+          -1,
+          -1.3197293732109392e-15,
+          0,
+          0.298795255714675,
+          -0.0184080861338022,
+          -0.0633390723795971,
+          1
+        ]
+      },
+      "explode": [
+        0.030010561743429778,
+        0.02024426033853865,
+        -0.11795807400634865
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:19",
+        "nauoEntity": "#498",
+        "occurrenceId": "NAUO19",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30873",
+        "definition": {
+          "productDefinitionEntity": "#30873",
+          "productEntity": "#30961",
+          "productId": "handle_base",
+          "productName": "handle_base"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0.08015686516701562,
+          -0.02,
+          -0.016760534568565435
+        ],
+        "max": [
+          0.1307,
+          0.02,
+          0.023200000000000002
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-499",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          2.85324166201314e-15,
+          2.2370993946196904e-14,
+          0,
+          -2.23709939461969e-14,
+          -1.60343003655212e-15,
+          1,
+          0,
+          2.853241662013176e-15,
+          -1,
+          -1.6034300365520561e-15,
+          0,
+          0.206785562342079,
+          -0.0230983927612107,
+          -0.014639072379599301,
+          1
+        ]
+      },
+      "explode": [
+        0.05201601412540153,
+        0.025224855937045595,
+        -0.10900739439854201
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:20",
+        "nauoEntity": "#499",
+        "occurrenceId": "NAUO20",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-500",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30874",
+      "sourceKind": "part",
+      "label": "rest_pose_holder_base",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -3.612649743876185e-15,
+          1,
+          1.05747797416241e-15,
+          0,
+          -1,
+          -3.61264974387616e-15,
+          -2.36685671062276e-14,
+          0,
+          -2.3668567106227597e-14,
+          -1.0574779741624955e-15,
+          1,
+          0,
+          0.198795255714666,
+          -0.0900080861338031,
+          0.230960927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.047306092301288474,
+        -0.022036900588969413,
+        0.1118082276029444
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:21",
+        "nauoEntity": "#500",
+        "occurrenceId": "NAUO21",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30874",
+        "definition": {
+          "productDefinitionEntity": "#30874",
+          "productEntity": "#30962",
+          "productId": "rest_pose_holder_base",
+          "productName": "rest_pose_holder_base"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0035,
+          -0.02889378627381016,
+          -0.014407973895016121
+        ],
+        "max": [
+          0.0365,
+          0.023,
+          -0.005
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-501",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30875",
+      "sourceKind": "part",
+      "label": "link_perpendicular_base",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.961175477382828e-15,
+          2.3835100559921402e-14,
+          0,
+          3.96117547738284e-15,
+          -1,
+          -5.21325989844498e-16,
+          0,
+          2.38351005599214e-14,
+          5.213259898445924e-16,
+          -1,
+          0,
+          0.148795255714666,
+          -0.0900080861338033,
+          0.2270109276204,
+          1
+        ]
+      },
+      "explode": [
+        0.040825285029218665,
+        -0.03437918739302779,
+        0.1112471963358003
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:22",
+        "nauoEntity": "#501",
+        "occurrenceId": "NAUO22",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30875",
+        "definition": {
+          "productDefinitionEntity": "#30875",
+          "productEntity": "#30963",
+          "productId": "link_perpendicular_base",
+          "productName": "link_perpendicular_base"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0.03,
+          -0.019960534568565464,
+          -0.0069500000000000004
+        ],
+        "max": [
+          0.07,
+          0.01996053456856542,
+          -0.0019499999999999951
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-502",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30876",
+      "sourceKind": "part",
+      "label": "wire_holder",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          5.618803174418155e-15,
+          2.39183672867682e-14,
+          0,
+          -5.61880317441818e-15,
+          1,
+          1.05747794769258e-15,
+          0,
+          -2.3918367286768194e-14,
+          -1.0574779476927145e-15,
+          1,
+          0,
+          0.071517332130685,
+          -0.020786482446434905,
+          0.0309609276203975,
+          1
+        ]
+      },
+      "explode": [
+        0.06557042344307437,
+        -0.01979848411407783,
+        -0.10263094422433468
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:23",
+        "nauoEntity": "#502",
+        "occurrenceId": "NAUO23",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30876",
+        "definition": {
+          "productDefinitionEntity": "#30876",
+          "productEntity": "#30964",
+          "productId": "wire_holder",
+          "productName": "wire_holder"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0.12177821264916261,
+          -0.05185417938232421,
+          -0.005
+        ],
+        "max": [
+          0.13177763451880536,
+          -0.0349716036873684,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-503",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30877",
+      "sourceKind": "part",
+      "label": "encoder_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.3835100559921396e-14,
+          -1.41930931145616e-15,
+          1,
+          0,
+          1,
+          3.9595944390715e-15,
+          2.3835100559921402e-14,
+          0,
+          -3.959594439071534e-15,
+          1,
+          1.4193093114560658e-15,
+          0,
+          0.298795255714666,
+          -0.096708086133803,
+          0.200960927620403,
+          1
+        ]
+      },
+      "explode": [
+        0.047743793093733514,
+        -0.05528228674011493,
+        0.09944330098053081
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:24",
+        "nauoEntity": "#503",
+        "occurrenceId": "NAUO24",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30877",
+        "definition": {
+          "productDefinitionEntity": "#30877",
+          "productEntity": "#30965",
+          "productId": "encoder_housing",
+          "productName": "encoder_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.11996053456856544,
+          -0.0148
+        ],
+        "max": [
+          0.02,
+          -0.08003946543143457,
+          -0.0018000000000000002
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-504",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.5125734826048064e-14,
+          2.53229613674207e-14,
+          -1,
+          0,
+          -1,
+          -1.40239706146698e-15,
+          -2.51257348260481e-14,
+          0,
+          -1.4023970614676162e-15,
+          1,
+          2.532296136742067e-14,
+          0,
+          0.167545255714672,
+          -0.021608086133802003,
+          -0.0788640723796004,
+          1
+        ]
+      },
+      "explode": [
+        0.010656802614083253,
+        0.019066193042848786,
+        -0.1214392191880171
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:25",
+        "nauoEntity": "#504",
+        "occurrenceId": "NAUO25",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-505",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.0560581370001515e-15,
+          -2.40363284831346e-14,
+          0,
+          4.05605813700018e-15,
+          -1,
+          -1.17994264745969e-15,
+          0,
+          -2.4036328483134595e-14,
+          -1.1799426474597875e-15,
+          1,
+          0,
+          0.214320255714671,
+          -0.0591580861338027,
+          -0.0240390723795992,
+          1
+        ]
+      },
+      "explode": [
+        0.05505006760891934,
+        -0.0083207807363142,
+        -0.11011278663393075
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:26",
+        "nauoEntity": "#505",
+        "occurrenceId": "NAUO26",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-506",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.198795255714671,
+          -0.0408580861338027,
+          -0.0240390723795995,
+          1
+        ]
+      },
+      "explode": [
+        0.0433972916280108,
+        0.008703382941519464,
+        -0.11517594072038054
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:27",
+        "nauoEntity": "#506",
+        "occurrenceId": "NAUO27",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-507",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30871",
+      "sourceKind": "part",
+      "label": "608 bearing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -3.98719624422648e-15,
+          -2.4029389589230703e-14,
+          0,
+          2.40293895892307e-14,
+          1.0574779741624902e-15,
+          -1,
+          0,
+          3.987196244226505e-15,
+          -1,
+          -1.0574779741623941e-15,
+          0,
+          0.198795255714671,
+          -0.0516080861338027,
+          -0.0240390723795996,
+          1
+        ]
+      },
+      "explode": [
+        0.04348669635715304,
+        -0.0014654263127243385,
+        -0.11546138264268581
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:28",
+        "nauoEntity": "#507",
+        "occurrenceId": "NAUO28",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30871",
+        "definition": {
+          "productDefinitionEntity": "#30871",
+          "productEntity": "#30959",
+          "productId": "608 bearing",
+          "productName": "608 bearing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.010960372373967792,
+          -0.010990088628251496,
+          -0.0035
+        ],
+        "max": [
+          0.011,
+          0.010990088628251496,
+          0.0035
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-508",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30876",
+      "sourceKind": "part",
+      "label": "wire_holder",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.071517332130685,
+          -0.020786482446435,
+          0.06096092762039751,
+          1
+        ]
+      },
+      "explode": [
+        0.08835265278787609,
+        -0.02667740271917169,
+        -0.08189442011274094
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:29",
+        "nauoEntity": "#508",
+        "occurrenceId": "NAUO29",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30876",
+        "definition": {
+          "productDefinitionEntity": "#30876",
+          "productEntity": "#30964",
+          "productId": "wire_holder",
+          "productName": "wire_holder"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0.12177821264916261,
+          -0.05185417938232421,
+          -0.005
+        ],
+        "max": [
+          0.13177763451880536,
+          -0.0349716036873684,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-509",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30872",
+      "sourceKind": "part",
+      "label": "Part 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.0380341369654106e-15,
+          -2.43277620270988e-14,
+          0,
+          4.03803413696544e-15,
+          -1,
+          -1.19726469164178e-15,
+          0,
+          -2.4327762027098793e-14,
+          -1.1972646916418783e-15,
+          1,
+          0,
+          0.198804949087265,
+          -0.0282580861338027,
+          -0.063329379007008,
+          1
+        ]
+      },
+      "explode": [
+        0.03376304298625547,
+        0.016611581211738582,
+        -0.1175103544971763
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:30",
+        "nauoEntity": "#509",
+        "occurrenceId": "NAUO30",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30872",
+        "definition": {
+          "productDefinitionEntity": "#30872",
+          "productEntity": "#30960",
+          "productId": "Part 1",
+          "productName": "Part 1"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0115,
+          -0.0033,
+          -0.0115
+        ],
+        "max": [
+          0.0115,
+          0.00005,
+          0.0115
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-510",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          2.64023773789695e-15,
+          2.4057145164846307e-14,
+          0,
+          -2.4057145164846304e-14,
+          -1.60343003655213e-15,
+          1,
+          0,
+          2.640237737896989e-15,
+          -1,
+          -1.6034300365520666e-15,
+          0,
+          0.190785562342079,
+          -0.00709839276121026,
+          -0.0146390723795997,
+          1
+        ]
+      },
+      "explode": [
+        0.03745548745809155,
+        0.04069868327717804,
+        -0.11029630435730231
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:31",
+        "nauoEntity": "#510",
+        "occurrenceId": "NAUO31",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-511",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -3.88089753157343e-15,
+          -2.37102004696503e-14,
+          0,
+          3.88089753157347e-15,
+          -1,
+          -1.72340502483653e-15,
+          0,
+          -2.3710200469650293e-14,
+          -1.723405024836622e-15,
+          1,
+          0,
+          0.190785562342074,
+          -0.0977580861338033,
+          0.208970620992993,
+          1
+        ]
+      },
+      "explode": [
+        0.03937625701621728,
+        -0.04798719602651775,
+        0.10663634707267182
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:32",
+        "nauoEntity": "#511",
+        "occurrenceId": "NAUO32",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-512",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30869",
+      "sourceKind": "part",
+      "label": "rotor",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.198795255714665,
+          -0.0900080861338031,
+          0.248260927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.038967948332259396,
+        -0.03281511438506268,
+        0.11237988426212041
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:33",
+        "nauoEntity": "#512",
+        "occurrenceId": "NAUO33",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30869",
+        "definition": {
+          "productDefinitionEntity": "#30869",
+          "productEntity": "#30957",
+          "productId": "rotor",
+          "productName": "rotor"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0058,
+          -0.0058,
+          -0.021
+        ],
+        "max": [
+          0.0058,
+          0.0058,
+          0.0025
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-513",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.5125734826048064e-14,
+          2.53229613674207e-14,
+          -1,
+          0,
+          -1,
+          -1.40239705154081e-15,
+          -2.51257348260481e-14,
+          0,
+          -1.4023970515414462e-15,
+          1,
+          2.532296136742067e-14,
+          0,
+          0.167545255714671,
+          -0.0216080861338027,
+          -0.04781407237960031,
+          1
+        ]
+      },
+      "explode": [
+        0.012773906046724688,
+        0.022853924147587943,
+        -0.12057817626529152
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:34",
+        "nauoEntity": "#513",
+        "occurrenceId": "NAUO34",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-514",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30878",
+      "sourceKind": "part",
+      "label": "rest_pose_holder_body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          0.173648177666954,
+          1.5048397709909898e-15,
+          -0.9848077530122041,
+          0,
+          0.9848077530122041,
+          3.5103119060702205e-15,
+          0.173648177666954,
+          0,
+          3.718295064502341e-15,
+          -1,
+          -8.724186079813305e-16,
+          0,
+          0.101524378185883,
+          -0.06850808613380331,
+          0.33070200496205004,
+          1
+        ]
+      },
+      "explode": [
+        0.017318152140644003,
+        -0.009361341625346272,
+        0.12180729865449373
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:35",
+        "nauoEntity": "#514",
+        "occurrenceId": "NAUO35",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30878",
+        "definition": {
+          "productDefinitionEntity": "#30878",
+          "productEntity": "#30966",
+          "productId": "rest_pose_holder_body",
+          "productName": "rest_pose_holder_body"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0.119422375203276,
+          0.0107424650801508,
+          -0.015
+        ],
+        "max": [
+          0.131922008299828,
+          0.0766499521482272,
+          -0.005
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-515",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30875",
+      "sourceKind": "part",
+      "label": "link_perpendicular_base",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.4057145164846395e-14,
+          -1.19726469660496e-15,
+          1,
+          0,
+          1,
+          3.81112877131302e-15,
+          2.40571451648464e-14,
+          0,
+          -3.81112877131305e-15,
+          1,
+          1.1972646966048683e-15,
+          0,
+          0.19879525571467302,
+          -0.0411580861338026,
+          -0.0740390723795996,
+          1
+        ]
+      },
+      "explode": [
+        0.043482470004312025,
+        0.0040278498530303105,
+        -0.11540200320611212
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:36",
+        "nauoEntity": "#515",
+        "occurrenceId": "NAUO36",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30875",
+        "definition": {
+          "productDefinitionEntity": "#30875",
+          "productEntity": "#30963",
+          "productId": "link_perpendicular_base",
+          "productName": "link_perpendicular_base"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0.03,
+          -0.019960534568565464,
+          -0.0069500000000000004
+        ],
+        "max": [
+          0.07,
+          0.01996053456856542,
+          -0.0019499999999999951
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-516",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30879",
+      "sourceKind": "part",
+      "label": "link_perpendicular_body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.691888703458839e-15,
+          1,
+          1.19726469329617e-15,
+          0,
+          -1,
+          -2.69188870345881e-15,
+          -2.43624564966183e-14,
+          0,
+          -2.4362456496618298e-14,
+          -1.1972646932962358e-15,
+          1,
+          0,
+          0.198795255714671,
+          -0.0151080861338027,
+          -0.0333390723795996,
+          1
+        ]
+      },
+      "explode": [
+        0.03412397016091608,
+        0.025066703266034603,
+        -0.11589558302164686
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:37",
+        "nauoEntity": "#516",
+        "occurrenceId": "NAUO37",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30879",
+        "definition": {
+          "productDefinitionEntity": "#30879",
+          "productEntity": "#30967",
+          "productId": "link_perpendicular_body",
+          "productName": "link_perpendicular_body"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.01999906386829331,
+          -0.019995723043701195,
+          -0.04999477006744596
+        ],
+        "max": [
+          0.02,
+          0.019973851340708584,
+          -0.002
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-517",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.46191955710628e-14,
+          -9.598064004675192e-16,
+          1,
+          0,
+          2.55787404391296e-15,
+          -1,
+          -9.59806400467456e-16,
+          0,
+          1,
+          2.5578740439129362e-15,
+          2.4619195571062802e-14,
+          0,
+          0.198795255714668,
+          -0.0769580861338031,
+          0.1374609276204,
+          1
+        ]
+      },
+      "explode": [
+        0.08981117128189267,
+        -0.05166730122353106,
+        0.06700010905475759
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:38",
+        "nauoEntity": "#517",
+        "occurrenceId": "NAUO38",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-518",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -2.5992298867431695e-15,
+          -2.36824448940349e-14,
+          0,
+          2.59922988674321e-15,
+          -1,
+          -1.72340501987347e-15,
+          0,
+          -2.3682444894034897e-14,
+          -1.7234050198735316e-15,
+          1,
+          0,
+          0.20678556234207504,
+          -0.09775808613380321,
+          0.192970620992993,
+          1
+        ]
+      },
+      "explode": [
+        0.05856843598282366,
+        -0.0507958171281517,
+        0.09599007440828046
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:39",
+        "nauoEntity": "#518",
+        "occurrenceId": "NAUO39",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-519",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          4.153729703673177e-15,
+          2.4105717422173702e-14,
+          0,
+          4.1537297036732e-15,
+          -1,
+          -9.35013292593299e-16,
+          0,
+          2.41057174221737e-14,
+          9.350132925933991e-16,
+          -1,
+          0,
+          0.190804949087261,
+          -0.0816080861338032,
+          0.102970620992992,
+          1
+        ]
+      },
+      "explode": [
+        0.09589534385181094,
+        -0.0776105084366398,
+        0.0022941499181999107
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:40",
+        "nauoEntity": "#519",
+        "occurrenceId": "NAUO40",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-520",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30872",
+      "sourceKind": "part",
+      "label": "Part 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.441683596202808e-15,
+          -2.38975506050565e-14,
+          0,
+          4.44168359620283e-15,
+          -1,
+          -9.09485846690888e-16,
+          0,
+          -2.3897550605056498e-14,
+          -9.09485846690994e-16,
+          1,
+          0,
+          0.198804949087261,
+          -0.08535808613380311,
+          0.110970620992992,
+          1
+        ]
+      },
+      "explode": [
+        0.09944996702985896,
+        -0.07059507018449447,
+        0.018724615870672128
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:41",
+        "nauoEntity": "#520",
+        "occurrenceId": "NAUO41",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30872",
+        "definition": {
+          "productDefinitionEntity": "#30872",
+          "productEntity": "#30960",
+          "productId": "Part 1",
+          "productName": "Part 1"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0115,
+          -0.0033,
+          -0.0115
+        ],
+        "max": [
+          0.0115,
+          0.00005,
+          0.0115
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-521",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30880",
+      "sourceKind": "part",
+      "label": "rubberband_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.4043267377038594e-14,
+          -1.19726216543339e-15,
+          1,
+          0,
+          -1,
+          -4.8753758314994e-15,
+          -2.40432673770386e-14,
+          0,
+          4.875375831499428e-15,
+          -1,
+          -1.1972621654332728e-15,
+          0,
+          0.19874831549925703,
+          -0.0672580861338029,
+          0.0346109276204006,
+          1
+        ]
+      },
+      "explode": [
+        0.11210358424785664,
+        -0.031065749748767246,
+        -0.04113729095879603
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:42",
+        "nauoEntity": "#521",
+        "occurrenceId": "NAUO42",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30880",
+        "definition": {
+          "productDefinitionEntity": "#30880",
+          "productEntity": "#30968",
+          "productId": "rubberband_housing",
+          "productName": "rubberband_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0.04400248709038165,
+          -0.005999201330183162,
+          -0.0082
+        ],
+        "max": [
+          0.056,
+          0.005999378195184485,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-522",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30867",
+      "sourceKind": "part",
+      "label": "bearing_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.4327762027098796e-14,
+          -5.77256580442042e-16,
+          1,
+          0,
+          1,
+          2.9954653117547404e-15,
+          2.43277620270988e-14,
+          0,
+          -2.9954653117547542e-15,
+          1,
+          5.772565804419691e-16,
+          0,
+          0.198795255714672,
+          -0.00580808613380233,
+          -0.0633390723795995,
+          1
+        ]
+      },
+      "explode": [
+        0.033285579512701474,
+        0.026243051636853535,
+        -0.11587900393680915
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:43",
+        "nauoEntity": "#522",
+        "occurrenceId": "NAUO43",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30867",
+        "definition": {
+          "productDefinitionEntity": "#30867",
+          "productEntity": "#30955",
+          "productId": "bearing_housing",
+          "productName": "bearing_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.019960534568565433,
+          -0.0135
+        ],
+        "max": [
+          0.02,
+          0.019960534568565436,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-523",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.45983788893511e-14,
+          1.0589457383306632e-15,
+          -1,
+          0,
+          4.19496638907818e-15,
+          -1,
+          -1.05894573833056e-15,
+          0,
+          -1,
+          -4.194966389078154e-15,
+          -2.4598378889351103e-14,
+          0,
+          0.214320255714668,
+          -0.076958086133803,
+          0.110960927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.11225945523095002,
+        -0.048673110668565674,
+        0.01591584509832408
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:44",
+        "nauoEntity": "#523",
+        "occurrenceId": "NAUO44",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-524",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30869",
+      "sourceKind": "part",
+      "label": "rotor",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -2.9821145835361903e-15,
+          -2.4216739724636202e-14,
+          0,
+          2.42167397246362e-14,
+          1.19726469329623e-15,
+          -1,
+          0,
+          2.982114583536219e-15,
+          -1,
+          -1.197264693296158e-15,
+          0,
+          0.19879525571467302,
+          -0.0233080861338025,
+          -0.0633390723795995,
+          1
+        ]
+      },
+      "explode": [
+        0.0333448381923196,
+        0.02523677753713127,
+        -0.11608530458919998
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:45",
+        "nauoEntity": "#524",
+        "occurrenceId": "NAUO45",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30869",
+        "definition": {
+          "productDefinitionEntity": "#30869",
+          "productEntity": "#30957",
+          "productId": "rotor",
+          "productName": "rotor"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0058,
+          -0.0058,
+          -0.021
+        ],
+        "max": [
+          0.0058,
+          0.0058,
+          0.0025
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-525",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30871",
+      "sourceKind": "part",
+      "label": "608 bearing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -3.98719630709221e-15,
+          -2.4029389589230703e-14,
+          0,
+          2.40293895892307e-14,
+          1.0574779741624902e-15,
+          -1,
+          0,
+          3.9871963070922355e-15,
+          -1,
+          -1.0574779741623941e-15,
+          0,
+          0.198795255714668,
+          -0.06940808613380302,
+          0.1109609276204,
+          1
+        ]
+      },
+      "explode": [
+        0.11252642235464805,
+        -0.0459773385277638,
+        0.0211768678058096
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:46",
+        "nauoEntity": "#525",
+        "occurrenceId": "NAUO46",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30871",
+        "definition": {
+          "productDefinitionEntity": "#30871",
+          "productEntity": "#30959",
+          "productId": "608 bearing",
+          "productName": "608 bearing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.010960372373967792,
+          -0.010990088628251496,
+          -0.0035
+        ],
+        "max": [
+          0.011,
+          0.010990088628251496,
+          0.0035
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-526",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          2.901109628229774e-15,
+          2.4313884239291e-14,
+          0,
+          2.9011096282298e-15,
+          -1,
+          -1.07480000345527e-15,
+          0,
+          2.4313884239290998e-14,
+          1.0748000034553406e-15,
+          -1,
+          0,
+          0.204609598151209,
+          -0.0378580861338019,
+          -0.0793138469329598,
+          1
+        ]
+      },
+      "explode": [
+        0.034736124564043465,
+        0.007671043790048592,
+        -0.11814875307653644
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:47",
+        "nauoEntity": "#526",
+        "occurrenceId": "NAUO47",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-527",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30877",
+      "sourceKind": "part",
+      "label": "encoder_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.0586649413477005e-15,
+          -2.4563684419831604e-14,
+          0,
+          -2.45636844198316e-14,
+          -1.0574779741624902e-15,
+          1,
+          0,
+          -4.058664941347726e-15,
+          1,
+          1.0574779741623902e-15,
+          0,
+          0.198795255714666,
+          -0.0789080861338031,
+          0.210960927620402,
+          1
+        ]
+      },
+      "explode": [
+        0.09609450598547539,
+        -0.07525717100336105,
+        0.018076925846953987
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:48",
+        "nauoEntity": "#527",
+        "occurrenceId": "NAUO48",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30877",
+        "definition": {
+          "productDefinitionEntity": "#30877",
+          "productEntity": "#30965",
+          "productId": "encoder_housing",
+          "productName": "encoder_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.11996053456856544,
+          -0.0148
+        ],
+        "max": [
+          0.02,
+          -0.08003946543143457,
+          -0.0018000000000000002
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-528",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30868",
+      "sourceKind": "part",
+      "label": "washer_perpendicular_link",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          3.6126497438761675e-15,
+          -1,
+          -1.17994265407714e-15,
+          0,
+          -1,
+          -3.61264974387614e-15,
+          -2.36685671062276e-14,
+          0,
+          2.3668567106227597e-14,
+          1.1799426540772255e-15,
+          -1,
+          0,
+          0.198795255714666,
+          -0.11870448455106901,
+          0.215960927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.04285570942392112,
+        -0.032949954483472765,
+        0.11091555249561479
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:49",
+        "nauoEntity": "#528",
+        "occurrenceId": "NAUO49",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30868",
+        "definition": {
+          "productDefinitionEntity": "#30868",
+          "productEntity": "#30956",
+          "productId": "washer_perpendicular_link",
+          "productName": "washer_perpendicular_link"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.038854889642649396,
+          -0.010155709890246516,
+          -0.011
+        ],
+        "max": [
+          -0.025496398417266,
+          0.010155709890246518,
+          -0.006999999999999999
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-529",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30879",
+      "sourceKind": "part",
+      "label": "link_perpendicular_body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -3.612649743876155e-15,
+          1,
+          1.0574779741624003e-15,
+          0,
+          -1,
+          -3.6126497438761305e-15,
+          -2.37587727269784e-14,
+          0,
+          -2.3758772726978397e-14,
+          -1.0574779741624858e-15,
+          1,
+          0,
+          0.198795255714665,
+          -0.0900080861338031,
+          0.230960927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.048761768666705736,
+        -0.04105261005689176,
+        0.10564820982917518
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:50",
+        "nauoEntity": "#529",
+        "occurrenceId": "NAUO50",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30879",
+        "definition": {
+          "productDefinitionEntity": "#30879",
+          "productEntity": "#30967",
+          "productId": "link_perpendicular_body",
+          "productName": "link_perpendicular_body"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.01999906386829331,
+          -0.019995723043701195,
+          -0.04999477006744596
+        ],
+        "max": [
+          0.02,
+          0.019973851340708584,
+          -0.002
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-530",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.71100261277233e-15,
+          2.3758772726978306e-14,
+          0,
+          2.37587727269783e-14,
+          1.3235913512122e-15,
+          -1,
+          0,
+          -3.711002612772362e-15,
+          1,
+          1.3235913512121118e-15,
+          0,
+          0.198795255714665,
+          -0.0900080861338031,
+          0.226710927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.04217796131978808,
+        -0.03551828321666588,
+        0.11038134920513129
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:51",
+        "nauoEntity": "#530",
+        "occurrenceId": "NAUO51",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-531",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.91357393289165e-15,
+          2.4105717422173705e-14,
+          0,
+          2.4105717422173702e-14,
+          1.07533460532214e-15,
+          -1,
+          0,
+          -3.9135739328916764e-15,
+          1,
+          1.0753346053220458e-15,
+          0,
+          0.213795255714666,
+          -0.090008086133803,
+          0.224210927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.05406757731406744,
+        -0.03460324948100432,
+        0.1053749653610414
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:52",
+        "nauoEntity": "#531",
+        "occurrenceId": "NAUO52",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-532",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30877",
+      "sourceKind": "part",
+      "label": "encoder_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -2.640237737896951e-15,
+          -2.40640840587502e-14,
+          0,
+          -2.6402377378969904e-15,
+          1,
+          1.61487241896738e-15,
+          0,
+          2.4064084058750195e-14,
+          1.6148724189674435e-15,
+          -1,
+          0,
+          0.198795255714671,
+          0.0848919138661972,
+          -0.0173390723795993,
+          1
+        ]
+      },
+      "explode": [
+        0.046612884821066125,
+        0.03424820379484315,
+        -0.10899023177139719
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:53",
+        "nauoEntity": "#532",
+        "occurrenceId": "NAUO53",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30877",
+        "definition": {
+          "productDefinitionEntity": "#30877",
+          "productEntity": "#30965",
+          "productId": "encoder_housing",
+          "productName": "encoder_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.11996053456856544,
+          -0.0148
+        ],
+        "max": [
+          0.02,
+          -0.08003946543143457,
+          -0.0018000000000000002
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-533",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30867",
+      "sourceKind": "part",
+      "label": "bearing_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          4.26475208567872e-15,
+          2.4515112162504203e-14,
+          0,
+          2.45151121625042e-14,
+          1.0574779741624902e-15,
+          -1,
+          0,
+          -4.264752085678746e-15,
+          1,
+          1.0574779741623855e-15,
+          0,
+          0.198795255714666,
+          -0.0807080861338032,
+          0.2009609276204,
+          1
+        ]
+      },
+      "explode": [
+        0.050542139467043085,
+        -0.03984848680086008,
+        0.10527184501980387
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:54",
+        "nauoEntity": "#533",
+        "occurrenceId": "NAUO54",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30867",
+        "definition": {
+          "productDefinitionEntity": "#30867",
+          "productEntity": "#30955",
+          "productId": "bearing_housing",
+          "productName": "bearing_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.019960534568565433,
+          -0.0135
+        ],
+        "max": [
+          0.02,
+          0.019960534568565436,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-534",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30879",
+      "sourceKind": "part",
+      "label": "link_perpendicular_body",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.3946122862383892e-14,
+          1.6148724189674401e-15,
+          -1,
+          0,
+          1,
+          3.73223433992587e-15,
+          2.39461228623839e-14,
+          0,
+          3.732234339925909e-15,
+          -1,
+          -1.6148724189673506e-15,
+          0,
+          0.198795255714671,
+          -0.0451080861338027,
+          -0.0240390723795996,
+          1
+        ]
+      },
+      "explode": [
+        0.04239592247486549,
+        0.027583679822988087,
+        -0.112544646612027
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:55",
+        "nauoEntity": "#534",
+        "occurrenceId": "NAUO55",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30879",
+        "definition": {
+          "productDefinitionEntity": "#30879",
+          "productEntity": "#30967",
+          "productId": "link_perpendicular_body",
+          "productName": "link_perpendicular_body"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.01999906386829331,
+          -0.019995723043701195,
+          -0.04999477006744596
+        ],
+        "max": [
+          0.02,
+          0.019973851340708584,
+          -0.002
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-535",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30872",
+      "sourceKind": "part",
+      "label": "Part 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -2.64023773789697e-15,
+          -2.3897550605056507e-14,
+          0,
+          -2.38975506050565e-14,
+          -1.94793930484826e-15,
+          1,
+          0,
+          -2.6402377378970164e-15,
+          1,
+          1.9479393048481967e-15,
+          0,
+          0.19878556234208,
+          -0.0150983927612107,
+          -0.0108890723795995,
+          1
+        ]
+      },
+      "explode": [
+        0.045489483137922455,
+        0.03343890618524438,
+        -0.10971379855367809
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:56",
+        "nauoEntity": "#535",
+        "occurrenceId": "NAUO56",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30872",
+        "definition": {
+          "productDefinitionEntity": "#30872",
+          "productEntity": "#30960",
+          "productId": "Part 1",
+          "productName": "Part 1"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0115,
+          -0.0033,
+          -0.0115
+        ],
+        "max": [
+          0.0115,
+          0.00005,
+          0.0115
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-536",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30881",
+      "sourceKind": "part",
+      "label": "base_connector",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.9611754773829116e-15,
+          2.3564483697669e-14,
+          0,
+          3.96117547738293e-15,
+          -1,
+          -7.66255349673967e-16,
+          0,
+          2.3564483697668998e-14,
+          7.662553496740604e-16,
+          -1,
+          0,
+          0.226945906573544,
+          -0.090008086133803,
+          0.238760927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.03723186554275782,
+        -0.03136628325882402,
+        0.11337775610247004
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:57",
+        "nauoEntity": "#536",
+        "occurrenceId": "NAUO57",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30881",
+        "definition": {
+          "productDefinitionEntity": "#30881",
+          "productEntity": "#30969",
+          "productId": "base_connector",
+          "productName": "base_connector"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.05815065085887901,
+          -0.029990054025429393,
+          -0.0107
+        ],
+        "max": [
+          0.0018095718376658176,
+          0.029990054025429386,
+          -0.004999999999999997
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-537",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.47857290247566e-14,
+          -4.816713392922974e-16,
+          1,
+          0,
+          -4.08888536451839e-15,
+          1,
+          4.81671339292196e-16,
+          0,
+          -1,
+          -4.088885364518379e-15,
+          -2.4785729024756604e-14,
+          0,
+          0.198795255714666,
+          -0.0764580861338032,
+          0.2009609276204,
+          1
+        ]
+      },
+      "explode": [
+        0.05195755195431059,
+        -0.02852066366879743,
+        0.108219941114863
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:58",
+        "nauoEntity": "#537",
+        "occurrenceId": "NAUO58",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-538",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30882",
+      "sourceKind": "part",
+      "label": "base",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -4.001600475244548e-15,
+          1,
+          7.67723123768292e-16,
+          0,
+          -1,
+          -4.00160047524453e-15,
+          -2.37171393635544e-14,
+          0,
+          -2.3717139363554395e-14,
+          -7.677231237683869e-16,
+          1,
+          0,
+          0.188795255714663,
+          -0.0500080861338023,
+          0.312360927620402,
+          1
+        ]
+      },
+      "explode": [
+        0.024700322001005266,
+        0,
+        0.12089030237841503
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:59",
+        "nauoEntity": "#538",
+        "occurrenceId": "NAUO59",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30882",
+        "definition": {
+          "productDefinitionEntity": "#30882",
+          "productEntity": "#30970",
+          "productId": "base",
+          "productName": "base"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.08,
+          -0.05,
+          -0.0636
+        ],
+        "max": [
+          0.08,
+          0.05,
+          0.01
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-539",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30871",
+      "sourceKind": "part",
+      "label": "608 bearing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          4.26475208567875e-15,
+          2.4029389589230703e-14,
+          0,
+          2.40293895892307e-14,
+          1.0574779741625e-15,
+          -1,
+          0,
+          -4.2647520856787755e-15,
+          1,
+          1.0574779741623975e-15,
+          0,
+          0.198795255714666,
+          -0.0870080861338032,
+          0.2009609276204,
+          1
+        ]
+      },
+      "explode": [
+        0.050622775510538044,
+        -0.03941603604046438,
+        0.10539583397157806
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:60",
+        "nauoEntity": "#539",
+        "occurrenceId": "NAUO60",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30871",
+        "definition": {
+          "productDefinitionEntity": "#30871",
+          "productEntity": "#30959",
+          "productId": "608 bearing",
+          "productName": "608 bearing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.010960372373967792,
+          -0.010990088628251496,
+          -0.0035
+        ],
+        "max": [
+          0.011,
+          0.010990088628251496,
+          0.0035
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-540",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          4.153729703673177e-15,
+          2.4105717422173702e-14,
+          0,
+          4.1537297036732e-15,
+          -1,
+          -9.35013290938938e-16,
+          0,
+          2.41057174221737e-14,
+          9.350132909390383e-16,
+          -1,
+          0,
+          0.183270255714671,
+          -0.0591580861338029,
+          -0.024039072379600002,
+          1
+        ]
+      },
+      "explode": [
+        0.030254475074993098,
+        -0.009013597163107848,
+        -0.11928115073311374
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:61",
+        "nauoEntity": "#540",
+        "occurrenceId": "NAUO61",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-541",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30875",
+      "sourceKind": "part",
+      "label": "link_perpendicular_base",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.6918887034588386e-15,
+          -1,
+          -1.19726469329617e-15,
+          0,
+          -1,
+          -2.69188870345881e-15,
+          -2.40571451648464e-14,
+          0,
+          2.4057145164846395e-14,
+          1.1972646932962348e-15,
+          -1,
+          0,
+          0.198795255714671,
+          0.0348919138661974,
+          -0.03728907237959941,
+          1
+        ]
+      },
+      "explode": [
+        0.03982079808328655,
+        0.0292578074338226,
+        -0.11306129249337919
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:62",
+        "nauoEntity": "#541",
+        "occurrenceId": "NAUO62",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30875",
+        "definition": {
+          "productDefinitionEntity": "#30875",
+          "productEntity": "#30963",
+          "productId": "link_perpendicular_base",
+          "productName": "link_perpendicular_base"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0.03,
+          -0.019960534568565464,
+          -0.0069500000000000004
+        ],
+        "max": [
+          0.07,
+          0.01996053456856542,
+          -0.0019499999999999951
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-542",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30877",
+      "sourceKind": "part",
+      "label": "encoder_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -3.0388333937910903e-15,
+          -2.4348578708810404e-14,
+          0,
+          -2.43485787088104e-14,
+          -1.19726469329624e-15,
+          1,
+          0,
+          -3.038833393791119e-15,
+          1,
+          1.197264693296166e-15,
+          0,
+          0.19879525571467,
+          -0.0218080861338028,
+          0.0366609276204005,
+          1
+        ]
+      },
+      "explode": [
+        0.033839377289117636,
+        0.014176918064281107,
+        -0.1178069720134652
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:63",
+        "nauoEntity": "#542",
+        "occurrenceId": "NAUO63",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30877",
+        "definition": {
+          "productDefinitionEntity": "#30877",
+          "productEntity": "#30965",
+          "productId": "encoder_housing",
+          "productName": "encoder_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.11996053456856544,
+          -0.0148
+        ],
+        "max": [
+          0.02,
+          -0.08003946543143457,
+          -0.0018000000000000002
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-543",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30871",
+      "sourceKind": "part",
+      "label": "608 bearing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.4313884239290998e-14,
+          -1.19726469991368e-15,
+          1,
+          0,
+          -1,
+          -2.99546531175476e-15,
+          -2.4313884239291e-14,
+          0,
+          2.9954653117547897e-15,
+          -1,
+          -1.1972646999136073e-15,
+          0,
+          0.198795255714672,
+          -0.012308086133802403,
+          -0.0633390723795995,
+          1
+        ]
+      },
+      "explode": [
+        0.033279013863654505,
+        0.026413027845466175,
+        -0.11584226479310254
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:64",
+        "nauoEntity": "#543",
+        "occurrenceId": "NAUO64",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30871",
+        "definition": {
+          "productDefinitionEntity": "#30871",
+          "productEntity": "#30959",
+          "productId": "608 bearing",
+          "productName": "608 bearing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.010960372373967792,
+          -0.010990088628251496,
+          -0.0035
+        ],
+        "max": [
+          0.011,
+          0.010990088628251496,
+          0.0035
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-544",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30880",
+      "sourceKind": "part",
+      "label": "rubberband_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.4008572907518998e-14,
+          2.92414573275108e-15,
+          -1,
+          0,
+          -1,
+          -1.60805141884459e-15,
+          -2.4008572907519e-14,
+          0,
+          -1.6080514188446603e-15,
+          1,
+          2.924145732751041e-15,
+          0,
+          0.19894525571466604,
+          -0.07135808613380322,
+          0.187507867835813,
+          1
+        ]
+      },
+      "explode": [
+        0.09096943141350027,
+        -0.04858712122044654,
+        0.06773791638301307
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:65",
+        "nauoEntity": "#544",
+        "occurrenceId": "NAUO65",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30880",
+        "definition": {
+          "productDefinitionEntity": "#30880",
+          "productEntity": "#30968",
+          "productId": "rubberband_housing",
+          "productName": "rubberband_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0.04400248709038165,
+          -0.005999201330183162,
+          -0.0082
+        ],
+        "max": [
+          0.056,
+          0.005999378195184485,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-545",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.3675506000131504e-14,
+          -8.237842061775788e-16,
+          1,
+          0,
+          4.047931647884871e-15,
+          -1,
+          -8.23784206177483e-16,
+          0,
+          1,
+          4.04793164788485e-15,
+          2.3675506000131507e-14,
+          0,
+          0.214320255714667,
+          -0.0947580861338032,
+          0.200960927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.061873029825527844,
+        -0.04430137052973351,
+        0.09712717367191617
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:66",
+        "nauoEntity": "#545",
+        "occurrenceId": "NAUO66",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-546",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -4.00160048485749e-15,
+          1,
+          6.011896667657925e-16,
+          0,
+          2.3862856135536902e-14,
+          6.01189666765888e-16,
+          -1,
+          0,
+          -1,
+          -4.001600484857476e-15,
+          -2.3862856135536905e-14,
+          0,
+          0.172545255714665,
+          -0.0900080861338032,
+          0.2475109276204,
+          1
+        ]
+      },
+      "explode": [
+        0.017248354025620766,
+        -0.03246748993058411,
+        0.11778339228054283
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:67",
+        "nauoEntity": "#546",
+        "occurrenceId": "NAUO67",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-547",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.38420394538246e-14,
+          3.898462202679889e-16,
+          1,
+          0,
+          7.0907037719501296e-15,
+          -1,
+          3.89846220268158e-16,
+          0,
+          1,
+          7.090703771950141e-15,
+          2.3842039453824596e-14,
+          0,
+          0.190804949087264,
+          -0.0591580861338027,
+          -0.0160487657521918,
+          1
+        ]
+      },
+      "explode": [
+        0.039039793942735754,
+        -0.00941288890767879,
+        -0.11666988954918231
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:68",
+        "nauoEntity": "#547",
+        "occurrenceId": "NAUO68",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-548",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30869",
+      "sourceKind": "part",
+      "label": "rotor",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.056058133557741e-15,
+          -2.4112656316077603e-14,
+          0,
+          2.41126563160776e-14,
+          1.0574779741624902e-15,
+          -1,
+          0,
+          4.056058133557765e-15,
+          -1,
+          -1.0574779741623922e-15,
+          0,
+          0.198795255714671,
+          -0.0626080861338027,
+          -0.0240390723795996,
+          1
+        ]
+      },
+      "explode": [
+        0.043492211311972985,
+        -0.0030673454293708513,
+        -0.11542785653086332
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:69",
+        "nauoEntity": "#548",
+        "occurrenceId": "NAUO69",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30869",
+        "definition": {
+          "productDefinitionEntity": "#30869",
+          "productEntity": "#30957",
+          "productId": "rotor",
+          "productName": "rotor"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0058,
+          -0.0058,
+          -0.021
+        ],
+        "max": [
+          0.0058,
+          0.0058,
+          0.0025
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-549",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.91357393289165e-15,
+          2.4084900740462e-14,
+          0,
+          2.4084900740462e-14,
+          1.0288016277019101e-16,
+          -1,
+          0,
+          -3.913573932891652e-15,
+          1,
+          1.0288016277009674e-16,
+          0,
+          0.193795255714666,
+          -0.05850808613380281,
+          0.219210927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.042089596458898704,
+        -0.008417919291780457,
+        0.11568135381651659
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:70",
+        "nauoEntity": "#549",
+        "occurrenceId": "NAUO70",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-550",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          4.057525895207027e-15,
+          2.4681645616198e-14,
+          0,
+          4.05752589520705e-15,
+          -1,
+          -9.18569727837329e-16,
+          0,
+          2.4681645616197996e-14,
+          9.185697278374294e-16,
+          -1,
+          0,
+          0.18327025571466804,
+          -0.0769580861338031,
+          0.1109609276204,
+          1
+        ]
+      },
+      "explode": [
+        0.09175268807760356,
+        -0.07841285560577815,
+        0.02564058155306412
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:71",
+        "nauoEntity": "#550",
+        "occurrenceId": "NAUO71",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-551",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30877",
+      "sourceKind": "part",
+      "label": "encoder_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.9611754773829116e-15,
+          2.37310171513627e-14,
+          0,
+          3.96117547738293e-15,
+          -1,
+          -7.66255349673962e-16,
+          0,
+          2.3731017151362696e-14,
+          7.66255349674056e-16,
+          -1,
+          0,
+          0.198795255714665,
+          -0.190008086133803,
+          0.246960927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.03544767469886684,
+        -0.02985067343062693,
+        0.11435458351233388
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:72",
+        "nauoEntity": "#551",
+        "occurrenceId": "NAUO72",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30877",
+        "definition": {
+          "productDefinitionEntity": "#30877",
+          "productEntity": "#30965",
+          "productId": "encoder_housing",
+          "productName": "encoder_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.11996053456856544,
+          -0.0148
+        ],
+        "max": [
+          0.02,
+          -0.08003946543143457,
+          -0.0018000000000000002
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-552",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30872",
+      "sourceKind": "part",
+      "label": "Part 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.291453468075155e-15,
+          -2.41126563160776e-14,
+          0,
+          4.291453468075181e-15,
+          -1,
+          -1.05747796919931e-15,
+          0,
+          -2.4112656316077597e-14,
+          -1.0574779691994136e-15,
+          1,
+          0,
+          0.19880494908726404,
+          -0.0675580861338028,
+          -0.0240293790070082,
+          1
+        ]
+      },
+      "explode": [
+        0.0432154384603209,
+        -0.01448558827949799,
+        -0.11466108636750767
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:73",
+        "nauoEntity": "#552",
+        "occurrenceId": "NAUO73",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30872",
+        "definition": {
+          "productDefinitionEntity": "#30872",
+          "productEntity": "#30960",
+          "productId": "Part 1",
+          "productName": "Part 1"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0115,
+          -0.0033,
+          -0.0115
+        ],
+        "max": [
+          0.0115,
+          0.00005,
+          0.0115
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-553",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.056058139517093e-15,
+          -2.40363284831346e-14,
+          0,
+          4.05605813951712e-15,
+          -1,
+          -1.17994265407713e-15,
+          0,
+          -2.4036328483134595e-14,
+          -1.1799426540772275e-15,
+          1,
+          0,
+          0.190804949087264,
+          -0.0638080861338028,
+          -0.0320293790070078,
+          1
+        ]
+      },
+      "explode": [
+        0.034704300766780195,
+        -0.012451998355106396,
+        -0.11775028815825145
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:74",
+        "nauoEntity": "#553",
+        "occurrenceId": "NAUO74",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-554",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30883",
+      "sourceKind": "part",
+      "label": "link_elbow_to_wrist",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.20924201672532e-15,
+          -2.4008572907519007e-14,
+          0,
+          -2.4008572907519e-14,
+          -1.3082844678949202e-15,
+          1,
+          0,
+          -4.209242016725352e-15,
+          1,
+          1.308284467894819e-15,
+          0,
+          0.408803264280818,
+          -0.0579080861338019,
+          -0.00839153104390526,
+          1
+        ]
+      },
+      "explode": [
+        0.07677552495134488,
+        -0.019234021295095396,
+        -0.09465802823513282
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:75",
+        "nauoEntity": "#554",
+        "occurrenceId": "NAUO75",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30883",
+        "definition": {
+          "productDefinitionEntity": "#30883",
+          "productEntity": "#30971",
+          "productId": "link_elbow_to_wrist",
+          "productName": "link_elbow_to_wrist"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0.19000876162411964,
+          -0.0356211264369789,
+          -0.008
+        ],
+        "max": [
+          0.230005931250104,
+          0.1393260437656006,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-555",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30867",
+      "sourceKind": "part",
+      "label": "bearing_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.691888703458869e-15,
+          -1,
+          -1.20766220304909e-15,
+          0,
+          -1,
+          -2.69188870345884e-15,
+          -2.4313884239291e-14,
+          0,
+          2.4313884239290998e-14,
+          1.2076622030491554e-15,
+          -1,
+          0,
+          0.198795255714671,
+          -0.0151080861338027,
+          -0.0333390723795996,
+          1
+        ]
+      },
+      "explode": [
+        0.041426485235139816,
+        0.030437564941184218,
+        -0.11216939010983298
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:76",
+        "nauoEntity": "#555",
+        "occurrenceId": "NAUO76",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30867",
+        "definition": {
+          "productDefinitionEntity": "#30867",
+          "productEntity": "#30955",
+          "productId": "bearing_housing",
+          "productName": "bearing_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.019960534568565433,
+          -0.0135
+        ],
+        "max": [
+          0.02,
+          0.019960534568565436,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-556",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.0388333937910915e-15,
+          2.4313884239291e-14,
+          0,
+          3.03883339379112e-15,
+          -1,
+          -1.18582231088086e-15,
+          0,
+          2.4313884239290998e-14,
+          1.185822310880934e-15,
+          -1,
+          0,
+          0.183270255714673,
+          -0.0198580861338027,
+          -0.0633390723795999,
+          1
+        ]
+      },
+      "explode": [
+        0.023066849476009153,
+        0.021478907784684986,
+        -0.11929437577575104
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:77",
+        "nauoEntity": "#556",
+        "occurrenceId": "NAUO77",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-557",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          2.901109628229774e-15,
+          2.4313884239291e-14,
+          0,
+          2.9011096282298e-15,
+          -1,
+          -1.07480000345527e-15,
+          0,
+          2.4313884239290998e-14,
+          1.0748000034553406e-15,
+          -1,
+          0,
+          0.192980913278135,
+          -0.037858086133802704,
+          -0.047364297826239306,
+          1
+        ]
+      },
+      "explode": [
+        0.033068075727426975,
+        0.00933983969938877,
+        -0.11850671237602046
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:78",
+        "nauoEntity": "#557",
+        "occurrenceId": "NAUO78",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-558",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          2.901109629389114e-15,
+          2.43624564966183e-14,
+          0,
+          2.90110962938914e-15,
+          -1,
+          -1.07480001007271e-15,
+          0,
+          2.4362456496618298e-14,
+          1.0748000100727807e-15,
+          -1,
+          0,
+          0.19080494908726503,
+          -0.0245080861338027,
+          -0.0713293790070077,
+          1
+        ]
+      },
+      "explode": [
+        0.027148824300650336,
+        0.017263662223201314,
+        -0.11911959713596078
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:79",
+        "nauoEntity": "#558",
+        "occurrenceId": "NAUO79",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-559",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30877",
+      "sourceKind": "part",
+      "label": "encoder_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.44168360612897e-15,
+          -2.4029389589230703e-14,
+          0,
+          -2.40293895892307e-14,
+          -1.0574779741624902e-15,
+          1,
+          0,
+          -4.441683606128995e-15,
+          1,
+          1.0574779741623835e-15,
+          0,
+          0.198795255714669,
+          -0.0611080861338029,
+          0.0759609276204016,
+          1
+        ]
+      },
+      "explode": [
+        0.0430614477576385,
+        -0.01758720182101333,
+        -0.11428461473540993
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:80",
+        "nauoEntity": "#559",
+        "occurrenceId": "NAUO80",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30877",
+        "definition": {
+          "productDefinitionEntity": "#30877",
+          "productEntity": "#30965",
+          "productId": "encoder_housing",
+          "productName": "encoder_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.11996053456856544,
+          -0.0148
+        ],
+        "max": [
+          0.02,
+          -0.08003946543143457,
+          -0.0018000000000000002
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-560",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30864",
+      "sourceKind": "part",
+      "label": "washer_round",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.477879013085274e-14,
+          1.00742254882468e-14,
+          1,
+          0,
+          1,
+          4.05605813114248e-15,
+          2.47787901308527e-14,
+          0,
+          -4.0560581311422306e-15,
+          1,
+          -1.0074225488246901e-14,
+          0,
+          0.232355528020866,
+          -0.0727080861338013,
+          0.373212286248673,
+          1
+        ]
+      },
+      "explode": [
+        0.052100553729828705,
+        -0.027092287939512228,
+        0.10851779278692392
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:81",
+        "nauoEntity": "#560",
+        "occurrenceId": "NAUO81",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30864",
+        "definition": {
+          "productDefinitionEntity": "#30864",
+          "productEntity": "#30952",
+          "productId": "washer_round",
+          "productName": "washer_round"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.18225135862827302,
+          -0.0435602723062038,
+          -0.004
+        ],
+        "max": [
+          -0.162251358628273,
+          -0.0235602723062038,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-561",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          2.901109629389114e-15,
+          2.43624564966183e-14,
+          0,
+          2.90110962938914e-15,
+          -1,
+          -1.07480001007271e-15,
+          0,
+          2.4362456496618298e-14,
+          1.0748000100727807e-15,
+          -1,
+          0,
+          0.206804949087264,
+          -0.0245080861338026,
+          -0.0553293790070078,
+          1
+        ]
+      },
+      "explode": [
+        0.040590488038074614,
+        0.01837134729181332,
+        -0.11506292624304523
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:82",
+        "nauoEntity": "#561",
+        "occurrenceId": "NAUO82",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-562",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          2.71080240155252e-15,
+          2.4057145164846307e-14,
+          0,
+          -2.4057145164846304e-14,
+          -1.07480001834458e-15,
+          1,
+          0,
+          2.710802401552546e-15,
+          -1,
+          -1.0748000183445147e-15,
+          0,
+          0.214320255714671,
+          -0.0151080861338026,
+          -0.0192890723795992,
+          1
+        ]
+      },
+      "explode": [
+        0.0552426932303158,
+        0.030590559202505193,
+        -0.10600487558804648
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:83",
+        "nauoEntity": "#562",
+        "occurrenceId": "NAUO83",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-563",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30867",
+      "sourceKind": "part",
+      "label": "bearing_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.056058133557741e-15,
+          -2.4112656316077603e-14,
+          0,
+          -2.41126563160776e-14,
+          -1.0574779741625e-15,
+          1,
+          0,
+          -4.056058133557765e-15,
+          1,
+          1.0574779741624022e-15,
+          0,
+          0.198795255714671,
+          -0.0451080861338027,
+          -0.0240390723795996,
+          1
+        ]
+      },
+      "explode": [
+        0.043501554750243775,
+        -0.0016942710797465583,
+        -0.11545265391457157
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:84",
+        "nauoEntity": "#563",
+        "occurrenceId": "NAUO84",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30867",
+        "definition": {
+          "productDefinitionEntity": "#30867",
+          "productEntity": "#30955",
+          "productId": "bearing_housing",
+          "productName": "bearing_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.019960534568565433,
+          -0.0135
+        ],
+        "max": [
+          0.02,
+          0.019960534568565436,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-564",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -3.820662780207882e-15,
+          -2.39044894989604e-14,
+          0,
+          3.82066278020791e-15,
+          -1,
+          -1.17994268716437e-15,
+          0,
+          -2.3904489498960395e-14,
+          -1.1799426871644613e-15,
+          1,
+          0,
+          0.206804949087264,
+          -0.0638080861338028,
+          -0.0160293790070079,
+          1
+        ]
+      },
+      "explode": [
+        0.0521956817774001,
+        -0.013329846909590808,
+        -0.11100674349451577
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:85",
+        "nauoEntity": "#564",
+        "occurrenceId": "NAUO85",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-565",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.91357393289165e-15,
+          2.4105717422173705e-14,
+          0,
+          2.4105717422173702e-14,
+          1.07533460532214e-15,
+          -1,
+          0,
+          -3.9135739328916764e-15,
+          1,
+          1.0753346053220458e-15,
+          0,
+          0.183795255714666,
+          -0.0900080861338031,
+          0.2242109276204,
+          1
+        ]
+      },
+      "explode": [
+        0.030318958505603618,
+        -0.03731564123766788,
+        0.11363483088496729
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:86",
+        "nauoEntity": "#565",
+        "occurrenceId": "NAUO86",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-566",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30867",
+      "sourceKind": "part",
+      "label": "bearing_housing",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.9611754773829116e-15,
+          2.3779589408690002e-14,
+          0,
+          3.96117547738293e-15,
+          -1,
+          -7.66255349673971e-16,
+          0,
+          2.3779589408689996e-14,
+          7.662553496740652e-16,
+          -1,
+          0,
+          0.198795255714665,
+          -0.0900080861338031,
+          0.230960927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.03927689514639936,
+        -0.033075280123285936,
+        0.11219591110429507
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:87",
+        "nauoEntity": "#566",
+        "occurrenceId": "NAUO87",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30867",
+        "definition": {
+          "productDefinitionEntity": "#30867",
+          "productEntity": "#30955",
+          "productId": "bearing_housing",
+          "productName": "bearing_housing"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.02,
+          -0.019960534568565433,
+          -0.0135
+        ],
+        "max": [
+          0.02,
+          0.019960534568565436,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-567",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30869",
+      "sourceKind": "part",
+      "label": "rotor",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -1,
+          -4.05605813686646e-15,
+          -2.4112656316077603e-14,
+          0,
+          2.41126563160776e-14,
+          1.0574779741624902e-15,
+          -1,
+          0,
+          4.056058136866486e-15,
+          -1,
+          -1.0574779741623922e-15,
+          0,
+          0.198795255714668,
+          -0.080408086133803,
+          0.1109609276204,
+          1
+        ]
+      },
+      "explode": [
+        0.11109054259619444,
+        -0.04946452580862209,
+        0.020897922105061858
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:88",
+        "nauoEntity": "#567",
+        "occurrenceId": "NAUO88",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30869",
+        "definition": {
+          "productDefinitionEntity": "#30869",
+          "productEntity": "#30957",
+          "productId": "rotor",
+          "productName": "rotor"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0058,
+          -0.0058,
+          -0.021
+        ],
+        "max": [
+          0.0058,
+          0.0058,
+          0.0025
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-568",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30884",
+      "sourceKind": "part",
+      "label": "link_tooltip",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.2875665131618304e-15,
+          2.4313884239290903e-14,
+          0,
+          2.43138842392909e-14,
+          1.19726469329624e-15,
+          -1,
+          0,
+          -3.287566513161859e-15,
+          1,
+          1.19726469329616e-15,
+          0,
+          0.226945906573552,
+          0.00419191386619777,
+          -0.0633390723795989,
+          1
+        ]
+      },
+      "explode": [
+        0.022543216133939045,
+        0.029111482767046525,
+        -0.11776627740376457
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:89",
+        "nauoEntity": "#568",
+        "occurrenceId": "NAUO89",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30884",
+        "definition": {
+          "productDefinitionEntity": "#30884",
+          "productEntity": "#30972",
+          "productId": "link_tooltip",
+          "productName": "link_tooltip"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.07311196022886479,
+          -0.019999923418833214,
+          -0.013000000000000001
+        ],
+        "max": [
+          -0.008185805261787046,
+          0.054971031625056115,
+          -0.0049999999999999975
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-569",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30868",
+      "sourceKind": "part",
+      "label": "washer_perpendicular_link",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.6918887034588418e-15,
+          -1,
+          -1.3197293732109e-15,
+          0,
+          -1,
+          -2.69188870345881e-15,
+          -2.43208231331949e-14,
+          0,
+          2.4320823133194895e-14,
+          1.3197293732109654e-15,
+          -1,
+          0,
+          0.198795255714672,
+          -0.0438044845510688,
+          -0.0483390723795996,
+          1
+        ]
+      },
+      "explode": [
+        0.03806025262201185,
+        0.03075207965181316,
+        -0.1132709048411601
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:90",
+        "nauoEntity": "#569",
+        "occurrenceId": "NAUO90",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30868",
+        "definition": {
+          "productDefinitionEntity": "#30868",
+          "productEntity": "#30956",
+          "productId": "washer_perpendicular_link",
+          "productName": "washer_perpendicular_link"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.038854889642649396,
+          -0.010155709890246516,
+          -0.011
+        ],
+        "max": [
+          -0.025496398417266,
+          0.010155709890246518,
+          -0.006999999999999999
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-570",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30876",
+      "sourceKind": "part",
+      "label": "wire_holder",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.0715173321306829,
+          -0.038586482446435,
+          0.158460927620397,
+          1
+        ]
+      },
+      "explode": [
+        0.07400035224446465,
+        -0.050369501478032375,
+        0.08492015252369498
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:91",
+        "nauoEntity": "#570",
+        "occurrenceId": "NAUO91",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30876",
+        "definition": {
+          "productDefinitionEntity": "#30876",
+          "productEntity": "#30964",
+          "productId": "wire_holder",
+          "productName": "wire_holder"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          0.12177821264916261,
+          -0.05185417938232421,
+          -0.005
+        ],
+        "max": [
+          0.13177763451880536,
+          -0.0349716036873684,
+          0
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-571",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          2.40016340136151e-14,
+          1.210612894199824e-15,
+          -1,
+          0,
+          -4.33170669664009e-15,
+          1,
+          1.21061289419972e-15,
+          0,
+          1,
+          4.331706696640061e-15,
+          2.4001634013615106e-14,
+          0,
+          0.198795255714669,
+          -0.0616580861338029,
+          0.0844609276204004,
+          1
+        ]
+      },
+      "explode": [
+        0.11296396055407566,
+        -0.026811255446625396,
+        -0.04177165681908012
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:92",
+        "nauoEntity": "#571",
+        "occurrenceId": "NAUO92",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-572",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -4.00160048485749e-15,
+          1,
+          6.011896667657925e-16,
+          0,
+          2.3862856135536902e-14,
+          6.01189666765888e-16,
+          -1,
+          0,
+          -1,
+          -4.001600484857476e-15,
+          -2.3862856135536905e-14,
+          0,
+          0.225045255714665,
+          -0.090008086133803,
+          0.247510927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.054289271207368844,
+        -0.02944502845145561,
+        0.10681870832098508
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:93",
+        "nauoEntity": "#572",
+        "occurrenceId": "NAUO93",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-573",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.96117547738292e-15,
+          2.3779589408690005e-14,
+          0,
+          -2.3779589408690002e-14,
+          -6.45258435581839e-16,
+          1,
+          0,
+          3.961175477382935e-15,
+          -1,
+          -6.452584355817448e-16,
+          0,
+          0.206785562342073,
+          -0.0980177795063952,
+          0.24966092762040104,
+          1
+        ]
+      },
+      "explode": [
+        0.041445311481105675,
+        -0.035858095167864354,
+        0.11054887734963426
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:94",
+        "nauoEntity": "#573",
+        "occurrenceId": "NAUO94",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-574",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.0388333937910915e-15,
+          2.4313884239291e-14,
+          0,
+          3.03883339379112e-15,
+          -1,
+          -1.18582231088086e-15,
+          0,
+          2.4313884239290998e-14,
+          1.185822310880934e-15,
+          -1,
+          0,
+          0.214320255714673,
+          -0.0198580861338026,
+          -0.0633390723795992,
+          1
+        ]
+      },
+      "explode": [
+        0.043334140536870104,
+        0.020471600514761053,
+        -0.11369976672092513
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:95",
+        "nauoEntity": "#574",
+        "occurrenceId": "NAUO95",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-575",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.96117547738292e-15,
+          2.3758772726978303e-14,
+          0,
+          -2.37587727269783e-14,
+          -4.78724985196791e-16,
+          1,
+          0,
+          3.961175477382931e-15,
+          -1,
+          -4.78724985196697e-16,
+          0,
+          0.187817422936744,
+          -0.100985918911724,
+          0.2450109276204,
+          1
+        ]
+      },
+      "explode": [
+        0.02879899764289354,
+        -0.04019779212674302,
+        0.11304568261989367
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:96",
+        "nauoEntity": "#575",
+        "occurrenceId": "NAUO96",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-576",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30872",
+      "sourceKind": "part",
+      "label": "Part 1",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          3.96117547738293e-15,
+          2.3675506000131403e-14,
+          0,
+          -2.36755060001314e-14,
+          -7.67723122114025e-16,
+          1,
+          0,
+          3.961175477382948e-15,
+          -1,
+          -7.677231221139312e-16,
+          0,
+          0.198785562342073,
+          -0.09001777950639471,
+          0.253410927620401,
+          1
+        ]
+      },
+      "explode": [
+        0.03614341297831791,
+        -0.03045014811226686,
+        0.11397812638536281
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:97",
+        "nauoEntity": "#576",
+        "occurrenceId": "NAUO97",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30872",
+        "definition": {
+          "productDefinitionEntity": "#30872",
+          "productEntity": "#30960",
+          "productId": "Part 1",
+          "productName": "Part 1"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0115,
+          -0.0033,
+          -0.0115
+        ],
+        "max": [
+          0.0115,
+          0.00005,
+          0.0115
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-577",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30869",
+      "sourceKind": "part",
+      "label": "rotor",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          -2.3564483697668998e-14,
+          -9.75220090025566e-16,
+          1,
+          0,
+          -1,
+          -4.19897779273842e-15,
+          -2.3564483697669e-14,
+          0,
+          4.198977792738444e-15,
+          -1,
+          -9.752200900254673e-16,
+          0,
+          0.198795255714666,
+          -0.0980080861338033,
+          0.2009609276204,
+          1
+        ]
+      },
+      "explode": [
+        0.05035699724090068,
+        -0.041080708275473665,
+        0.10488622098523387
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:98",
+        "nauoEntity": "#577",
+        "occurrenceId": "NAUO98",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30869",
+        "definition": {
+          "productDefinitionEntity": "#30869",
+          "productEntity": "#30957",
+          "productId": "rotor",
+          "productName": "rotor"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.0058,
+          -0.0058,
+          -0.021
+        ],
+        "max": [
+          0.0058,
+          0.0058,
+          0.0025
+        ]
+      }
+    },
+    {
+      "part_id": "occ-0332d1eb757d-root-30863-578",
+      "parent_id": "occ-0332d1eb757d-root-30863",
+      "definition_id": "def-0332d1eb757d-30865",
+      "sourceKind": "part",
+      "label": "M3x10 PH Screw",
+      "motionOwner": "static",
+      "rest": {
+        "matrix": [
+          1,
+          2.71080240155252e-15,
+          2.4105717422173705e-14,
+          0,
+          -2.4105717422173702e-14,
+          -1.07480001834458e-15,
+          1,
+          0,
+          2.710802401552546e-15,
+          -1,
+          -1.0748000183445147e-15,
+          0,
+          0.183270255714671,
+          -0.0151080861338027,
+          -0.0192890723795999,
+          1
+        ]
+      },
+      "explode": [
+        0.030378814835798032,
+        0.03315779946111698,
+        -0.11490108380762391
+      ],
+      "source": {
+        "xcafLabel": "0:1:1:1:99",
+        "nauoEntity": "#578",
+        "occurrenceId": "NAUO99",
+        "parentDefinitionEntity": "#30863",
+        "childDefinitionEntity": "#30865",
+        "definition": {
+          "productDefinitionEntity": "#30865",
+          "productEntity": "#30953",
+          "productId": "M3x10 PH Screw",
+          "productName": "M3x10 PH Screw"
+        },
+        "mapping": "exact-STEP-NAUO-to-XCAF-reference"
+      },
+      "localBoundsGltfMeters": {
+        "min": [
+          -0.002964,
+          -0.00625,
+          -0.002964
+        ],
+        "max": [
+          0.002964,
+          0.007002372819293145,
+          0.002964
+        ]
+      }
+    }
+  ]
+}

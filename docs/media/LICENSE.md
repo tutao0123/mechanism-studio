@@ -7,6 +7,8 @@ in this documentation directory.
 
 | File | Depicted source / author | Applicable notice |
 | --- | --- | --- |
+| `robot-joint-preview.png` | Original 129-part compact robot joint teaching model, Mechanism Studio | Project MIT; model, presentation and music source in `examples/robot-joint/`. 1280 × 720 documentation frame taken at 11.8 s from the locally synthesized 36 s Atlas MP4; no third-party mechanical geometry |
+| `step-bearing-inspector.png` | Open-source Leader Arm by Matheshwaran Pitchai and contributors, displayed in Mechanism Studio's source inspector | Apache-2.0 geometry; [retained license](../../examples/step-bearing-assembly/source/LICENSE.txt), [notice](../../examples/step-bearing-assembly/source/NOTICE.md), [pinned source](../../examples/step-bearing-assembly/source/provenance.json). Screenshot made from the converted display mesh; source names and placement retained. Interface code is project MIT |
 | `lock-preview.jpg` | Original five-pin teaching lock, TuTao | Project MIT; source in `prototype-3d/` |
 | `inline-four-preview.jpg` | Original inline-four teaching model, TuTao | Project MIT; source in `examples/inline-four/` |
 | `turbofan-preview.jpg` | Original two-spool teaching model, TuTao | Project MIT; source in `examples/turbofan/` |

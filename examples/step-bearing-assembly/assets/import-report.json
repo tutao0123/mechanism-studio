@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "source-occurrence-identity-verified",
+  "sourceSHA256": "0332d1eb757d3abc3b345d5eed51ba9c53a472ea5c05a08fcfc4bf8cc9f63648",
+  "glbSHA256": "e0c7ff5e079d65fa9c8623894dcee360a9ca03c839504a68ed8942d5f41de6eb",
+  "importer": {
+    "package": "cadquery-ocp",
+    "version": "7.8.1.1.post1",
+    "occtVersion": "7.8.1.1",
+    "assemblyReader": "STEPCAFControl_Reader",
+    "identityMapping": "STEPCAFControl_Reader.FindInstance -> XCAF component -> referred definition",
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRadians": 0.4,
+    "relativeDeflection": false,
+    "parallelMeshing": false
+  },
+  "sourceStatistics": {
+    "definitionCount": 22,
+    "occurrenceCount": 100,
+    "leafOccurrences": 99,
+    "assemblyOccurrences": 1,
+    "sourceNauoCount": 99,
+    "unmappedSourceOccurrences": 0,
+    "reusedLeafDefinitions": 12,
+    "geometryBearingAssemblies": 0,
+    "unmeshedFaces": 0,
+    "recoveredMeshFaces": 0,
+    "sourceTriangulatedDefinitions": 0,
+    "sourceTriangulatedOccurrences": 0,
+    "sourceTriangulatedFaces": 0,
+    "uniqueTriangleCount": 53910
+  },
+  "sourceUnits": {
+    "sourceLengthNames": [
+      "metre"
+    ],
+    "sourceAngleNames": [
+      "radian"
+    ],
+    "importedLength": "mm",
+    "matrices": "column-major, translation in mm",
+    "coordinateBasis": "native STEP axes"
+  },
+  "display": {
+    "meshDefinitions": 21,
+    "semanticPartNodes": 99,
+    "triangles": 517242,
+    "uniqueTriangles": 53910,
+    "assetBoundsMeters": {
+      "min": [
+        0.06379525571467075,
+        -0.1300080861338025,
+        -0.11831010400465647
+      ],
+      "max": [
+        0.23879525571466353,
+        0.029991913866197893,
+        0.32236092762040325
+      ]
+    }
+  },
+  "identityMapping": {
+    "method": "STEPCAFControl_Reader.FindInstance -> XCAF component -> referred definition",
+    "unmappedSourceOccurrences": 0,
+    "partId": "source occurrence path, never mesh order or display name",
+    "definitionsReusedAsGlbMeshes": true,
+    "sourceGraphSHA256": "a3f3927d489f7adb871e0dfcbbf3c2a52bedc52eeacbe1fd684568a546699f4f"
+  },
+  "meshWarnings": [],
+  "generatedGeometryComponents": [],
+  "sourceGeometryRepresentations": [],
+  "tessellationComparison": {
+    "fine": {
+      "linearDeflectionMm": 0.08,
+      "angularDeflectionRadians": 0.4,
+      "triangles": 517242
+    },
+    "coarse": {
+      "linearDeflectionMm": 0.3,
+      "angularDeflectionRadians": 0.7,
+      "triangles": 276610
+    },
+    "definitionAndOccurrenceIdentityUnchanged": true,
+    "localAndWorldMatricesUnchanged": true
+  },
+  "coordinateConversion": {
+    "source": "native STEP axes, m",
+    "imported": "native STEP axes, mm; normalized by OCCT",
+    "originalToImportedScale": 1000,
+    "display": "m, +Y up",
+    "points": "0.001*[x,z,-y]",
+    "placements": "C*M_source*inverse(C), including rotations"
+  },
+  "mixedProducts": [],
+  "observation": "Hidden, isolated and exploded states belong to display wrappers; source matrices remain immutable. Radial explosion is not a collision-verified disassembly sequence.",
+  "limitations": [
+    "IDs are stable for this exact source hash and importer version; re-exported source may renumber entities.",
+    "Face indices identify imported definition topology only, not persistent native feature IDs.",
+    "No source mate recovery, constraints, physical simulation, exact section, or interference API is implemented.",
+    "Self-contained STEP files with exact NAUO mapping are accepted; external references are disabled."
+  ]
+}

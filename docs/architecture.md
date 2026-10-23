@@ -6,9 +6,16 @@ JavaScript and optional Python/Blender tools implement it. The shared study runt
 executes the defined `mechanism-presentation-1` subset; broader authoring handoffs
 and mechanical models still need example adapters. The skill is not a background service.
 
+[Studio](../tools/studio/README.md) is the unified project-local command layer:
+it runs a named original construction recipe, selects a registered preview server,
+or opens a supported browser-assisted export adapter. It adds no eighth shared
+library or additional discoverable skill.
+
 ```mermaid
 flowchart LR
   I[Text / image / CAD brief] --> S[Mechanism Studio skill]
+  S --> G[Original design spec + geometry builder]
+  G --> A[Source index + GLB + scene contract]
   S --> E[Explosion / camera / appearance / mating close-up plans]
   C[Retained STEP / URDF or authored geometry] --> A[Source index + GLB + scene contract]
   A --> V[Shared viewer]
@@ -59,6 +66,34 @@ universal presentation configuration. New plan-backed studies use
 [the plan reference](../.agents/skills/mechanism-studio/references/executable-presentation.md)
 separates compiled display channels from example-owned motion and evidence.
 
+`shared/cad/inspector.mjs` connects that CAD observation state to the shared
+viewer: source-tree and model selection use one occurrence ID, and repeated
+instances retain a shared definition. The example supplies its real manifest,
+GLB, provenance, controls and viewing presets.
+
+## Unified generation, preview and export
+
+`npm run studio -- list` reports the explicit registry's 19 preview entries and
+their actual generation/export capabilities. `generate <id>` rebuilds the named
+`robot-joint`, `planetary-gears` or `gearbox` design from its local specification,
+then checks identities, provenance and score bindings. A new mechanism needs an
+authored builder and adapter; this command is not a generic prompt-to-CAD service.
+
+`preview <id>` starts the existing allowlisted
+server for that page and prepares its registered original score when needed.
+It keeps normal default ports, accepts `--port`, binds to `127.0.0.1`, and
+reports occupied ports without terminating another process.
+
+`export <id>` currently supports `robot-joint`, `planetary-gears`, `gearbox` and
+`gearbox-cinematic`. It prepares a local browser-assisted workbench; a WebGL 2
+browser renders deterministic absolute-time frames after the user checks the
+calibration views and chooses **Generate**. The local encoder uses FFmpeg and
+FFprobe to produce the MP4 and objective reports. This is direct frame
+composition rather than screen recording, and still requires the browser and
+command to remain open. Other entries, including the STEP inspector, are
+explicitly preview-only. No registry entry silently gains an authored film or
+remote-publication capability.
+
 ## Identity, coordinates and motion
 
 Native source definitions and occurrences stay distinct. Repeated screws share a
@@ -98,8 +133,16 @@ See [release packaging](release-audit.md) and [licensing](licensing.md).
 
 ## CAD evidence and limits
 
-No real STEP example is currently retained; the CAD tools are tested with
-synthetic fixtures. For a user-prepared package, XCAF retains exact
+[The Open-source Leader Arm inspector](../examples/step-bearing-assembly/README.md)
+is the real STEP reference, imported from a fixed Apache-2.0 upstream revision.
+Its 22 source definitions expand to one root and 99 part occurrences, including
+43 occurrences of one screw definition and six each of bearings, bearing
+housings and rotors. The actual source tree is flat beneath its root and stays
+flat in the inspector. Original STEP bytes are fetched by hash; the display
+package, terms and provenance are retained in Git. Its source and retained-asset
+tests complement the CAD tools' synthetic failure fixtures.
+
+For supported packages, XCAF retains exact
 definition/occurrence mapping for native metre or millimetre input and marks
 source-triangulated definitions explicitly; success on one package is not
 arbitrary STEP coverage. The root audit CLI cross-checks retained bytes, source
